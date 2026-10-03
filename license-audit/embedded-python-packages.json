@@ -1,0 +1,10 @@
+[
+  {
+    "parent": "CPython-3.12.13",
+    "name": "pip",
+    "version": "26.2.1",
+    "path": "python/Lib/ensurepip/_bundled/pip-26.2.1-py3-none-any.whl!pip-26.2.1.dist-info/METADATA",
+    "license": "MIT",
+    "status": "NOT VERIFIED"
+  }
+]

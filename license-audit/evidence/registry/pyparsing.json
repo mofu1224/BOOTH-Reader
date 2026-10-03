@@ -1,0 +1,120 @@
+{
+  "url": "https://pypi.org/pypi/pyparsing/3.3.3/json",
+  "response_sha256": "b851d5414eca50b38263f56c00a1fbec80383a26a3ad8e41a204b72cdeee5751",
+  "info": {
+    "author": null,
+    "author_email": "Paul McGuire <ptmcg.gm+pyparsing@gmail.com>",
+    "bugtrack_url": null,
+    "classifiers": [
+      "Development Status :: 5 - Production/Stable",
+      "Intended Audience :: Developers",
+      "Intended Audience :: Information Technology",
+      "Operating System :: OS Independent",
+      "Programming Language :: Python",
+      "Programming Language :: Python :: 3",
+      "Programming Language :: Python :: 3 :: Only",
+      "Programming Language :: Python :: 3.10",
+      "Programming Language :: Python :: 3.11",
+      "Programming Language :: Python :: 3.12",
+      "Programming Language :: Python :: 3.13",
+      "Programming Language :: Python :: 3.14",
+      "Programming Language :: Python :: 3.15",
+      "Programming Language :: Python :: 3.9",
+      "Programming Language :: Python :: Implementation :: CPython",
+      "Programming Language :: Python :: Implementation :: PyPy",
+      "Topic :: Software Development :: Compilers",
+      "Topic :: Text Processing",
+      "Typing :: Typed"
+    ],
+    "description": "PyParsing -- A Python Parsing Module\n====================================\n\n|Version| |Build Status| |Coverage| |License| |Python Versions| |Snyk Score|\n\nIntroduction\n============\n\nThe pyparsing module is an alternative approach to creating and\nexecuting simple grammars, vs. the traditional lex/yacc approach, or the\nuse of regular expressions. The pyparsing module provides a library of\nclasses that client code uses to construct the grammar directly in\nPython code.\n\n*[Since first writing this description of pyparsing in late 2003, this\ntechnique for developing parsers has become more widespread, under the\nname Parsing Expression Grammars - PEGs. See more information on PEGs*\n`here <https://en.wikipedia.org/wiki/Parsing_expression_grammar>`__\n*.]*\n\nHere is a program to parse ``\"Hello, World!\"`` (or any greeting of the form\n``\"salutation, addressee!\"``):\n\n.. code:: python\n\n    from pyparsing import Word, alphas\n    greet = Word(alphas) + \",\" + Word(alphas) + \"!\"\n    hello = \"Hello, World!\"\n    print(hello, \"->\", greet.parse_string(hello))\n\nThe program outputs the following::\n\n    Hello, World! -> ['Hello', ',', 'World', '!']\n\nThe Python representation of the grammar is quite readable, owing to the\nself-explanatory class names, and the use of '+', '|' and '^' operator\ndefinitions.\n\nThe parsed results returned from ``parse_string()`` is a collection of type\n``ParseResults``, which can be accessed as a\nnested list, a dictionary, or an object with named attributes.\n\nThe pyparsing module handles some of the problems that are typically\nvexing when writing text parsers:\n\n- extra or missing whitespace (the above program will also handle ``\"Hello,World!\"``, ``\"Hello , World !\"``, etc.)\n- quoted strings\n- embedded comments\n\nThe examples directory includes a simple SQL parser, simple CORBA IDL\nparser, a config file parser, a chemical formula parser, and a four-\nfunction algebraic notation parser, among many others.\n\nDocumentation\n=============\n\nThere are many examples in the online docstrings of the classes\nand methods in pyparsing. You can find them compiled into `online docs <https://pyparsing-docs.readthedocs.io/en/latest/>`__. Additional\ndocumentation resources and project info are listed in the online\n`GitHub wiki <https://github.com/pyparsing/pyparsing/wiki>`__. An\nentire directory of examples can be found `here <https://github.com/pyparsing/pyparsing/tree/master/examples>`__.\n\nAI Instructions\n===============\n\nThere are also instructions for AI agents to use when helping you to create your parser. They can\nbe pulled from the GitHub project repository, at pyparsing/ai/best_practices.md. You can also tell\nthe AI to access them programmatically after installing pyparsing, either from the CLI with\n``python -m pyparsing.ai.show_best_practices`` or within python with\n``import pyparsing; pyparsing.show_best_practices()``.\n\n\nLicense\n=======\n\nMIT License. See header of the `pyparsing __init__.py <https://github.com/pyparsing/pyparsing/blob/master/pyparsing/__init__.py#L1-L23>`__ file.\n\nHistory\n=======\n\nSee `CHANGES <https://github.com/pyparsing/pyparsing/blob/master/CHANGES>`__ file.\n\n\nPerformance benchmarks\n======================\n\nFor usage instructions and details on the performance benchmark suite, see\n``tests/README.md`` in this repository.\n\n.. |Build Status| image:: https://github.com/pyparsing/pyparsing/actions/workflows/ci.yml/badge.svg\n   :target: https://github.com/pyparsing/pyparsing/actions/workflows/ci.yml\n\n.. |Coverage| image:: https://codecov.io/gh/pyparsing/pyparsing/branch/master/graph/badge.svg\n  :target: https://codecov.io/gh/pyparsing/pyparsing\n\n.. |Version| image:: https://img.shields.io/pypi/v/pyparsing?style=flat-square\n    :target: https://pypi.org/project/pyparsing/\n    :alt: Version\n\n.. |License| image:: https://img.shields.io/pypi/l/pyparsing.svg?style=flat-square\n    :target: https://pypi.org/project/pyparsing/\n    :alt: License\n\n.. |Python Versions| image:: https://img.shields.io/pypi/pyversions/pyparsing.svg?style=flat-square\n    :target: https://pypi.org/project/python-liquid/\n    :alt: Python versions\n\n.. |Snyk Score| image:: https://snyk.io//advisor/python/pyparsing/badge.svg\n   :target: https://snyk.io//advisor/python/pyparsing\n   :alt: pyparsing\n\n",
+    "description_content_type": "text/x-rst",
+    "docs_url": "https://pythonhosted.org/pyparsing/",
+    "download_url": null,
+    "downloads": {
+      "last_day": -1,
+      "last_month": -1,
+      "last_week": -1
+    },
+    "dynamic": null,
+    "home_page": null,
+    "keywords": null,
+    "license": null,
+    "license_expression": "MIT",
+    "license_files": [
+      "LICENSE"
+    ],
+    "maintainer": null,
+    "maintainer_email": null,
+    "name": "pyparsing",
+    "package_url": "https://pypi.org/project/pyparsing/",
+    "platform": null,
+    "project_url": "https://pypi.org/project/pyparsing/",
+    "project_urls": {
+      "Documentation": "https://pyparsing-docs.readthedocs.io/en/latest/",
+      "Homepage": "https://github.com/pyparsing/pyparsing/",
+      "Source": "https://github.com/pyparsing/pyparsing.git"
+    },
+    "provides_extra": [
+      "diagrams"
+    ],
+    "release_url": "https://pypi.org/project/pyparsing/3.3.3/",
+    "requires_dist": [
+      "railroad-diagrams; extra == \"diagrams\"",
+      "jinja2; extra == \"diagrams\""
+    ],
+    "requires_python": ">=3.9",
+    "summary": "pyparsing - Classes and methods to define and execute parsing grammars",
+    "version": "3.3.3",
+    "yanked": false,
+    "yanked_reason": null
+  },
+  "urls": [
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "f2ca34052d720622d300023472ef8ae94fe5b57d69acbb28a8667f6dd0e13497"
+      },
+      "digests": {
+        "blake2b_256": "38bbd215ee7c73b61497b28a5503f9f53523f294fcc936762b7caf90e0c1c2b5",
+        "md5": "a8c197f144f22a48080983a3723a3801",
+        "sha256": "ece8c00a69cf01b45d0b1dedabb469c90d8caf996d4fda40f147627a122849a4"
+      },
+      "downloads": -1,
+      "filename": "pyparsing-3.3.3-py3-none-any.whl",
+      "has_sig": false,
+      "md5_digest": "a8c197f144f22a48080983a3723a3801",
+      "packagetype": "bdist_wheel",
+      "python_version": "py3",
+      "requires_python": ">=3.9",
+      "size": 126420,
+      "upload_time": "2026-09-20T20:59:04",
+      "upload_time_iso_8601": "2026-09-20T20:59:04.025856Z",
+      "url": "https://files.pythonhosted.org/packages/38/bb/d215ee7c73b61497b28a5503f9f53523f294fcc936762b7caf90e0c1c2b5/pyparsing-3.3.3-py3-none-any.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": false,
+      "digests": {
+        "blake2b_256": "e411b213bebff182584360cb8d17c72c1677fec5c5c228de439e63bcf8ab1c8f",
+        "md5": "2b2d965323de78ac4721dec660361ea6",
+        "sha256": "928ae7e20211f3b6f3915a72f06a0cfd29ab9d24279dd6346b6b1a7146397d36"
+      },
+      "downloads": -1,
+      "filename": "pyparsing-3.3.3.tar.gz",
+      "has_sig": false,
+      "md5_digest": "2b2d965323de78ac4721dec660361ea6",
+      "packagetype": "sdist",
+      "python_version": "source",
+      "requires_python": ">=3.9",
+      "size": 1050487,
+      "upload_time": "2026-09-20T20:59:05",
+      "upload_time_iso_8601": "2026-09-20T20:59:05.609622Z",
+      "url": "https://files.pythonhosted.org/packages/e4/11/b213bebff182584360cb8d17c72c1677fec5c5c228de439e63bcf8ab1c8f/pyparsing-3.3.3.tar.gz",
+      "yanked": false,
+      "yanked_reason": null
+    }
+  ],
+  "wheel_digest_verified": true
+}

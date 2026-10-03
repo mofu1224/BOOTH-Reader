@@ -1,0 +1,77 @@
+Google Chrome and ChromeOS Additional Terms of Service
+Google Chrome and ChromeOS Additional Terms of Service
+Last modified: 30 September, 2025
+By using Chrome or ChromeOS, you agree to the Google Terms of Service located at
+https://policies.google.com/terms
+and these Google Chrome and ChromeOS Additional Terms of Service.
+These Google Chrome and ChromeOS Additional Terms of Service apply to the executable code version of Chrome and ChromeOS. Most source code for Chrome is available free of charge under open source software license agreements at chrome://credits.
+Your use of certain components of Chrome and ChromeOS is subject to the following terms:
+AVC
+THIS PRODUCT IS LICENSED UNDER THE AVC PATENT PORTFOLIO LICENSE FOR THE PERSONAL USE OF A CONSUMER OR OTHER USES IN WHICH IT DOES NOT RECEIVE REMUNERATION TO (i) ENCODE VIDEO IN COMPLIANCE WITH THE AVC STANDARD (“AVC VIDEO”) AND/OR (ii) DECODE AVC VIDEO THAT WAS ENCODED BY A CONSUMER ENGAGED IN A PERSONAL ACTIVITY AND/OR WAS OBTAINED FROM A VIDEO PROVIDER LICENSED TO PROVIDE AVC VIDEO. NO LICENSE IS GRANTED OR SHALL BE IMPLIED FOR ANY OTHER USE. ADDITIONAL INFORMATION MAY BE OBTAINED FROM MPEG LA, L.L.C. SEE
+HTTPS://WWW.VIA-LA.COM
+.
+Change language or region
+Català - Espanya
+Dansk - Danmark
+Deutsch - Deutschland
+Eesti - Eesti
+English - Australia
+English - Canada
+English - United Kingdom
+English - Hong Kong SAR China
+English - Ireland
+English - India
+English - Philippines
+English - Pakistan
+English - Singapore
+English - United States
+Español - Latinoamérica
+Español - Estados Unidos
+Español - España
+Filipino - Pilipinas
+Français - France
+Français - Canada
+Hrvatski - Hrvatska
+Indonesia - Indonesia
+Italiano - Italia
+Kiswahili - Kenya
+Latviešu - Latvija
+Lietuvių - Lietuva
+Magyar - Magyarország
+Melayu - Malaysia
+Nederlands - Nederland
+Norsk Bokmål - Norge
+Polski - Polska
+Português - Portugal
+Português - Brasil
+Română - România
+Slovenčina - Slovensko
+Slovenščina - Slovenija
+Suomi - Suomi
+Svenska - Sverige
+Tiếng Việt - Việt Nam
+Türkçe - Türkiye
+Čeština - Česko
+Ελληνικά - Ελλάδα
+Български - България
+Русский - Россия
+Српски - Србија
+Українська - Україна
+עברית
+العربية - المملكة العربية السعودية
+فارسی
+मराठी - भारत
+हिन्दी - भारत
+বাংলা - ভারত
+ગુજરાતી - ભારત
+தமிழ் - இந்தியா
+తెలుగు - భారతదేశం
+ಕನ್ನಡ - ಭಾರತ
+മലയാളം - ഇന്ത്യ
+ไทย - ไทย
+አማርኛ - ኢትዮጵያ
+中文 - 中国
+中文 - 中国香港特别行政区
+中文 - 台灣
+日本語 - 日本
+한국어 - 대한민국

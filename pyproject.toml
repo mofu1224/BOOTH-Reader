@@ -1,0 +1,162 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "booth-reader"
+dynamic = ["version"]
+description = "BOOTH購入品の取得・ダウンロード・解凍・分類を一元管理する個人向けデスクトップツール"
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE", "NOTICE", "THIRD_PARTY_NOTICES.md", "THIRD_PARTY_TERMS.md", "THIRD_PARTY_LICENSES/**/*", "SOURCE_OBLIGATIONS/README.md"]
+authors = [{ name = "mofu1224" }]
+keywords = ["booth", "download", "library", "organizer", "windows"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Environment :: Web Environment",
+    "Intended Audience :: End Users/Desktop",
+    "Natural Language :: Japanese",
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Utilities",
+]
+
+# Browser login uses Playwright with the bundled WebView2 runtime. Cookie JSON
+# import is also supported. Normal startup restores the pinned vendor closure
+# offline; these metadata requirements are not a bootstrap/download recipe.
+dependencies = [
+    "httpx>=0.28",
+    "beautifulsoup4>=4.12",
+    "fastapi>=0.141",
+    "uvicorn>=0.30",
+    "pydantic>=2.0",
+    "playwright>=1.56",
+]
+
+[project.optional-dependencies]
+# Test / lint / type / audit tooling.
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.6",
+    "mypy>=1.11",
+    "pip-audit>=2.7",
+    "build>=1.0",
+    "tomli>=2.0; python_version < '3.11'",
+]
+
+[project.urls]
+Homepage = "https://github.com/mofu1224/BOOTH-Reader"
+Changelog = "https://github.com/mofu1224/BOOTH-Reader/blob/main/CHANGELOG.md"
+Issues = "https://github.com/mofu1224/BOOTH-Reader/issues"
+
+[project.scripts]
+booth-reader = "cli:main"
+
+[tool.setuptools]
+py-modules = ["cli", "redaction"]
+
+[tool.setuptools.dynamic]
+version = { attr = "core.version.__version__" }
+
+[tool.setuptools.packages.find]
+include = ["core*", "web*", "tools*"]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
+pythonpath = ["."]
+# Portable layout: test caches live inside the repo, never in %TEMP% or ~.
+cache_dir = ".cache/pytest"
+addopts = "-ra --strict-markers --strict-config"
+filterwarnings = [
+    "error::pytest.PytestUnhandledThreadExceptionWarning",
+    "error::pytest.PytestUnraisableExceptionWarning",
+    "default::DeprecationWarning",
+]
+markers = [
+    "slow: long-running or stress tests",
+    "network: requires real network access",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+src = ["."]
+extend-exclude = [".venv", "build", "dist", "release", "__pycache__",
+    # Verbatim third-party sources retained for license compliance. They are
+    # never our code: linting or reformatting them would corrupt provenance.
+    "THIRD_PARTY_LICENSES", "SOURCE_OBLIGATIONS"]
+# Portable layout: ruff cache inside the repo (env RUFF_CACHE_DIR agrees).
+cache-dir = ".cache/ruff"
+
+[tool.ruff.lint]
+# The project intentionally uses broad exception handling at the outer
+# boundaries (CLI/Web) so no raw traceback ever reaches a user. That is caught
+# by explicit per-site noqa comments where it matters.
+select = [
+    "E", "W",    # pycodestyle
+    "F",         # pyflakes
+    "I",         # isort
+    "B",         # bugbear
+    "BLE",       # blind except: allowed only where explicitly justified
+    "C4",        # comprehensions
+    "UP",        # pyupgrade
+    "S",         # bandit security
+    "N",         # pep8-naming
+    "RET",       # return consistency
+    "SIM",       # simplify
+    "PTH",       # prefer pathlib
+    "ARG",       # unused arguments
+    "PL",        # pylint subset
+    "RUF",       # ruff-specific
+]
+ignore = [
+    "E501",     # line length is handled by the formatter
+    "PLR0913",  # too many arguments: the download API is naturally wide
+    "PLR0917",  # too many positional arguments: same reason
+    "PLR0912",  # too many branches
+    "PLR0915",  # too many statements
+    "PLR2004",  # magic value comparison: bounds are clearer inline
+    "S101",     # assert: tests are the only place asserts belong
+    "PLW1510",  # subprocess.run without check= : handled explicitly per call
+    "B008",     # function call in default argument
+    "PLC0415",  # lazy imports: deliberate, keeps CLI startup fast
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["ARG", "PLR", "S", "SLF", "N802", "N806", "BLE", "PLW0108", "C416",
+             "RUF001", "PLW2901", "SIM117"]
+"conftest.py" = ["ARG", "PLC0415"]
+# Release tooling drives the interpreter and the package builder by design.
+"tools/*" = ["S603", "S607", "ARG", "PLR0917", "T201"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["core", "web", "cli", "conftest"]
+
+[tool.mypy]
+python_version = "3.10"
+# Portable layout: mypy cache inside the repo (env MYPY_CACHE_DIR agrees).
+cache_dir = ".cache/mypy"
+# Production code is fully annotated; tests are not held to that bar.
+files = ["cli.py", "core", "web", "conftest.py"]
+warn_return_any = true
+warn_unused_configs = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+no_implicit_optional = true
+check_untyped_defs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+disallow_subclassing_any = false
+pretty = true
+# Third-party packages ship without complete stubs; these are imported
+# lazily and guarded, so their internals are not our contract.
+[[tool.mypy.overrides]]
+module = ["bs4", "bs4.*", "soupsieve", "soupsieve.*", "playwright", "playwright.*"]
+ignore_missing_imports = true

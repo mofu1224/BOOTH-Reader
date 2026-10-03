@@ -1,0 +1,63 @@
+{
+  "schema": 1,
+  "target": "windows-x86_64",
+  "minimumWindowsBuild": 17763,
+  "python": {
+    "version": "3.12.13",
+    "release": "20260325",
+    "asset": "cpython-3.12.13-booth-runtime.tar.gz",
+    "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20260325/cpython-3.12.13%2B20260325-x86_64-pc-windows-msvc-install_only.tar.gz",
+    "sha256": "c613f06e158070b0db218021806af55ffb4c781be2141db6967a4afbb666d446",
+    "license": "PSF-2.0 and bundled third-party notices in .tools/python/LICENSE*",
+    "derived": true,
+    "publisher_sha256": "aaee8e72c20e1a266bbc6b0dcd640679d1aa1ea4257725af336b5ce9e492891b",
+    "size": 39251107,
+    "modifications": "license-audit/runtime-derivation.json"
+  },
+  "lock": "requirements-portable-lock.txt",
+  "sqlite": {
+    "version": "3.53.4",
+    "asset": "sqlite-dll-win-x64-3530400.zip",
+    "url": "https://www.sqlite.org/2026/sqlite-dll-win-x64-3530400.zip",
+    "sha3_256": "deddee963c810d1eeac3ce5e15c7c41da21a1c54d7a39cf54fbf577d2f50de3a",
+    "dll_sha256": "ab57d0437795ecc757cb693f32ea224173fa9856594d95cfa6b5033e645cd1ec",
+    "license": "Public domain; https://www.sqlite.org/copyright.html",
+    "reason": "WAL-reset race fixed after bundled SQLite 3.50.4"
+  },
+  "wheelhouse": ".cache/wheels",
+  "vendorManifest": "vendor/windows-x64/manifest.json",
+  "bootstrapNetwork": false,
+  "browser": {
+    "engine": "webview2",
+    "package": "playwright",
+    "version": "1.63.0",
+    "runtimeVersion": "154.0.4258.53",
+    "sdkVersion": "1.0.4258.31",
+    "source": "Microsoft Fixed Version runtime (Authenticode) and official NuGet SDK (publisher SHA-512)",
+    "offlineSnapshot": ".cache/downloads/webview2-154.0.4258.53.zip",
+    "integrity": "Microsoft Authenticode verified; official SDK SHA-512 verified; local SHA-256 snapshot",
+    "excludedComponents": [
+      "Chrome for Testing",
+      "Chromium headless shell",
+      "Playwright FFmpeg video recording"
+    ]
+  },
+  "externalServices": [
+    "BOOTH",
+    "pixiv login",
+    "seller download CDNs"
+  ],
+  "bootstrapServices": [],
+  "maintainerSources": [
+    "GitHub release assets",
+    "PyPI",
+    "Playwright browser CDN"
+  ],
+  "osTools": [
+    "cmd.exe",
+    "Windows PowerShell 5.1",
+    "tar.exe",
+    "whoami.exe",
+    "icacls.exe"
+  ]
+}

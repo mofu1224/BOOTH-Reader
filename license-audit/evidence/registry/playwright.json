@@ -1,0 +1,252 @@
+{
+  "url": "https://pypi.org/pypi/playwright/1.63.0/json",
+  "response_sha256": "6e729b721f84339eb0c7aa32d47e7fd9dbb63d1497bcd8e6969b6535596e565e",
+  "info": {
+    "author": "Microsoft Corporation",
+    "author_email": null,
+    "bugtrack_url": null,
+    "classifiers": [
+      "Intended Audience :: Developers",
+      "Operating System :: OS Independent",
+      "Programming Language :: Python :: 3",
+      "Programming Language :: Python :: 3.10",
+      "Programming Language :: Python :: 3.11",
+      "Programming Language :: Python :: 3.12",
+      "Programming Language :: Python :: 3.13",
+      "Programming Language :: Python :: 3.14",
+      "Topic :: Internet :: WWW/HTTP :: Browsers",
+      "Topic :: Software Development :: Testing"
+    ],
+    "description": "# 🎭 [Playwright](https://playwright.dev) for Python [![PyPI](https://badge.fury.io/py/playwright.svg)](https://pypi.python.org/pypi/playwright/) [![Join Discord](https://img.shields.io/badge/join-discord-infomational)](https://aka.ms/playwright/discord)\n\nPlaywright is a Python library to automate [Chromium](https://www.chromium.org/Home), [Firefox](https://www.mozilla.org/en-US/firefox/new/) and [WebKit](https://webkit.org/) browsers with a single API. Playwright delivers automation that is **ever-green**, **capable**, **reliable** and **fast**. [See how Playwright is better](https://playwright.dev/python).\n\n|          | Linux | macOS | Windows |\n|   :---   | :---: | :---: | :---:   |\n| Chromium <!-- GEN:chromium-version -->153.0.8010.12<!-- GEN:stop --> | ✅ | ✅ | ✅ |\n| WebKit <!-- GEN:webkit-version -->26.6<!-- GEN:stop --> | ✅ | ✅ | ✅ |\n| Firefox <!-- GEN:firefox-version -->155.0<!-- GEN:stop --> | ✅ | ✅ | ✅ |\n\n## Documentation\n\n[https://playwright.dev/python/docs/intro](https://playwright.dev/python/docs/intro)\n\n## API Reference\n\n[https://playwright.dev/python/docs/api/class-playwright](https://playwright.dev/python/docs/api/class-playwright)\n\n## Example\n\n```py\nfrom playwright.sync_api import sync_playwright\n\nwith sync_playwright() as p:\n    for browser_type in [p.chromium, p.firefox, p.webkit]:\n        browser = browser_type.launch()\n        page = browser.new_page()\n        page.goto('http://playwright.dev')\n        page.screenshot(path=f'example-{browser_type.name}.png')\n        browser.close()\n```\n\n```py\nimport asyncio\nfrom playwright.async_api import async_playwright\n\nasync def main():\n    async with async_playwright() as p:\n        for browser_type in [p.chromium, p.firefox, p.webkit]:\n            browser = await browser_type.launch()\n            page = await browser.new_page()\n            await page.goto('http://playwright.dev')\n            await page.screenshot(path=f'example-{browser_type.name}.png')\n            await browser.close()\n\nasyncio.run(main())\n```\n\n## Other languages\n\nMore comfortable in another programming language? [Playwright](https://playwright.dev) is also available in\n- [Node.js (JavaScript / TypeScript)](https://playwright.dev/docs/intro),\n- [.NET](https://playwright.dev/dotnet/docs/intro),\n- [Java](https://playwright.dev/java/docs/intro).\n",
+    "description_content_type": "text/markdown",
+    "docs_url": null,
+    "download_url": null,
+    "downloads": {
+      "last_day": -1,
+      "last_month": -1,
+      "last_week": -1
+    },
+    "dynamic": null,
+    "home_page": null,
+    "keywords": null,
+    "license": null,
+    "license_expression": "Apache-2.0",
+    "license_files": null,
+    "maintainer": null,
+    "maintainer_email": null,
+    "name": "playwright",
+    "package_url": "https://pypi.org/project/playwright/",
+    "platform": null,
+    "project_url": "https://pypi.org/project/playwright/",
+    "project_urls": {
+      "Release notes": "https://github.com/microsoft/playwright-python/releases",
+      "homepage": "https://github.com/Microsoft/playwright-python"
+    },
+    "provides_extra": null,
+    "release_url": "https://pypi.org/project/playwright/1.63.0/",
+    "requires_dist": [
+      "pyee<14,>=13",
+      "greenlet<4.0.0,>=3.1.1"
+    ],
+    "requires_python": ">=3.10",
+    "summary": "A high-level API to automate web browsers",
+    "version": "1.63.0",
+    "yanked": false,
+    "yanked_reason": null
+  },
+  "urls": [
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "6b7333d9190588afc36f61995e10874d192ef86b5127c4e94a8912b876b4e789"
+      },
+      "digests": {
+        "blake2b_256": "19ddfbb3d34228ad753bc14464d5f2252585b73367539775a88d0a3949cf5a45",
+        "md5": "2e150085550117d411332d7cce66c271",
+        "sha256": "84c540759e8e7f01e690e197e04060f48899d37cea322299f255843273d3385d"
+      },
+      "downloads": -1,
+      "filename": "playwright-1.63.0-py3-none-macosx_10_13_x86_64.whl",
+      "has_sig": false,
+      "md5_digest": "2e150085550117d411332d7cce66c271",
+      "packagetype": "bdist_wheel",
+      "python_version": "py3",
+      "requires_python": ">=3.10",
+      "size": 44278407,
+      "upload_time": "2026-09-15T16:49:06",
+      "upload_time_iso_8601": "2026-09-15T16:49:06.045396Z",
+      "url": "https://files.pythonhosted.org/packages/19/dd/fbb3d34228ad753bc14464d5f2252585b73367539775a88d0a3949cf5a45/playwright-1.63.0-py3-none-macosx_10_13_x86_64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "6b7333d9190588afc36f61995e10874d192ef86b5127c4e94a8912b876b4e789"
+      },
+      "digests": {
+        "blake2b_256": "f59a948b930b1a8c4ee869e5a139a2b7747caa06aab56a3f09a2f0abdcbda221",
+        "md5": "e5068e317ea0db9c15326d5b1f359ec4",
+        "sha256": "fd1aa00631d44d55e56e0975bf3f3f285fac4a9fd2813183f0c12a488f1a1b24"
+      },
+      "downloads": -1,
+      "filename": "playwright-1.63.0-py3-none-macosx_11_0_arm64.whl",
+      "has_sig": false,
+      "md5_digest": "e5068e317ea0db9c15326d5b1f359ec4",
+      "packagetype": "bdist_wheel",
+      "python_version": "py3",
+      "requires_python": ">=3.10",
+      "size": 42944679,
+      "upload_time": "2026-09-15T16:49:10",
+      "upload_time_iso_8601": "2026-09-15T16:49:10.039564Z",
+      "url": "https://files.pythonhosted.org/packages/f5/9a/948b930b1a8c4ee869e5a139a2b7747caa06aab56a3f09a2f0abdcbda221/playwright-1.63.0-py3-none-macosx_11_0_arm64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "6b7333d9190588afc36f61995e10874d192ef86b5127c4e94a8912b876b4e789"
+      },
+      "digests": {
+        "blake2b_256": "9411dc5c13fa1602371603acd461be47529c1b3513815d3a0dc98f642c291a10",
+        "md5": "5951f75729462a79704169961c6d2e46",
+        "sha256": "c89fc4736502a1f0fac2c8ca5d10c0cbc1c669f1f4774a2d8507a43140e4d53f"
+      },
+      "downloads": -1,
+      "filename": "playwright-1.63.0-py3-none-macosx_11_0_universal2.whl",
+      "has_sig": false,
+      "md5_digest": "5951f75729462a79704169961c6d2e46",
+      "packagetype": "bdist_wheel",
+      "python_version": "py3",
+      "requires_python": ">=3.10",
+      "size": 44278410,
+      "upload_time": "2026-09-15T16:49:13",
+      "upload_time_iso_8601": "2026-09-15T16:49:13.861450Z",
+      "url": "https://files.pythonhosted.org/packages/94/11/dc5c13fa1602371603acd461be47529c1b3513815d3a0dc98f642c291a10/playwright-1.63.0-py3-none-macosx_11_0_universal2.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "6b7333d9190588afc36f61995e10874d192ef86b5127c4e94a8912b876b4e789"
+      },
+      "digests": {
+        "blake2b_256": "279c103a5037789062bdab27c7dca53f3ca6b075b572ab2cd96eec825b3aec4e",
+        "md5": "1469700bdb09d94000d2293b349a9fd9",
+        "sha256": "ad21bc07516b187965a7521c5cf0df0bd657b17482eaad74335272d35a2b07de"
+      },
+      "downloads": -1,
+      "filename": "playwright-1.63.0-py3-none-manylinux1_x86_64.whl",
+      "has_sig": false,
+      "md5_digest": "1469700bdb09d94000d2293b349a9fd9",
+      "packagetype": "bdist_wheel",
+      "python_version": "py3",
+      "requires_python": ">=3.10",
+      "size": 48217159,
+      "upload_time": "2026-09-15T16:49:17",
+      "upload_time_iso_8601": "2026-09-15T16:49:17.404362Z",
+      "url": "https://files.pythonhosted.org/packages/27/9c/103a5037789062bdab27c7dca53f3ca6b075b572ab2cd96eec825b3aec4e/playwright-1.63.0-py3-none-manylinux1_x86_64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "6b7333d9190588afc36f61995e10874d192ef86b5127c4e94a8912b876b4e789"
+      },
+      "digests": {
+        "blake2b_256": "f3823d85505284c5a210f2da6c07b8f757524e79d1fba9cfdafe1eafb766ae59",
+        "md5": "f22e314bb26f922d9ee7b2b6c2a179d4",
+        "sha256": "354e15b29503565fc598b89f16fbe070459343bef9d7498a93e304864000c6a7"
+      },
+      "downloads": -1,
+      "filename": "playwright-1.63.0-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "has_sig": false,
+      "md5_digest": "f22e314bb26f922d9ee7b2b6c2a179d4",
+      "packagetype": "bdist_wheel",
+      "python_version": "py3",
+      "requires_python": ">=3.10",
+      "size": 47902708,
+      "upload_time": "2026-09-15T16:49:21",
+      "upload_time_iso_8601": "2026-09-15T16:49:21.055729Z",
+      "url": "https://files.pythonhosted.org/packages/f3/82/3d85505284c5a210f2da6c07b8f757524e79d1fba9cfdafe1eafb766ae59/playwright-1.63.0-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "6b7333d9190588afc36f61995e10874d192ef86b5127c4e94a8912b876b4e789"
+      },
+      "digests": {
+        "blake2b_256": "698df74ff6b52751859f4b69caf66aa7d4a3c8d6c1f0c7dc9920da103612ee39",
+        "md5": "4ea5fb0083b67a83cba667bc8ce40982",
+        "sha256": "660c00c62639e31b16700ba5456b351ddba55bb766b7ce8261223aa34928e482"
+      },
+      "downloads": -1,
+      "filename": "playwright-1.63.0-py3-none-win32.whl",
+      "has_sig": false,
+      "md5_digest": "4ea5fb0083b67a83cba667bc8ce40982",
+      "packagetype": "bdist_wheel",
+      "python_version": "py3",
+      "requires_python": ">=3.10",
+      "size": 38606075,
+      "upload_time": "2026-09-15T16:49:29",
+      "upload_time_iso_8601": "2026-09-15T16:49:29.546689Z",
+      "url": "https://files.pythonhosted.org/packages/69/8d/f74ff6b52751859f4b69caf66aa7d4a3c8d6c1f0c7dc9920da103612ee39/playwright-1.63.0-py3-none-win32.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "6b7333d9190588afc36f61995e10874d192ef86b5127c4e94a8912b876b4e789"
+      },
+      "digests": {
+        "blake2b_256": "76ebd6b8d92658038e260dbc7dd69fb3fdbe245aac283953de8b50b02bfe5f61",
+        "md5": "f872cc5e67c0ca1309c4459885804580",
+        "sha256": "2f9a707a6c6c91157ed77bff2b8caeb04b3c8d46e70d585fc134298cbe4b5cc6"
+      },
+      "downloads": -1,
+      "filename": "playwright-1.63.0-py3-none-win_amd64.whl",
+      "has_sig": false,
+      "md5_digest": "f872cc5e67c0ca1309c4459885804580",
+      "packagetype": "bdist_wheel",
+      "python_version": "py3",
+      "requires_python": ">=3.10",
+      "size": 38606082,
+      "upload_time": "2026-09-15T16:49:32",
+      "upload_time_iso_8601": "2026-09-15T16:49:32.838501Z",
+      "url": "https://files.pythonhosted.org/packages/76/eb/d6b8d92658038e260dbc7dd69fb3fdbe245aac283953de8b50b02bfe5f61/playwright-1.63.0-py3-none-win_amd64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "6b7333d9190588afc36f61995e10874d192ef86b5127c4e94a8912b876b4e789"
+      },
+      "digests": {
+        "blake2b_256": "be752432b3e3c7c62103b72d4c4cc8b16a56383ada372bbb0d1278591e988f71",
+        "md5": "2f98728d3ce83bf48409af2ff4d3c5a8",
+        "sha256": "1e4a3a838ce22fb68ad17193fcd142a19610d9d70fb9966d2239f5dddc0cc05b"
+      },
+      "downloads": -1,
+      "filename": "playwright-1.63.0-py3-none-win_arm64.whl",
+      "has_sig": false,
+      "md5_digest": "2f98728d3ce83bf48409af2ff4d3c5a8",
+      "packagetype": "bdist_wheel",
+      "python_version": "py3",
+      "requires_python": ">=3.10",
+      "size": 34523554,
+      "upload_time": "2026-09-15T16:49:36",
+      "upload_time_iso_8601": "2026-09-15T16:49:36.455342Z",
+      "url": "https://files.pythonhosted.org/packages/be/75/2432b3e3c7c62103b72d4c4cc8b16a56383ada372bbb0d1278591e988f71/playwright-1.63.0-py3-none-win_arm64.whl",
+      "yanked": false,
+      "yanked_reason": null
+    }
+  ],
+  "wheel_digest_verified": true
+}

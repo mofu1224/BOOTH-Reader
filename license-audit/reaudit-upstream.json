@@ -1,0 +1,37 @@
+[
+  {
+    "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20260325/cpython-3.12.13%2B20260325-x86_64-pc-windows-msvc-pgo-full.tar.zst",
+    "sha256": "950a6128916f140fe8d18366d3fe9fd0e258ed95c49c9afc315fb7e98686d32b",
+    "metadata": "license-audit/evidence/pbs-python-full.json",
+    "status": "retrieved",
+    "install_only_byte_correspondence": "NOT VERIFIED"
+  },
+  {
+    "url": "https://www.google.com/chrome/terms/",
+    "path": "license-audit/evidence/upstream/chrome-additional-terms.txt",
+    "sha256": "ec2c15fd1d132ce2ccc633fad6e515e6d089a80a347bcccb6dee238c24a71638",
+    "status": "retrieved",
+    "scope": "current official document, not proof of individual contractual permission"
+  },
+  {
+    "url": "https://developer.chrome.com/blog/chrome-for-testing/",
+    "path": "license-audit/evidence/upstream/chrome-for-testing-official.txt",
+    "sha256": "96f9be0b3da69572f507f4ecfe0970def692dac288bc219f241cb06df9944040",
+    "status": "retrieved",
+    "scope": "current official document, not proof of individual contractual permission"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260325/cpython-windows/build.py",
+    "path": "license-audit/evidence/upstream/pbs-windows-build.txt",
+    "sha256": "9eb6905a3046737e70b3ead39b9c5891706ac8b831ab6b1ef31d86b0fe7f464a",
+    "status": "retrieved",
+    "scope": "current official document, not proof of individual contractual permission"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nodejs/node/v24.21.0/LICENSE",
+    "path": "license-audit/evidence/upstream/node-24.21.0-license.txt",
+    "sha256": "5888dbb9a1d2b18f2c3e6c5f6af1b39de658372b402a0577b002777f14c62ace",
+    "status": "retrieved",
+    "scope": "current official document, not proof of individual contractual permission"
+  }
+]

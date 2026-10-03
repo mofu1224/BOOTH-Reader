@@ -1,0 +1,119 @@
+{
+  "url": "https://pypi.org/pypi/beautifulsoup4/4.15.0/json",
+  "response_sha256": "96c502f9035ea8dd04730834389a7ae8f2bd0079e24fa4083e8569b0f70e5054",
+  "info": {
+    "author": null,
+    "author_email": "Leonard Richardson <leonardr@segfault.org>",
+    "bugtrack_url": null,
+    "classifiers": [
+      "Development Status :: 5 - Production/Stable",
+      "Intended Audience :: Developers",
+      "License :: OSI Approved :: MIT License",
+      "Programming Language :: Python",
+      "Programming Language :: Python :: 3",
+      "Topic :: Software Development :: Libraries :: Python Modules",
+      "Topic :: Text Processing :: Markup :: HTML",
+      "Topic :: Text Processing :: Markup :: SGML",
+      "Topic :: Text Processing :: Markup :: XML"
+    ],
+    "description": "Beautiful Soup is a library that makes it easy to scrape information\nfrom web pages. It sits atop an HTML or XML parser, providing Pythonic\nidioms for iterating, searching, and modifying the parse tree.\n\n# Quick start\n\n```\n>>> from bs4 import BeautifulSoup\n>>> soup = BeautifulSoup(\"<p>Some<b>bad<i>HTML\")\n>>> print(soup.prettify())\n<html>\n <body>\n  <p>\n   Some\n   <b>\n    bad\n    <i>\n     HTML\n    </i>\n   </b>\n  </p>\n </body>\n</html>\n>>> soup.find(string=\"bad\")\n'bad'\n>>> soup.i\n<i>HTML</i>\n#\n>>> soup = BeautifulSoup(\"<tag1>Some<tag2/>bad<tag3>XML\", \"xml\")\n#\n>>> print(soup.prettify())\n<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<tag1>\n Some\n <tag2/>\n bad\n <tag3>\n  XML\n </tag3>\n</tag1>\n```\n\nTo go beyond the basics, [comprehensive documentation is available](https://www.crummy.com/software/BeautifulSoup/bs4/doc/).\n\n# Links\n\n* [Homepage](https://www.crummy.com/software/BeautifulSoup/bs4/)\n* [Documentation](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)\n* [Discussion group](https://groups.google.com/group/beautifulsoup/)\n* [Development](https://code.launchpad.net/beautifulsoup/)\n* [Bug tracker](https://bugs.launchpad.net/beautifulsoup/)\n* [Complete changelog](https://git.launchpad.net/beautifulsoup/tree/CHANGELOG)\n\n# Note on Python 2 sunsetting\n\nBeautiful Soup's support for Python 2 was discontinued on December 31,\n2020: one year after the sunset date for Python 2 itself. From this\npoint onward, new Beautiful Soup development will exclusively target\nPython 3. The final release of Beautiful Soup 4 to support Python 2\nwas 4.9.3.\n\n# Supporting the project\n\nIf you use Beautiful Soup as part of your professional work, please consider a\n[Tidelift subscription](https://tidelift.com/subscription/pkg/pypi-beautifulsoup4?utm_source=pypi-beautifulsoup4&utm_medium=referral&utm_campaign=readme).\nThis will support many of the free software projects your organization\ndepends on, not just Beautiful Soup.\n\nIf you use Beautiful Soup for personal projects, the best way to say\nthank you is to read\n[Tool Safety](https://www.crummy.com/software/BeautifulSoup/zine/), a zine I\nwrote about what Beautiful Soup has taught me about software\ndevelopment.\n\n# Building the documentation\n\nThe bs4/doc/ directory contains full documentation in Sphinx\nformat. Run `make html` in that directory to create HTML\ndocumentation.\n\n# Running the unit tests\n\nBeautiful Soup supports unit test discovery using Pytest:\n\n```\n$ pytest\n```\n\n",
+    "description_content_type": "text/markdown",
+    "docs_url": null,
+    "download_url": null,
+    "downloads": {
+      "last_day": -1,
+      "last_month": -1,
+      "last_week": -1
+    },
+    "dynamic": null,
+    "home_page": null,
+    "keywords": "HTML, XML, parse, soup",
+    "license": "MIT License",
+    "license_expression": null,
+    "license_files": [
+      "AUTHORS",
+      "LICENSE"
+    ],
+    "maintainer": null,
+    "maintainer_email": null,
+    "name": "beautifulsoup4",
+    "package_url": "https://pypi.org/project/beautifulsoup4/",
+    "platform": null,
+    "project_url": "https://pypi.org/project/beautifulsoup4/",
+    "project_urls": {
+      "Download": "https://www.crummy.com/software/BeautifulSoup/bs4/download/",
+      "Homepage": "https://www.crummy.com/software/BeautifulSoup/bs4/"
+    },
+    "provides_extra": [
+      "cchardet",
+      "chardet",
+      "charset-normalizer",
+      "html5lib",
+      "lxml"
+    ],
+    "release_url": "https://pypi.org/project/beautifulsoup4/4.15.0/",
+    "requires_dist": [
+      "soupsieve>=1.6.1",
+      "typing-extensions>=4.0.0",
+      "cchardet; extra == \"cchardet\"",
+      "chardet; extra == \"chardet\"",
+      "charset-normalizer; extra == \"charset-normalizer\"",
+      "html5lib; extra == \"html5lib\"",
+      "lxml; extra == \"lxml\""
+    ],
+    "requires_python": ">=3.7.0",
+    "summary": "Screen-scraping library",
+    "version": "4.15.0",
+    "yanked": false,
+    "yanked_reason": null
+  },
+  "urls": [
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "b2f888103259f1607c85f3b1163be1bc49fc9941a3243c3b89a21075bfc6d4fb"
+      },
+      "digests": {
+        "blake2b_256": "88c692fcd42f1ba33e1184263f25bfabf3d27c383410470f169e4b8163bf9c17",
+        "md5": "3ec1e870d91567c94c6d6d386cefb518",
+        "sha256": "d6f88de62e1d4e38ecb1077eb9724cd0eff29d2a08ca16a401e9b9e93f117cf9"
+      },
+      "downloads": -1,
+      "filename": "beautifulsoup4-4.15.0-py3-none-any.whl",
+      "has_sig": false,
+      "md5_digest": "3ec1e870d91567c94c6d6d386cefb518",
+      "packagetype": "bdist_wheel",
+      "python_version": "py3",
+      "requires_python": ">=3.7.0",
+      "size": 109924,
+      "upload_time": "2026-06-07T16:44:21",
+      "upload_time_iso_8601": "2026-06-07T16:44:21.566528Z",
+      "url": "https://files.pythonhosted.org/packages/88/c6/92fcd42f1ba33e1184263f25bfabf3d27c383410470f169e4b8163bf9c17/beautifulsoup4-4.15.0-py3-none-any.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": false,
+      "digests": {
+        "blake2b_256": "4365318323f98dbee45d42dff61d8f047181bc6f2268a9068cfad035a46be5af",
+        "md5": "a9d04db2259b78ec23fcdfddfed5bcb8",
+        "sha256": "288e3ca7d54b06f2ac191970bc275c1939cb46d450b255bf6718b04aa37ab4f7"
+      },
+      "downloads": -1,
+      "filename": "beautifulsoup4-4.15.0.tar.gz",
+      "has_sig": false,
+      "md5_digest": "a9d04db2259b78ec23fcdfddfed5bcb8",
+      "packagetype": "sdist",
+      "python_version": "source",
+      "requires_python": ">=3.7.0",
+      "size": 632571,
+      "upload_time": "2026-06-07T16:44:20",
+      "upload_time_iso_8601": "2026-06-07T16:44:20.453113Z",
+      "url": "https://files.pythonhosted.org/packages/43/65/318323f98dbee45d42dff61d8f047181bc6f2268a9068cfad035a46be5af/beautifulsoup4-4.15.0.tar.gz",
+      "yanked": false,
+      "yanked_reason": null
+    }
+  ],
+  "wheel_digest_verified": true
+}

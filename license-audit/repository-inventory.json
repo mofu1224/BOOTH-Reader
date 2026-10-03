@@ -1,0 +1,5382 @@
+[
+  {
+    "path": "NOTICE",
+    "sha256": "815e2203da8a33e8c9c33fe932d4e5a0e2c731810879d3597baeeefdbebb5e99",
+    "size": 1305,
+    "classification": "UNKNOWN",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "SOURCE_OBLIGATIONS/README.md",
+    "sha256": "19845fca46a639c83399de6b53e95e7983805cf446ace48eae13677fc35686c3",
+    "size": 2461,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "SOURCE_OBLIGATIONS/certifi-2026.7.22.tar.gz",
+    "sha256": "741e2c3b351ddf169a738da9f2c048608ff7f2c5cc02f1ebc6b118bb090d5d55",
+    "size": 138112,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "SOURCE_OBLIGATIONS/packageurl_python-0.17.6.tar.gz",
+    "sha256": "1252ce3a102372ca6f86eb968e16f9014c4ba511c5c37d95a7f023e2ca6e5c25",
+    "size": 50618,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "SOURCE_OBLIGATIONS/pathspec-1.1.1.tar.gz",
+    "sha256": "17db5ecd524104a120e173814c90367a96a98d07c45b2e10c2f3919fff91bf5a",
+    "size": 135180,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "SOURCE_OBLIGATIONS/vendored-certifi-source.tar.gz",
+    "sha256": "9bc45dabf515b764910f1da17e1dffb9a05b8f9c5161dcf02273d9ac29244465",
+    "size": 446325,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/09e8a9bcec80-python_Lib_ensurepip__bundled_pip-26.2.1-py3-none-any.whl_pip-26.2.1.dist-info_licenses_src_pip__vendor_requests_LICENSE",
+    "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
+    "size": 10142,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/09e8a9bcec80-python_Lib_ensurepip__bundled_pip-26.2.1-py3-none-any.whl_pip__vendor_requests_LICENSE",
+    "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
+    "size": 10142,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/09e8a9bcec80-python_Lib_site-packages_pip-26.0.1.dist-info_licenses_src_pip__vendor_requests_LICENSE",
+    "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
+    "size": 10142,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/09e8a9bcec80-python_Lib_site-packages_pip__vendor_requests_LICENSE",
+    "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
+    "size": 10142,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/0d1e4405f627-python_tcl_tk8.6_demos_license.terms",
+    "sha256": "0d1e4405f6273f091732764ed89b57066be63ce64869be6c71ea337dc4f2f9b5",
+    "size": 2307,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/0d1e4405f627-python_tcl_tk8.6_license.terms",
+    "sha256": "0d1e4405f6273f091732764ed89b57066be63ce64869be6c71ea337dc4f2f9b5",
+    "size": 2307,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/0d542e0c8804-python_Lib_ensurepip__bundled_pip-26.2.1-py3-none-any.whl_pip-26.2.1.dist-info_licenses_src_pip__vendor_packaging_LICENSE.APACHE",
+    "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+    "size": 10174,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/0d542e0c8804-python_Lib_ensurepip__bundled_pip-26.2.1-py3-none-any.whl_pip__vendor_packaging_LICENSE.APACHE",
+    "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+    "size": 10174,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/0d542e0c8804-python_Lib_site-packages_pip-26.0.1.dist-info_licenses_src_pip__vendor_packaging_LICENSE.APACHE",
+    "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+    "size": 10174,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/0d542e0c8804-python_Lib_site-packages_pip__vendor_packaging_LICENSE.APACHE",
+    "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+    "size": 10174,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/116f84ddc139-python_Lib_ensurepip__bundled_pip-25.0.1-py3-none-any.whl_pip__vendor_vendor.txt",
+    "sha256": "116f84ddc1395c402d545cc62278a402b38c0f118fd032d45b35e96384597c56",
+    "size": 333,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/130e3a64d5fd-python_Lib_ensurepip__bundled_pip-26.2.1-py3-none-any.whl_pip-26.2.1.dist-info_licenses_src_pip__vendor_urllib3_LICENSE.txt",
+    "sha256": "130e3a64d5fdd5d096a752694634a7d9df284469de86e5732100268041e3d686",
+    "size": 1093,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/130e3a64d5fd-python_Lib_ensurepip__bundled_pip-26.2.1-py3-none-any.whl_pip__vendor_urllib3_LICENSE.txt",
+    "sha256": "130e3a64d5fdd5d096a752694634a7d9df284469de86e5732100268041e3d686",
+    "size": 1093,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/1a9a4f0e3d47-python_Lib_ensurepip__bundled_pip-26.2.1-py3-none-any.whl_pip-26.2.1.dist-info_licenses_src_pip__vendor_idna_LICENSE.md",
+    "sha256": "1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04",
+    "size": 1541,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/1a9a4f0e3d47-python_Lib_ensurepip__bundled_pip-26.2.1-py3-none-any.whl_pip__vendor_idna_LICENSE.md",
+    "sha256": "1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04",
+    "size": 1541,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/1ab36e3e2a4b-python_Lib_site-packages_pip-26.0.1.dist-info_licenses_src_pip__vendor_dependency_groups_LICENSE.txt",
+    "sha256": "1ab36e3e2a4ba8631625384f87e9e091db1faed034c5b23325b3239abf2cc525",
+    "size": 1099,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/1ab36e3e2a4b-python_Lib_site-packages_pip__vendor_dependency_groups_LICENSE.txt",
+    "sha256": "1ab36e3e2a4ba8631625384f87e9e091db1faed034c5b23325b3239abf2cc525",
+    "size": 1099,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/1b22b049b526-python_Lib_ensurepip__bundled_pip-26.2.1-py3-none-any.whl_pip-26.2.1.dist-info_licenses_src_pip__vendor_pyproject_hooks_LICENSE",
+    "sha256": "1b22b049b5267d6dfc23a67bf4a84d8ec04b9fdfb1a51d360e42b4342c8b4154",
+    "size": 1081,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/1b22b049b526-python_Lib_ensurepip__bundled_pip-26.2.1-py3-none-any.whl_pip__vendor_pyproject_hooks_LICENSE",
+    "sha256": "1b22b049b5267d6dfc23a67bf4a84d8ec04b9fdfb1a51d360e42b4342c8b4154",
+    "size": 1081,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/1b22b049b526-python_Lib_site-packages_pip-26.0.1.dist-info_licenses_src_pip__vendor_pyproject_hooks_LICENSE",
+    "sha256": "1b22b049b5267d6dfc23a67bf4a84d8ec04b9fdfb1a51d360e42b4342c8b4154",
+    "size": 1081,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/1b22b049b526-python_Lib_site-packages_pip__vendor_pyproject_hooks_LICENSE",
+    "sha256": "1b22b049b5267d6dfc23a67bf4a84d8ec04b9fdfb1a51d360e42b4342c8b4154",
+    "size": 1081,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/1eace90552df-python_Lib_ensurepip__bundled_pip-25.0.1-py3-none-any.whl_pip-25.0.1.dist-info_AUTHORS.txt",
+    "sha256": "1eace90552df4f5941b61a907e20e555e16483ae6127b650bef5a1a2af8102c0",
+    "size": 11018,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/24805c306d3a-python_tcl_tix8.4.3_demos_bitmaps_about.xpm",
+    "sha256": "24805c306d3a88dc8274fa0c4225093a7404720fc0d8b294fc803d444965f0d4",
+    "size": 2360,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/29a9539190e6-LICENSE.libxcb.txt",
+    "sha256": "29a9539190e6de1af5fd06a9139c7103137cd1f9290b08c7b11bce89c01c14d2",
+    "size": 1367,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/29e0fd62e929-python_Lib_ensurepip__bundled_pip-26.2.1-py3-none-any.whl_pip-26.2.1.dist-info_licenses_src_pip__vendor_platformdirs_LICENSE",
+    "sha256": "29e0fd62e929850e86eb28c3fdccf0cefdf4fa94879011cffb3d0d4bed6d4db6",
+    "size": 1089,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/29e0fd62e929-python_Lib_ensurepip__bundled_pip-26.2.1-py3-none-any.whl_pip__vendor_platformdirs_LICENSE",
+    "sha256": "29e0fd62e929850e86eb28c3fdccf0cefdf4fa94879011cffb3d0d4bed6d4db6",
+    "size": 1089,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/29e0fd62e929-python_Lib_site-packages_pip-26.0.1.dist-info_licenses_src_pip__vendor_platformdirs_LICENSE",
+    "sha256": "29e0fd62e929850e86eb28c3fdccf0cefdf4fa94879011cffb3d0d4bed6d4db6",
+    "size": 1089,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/29e0fd62e929-python_Lib_site-packages_pip__vendor_platformdirs_LICENSE",
+    "sha256": "29e0fd62e929850e86eb28c3fdccf0cefdf4fa94879011cffb3d0d4bed6d4db6",
+    "size": 1089,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/2f89f495a3ed-python_Lib_idlelib_help_about.py",
+    "sha256": "2f89f495a3ed95143ce74ba380fe34f779daf4598fec4c775c46cb43745a4fef",
+    "size": 9023,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/33be7b7e8fa4-python_Lib_ensurepip__bundled_pip-26.2.1-py3-none-any.whl_pip-26.2.1.dist-info_licenses_src_pip__vendor_truststore_LICENSE",
+    "sha256": "33be7b7e8fa4fd19b1760e1a8ed8a668bdab852c91b692dd41424bcb725a9fca",
+    "size": 1086,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/33be7b7e8fa4-python_Lib_ensurepip__bundled_pip-26.2.1-py3-none-any.whl_pip__vendor_truststore_LICENSE",
+    "sha256": "33be7b7e8fa4fd19b1760e1a8ed8a668bdab852c91b692dd41424bcb725a9fca",
+    "size": 1086,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/33be7b7e8fa4-python_Lib_site-packages_pip-26.0.1.dist-info_licenses_src_pip__vendor_truststore_LICENSE",
+    "sha256": "33be7b7e8fa4fd19b1760e1a8ed8a668bdab852c91b692dd41424bcb725a9fca",
+    "size": 1086,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/33be7b7e8fa4-python_Lib_site-packages_pip__vendor_truststore_LICENSE",
+    "sha256": "33be7b7e8fa4fd19b1760e1a8ed8a668bdab852c91b692dd41424bcb725a9fca",
+    "size": 1086,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/365e36720db3-LICENSE.zlib.txt",
+    "sha256": "365e36720db366054863235aea5d6f440142ab968834bfaf81fa9d187c99b9b8",
+    "size": 1016,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/41613eabfc08-LICENSE.tcl.txt",
+    "sha256": "41613eabfc08921a7da9c4bfd7f3ce5d5406f55214b253d89f392ed86eebeb8f",
+    "size": 2295,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/492dedba85da-python_Lib_ensurepip__bundled_pip-26.2.1-py3-none-any.whl_pip-26.2.1.dist-info_licenses_src_pip__vendor_msgpack_COPYING",
+    "sha256": "492dedba85da5872f78e6091bcd1fea474d660d35acb4dee964b8aab3f007427",
+    "size": 614,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/492dedba85da-python_Lib_ensurepip__bundled_pip-26.2.1-py3-none-any.whl_pip__vendor_msgpack_COPYING",
+    "sha256": "492dedba85da5872f78e6091bcd1fea474d660d35acb4dee964b8aab3f007427",
+    "size": 614,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/492dedba85da-python_Lib_site-packages_pip-26.0.1.dist-info_licenses_src_pip__vendor_msgpack_COPYING",
+    "sha256": "492dedba85da5872f78e6091bcd1fea474d660d35acb4dee964b8aab3f007427",
+    "size": 614,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/492dedba85da-python_Lib_site-packages_pip__vendor_msgpack_COPYING",
+    "sha256": "492dedba85da5872f78e6091bcd1fea474d660d35acb4dee964b8aab3f007427",
+    "size": 614,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/4eb1fb1705e2-python_Lib_ensurepip__bundled_pip-26.2.1-py3-none-any.whl_pip-26.2.1.dist-info_licenses_AUTHORS.txt",
+    "sha256": "4eb1fb1705e2def898e81bcba19c3aac80620d27ba3569d6a6df7b4629d1b5c2",
+    "size": 12139,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/4f571cad3ea6-LICENSE.ncurses.txt",
+    "sha256": "4f571cad3ea6c888bf0a7092e5b215dddb3142e9e3f1857fd5fac6cf13d345d7",
+    "size": 1476,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/4fca8182cab7-python_Lib_idlelib_CREDITS.txt",
+    "sha256": "4fca8182cab71d43991f3d9370a5a9df1389dab5626c19e0e0f1510a0dd84852",
+    "size": 2148,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/634300a669d4-python_Lib_ensurepip__bundled_pip-25.0.1-py3-none-any.whl_pip-25.0.1.dist-info_LICENSE.txt",
+    "sha256": "634300a669d49aeae65b12c6c48c924c51a4cdf3d1ff086dc3456dc8bcaa2104",
+    "size": 1093,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/634300a669d4-python_Lib_ensurepip__bundled_pip-26.2.1-py3-none-any.whl_pip-26.2.1.dist-info_licenses_LICENSE.txt",
+    "sha256": "634300a669d49aeae65b12c6c48c924c51a4cdf3d1ff086dc3456dc8bcaa2104",
+    "size": 1093,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/634300a669d4-python_Lib_site-packages_pip-26.0.1.dist-info_licenses_LICENSE.txt",
+    "sha256": "634300a669d49aeae65b12c6c48c924c51a4cdf3d1ff086dc3456dc8bcaa2104",
+    "size": 1093,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/7f69ac14b67e-python_Lib_site-packages_pip__vendor_vendor.txt",
+    "sha256": "7f69ac14b67e7215d621948a5b7d4d2c6c8c5a6b7ff957f2eec6397476209a7c",
+    "size": 342,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/808e10c8a6ab-python_Lib_ensurepip__bundled_pip-26.2.1-py3-none-any.whl_pip-26.2.1.dist-info_licenses_src_pip__vendor_distlib_LICENSE.txt",
+    "sha256": "808e10c8a6ab8deb149ff9b3fb19f447a808094606d712a9ca57fead3552599d",
+    "size": 14531,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/808e10c8a6ab-python_Lib_ensurepip__bundled_pip-26.2.1-py3-none-any.whl_pip__vendor_distlib_LICENSE.txt",
+    "sha256": "808e10c8a6ab8deb149ff9b3fb19f447a808094606d712a9ca57fead3552599d",
+    "size": 14531,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/808e10c8a6ab-python_Lib_site-packages_pip-26.0.1.dist-info_licenses_src_pip__vendor_distlib_LICENSE.txt",
+    "sha256": "808e10c8a6ab8deb149ff9b3fb19f447a808094606d712a9ca57fead3552599d",
+    "size": 14531,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/808e10c8a6ab-python_Lib_site-packages_pip__vendor_distlib_LICENSE.txt",
+    "sha256": "808e10c8a6ab8deb149ff9b3fb19f447a808094606d712a9ca57fead3552599d",
+    "size": 14531,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/82b4a5f580cd-python_Lib_site-packages_pip-26.0.1.dist-info_licenses_AUTHORS.txt",
+    "sha256": "82b4a5f580cd3a93851494d7f1960a49d81fa2e5e2fc3ce5472606136faee5a2",
+    "size": 11731,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/86da0f01aeae-python_Lib_ensurepip__bundled_pip-26.2.1-py3-none-any.whl_pip-26.2.1.dist-info_licenses_src_pip__vendor_pkg_resources_LICENSE",
+    "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
+    "size": 1023,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/86da0f01aeae-python_Lib_ensurepip__bundled_pip-26.2.1-py3-none-any.whl_pip__vendor_pkg_resources_LICENSE",
+    "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
+    "size": 1023,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/86da0f01aeae-python_Lib_site-packages_pip-26.0.1.dist-info_licenses_src_pip__vendor_pkg_resources_LICENSE",
+    "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
+    "size": 1023,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/86da0f01aeae-python_Lib_site-packages_pip__vendor_pkg_resources_LICENSE",
+    "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
+    "size": 1023,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/86eeee87be2a-python_Lib_ensurepip__bundled_pip-26.2.1-py3-none-any.whl_pip-26.2.1.dist-info_licenses_src_pip__vendor_cachecontrol_LICENSE.txt",
+    "sha256": "86eeee87be2a43f3ff1f56496f451f69243926f025fedbb033666c304c4c161b",
+    "size": 558,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/86eeee87be2a-python_Lib_ensurepip__bundled_pip-26.2.1-py3-none-any.whl_pip__vendor_cachecontrol_LICENSE.txt",
+    "sha256": "86eeee87be2a43f3ff1f56496f451f69243926f025fedbb033666c304c4c161b",
+    "size": 558,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/86eeee87be2a-python_Lib_site-packages_pip-26.0.1.dist-info_licenses_src_pip__vendor_cachecontrol_LICENSE.txt",
+    "sha256": "86eeee87be2a43f3ff1f56496f451f69243926f025fedbb033666c304c4c161b",
+    "size": 558,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/86eeee87be2a-python_Lib_site-packages_pip__vendor_cachecontrol_LICENSE.txt",
+    "sha256": "86eeee87be2a43f3ff1f56496f451f69243926f025fedbb033666c304c4c161b",
+    "size": 558,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/886a0ead2d89-python_LICENSE.txt",
+    "sha256": "886a0ead2d89030ee62dbff52b04e47ab91998341295bb9c56fb952b4e081c7a",
+    "size": 25066,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/8a9cfe4b5924-LICENSE.expat.txt",
+    "sha256": "8a9cfe4b5924f4b25881aa0c9f5e4561c5f31065d0c4a13cdcdbcf917edf39aa",
+    "size": 1165,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/8cdff3addb9e-LICENSE.tix.txt",
+    "sha256": "8cdff3addb9e9eb108c78e2cf5e05f26b216c098304945733bbec382b2eaef66",
+    "size": 2880,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/8f2d533ab348-LICENSE.bdb.txt",
+    "sha256": "8f2d533ab34899499d5b07f209854b101b17dba2c69f3251860aecf3e4005faa",
+    "size": 7419,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/8fe98bf98229-LICENSE.cpython.txt",
+    "sha256": "8fe98bf9822926d854f56ffd8d97877d8b942617aa44eb7ea77fd99e22f2537e",
+    "size": 36935,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/9afb8970cd29-LICENSE.libffi.txt",
+    "sha256": "9afb8970cd29fc1031fa647278e4bef613399e2e3468a1e3a397f4d158c6101c",
+    "size": 1153,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/a9d66f1d526d-python_Lib_ensurepip__bundled_pip-26.2.1-py3-none-any.whl_pip-26.2.1.dist-info_licenses_src_pip__vendor_pygments_LICENSE",
+    "sha256": "a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17",
+    "size": 1331,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/a9d66f1d526d-python_Lib_ensurepip__bundled_pip-26.2.1-py3-none-any.whl_pip__vendor_pygments_LICENSE",
+    "sha256": "a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17",
+    "size": 1331,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/a9d66f1d526d-python_Lib_site-packages_pip-26.0.1.dist-info_licenses_src_pip__vendor_pygments_LICENSE",
+    "sha256": "a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17",
+    "size": 1331,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/a9d66f1d526d-python_Lib_site-packages_pip__vendor_pygments_LICENSE",
+    "sha256": "a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17",
+    "size": 1331,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/ad89e3fed746-LICENSE.openssl-1.1.txt",
+    "sha256": "ad89e3fed746413af1d34d5353978ee1520cedd361c853f8022e7bb210ac6b31",
+    "size": 6244,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/b28265e2856c-python_Lib_ensurepip__bundled_pip-26.2.1-py3-none-any.whl_pip__vendor_vendor.txt",
+    "sha256": "b28265e2856cdf0124cd18a9b1eabfbdb6b7a8cc01f1ecdd3150d2321e2156fa",
+    "size": 317,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/b70e7e9b742f-python_Lib_ensurepip__bundled_pip-26.2.1-py3-none-any.whl_pip-26.2.1.dist-info_licenses_src_pip__vendor_packaging_LICENSE.BSD",
+    "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+    "size": 1344,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/b70e7e9b742f-python_Lib_ensurepip__bundled_pip-26.2.1-py3-none-any.whl_pip__vendor_packaging_LICENSE.BSD",
+    "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+    "size": 1344,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/b70e7e9b742f-python_Lib_site-packages_pip-26.0.1.dist-info_licenses_src_pip__vendor_packaging_LICENSE.BSD",
+    "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+    "size": 1344,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/b70e7e9b742f-python_Lib_site-packages_pip__vendor_packaging_LICENSE.BSD",
+    "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+    "size": 1344,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/b7a336abf3b0-python_Lib_site-packages_pip-26.0.1.dist-info_licenses_src_pip__vendor_idna_LICENSE.md",
+    "sha256": "b7a336abf3b04e180ec065cdd16e705d079e1cc7a14f910aa6e9187f36b9cd87",
+    "size": 1541,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/b7a336abf3b0-python_Lib_site-packages_pip__vendor_idna_LICENSE.md",
+    "sha256": "b7a336abf3b04e180ec065cdd16e705d079e1cc7a14f910aa6e9187f36b9cd87",
+    "size": 1541,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/b80816b0d530-python_Lib_ensurepip__bundled_pip-26.2.1-py3-none-any.whl_pip-26.2.1.dist-info_licenses_src_pip__vendor_tomli_LICENSE",
+    "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe",
+    "size": 1072,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/b80816b0d530-python_Lib_ensurepip__bundled_pip-26.2.1-py3-none-any.whl_pip-26.2.1.dist-info_licenses_src_pip__vendor_tomli_w_LICENSE",
+    "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe",
+    "size": 1072,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/b80816b0d530-python_Lib_ensurepip__bundled_pip-26.2.1-py3-none-any.whl_pip__vendor_tomli_LICENSE",
+    "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe",
+    "size": 1072,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/b80816b0d530-python_Lib_ensurepip__bundled_pip-26.2.1-py3-none-any.whl_pip__vendor_tomli_w_LICENSE",
+    "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe",
+    "size": 1072,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/b80816b0d530-python_Lib_site-packages_pip-26.0.1.dist-info_licenses_src_pip__vendor_tomli_LICENSE",
+    "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe",
+    "size": 1072,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/b80816b0d530-python_Lib_site-packages_pip-26.0.1.dist-info_licenses_src_pip__vendor_tomli_w_LICENSE",
+    "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe",
+    "size": 1072,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/b80816b0d530-python_Lib_site-packages_pip__vendor_tomli_LICENSE",
+    "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe",
+    "size": 1072,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/b80816b0d530-python_Lib_site-packages_pip__vendor_tomli_w_LICENSE",
+    "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe",
+    "size": 1072,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/bd5628cc76fb-LICENSE.bzip2.txt",
+    "sha256": "bd5628cc76fb0ebf9c657d1dd4d1a240a1a7b216c31663e7bbf1131c0b70a910",
+    "size": 1780,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/c37bf186e27c-python_Lib_site-packages_pip-26.0.1.dist-info_licenses_src_pip__vendor_urllib3_LICENSE.txt",
+    "sha256": "c37bf186e27cf9dbe9619e55edfe3cea7b30091ceb3da63c7dacbe0e6d77907b",
+    "size": 1115,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/c37bf186e27c-python_Lib_site-packages_pip__vendor_urllib3_LICENSE.txt",
+    "sha256": "c37bf186e27cf9dbe9619e55edfe3cea7b30091ceb3da63c7dacbe0e6d77907b",
+    "size": 1115,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/cad1ef5bd340-python_Lib_ensurepip__bundled_pip-26.2.1-py3-none-any.whl_pip-26.2.1.dist-info_licenses_src_pip__vendor_packaging_LICENSE",
+    "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+    "size": 197,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/cad1ef5bd340-python_Lib_ensurepip__bundled_pip-26.2.1-py3-none-any.whl_pip__vendor_packaging_LICENSE",
+    "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+    "size": 197,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/cad1ef5bd340-python_Lib_site-packages_pip-26.0.1.dist-info_licenses_src_pip__vendor_packaging_LICENSE",
+    "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+    "size": 197,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/cad1ef5bd340-python_Lib_site-packages_pip__vendor_packaging_LICENSE",
+    "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+    "size": 197,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/cb5e8e7e5f4a-python_Lib_ensurepip__bundled_pip-26.2.1-py3-none-any.whl_pip-26.2.1.dist-info_licenses_src_pip__vendor_distro_LICENSE",
+    "sha256": "cb5e8e7e5f4a3988e1063c142c60dc2df75605f4c46515e776e3aca6df976e14",
+    "size": 11325,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/cb5e8e7e5f4a-python_Lib_ensurepip__bundled_pip-26.2.1-py3-none-any.whl_pip__vendor_distro_LICENSE",
+    "sha256": "cb5e8e7e5f4a3988e1063c142c60dc2df75605f4c46515e776e3aca6df976e14",
+    "size": 11325,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/cb5e8e7e5f4a-python_Lib_site-packages_pip-26.0.1.dist-info_licenses_src_pip__vendor_distro_LICENSE",
+    "sha256": "cb5e8e7e5f4a3988e1063c142c60dc2df75605f4c46515e776e3aca6df976e14",
+    "size": 11325,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/cb5e8e7e5f4a-python_Lib_site-packages_pip__vendor_distro_LICENSE",
+    "sha256": "cb5e8e7e5f4a3988e1063c142c60dc2df75605f4c46515e776e3aca6df976e14",
+    "size": 11325,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/cbccaa3efe07-LICENSE.libuuid.txt",
+    "sha256": "cbccaa3efe07a9a602751375085be572d4410a250b996716fbe8c5255c7ec6f2",
+    "size": 1459,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/cec808cd2163-LICENSE.libXau.txt",
+    "sha256": "cec808cd2163fccdc8de4a91d526490777afbaeea060e1168c40a804694b7444",
+    "size": 1169,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/d87d218dd908-LICENSE.liblzma.txt",
+    "sha256": "d87d218dd908b3243ec4cbc72af400e5b7437513ea9d9229291d0812b8464fec",
+    "size": 673,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/d8eb9aba7ef6-LICENSE.sqlite.txt",
+    "sha256": "d8eb9aba7ef6b5ed06cb3ec19a7242316af2e5933c638eb67fb781c13884e01d",
+    "size": 1504,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/d9932ccdd42e-LICENSE.libedit.txt",
+    "sha256": "d9932ccdd42eccf6cdded7bcb35b088e64cfc7c24d355af2cc0d02edb6b637d3",
+    "size": 1643,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/deed7c17a431-python_Lib_ensurepip__bundled_pip-26.2.1-py3-none-any.whl_pip-26.2.1.dist-info_licenses_src_pip__vendor_rich_LICENSE",
+    "sha256": "deed7c17a4318158190a3ea239cc879a5a50271cebb98ae7025f48fbe58dca15",
+    "size": 1056,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/deed7c17a431-python_Lib_ensurepip__bundled_pip-26.2.1-py3-none-any.whl_pip__vendor_rich_LICENSE",
+    "sha256": "deed7c17a4318158190a3ea239cc879a5a50271cebb98ae7025f48fbe58dca15",
+    "size": 1056,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/deed7c17a431-python_Lib_site-packages_pip-26.0.1.dist-info_licenses_src_pip__vendor_rich_LICENSE",
+    "sha256": "deed7c17a4318158190a3ea239cc879a5a50271cebb98ae7025f48fbe58dca15",
+    "size": 1056,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/deed7c17a431-python_Lib_site-packages_pip__vendor_rich_LICENSE",
+    "sha256": "deed7c17a4318158190a3ea239cc879a5a50271cebb98ae7025f48fbe58dca15",
+    "size": 1056,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/e93716da6b9c-python_Lib_ensurepip__bundled_pip-26.2.1-py3-none-any.whl_pip-26.2.1.dist-info_licenses_src_pip__vendor_certifi_LICENSE",
+    "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7",
+    "size": 989,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/e93716da6b9c-python_Lib_ensurepip__bundled_pip-26.2.1-py3-none-any.whl_pip__vendor_certifi_LICENSE",
+    "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7",
+    "size": 989,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/e93716da6b9c-python_Lib_site-packages_pip-26.0.1.dist-info_licenses_src_pip__vendor_certifi_LICENSE",
+    "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7",
+    "size": 989,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/e93716da6b9c-python_Lib_site-packages_pip__vendor_certifi_LICENSE",
+    "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7",
+    "size": 989,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/ed72ce2b51ee-LICENSE.openssl-3.txt",
+    "sha256": "ed72ce2b51ee58f117e5a021e2e04af158857f40269fbc03491f0b2a99dbcc96",
+    "size": 10352,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/f094277cd46e-LICENSE.mpdecimal.txt",
+    "sha256": "f094277cd46e1f6e4d87916cc4b51e22f613d45eb81f48231c3cb7caf8fc8a6a",
+    "size": 1308,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/f353accfe297-LICENSE.libX11.txt",
+    "sha256": "f353accfe2976df31ea297a77d1d454bd51ef6be8c3df39bd6aca95901579357",
+    "size": 47960,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/f388fd38cad1-python_Lib_ensurepip__bundled_pip-26.2.1-py3-none-any.whl_pip-26.2.1.dist-info_licenses_src_pip__vendor_resolvelib_LICENSE",
+    "sha256": "f388fd38cad13112c1dc0f669bbe80e7f84541edbafb72f3030d2ca7642c3c9d",
+    "size": 751,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/f388fd38cad1-python_Lib_ensurepip__bundled_pip-26.2.1-py3-none-any.whl_pip__vendor_resolvelib_LICENSE",
+    "sha256": "f388fd38cad13112c1dc0f669bbe80e7f84541edbafb72f3030d2ca7642c3c9d",
+    "size": 751,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/f388fd38cad1-python_Lib_site-packages_pip-26.0.1.dist-info_licenses_src_pip__vendor_resolvelib_LICENSE",
+    "sha256": "f388fd38cad13112c1dc0f669bbe80e7f84541edbafb72f3030d2ca7642c3c9d",
+    "size": 751,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/f388fd38cad1-python_Lib_site-packages_pip__vendor_resolvelib_LICENSE",
+    "sha256": "f388fd38cad13112c1dc0f669bbe80e7f84541edbafb72f3030d2ca7642c3c9d",
+    "size": 751,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/Chrome-153.0.8010.12/1003bedc888d-terms.txt",
+    "sha256": "1003bedc888dc2134d24536371d237c8ca8d58624e93056971bc7b68be4e2594",
+    "size": 1596,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/Chrome-153.0.8010.12/43edd1609638-credits.html",
+    "sha256": "43edd16096389fd27f068a839266428feb8716817f5901814d7293dc068bf6cf",
+    "size": 8513730,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/Chrome-153.0.8010.12/8d12376a7459-credits.txt",
+    "sha256": "8d12376a7459b9df9c5046e63f18ecdc76fedf2a996636d203373085c90f29b0",
+    "size": 20383,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/Chrome-153.0.8010.12/ca467a9ddd16-terms.html",
+    "sha256": "ca467a9ddd16fa1acdd459e843ccf6d697a64090a03d26eff6bb7ddf9325fc2a",
+    "size": 2393,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/annotated-doc-0.0.5/fff170779a6a-annotated_doc-0.0.5.dist-info_licenses_LICENSE",
+    "sha256": "fff170779a6acbf65abdb405c087f1cee1786691e4a96a4034517e4a504a0cdf",
+    "size": 1086,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/annotated-types-0.8.0/fe1049884b1a-annotated_types-0.8.0.dist-info_licenses_LICENSE",
+    "sha256": "fe1049884b1a0d9342901e88e07f32925d24b3121d9972b6a6805fb9824b095d",
+    "size": 1083,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/anyio-4.15.1/5361ac9dc58f-anyio-4.15.1.dist-info_licenses_LICENSE",
+    "sha256": "5361ac9dc58f2ef5fd2e9b09c68297c17f04950909bbc8023bdb82eacf22c2b0",
+    "size": 1081,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/ast-serialize-0.11.2/91e174916565-ast_serialize-0.11.2.dist-info_licenses_LICENSE",
+    "sha256": "91e1749165651f2ad405f1533a921fc8d5cb0de2fd88a4b82090a8b571b5598d",
+    "size": 1308,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/ast-serialize-0.11.2/f798046f335b-ast_serialize-0.11.2.dist-info_licenses_crates_LICENSE",
+    "sha256": "f798046f335b4c84dc851224aeeb8a96b6a1eb70f02f058e860bb00d9d7551cc",
+    "size": 21161,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/beautifulsoup4-4.15.0/55b4d8d4b1e5-beautifulsoup4-4.15.0.dist-info_licenses_LICENSE",
+    "sha256": "55b4d8d4b1e5bc86d10efac91b74c87bcb77526b0f5b9edaf8b9cd2adc7397b2",
+    "size": 1441,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/beautifulsoup4-4.15.0/b989238918e1-beautifulsoup4-4.15.0.dist-info_licenses_AUTHORS",
+    "sha256": "b989238918e1fdac1e46717cb405b63e92497a272413af0d989c1df6c8abcb6f",
+    "size": 2201,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/boolean-py-5.0/5ea0cdf8cfc8-boolean_py-5.0.dist-info_licenses_LICENSE.txt",
+    "sha256": "5ea0cdf8cfc824b446cccf597ff6518c3607a659e9804bc75f1261f9c6ac4ada",
+    "size": 1321,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/browser/0af8f1b80751-webview2-sdk_LICENSE.txt",
+    "sha256": "0af8f1b807512aae39c2ac1aa4d0cae65cabecb6fd554b8439a5162a0d6eca55",
+    "size": 1487,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/browser/122b32f3ee3f-chromium-1243_chrome-win64_ABOUT",
+    "sha256": "122b32f3ee3f1e8d65c774f5257fc6cc2127b666148ced0ce2efa3ea57e1d93c",
+    "size": 257,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/browser/122b32f3ee3f-chromium_headless_shell-1243_chrome-headless-shell-win64_ABOUT",
+    "sha256": "122b32f3ee3f1e8d65c774f5257fc6cc2127b666148ced0ce2efa3ea57e1d93c",
+    "size": 257,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/browser/15bc46c641bc-WEBVIEW2-RUNTIME-LICENSE.txt",
+    "sha256": "15bc46c641bc439514b3f0fe5290e0a5ef906bd8106030b53e1e8a142d6fc9d8",
+    "size": 16496,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/browser/20de37570769-webview2_WidevineCdm_LICENSE",
+    "sha256": "20de375707692099b3132084695377ce5fec0aec05813dedcce094b8eda44386",
+    "size": 473,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/browser/3e867e263b64-webview2_show_third_party_software_licenses.bat",
+    "sha256": "3e867e263b64592b2dad5c334b6aa46d0bb46a20aa0db01c5ff08c707c3e148d",
+    "size": 270,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/browser/44071e0fcffb-webview2_Trust_Protection_Lists_Sigma_LICENSE",
+    "sha256": "44071e0fcffb9a9a32e8fa7010bb18dbc41afd0b176f81bf700b15b638a88a51",
+    "size": 66,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/browser/477eecded405-chromium_headless_shell-1243_chrome-headless-shell-win64_LICENSE.headless_shell",
+    "sha256": "477eecded4058f14bee802ac3a97b439e89ca2a8b4e8aed2ce70485d84c9b5b5",
+    "size": 2300816,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/browser/8ceb4b9ee5ad-webview2_Trust_Protection_Lists_Mu_LICENSE",
+    "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "size": 35147,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/browser/b634ab5640e2-ffmpeg-1011_COPYING.LGPLv2.1",
+    "sha256": "b634ab5640e258563c536e658cad87080553df6f34f62269a21d554844e58bfe",
+    "size": 26526,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/build-1.6.1/aaf9a29ca590-build-1.6.1.dist-info_licenses_LICENSE",
+    "sha256": "aaf9a29ca5907971ccf07de025375db34539a8d5eeebce20b46099805722106f",
+    "size": 1113,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/cachecontrol-0.14.4/86eeee87be2a-cachecontrol-0.14.4.dist-info_licenses_LICENSE.txt",
+    "sha256": "86eeee87be2a43f3ff1f56496f451f69243926f025fedbb033666c304c4c161b",
+    "size": 558,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/certifi-2026.7.22/e93716da6b9c-certifi-2026.7.22.dist-info_licenses_LICENSE",
+    "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7",
+    "size": 989,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/certifi-2026.7.22/e93716da6b9c-certifi-2026.7.22_LICENSE",
+    "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7",
+    "size": 989,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/charset-normalizer-3.5.2/18577485d370-charset_normalizer-3.5.2.dist-info_licenses_LICENSE",
+    "sha256": "18577485d3704f1a479ded8e573c0976cfed315fd2fd17983fa988da4c2f70d1",
+    "size": 1092,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/click-8.5.0/9a8ad106a394-click-8.5.0.dist-info_licenses_LICENSE.txt",
+    "sha256": "9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d",
+    "size": 1475,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/colorama-0.4.6/cac35c02686e-colorama-0.4.6.dist-info_licenses_LICENSE.txt",
+    "sha256": "cac35c02686e5d04a5a7140bfb3b36e73aed496656e891102e428886d7930318",
+    "size": 1491,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/cpython-license/3b2f81fe21d1-LICENSE.txt",
+    "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
+    "size": 13936,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/cyclonedx-python-lib-11.12.0/021381eed6e3-cyclonedx_factory_license.py",
+    "sha256": "021381eed6e355e7d325cb3e22dfd5ab1e3d244839467fada27ab3b3f6f7beb6",
+    "size": 1506,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/cyclonedx-python-lib-11.12.0/1c3bd67b9688-cyclonedx_python_lib-11.12.0.dist-info_licenses_NOTICE",
+    "sha256": "1c3bd67b96888a4ca25f3a94683d929b3f66d7e4cdfe6c04d24f16501a9375c3",
+    "size": 147,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/cyclonedx-python-lib-11.12.0/245ab06d6246-cyclonedx_model_license.py",
+    "sha256": "245ab06d6246854878c3a00d7183353c53634568d01af27791ffa9f8b122f34a",
+    "size": 25646,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/cyclonedx-python-lib-11.12.0/c71d239df917-cyclonedx_python_lib-11.12.0.dist-info_licenses_LICENSE",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "size": 11357,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/defusedxml-0.7.1/b80ce9da8c42-defusedxml-0.7.1.dist-info_LICENSE",
+    "sha256": "b80ce9da8c42a1f91079627fbbe2bf27210ae108a0ffe5f077d5b08e076c24c8",
+    "size": 2409,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/fastapi-0.141.1/4ec89ffc8148-fastapi-0.141.1.dist-info_licenses_LICENSE",
+    "sha256": "4ec89ffc81485b97fec584b2d4a961032eeffe834453894fd9c1274906cc744e",
+    "size": 1086,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/filelock-4.0.7/608c89d5060a-filelock-4.0.7.dist-info_licenses_LICENSE",
+    "sha256": "608c89d5060ae9921adccf3236695bc654a9946e12323ef6c021dfa04e294d48",
+    "size": 1088,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/greenlet-3.5.6/69efa689cc7a-greenlet-3.5.6.dist-info_licenses_LICENSE.PSF",
+    "sha256": "69efa689cc7aec7736236d3039c1d665e4b0c734a5bfea5abf633023abb2fff4",
+    "size": 2471,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/greenlet-3.5.6/ab977b654605-greenlet-3.5.6.dist-info_licenses_LICENSE",
+    "sha256": "ab977b654605670319509481ece49198f405a129372ac38c96f51cd96c2f452e",
+    "size": 1464,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/h11-0.16.0/37db5bb85926-h11-0.16.0.dist-info_licenses_LICENSE.txt",
+    "sha256": "37db5bb85926db28a427a25867f10b1232003aea1be69ccb851138adb8e6f361",
+    "size": 1124,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/httpcore-1.0.9/fdcb59154c74-httpcore-1.0.9.dist-info_licenses_LICENSE.md",
+    "sha256": "fdcb59154c74cbaba16a11242f7740bea9f23d6feb5547917d8c5f94a80392a5",
+    "size": 1518,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/httpx-0.28.1/4ec59d544f12-httpx-0.28.1.dist-info_licenses_LICENSE.md",
+    "sha256": "4ec59d544f12b5f539a3a716fd321ac58ccd8030b465221f2c880200cdf28d8d",
+    "size": 1508,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/idna-3.20/1a9a4f0e3d47-idna-3.20.dist-info_licenses_LICENSE.md",
+    "sha256": "1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04",
+    "size": 1541,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/iniconfig-2.3.0/3409fa91f7ac-iniconfig-2.3.0.dist-info_licenses_LICENSE",
+    "sha256": "3409fa91f7ace557894632676656e32264fe5ef7581535725dc9a23774551bd4",
+    "size": 1098,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/librt-0.16.0/81b7ac7e5dc9-librt-0.16.0.dist-info_licenses_LICENSE",
+    "sha256": "81b7ac7e5dc9410dd4aa4c8f8c5884b43cb821137904dc247b381132389b6aa8",
+    "size": 13052,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/license-expression-30.4.4/2a82ac9bbc3e-license_expression_data_cc-by-4.0.LICENSE",
+    "sha256": "2a82ac9bbc3e3ee066908381e8d373896db5a6025d083fbd59692fe9ccfb9111",
+    "size": 18651,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/license-expression-30.4.4/75d79cccf1fc-license_expression__pyahocorasick.ABOUT",
+    "sha256": "75d79cccf1fc302cb4a99bd32aac8bd4fc80926b15d31f0ba994d16cdf844032",
+    "size": 880,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/license-expression-30.4.4/c71d239df917-license_expression-30.4.4.dist-info_licenses_apache-2.0.LICENSE",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "size": 11357,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/license-expression-30.4.4/d281b77e2e6d-license_expression-30.4.4.dist-info_licenses_AUTHORS.rst",
+    "sha256": "d281b77e2e6dd089de830c623cf1c31e029d8232d0bd762005bf69bd5417f8e9",
+    "size": 491,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/license-expression-30.4.4/d7594273825a-license_expression_data_scancode-licensedb-index.json",
+    "sha256": "d7594273825a68b2d5676d76d336c560210072f07a77edb193ad608694067596",
+    "size": 971162,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/license-expression-30.4.4/ef97db07e32f-license_expression-30.4.4.dist-info_licenses_NOTICE",
+    "sha256": "ef97db07e32f6e5d34363461acf5acc7d72db924533bce3d9f3b87046313363c",
+    "size": 756,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/license-expression-30.4.4/fb5ce1f2dbd2-license_expression_data_license_key_index.json.ABOUT",
+    "sha256": "fb5ce1f2dbd2bedc01fad9507be71ca19ec37b4d6f8dfb9516fbfefee410d85d",
+    "size": 421,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/markdown-it-py-4.2.0/4a2260d6e2cd-markdown_it_py-4.2.0.dist-info_licenses_LICENSE",
+    "sha256": "4a2260d6e2cd0f5a151a1e86dbfe7d3ed552b1e2beabf9941c1ba5c49cbce484",
+    "size": 1078,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/markdown-it-py-4.2.0/792c48c5a849-markdown_it_py-4.2.0.dist-info_licenses_LICENSE.markdown-it",
+    "sha256": "792c48c5a849a15fdf9e37e8bcf9e6d1dd13b32b46c642a748a0a46a9919d473",
+    "size": 1073,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/mdurl-0.1.2/7c605df6e286-mdurl-0.1.2.dist-info_LICENSE",
+    "sha256": "7c605df6e28667a9603118e98274f64a49ce3eed0d26fccce9534a345e0ef955",
+    "size": 2338,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/msgpack-1.2.3/4fbdff42eba4-msgpack-1.2.3.dist-info_licenses_COPYING",
+    "sha256": "4fbdff42eba4593c16f7a7ea7078883b2b734870a1e2b636284ce2dce62bf4f7",
+    "size": 628,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/mypy-2.3.1/13c71e096283-mypy-2.3.1.dist-info_licenses_mypy_typeshed_LICENSE",
+    "sha256": "13c71e0962836d8850762bda0f6234ff213034871fa66b6c42962549d73517a4",
+    "size": 12894,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/mypy-2.3.1/13c71e096283-mypy_typeshed_LICENSE",
+    "sha256": "13c71e0962836d8850762bda0f6234ff213034871fa66b6c42962549d73517a4",
+    "size": 12894,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/mypy-2.3.1/1cdee80ea936-mypy-2.3.1.dist-info_licenses_LICENSE",
+    "sha256": "1cdee80ea9363fbe69582df40fa64e1853d7647fb4978c2b376f5854d88142be",
+    "size": 13106,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/mypy-extensions-1.1.0/a50450da1d53-mypy_extensions-1.1.0.dist-info_licenses_LICENSE",
+    "sha256": "a50450da1d53cd777b80ced77c58ff96abe0ccd879706bd142c3ec20e245f0b4",
+    "size": 1204,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/openssl-license/7d5450cb2d14-LICENSE.txt",
+    "sha256": "7d5450cb2d142651b8afa315b5f238efc805dad827d91ba367d8516bc9d49e7a",
+    "size": 10175,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/opentelemetry-api-1.45.0/c71d239df917-opentelemetry_api-1.45.0.dist-info_licenses_LICENSE",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "size": 11357,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/packageurl-python-0.17.6/8e442c79545a-packageurl_python-0.17.6_mit.LICENSE",
+    "sha256": "8e442c79545ac0c0a1a2cf0cf213312a45826acd6cdc6af223447dd5f708ee5d",
+    "size": 1054,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/packaging-26.3/0d542e0c8804-packaging-26.3.dist-info_licenses_LICENSE.APACHE",
+    "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+    "size": 10174,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/packaging-26.3/b70e7e9b742f-packaging-26.3.dist-info_licenses_LICENSE.BSD",
+    "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+    "size": 1344,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/packaging-26.3/cad1ef5bd340-packaging-26.3.dist-info_licenses_LICENSE",
+    "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+    "size": 197,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pathspec-1.1.1/fab3dd6bdab2-pathspec-1.1.1.dist-info_licenses_LICENSE",
+    "sha256": "fab3dd6bdab226f1c08630b1dd917e11fcb4ec5e1e020e2c16f83a0a13863e85",
+    "size": 16726,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pathspec-1.1.1/fab3dd6bdab2-pathspec-1.1.1_LICENSE",
+    "sha256": "fab3dd6bdab226f1c08630b1dd917e11fcb4ec5e1e020e2c16f83a0a13863e85",
+    "size": 16726,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-26.2.1/09e8a9bcec80-pip-26.2.1.dist-info_licenses_src_pip__vendor_requests_LICENSE",
+    "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
+    "size": 10142,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-26.2.1/09e8a9bcec80-pip__vendor_requests_LICENSE",
+    "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
+    "size": 10142,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-26.2.1/0d542e0c8804-pip-26.2.1.dist-info_licenses_src_pip__vendor_packaging_LICENSE.APACHE",
+    "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+    "size": 10174,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-26.2.1/0d542e0c8804-pip__vendor_packaging_LICENSE.APACHE",
+    "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+    "size": 10174,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-26.2.1/130e3a64d5fd-pip-26.2.1.dist-info_licenses_src_pip__vendor_urllib3_LICENSE.txt",
+    "sha256": "130e3a64d5fdd5d096a752694634a7d9df284469de86e5732100268041e3d686",
+    "size": 1093,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-26.2.1/130e3a64d5fd-pip__vendor_urllib3_LICENSE.txt",
+    "sha256": "130e3a64d5fdd5d096a752694634a7d9df284469de86e5732100268041e3d686",
+    "size": 1093,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-26.2.1/1a9a4f0e3d47-pip-26.2.1.dist-info_licenses_src_pip__vendor_idna_LICENSE.md",
+    "sha256": "1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04",
+    "size": 1541,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-26.2.1/1a9a4f0e3d47-pip__vendor_idna_LICENSE.md",
+    "sha256": "1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04",
+    "size": 1541,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-26.2.1/1b22b049b526-pip-26.2.1.dist-info_licenses_src_pip__vendor_pyproject_hooks_LICENSE",
+    "sha256": "1b22b049b5267d6dfc23a67bf4a84d8ec04b9fdfb1a51d360e42b4342c8b4154",
+    "size": 1081,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-26.2.1/1b22b049b526-pip__vendor_pyproject_hooks_LICENSE",
+    "sha256": "1b22b049b5267d6dfc23a67bf4a84d8ec04b9fdfb1a51d360e42b4342c8b4154",
+    "size": 1081,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-26.2.1/29e0fd62e929-pip-26.2.1.dist-info_licenses_src_pip__vendor_platformdirs_LICENSE",
+    "sha256": "29e0fd62e929850e86eb28c3fdccf0cefdf4fa94879011cffb3d0d4bed6d4db6",
+    "size": 1089,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-26.2.1/29e0fd62e929-pip__vendor_platformdirs_LICENSE",
+    "sha256": "29e0fd62e929850e86eb28c3fdccf0cefdf4fa94879011cffb3d0d4bed6d4db6",
+    "size": 1089,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-26.2.1/33be7b7e8fa4-pip-26.2.1.dist-info_licenses_src_pip__vendor_truststore_LICENSE",
+    "sha256": "33be7b7e8fa4fd19b1760e1a8ed8a668bdab852c91b692dd41424bcb725a9fca",
+    "size": 1086,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-26.2.1/33be7b7e8fa4-pip__vendor_truststore_LICENSE",
+    "sha256": "33be7b7e8fa4fd19b1760e1a8ed8a668bdab852c91b692dd41424bcb725a9fca",
+    "size": 1086,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-26.2.1/3df0c9601bfa-pip__vendor_vendor.txt",
+    "sha256": "3df0c9601bfa2e0dca23cc574a4f900a4d7fdad060ab203fab8354350ed93320",
+    "size": 317,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-26.2.1/492dedba85da-pip-26.2.1.dist-info_licenses_src_pip__vendor_msgpack_COPYING",
+    "sha256": "492dedba85da5872f78e6091bcd1fea474d660d35acb4dee964b8aab3f007427",
+    "size": 614,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-26.2.1/492dedba85da-pip__vendor_msgpack_COPYING",
+    "sha256": "492dedba85da5872f78e6091bcd1fea474d660d35acb4dee964b8aab3f007427",
+    "size": 614,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-26.2.1/4eb1fb1705e2-pip-26.2.1.dist-info_licenses_AUTHORS.txt",
+    "sha256": "4eb1fb1705e2def898e81bcba19c3aac80620d27ba3569d6a6df7b4629d1b5c2",
+    "size": 12139,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-26.2.1/634300a669d4-pip-26.2.1.dist-info_licenses_LICENSE.txt",
+    "sha256": "634300a669d49aeae65b12c6c48c924c51a4cdf3d1ff086dc3456dc8bcaa2104",
+    "size": 1093,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-26.2.1/808e10c8a6ab-pip-26.2.1.dist-info_licenses_src_pip__vendor_distlib_LICENSE.txt",
+    "sha256": "808e10c8a6ab8deb149ff9b3fb19f447a808094606d712a9ca57fead3552599d",
+    "size": 14531,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-26.2.1/808e10c8a6ab-pip__vendor_distlib_LICENSE.txt",
+    "sha256": "808e10c8a6ab8deb149ff9b3fb19f447a808094606d712a9ca57fead3552599d",
+    "size": 14531,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-26.2.1/86da0f01aeae-pip-26.2.1.dist-info_licenses_src_pip__vendor_pkg_resources_LICENSE",
+    "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
+    "size": 1023,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-26.2.1/86da0f01aeae-pip__vendor_pkg_resources_LICENSE",
+    "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
+    "size": 1023,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-26.2.1/86eeee87be2a-pip-26.2.1.dist-info_licenses_src_pip__vendor_cachecontrol_LICENSE.txt",
+    "sha256": "86eeee87be2a43f3ff1f56496f451f69243926f025fedbb033666c304c4c161b",
+    "size": 558,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-26.2.1/86eeee87be2a-pip__vendor_cachecontrol_LICENSE.txt",
+    "sha256": "86eeee87be2a43f3ff1f56496f451f69243926f025fedbb033666c304c4c161b",
+    "size": 558,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-26.2.1/a9d66f1d526d-pip-26.2.1.dist-info_licenses_src_pip__vendor_pygments_LICENSE",
+    "sha256": "a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17",
+    "size": 1331,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-26.2.1/a9d66f1d526d-pip__vendor_pygments_LICENSE",
+    "sha256": "a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17",
+    "size": 1331,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-26.2.1/b28265e2856c-pip__vendor_vendor.txt",
+    "sha256": "b28265e2856cdf0124cd18a9b1eabfbdb6b7a8cc01f1ecdd3150d2321e2156fa",
+    "size": 317,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-26.2.1/b70e7e9b742f-pip-26.2.1.dist-info_licenses_src_pip__vendor_packaging_LICENSE.BSD",
+    "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+    "size": 1344,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-26.2.1/b70e7e9b742f-pip__vendor_packaging_LICENSE.BSD",
+    "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+    "size": 1344,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-26.2.1/b80816b0d530-pip-26.2.1.dist-info_licenses_src_pip__vendor_tomli_LICENSE",
+    "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe",
+    "size": 1072,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-26.2.1/b80816b0d530-pip-26.2.1.dist-info_licenses_src_pip__vendor_tomli_w_LICENSE",
+    "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe",
+    "size": 1072,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-26.2.1/b80816b0d530-pip__vendor_tomli_LICENSE",
+    "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe",
+    "size": 1072,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-26.2.1/b80816b0d530-pip__vendor_tomli_w_LICENSE",
+    "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe",
+    "size": 1072,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-26.2.1/cad1ef5bd340-pip-26.2.1.dist-info_licenses_src_pip__vendor_packaging_LICENSE",
+    "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+    "size": 197,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-26.2.1/cad1ef5bd340-pip__vendor_packaging_LICENSE",
+    "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+    "size": 197,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-26.2.1/cb5e8e7e5f4a-pip-26.2.1.dist-info_licenses_src_pip__vendor_distro_LICENSE",
+    "sha256": "cb5e8e7e5f4a3988e1063c142c60dc2df75605f4c46515e776e3aca6df976e14",
+    "size": 11325,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-26.2.1/cb5e8e7e5f4a-pip__vendor_distro_LICENSE",
+    "sha256": "cb5e8e7e5f4a3988e1063c142c60dc2df75605f4c46515e776e3aca6df976e14",
+    "size": 11325,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-26.2.1/deed7c17a431-pip-26.2.1.dist-info_licenses_src_pip__vendor_rich_LICENSE",
+    "sha256": "deed7c17a4318158190a3ea239cc879a5a50271cebb98ae7025f48fbe58dca15",
+    "size": 1056,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-26.2.1/deed7c17a431-pip__vendor_rich_LICENSE",
+    "sha256": "deed7c17a4318158190a3ea239cc879a5a50271cebb98ae7025f48fbe58dca15",
+    "size": 1056,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-26.2.1/e93716da6b9c-pip-26.2.1.dist-info_licenses_src_pip__vendor_certifi_LICENSE",
+    "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7",
+    "size": 989,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-26.2.1/e93716da6b9c-pip__vendor_certifi_LICENSE",
+    "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7",
+    "size": 989,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-26.2.1/f388fd38cad1-pip-26.2.1.dist-info_licenses_src_pip__vendor_resolvelib_LICENSE",
+    "sha256": "f388fd38cad13112c1dc0f669bbe80e7f84541edbafb72f3030d2ca7642c3c9d",
+    "size": 751,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-26.2.1/f388fd38cad1-pip__vendor_resolvelib_LICENSE",
+    "sha256": "f388fd38cad13112c1dc0f669bbe80e7f84541edbafb72f3030d2ca7642c3c9d",
+    "size": 751,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-api-0.0.35/14ed54990120-pip_api-0.0.35.dist-info_licenses_LICENSE",
+    "sha256": "14ed54990120efea26042269885df36e1b53db858bf04b40c8cfc8c5e12f6fb1",
+    "size": 9695,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-audit-2.10.1/0d542e0c8804-pip_audit-2.10.1.dist-info_licenses_LICENSE",
+    "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+    "size": 10174,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-requirements-parser-32.0.1/18081c2c8277-pip_requirements_parser-32.0.1.dist-info_mit.LICENSE",
+    "sha256": "18081c2c82771ca09d99d08cdac405924309e09fd19b16f1eea59cbc6ab809ed",
+    "size": 1080,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pip-requirements-parser-32.0.1/b25584f1e372-pip_requirements_parser-32.0.1.dist-info_AUTHORS.rst",
+    "sha256": "b25584f1e37242efa242a0f096c581892e1e4b910b992c510a4531110edbcb6f",
+    "size": 78,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/platformdirs-4.12.2/29e0fd62e929-platformdirs-4.12.2.dist-info_licenses_LICENSE",
+    "sha256": "29e0fd62e929850e86eb28c3fdccf0cefdf4fa94879011cffb3d0d4bed6d4db6",
+    "size": 1089,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/playwright-1.63.0/2495f30be296-playwright_driver_package_lib_utilsBundle.js.LICENSE",
+    "sha256": "2495f30be29620d54b58339821eda0ebabdfb6ee9b09455f7285a06fd46fb9f3",
+    "size": 106591,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/playwright-1.63.0/3098a6efcbc1-playwright_driver_package_lib_serverRegistry.js.LICENSE",
+    "sha256": "3098a6efcbc11752cbdf6075fa65480f5470f78c8d981fab9c0796dc9a41cefe",
+    "size": 2982,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/playwright-1.63.0/45873d00a0dd-playwright_driver_package_LICENSE",
+    "sha256": "45873d00a0dd243596deb4aa23b2493b3d1f0671921bf2538ea431d7380220eb",
+    "size": 11601,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/playwright-1.63.0/6d602191187b-playwright_driver_package_NOTICE",
+    "sha256": "6d602191187b35b9b01d2cffa01c8469c2c8d9de8a96f1bf868e0f264f51c81d",
+    "size": 254,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/playwright-1.63.0/7fab1461b419-playwright-1.63.0.dist-info_licenses_LICENSE",
+    "sha256": "7fab1461b41970ff376f1c9303a637076bfaaeb71cd12dd3a1c44aaf59a1a2b9",
+    "size": 11399,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/playwright-1.63.0/995c7ee35ace-playwright_driver_package_lib_webp_codec.LICENSE",
+    "sha256": "995c7ee35aceb7666829b7a501ca89c0864e12b493c1174b155774ab1e03d831",
+    "size": 8841,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/playwright-1.63.0/a549d329bad8-playwright_driver_package_ThirdPartyNotices.txt",
+    "sha256": "a549d329bad8806fe279f0ecae0fc0270dec7e7c2dc8ec10f90e394f7c32b144",
+    "size": 676,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/playwright-1.63.0/ed34dd8e3f0a-playwright_driver_LICENSE",
+    "sha256": "ed34dd8e3f0a78dbaf00d0444ce8e285b015b765379c2e17880455f70370f8e9",
+    "size": 160555,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/playwright-license/45873d00a0dd-LICENSE.txt",
+    "sha256": "45873d00a0dd243596deb4aa23b2493b3d1f0671921bf2538ea431d7380220eb",
+    "size": 11601,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pluggy-1.6.0/d6b65e6c213a-pluggy-1.6.0.dist-info_licenses_LICENSE",
+    "sha256": "d6b65e6c213a5d0b577911d34d6e5949b9f59d76c238c5071a2f3fc16cfb2606",
+    "size": 1110,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/py-serializable-2.1.0/c71d239df917-py_serializable-2.1.0.dist-info_LICENSE",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "size": 11357,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pydantic-2.13.5/a9e186f3ca16-pydantic-2.13.5.dist-info_licenses_LICENSE",
+    "sha256": "a9e186f3ca16b5eef84318e7a701721351a00cb7b8ae3a4394b67b49e3529ef3",
+    "size": 1129,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pydantic-core-2.46.5/fbe7f615f18d-pydantic_core-2.46.5.dist-info_licenses_LICENSE",
+    "sha256": "fbe7f615f18d135c07000e5a86325db27f42c7729699ef166ac1f7a3f4586bf4",
+    "size": 1101,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pyee-13.0.1/1ff556ca206b-pyee-13.0.1.dist-info_licenses_LICENSE",
+    "sha256": "1ff556ca206b107f10e1c562ae454d3292e0296c3510eb90eb7f114caee32a66",
+    "size": 1080,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pygments-2.21.0/71a83872ad82-pygments-2.21.0.dist-info_licenses_AUTHORS",
+    "sha256": "71a83872ad82f57be692cf827e048e2cd51d45169cfa1ea3f28706d97a872c0f",
+    "size": 11048,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pygments-2.21.0/a9d66f1d526d-pygments-2.21.0.dist-info_licenses_LICENSE",
+    "sha256": "a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17",
+    "size": 1331,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pyparsing-3.3.3/a5425f9dc14a-pyparsing-3.3.3.dist-info_licenses_LICENSE",
+    "sha256": "a5425f9dc14ac74d4c5f0b679e941f2442e32cca7452a4418d5b1a49893ebe4e",
+    "size": 1062,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pyproject-hooks-1.3.3/1b22b049b526-pyproject_hooks-1.3.3.dist-info_licenses_LICENSE",
+    "sha256": "1b22b049b5267d6dfc23a67bf4a84d8ec04b9fdfb1a51d360e42b4342c8b4154",
+    "size": 1081,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/pytest-9.1.1/ca836a5f9ecc-pytest-9.1.1.dist-info_licenses_LICENSE",
+    "sha256": "ca836a5f9ecca3b2f350230faa20a48fb8b145653b5568d784862df864706b9b",
+    "size": 1091,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/requests-2.34.2/09e8a9bcec80-requests-2.34.2.dist-info_licenses_LICENSE",
+    "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
+    "size": 10142,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/requests-2.34.2/f5110972deda-requests-2.34.2.dist-info_licenses_NOTICE",
+    "sha256": "f5110972dedad2b4e9d314518daf3b7d72d6e02e499acd802181de6f74571dcc",
+    "size": 38,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/rich-15.0.0/deed7c17a431-rich-15.0.0.dist-info_licenses_LICENSE",
+    "sha256": "deed7c17a4318158190a3ea239cc879a5a50271cebb98ae7025f48fbe58dca15",
+    "size": 1056,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/ruff-0.16.9/2597d854122b-ruff-0.16.9.dist-info_licenses_LICENSE",
+    "sha256": "2597d854122b77ddc71971564ca2350a37608575ce324adc5650a2b2051c8f18",
+    "size": 20731,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/setuptools-84.0.0/09c9bcea95ca-setuptools_config__validate_pyproject_NOTICE",
+    "sha256": "09c9bcea95ca086f8bc5bed174e40bc835b297d40fb5f86bbbb570fe0a5581a7",
+    "size": 18737,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/setuptools-84.0.0/09f1c8c9e941-setuptools__vendor_more_itertools-10.8.0.dist-info_licenses_LICENSE",
+    "sha256": "09f1c8c9e941af3e584d59641ea9b87d83c0cb0fd007eb5ef391a7e2643c1a46",
+    "size": 1053,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/setuptools-84.0.0/0d542e0c8804-setuptools__vendor_packaging-26.0.dist-info_licenses_LICENSE.APACHE",
+    "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+    "size": 10174,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/setuptools-84.0.0/29e0fd62e929-setuptools__vendor_platformdirs-4.4.0.dist-info_licenses_LICENSE",
+    "sha256": "29e0fd62e929850e86eb28c3fdccf0cefdf4fa94879011cffb3d0d4bed6d4db6",
+    "size": 1089,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/setuptools-84.0.0/2dddf0881829-setuptools_config_NOTICE",
+    "sha256": "2dddf08818297a3b89d43d95ff659d8da85741108c9136dfa3a4d856c0623bd8",
+    "size": 493,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/setuptools-84.0.0/30c236186791-setuptools__vendor_wheel-0.46.3.dist-info_licenses_LICENSE.txt",
+    "sha256": "30c23618679108f3e8ea1d2a658c7ca417bdfc891c98ef1a89fa4ff0c9828654",
+    "size": 1107,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/setuptools-84.0.0/458502e12d97-setuptools__vendor_importlib_metadata-8.7.1.dist-info_licenses_LICENSE",
+    "sha256": "458502e12d97bbf64438606a20044aa85eb05fb0a8a807bb35dbec253fd1fc04",
+    "size": 10278,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/setuptools-84.0.0/5a57cb4db85e-setuptools__vendor_jaraco_functools-4.4.0.dist-info_licenses_LICENSE",
+    "sha256": "5a57cb4db85e2a2dd88c290628908add57e3451449e0a9a71fdfb38776fd759d",
+    "size": 1076,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/setuptools-84.0.0/5a57cb4db85e-setuptools__vendor_zipp-3.23.0.dist-info_licenses_LICENSE",
+    "sha256": "5a57cb4db85e2a2dd88c290628908add57e3451449e0a9a71fdfb38776fd759d",
+    "size": 1076,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/setuptools-84.0.0/86da0f01aeae-setuptools-84.0.0.dist-info_licenses_LICENSE",
+    "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
+    "size": 1023,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/setuptools-84.0.0/86da0f01aeae-setuptools__vendor_backports.tarfile-1.2.0.dist-info_LICENSE",
+    "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
+    "size": 1023,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/setuptools-84.0.0/86da0f01aeae-setuptools__vendor_jaraco.text-4.0.0.dist-info_LICENSE",
+    "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
+    "size": 1023,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/setuptools-84.0.0/9755a1851966-setuptools__vendor_jaraco_context-6.1.0.dist-info_licenses_LICENSE",
+    "sha256": "9755a18519666e5f0f4cae3daad3d7012bcae48a600b31237d75e9fe134e6683",
+    "size": 1076,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/setuptools-84.0.0/ade78d04982d-setuptools__vendor_autocommand-2.2.2.dist-info_LICENSE",
+    "sha256": "ade78d04982d69972d444a8e14a94f87a2334dd3855cc80348ea8e240aa0df2d",
+    "size": 7634,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/setuptools-84.0.0/b70e7e9b742f-setuptools__vendor_packaging-26.0.dist-info_licenses_LICENSE.BSD",
+    "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+    "size": 1344,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/setuptools-84.0.0/b80816b0d530-setuptools__vendor_tomli-2.4.0.dist-info_licenses_LICENSE",
+    "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe",
+    "size": 1072,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/setuptools-84.0.0/cad1ef5bd340-setuptools__vendor_packaging-26.0.dist-info_licenses_LICENSE",
+    "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+    "size": 197,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/sortedcontainers-2.4.0/1db7cae7fce6-sortedcontainers-2.4.0.dist-info_LICENSE",
+    "sha256": "1db7cae7fce6452e2e608e401a0f953e0133e4c2d75db69fb8ae851d2086f5b6",
+    "size": 557,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/soupsieve-2.10/76a0acdb98c3-soupsieve-2.10.dist-info_licenses_LICENSE.md",
+    "sha256": "76a0acdb98c3a63681e20b6f096699ef8cad5fb35d56eef8387e0fa71d797a9a",
+    "size": 1096,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/starlette-1.7.0/dcb95677a022-starlette-1.7.0.dist-info_licenses_LICENSE.md",
+    "sha256": "dcb95677a02240243187e964f941847d19b17821cf99e5afae684fab328c19bf",
+    "size": 1518,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/tomli-2.4.1/34b59b39e7ba-tomli-2.4.1.dist-info_licenses_LICENSE",
+    "sha256": "34b59b39e7ba577a1d86924218c71229b163d3bf3903aec784299f725c89d324",
+    "size": 1093,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/tomli-w-1.2.0/b80816b0d530-tomli_w-1.2.0.dist-info_LICENSE",
+    "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe",
+    "size": 1072,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/typing-extensions-4.16.0/3b2f81fe21d1-typing_extensions-4.16.0.dist-info_licenses_LICENSE",
+    "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
+    "size": 13936,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/typing-inspection-0.4.4/804b59b25f2c-typing_inspection-0.4.4.dist-info_licenses_LICENSE",
+    "sha256": "804b59b25f2c31bd278f9202a19ae49a3945aa2664387e2d0a128c7cacc61ec3",
+    "size": 1090,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/urllib3-2.8.0/130e3a64d5fd-urllib3-2.8.0.dist-info_licenses_LICENSE.txt",
+    "sha256": "130e3a64d5fdd5d096a752694634a7d9df284469de86e5732100268041e3d686",
+    "size": 1093,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/uvicorn-0.54.0/efe1acf3e62f-uvicorn-0.54.0.dist-info_licenses_LICENSE.md",
+    "sha256": "efe1acf3e62fb99c288b0ec73e5a773b7268ef4320fe757ea994214e4b63c371",
+    "size": 1526,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/wheel-0.48.0/30c236186791-wheel-0.48.0.dist-info_licenses_LICENSE.txt",
+    "sha256": "30c23618679108f3e8ea1d2a658c7ca417bdfc891c98ef1a89fa4ff0c9828654",
+    "size": 1107,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "audit/13-reaudit-quality-report.md",
+    "sha256": "1239607994eb7a93838193fc3ac09103682de08825b0be1a17291ac4531f1869",
+    "size": 13558,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "audit/14-final-portability-report.md",
+    "sha256": "a6e1b68d3ce102ae72340bcd32111197a42aad4530bef01a9d46e0dbe6137df5",
+    "size": 15144,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "audit/15-autonomous-audit-20261002.md",
+    "sha256": "e5a68c30678c70b107758338256376af506c814e612563e926178336f4087193",
+    "size": 5928,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "audit/16-release-privacy-and-license-followup.md",
+    "sha256": "1248894fbe897ccf72c660c8d256767e3d7feb59f264a4a292b238a0cb24b44c",
+    "size": 4134,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "core/browser.py",
+    "sha256": "314f0cf883da0ccee2eae58c04bb43a0ea048e1c7952d88fa2d256db224cf49c",
+    "size": 4937,
+    "classification": "UNKNOWN",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/01-project-provenance.md",
+    "sha256": "be1c2c1dcc09727ee90f5a80c23f9a302129fb906d6e33ec88ed98f3d464146d",
+    "size": 569,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/02-component-inventory.md",
+    "sha256": "0fda44764229010df6439ba4374277a2c865f082d0f34b952c3f14319a541e11",
+    "size": 4779,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/03-source-code-provenance.md",
+    "sha256": "f371a066d1a6653ef5425c0adeea5d47e7a883a7be8f4167244fc9a48bc5661b",
+    "size": 728,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/04-external-repositories.md",
+    "sha256": "dd8becd231ee95e87449e332869c95d419acd1a5092c0bc2ea10e1ca9531227d",
+    "size": 711,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/05-dependency-tree.md",
+    "sha256": "b6ff5420b94b924a489c9ae96da1e03d326357b46149a47d29e2caf60ab8fbab",
+    "size": 3127,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/06-binary-inventory.md",
+    "sha256": "e51cba7ce8e7f580c6c2841009222ff77ad725bb865f7434c4787e60a7ec83c7",
+    "size": 613,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/07-asset-inventory.md",
+    "sha256": "34c4942bab04ba4d73646a2771fc9c55acd741661baf416f88126e7f10011de0",
+    "size": 551,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/08-ai-model-and-dataset-audit.md",
+    "sha256": "5c2f21d3023ae8112747ab836421044b7da90c0290e5c65f34622046bc04085e",
+    "size": 864,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/09-license-evidence.md",
+    "sha256": "805a644fe39fd71cc50028fc5bf752dc8140f9890e483b11cccf8798af54c318",
+    "size": 795,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/10-license-obligations.md",
+    "sha256": "2aad3a76caa9e2bac8ec32cc27e4978ee18969a931d01a20f2ee2363a8486cb1",
+    "size": 991,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/11-license-compatibility.md",
+    "sha256": "338f17886adf3c2290fa91915f832ff9b7e03383e46bd5dc8bf9cc9c673e7aa1",
+    "size": 683,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/12-compliance-issues.md",
+    "sha256": "f44136a3554d9fe5fb01e24c173cd7722875bdb16972192423e98db1262cde5d",
+    "size": 4439,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/13-compliance-actions.md",
+    "sha256": "d1434ac727d8640e9eb426902782ed3e4344a79990fbc5dc7c5a87f30117ee3d",
+    "size": 767,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/14-distribution-inventory.md",
+    "sha256": "33970026612162522274a9af853352046f3d0a30c1f44f55f5f56994c1ec268a",
+    "size": 739,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/15-source-obligations.md",
+    "sha256": "751861fa37ac9465638d588cb0e54057405d371679e69a8deee6cfcc1fa95aba",
+    "size": 545,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/16-final-package-audit.md",
+    "sha256": "b635aedb922edbe627e74958d2d9395e203ef61312b5987bc799847cd453e308",
+    "size": 451,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/17-unverified-components.md",
+    "sha256": "d172bd50179992ac50a47fb980953966ec504d08fe694d26074a3eae78c8d655",
+    "size": 4745,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/18-final-compliance-report.md",
+    "sha256": "d40c1b001b45b0baa21e4e79e87161a161f1259c9b7130ea024aaa1d1126a883",
+    "size": 2014,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/19-release-readiness.md",
+    "sha256": "50995a570b45c92c9ffddba961785d9ef8fc8b261f90fbde709804d142e5a3bd",
+    "size": 7403,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/20-security-audit.md",
+    "sha256": "034cfb10c6c9481143b14036b59c32ecccbebc28ba550ba58b08cf0a2382d820",
+    "size": 1174,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/21-build-and-release-notes.md",
+    "sha256": "457060ca1e8ffd6b46a4cb6a9294953e9c5bb8cc8747a2e0667d2b4e63005f13",
+    "size": 1316,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/22-final-verification.md",
+    "sha256": "fe3ff2291e8719933ca8c530034accc2d7dc326e5de38bbca26d37664f67dbd8",
+    "size": 4887,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/23-reaudit-20261002.md",
+    "sha256": "db004cb1f87a9f7c977a5028c7b9bafa2fe3aaa59f78ad61e068930242d3e0fe",
+    "size": 5960,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/24-current-final-verification.md",
+    "sha256": "5b102ca64a1a44eff3d6cc9c179ebfe9eae2697ee9587b3a6a9e9e59c22be3be",
+    "size": 5859,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/25-embedded-advisory-review.md",
+    "sha256": "9a9ea69f6a78fad3eacdfb348e832590e9c0863bab8ba9ff550ffed9f2e8b36e",
+    "size": 2697,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/26-public-source-release.md",
+    "sha256": "bcf7c23a053ff275c521e3e86c2154eecf2273ac9c277dc6bdbbdafc97099a7d",
+    "size": 8578,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/advisory-evidence.json",
+    "sha256": "20b3bb124d16e5836ff67a31d8134162cd308f6c11926394405101de5bc08c06",
+    "size": 5069,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/archive-files.json",
+    "sha256": "25ac61edd109f8a4eb6065247d3a14c1eaa8288245d59ba7aac65a5dfaac501b",
+    "size": 2209833,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/asset-inventory.json",
+    "sha256": "b1c2dc823a766d987aba97b38098ecbb2d7503e0df6cb31b3a15a99ed3a84f3e",
+    "size": 123556,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/binary-inventory.json",
+    "sha256": "483bb34e5c4f028a56afb5cb47b7b35ca0dd486c13b1d9807bd2c5a3e052670c",
+    "size": 94627,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/browser-pruning.json",
+    "sha256": "58d6de4bffe4b9c2a468e7112d94465a1f3e8951593d450f005c793e4aefd435",
+    "size": 4614,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/component-ledger.json",
+    "sha256": "05a73c5e63a7a4b4c97ec76fd35ca8fcfdf35514d983979644dd47e9176f902c",
+    "size": 573317,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/containers.json",
+    "sha256": "bf2ce9f0f112b76d43841ba754295fca603372052f2d6e8e0f24f3c81be6dcb7",
+    "size": 3765,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/embedded-python-packages.json",
+    "sha256": "5d66f9d676599569cb97c10f7c0fba1683601174664109a87b680e2705f5a19c",
+    "size": 253,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/embedded-vendor-requirements.json",
+    "sha256": "d620b47aa60ffe184735c3a0110a31e0ff6cbc4843603fd5e4edf40559ba1199",
+    "size": 1397,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/advisories/GHSA-2xpw-w6gg-jr37.json",
+    "sha256": "398a75186407becef4e6505eb29c14592740d3b5302932a2a0ced548527d9dad",
+    "size": 9716,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/advisories/GHSA-38jv-5279-wg99.json",
+    "sha256": "34559839aedfbb9a95617494605019f826ea662a6bf069d916744b8d5dcc3f2f",
+    "size": 7250,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/advisories/GHSA-5239-wwwm-4pmq.json",
+    "sha256": "870b85aa2d22ccb6d4fec43603d24fb89c51bc14b48dfb3d0e9ea045945cc757",
+    "size": 4255,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/advisories/GHSA-5rjg-fvgr-3xxf.json",
+    "sha256": "77df0c24f1aee6e97482412d9e36d89545d681880c9a479705e653a882a9744f",
+    "size": 4719,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/advisories/GHSA-65pc-fj4g-8rjx.json",
+    "sha256": "bb4b35ff292f0fe7e80d88ae21c041573a5e236c97d307d376332a2e56ae1847",
+    "size": 4800,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/advisories/GHSA-6v7p-g79w-8964.json",
+    "sha256": "fb3a496cc4197684111c7708fbd988461c60505a71d88900f6c2cb7200aafa83",
+    "size": 3208,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/advisories/GHSA-8988-9cw3-xx77.json",
+    "sha256": "752ec8b1dfc9ab8e1cb735287a1717590970b25f7993f514e52fb3d289869df8",
+    "size": 14154,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/advisories/GHSA-9hjg-9r4m-mvj7.json",
+    "sha256": "1d667e1335d29a210af056492ad0096777548a017cad638bc44c57ab6ed064dc",
+    "size": 6503,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/advisories/GHSA-gc5v-m9x4-r6x2.json",
+    "sha256": "73c83238b13788602826e526ee5cd6b89002b29679d237585ad18480b59c25d9",
+    "size": 5483,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/advisories/GHSA-gh4c-6fx4-qh6g.json",
+    "sha256": "617390bed75a602d564abb72641d79c3e322890e3533623e6663c59b32c9c7a5",
+    "size": 6935,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/advisories/GHSA-gm62-xv2j-4w53.json",
+    "sha256": "0fa5ae136eec85694e069c732bca7a9b0982ec539a3ed9580335dcd3c4947240",
+    "size": 5480,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/advisories/GHSA-h35f-9h28-mq5c.json",
+    "sha256": "2f2cf8b7de4c5dda935b2ce4575a850399d9bef137382acf85d09a8b05cd4bc0",
+    "size": 7266,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/advisories/GHSA-pq67-6m6q-mj2v.json",
+    "sha256": "f224491a59b5178637101a05151a5513cd369b164de55c0e0cf2f280bbf3aa19",
+    "size": 7398,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/advisories/GHSA-qccp-gfcp-xxvc.json",
+    "sha256": "198a96bd4d3284e6fa4a46dffb02b3d099c21cbc1fca86f82381a249d68891d3",
+    "size": 5875,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/advisories/GHSA-vxq7-64xx-v4gw.json",
+    "sha256": "fb5cf61a648cfe859c4590cd2ca6eb10c047cb7a1d88d120e62ee2d87273f97d",
+    "size": 5617,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/ffmpeg-version.txt",
+    "sha256": "0d67bcb6743cf4e95e2c474599de3a894e5987b4dd96e80a286e1a318e20f5f5",
+    "size": 1222,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/git-history.txt",
+    "sha256": "d60ad2127a2ce9ee371539580096eeb18f6a43d9f35d050ebcc7fb5813e84871",
+    "size": 802,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/legal/google-terms-20260730.html",
+    "sha256": "1741ede3f4dd5ff96a223f250bcededef1162fb6dfb0e5048647a52e3ff25831",
+    "size": 597270,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/legal/google-terms-20260730.txt",
+    "sha256": "f4069bdf733c81db1c6a29d97e0c7efd622c75bf7f64f3b7fe3a1d03e3bc8f89",
+    "size": 31098,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/legal/meta-api-models.html",
+    "sha256": "37937ab0fe7a2518f9e1e5dd8b3f06e98834fb11cc0e1ba020f220f5734f6f47",
+    "size": 290971,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/legal/meta-api-models.txt",
+    "sha256": "2987f40b8bd3e8721119fd85170356a80c1118ea72207959fbdfc58b1514fb55",
+    "size": 11577,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/legal/openai-services-agreement.html",
+    "sha256": "6c0790219e19009341c9171b0ceaa53b7dac1109675920a67919920fe4b96091",
+    "size": 538512,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/legal/openai-services-agreement.txt",
+    "sha256": "46e758691bffba550f3f0825f2debc12b4bf7156c20e3e8bb53fe6f3ef0bd075",
+    "size": 47111,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/legal/opencode-muse-spark-provider.html",
+    "sha256": "84a7e4059af111a892596a4d3f2113cc05e7ade3311fbb0835cd3feb220f4175",
+    "size": 107080,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/legal/opencode-muse-spark-provider.txt",
+    "sha256": "0f15d279641afd497c91e450bb61341c9ea6ef9dfe2a870a1ea2a0f9bbf1ffdd",
+    "size": 24075,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/legal/opencode-terms-20260815.html",
+    "sha256": "fa16763675bd84186d13d7d760b42ff96d054382cd8dccfd87679c85c8259f93",
+    "size": 40429,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/legal/opencode-terms-20260815.txt",
+    "sha256": "8afdc9b9a29ce95e6c3e71332c99d24c39717722f8b9d989926695e29656243e",
+    "size": 25653,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/node-version.txt",
+    "sha256": "44ce64f1806e1aa8fa0bdd85b10e0413acd78557c88a8d52e94a0eb70f40b7ee",
+    "size": 10,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/pbs-python-full.json",
+    "sha256": "7cff29c2eef4f3fa55dad137e07ca7d7fb3b967e992bf9fe22c0bd1f9cd48385",
+    "size": 47427,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/pbs-release-assets.json",
+    "sha256": "3b98bddf1302fcbc8e9b059b78b84ec5b6953ecc0ca83164b11ceb859f756432",
+    "size": 6531,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/playwright-ffmpeg-paths.json",
+    "sha256": "05b3ef53214a80a4490b3db98594271faed9428e8a7f07048a19bdf3a1f42687",
+    "size": 137,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/redistribution/chromium-last-change.txt",
+    "sha256": "3ad5c191236afc83c48c24d90d482426f0eee62bc19b0cb31a9090f45dcc95c6",
+    "size": 7,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/redistribution/chromium-last-change.txt.provenance.json",
+    "sha256": "47855d4f3e90947149fabaeaecf1aa061a4b37d5239fcaf96dd1c8fdb4d37592",
+    "size": 177,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/redistribution/chromium-object.json",
+    "sha256": "a2e1aa321ed9a5bdbaeaff11bb1adcc7f3155863406b145fc506e43e771336a9",
+    "size": 945,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/redistribution/chromium-object.json.provenance.json",
+    "sha256": "40f828d340e764dec2562dbe7ab6c876f076218526db8afc349cd1282bda0b4b",
+    "size": 207,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/redistribution/chromium-revisions.json",
+    "sha256": "0983dbf29f262345591646dc40c6a41d816c6772b6339f403e9d8ae82d25b2dc",
+    "size": 660,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/redistribution/chromium-revisions.json.provenance.json",
+    "sha256": "d1fb7cd477f0095f1bce8962fa8e769342aebafcb7ac036a27fc139e1173a537",
+    "size": 183,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/redistribution/edge-products.json",
+    "sha256": "c94ad452819dce807a7434a1e2ed7ad8fdd765cd53b44aec9d952fd537eb78d3",
+    "size": 311418,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/redistribution/edge-products.json.provenance.json",
+    "sha256": "a9e950ba58450dce9da6e18a3943887d1db27ebc7785173d9dd23d8493a21b15",
+    "size": 162,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/redistribution/webview-acquisition.json",
+    "sha256": "f72ec24b91dbcaa2af870a5221024e47bc1de9787047f83e6a4d57e89bce878a",
+    "size": 851,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/redistribution/webview-download.html",
+    "sha256": "46c8281b32ee0424c6d8b4bea90c41a2695da623ac936944c594e5033c84f264",
+    "size": 62064,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/redistribution/webview-download.html.provenance.json",
+    "sha256": "304dadc0749cd9e0a8fa2ba37c258a8b230a9f912784ef74fe5c8fe25750ba3a",
+    "size": 162,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/redistribution/webview-eula-page.txt",
+    "sha256": "f602e673ea93d7d70a50a8fef6f672963288ddb0a576b95ea7bfe7c8e5299a1b",
+    "size": 19659,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/redistribution/webview-sdk-LICENSE.txt",
+    "sha256": "0af8f1b807512aae39c2ac1aa4d0cae65cabecb6fd554b8439a5162a0d6eca55",
+    "size": 1487,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/redistribution/webview-sdk-metadata.xml",
+    "sha256": "82624bd8e8fa41452d0c882c96f07e22b939ad350f04e26ac9cba4ec60e5313e",
+    "size": 3591,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/redistribution/webview-sdk-metadata.xml.provenance.json",
+    "sha256": "b805193298b43085ea7dfe88150c9c2e70edf0d890a8d14d727ea7e587dc1a89",
+    "size": 188,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/redistribution/webview-third-party-credits.html",
+    "sha256": "05c2e5ab74b45da2f044f6716dc48d9bf31e7f4f4e1c0f0e79851b21ee46d8c1",
+    "size": 9928329,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/redistribution/webview-third-party-credits.txt",
+    "sha256": "039d0b30e9c7d5475513da044b962ecaadeedadb95d6ccd140b0a89a1ca85032",
+    "size": 26122,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/annotated-doc.json",
+    "sha256": "25212b6d82b949a97f8e727da56bfd19e97598f4bdf58edc3fb4cd4ec0d7ae5a",
+    "size": 9612,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/annotated-types.json",
+    "sha256": "1ef3387c16b47d7ecac6f18f635a1b8601ada98dfc7e39aca0ccbb3704f552fd",
+    "size": 18299,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/anyio.json",
+    "sha256": "977aaab7975dbf063b5d3643e1f07d9c36fdcd19d8b2a41e3c2430ba0f3bcaf7",
+    "size": 7727,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/ast-serialize.json",
+    "sha256": "c437678d80cb096cf2a6283bacedb2f05b82919d7853c037d47cb38b2b710f4c",
+    "size": 64738,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/beautifulsoup4.json",
+    "sha256": "34156e645476dd842ba7c2c6287c23c3558eda3e9b0370215e4e65282cfdadf9",
+    "size": 6873,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/boolean-py.json",
+    "sha256": "cc413256cb9d884dce52560855ca7688e9fe3d95fa90a61ce854d45344ddb2e0",
+    "size": 5322,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/build.json",
+    "sha256": "e19f303270db95e682bc2137d95a95bf246e7ab01f7de989bb8aaaac9411b014",
+    "size": 8587,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/cachecontrol.json",
+    "sha256": "9115c5b42c268ec54e07652c85fee4f1db4bc620e49061c2ff2537b2dc7785e5",
+    "size": 6010,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/certifi.json",
+    "sha256": "c7cc7167b6ab839caba515420fa04662df83dc8c09f29b96d7ef1b131b2387c6",
+    "size": 5567,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/charset-normalizer.json",
+    "sha256": "b76d859031830f188a2adb0b55a97cacd504cd25474f6c4d59e25c1f858358a1",
+    "size": 240109,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/click.json",
+    "sha256": "a7bd5a882c84c176382094cbf43dc731de8d39badb9c7d231ef4256765687273",
+    "size": 5592,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/colorama.json",
+    "sha256": "c51431f53f70ffd6d56ca6eae880c5b15ad689d87a74264caef74aaf1a90713c",
+    "size": 20607,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/cyclonedx-python-lib.json",
+    "sha256": "db73fc458aaab6602891f2cc81dc37fb69c791494e102a1f1df20701148dc708",
+    "size": 9953,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/defusedxml.json",
+    "sha256": "86cec8142755f77bac7acc89aa5c3f31ed2e7c7d160b02c94068ecc07315380d",
+    "size": 36842,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/fastapi.json",
+    "sha256": "55db8a6bbf0257b4eaf12150c2efba6b85ce0953ff337dd9d8328f2396ff948d",
+    "size": 30664,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/filelock.json",
+    "sha256": "2d2acc0bf6c37a4d40cc748cc704ffaa59e4c091d832d5e4491aa0a521ca3b34",
+    "size": 4966,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/greenlet.json",
+    "sha256": "c56e19e5385add07918db451ba0219f6fbb00e37205edfe3933679f3f98613e2",
+    "size": 90692,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/h11.json",
+    "sha256": "3b5d9d38c797027d2b3cd90cbbb63df00f013cac8bc4783d4b04d34d56c7360c",
+    "size": 11523,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/httpcore.json",
+    "sha256": "20ecea73e728b0439246a006ec71c7e805140adcbe7e9b67348e7032a60f5593",
+    "size": 25052,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/httpx.json",
+    "sha256": "e414e9b9ee3886a1d74a40e16b61bc021d3e404f6d34dcc8b7a9a7de55fdeac5",
+    "size": 10121,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/idna.json",
+    "sha256": "eaff40bda31ce1bc424670081ba513302d0be5af5629dbf3576215112994e6ef",
+    "size": 10186,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/iniconfig.json",
+    "sha256": "400844ce74ec2f7c24da9e685311e5b98fe8fa8fe6d9acf76af2c8c6746fc645",
+    "size": 5547,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/librt.json",
+    "sha256": "0242165d238a8d564fe91a6596ff47b7c06e778a56c0855b26afd6b01e8cd6e2",
+    "size": 151287,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/license-expression.json",
+    "sha256": "1f8fbd1486f7e209c88199fe001af6296e54c4a122e6c3dbfd9548664920d0b4",
+    "size": 14472,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/markdown-it-py.json",
+    "sha256": "d48f9a8880faf9d95d708aed4daaf5f80c2a3f406780d41cb657b712f8989ba9",
+    "size": 10390,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/mdurl.json",
+    "sha256": "8587664489a017bc3b6bcd3da73348a5ee3f118eb3dd12432848153178c0c4d5",
+    "size": 4562,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/msgpack.json",
+    "sha256": "642a06118de84e6e3f94bfa52524237c7930ac6579fdec611f02234d04f4e6ae",
+    "size": 108046,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/mypy-extensions.json",
+    "sha256": "45139968adfab0d8f3a8475aded7900addca698b07a60a7ce182e5fe80a5e902",
+    "size": 4085,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/mypy.json",
+    "sha256": "7a0e23e570eec6260f1ec79518d99d6bf0299a20bdef39e16f0ca5dd0ad11ecd",
+    "size": 59630,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/opentelemetry-api.json",
+    "sha256": "6c45d2881b04bf5e5b90f16ec753d5b252aa458a47632f13d6db898cc2a3081d",
+    "size": 4457,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/packageurl-python.json",
+    "sha256": "6568d90860c78eee948e5f705fbaafd41656c5d9d32876a59ca98d0bfe2ed128",
+    "size": 8318,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/packaging.json",
+    "sha256": "0a830c6e415e31e700a000f3ef41108d4c01251adb5865bff8b4eb40f580e3cc",
+    "size": 6561,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/pathspec.json",
+    "sha256": "0ce9e7ca25ce07efdc6c87117ddc475766fc9ccb1d031acca78688dbc5d56e2d",
+    "size": 18201,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/pip-api.json",
+    "sha256": "fab9fc1d834b62b6f04f2b13b35873d0b91eea8750a89d48905ca16f23f189de",
+    "size": 21160,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/pip-audit.json",
+    "sha256": "8554507f92d9190bc9901519b73429ab7a4de512e78fcd3f3a2188a707107036",
+    "size": 31840,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/pip-requirements-parser.json",
+    "sha256": "65af6de03dbbb6b0af50b5e6554c08aaf62e7413e8fad01e4494c6ee8aac585a",
+    "size": 12424,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/pip.json",
+    "sha256": "70dce588336ad40c08271f22e0c51fc0abfe6e8133f838c1eb8ab797a8412364",
+    "size": 7507,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/platformdirs.json",
+    "sha256": "90497bdb58efc0953261592ee26a08132eaa423f8b701e7b2b0e9a841a65afee",
+    "size": 8583,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/playwright.json",
+    "sha256": "8778d1b06322af8939ef2aeb87df4dd75692c0846540a72087ab8fc0724ce5d2",
+    "size": 12897,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/pluggy.json",
+    "sha256": "13b33cf976dc45ae985c629450924c9b7cdb820d11ed112aa7badae8a4a2e2a8",
+    "size": 7873,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/py-serializable.json",
+    "sha256": "f06b5d2ee6216716804143995798a791aa5435e3be823c296ac06f88029b76d5",
+    "size": 7312,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/pydantic-core.json",
+    "sha256": "0d9f33fcfbbc3b7a432cc06e5385df0eac7368c11088a5b29dad918da8a89962",
+    "size": 139573,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/pydantic.json",
+    "sha256": "09be8f8c418549069bf7f4be4ced5f0ea460610ca03de6ba949f7e751d3ed4ae",
+    "size": 114358,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/pyee.json",
+    "sha256": "96fb80a09030a9acd7809241823e7466625fce8393ddf16dcd183949e3ca46d1",
+    "size": 5800,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/pygments.json",
+    "sha256": "3cff091bb41d66d92fc227a7b73f683007c7f45dff49707b273e988d52f65232",
+    "size": 5425,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/pyparsing.json",
+    "sha256": "e210543f37313b7c05dc8a14909f3e7e5920e3ad6b01541d108a38125557109b",
+    "size": 8929,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/pyproject-hooks.json",
+    "sha256": "14278a1318039b97f559898e6df063bab4d379203448f6b644d1ef3c9cee77d9",
+    "size": 4320,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/pytest.json",
+    "sha256": "f99c6c3a18c6928b5d3d8062afed73914d69fd4ba090e79c010a90d3872a0231",
+    "size": 10620,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/requests.json",
+    "sha256": "a8095ae00a88c204614d2af20acb19c2ace38dd375b04e6752fc4c71077f4315",
+    "size": 7776,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/rich.json",
+    "sha256": "82373b9927a64bfe42b591470be2ddcb112a1760426dd51b99038bc553c9f304",
+    "size": 21919,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/ruff.json",
+    "sha256": "b77b593369d0fdfb1f88c164f1f981ef1e37e0169609882eef3ab780dd8abd5e",
+    "size": 41404,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/setuptools.json",
+    "sha256": "74d2d51a918d9b1cf888805d3773fa2bf1357b6023b779753ffcd7646be86d84",
+    "size": 9433,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/sortedcontainers.json",
+    "sha256": "242d2dc4cd9ab739f53e019eda4c0fcf8b5b850180b8cf40bac2e7c8d7db55d7",
+    "size": 14006,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/soupsieve.json",
+    "sha256": "8ebabb1b7a44264287726ed9ae053500135f1dd8203952052d0e58ae598ef535",
+    "size": 7461,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/starlette.json",
+    "sha256": "8450668ecc6c8abb09036c78f25b2ac46c631a29440ff75b71dbb6d5fad25938",
+    "size": 9693,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/tomli-w.json",
+    "sha256": "afba595a2ab307ea752cdedb2118b40af9d212b84781b6992d58955ab6a2f957",
+    "size": 8895,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/tomli.json",
+    "sha256": "5b012c12fb0961866fe5af20359c8aa44b88681841d84012beb666d5c98a9aca",
+    "size": 62171,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/typing-extensions.json",
+    "sha256": "350d37490714dddf11468bef33e8264ffa361c04ed094f81dd3b687264024f9c",
+    "size": 6370,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/typing-inspection.json",
+    "sha256": "d840d0fd823a22b5a130544e657dabb50328ce48918b566358054b71eeb9805c",
+    "size": 5587,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/urllib3.json",
+    "sha256": "a4b696bfebf498834c112172fb6a1ff81151880d5b48ac1bf2cbcf26c47992b5",
+    "size": 10457,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/uvicorn.json",
+    "sha256": "b1e7aa9a35451087afebf2293edfbf4f06d45ec6b050d8689aae5fe344e62e7f",
+    "size": 9678,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/registry/wheel.json",
+    "sha256": "3c77f43f7425efda2b25fbc5e609b44453d2282a4612156e1aa7b11dde45883a",
+    "size": 5212,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/upstream/chrome-additional-terms.readable.txt",
+    "sha256": "ddc691a37ffcefdff9657984587654576d09f130b1c9c981dd3ebd5645ad86f2",
+    "size": 2857,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/upstream/chrome-additional-terms.txt",
+    "sha256": "ec2c15fd1d132ce2ccc633fad6e515e6d089a80a347bcccb6dee238c24a71638",
+    "size": 46648,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/upstream/chrome-for-testing-official.readable.txt",
+    "sha256": "e28c9d7103d0d30076d93e16ea69f60f57cf1fc60eef99e622972a7d6c9d38ec",
+    "size": 8337,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/upstream/chrome-for-testing-official.txt",
+    "sha256": "96f9be0b3da69572f507f4ecfe0970def692dac288bc219f241cb06df9944040",
+    "size": 107902,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/upstream/cpython-license.txt",
+    "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
+    "size": 13936,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/upstream/ffmpeg-legal.txt",
+    "sha256": "cd51dc25f9e3200b1e3953aee036f499ed51f01f7ba30563873186cb3f870eda",
+    "size": 10686,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/upstream/node-24.21.0-license.txt",
+    "sha256": "5888dbb9a1d2b18f2c3e6c5f6af1b39de658372b402a0577b002777f14c62ace",
+    "size": 157609,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/upstream/openssl-license.txt",
+    "sha256": "7d5450cb2d142651b8afa315b5f238efc805dad827d91ba367d8516bc9d49e7a",
+    "size": 10175,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/upstream/pbs-windows-build.txt",
+    "sha256": "9eb6905a3046737e70b3ead39b9c5891706ac8b831ab6b1ef31d86b0fe7f464a",
+    "size": 66347,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/upstream/playwright-license.txt",
+    "sha256": "45873d00a0dd243596deb4aa23b2493b3d1f0671921bf2538ea431d7380220eb",
+    "size": 11601,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/upstream/playwright-registry.txt",
+    "sha256": "34497493fbec37f55835099f3688003fa814bf63f9e8feb2792854463df1851c",
+    "size": 60460,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/upstream/python-distributions.txt",
+    "sha256": "000cd91bc1818c5e9db78a46da3113ccb81260971a6754805468d4f212e3ad16",
+    "size": 18588,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/upstream/sqlite-copyright.txt",
+    "sha256": "44ca9f793055c8e32fc65f65a4f5bcf813a33f5bdaaa084067dd617a4ed3cc70",
+    "size": 8351,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/evidence/upstream/winldd-readme.txt",
+    "sha256": "64d1238db73e43327a508be0ecd1ac97e9105bd355cc13e26e79af9cddc66066",
+    "size": 622,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/final-compliance.json",
+    "sha256": "d51b8973506f8bda8a6c06368dda1d444fafaf99b74ea52a5746232d0942c6e5",
+    "size": 1064,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/license-evidence.json",
+    "sha256": "c78b6e072e3a46ff5f486150a6fc3fca4673dd850ecf08d7055f4d8f5a4deee7",
+    "size": 84658,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/nested-components.json",
+    "sha256": "a977e2e24843905d3582c380d35ebcb7199b96ffb8df46df3a0d014fb8f7aba6",
+    "size": 2425,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/packages.json",
+    "sha256": "a2dd482ee178578c9574910ab609c11eb80587a6ecee6bd36dace7090a5cc966",
+    "size": 338897,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/pathspec-source.json",
+    "sha256": "e71eb9fad4ba5b88544fef391235d90d63c1605f3a3545c4ed53ebb01f4172cf",
+    "size": 5642,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/pbs-correspondence.json",
+    "sha256": "b24baf9f87a33584026d07a6f5617ad18715baea5d2e342c79d898cdfda349ff",
+    "size": 8603,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/pbs-embedded-components.json",
+    "sha256": "51eddedb47517a01cd6359045a562bf4918c326d0fee2075464044158d4966ca",
+    "size": 7794,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/public-profile-legal-evidence.json",
+    "sha256": "d7706538233eadf274b407a063f19799982b78ef3d372a24d19a3f820a43b5cd",
+    "size": 1438,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/public-recipient-dependencies.json",
+    "sha256": "b885e5c9092c69d20b52acc886ff4d171ad574bff93bfee6e73a06cafaf0bf59",
+    "size": 51689,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/public-source-component-ledger.json",
+    "sha256": "1666319b660c663859c1f2dd8125006dab8e197630f6a60b6934caeaab860d95",
+    "size": 144455,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/public-source-inventory.json",
+    "sha256": "279fb74e96c6533d14082a4eae36ff7c8b5a54d84a9931ae997cd3d60919a661",
+    "size": 7304,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/public-source-package-audit.json",
+    "sha256": "5f3b876e024e08c27ce3aa240a07f596f785f486cfe1305055ed25a422f36477",
+    "size": 5341,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/public-source-release-readiness.json",
+    "sha256": "41ce19120bfbea289b19b4113271c143c0e0ea829b3850b8e93be5ddf1a3c445",
+    "size": 2574,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/public-source-review.json",
+    "sha256": "db4ced9a6222515908e57c6af8312c1065d8f0269bf5cdca234b8802c5074a17",
+    "size": 5679,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/public-source-sbom.cdx.json",
+    "sha256": "26aa027434b3a088ee1b92bbea6625d0db0c6a1370aac5760f5349def3a9e961",
+    "size": 52255,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/reaudit-upstream.json",
+    "sha256": "3f0358327ab2dc3baa6f583adcddba96d28cdf0562adb5659b6c538a2d8b6628",
+    "size": 1872,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/release-gate.json",
+    "sha256": "cdd159b8f1bcd234ec1195cce677e94565e09e71ad7e65447c05f8c3d9f75f79",
+    "size": 5930,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/repository-inventory.json",
+    "sha256": "656cf31068296c5d60aab49da9b637d185677cb57e2eb5f2e131908523f4e0b2",
+    "size": 168531,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/runtime-derivation.json",
+    "sha256": "90b912bf2a8853e1f8f137da908b45cca84574058abbcc103323dc816f581ef6",
+    "size": 434316,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/sbom.cdx.json",
+    "sha256": "82400d935d166f53786376d15bb0d0523a5d6e54c1b46d133a006fe41c9cd488",
+    "size": 79671,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/secret-scan.json",
+    "sha256": "41fbb340aa4ebcde4e2897d8e61eee677bef5aff46311df761ae46ed6bd33052",
+    "size": 5816,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/secret-triage.json",
+    "sha256": "78dea920864ddb8af3e60866cb493289889277544c053ac80b32805f1d3e40af",
+    "size": 5341,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/security-dependencies.json",
+    "sha256": "067413393b868fa940525d6fbae4434b213730c35b9a974d88c5642e004ecebb",
+    "size": 3359,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/security-embedded-vendors.json",
+    "sha256": "3c707661f602f8a3056269aec1e1b314d83fcad5f660743d58c193c12831aa37",
+    "size": 110365,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/source-markers.json",
+    "sha256": "e70a714853eaf42f4a3507aa72724201505c35ef376eb5b0eb5afb74601ad4f1",
+    "size": 1260002,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/upstream-evidence.json",
+    "sha256": "87b55d9058bcfb4941c65a5a4f4d0982ed1d29059dc1bb80fb491d34cb86732a",
+    "size": 4631,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/vendored-certifi-source.json",
+    "sha256": "f4d18ea1f9b46e53378804452dd685e420359e1e53e56dc7b6ea65a34c04f1ca",
+    "size": 4684,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "license-audit/verification.json",
+    "sha256": "188147b5048ef5f179d48e012d89124537db6f502c638e3583beadabf30b21f8",
+    "size": 515,
+    "classification": "GENERATED",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "run.cmd",
+    "sha256": "182ab26d845470e21e8a9b8a9b098cff2e1519debe08c88b99a473ba30740082",
+    "size": 482,
+    "classification": "UNKNOWN",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "run.ps1",
+    "sha256": "b97946629e27cb2caee3c262791158f4a1b4b51e008e7bbe3bf0c2e15883269d",
+    "size": 1195,
+    "classification": "UNKNOWN",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "run.sh",
+    "sha256": "8e1c84c73eae0b53604f62687f5cab3a79e668a7c99345e053efe1ad1ac9db48",
+    "size": 581,
+    "classification": "UNKNOWN",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tests/test_current_library.py",
+    "sha256": "62e3d835d511bfbf00f9ea265e5936ff332534aab83959a1f492b44cb720c95c",
+    "size": 5004,
+    "classification": "UNKNOWN",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tests/test_library_ui.py",
+    "sha256": "480c7752f1132d4383f16be280e8d5ddf08cc18263fb8595b7cececdc91a066e",
+    "size": 22996,
+    "classification": "UNKNOWN",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tests/test_license_release_gate.py",
+    "sha256": "034728adc8d4fa95a33d625c1a04d4a8965a965cb2b63eeb8e9ebf9a27ed7994",
+    "size": 2993,
+    "classification": "UNKNOWN",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tests/test_pip_runtime_patch.py",
+    "sha256": "7f3db3b1d28c847434c41f8e41960b0f66149f07ba5674a95fcb806e7ded2df7",
+    "size": 4541,
+    "classification": "UNKNOWN",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tests/test_reaudit.py",
+    "sha256": "f6912bf2eef360cb4896fd76cd9a14a091c08a56f60c4025d1dc0e83aafb90e6",
+    "size": 8616,
+    "classification": "UNKNOWN",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tests/test_release_privacy.py",
+    "sha256": "4ddc62f7c197485e27ad94ab076f510f840874b8def5576388093ca8f276bae0",
+    "size": 3024,
+    "classification": "UNKNOWN",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tools/check_release_hygiene.py",
+    "sha256": "c3d9f553da4971744c762c4eb535e1b8fc4077ea5a5933e3c7285377034c65c3",
+    "size": 4556,
+    "classification": "UNKNOWN",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tools/distribution_research.py",
+    "sha256": "7a740d1eddcc6bd1c742ce09bb1e01cb349cecb2fc1718428feb3cdcf262f9ca",
+    "size": 11525,
+    "classification": "UNKNOWN",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tools/license_clean_test.py",
+    "sha256": "0dc222dc0b7b4166c50634d74cadb638d70a544e7544aefaec44e59cf443e521",
+    "size": 4436,
+    "classification": "UNKNOWN",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tools/license_compliance.py",
+    "sha256": "b63180df4f1a4100716c24c68df5ff27b1a883cd0ea9978ba1ca58fa8576a755",
+    "size": 30347,
+    "classification": "UNKNOWN",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tools/license_reaudit.py",
+    "sha256": "7e0e7102fc6b6101b0e7cf91a07c527dbc46267124a1ee41bec68bbcb9550b36",
+    "size": 23156,
+    "classification": "UNKNOWN",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tools/license_report.py",
+    "sha256": "95e5a33a029e5d0b8517a9f492c485b271f5b2a7f8ce54e2134b249f96252a59",
+    "size": 43267,
+    "classification": "UNKNOWN",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tools/pip_runtime_patch.py",
+    "sha256": "0860723d2c0bc9202d6efca8d95e8dc110b8c778a8f7776b04e626ca737f2240",
+    "size": 5864,
+    "classification": "UNKNOWN",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tools/prepare_runtime_payload.py",
+    "sha256": "0c85b4b40d790ee723d06858a338d80b67a9564beeed36fb9867b091c1e8845e",
+    "size": 4704,
+    "classification": "UNKNOWN",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tools/prune_browser_payload.py",
+    "sha256": "34a3ae62c2f6e679df98d23ae05fc0a02117a85a0f17d9d1eb95e082cb7cd665",
+    "size": 3885,
+    "classification": "UNKNOWN",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tools/release_provenance.py",
+    "sha256": "8ded90742a4cd969f10cf0dc0d0763c05d1f17ee21105f4be002f1738d7d465d",
+    "size": 10669,
+    "classification": "UNKNOWN",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tools/verify_pathspec_source.py",
+    "sha256": "5e7f4b6da9fa807945b8feac2be29d77f322726930ed4c512629062a898dc593",
+    "size": 3159,
+    "classification": "UNKNOWN",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tools/webview_host.ps1",
+    "sha256": "01e978d1ff943c24e3b946df4d82295cd0d60512560b9dabc2d91728d4022295",
+    "size": 2404,
+    "classification": "UNKNOWN",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "vendor/windows-x64/browser-b112ba4167ce82ff-000.chunk",
+    "sha256": "ecf62c2693667c84b793235605ced53d53619221646d858313dd5d1a48067108",
+    "size": 41943040,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "vendor/windows-x64/browser-b112ba4167ce82ff-001.chunk",
+    "sha256": "bfa53d1e79b2afdf323986bf386cf30654044ea9ca49f9f2e4f8a7c28c183388",
+    "size": 41943040,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "vendor/windows-x64/browser-b112ba4167ce82ff-002.chunk",
+    "sha256": "8acdcfebb30e627bad904bb34aa060f1d9face6d1407f526beafbc53330ec9a6",
+    "size": 41943040,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "vendor/windows-x64/browser-b112ba4167ce82ff-003.chunk",
+    "sha256": "156406a6273f522ac1aa581280ac194a0ac2600e411489dd601f83e3efdb7931",
+    "size": 41943040,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "vendor/windows-x64/browser-b112ba4167ce82ff-004.chunk",
+    "sha256": "cf1a791c2b99aeac7b3c514a86b5871d5537e9f8ca759ae9c4d091b6958518d3",
+    "size": 41943040,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "vendor/windows-x64/browser-b112ba4167ce82ff-005.chunk",
+    "sha256": "6b116f8a768ef45736758b50cb5f405d7e01a496b375568d936630320fc83549",
+    "size": 41943040,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "vendor/windows-x64/browser-b112ba4167ce82ff-006.chunk",
+    "sha256": "0a15efddfdd0aaf9744c297e09cf9aeabe99f616c32ec4d09054bcbf8a52a34c",
+    "size": 41943040,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "vendor/windows-x64/browser-b112ba4167ce82ff-007.chunk",
+    "sha256": "292977617ed4eaf3737924ef1b4875ce0679e1683a94cddd71591b7d5327092f",
+    "size": 41943040,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "vendor/windows-x64/browser-b112ba4167ce82ff-008.chunk",
+    "sha256": "140c14cc0f1ec2e7976e4021092bfb4995e25c4ae77cabb900e5cc6cbc659189",
+    "size": 3299902,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "vendor/windows-x64/browser-b67ea3d65a61358b-000.chunk",
+    "sha256": "58c956bff5cdebc43e3ff198243b9283f9de0f129fa1da1fb175d30a00e3efbe",
+    "size": 41943040,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "vendor/windows-x64/browser-b67ea3d65a61358b-001.chunk",
+    "sha256": "9be5adedbeaab2ced06277e1604fecce22b87f5f831754c8b402b8017b74611d",
+    "size": 41943040,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "vendor/windows-x64/browser-b67ea3d65a61358b-002.chunk",
+    "sha256": "9752aa890548afa064b89c23ae6ebf8ea443116533b4d0732a871e9384ec7abc",
+    "size": 41943040,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "vendor/windows-x64/browser-b67ea3d65a61358b-003.chunk",
+    "sha256": "979a2e84109865c47a2e02ba646f4d89d5df2676f2977cce346e64f1308a840a",
+    "size": 41943040,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "vendor/windows-x64/browser-b67ea3d65a61358b-004.chunk",
+    "sha256": "5879383659615fc0b308bdacdee2d66a3a497c52b0e455ab39cb7430ad3cdd02",
+    "size": 41943040,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "vendor/windows-x64/browser-b67ea3d65a61358b-005.chunk",
+    "sha256": "59dcecebcdc703ce6dfb7cb60770e937257d2f7fdc9ef9702a4dee1632ac30c6",
+    "size": 41943040,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "vendor/windows-x64/browser-b67ea3d65a61358b-006.chunk",
+    "sha256": "d7a7112aeedcf829518317c0b1e7970ef9d40a51e3a288880f1a0abaf3c9aeb1",
+    "size": 41943040,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "vendor/windows-x64/browser-b67ea3d65a61358b-007.chunk",
+    "sha256": "13f7d0fbc005252dca469de1917c028d7b4169fa22e7aff3b1766b63f17773b5",
+    "size": 31881930,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "vendor/windows-x64/browser-receipt-e00cff0121594176-000.chunk",
+    "sha256": "e00cff0121594176cdbcf7fd5961ef73ce171ac981edd8e615e8ff428f5566cc",
+    "size": 235,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "vendor/windows-x64/browser-receipt-fd6533dd1d0220a0-000.chunk",
+    "sha256": "fd6533dd1d0220a0f36e86048ef3cd7b66ae228891233895eb7ed70eabfa4010",
+    "size": 1144,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "vendor/windows-x64/python-c613f06e158070b0-000.chunk",
+    "sha256": "c613f06e158070b0db218021806af55ffb4c781be2141db6967a4afbb666d446",
+    "size": 39251107,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "vendor/windows-x64/wheels-b24ecc5fba13bb3c-000.chunk",
+    "sha256": "0df5fcacd6a0a175c71efd53cfdcdee18514bb89c85055cdb704d156a1a13f84",
+    "size": 41943040,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "vendor/windows-x64/wheels-b24ecc5fba13bb3c-001.chunk",
+    "sha256": "aeefce9edcd57d225d974aba80d60e93bb75f213d3c9623d3e06c59cd652c72d",
+    "size": 30799681,
+    "classification": "THIRD-PARTY",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "web/ui.py",
+    "sha256": "cc66aff2c322db9d95c9de47fc5d028667face9765d8a05ad29f4040cda739f1",
+    "size": 34519,
+    "classification": "UNKNOWN",
+    "first_commit": [],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": ".gitattributes",
+    "sha256": "1cc5f09d50e31125477fcce06a831e95d341c754709a9a7d5393afbcb1f2ee16",
+    "size": 514,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "671b9339f8af46bccb8227a3d5eed8474af62376"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": ".github/workflows/ci.yml",
+    "sha256": "46a70fb89652fe0f1aaa407a67676c04a429df2740546d381fbc86a543e63cc1",
+    "size": 8828,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "240edc940dd505d69acba136a04246537c7ed4bb"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": ".gitignore",
+    "sha256": "a180aafad79f5b794ed0c6802ffdd1a9b109d1e7fbf00c356b0c5778396e9ef5",
+    "size": 1288,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "240edc940dd505d69acba136a04246537c7ed4bb"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "CHANGELOG.md",
+    "sha256": "3f6f73dbc9d6629617d9e77f5544097e4352f9af9f7f015ec7db021732f1696b",
+    "size": 21862,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "240edc940dd505d69acba136a04246537c7ed4bb"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "LICENSE",
+    "sha256": "c1aef8b9d4934262e38b7652688ee0adfaf2177f6f8aec6e91700707b16cd9c6",
+    "size": 1065,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "240edc940dd505d69acba136a04246537c7ed4bb"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "MANIFEST.in",
+    "sha256": "0c4c869d3ba129d77f65b03c225598d9910b680b41b3e7c8fdf574a5a2c1ef8f",
+    "size": 1438,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "PORTABLE.md",
+    "sha256": "bb200453d76d5e302aea2c68a491716c09f9710f122691cf4aec8aaf8c197acb",
+    "size": 7303,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "README.md",
+    "sha256": "18decedeacb189fda68ac662a7b092263d3aaf809b035897162376144e9b6921",
+    "size": 23793,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "240edc940dd505d69acba136a04246537c7ed4bb"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "THIRD_PARTY_NOTICES.md",
+    "sha256": "794b48ac56aa2fb744a8f2cec10050d9fff82c1c8a2bc1f28302373176dffad4",
+    "size": 6993,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "240edc940dd505d69acba136a04246537c7ed4bb"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "VERIFY_LOG.md",
+    "sha256": "8f87ff72017816e30103235ae12aa58dc7b91be4073a59737e111eae7ecd830f",
+    "size": 35301,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "240edc940dd505d69acba136a04246537c7ed4bb"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "audit/01-project-inventory.md",
+    "sha256": "9fe006e7ac15e4d57b411c18cdbacbf297a6a5807b011488a43334461d767cda",
+    "size": 3264,
+    "classification": "GENERATED",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "audit/02-architecture-analysis.md",
+    "sha256": "f3c760527d86003f116c8bec77b7f6a4ac66ab6918e1c10a84d505580893821d",
+    "size": 2351,
+    "classification": "GENERATED",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "audit/03-baseline-results.md",
+    "sha256": "3073be9224359169bb8ceac0fa4e131aa7b29660e96a2b978334b2944cb03ffb",
+    "size": 956,
+    "classification": "GENERATED",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "audit/04-issue-register.md",
+    "sha256": "441b3cd6ead08767cced2f59bd4c9c7dff071c45be9bdff1f5ae9b5f42be67bc",
+    "size": 7505,
+    "classification": "GENERATED",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "audit/05-repair-plan.md",
+    "sha256": "cfaf712ec9c7419254c26dbc01ba89137adf75d483bd15de634d2c655eaf20a1",
+    "size": 1232,
+    "classification": "GENERATED",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "audit/06-repair-log.md",
+    "sha256": "459a34dbf8260f9643b029adafd1ed0d6d2d90812bddade05be4bf49b7c5b75b",
+    "size": 14655,
+    "classification": "GENERATED",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "audit/07-test-results.md",
+    "sha256": "027c9c2cf986d1d647fe4d3f26bf9f77828eaecb72541eb492f03c317585a4a6",
+    "size": 2823,
+    "classification": "GENERATED",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "audit/08-performance-results.md",
+    "sha256": "be8ec2c55a47ace2d3cdd8069dc48ae704973c27a76f312d923a4bedd6edf58c",
+    "size": 1613,
+    "classification": "GENERATED",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "audit/09-stability-results.md",
+    "sha256": "b1c67824ba4613879cbb2c0dc2f9eee4a628fc2bee5db54c91ceb67b91734923",
+    "size": 1437,
+    "classification": "GENERATED",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "audit/10-security-results.md",
+    "sha256": "f5b54fa8a967bd7cad59a3c48f2d76ed7e85d6a44e5de479359a2cbdef08074d",
+    "size": 1666,
+    "classification": "GENERATED",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "audit/11-final-quality-report.md",
+    "sha256": "76c4ff97f78402e59499c87106e518323144aa1b76dc631a3e4f43f07dcc341c",
+    "size": 2609,
+    "classification": "GENERATED",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "audit/12-release-handoff.md",
+    "sha256": "edccd9bbd4f152ad9bc7bc73b797964283a3b5654975e15e099f2720e698266f",
+    "size": 4771,
+    "classification": "GENERATED",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "audit/portable-dependencies.md",
+    "sha256": "1aa80544f447cd68fd9666b3150ca22de70e6c64cc957fa2c139fbc61904de14",
+    "size": 6875,
+    "classification": "GENERATED",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "audit/portable-report.md",
+    "sha256": "1e69511f698a7adc51a976e6dc3de64941e1ec902cf6ea42ceffe940bed9e8ba",
+    "size": 13552,
+    "classification": "GENERATED",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "cli.bat",
+    "sha256": "63f6e989762aec27cad359981f4bd322d8be18ffb82f1ffdd2ac1c385cd09866",
+    "size": 423,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "240edc940dd505d69acba136a04246537c7ed4bb"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "cli.py",
+    "sha256": "592fcee302a1ca8c8d0ff5bc6ba6c1b7411e5bdd77b96bc2697b3cb911882284",
+    "size": 42529,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "240edc940dd505d69acba136a04246537c7ed4bb"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "conftest.py",
+    "sha256": "c473ac9b5f57938a29292430835c2bf8ab20e013e39162bb22e40c65506d041d",
+    "size": 2406,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "671b9339f8af46bccb8227a3d5eed8474af62376"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "core/__init__.py",
+    "sha256": "b1c41e6f0f69c9eb43c4a42222f07a4016db858cbd61d002f9297bd80c3290f8",
+    "size": 33,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "240edc940dd505d69acba136a04246537c7ed4bb"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "core/auth.py",
+    "sha256": "7c9207608d39399d33d4f08cc8c417e7816b23463d947b01f5223f4b68a91983",
+    "size": 20430,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "240edc940dd505d69acba136a04246537c7ed4bb"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "core/db.py",
+    "sha256": "708bcc9c4716eefcd809aa03a280273610c0fd8cb802cbb73dff8aa099315488",
+    "size": 10730,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "240edc940dd505d69acba136a04246537c7ed4bb"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "core/download.py",
+    "sha256": "dc97e88e4211d565c9e555d98d73a62954578018448b309e71c625d2e7e89b2c",
+    "size": 53858,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "240edc940dd505d69acba136a04246537c7ed4bb"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "core/errors.py",
+    "sha256": "678b8c31b05e3c8e41ae8b9df4006aceb51a154fb43f722c5a84402c41008d99",
+    "size": 6334,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "240edc940dd505d69acba136a04246537c7ed4bb"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "core/library_lock.py",
+    "sha256": "73d48e36c3cb911acd5a8428c63db1e0db353cb8d02b08412cfc0e25a12d11f2",
+    "size": 1260,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "core/lists.py",
+    "sha256": "62c492cf8f59e28a87393a6d1c124ce56e9f95c98bbe38fe7748958a7d9ce050",
+    "size": 8888,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "240edc940dd505d69acba136a04246537c7ed4bb"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "core/logging_setup.py",
+    "sha256": "5a86586caa7efa3c6ca0c3213745218a7d9a5c51469efbb3584334b73a3041b3",
+    "size": 9002,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "240edc940dd505d69acba136a04246537c7ed4bb"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "core/net.py",
+    "sha256": "04c9d07e56680a6edc87158d6f8a21ca04f5e4bbd0205690c34748e9bb45023d",
+    "size": 13172,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "671b9339f8af46bccb8227a3d5eed8474af62376"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "core/portable.py",
+    "sha256": "c1a99ce48b76ad751b40fa347967a8e79a0bd03d74493b865c5e01f3fc02490e",
+    "size": 5085,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "core/purchases.py",
+    "sha256": "4382c7358b2438c96a64c57d1dbb05bb83fe0723b117c4d694720d04d2505009",
+    "size": 20179,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "240edc940dd505d69acba136a04246537c7ed4bb"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "core/version.py",
+    "sha256": "b8b438f02718fe612414ab77705737e90bc9979c5a8871f35e4245e3098d2ee5",
+    "size": 99,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "240edc940dd505d69acba136a04246537c7ed4bb"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "portable-manifest.json",
+    "sha256": "3e92390da2fd4222cba41429141ff9298fa42ef65be368360767c56aa55a7913",
+    "size": 2349,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "pyproject.toml",
+    "sha256": "19c67d205e9d513091986bd93c1117a9431e183fab9645129496bc19dacd3a33",
+    "size": 6044,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "671b9339f8af46bccb8227a3d5eed8474af62376"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "requirements-all.txt",
+    "sha256": "a450ce7388652a554bd3724eeee2a2626aa54698c7763e188264bb39e13819df",
+    "size": 439,
+    "classification": "GENERATED",
+    "first_commit": [
+      "671b9339f8af46bccb8227a3d5eed8474af62376"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "requirements-dev.txt",
+    "sha256": "b085a9e77498ca7a0412df3c7f61eaed1a3eac413648a9483484b23390777489",
+    "size": 187,
+    "classification": "GENERATED",
+    "first_commit": [
+      "671b9339f8af46bccb8227a3d5eed8474af62376"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "requirements-lock.txt",
+    "sha256": "5b4fbf19eea50cde59ddd2f99d47a053df5e4e64af624d3e9fa907dc39e572d0",
+    "size": 3104,
+    "classification": "GENERATED",
+    "first_commit": [
+      "671b9339f8af46bccb8227a3d5eed8474af62376"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "requirements-portable-lock.txt",
+    "sha256": "92d335b27a834080beebeab031a949b16adb7efe9ee93c4b6fb54351a610e91e",
+    "size": 6597,
+    "classification": "GENERATED",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "requirements.txt",
+    "sha256": "17a954df8b26374373337e9ae5ce8d51c087e4efc02a52903bd7797803a4fbb0",
+    "size": 1107,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "240edc940dd505d69acba136a04246537c7ed4bb"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "setup.bat",
+    "sha256": "13258037da4e0938644fa057e458c1e28759f308f3752be78660535633d0b3de",
+    "size": 481,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "240edc940dd505d69acba136a04246537c7ed4bb"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "start-web.bat",
+    "sha256": "b57003e8884d153b13a0c48e56c7a194f470246b1797ac2f302415f65c5e5432",
+    "size": 392,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "240edc940dd505d69acba136a04246537c7ed4bb"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tests/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "size": 0,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "240edc940dd505d69acba136a04246537c7ed4bb"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tests/test_audit_build.py",
+    "sha256": "01d430741bd06e7779a9093beed9ae065bfbdd76d22703b548271ed43583d24e",
+    "size": 1441,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tests/test_audit_db.py",
+    "sha256": "b3d550b4ce66fd9721dc8ca8012c271ddcd6c5271e4f0635ca4cfe107fb0b0e7",
+    "size": 2439,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tests/test_audit_download.py",
+    "sha256": "64adfb0bc6a2970fb2770ec1b7d2d76191dd64b9d2b43164fb6c6cde5586fea1",
+    "size": 7329,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tests/test_audit_http.py",
+    "sha256": "01e163c3576c700524322076d6791ecbecc06f4e26df9981f97b3b0905624831",
+    "size": 3962,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tests/test_audit_lists_csv.py",
+    "sha256": "5b660a54ebeab2b0dda81d9ffcc9d05d3d1ff880b82df720cd9d2ca223cd5aa8",
+    "size": 1495,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tests/test_audit_performance.py",
+    "sha256": "e1a844e929bc0ae284c18b3b493f87cd2617b6cd08a4165ca751a0145b670ac4",
+    "size": 1820,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tests/test_audit_purchases.py",
+    "sha256": "326c8ecfb20e112348b43c41277acfcc86dd15626ffc50ebb3af4b2f9a39b9e8",
+    "size": 2521,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tests/test_audit_recovery.py",
+    "sha256": "26b00bc0ccd62a0adcb23c711cc72d70c4196c14504eccc352883e749e1e69ad",
+    "size": 4665,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tests/test_audit_security.py",
+    "sha256": "f5efd785360fc17dd92fc7886208e3a942f8ca2d40af3a782468bace543dcf12",
+    "size": 2862,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tests/test_audit_tooling.py",
+    "sha256": "67ae479e810653ae9f169c9a94a418ea23e2e77a408dd9f8ae32c38e3d9f2439",
+    "size": 1340,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tests/test_audit_web.py",
+    "sha256": "ba1d864ebc5c4dfa163c005e541b46827c33ae00e47a9a869ca035fcf822d1a1",
+    "size": 5666,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tests/test_audit_worker.py",
+    "sha256": "051b7c95af4f3f38694a4b4481f3fa3d74de260f93b025c517113476d0ce51cb",
+    "size": 2228,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tests/test_auth_security.py",
+    "sha256": "e0aafb6c0b92e0a36240dc744d5fe78a9fd7fe9eb24f078c36e8de597400fcd5",
+    "size": 9785,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "671b9339f8af46bccb8227a3d5eed8474af62376"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tests/test_basic.py",
+    "sha256": "4668229d4ea4223b5afc50d5024f5a0e245a39c8c135690de961d5c01352ce0d",
+    "size": 2694,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "240edc940dd505d69acba136a04246537c7ed4bb"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tests/test_cli.py",
+    "sha256": "a00a5daae6eb30647eb327d13580484547d0fd0c1c590e2d37da7a0cabb0a5bf",
+    "size": 16309,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "671b9339f8af46bccb8227a3d5eed8474af62376"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tests/test_db.py",
+    "sha256": "e30bce4b3cf2ff2f8dba4d2dbfc912edce32ab7a47464a3fdfa34edb769cb260",
+    "size": 11370,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "671b9339f8af46bccb8227a3d5eed8474af62376"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tests/test_download.py",
+    "sha256": "46626852bb376703ea9311528a59de9688679dc5153bbeee9be43e5d978ddcf1",
+    "size": 16359,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "671b9339f8af46bccb8227a3d5eed8474af62376"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tests/test_hardening.py",
+    "sha256": "f8920250dea7affe3118c2452781a37cd50c7d778647745137ed3dea5608bbb7",
+    "size": 11860,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "240edc940dd505d69acba136a04246537c7ed4bb"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tests/test_portable.py",
+    "sha256": "1f48e3144519a27ef3ad2e7d5b72c22cb2d3baec696ba95692d247092f1ca6f8",
+    "size": 8444,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tests/test_portable_bootstrap.py",
+    "sha256": "c24cb786fd849d490f2c1b57cdf68e6e3c6ce4713eff2c77cbd4f532cb754f2d",
+    "size": 10708,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tests/test_prerequisites.py",
+    "sha256": "331b61d24d3161b13e31d4d641bb35f5808afb071368bac23d238c9b533e267d",
+    "size": 7630,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "38a6c29b26217e47c93734700ef1709916af3f77"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tests/test_purchases.py",
+    "sha256": "dbc645ebdc61d7f2bdb77a6fabbc11149db89fa5a0b82285eb73106054135c2b",
+    "size": 10816,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "671b9339f8af46bccb8227a3d5eed8474af62376"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tests/test_regression_102.py",
+    "sha256": "52d584043948887e5d57501a89536e087432cf7611d133a0d09259abbab7361c",
+    "size": 28977,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tests/test_vendor_payload.py",
+    "sha256": "9fe25ad22be730a8a646b5dc4a1b465a7daca74823ae3a851248df95f444fc47",
+    "size": 3075,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tests/test_web_cli.py",
+    "sha256": "a647465a54398559b3fa100b9bad199652dfd3887f79dc0b161e27da65655bf2",
+    "size": 13443,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "240edc940dd505d69acba136a04246537c7ed4bb"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "third_party/packageurl-python-MIT.txt",
+    "sha256": "79911c70a86bb521691b67fd09ada068beada62b478b82c9cc69d0b0dc3083d6",
+    "size": 1055,
+    "classification": "THIRD-PARTY",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tools/__init__.py",
+    "sha256": "c3616879a08e5b2c7858621c5cad66fd6986893c38209053d59e75ec8a6419b5",
+    "size": 82,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tools/audit_package.py",
+    "sha256": "7108f7bd010593a4d299f78b4a8b27386808989bb68890f38bd37de60188cb47",
+    "size": 6162,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tools/audit_probe.py",
+    "sha256": "768e194c594835aebcbb62c2e85bdd5549ddd4c9d80918d2135623b9aa26fc44",
+    "size": 5708,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tools/audit_stability.py",
+    "sha256": "02d5593fb9281512746172d5898bb405babeba3483b9ace3938c499dcbd41b8e",
+    "size": 4402,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tools/bootstrap.ps1",
+    "sha256": "fb4042999ac2c746bd94606a20bd025d2071e2c17a6746ae85596e4859cca1d0",
+    "size": 7722,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tools/build_release.py",
+    "sha256": "7258aefb9d4ac659b3ada97f2b729080c4ef72d481f0a1754f3f0b07cf71aace",
+    "size": 12488,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "377728ad3ded1179f3162d00d84724c0b8932dee"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tools/check_portable.py",
+    "sha256": "f4b8fe5d168716357f832336bc3ba95af21291f2a064749261f7020d31869ac5",
+    "size": 12579,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tools/dependency_inventory.py",
+    "sha256": "eba08832314a8c273514dddb5c3a2623145b3bc7f3955e43d39370bd27a3982d",
+    "size": 8505,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tools/fetch_python.py",
+    "sha256": "d8369e46ccccc983994672820d526258337c067f33cd7ec292883cda5819d076",
+    "size": 7661,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tools/fetch_sqlite.py",
+    "sha256": "51301e0dff7acadbe0b44397ba6a6a36dc773cd4c9500c0c4e5362b8d8fef51f",
+    "size": 3305,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tools/gen_lock.py",
+    "sha256": "211a3ec73411f5bb4d9638232d62f57c0342f2ab3e92e62dc11e947914555360",
+    "size": 2276,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tools/launcher_probe.py",
+    "sha256": "1068f194bfa635808ebd82b11929077778b222a26847c310cf06d05645c6fc6e",
+    "size": 6029,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tools/manage_portable.py",
+    "sha256": "283baf85903d2e0d57e75773086ad5e07faad5e286adce8511e5600ddb6d0a87",
+    "size": 14782,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tools/observe_modules.ps1",
+    "sha256": "8dd595bee270e0157d07143301e0b7e3fa19c450b8a21a9037b2226962c109f7",
+    "size": 973,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tools/portable-env.bat",
+    "sha256": "c8e5310f6f88ace0825eef80cca549ac0c2e3c4067e27ed02b481719e821468e",
+    "size": 558,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tools/portable.py",
+    "sha256": "f4ce49d0bdd047bda2c5dcafc0fe57d6caa30a3e459271b03c027edbd9d8c449",
+    "size": 8225,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tools/portable_audit_hook.py",
+    "sha256": "945b3763a1c65e7e9c68cd3c2ad9eb5f3828fedf8869f871320aa9862a591805",
+    "size": 2345,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tools/portable_probe.py",
+    "sha256": "25f4877bc54a246e1307ff2566e36d3529824e668ddcaa21049d6929e1276152",
+    "size": 7144,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tools/portable_summary.py",
+    "sha256": "90ced531f09de6ca5e9ed1732309533a6592ab4e3d1623ebfcfc4cf4908e1946",
+    "size": 3007,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tools/rc_test.py",
+    "sha256": "ab096f5cdeb67f572d84822ab05ed35e6952f327b361f8cd68a917b01fc5f46b",
+    "size": 26784,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "377728ad3ded1179f3162d00d84724c0b8932dee"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tools/vendor_payload.py",
+    "sha256": "c7c24cb0fd38e97d731443faeda858a5c8da1fff5625019ead3634d50c21a026",
+    "size": 7932,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tools/verify_clone.py",
+    "sha256": "900f575593d5c119b9f56f0349001f3ae8832e4499697d0ee7028a253543af0d",
+    "size": 14759,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "tools/verify_portable.py",
+    "sha256": "10236041cf96020897da0f1d0fdaa5157990cac21644706574cf942c1c6662c9",
+    "size": 15763,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "vendor/README.md",
+    "sha256": "4060d2ff7ee365e7d74db91eed1cdd5a3da48ca27465ad2e9cd16094b1a3b485",
+    "size": 1129,
+    "classification": "THIRD-PARTY",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "vendor/windows-x64/browser-47af6dbb37cab8a2-000.chunk",
+    "sha256": "2e4b2f264cd55e4405e88e76dbf3c61098a33f9d9defbe024e55765ee3c49fb0",
+    "size": 41943040,
+    "classification": "THIRD-PARTY",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "vendor/windows-x64/browser-47af6dbb37cab8a2-001.chunk",
+    "sha256": "1662796381f173f731aab1617bcc43c7c03d9e55825c622c59ca5684b90cc80a",
+    "size": 41943040,
+    "classification": "THIRD-PARTY",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "vendor/windows-x64/browser-47af6dbb37cab8a2-002.chunk",
+    "sha256": "5d613b8391dd5a0e44beba9c85d405e32e605ece39b22e1e0a291b5ec5b3813e",
+    "size": 41943040,
+    "classification": "THIRD-PARTY",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "vendor/windows-x64/browser-47af6dbb37cab8a2-003.chunk",
+    "sha256": "0ba9568e2ef8058760ef28271de7d34baa72e6074e9f462f5c6e9bbff3bc0176",
+    "size": 41943040,
+    "classification": "THIRD-PARTY",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "vendor/windows-x64/browser-47af6dbb37cab8a2-004.chunk",
+    "sha256": "9263acf1cd42a32a3e3ead78574cd14e0256aa067efdf889d103f5b4724213e7",
+    "size": 41943040,
+    "classification": "THIRD-PARTY",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "vendor/windows-x64/browser-47af6dbb37cab8a2-005.chunk",
+    "sha256": "869f1e148fe4a333b133d7abb1fd138797483c5ef444993f4505444fa22aebfd",
+    "size": 41943040,
+    "classification": "THIRD-PARTY",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "vendor/windows-x64/browser-47af6dbb37cab8a2-006.chunk",
+    "sha256": "ec52b31cb34112d97ac4ca94d86b57407d6fb930d8920485ac6a15ab23b03154",
+    "size": 41943040,
+    "classification": "THIRD-PARTY",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "vendor/windows-x64/browser-47af6dbb37cab8a2-007.chunk",
+    "sha256": "1cee7c59ed9b17c97c3e61239ea57f4a2f427c7797e4dea427fc4c56c526aa47",
+    "size": 41943040,
+    "classification": "THIRD-PARTY",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "vendor/windows-x64/browser-47af6dbb37cab8a2-008.chunk",
+    "sha256": "b90643b57a8ce6be70d797c5d3187f87359578ba89ed2a615cf0e6283acf73a8",
+    "size": 22524850,
+    "classification": "THIRD-PARTY",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "vendor/windows-x64/browser-receipt-8d4d181b1a706826-000.chunk",
+    "sha256": "8d4d181b1a7068262eb4f267bb66c8304a68a024ced230f0fb9180a5f3cccb1f",
+    "size": 204,
+    "classification": "THIRD-PARTY",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "vendor/windows-x64/manifest.json",
+    "sha256": "a9ce5a526cdcba4a7de5b005dc40e38f4586e88e797e51aca9710ae904a97441",
+    "size": 4066,
+    "classification": "THIRD-PARTY",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "vendor/windows-x64/python-aaee8e72c20e1a26-000.chunk",
+    "sha256": "a8d071cc68e0f795af8c7fe0d28ba7190dc6ddcaa91dadd3d97390a4d60f0f1c",
+    "size": 41943040,
+    "classification": "THIRD-PARTY",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "vendor/windows-x64/python-aaee8e72c20e1a26-001.chunk",
+    "sha256": "8c1e0e48ecd40d2cd49ebc9da0f988753db0f2f5ade467f692e9a3533b6c1e66",
+    "size": 3899069,
+    "classification": "THIRD-PARTY",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "vendor/windows-x64/sqlite-8b959b7eff4a81f6-000.chunk",
+    "sha256": "8b959b7eff4a81f6a62fc3468f9273e5cfe78d4a927e62215aed231b654fb104",
+    "size": 1370147,
+    "classification": "THIRD-PARTY",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "vendor/windows-x64/wheels-952a7c7c9fcb11fc-000.chunk",
+    "sha256": "d13c2e8f2c737462a2f344159be3ce4861b8c95fc4b03055816572e899ab0435",
+    "size": 41943040,
+    "classification": "THIRD-PARTY",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "vendor/windows-x64/wheels-952a7c7c9fcb11fc-001.chunk",
+    "sha256": "d4db42cacce190317bc0473cf0dbe3861d6b6952d6f0026b0b7929c63c6ca07b",
+    "size": 30794532,
+    "classification": "THIRD-PARTY",
+    "first_commit": [
+      "88af93813d97e017dababcb7d1605d24f167ca30"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "web/__init__.py",
+    "sha256": "203c71557c78dd0623fd614ee089e601f4ec776c31b464e82fbfb46791b24fdb",
+    "size": 19,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "240edc940dd505d69acba136a04246537c7ed4bb"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "web/app.py",
+    "sha256": "c22300ccb607008102f1a12e0b37243d27d46024b85bb50387610a3a118f4841",
+    "size": 14218,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "240edc940dd505d69acba136a04246537c7ed4bb"
+    ],
+    "status": "NOT VERIFIED"
+  },
+  {
+    "path": "web/cli_bridge.py",
+    "sha256": "0305bc2bac583bf156421c1cd79d5a71c34d06d50734fc4e8601860157886f80",
+    "size": 22316,
+    "classification": "UNKNOWN",
+    "first_commit": [
+      "240edc940dd505d69acba136a04246537c7ed4bb"
+    ],
+    "status": "NOT VERIFIED"
+  }
+]

@@ -1,0 +1,11 @@
+# Full local development setup: everything needed to run *and* test
+# BOOTH-Reader on this machine.
+#
+#   pip install -r requirements-all.txt
+#   (the pinned browser runtime is restored from vendor/ by setup.bat;
+#    no user-profile or network browser install is used)
+#
+# Maintainer input for dependency updates. Official launchers install only
+# the hash-pinned requirements-portable-lock.txt from Git-owned vendor assets.
+# requirements-dev.txt includes the runtime set for compatibility testing.
+-r requirements-dev.txt

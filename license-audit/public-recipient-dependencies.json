@@ -1,0 +1,1043 @@
+[
+  {
+    "name": "annotated-doc",
+    "version": "0.0.5",
+    "purl": "pkg:pypi/annotated-doc@0.0.5",
+    "sha256": "117bac03a25ede5df5440e855b32d556049ca169ead221505badf432fed4b101",
+    "copyright_evidence": [
+      "Copyright (c) 2025 Sebastián Ramírez"
+    ],
+    "license_evidence": [
+      {
+        "path": "THIRD_PARTY_LICENSES/annotated-doc-0.0.5/fff170779a6a-annotated_doc-0.0.5.dist-info_licenses_LICENSE",
+        "original_path": "annotated_doc-0.0.5.dist-info/licenses/LICENSE",
+        "sha256": "fff170779a6acbf65abdb405c087f1cee1786691e4a96a4034517e4a504a0cdf",
+        "size": 1086,
+        "source": "annotated_doc-0.0.5-py3-none-any.whl"
+      }
+    ],
+    "reported_license": "MIT",
+    "bundled_in_public_artifact": false,
+    "use": "recipient downloads original publisher wheel; original notices retained; pip urllib3 updated locally",
+    "redistribution_clearance": "NOT APPROVED by this profile; native/internal redistribution closure remains outside approval"
+  },
+  {
+    "name": "annotated-types",
+    "version": "0.8.0",
+    "purl": "pkg:pypi/annotated-types@0.8.0",
+    "sha256": "f072f4d804ea359e4eaf198b1af7a8b0943881a87f31bb764f8bf219bb9419e0",
+    "copyright_evidence": [
+      "Copyright (c) 2022 the contributors"
+    ],
+    "license_evidence": [
+      {
+        "path": "THIRD_PARTY_LICENSES/annotated-types-0.8.0/fe1049884b1a-annotated_types-0.8.0.dist-info_licenses_LICENSE",
+        "original_path": "annotated_types-0.8.0.dist-info/licenses/LICENSE",
+        "sha256": "fe1049884b1a0d9342901e88e07f32925d24b3121d9972b6a6805fb9824b095d",
+        "size": 1083,
+        "source": "annotated_types-0.8.0-py3-none-any.whl"
+      }
+    ],
+    "reported_license": "MIT",
+    "bundled_in_public_artifact": false,
+    "use": "recipient downloads original publisher wheel; original notices retained; pip urllib3 updated locally",
+    "redistribution_clearance": "NOT APPROVED by this profile; native/internal redistribution closure remains outside approval"
+  },
+  {
+    "name": "anyio",
+    "version": "4.15.1",
+    "purl": "pkg:pypi/anyio@4.15.1",
+    "sha256": "6152fdbbf9a77fdec97731721bebf7c4c44f7c29b424b0065826173efc7ed101",
+    "copyright_evidence": [
+      "COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER",
+      "Copyright (c) 2018 Alex Grönholm"
+    ],
+    "license_evidence": [
+      {
+        "path": "THIRD_PARTY_LICENSES/anyio-4.15.1/5361ac9dc58f-anyio-4.15.1.dist-info_licenses_LICENSE",
+        "original_path": "anyio-4.15.1.dist-info/licenses/LICENSE",
+        "sha256": "5361ac9dc58f2ef5fd2e9b09c68297c17f04950909bbc8023bdb82eacf22c2b0",
+        "size": 1081,
+        "source": "anyio-4.15.1-py3-none-any.whl"
+      }
+    ],
+    "reported_license": "MIT",
+    "bundled_in_public_artifact": false,
+    "use": "recipient downloads original publisher wheel; original notices retained; pip urllib3 updated locally",
+    "redistribution_clearance": "NOT APPROVED by this profile; native/internal redistribution closure remains outside approval"
+  },
+  {
+    "name": "beautifulsoup4",
+    "version": "4.15.0",
+    "purl": "pkg:pypi/beautifulsoup4@4.15.0",
+    "sha256": "d6f88de62e1d4e38ecb1077eb9724cd0eff29d2a08ca16a401e9b9e93f117cf9",
+    "copyright_evidence": [
+      "Copyright (c) Leonard Richardson"
+    ],
+    "license_evidence": [
+      {
+        "path": "THIRD_PARTY_LICENSES/beautifulsoup4-4.15.0/b989238918e1-beautifulsoup4-4.15.0.dist-info_licenses_AUTHORS",
+        "original_path": "beautifulsoup4-4.15.0.dist-info/licenses/AUTHORS",
+        "sha256": "b989238918e1fdac1e46717cb405b63e92497a272413af0d989c1df6c8abcb6f",
+        "size": 2201,
+        "source": "beautifulsoup4-4.15.0-py3-none-any.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/beautifulsoup4-4.15.0/55b4d8d4b1e5-beautifulsoup4-4.15.0.dist-info_licenses_LICENSE",
+        "original_path": "beautifulsoup4-4.15.0.dist-info/licenses/LICENSE",
+        "sha256": "55b4d8d4b1e5bc86d10efac91b74c87bcb77526b0f5b9edaf8b9cd2adc7397b2",
+        "size": 1441,
+        "source": "beautifulsoup4-4.15.0-py3-none-any.whl"
+      }
+    ],
+    "reported_license": "MIT License",
+    "bundled_in_public_artifact": false,
+    "use": "recipient downloads original publisher wheel; original notices retained; pip urllib3 updated locally",
+    "redistribution_clearance": "NOT APPROVED by this profile; native/internal redistribution closure remains outside approval"
+  },
+  {
+    "name": "certifi",
+    "version": "2026.7.22",
+    "purl": "pkg:pypi/certifi@2026.7.22",
+    "sha256": "62f22742b58a1a33014a2b6b706588a8d7e2a88ae7bd1a6ebe8c992928483775",
+    "copyright_evidence": [],
+    "license_evidence": [
+      {
+        "path": "THIRD_PARTY_LICENSES/certifi-2026.7.22/e93716da6b9c-certifi-2026.7.22.dist-info_licenses_LICENSE",
+        "original_path": "certifi-2026.7.22.dist-info/licenses/LICENSE",
+        "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7",
+        "size": 989,
+        "source": "certifi-2026.7.22-py3-none-any.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/certifi-2026.7.22/e93716da6b9c-certifi-2026.7.22_LICENSE",
+        "original_path": "certifi-2026.7.22/LICENSE",
+        "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7",
+        "size": 989,
+        "source": "https://files.pythonhosted.org/packages/a3/c2/24167ea9858356b47a87a50d39908bfdb72ceeefe0041586e704e5376b3a/certifi-2026.7.22.tar.gz"
+      }
+    ],
+    "reported_license": "MPL-2.0",
+    "bundled_in_public_artifact": false,
+    "use": "recipient downloads original publisher wheel; original notices retained; pip urllib3 updated locally",
+    "redistribution_clearance": "NOT APPROVED by this profile; native/internal redistribution closure remains outside approval"
+  },
+  {
+    "name": "click",
+    "version": "8.5.0",
+    "purl": "pkg:pypi/click@8.5.0",
+    "sha256": "255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360",
+    "copyright_evidence": [
+      "Copyright 2014 Pallets"
+    ],
+    "license_evidence": [
+      {
+        "path": "THIRD_PARTY_LICENSES/click-8.5.0/9a8ad106a394-click-8.5.0.dist-info_licenses_LICENSE.txt",
+        "original_path": "click-8.5.0.dist-info/licenses/LICENSE.txt",
+        "sha256": "9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d",
+        "size": 1475,
+        "source": "click-8.5.0-py3-none-any.whl"
+      }
+    ],
+    "reported_license": "BSD-3-Clause",
+    "bundled_in_public_artifact": false,
+    "use": "recipient downloads original publisher wheel; original notices retained; pip urllib3 updated locally",
+    "redistribution_clearance": "NOT APPROVED by this profile; native/internal redistribution closure remains outside approval"
+  },
+  {
+    "name": "colorama",
+    "version": "0.4.6",
+    "purl": "pkg:pypi/colorama@0.4.6",
+    "sha256": "4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6",
+    "copyright_evidence": [
+      "Copyright (c) 2010 Jonathan Hartley"
+    ],
+    "license_evidence": [
+      {
+        "path": "THIRD_PARTY_LICENSES/colorama-0.4.6/cac35c02686e-colorama-0.4.6.dist-info_licenses_LICENSE.txt",
+        "original_path": "colorama-0.4.6.dist-info/licenses/LICENSE.txt",
+        "sha256": "cac35c02686e5d04a5a7140bfb3b36e73aed496656e891102e428886d7930318",
+        "size": 1491,
+        "source": "colorama-0.4.6-py2.py3-none-any.whl"
+      }
+    ],
+    "reported_license": "BSD-3-Clause",
+    "bundled_in_public_artifact": false,
+    "use": "recipient downloads original publisher wheel; original notices retained; pip urllib3 updated locally",
+    "redistribution_clearance": "NOT APPROVED by this profile; native/internal redistribution closure remains outside approval"
+  },
+  {
+    "name": "fastapi",
+    "version": "0.141.1",
+    "purl": "pkg:pypi/fastapi@0.141.1",
+    "sha256": "bfb91aa2d334c61cb35ba9a116fc123b3d3df31640b801cf57a7a78ec3f603b3",
+    "copyright_evidence": [
+      "Copyright (c) 2018 Sebastián Ramírez"
+    ],
+    "license_evidence": [
+      {
+        "path": "THIRD_PARTY_LICENSES/fastapi-0.141.1/4ec89ffc8148-fastapi-0.141.1.dist-info_licenses_LICENSE",
+        "original_path": "fastapi-0.141.1.dist-info/licenses/LICENSE",
+        "sha256": "4ec89ffc81485b97fec584b2d4a961032eeffe834453894fd9c1274906cc744e",
+        "size": 1086,
+        "source": "fastapi-0.141.1-py3-none-any.whl"
+      }
+    ],
+    "reported_license": "MIT",
+    "bundled_in_public_artifact": false,
+    "use": "recipient downloads original publisher wheel; original notices retained; pip urllib3 updated locally",
+    "redistribution_clearance": "NOT APPROVED by this profile; native/internal redistribution closure remains outside approval"
+  },
+  {
+    "name": "greenlet",
+    "version": "3.5.6",
+    "purl": "pkg:pypi/greenlet@3.5.6",
+    "sha256": "7ac4abb3877c43af320392c664774eef6fa2cc063c79a55fc02d844a3cbe7395",
+    "copyright_evidence": [
+      "Copyright (c) Armin Rigo, Christian Tismer and contributors"
+    ],
+    "license_evidence": [
+      {
+        "path": "THIRD_PARTY_LICENSES/greenlet-3.5.6/ab977b654605-greenlet-3.5.6.dist-info_licenses_LICENSE",
+        "original_path": "greenlet-3.5.6.dist-info/licenses/LICENSE",
+        "sha256": "ab977b654605670319509481ece49198f405a129372ac38c96f51cd96c2f452e",
+        "size": 1464,
+        "source": "greenlet-3.5.6-cp312-cp312-win_amd64.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/greenlet-3.5.6/69efa689cc7a-greenlet-3.5.6.dist-info_licenses_LICENSE.PSF",
+        "original_path": "greenlet-3.5.6.dist-info/licenses/LICENSE.PSF",
+        "sha256": "69efa689cc7aec7736236d3039c1d665e4b0c734a5bfea5abf633023abb2fff4",
+        "size": 2471,
+        "source": "greenlet-3.5.6-cp312-cp312-win_amd64.whl"
+      }
+    ],
+    "reported_license": "MIT AND PSF-2.0",
+    "bundled_in_public_artifact": false,
+    "use": "recipient downloads original publisher wheel; original notices retained; pip urllib3 updated locally",
+    "redistribution_clearance": "NOT APPROVED by this profile; native/internal redistribution closure remains outside approval"
+  },
+  {
+    "name": "h11",
+    "version": "0.16.0",
+    "purl": "pkg:pypi/h11@0.16.0",
+    "sha256": "63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86",
+    "copyright_evidence": [
+      "Copyright (c) 2016 Nathaniel J. Smith <njs@pobox.com> and other contributors"
+    ],
+    "license_evidence": [
+      {
+        "path": "THIRD_PARTY_LICENSES/h11-0.16.0/37db5bb85926-h11-0.16.0.dist-info_licenses_LICENSE.txt",
+        "original_path": "h11-0.16.0.dist-info/licenses/LICENSE.txt",
+        "sha256": "37db5bb85926db28a427a25867f10b1232003aea1be69ccb851138adb8e6f361",
+        "size": 1124,
+        "source": "h11-0.16.0-py3-none-any.whl"
+      }
+    ],
+    "reported_license": "MIT",
+    "bundled_in_public_artifact": false,
+    "use": "recipient downloads original publisher wheel; original notices retained; pip urllib3 updated locally",
+    "redistribution_clearance": "NOT APPROVED by this profile; native/internal redistribution closure remains outside approval"
+  },
+  {
+    "name": "httpcore",
+    "version": "1.0.9",
+    "purl": "pkg:pypi/httpcore@1.0.9",
+    "sha256": "2d400746a40668fc9dec9810239072b40b4484b640a8c38fd654a024c7a1bf55",
+    "copyright_evidence": [
+      "Copyright © 2020, [Encode OSS Ltd](https://www.encode.io/)."
+    ],
+    "license_evidence": [
+      {
+        "path": "THIRD_PARTY_LICENSES/httpcore-1.0.9/fdcb59154c74-httpcore-1.0.9.dist-info_licenses_LICENSE.md",
+        "original_path": "httpcore-1.0.9.dist-info/licenses/LICENSE.md",
+        "sha256": "fdcb59154c74cbaba16a11242f7740bea9f23d6feb5547917d8c5f94a80392a5",
+        "size": 1518,
+        "source": "httpcore-1.0.9-py3-none-any.whl"
+      }
+    ],
+    "reported_license": "BSD-3-Clause",
+    "bundled_in_public_artifact": false,
+    "use": "recipient downloads original publisher wheel; original notices retained; pip urllib3 updated locally",
+    "redistribution_clearance": "NOT APPROVED by this profile; native/internal redistribution closure remains outside approval"
+  },
+  {
+    "name": "httpx",
+    "version": "0.28.1",
+    "purl": "pkg:pypi/httpx@0.28.1",
+    "sha256": "d909fcccc110f8c7faf814ca82a9a4d816bc5a6dbfea25d6591d6985b8ba59ad",
+    "copyright_evidence": [
+      "Copyright © 2019, [Encode OSS Ltd](https://www.encode.io/)."
+    ],
+    "license_evidence": [
+      {
+        "path": "THIRD_PARTY_LICENSES/httpx-0.28.1/4ec59d544f12-httpx-0.28.1.dist-info_licenses_LICENSE.md",
+        "original_path": "httpx-0.28.1.dist-info/licenses/LICENSE.md",
+        "sha256": "4ec59d544f12b5f539a3a716fd321ac58ccd8030b465221f2c880200cdf28d8d",
+        "size": 1508,
+        "source": "httpx-0.28.1-py3-none-any.whl"
+      }
+    ],
+    "reported_license": "BSD-3-Clause",
+    "bundled_in_public_artifact": false,
+    "use": "recipient downloads original publisher wheel; original notices retained; pip urllib3 updated locally",
+    "redistribution_clearance": "NOT APPROVED by this profile; native/internal redistribution closure remains outside approval"
+  },
+  {
+    "name": "idna",
+    "version": "3.20",
+    "purl": "pkg:pypi/idna@3.20",
+    "sha256": "ab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c",
+    "copyright_evidence": [
+      "Copyright (c) 2013-2026, Kim Davies and contributors."
+    ],
+    "license_evidence": [
+      {
+        "path": "THIRD_PARTY_LICENSES/idna-3.20/1a9a4f0e3d47-idna-3.20.dist-info_licenses_LICENSE.md",
+        "original_path": "idna-3.20.dist-info/licenses/LICENSE.md",
+        "sha256": "1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04",
+        "size": 1541,
+        "source": "idna-3.20-py3-none-any.whl"
+      }
+    ],
+    "reported_license": "BSD-3-Clause",
+    "bundled_in_public_artifact": false,
+    "use": "recipient downloads original publisher wheel; original notices retained; pip urllib3 updated locally",
+    "redistribution_clearance": "NOT APPROVED by this profile; native/internal redistribution closure remains outside approval"
+  },
+  {
+    "name": "pip",
+    "version": "26.2.1",
+    "purl": "pkg:pypi/pip@26.2.1",
+    "sha256": "71138adf1f4ca900cdb7d289c21b7494329f2332b6d85f0e1c42108c0384ed3e",
+    "copyright_evidence": [
+      "(c) You must retain, in the Source form of any Derivative Works",
+      "Copyright (C) 2008-2011 INADA Naoki <songofacandy@gmail.com>",
+      "Copyright (c) 1991 - 1995, Stichting Mathematisch Centrum Amsterdam,",
+      "Copyright (c) 2006-2022 by the respective authors (see AUTHORS file).",
+      "Copyright (c) 2008-2020 Andrey Petrov and contributors.",
+      "Copyright (c) 2008-present The pip developers (see AUTHORS.txt file)",
+      "Copyright (c) 2010-202x The platformdirs developers",
+      "Copyright (c) 2013-2026, Kim Davies and contributors.",
+      "Copyright (c) 2017 Thomas Kluyver",
+      "Copyright (c) 2018, Tzu-ping Chung <uranusjr@gmail.com>",
+      "Copyright (c) 2020 Will McGugan",
+      "Copyright (c) 2021 Taneli Hukkinen",
+      "Copyright (c) 2022 Seth Michael Larson",
+      "Copyright (c) Donald Stufft and individual contributors.",
+      "Copyright 2012-2021  Eric Larson",
+      "Copyright {yyyy} {name of copyright owner}",
+      "copyright license to reproduce, prepare Derivative Works of,",
+      "copyright notice and this permission notice appear in all copies.",
+      "copyright notice that is included in or attached to the work"
+    ],
+    "license_evidence": [
+      {
+        "path": "THIRD_PARTY_LICENSES/pip-26.2.1/3df0c9601bfa-pip__vendor_vendor.txt",
+        "original_path": "pip/_vendor/vendor.txt",
+        "sha256": "3df0c9601bfa2e0dca23cc574a4f900a4d7fdad060ab203fab8354350ed93320",
+        "size": 317,
+        "source": "pip-26.2.1-py3-none-any.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/pip-26.2.1/86eeee87be2a-pip__vendor_cachecontrol_LICENSE.txt",
+        "original_path": "pip/_vendor/cachecontrol/LICENSE.txt",
+        "sha256": "86eeee87be2a43f3ff1f56496f451f69243926f025fedbb033666c304c4c161b",
+        "size": 558,
+        "source": "pip-26.2.1-py3-none-any.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/pip-26.2.1/e93716da6b9c-pip__vendor_certifi_LICENSE",
+        "original_path": "pip/_vendor/certifi/LICENSE",
+        "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7",
+        "size": 989,
+        "source": "pip-26.2.1-py3-none-any.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/pip-26.2.1/808e10c8a6ab-pip__vendor_distlib_LICENSE.txt",
+        "original_path": "pip/_vendor/distlib/LICENSE.txt",
+        "sha256": "808e10c8a6ab8deb149ff9b3fb19f447a808094606d712a9ca57fead3552599d",
+        "size": 14531,
+        "source": "pip-26.2.1-py3-none-any.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/pip-26.2.1/cb5e8e7e5f4a-pip__vendor_distro_LICENSE",
+        "original_path": "pip/_vendor/distro/LICENSE",
+        "sha256": "cb5e8e7e5f4a3988e1063c142c60dc2df75605f4c46515e776e3aca6df976e14",
+        "size": 11325,
+        "source": "pip-26.2.1-py3-none-any.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/pip-26.2.1/1a9a4f0e3d47-pip__vendor_idna_LICENSE.md",
+        "original_path": "pip/_vendor/idna/LICENSE.md",
+        "sha256": "1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04",
+        "size": 1541,
+        "source": "pip-26.2.1-py3-none-any.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/pip-26.2.1/492dedba85da-pip__vendor_msgpack_COPYING",
+        "original_path": "pip/_vendor/msgpack/COPYING",
+        "sha256": "492dedba85da5872f78e6091bcd1fea474d660d35acb4dee964b8aab3f007427",
+        "size": 614,
+        "source": "pip-26.2.1-py3-none-any.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/pip-26.2.1/cad1ef5bd340-pip__vendor_packaging_LICENSE",
+        "original_path": "pip/_vendor/packaging/LICENSE",
+        "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+        "size": 197,
+        "source": "pip-26.2.1-py3-none-any.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/pip-26.2.1/0d542e0c8804-pip__vendor_packaging_LICENSE.APACHE",
+        "original_path": "pip/_vendor/packaging/LICENSE.APACHE",
+        "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+        "size": 10174,
+        "source": "pip-26.2.1-py3-none-any.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/pip-26.2.1/b70e7e9b742f-pip__vendor_packaging_LICENSE.BSD",
+        "original_path": "pip/_vendor/packaging/LICENSE.BSD",
+        "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+        "size": 1344,
+        "source": "pip-26.2.1-py3-none-any.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/pip-26.2.1/86da0f01aeae-pip__vendor_pkg_resources_LICENSE",
+        "original_path": "pip/_vendor/pkg_resources/LICENSE",
+        "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
+        "size": 1023,
+        "source": "pip-26.2.1-py3-none-any.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/pip-26.2.1/29e0fd62e929-pip__vendor_platformdirs_LICENSE",
+        "original_path": "pip/_vendor/platformdirs/LICENSE",
+        "sha256": "29e0fd62e929850e86eb28c3fdccf0cefdf4fa94879011cffb3d0d4bed6d4db6",
+        "size": 1089,
+        "source": "pip-26.2.1-py3-none-any.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/pip-26.2.1/a9d66f1d526d-pip__vendor_pygments_LICENSE",
+        "original_path": "pip/_vendor/pygments/LICENSE",
+        "sha256": "a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17",
+        "size": 1331,
+        "source": "pip-26.2.1-py3-none-any.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/pip-26.2.1/1b22b049b526-pip__vendor_pyproject_hooks_LICENSE",
+        "original_path": "pip/_vendor/pyproject_hooks/LICENSE",
+        "sha256": "1b22b049b5267d6dfc23a67bf4a84d8ec04b9fdfb1a51d360e42b4342c8b4154",
+        "size": 1081,
+        "source": "pip-26.2.1-py3-none-any.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/pip-26.2.1/09e8a9bcec80-pip__vendor_requests_LICENSE",
+        "original_path": "pip/_vendor/requests/LICENSE",
+        "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
+        "size": 10142,
+        "source": "pip-26.2.1-py3-none-any.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/pip-26.2.1/f388fd38cad1-pip__vendor_resolvelib_LICENSE",
+        "original_path": "pip/_vendor/resolvelib/LICENSE",
+        "sha256": "f388fd38cad13112c1dc0f669bbe80e7f84541edbafb72f3030d2ca7642c3c9d",
+        "size": 751,
+        "source": "pip-26.2.1-py3-none-any.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/pip-26.2.1/deed7c17a431-pip__vendor_rich_LICENSE",
+        "original_path": "pip/_vendor/rich/LICENSE",
+        "sha256": "deed7c17a4318158190a3ea239cc879a5a50271cebb98ae7025f48fbe58dca15",
+        "size": 1056,
+        "source": "pip-26.2.1-py3-none-any.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/pip-26.2.1/b80816b0d530-pip__vendor_tomli_LICENSE",
+        "original_path": "pip/_vendor/tomli/LICENSE",
+        "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe",
+        "size": 1072,
+        "source": "pip-26.2.1-py3-none-any.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/pip-26.2.1/b80816b0d530-pip__vendor_tomli_w_LICENSE",
+        "original_path": "pip/_vendor/tomli_w/LICENSE",
+        "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe",
+        "size": 1072,
+        "source": "pip-26.2.1-py3-none-any.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/pip-26.2.1/33be7b7e8fa4-pip__vendor_truststore_LICENSE",
+        "original_path": "pip/_vendor/truststore/LICENSE",
+        "sha256": "33be7b7e8fa4fd19b1760e1a8ed8a668bdab852c91b692dd41424bcb725a9fca",
+        "size": 1086,
+        "source": "pip-26.2.1-py3-none-any.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/pip-26.2.1/130e3a64d5fd-pip__vendor_urllib3_LICENSE.txt",
+        "original_path": "pip/_vendor/urllib3/LICENSE.txt",
+        "sha256": "130e3a64d5fdd5d096a752694634a7d9df284469de86e5732100268041e3d686",
+        "size": 1093,
+        "source": "pip-26.2.1-py3-none-any.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/pip-26.2.1/4eb1fb1705e2-pip-26.2.1.dist-info_licenses_AUTHORS.txt",
+        "original_path": "pip-26.2.1.dist-info/licenses/AUTHORS.txt",
+        "sha256": "4eb1fb1705e2def898e81bcba19c3aac80620d27ba3569d6a6df7b4629d1b5c2",
+        "size": 12139,
+        "source": "pip-26.2.1-py3-none-any.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/pip-26.2.1/634300a669d4-pip-26.2.1.dist-info_licenses_LICENSE.txt",
+        "original_path": "pip-26.2.1.dist-info/licenses/LICENSE.txt",
+        "sha256": "634300a669d49aeae65b12c6c48c924c51a4cdf3d1ff086dc3456dc8bcaa2104",
+        "size": 1093,
+        "source": "pip-26.2.1-py3-none-any.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/pip-26.2.1/86eeee87be2a-pip-26.2.1.dist-info_licenses_src_pip__vendor_cachecontrol_LICENSE.txt",
+        "original_path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/cachecontrol/LICENSE.txt",
+        "sha256": "86eeee87be2a43f3ff1f56496f451f69243926f025fedbb033666c304c4c161b",
+        "size": 558,
+        "source": "pip-26.2.1-py3-none-any.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/pip-26.2.1/e93716da6b9c-pip-26.2.1.dist-info_licenses_src_pip__vendor_certifi_LICENSE",
+        "original_path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/certifi/LICENSE",
+        "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7",
+        "size": 989,
+        "source": "pip-26.2.1-py3-none-any.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/pip-26.2.1/808e10c8a6ab-pip-26.2.1.dist-info_licenses_src_pip__vendor_distlib_LICENSE.txt",
+        "original_path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/distlib/LICENSE.txt",
+        "sha256": "808e10c8a6ab8deb149ff9b3fb19f447a808094606d712a9ca57fead3552599d",
+        "size": 14531,
+        "source": "pip-26.2.1-py3-none-any.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/pip-26.2.1/cb5e8e7e5f4a-pip-26.2.1.dist-info_licenses_src_pip__vendor_distro_LICENSE",
+        "original_path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/distro/LICENSE",
+        "sha256": "cb5e8e7e5f4a3988e1063c142c60dc2df75605f4c46515e776e3aca6df976e14",
+        "size": 11325,
+        "source": "pip-26.2.1-py3-none-any.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/pip-26.2.1/1a9a4f0e3d47-pip-26.2.1.dist-info_licenses_src_pip__vendor_idna_LICENSE.md",
+        "original_path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/idna/LICENSE.md",
+        "sha256": "1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04",
+        "size": 1541,
+        "source": "pip-26.2.1-py3-none-any.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/pip-26.2.1/492dedba85da-pip-26.2.1.dist-info_licenses_src_pip__vendor_msgpack_COPYING",
+        "original_path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/msgpack/COPYING",
+        "sha256": "492dedba85da5872f78e6091bcd1fea474d660d35acb4dee964b8aab3f007427",
+        "size": 614,
+        "source": "pip-26.2.1-py3-none-any.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/pip-26.2.1/cad1ef5bd340-pip-26.2.1.dist-info_licenses_src_pip__vendor_packaging_LICENSE",
+        "original_path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/packaging/LICENSE",
+        "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
+        "size": 197,
+        "source": "pip-26.2.1-py3-none-any.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/pip-26.2.1/0d542e0c8804-pip-26.2.1.dist-info_licenses_src_pip__vendor_packaging_LICENSE.APACHE",
+        "original_path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/packaging/LICENSE.APACHE",
+        "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
+        "size": 10174,
+        "source": "pip-26.2.1-py3-none-any.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/pip-26.2.1/b70e7e9b742f-pip-26.2.1.dist-info_licenses_src_pip__vendor_packaging_LICENSE.BSD",
+        "original_path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/packaging/LICENSE.BSD",
+        "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
+        "size": 1344,
+        "source": "pip-26.2.1-py3-none-any.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/pip-26.2.1/86da0f01aeae-pip-26.2.1.dist-info_licenses_src_pip__vendor_pkg_resources_LICENSE",
+        "original_path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/pkg_resources/LICENSE",
+        "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
+        "size": 1023,
+        "source": "pip-26.2.1-py3-none-any.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/pip-26.2.1/29e0fd62e929-pip-26.2.1.dist-info_licenses_src_pip__vendor_platformdirs_LICENSE",
+        "original_path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/platformdirs/LICENSE",
+        "sha256": "29e0fd62e929850e86eb28c3fdccf0cefdf4fa94879011cffb3d0d4bed6d4db6",
+        "size": 1089,
+        "source": "pip-26.2.1-py3-none-any.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/pip-26.2.1/a9d66f1d526d-pip-26.2.1.dist-info_licenses_src_pip__vendor_pygments_LICENSE",
+        "original_path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/pygments/LICENSE",
+        "sha256": "a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17",
+        "size": 1331,
+        "source": "pip-26.2.1-py3-none-any.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/pip-26.2.1/1b22b049b526-pip-26.2.1.dist-info_licenses_src_pip__vendor_pyproject_hooks_LICENSE",
+        "original_path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/pyproject_hooks/LICENSE",
+        "sha256": "1b22b049b5267d6dfc23a67bf4a84d8ec04b9fdfb1a51d360e42b4342c8b4154",
+        "size": 1081,
+        "source": "pip-26.2.1-py3-none-any.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/pip-26.2.1/09e8a9bcec80-pip-26.2.1.dist-info_licenses_src_pip__vendor_requests_LICENSE",
+        "original_path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/requests/LICENSE",
+        "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
+        "size": 10142,
+        "source": "pip-26.2.1-py3-none-any.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/pip-26.2.1/f388fd38cad1-pip-26.2.1.dist-info_licenses_src_pip__vendor_resolvelib_LICENSE",
+        "original_path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/resolvelib/LICENSE",
+        "sha256": "f388fd38cad13112c1dc0f669bbe80e7f84541edbafb72f3030d2ca7642c3c9d",
+        "size": 751,
+        "source": "pip-26.2.1-py3-none-any.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/pip-26.2.1/deed7c17a431-pip-26.2.1.dist-info_licenses_src_pip__vendor_rich_LICENSE",
+        "original_path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/rich/LICENSE",
+        "sha256": "deed7c17a4318158190a3ea239cc879a5a50271cebb98ae7025f48fbe58dca15",
+        "size": 1056,
+        "source": "pip-26.2.1-py3-none-any.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/pip-26.2.1/b80816b0d530-pip-26.2.1.dist-info_licenses_src_pip__vendor_tomli_LICENSE",
+        "original_path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/tomli/LICENSE",
+        "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe",
+        "size": 1072,
+        "source": "pip-26.2.1-py3-none-any.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/pip-26.2.1/b80816b0d530-pip-26.2.1.dist-info_licenses_src_pip__vendor_tomli_w_LICENSE",
+        "original_path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/tomli_w/LICENSE",
+        "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe",
+        "size": 1072,
+        "source": "pip-26.2.1-py3-none-any.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/pip-26.2.1/33be7b7e8fa4-pip-26.2.1.dist-info_licenses_src_pip__vendor_truststore_LICENSE",
+        "original_path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/truststore/LICENSE",
+        "sha256": "33be7b7e8fa4fd19b1760e1a8ed8a668bdab852c91b692dd41424bcb725a9fca",
+        "size": 1086,
+        "source": "pip-26.2.1-py3-none-any.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/pip-26.2.1/130e3a64d5fd-pip-26.2.1.dist-info_licenses_src_pip__vendor_urllib3_LICENSE.txt",
+        "original_path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/urllib3/LICENSE.txt",
+        "sha256": "130e3a64d5fdd5d096a752694634a7d9df284469de86e5732100268041e3d686",
+        "size": 1093,
+        "source": "pip-26.2.1-py3-none-any.whl"
+      }
+    ],
+    "reported_license": "MIT",
+    "bundled_in_public_artifact": false,
+    "use": "recipient downloads original publisher wheel; original notices retained; pip urllib3 updated locally",
+    "redistribution_clearance": "NOT APPROVED by this profile; native/internal redistribution closure remains outside approval"
+  },
+  {
+    "name": "playwright",
+    "version": "1.63.0",
+    "purl": "pkg:pypi/playwright@1.63.0",
+    "sha256": "2f9a707a6c6c91157ed77bff2b8caeb04b3c8d46e70d585fc134298cbe4b5cc6",
+    "copyright_evidence": [
+      "(c)  allow anyone who receives a copy of the Modified Version to",
+      "(c) You must retain, in the Source form of any Derivative Works",
+      "COPYRIGHT AND PERMISSION NOTICE",
+      "COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER",
+      "Copyright (C) 1995-2026 Jean-loup Gailly and Mark Adler",
+      "Copyright (C) 2011 by Beau Gunderson",
+      "Copyright (C) 2012-2022 by various contributors (see AUTHORS)",
+      "Copyright (C) 2016-2018 Rob Wu <rob@robwu.nl>",
+      "Copyright (C) 2018 Agoric",
+      "Copyright (C) 2018 Intel Corporation",
+      "Copyright (c) 1995-2016 International Business Machines Corporation and others",
+      "Copyright (c) 1997-date Stuart Langridge",
+      "Copyright (c) 1998 Massachusetts Institute of Technology",
+      "Copyright (c) 2000-2006, The Perl Foundation.",
+      "Copyright (c) 2007 - 2023 Daniel Stenberg with many contributors, see AUTHORS",
+      "Copyright (c) 2009 Google Inc. All rights reserved.",
+      "Copyright (c) 2009 by the Jinja Team, see AUTHORS for more details.",
+      "Copyright (c) 2009, 2010, 2013-2016 by the Brotli Authors.",
+      "Copyright (c) 2009-2011, Mozilla Foundation and contributors",
+      "Copyright (c) 2009-2015, Kevin Decker <kpdecker@gmail.com>",
+      "Copyright (c) 2010 by Armin Ronacher and contributors.  See AUTHORS",
+      "Copyright (c) 2010, Google Inc. All rights reserved.",
+      "Copyright (c) 2010-2014 Emscripten authors, see AUTHORS file.",
+      "Copyright (c) 2011 Einar Otto Stangvik <einaros@gmail.com>",
+      "Copyright (c) 2011 TJ Holowaychuk <tj@vision-media.ca>",
+      "Copyright (c) 2011-2017 JP Richardson",
+      "Copyright (c) 2011-2021, Gary Court until https://github.com/garycourt/uri-js/commit/a1acf730b4bba3f1097c9f52e7d9d3aba8cdcaae",
+      "Copyright (c) 2011-2022 Isaac Z. Schlueter, Ben Noordhuis, and Contributors",
+      "Copyright (c) 2011:",
+      "Copyright (c) 2012 Paul Miller (https://paulmillr.com), Elan Shanker",
+      "Copyright (c) 2012, 2013, 2014 Gil Tene",
+      "Copyright (c) 2012, 2014, 2015, 2016 Tatsuhiro Tsujikawa",
+      "Copyright (c) 2012, 2014, 2015, 2016 nghttp2 contributors",
+      "Copyright (c) 2012, Ben Noordhuis <info@bnoordhuis.nl>",
+      "Copyright (c) 2012-2014 TJ Holowaychuk <tj@vision-media.ca>",
+      "Copyright (c) 2012-2018 Aseem Kishore, and [others].",
+      "Copyright (c) 2012-2019 Thorsten Lorenz, Paul Miller (https://paulmillr.com)",
+      "Copyright (c) 2013 Arnout Kazemier and contributors",
+      "Copyright (c) 2013 Josh Glazebrook",
+      "Copyright (c) 2013 Nathan Rajlich <nathan@tootallnate.net>",
+      "Copyright (c) 2013-2017 Josh Glazebrook",
+      "Copyright (c) 2013-2022 Niels Lohmann",
+      "Copyright (c) 2013-2024 Brian J. Brennan",
+      "Copyright (c) 2014 Andrew Kelley",
+      "Copyright (c) 2014 Evan Wallace",
+      "Copyright (c) 2014 Josh Wolfe",
+      "Copyright (c) 2014 Matt Warren",
+      "Copyright (c) 2014 Michael Barker",
+      "Copyright (c) 2014, Eugene Ware",
+      "Copyright (c) 2014, StrongLoop Inc.",
+      "Copyright (c) 2014-2017 TJ Holowaychuk <tj@vision-media.ca>",
+      "Copyright (c) 2015 Douglas Christopher Wilson",
+      "Copyright (c) 2015 Jed Watson <jed.watson@me.com>",
+      "Copyright (c) 2015, Scott Motte",
+      "Copyright (c) 2015-2021 Evgeny Poberezkin",
+      "Copyright (c) 2015-2023 Benjamin Coe, Isaac Z. Schlueter, and Contributors",
+      "Copyright (c) 2015-present libuv project contributors.",
+      "Copyright (c) 2015-present, Brian Woodward.",
+      "Copyright (c) 2016 Jean-Philippe Aumasson <jeanphilippe.aumasson@gmail.com>",
+      "Copyright (c) 2016 Luigi Pinca and contributors",
+      "Copyright (c) 2016 ngtcp2 contributors",
+      "Copyright (c) 2016, 2018 Linus Unnebäck",
+      "Copyright (c) 2016-present, Jon Schlinkert.",
+      "Copyright (c) 2017 Evgeny Poberezkin",
+      "Copyright (c) 2017 Matteo Collina",
+      "Copyright (c) 2017 TJ Holowaychuk <tj@vision-media.ca>",
+      "Copyright (c) 2018 Made With MOXY Lda <hello@moxy.studio>",
+      "Copyright (c) 2018-2021 Josh Junon",
+      "Copyright (c) 2019",
+      "Copyright (c) 2019 Colin Ihrig and Contributors",
+      "Copyright (c) 2019 Intel Corporation. All rights reserved.",
+      "Copyright (c) 2019 nghttp3 contributors",
+      "Copyright (c) 2020 Evgeny Poberezkin",
+      "Copyright (c) 2020 Node.js contributors. All rights reserved.",
+      "Copyright (c) 2020 Vercel, Inc.",
+      "Copyright (c) 2020, Stefan Terdell",
+      "Copyright (c) 2021 Matteo Collina",
+      "Copyright (c) 2021-present The Fastify team <https://github.com/fastify/fastify#team>",
+      "Copyright (c) 2022 - present, Yusuke Wada and Hono contributors",
+      "Copyright (c) 2022 Postman, Inc",
+      "Copyright (c) 2022 Ze-Zheng Wu",
+      "Copyright (c) 2023 Robert Kieffer",
+      "Copyright (c) 2024 Anthropic, PBC",
+      "Copyright (c) 2025 Colin McDonnell",
+      "Copyright (c) 2026 Espen Hovlandsdal <espen@hovlandsdal.com>",
+      "Copyright (c) EventSource GitHub organisation",
+      "Copyright (c) Isaac Z. Schlueter and Contributors",
+      "Copyright (c) Kevin Mårtensson <kevinmartensson@gmail.com> (github.com/kevva)",
+      "Copyright (c) Marco Ippolito and Amaro contributors",
+      "Copyright (c) Mathias Pettersson and Brian Hammond",
+      "Copyright (c) Matteo Collina and Undici contributors",
+      "Copyright (c) Meta Platforms, Inc. and affiliates. All rights reserved.",
+      "Copyright (c) Microsoft Corporation",
+      "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (https://sindresorhus.com)",
+      "Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)",
+      "Copyright (c) Tjarda Koster, https://jelloween.deviantart.com",
+      "Copyright (c) npm, Inc. and Contributors",
+      "Copyright (c) their respective copyright owners",
+      "Copyright 1991 by the Massachusetts Institute of Technology",
+      "Copyright 2006-2011, the V8 project authors. All rights reserved.",
+      "Copyright 2008, Google Inc.",
+      "Copyright 2014, the V8 project authors. All rights reserved.",
+      "Copyright 2017 - 2022 Quarkslab",
+      "Copyright 2017 - 2022 R. Thomas",
+      "Copyright 2017 - 2025 Quarkslab",
+      "Copyright 2017 - 2025 R. Thomas",
+      "Copyright 2018-2025 The simdjson authors",
+      "Copyright 2021 The simdutf authors",
+      "Copyright 2023 Yagiz Nizipli and Daniel Lemire",
+      "Copyright 2024 SWC contributors.",
+      "Copyright 2026 Yagiz Nizipli",
+      "Copyright Eemeli Aro <eemeli@gmail.com>",
+      "Copyright Fedor Indutny, 2018.",
+      "Copyright Holder may include your modifications in the Standard",
+      "Copyright Holder, and derivatives of that collection and/or of",
+      "Copyright Joyent, Inc. and other Node contributors. All rights reserved.",
+      "Copyright Julian Gruber <julian@juliangruber.com>",
+      "Copyright Mathias Bynens <https://mathiasbynens.be/>",
+      "Copyright Node.js contributors. All rights reserved.",
+      "Copyright © 2004 Scott James Remnant .",
+      "Copyright © 2012-2015 Dan Nicholson",
+      "Copyright © 2016-2025 Unicode, Inc.",
+      "copyright and related and neighboring rights to this software to the public",
+      "copyright in it.",
+      "copyright license to reproduce, prepare Derivative Works of,",
+      "copyright notice and this permission notice appear in all copies.",
+      "copyright notice and this permission notice appear in supporting",
+      "copyright notice that is included in or attached to the work",
+      "copyright notice(s) and this permission notice appear in all copies of",
+      "copyright notice, this list of conditions and the following",
+      "copyright notice, this list of conditions and the following disclaimer",
+      "copyright notice, this list of conditions and the following disclaimers",
+      "copyright the Internet Systems Consortium, Inc., and licensed under the ISC"
+    ],
+    "license_evidence": [
+      {
+        "path": "THIRD_PARTY_LICENSES/playwright-1.63.0/ed34dd8e3f0a-playwright_driver_LICENSE",
+        "original_path": "playwright/driver/LICENSE",
+        "sha256": "ed34dd8e3f0a78dbaf00d0444ce8e285b015b765379c2e17880455f70370f8e9",
+        "size": 160555,
+        "source": "playwright-1.63.0-py3-none-win_amd64.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/playwright-1.63.0/45873d00a0dd-playwright_driver_package_LICENSE",
+        "original_path": "playwright/driver/package/LICENSE",
+        "sha256": "45873d00a0dd243596deb4aa23b2493b3d1f0671921bf2538ea431d7380220eb",
+        "size": 11601,
+        "source": "playwright-1.63.0-py3-none-win_amd64.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/playwright-1.63.0/6d602191187b-playwright_driver_package_NOTICE",
+        "original_path": "playwright/driver/package/NOTICE",
+        "sha256": "6d602191187b35b9b01d2cffa01c8469c2c8d9de8a96f1bf868e0f264f51c81d",
+        "size": 254,
+        "source": "playwright-1.63.0-py3-none-win_amd64.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/playwright-1.63.0/a549d329bad8-playwright_driver_package_ThirdPartyNotices.txt",
+        "original_path": "playwright/driver/package/ThirdPartyNotices.txt",
+        "sha256": "a549d329bad8806fe279f0ecae0fc0270dec7e7c2dc8ec10f90e394f7c32b144",
+        "size": 676,
+        "source": "playwright-1.63.0-py3-none-win_amd64.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/playwright-1.63.0/3098a6efcbc1-playwright_driver_package_lib_serverRegistry.js.LICENSE",
+        "original_path": "playwright/driver/package/lib/serverRegistry.js.LICENSE",
+        "sha256": "3098a6efcbc11752cbdf6075fa65480f5470f78c8d981fab9c0796dc9a41cefe",
+        "size": 2982,
+        "source": "playwright-1.63.0-py3-none-win_amd64.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/playwright-1.63.0/2495f30be296-playwright_driver_package_lib_utilsBundle.js.LICENSE",
+        "original_path": "playwright/driver/package/lib/utilsBundle.js.LICENSE",
+        "sha256": "2495f30be29620d54b58339821eda0ebabdfb6ee9b09455f7285a06fd46fb9f3",
+        "size": 106591,
+        "source": "playwright-1.63.0-py3-none-win_amd64.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/playwright-1.63.0/995c7ee35ace-playwright_driver_package_lib_webp_codec.LICENSE",
+        "original_path": "playwright/driver/package/lib/webp_codec.LICENSE",
+        "sha256": "995c7ee35aceb7666829b7a501ca89c0864e12b493c1174b155774ab1e03d831",
+        "size": 8841,
+        "source": "playwright-1.63.0-py3-none-win_amd64.whl"
+      },
+      {
+        "path": "THIRD_PARTY_LICENSES/playwright-1.63.0/7fab1461b419-playwright-1.63.0.dist-info_licenses_LICENSE",
+        "original_path": "playwright-1.63.0.dist-info/licenses/LICENSE",
+        "sha256": "7fab1461b41970ff376f1c9303a637076bfaaeb71cd12dd3a1c44aaf59a1a2b9",
+        "size": 11399,
+        "source": "playwright-1.63.0-py3-none-win_amd64.whl"
+      }
+    ],
+    "reported_license": "Apache-2.0",
+    "bundled_in_public_artifact": false,
+    "use": "recipient downloads original publisher wheel; original notices retained; pip urllib3 updated locally",
+    "redistribution_clearance": "NOT APPROVED by this profile; native/internal redistribution closure remains outside approval"
+  },
+  {
+    "name": "pydantic",
+    "version": "2.13.5",
+    "purl": "pkg:pypi/pydantic@2.13.5",
+    "sha256": "346a034f080da3755d8e9cb5e00e8b07de1d39e4f6e2c87d8ab7cafa0b269a73",
+    "copyright_evidence": [
+      "Copyright (c) 2017 to present Pydantic Services Inc. and individual contributors."
+    ],
+    "license_evidence": [
+      {
+        "path": "THIRD_PARTY_LICENSES/pydantic-2.13.5/a9e186f3ca16-pydantic-2.13.5.dist-info_licenses_LICENSE",
+        "original_path": "pydantic-2.13.5.dist-info/licenses/LICENSE",
+        "sha256": "a9e186f3ca16b5eef84318e7a701721351a00cb7b8ae3a4394b67b49e3529ef3",
+        "size": 1129,
+        "source": "pydantic-2.13.5-py3-none-any.whl"
+      }
+    ],
+    "reported_license": "MIT",
+    "bundled_in_public_artifact": false,
+    "use": "recipient downloads original publisher wheel; original notices retained; pip urllib3 updated locally",
+    "redistribution_clearance": "NOT APPROVED by this profile; native/internal redistribution closure remains outside approval"
+  },
+  {
+    "name": "pydantic-core",
+    "version": "2.46.5",
+    "purl": "pkg:pypi/pydantic-core@2.46.5",
+    "sha256": "5e81740c09e310f5aa5cbd3e434a01c154d4bef93241c7877b39f211d2b78ba8",
+    "copyright_evidence": [
+      "Copyright (c) 2022 Samuel Colvin"
+    ],
+    "license_evidence": [
+      {
+        "path": "THIRD_PARTY_LICENSES/pydantic-core-2.46.5/fbe7f615f18d-pydantic_core-2.46.5.dist-info_licenses_LICENSE",
+        "original_path": "pydantic_core-2.46.5.dist-info/licenses/LICENSE",
+        "sha256": "fbe7f615f18d135c07000e5a86325db27f42c7729699ef166ac1f7a3f4586bf4",
+        "size": 1101,
+        "source": "pydantic_core-2.46.5-cp312-cp312-win_amd64.whl"
+      }
+    ],
+    "reported_license": "MIT",
+    "bundled_in_public_artifact": false,
+    "use": "recipient downloads original publisher wheel; original notices retained; pip urllib3 updated locally",
+    "redistribution_clearance": "NOT APPROVED by this profile; native/internal redistribution closure remains outside approval"
+  },
+  {
+    "name": "pyee",
+    "version": "13.0.1",
+    "purl": "pkg:pypi/pyee@13.0.1",
+    "sha256": "af2f8fede4171ef667dfded53f96e2ed0d6e6bd7ee3bb46437f77e3b57689228",
+    "copyright_evidence": [
+      "Copyright (c) 2021 Josh Holbrook"
+    ],
+    "license_evidence": [
+      {
+        "path": "THIRD_PARTY_LICENSES/pyee-13.0.1/1ff556ca206b-pyee-13.0.1.dist-info_licenses_LICENSE",
+        "original_path": "pyee-13.0.1.dist-info/licenses/LICENSE",
+        "sha256": "1ff556ca206b107f10e1c562ae454d3292e0296c3510eb90eb7f114caee32a66",
+        "size": 1080,
+        "source": "pyee-13.0.1-py3-none-any.whl"
+      }
+    ],
+    "reported_license": "MIT",
+    "bundled_in_public_artifact": false,
+    "use": "recipient downloads original publisher wheel; original notices retained; pip urllib3 updated locally",
+    "redistribution_clearance": "NOT APPROVED by this profile; native/internal redistribution closure remains outside approval"
+  },
+  {
+    "name": "soupsieve",
+    "version": "2.10",
+    "purl": "pkg:pypi/soupsieve@2.10",
+    "sha256": "8596eb8967d744174820280fa62b4542a2e955bfaccca73ed8a13c6eb8e9b502",
+    "copyright_evidence": [
+      "Copyright (c) 2018 - 2026 Isaac Muse <isaacmuse@gmail.com>"
+    ],
+    "license_evidence": [
+      {
+        "path": "THIRD_PARTY_LICENSES/soupsieve-2.10/76a0acdb98c3-soupsieve-2.10.dist-info_licenses_LICENSE.md",
+        "original_path": "soupsieve-2.10.dist-info/licenses/LICENSE.md",
+        "sha256": "76a0acdb98c3a63681e20b6f096699ef8cad5fb35d56eef8387e0fa71d797a9a",
+        "size": 1096,
+        "source": "soupsieve-2.10-py3-none-any.whl"
+      }
+    ],
+    "reported_license": "MIT",
+    "bundled_in_public_artifact": false,
+    "use": "recipient downloads original publisher wheel; original notices retained; pip urllib3 updated locally",
+    "redistribution_clearance": "NOT APPROVED by this profile; native/internal redistribution closure remains outside approval"
+  },
+  {
+    "name": "starlette",
+    "version": "1.7.0",
+    "purl": "pkg:pypi/starlette@1.7.0",
+    "sha256": "67f8e99895493dd2911a03f11314af6ceebeae4e704bb9f43dfc6a9db151c93e",
+    "copyright_evidence": [
+      "Copyright © 2018, [Encode OSS Ltd](https://www.encode.io/)."
+    ],
+    "license_evidence": [
+      {
+        "path": "THIRD_PARTY_LICENSES/starlette-1.7.0/dcb95677a022-starlette-1.7.0.dist-info_licenses_LICENSE.md",
+        "original_path": "starlette-1.7.0.dist-info/licenses/LICENSE.md",
+        "sha256": "dcb95677a02240243187e964f941847d19b17821cf99e5afae684fab328c19bf",
+        "size": 1518,
+        "source": "starlette-1.7.0-py3-none-any.whl"
+      }
+    ],
+    "reported_license": "BSD-3-Clause",
+    "bundled_in_public_artifact": false,
+    "use": "recipient downloads original publisher wheel; original notices retained; pip urllib3 updated locally",
+    "redistribution_clearance": "NOT APPROVED by this profile; native/internal redistribution closure remains outside approval"
+  },
+  {
+    "name": "typing-extensions",
+    "version": "4.16.0",
+    "purl": "pkg:pypi/typing-extensions@4.16.0",
+    "sha256": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8",
+    "copyright_evidence": [
+      "Copyright (c) 1991 - 1995, Stichting Mathematisch Centrum Amsterdam,"
+    ],
+    "license_evidence": [
+      {
+        "path": "THIRD_PARTY_LICENSES/typing-extensions-4.16.0/3b2f81fe21d1-typing_extensions-4.16.0.dist-info_licenses_LICENSE",
+        "original_path": "typing_extensions-4.16.0.dist-info/licenses/LICENSE",
+        "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
+        "size": 13936,
+        "source": "typing_extensions-4.16.0-py3-none-any.whl"
+      }
+    ],
+    "reported_license": "PSF-2.0",
+    "bundled_in_public_artifact": false,
+    "use": "recipient downloads original publisher wheel; original notices retained; pip urllib3 updated locally",
+    "redistribution_clearance": "NOT APPROVED by this profile; native/internal redistribution closure remains outside approval"
+  },
+  {
+    "name": "typing-inspection",
+    "version": "0.4.4",
+    "purl": "pkg:pypi/typing-inspection@0.4.4",
+    "sha256": "65b8397ba37ccbce054456aaccddfc91e6e3083c92824df348d96ca832f3f147",
+    "copyright_evidence": [
+      "Copyright (c) Pydantic Services Inc. 2025 to present"
+    ],
+    "license_evidence": [
+      {
+        "path": "THIRD_PARTY_LICENSES/typing-inspection-0.4.4/804b59b25f2c-typing_inspection-0.4.4.dist-info_licenses_LICENSE",
+        "original_path": "typing_inspection-0.4.4.dist-info/licenses/LICENSE",
+        "sha256": "804b59b25f2c31bd278f9202a19ae49a3945aa2664387e2d0a128c7cacc61ec3",
+        "size": 1090,
+        "source": "typing_inspection-0.4.4-py3-none-any.whl"
+      }
+    ],
+    "reported_license": "MIT",
+    "bundled_in_public_artifact": false,
+    "use": "recipient downloads original publisher wheel; original notices retained; pip urllib3 updated locally",
+    "redistribution_clearance": "NOT APPROVED by this profile; native/internal redistribution closure remains outside approval"
+  },
+  {
+    "name": "urllib3",
+    "version": "2.8.0",
+    "purl": "pkg:pypi/urllib3@2.8.0",
+    "sha256": "0cf3cae568d36aa9576b28dfb35f11328f1cb974ca7647d9475ebb86c75ac6e3",
+    "copyright_evidence": [
+      "Copyright (c) 2008-2020 Andrey Petrov and contributors."
+    ],
+    "license_evidence": [
+      {
+        "path": "THIRD_PARTY_LICENSES/urllib3-2.8.0/130e3a64d5fd-urllib3-2.8.0.dist-info_licenses_LICENSE.txt",
+        "original_path": "urllib3-2.8.0.dist-info/licenses/LICENSE.txt",
+        "sha256": "130e3a64d5fdd5d096a752694634a7d9df284469de86e5732100268041e3d686",
+        "size": 1093,
+        "source": "urllib3-2.8.0-py3-none-any.whl"
+      }
+    ],
+    "reported_license": "MIT",
+    "bundled_in_public_artifact": false,
+    "use": "recipient downloads original publisher wheel; original notices retained; pip urllib3 updated locally",
+    "redistribution_clearance": "NOT APPROVED by this profile; native/internal redistribution closure remains outside approval"
+  },
+  {
+    "name": "uvicorn",
+    "version": "0.54.0",
+    "purl": "pkg:pypi/uvicorn@0.54.0",
+    "sha256": "505bdb0f318731d45f1f712071fc781a8981f6847a31c902c9f5e652d4f67faf",
+    "copyright_evidence": [
+      "Copyright © 2017-present, [Encode OSS Ltd](https://www.encode.io/)."
+    ],
+    "license_evidence": [
+      {
+        "path": "THIRD_PARTY_LICENSES/uvicorn-0.54.0/efe1acf3e62f-uvicorn-0.54.0.dist-info_licenses_LICENSE.md",
+        "original_path": "uvicorn-0.54.0.dist-info/licenses/LICENSE.md",
+        "sha256": "efe1acf3e62fb99c288b0ec73e5a773b7268ef4320fe757ea994214e4b63c371",
+        "size": 1526,
+        "source": "uvicorn-0.54.0-py3-none-any.whl"
+      }
+    ],
+    "reported_license": "BSD-3-Clause",
+    "bundled_in_public_artifact": false,
+    "use": "recipient downloads original publisher wheel; original notices retained; pip urllib3 updated locally",
+    "redistribution_clearance": "NOT APPROVED by this profile; native/internal redistribution closure remains outside approval"
+  }
+]

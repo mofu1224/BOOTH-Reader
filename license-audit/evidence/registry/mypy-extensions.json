@@ -1,0 +1,103 @@
+{
+  "url": "https://pypi.org/pypi/mypy-extensions/1.1.0/json",
+  "response_sha256": "1c470d3b03e21974b5ea09a572478f10864174511c3a46864b759409451d3ba8",
+  "info": {
+    "author": null,
+    "author_email": "The mypy developers <jukka.lehtosalo@iki.fi>",
+    "bugtrack_url": null,
+    "classifiers": [
+      "Development Status :: 5 - Production/Stable",
+      "Environment :: Console",
+      "Intended Audience :: Developers",
+      "Programming Language :: Python :: 3",
+      "Programming Language :: Python :: 3.10",
+      "Programming Language :: Python :: 3.11",
+      "Programming Language :: Python :: 3.12",
+      "Programming Language :: Python :: 3.13",
+      "Programming Language :: Python :: 3.8",
+      "Programming Language :: Python :: 3.9",
+      "Topic :: Software Development"
+    ],
+    "description": "Mypy Extensions\n===============\n\nThe `mypy_extensions` module defines extensions to the Python standard\nlibrary `typing` module that are supported by the mypy type checker and\nthe mypyc compiler.\n\n",
+    "description_content_type": "text/markdown",
+    "docs_url": null,
+    "download_url": null,
+    "downloads": {
+      "last_day": -1,
+      "last_month": -1,
+      "last_week": -1
+    },
+    "dynamic": null,
+    "home_page": null,
+    "keywords": null,
+    "license": null,
+    "license_expression": null,
+    "license_files": null,
+    "maintainer": null,
+    "maintainer_email": null,
+    "name": "mypy-extensions",
+    "package_url": "https://pypi.org/project/mypy-extensions/",
+    "platform": null,
+    "project_url": "https://pypi.org/project/mypy-extensions/",
+    "project_urls": {
+      "Homepage": "https://github.com/python/mypy_extensions"
+    },
+    "provides_extra": null,
+    "release_url": "https://pypi.org/project/mypy-extensions/1.1.0/",
+    "requires_dist": null,
+    "requires_python": ">=3.8",
+    "summary": "Type system extensions for programs checked with the mypy type checker.",
+    "version": "1.1.0",
+    "yanked": false,
+    "yanked_reason": null
+  },
+  "urls": [
+    {
+      "comment_text": "",
+      "core-metadata": {
+        "sha256": "2c4a44936d885f30433181ca40bbf62457351f1f6b0871b11f8789564f87477f"
+      },
+      "digests": {
+        "blake2b_256": "797b2c79738432f5c924bef5071f933bcc9efd0473bac3b4aa584a6f7c1c8df8",
+        "md5": "625a3dc37151717cabf87b13a0b152b9",
+        "sha256": "1be4cccdb0f2482337c4743e60421de3a356cd97508abadd57d47403e94f5505"
+      },
+      "downloads": -1,
+      "filename": "mypy_extensions-1.1.0-py3-none-any.whl",
+      "has_sig": false,
+      "md5_digest": "625a3dc37151717cabf87b13a0b152b9",
+      "packagetype": "bdist_wheel",
+      "python_version": "py3",
+      "requires_python": ">=3.8",
+      "size": 4963,
+      "upload_time": "2025-04-22T14:54:22",
+      "upload_time_iso_8601": "2025-04-22T14:54:22.983092Z",
+      "url": "https://files.pythonhosted.org/packages/79/7b/2c79738432f5c924bef5071f933bcc9efd0473bac3b4aa584a6f7c1c8df8/mypy_extensions-1.1.0-py3-none-any.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": "",
+      "core-metadata": false,
+      "digests": {
+        "blake2b_256": "a26e371856a3fb9d31ca8dac321cda606860fa4548858c0cc45d9d1d4ca2628b",
+        "md5": "f59bfd7f9dca73f36c8feed12f9e8eba",
+        "sha256": "52e68efc3284861e772bbcd66823fde5ae21fd2fdb51c62a211403730b916558"
+      },
+      "downloads": -1,
+      "filename": "mypy_extensions-1.1.0.tar.gz",
+      "has_sig": false,
+      "md5_digest": "f59bfd7f9dca73f36c8feed12f9e8eba",
+      "packagetype": "sdist",
+      "python_version": "source",
+      "requires_python": ">=3.8",
+      "size": 6343,
+      "upload_time": "2025-04-22T14:54:24",
+      "upload_time_iso_8601": "2025-04-22T14:54:24.164338Z",
+      "url": "https://files.pythonhosted.org/packages/a2/6e/371856a3fb9d31ca8dac321cda606860fa4548858c0cc45d9d1d4ca2628b/mypy_extensions-1.1.0.tar.gz",
+      "yanked": false,
+      "yanked_reason": null
+    }
+  ],
+  "wheel_digest_verified": true
+}

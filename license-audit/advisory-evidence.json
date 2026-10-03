@@ -1,0 +1,124 @@
+{
+  "counts": [
+    {
+      "parent": "ensurepip-25.0.1",
+      "unique_package_advisory_candidates": 14
+    },
+    {
+      "parent": "CPython-3.12.13",
+      "unique_package_advisory_candidates": 13
+    },
+    {
+      "parent": "pip-26.2.1",
+      "unique_package_advisory_candidates": 6
+    }
+  ],
+  "evidence": [
+    {
+      "id": "GHSA-2xpw-w6gg-jr37",
+      "url": "https://api.github.com/advisories/GHSA-2xpw-w6gg-jr37",
+      "path": "license-audit/evidence/advisories/GHSA-2xpw-w6gg-jr37.json",
+      "sha256": "398a75186407becef4e6505eb29c14592740d3b5302932a2a0ced548527d9dad",
+      "status": "retrieved"
+    },
+    {
+      "id": "GHSA-38jv-5279-wg99",
+      "url": "https://api.github.com/advisories/GHSA-38jv-5279-wg99",
+      "path": "license-audit/evidence/advisories/GHSA-38jv-5279-wg99.json",
+      "sha256": "34559839aedfbb9a95617494605019f826ea662a6bf069d916744b8d5dcc3f2f",
+      "status": "retrieved"
+    },
+    {
+      "id": "GHSA-5239-wwwm-4pmq",
+      "url": "https://api.github.com/advisories/GHSA-5239-wwwm-4pmq",
+      "path": "license-audit/evidence/advisories/GHSA-5239-wwwm-4pmq.json",
+      "sha256": "870b85aa2d22ccb6d4fec43603d24fb89c51bc14b48dfb3d0e9ea045945cc757",
+      "status": "retrieved"
+    },
+    {
+      "id": "GHSA-5rjg-fvgr-3xxf",
+      "url": "https://api.github.com/advisories/GHSA-5rjg-fvgr-3xxf",
+      "path": "license-audit/evidence/advisories/GHSA-5rjg-fvgr-3xxf.json",
+      "sha256": "77df0c24f1aee6e97482412d9e36d89545d681880c9a479705e653a882a9744f",
+      "status": "retrieved"
+    },
+    {
+      "id": "GHSA-65pc-fj4g-8rjx",
+      "url": "https://api.github.com/advisories/GHSA-65pc-fj4g-8rjx",
+      "path": "license-audit/evidence/advisories/GHSA-65pc-fj4g-8rjx.json",
+      "sha256": "bb4b35ff292f0fe7e80d88ae21c041573a5e236c97d307d376332a2e56ae1847",
+      "status": "retrieved"
+    },
+    {
+      "id": "GHSA-6v7p-g79w-8964",
+      "url": "https://api.github.com/advisories/GHSA-6v7p-g79w-8964",
+      "path": "license-audit/evidence/advisories/GHSA-6v7p-g79w-8964.json",
+      "sha256": "fb3a496cc4197684111c7708fbd988461c60505a71d88900f6c2cb7200aafa83",
+      "status": "retrieved"
+    },
+    {
+      "id": "GHSA-8988-9cw3-xx77",
+      "url": "https://api.github.com/advisories/GHSA-8988-9cw3-xx77",
+      "path": "license-audit/evidence/advisories/GHSA-8988-9cw3-xx77.json",
+      "sha256": "752ec8b1dfc9ab8e1cb735287a1717590970b25f7993f514e52fb3d289869df8",
+      "status": "retrieved"
+    },
+    {
+      "id": "GHSA-9hjg-9r4m-mvj7",
+      "url": "https://api.github.com/advisories/GHSA-9hjg-9r4m-mvj7",
+      "path": "license-audit/evidence/advisories/GHSA-9hjg-9r4m-mvj7.json",
+      "sha256": "1d667e1335d29a210af056492ad0096777548a017cad638bc44c57ab6ed064dc",
+      "status": "retrieved"
+    },
+    {
+      "id": "GHSA-gc5v-m9x4-r6x2",
+      "url": "https://api.github.com/advisories/GHSA-gc5v-m9x4-r6x2",
+      "path": "license-audit/evidence/advisories/GHSA-gc5v-m9x4-r6x2.json",
+      "sha256": "73c83238b13788602826e526ee5cd6b89002b29679d237585ad18480b59c25d9",
+      "status": "retrieved"
+    },
+    {
+      "id": "GHSA-gh4c-6fx4-qh6g",
+      "url": "https://api.github.com/advisories/GHSA-gh4c-6fx4-qh6g",
+      "path": "license-audit/evidence/advisories/GHSA-gh4c-6fx4-qh6g.json",
+      "sha256": "617390bed75a602d564abb72641d79c3e322890e3533623e6663c59b32c9c7a5",
+      "status": "retrieved"
+    },
+    {
+      "id": "GHSA-gm62-xv2j-4w53",
+      "url": "https://api.github.com/advisories/GHSA-gm62-xv2j-4w53",
+      "path": "license-audit/evidence/advisories/GHSA-gm62-xv2j-4w53.json",
+      "sha256": "0fa5ae136eec85694e069c732bca7a9b0982ec539a3ed9580335dcd3c4947240",
+      "status": "retrieved"
+    },
+    {
+      "id": "GHSA-h35f-9h28-mq5c",
+      "url": "https://api.github.com/advisories/GHSA-h35f-9h28-mq5c",
+      "path": "license-audit/evidence/advisories/GHSA-h35f-9h28-mq5c.json",
+      "sha256": "2f2cf8b7de4c5dda935b2ce4575a850399d9bef137382acf85d09a8b05cd4bc0",
+      "status": "retrieved"
+    },
+    {
+      "id": "GHSA-pq67-6m6q-mj2v",
+      "url": "https://api.github.com/advisories/GHSA-pq67-6m6q-mj2v",
+      "path": "license-audit/evidence/advisories/GHSA-pq67-6m6q-mj2v.json",
+      "sha256": "f224491a59b5178637101a05151a5513cd369b164de55c0e0cf2f280bbf3aa19",
+      "status": "retrieved"
+    },
+    {
+      "id": "GHSA-qccp-gfcp-xxvc",
+      "url": "https://api.github.com/advisories/GHSA-qccp-gfcp-xxvc",
+      "path": "license-audit/evidence/advisories/GHSA-qccp-gfcp-xxvc.json",
+      "sha256": "198a96bd4d3284e6fa4a46dffb02b3d099c21cbc1fca86f82381a249d68891d3",
+      "status": "retrieved"
+    },
+    {
+      "id": "GHSA-vxq7-64xx-v4gw",
+      "url": "https://api.github.com/advisories/GHSA-vxq7-64xx-v4gw",
+      "path": "license-audit/evidence/advisories/GHSA-vxq7-64xx-v4gw.json",
+      "sha256": "fb5cf61a648cfe859c4590cd2ca6eb10c047cb7a1d88d120e62ee2d87273f97d",
+      "status": "retrieved"
+    }
+  ],
+  "final_status": "NOT VERIFIED"
+}

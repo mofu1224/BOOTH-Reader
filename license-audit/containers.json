@@ -1,0 +1,112 @@
+[
+  {
+    "name": "python",
+    "path": ".cache/downloads/cpython-3.12.13-booth-runtime.tar.gz",
+    "sha256": "c613f06e158070b0db218021806af55ffb4c781be2141db6967a4afbb666d446",
+    "size": 39251107,
+    "parts": [
+      {
+        "file": "python-c613f06e158070b0-000.chunk",
+        "sha256": "c613f06e158070b0db218021806af55ffb4c781be2141db6967a4afbb666d446",
+        "size": 39251107
+      }
+    ]
+  },
+  {
+    "name": "sqlite",
+    "path": ".cache/downloads/sqlite-dll-win-x64-3530400.zip",
+    "sha256": "8b959b7eff4a81f6a62fc3468f9273e5cfe78d4a927e62215aed231b654fb104",
+    "size": 1370147,
+    "parts": [
+      {
+        "file": "sqlite-8b959b7eff4a81f6-000.chunk",
+        "sha256": "8b959b7eff4a81f6a62fc3468f9273e5cfe78d4a927e62215aed231b654fb104",
+        "size": 1370147
+      }
+    ]
+  },
+  {
+    "name": "wheels",
+    "path": ".cache/vendor/wheels.zip",
+    "sha256": "b24ecc5fba13bb3c35957c93580e3c2b9e4f012eb0b48618bef7085baee875b8",
+    "size": 72742721,
+    "parts": [
+      {
+        "file": "wheels-b24ecc5fba13bb3c-000.chunk",
+        "sha256": "0df5fcacd6a0a175c71efd53cfdcdee18514bb89c85055cdb704d156a1a13f84",
+        "size": 41943040
+      },
+      {
+        "file": "wheels-b24ecc5fba13bb3c-001.chunk",
+        "sha256": "aeefce9edcd57d225d974aba80d60e93bb75f213d3c9623d3e06c59cd652c72d",
+        "size": 30799681
+      }
+    ]
+  },
+  {
+    "name": "browser",
+    "path": ".cache/downloads/webview2-154.0.4258.53.zip",
+    "sha256": "b112ba4167ce82ffe41676e39010b2cf1599d9a143e438db6aa774bb4147bee1",
+    "size": 338844222,
+    "parts": [
+      {
+        "file": "browser-b112ba4167ce82ff-000.chunk",
+        "sha256": "ecf62c2693667c84b793235605ced53d53619221646d858313dd5d1a48067108",
+        "size": 41943040
+      },
+      {
+        "file": "browser-b112ba4167ce82ff-001.chunk",
+        "sha256": "bfa53d1e79b2afdf323986bf386cf30654044ea9ca49f9f2e4f8a7c28c183388",
+        "size": 41943040
+      },
+      {
+        "file": "browser-b112ba4167ce82ff-002.chunk",
+        "sha256": "8acdcfebb30e627bad904bb34aa060f1d9face6d1407f526beafbc53330ec9a6",
+        "size": 41943040
+      },
+      {
+        "file": "browser-b112ba4167ce82ff-003.chunk",
+        "sha256": "156406a6273f522ac1aa581280ac194a0ac2600e411489dd601f83e3efdb7931",
+        "size": 41943040
+      },
+      {
+        "file": "browser-b112ba4167ce82ff-004.chunk",
+        "sha256": "cf1a791c2b99aeac7b3c514a86b5871d5537e9f8ca759ae9c4d091b6958518d3",
+        "size": 41943040
+      },
+      {
+        "file": "browser-b112ba4167ce82ff-005.chunk",
+        "sha256": "6b116f8a768ef45736758b50cb5f405d7e01a496b375568d936630320fc83549",
+        "size": 41943040
+      },
+      {
+        "file": "browser-b112ba4167ce82ff-006.chunk",
+        "sha256": "0a15efddfdd0aaf9744c297e09cf9aeabe99f616c32ec4d09054bcbf8a52a34c",
+        "size": 41943040
+      },
+      {
+        "file": "browser-b112ba4167ce82ff-007.chunk",
+        "sha256": "292977617ed4eaf3737924ef1b4875ce0679e1683a94cddd71591b7d5327092f",
+        "size": 41943040
+      },
+      {
+        "file": "browser-b112ba4167ce82ff-008.chunk",
+        "sha256": "140c14cc0f1ec2e7976e4021092bfb4995e25c4ae77cabb900e5cc6cbc659189",
+        "size": 3299902
+      }
+    ]
+  },
+  {
+    "name": "browser-receipt",
+    "path": ".cache/downloads/webview2-154.0.4258.53.json",
+    "sha256": "fd6533dd1d0220a0f36e86048ef3cd7b66ae228891233895eb7ed70eabfa4010",
+    "size": 1144,
+    "parts": [
+      {
+        "file": "browser-receipt-fd6533dd1d0220a0-000.chunk",
+        "sha256": "fd6533dd1d0220a0f36e86048ef3cd7b66ae228891233895eb7ed70eabfa4010",
+        "size": 1144
+      }
+    ]
+  }
+]

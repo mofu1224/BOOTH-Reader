@@ -1,0 +1,134 @@
+{
+  "original_browser": {
+    "destination": ".cache/downloads/browsers-1.63.0.zip",
+    "sha256": "47af6dbb37cab8a21636f54cb7072c258190fc5bd755e0e4e15965e4c093f83e",
+    "size": 358069170,
+    "parts": [
+      {
+        "file": "browser-47af6dbb37cab8a2-000.chunk",
+        "sha256": "2e4b2f264cd55e4405e88e76dbf3c61098a33f9d9defbe024e55765ee3c49fb0",
+        "size": 41943040
+      },
+      {
+        "file": "browser-47af6dbb37cab8a2-001.chunk",
+        "sha256": "1662796381f173f731aab1617bcc43c7c03d9e55825c622c59ca5684b90cc80a",
+        "size": 41943040
+      },
+      {
+        "file": "browser-47af6dbb37cab8a2-002.chunk",
+        "sha256": "5d613b8391dd5a0e44beba9c85d405e32e605ece39b22e1e0a291b5ec5b3813e",
+        "size": 41943040
+      },
+      {
+        "file": "browser-47af6dbb37cab8a2-003.chunk",
+        "sha256": "0ba9568e2ef8058760ef28271de7d34baa72e6074e9f462f5c6e9bbff3bc0176",
+        "size": 41943040
+      },
+      {
+        "file": "browser-47af6dbb37cab8a2-004.chunk",
+        "sha256": "9263acf1cd42a32a3e3ead78574cd14e0256aa067efdf889d103f5b4724213e7",
+        "size": 41943040
+      },
+      {
+        "file": "browser-47af6dbb37cab8a2-005.chunk",
+        "sha256": "869f1e148fe4a333b133d7abb1fd138797483c5ef444993f4505444fa22aebfd",
+        "size": 41943040
+      },
+      {
+        "file": "browser-47af6dbb37cab8a2-006.chunk",
+        "sha256": "ec52b31cb34112d97ac4ca94d86b57407d6fb930d8920485ac6a15ab23b03154",
+        "size": 41943040
+      },
+      {
+        "file": "browser-47af6dbb37cab8a2-007.chunk",
+        "sha256": "1cee7c59ed9b17c97c3e61239ea57f4a2f427c7797e4dea427fc4c56c526aa47",
+        "size": 41943040
+      },
+      {
+        "file": "browser-47af6dbb37cab8a2-008.chunk",
+        "sha256": "b90643b57a8ce6be70d797c5d3187f87359578ba89ed2a615cf0e6283acf73a8",
+        "size": 22524850
+      }
+    ]
+  },
+  "original_receipt": {
+    "destination": ".cache/downloads/browsers-1.63.0.json",
+    "sha256": "8d4d181b1a7068262eb4f267bb66c8304a68a024ced230f0fb9180a5f3cccb1f",
+    "size": 204,
+    "parts": [
+      {
+        "file": "browser-receipt-8d4d181b1a706826-000.chunk",
+        "sha256": "8d4d181b1a7068262eb4f267bb66c8304a68a024ced230f0fb9180a5f3cccb1f",
+        "size": 204
+      }
+    ]
+  },
+  "removed": [
+    {
+      "path": "ffmpeg-1011/COPYING.LGPLv2.1",
+      "size": 26526
+    },
+    {
+      "path": "ffmpeg-1011/DEPENDENCIES_VALIDATED",
+      "size": 0
+    },
+    {
+      "path": "ffmpeg-1011/ffmpeg-win64.exe",
+      "size": 3490816
+    },
+    {
+      "path": "ffmpeg-1011/INSTALLATION_COMPLETE",
+      "size": 0
+    }
+  ],
+  "retained_entries": 606,
+  "retained_bytes": "unchanged, verified during final archive audit",
+  "distribution_policy": "original chunks retained locally/history, excluded from source and launcher candidates",
+  "replacement_browser": {
+    "destination": ".cache/downloads/browsers-1.63.0-no-video.zip",
+    "sha256": "b67ea3d65a61358b7a1408562cc30f5987f9f155b948689ba0eb71aa4c398cf9",
+    "size": 325483210,
+    "parts": [
+      {
+        "file": "browser-b67ea3d65a61358b-000.chunk",
+        "sha256": "58c956bff5cdebc43e3ff198243b9283f9de0f129fa1da1fb175d30a00e3efbe",
+        "size": 41943040
+      },
+      {
+        "file": "browser-b67ea3d65a61358b-001.chunk",
+        "sha256": "9be5adedbeaab2ced06277e1604fecce22b87f5f831754c8b402b8017b74611d",
+        "size": 41943040
+      },
+      {
+        "file": "browser-b67ea3d65a61358b-002.chunk",
+        "sha256": "9752aa890548afa064b89c23ae6ebf8ea443116533b4d0732a871e9384ec7abc",
+        "size": 41943040
+      },
+      {
+        "file": "browser-b67ea3d65a61358b-003.chunk",
+        "sha256": "979a2e84109865c47a2e02ba646f4d89d5df2676f2977cce346e64f1308a840a",
+        "size": 41943040
+      },
+      {
+        "file": "browser-b67ea3d65a61358b-004.chunk",
+        "sha256": "5879383659615fc0b308bdacdee2d66a3a497c52b0e455ab39cb7430ad3cdd02",
+        "size": 41943040
+      },
+      {
+        "file": "browser-b67ea3d65a61358b-005.chunk",
+        "sha256": "59dcecebcdc703ce6dfb7cb60770e937257d2f7fdc9ef9702a4dee1632ac30c6",
+        "size": 41943040
+      },
+      {
+        "file": "browser-b67ea3d65a61358b-006.chunk",
+        "sha256": "d7a7112aeedcf829518317c0b1e7970ef9d40a51e3a288880f1a0abaf3c9aeb1",
+        "size": 41943040
+      },
+      {
+        "file": "browser-b67ea3d65a61358b-007.chunk",
+        "sha256": "13f7d0fbc005252dca469de1917c028d7b4169fa22e7aff3b1766b63f17773b5",
+        "size": 31881930
+      }
+    ]
+  }
+}

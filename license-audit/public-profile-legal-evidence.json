@@ -1,0 +1,37 @@
+[
+  {
+    "name": "opencode-terms-20260815",
+    "url": "https://opencode.ai/legal/terms-of-service",
+    "path": "license-audit/evidence/legal/opencode-terms-20260815.html",
+    "sha256": "fa16763675bd84186d13d7d760b42ff96d054382cd8dccfd87679c85c8259f93",
+    "status": "retrieved"
+  },
+  {
+    "name": "opencode-muse-spark-provider",
+    "url": "https://opencode.ai/docs/zen/",
+    "path": "license-audit/evidence/legal/opencode-muse-spark-provider.html",
+    "sha256": "84a7e4059af111a892596a4d3f2113cc05e7ade3311fbb0835cd3feb220f4175",
+    "status": "retrieved"
+  },
+  {
+    "name": "google-terms-20260730",
+    "url": "https://policies.google.com/terms",
+    "path": "license-audit/evidence/legal/google-terms-20260730.html",
+    "sha256": "1741ede3f4dd5ff96a223f250bcededef1162fb6dfb0e5048647a52e3ff25831",
+    "status": "retrieved"
+  },
+  {
+    "name": "meta-api-models",
+    "url": "https://dev.meta.ai/docs/overview",
+    "path": "license-audit/evidence/legal/meta-api-models.html",
+    "sha256": "37937ab0fe7a2518f9e1e5dd8b3f06e98834fb11cc0e1ba020f220f5734f6f47",
+    "status": "retrieved"
+  },
+  {
+    "name": "openai-services-agreement",
+    "url": "https://openai.com/policies/services-agreement/",
+    "path": "license-audit/evidence/legal/openai-services-agreement.html",
+    "sha256": "6c0790219e19009341c9171b0ceaa53b7dac1109675920a67919920fe4b96091",
+    "status": "retrieved"
+  }
+]

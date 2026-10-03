@@ -1,0 +1,6 @@
+0028a5fd70370087f7da49f6bda9213b9e659b61 2026-10-01T17:43:12+09:00 mofu1224 test: verify portable startup from committed clones
+88af93813d97e017dababcb7d1605d24f167ca30 2026-10-01T17:39:22+09:00 mofu1224 feat: make repository clone self-contained and portable
+38a6c29b26217e47c93734700ef1709916af3f77 2026-09-29T17:49:34+09:00 mofu1224 fix: a missing component was reported as an authentication failure
+377728ad3ded1179f3162d00d84724c0b8932dee 2026-09-29T16:32:47+09:00 mofu1224 release: BOOTH-Reader 1.0.0
+671b9339f8af46bccb8227a3d5eed8474af62376 2026-09-29T16:21:37+09:00 mofu1224 feat!: harden, fix silent data corruption, and add persistent CLI worker
+240edc940dd505d69acba136a04246537c7ed4bb 2026-09-29T15:53:51+09:00 mofu1224 chore: baseline snapshot of BOOTH-Reader 0.1.0 before hardening

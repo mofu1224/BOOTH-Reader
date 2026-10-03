@@ -1,0 +1,148 @@
+{
+  "full_archive": {
+    "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20260325/cpython-3.12.13%2B20260325-x86_64-pc-windows-msvc-pgo-full.tar.zst",
+    "sha256": "950a6128916f140fe8d18366d3fe9fd0e258ed95c49c9afc315fb7e98686d32b",
+    "metadata": "license-audit/evidence/pbs-python-full.json",
+    "status": "retrieved",
+    "install_only_byte_correspondence": "NOT VERIFIED"
+  },
+  "matched_files": 3371,
+  "mismatched": [],
+  "notices": [
+    {
+      "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/8f2d533ab348-LICENSE.bdb.txt",
+      "original_path": "LICENSE.bdb.txt",
+      "sha256": "8f2d533ab34899499d5b07f209854b101b17dba2c69f3251860aecf3e4005faa",
+      "size": 7419,
+      "source": "https://github.com/astral-sh/python-build-standalone/releases/download/20260325/cpython-3.12.13%2B20260325-x86_64-pc-windows-msvc-pgo-full.tar.zst"
+    },
+    {
+      "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/bd5628cc76fb-LICENSE.bzip2.txt",
+      "original_path": "LICENSE.bzip2.txt",
+      "sha256": "bd5628cc76fb0ebf9c657d1dd4d1a240a1a7b216c31663e7bbf1131c0b70a910",
+      "size": 1780,
+      "source": "https://github.com/astral-sh/python-build-standalone/releases/download/20260325/cpython-3.12.13%2B20260325-x86_64-pc-windows-msvc-pgo-full.tar.zst"
+    },
+    {
+      "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/8fe98bf98229-LICENSE.cpython.txt",
+      "original_path": "LICENSE.cpython.txt",
+      "sha256": "8fe98bf9822926d854f56ffd8d97877d8b942617aa44eb7ea77fd99e22f2537e",
+      "size": 36935,
+      "source": "https://github.com/astral-sh/python-build-standalone/releases/download/20260325/cpython-3.12.13%2B20260325-x86_64-pc-windows-msvc-pgo-full.tar.zst"
+    },
+    {
+      "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/8a9cfe4b5924-LICENSE.expat.txt",
+      "original_path": "LICENSE.expat.txt",
+      "sha256": "8a9cfe4b5924f4b25881aa0c9f5e4561c5f31065d0c4a13cdcdbcf917edf39aa",
+      "size": 1165,
+      "source": "https://github.com/astral-sh/python-build-standalone/releases/download/20260325/cpython-3.12.13%2B20260325-x86_64-pc-windows-msvc-pgo-full.tar.zst"
+    },
+    {
+      "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/d9932ccdd42e-LICENSE.libedit.txt",
+      "original_path": "LICENSE.libedit.txt",
+      "sha256": "d9932ccdd42eccf6cdded7bcb35b088e64cfc7c24d355af2cc0d02edb6b637d3",
+      "size": 1643,
+      "source": "https://github.com/astral-sh/python-build-standalone/releases/download/20260325/cpython-3.12.13%2B20260325-x86_64-pc-windows-msvc-pgo-full.tar.zst"
+    },
+    {
+      "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/9afb8970cd29-LICENSE.libffi.txt",
+      "original_path": "LICENSE.libffi.txt",
+      "sha256": "9afb8970cd29fc1031fa647278e4bef613399e2e3468a1e3a397f4d158c6101c",
+      "size": 1153,
+      "source": "https://github.com/astral-sh/python-build-standalone/releases/download/20260325/cpython-3.12.13%2B20260325-x86_64-pc-windows-msvc-pgo-full.tar.zst"
+    },
+    {
+      "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/d87d218dd908-LICENSE.liblzma.txt",
+      "original_path": "LICENSE.liblzma.txt",
+      "sha256": "d87d218dd908b3243ec4cbc72af400e5b7437513ea9d9229291d0812b8464fec",
+      "size": 673,
+      "source": "https://github.com/astral-sh/python-build-standalone/releases/download/20260325/cpython-3.12.13%2B20260325-x86_64-pc-windows-msvc-pgo-full.tar.zst"
+    },
+    {
+      "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/cbccaa3efe07-LICENSE.libuuid.txt",
+      "original_path": "LICENSE.libuuid.txt",
+      "sha256": "cbccaa3efe07a9a602751375085be572d4410a250b996716fbe8c5255c7ec6f2",
+      "size": 1459,
+      "source": "https://github.com/astral-sh/python-build-standalone/releases/download/20260325/cpython-3.12.13%2B20260325-x86_64-pc-windows-msvc-pgo-full.tar.zst"
+    },
+    {
+      "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/f353accfe297-LICENSE.libX11.txt",
+      "original_path": "LICENSE.libX11.txt",
+      "sha256": "f353accfe2976df31ea297a77d1d454bd51ef6be8c3df39bd6aca95901579357",
+      "size": 47960,
+      "source": "https://github.com/astral-sh/python-build-standalone/releases/download/20260325/cpython-3.12.13%2B20260325-x86_64-pc-windows-msvc-pgo-full.tar.zst"
+    },
+    {
+      "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/cec808cd2163-LICENSE.libXau.txt",
+      "original_path": "LICENSE.libXau.txt",
+      "sha256": "cec808cd2163fccdc8de4a91d526490777afbaeea060e1168c40a804694b7444",
+      "size": 1169,
+      "source": "https://github.com/astral-sh/python-build-standalone/releases/download/20260325/cpython-3.12.13%2B20260325-x86_64-pc-windows-msvc-pgo-full.tar.zst"
+    },
+    {
+      "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/29a9539190e6-LICENSE.libxcb.txt",
+      "original_path": "LICENSE.libxcb.txt",
+      "sha256": "29a9539190e6de1af5fd06a9139c7103137cd1f9290b08c7b11bce89c01c14d2",
+      "size": 1367,
+      "source": "https://github.com/astral-sh/python-build-standalone/releases/download/20260325/cpython-3.12.13%2B20260325-x86_64-pc-windows-msvc-pgo-full.tar.zst"
+    },
+    {
+      "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/f094277cd46e-LICENSE.mpdecimal.txt",
+      "original_path": "LICENSE.mpdecimal.txt",
+      "sha256": "f094277cd46e1f6e4d87916cc4b51e22f613d45eb81f48231c3cb7caf8fc8a6a",
+      "size": 1308,
+      "source": "https://github.com/astral-sh/python-build-standalone/releases/download/20260325/cpython-3.12.13%2B20260325-x86_64-pc-windows-msvc-pgo-full.tar.zst"
+    },
+    {
+      "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/4f571cad3ea6-LICENSE.ncurses.txt",
+      "original_path": "LICENSE.ncurses.txt",
+      "sha256": "4f571cad3ea6c888bf0a7092e5b215dddb3142e9e3f1857fd5fac6cf13d345d7",
+      "size": 1476,
+      "source": "https://github.com/astral-sh/python-build-standalone/releases/download/20260325/cpython-3.12.13%2B20260325-x86_64-pc-windows-msvc-pgo-full.tar.zst"
+    },
+    {
+      "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/ad89e3fed746-LICENSE.openssl-1.1.txt",
+      "original_path": "LICENSE.openssl-1.1.txt",
+      "sha256": "ad89e3fed746413af1d34d5353978ee1520cedd361c853f8022e7bb210ac6b31",
+      "size": 6244,
+      "source": "https://github.com/astral-sh/python-build-standalone/releases/download/20260325/cpython-3.12.13%2B20260325-x86_64-pc-windows-msvc-pgo-full.tar.zst"
+    },
+    {
+      "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/ed72ce2b51ee-LICENSE.openssl-3.txt",
+      "original_path": "LICENSE.openssl-3.txt",
+      "sha256": "ed72ce2b51ee58f117e5a021e2e04af158857f40269fbc03491f0b2a99dbcc96",
+      "size": 10352,
+      "source": "https://github.com/astral-sh/python-build-standalone/releases/download/20260325/cpython-3.12.13%2B20260325-x86_64-pc-windows-msvc-pgo-full.tar.zst"
+    },
+    {
+      "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/d8eb9aba7ef6-LICENSE.sqlite.txt",
+      "original_path": "LICENSE.sqlite.txt",
+      "sha256": "d8eb9aba7ef6b5ed06cb3ec19a7242316af2e5933c638eb67fb781c13884e01d",
+      "size": 1504,
+      "source": "https://github.com/astral-sh/python-build-standalone/releases/download/20260325/cpython-3.12.13%2B20260325-x86_64-pc-windows-msvc-pgo-full.tar.zst"
+    },
+    {
+      "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/41613eabfc08-LICENSE.tcl.txt",
+      "original_path": "LICENSE.tcl.txt",
+      "sha256": "41613eabfc08921a7da9c4bfd7f3ce5d5406f55214b253d89f392ed86eebeb8f",
+      "size": 2295,
+      "source": "https://github.com/astral-sh/python-build-standalone/releases/download/20260325/cpython-3.12.13%2B20260325-x86_64-pc-windows-msvc-pgo-full.tar.zst"
+    },
+    {
+      "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/8cdff3addb9e-LICENSE.tix.txt",
+      "original_path": "LICENSE.tix.txt",
+      "sha256": "8cdff3addb9e9eb108c78e2cf5e05f26b216c098304945733bbec382b2eaef66",
+      "size": 2880,
+      "source": "https://github.com/astral-sh/python-build-standalone/releases/download/20260325/cpython-3.12.13%2B20260325-x86_64-pc-windows-msvc-pgo-full.tar.zst"
+    },
+    {
+      "path": "THIRD_PARTY_LICENSES/CPython-3.12.13/365e36720db3-LICENSE.zlib.txt",
+      "original_path": "LICENSE.zlib.txt",
+      "sha256": "365e36720db366054863235aea5d6f440142ab968834bfaf81fa9d187c99b9b8",
+      "size": 1016,
+      "source": "https://github.com/astral-sh/python-build-standalone/releases/download/20260325/cpython-3.12.13%2B20260325-x86_64-pc-windows-msvc-pgo-full.tar.zst"
+    }
+  ],
+  "status": "PASS",
+  "scope": "exact install_only file bytes vs full archive; does not establish CRT contract rights"
+}

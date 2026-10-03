@@ -1,0 +1,126 @@
+{
+  "url": "https://pypi.org/pypi/urllib3/2.8.0/json",
+  "response_sha256": "5315e7401db3cacccd0c2ce5daf81f752a9cc3614b18c37f2b79930b7159ce2f",
+  "info": {
+    "author": null,
+    "author_email": "Andrey Petrov <andrey.petrov@shazow.net>",
+    "bugtrack_url": null,
+    "classifiers": [
+      "Environment :: Web Environment",
+      "Intended Audience :: Developers",
+      "Operating System :: OS Independent",
+      "Programming Language :: Python",
+      "Programming Language :: Python :: 3",
+      "Programming Language :: Python :: 3 :: Only",
+      "Programming Language :: Python :: 3.10",
+      "Programming Language :: Python :: 3.11",
+      "Programming Language :: Python :: 3.12",
+      "Programming Language :: Python :: 3.13",
+      "Programming Language :: Python :: 3.14",
+      "Programming Language :: Python :: 3.15",
+      "Programming Language :: Python :: Free Threading :: 2 - Beta",
+      "Programming Language :: Python :: Implementation :: CPython",
+      "Programming Language :: Python :: Implementation :: PyPy",
+      "Topic :: Internet :: WWW/HTTP",
+      "Topic :: Software Development :: Libraries"
+    ],
+    "description": "<h1 align=\"center\">\n\n![urllib3](https://github.com/urllib3/urllib3/raw/main/docs/_static/banner_github.svg)\n\n</h1>\n\n<p align=\"center\">\n  <a href=\"https://pypi.org/project/urllib3\"><img alt=\"PyPI Version\" src=\"https://img.shields.io/pypi/v/urllib3.svg?maxAge=86400\" /></a>\n  <a href=\"https://pypi.org/project/urllib3\"><img alt=\"Python Versions\" src=\"https://img.shields.io/pypi/pyversions/urllib3.svg?maxAge=86400\" /></a>\n  <a href=\"https://discord.gg/urllib3\"><img alt=\"Join our Discord\" src=\"https://img.shields.io/discord/756342717725933608?color=%237289da&label=discord\" /></a>\n  <a href=\"https://github.com/urllib3/urllib3/actions?query=workflow%3ACI\"><img alt=\"Coverage Status\" src=\"https://img.shields.io/badge/coverage-100%25-success\" /></a>\n  <a href=\"https://github.com/urllib3/urllib3/actions/workflows/ci.yml?query=branch%3Amain\"><img alt=\"Build Status on GitHub\" src=\"https://github.com/urllib3/urllib3/actions/workflows/ci.yml/badge.svg?branch:main&workflow:CI\" /></a>\n  <a href=\"https://urllib3.readthedocs.io\"><img alt=\"Documentation Status\" src=\"https://readthedocs.org/projects/urllib3/badge/?version=latest\" /></a><br>\n  <a href=\"https://deps.dev/pypi/urllib3\"><img alt=\"OpenSSF Scorecard\" src=\"https://api.securityscorecards.dev/projects/github.com/urllib3/urllib3/badge\" /></a>\n  <a href=\"https://slsa.dev\"><img alt=\"SLSA 3\" src=\"https://slsa.dev/images/gh-badge-level3.svg\" /></a>\n  <a href=\"https://bestpractices.coreinfrastructure.org/projects/6227\"><img alt=\"CII Best Practices\" src=\"https://bestpractices.coreinfrastructure.org/projects/6227/badge\" /></a>\n</p>\n\nurllib3 is a powerful, *user-friendly* HTTP client for Python.\nurllib3 brings many critical features that are missing from the Python\nstandard libraries:\n\n- Thread safety.\n- Connection pooling.\n- Client-side SSL/TLS verification.\n- File uploads with multipart encoding.\n- Helpers for retrying requests and dealing with HTTP redirects.\n- Support for gzip, deflate, brotli, and zstd encoding.\n- Proxy support for HTTP and SOCKS.\n- 100% test coverage.\n\n... and many more features, but most importantly: Our maintainers have a 15+\nyear track record of maintaining urllib3 with the highest code standards and\nattention to security and safety.\n\n[Much of the Python ecosystem already uses urllib3](https://urllib3.readthedocs.io/en/stable/#who-uses)\nand you should too.\n\n\n## Installing\n\nurllib3 can be installed with [pip](https://pip.pypa.io):\n\n```bash\n$ python -m pip install urllib3\n```\n\nAlternatively, you can grab the latest source code from [GitHub](https://github.com/urllib3/urllib3):\n\n```bash\n$ git clone https://github.com/urllib3/urllib3.git\n$ cd urllib3\n$ pip install .\n```\n\n## Getting Started\n\nurllib3 is easy to use:\n\n```python3\n>>> import urllib3\n>>> resp = urllib3.request(\"GET\", \"http://httpbin.org/robots.txt\")\n>>> resp.status\n200\n>>> resp.data\nb\"User-agent: *\\nDisallow: /deny\\n\"\n```\n\nurllib3 has usage and reference documentation at [urllib3.readthedocs.io](https://urllib3.readthedocs.io).\n\n\n## Community\n\nurllib3 has a [community Discord channel](https://discord.gg/urllib3) for asking questions and\ncollaborating with other contributors. Drop by and say hello 👋\n\n\n## Contributing\n\nurllib3 welcomes contributions. Please read our\n[contributing documentation](https://urllib3.readthedocs.io/en/latest/contributing.html)\nbefore starting work.\n\nCheck for existing pull requests addressing the same issue, and share feedback\nand suggestions in the existing pull request and issue. Duplicate pull\nrequests, including alternative solutions, will be rejected without review\nunless a maintainer has approved opening an alternative pull request in\nadvance.\n\n\n## Security Disclosures\n\nTo report a security vulnerability, please use the\n[Tidelift security contact](https://tidelift.com/security).\nTidelift will coordinate the fix and disclosure with maintainers.\n\nSee the repository\n[Security Policy](https://urllib3.readthedocs.io/en/latest/security.html)\nfor more details.\n\n\n## Maintainers\n\nMeet our maintainers since 2008:\n\n- Current Lead: [@illia-v](https://github.com/illia-v) (Illia Volochii)\n- [@sethmlarson](https://github.com/sethmlarson) (Seth M. Larson)\n- [@pquentin](https://github.com/pquentin) (Quentin Pradet)\n- [@theacodes](https://github.com/theacodes) (Thea Flowers)\n- [@haikuginger](https://github.com/haikuginger) (Jess Shapiro)\n- [@lukasa](https://github.com/lukasa) (Cory Benfield)\n- [@sigmavirus24](https://github.com/sigmavirus24) (Ian Stapleton Cordasco)\n- [@shazow](https://github.com/shazow) (Andrey Petrov)\n\n👋\n\n\n## Sponsorship\n\nIf your company benefits from this library, please consider [sponsoring its\ndevelopment](https://urllib3.readthedocs.io/en/latest/sponsors.html).\n\n\n## For Enterprise\n\nProfessional support for urllib3 is available as part of the [Tidelift\nSubscription][1]. Tidelift gives software development teams a single source for\npurchasing and maintaining their software, with professional grade assurances\nfrom the experts who know it best, while seamlessly integrating with existing\ntools.\n\n[1]: https://tidelift.com/subscription/pkg/pypi-urllib3?utm_source=pypi-urllib3&utm_medium=referral&utm_campaign=readme\n",
+    "description_content_type": "text/markdown",
+    "docs_url": null,
+    "download_url": null,
+    "downloads": {
+      "last_day": -1,
+      "last_month": -1,
+      "last_week": -1
+    },
+    "dynamic": null,
+    "home_page": null,
+    "keywords": "filepost, http, httplib, https, pooling, ssl, threadsafe, urllib",
+    "license": null,
+    "license_expression": "MIT",
+    "license_files": [
+      "LICENSE.txt"
+    ],
+    "maintainer": null,
+    "maintainer_email": "Seth Michael Larson <sethmichaellarson@gmail.com>, Quentin Pradet <quentin@pradet.me>, Illia Volochii <illia.volochii@gmail.com>",
+    "name": "urllib3",
+    "package_url": "https://pypi.org/project/urllib3/",
+    "platform": null,
+    "project_url": "https://pypi.org/project/urllib3/",
+    "project_urls": {
+      "Changelog": "https://github.com/urllib3/urllib3/blob/main/CHANGES.rst",
+      "Code": "https://github.com/urllib3/urllib3",
+      "Documentation": "https://urllib3.readthedocs.io",
+      "Issue tracker": "https://github.com/urllib3/urllib3/issues",
+      "Security policy": "https://urllib3.readthedocs.io/en/latest/security.html"
+    },
+    "provides_extra": [
+      "brotli",
+      "h2",
+      "socks",
+      "zstd"
+    ],
+    "release_url": "https://pypi.org/project/urllib3/2.8.0/",
+    "requires_dist": [
+      "brotli>=1.2.0; platform_python_implementation == \"CPython\" and extra == \"brotli\"",
+      "brotlicffi>=1.2.0.0; platform_python_implementation != \"CPython\" and extra == \"brotli\"",
+      "h2<5,>=4; extra == \"h2\"",
+      "pysocks!=1.5.7,<2.0,>=1.5.6; extra == \"socks\"",
+      "backports-zstd>=1.0.0; python_version < \"3.14\" and extra == \"zstd\""
+    ],
+    "requires_python": ">=3.10",
+    "summary": "HTTP library with thread-safe connection pooling, file post, and more.",
+    "version": "2.8.0",
+    "yanked": false,
+    "yanked_reason": null
+  },
+  "urls": [
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "10898c620e8007c030e07fa5622b68358a43010025dfbd78a1cb797699de2bb4"
+      },
+      "digests": {
+        "blake2b_256": "929dc4e665119135114480843e7ab388fa94d8480650450e6f8e26b70d323a4c",
+        "md5": "e6e9d40fb009e4a52290209506d8d4d4",
+        "sha256": "0cf3cae568d36aa9576b28dfb35f11328f1cb974ca7647d9475ebb86c75ac6e3"
+      },
+      "downloads": -1,
+      "filename": "urllib3-2.8.0-py3-none-any.whl",
+      "has_sig": false,
+      "md5_digest": "e6e9d40fb009e4a52290209506d8d4d4",
+      "packagetype": "bdist_wheel",
+      "python_version": "py3",
+      "requires_python": ">=3.10",
+      "size": 135717,
+      "upload_time": "2026-09-15T19:29:34",
+      "upload_time_iso_8601": "2026-09-15T19:29:34.577402Z",
+      "url": "https://files.pythonhosted.org/packages/92/9d/c4e665119135114480843e7ab388fa94d8480650450e6f8e26b70d323a4c/urllib3-2.8.0-py3-none-any.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": false,
+      "digests": {
+        "blake2b_256": "e305b17359e1cefb4f909b5e40b1b90a496d987258916dbbf88e842c729f510e",
+        "md5": "e8ed250b4d520f9e3c0df3165953aa94",
+        "sha256": "63bf2ead4c879426ebf22ef2a781eeb4aa3b4ae798a0435506f8687fd5bb9b63"
+      },
+      "downloads": -1,
+      "filename": "urllib3-2.8.0.tar.gz",
+      "has_sig": false,
+      "md5_digest": "e8ed250b4d520f9e3c0df3165953aa94",
+      "packagetype": "sdist",
+      "python_version": "source",
+      "requires_python": ">=3.10",
+      "size": 458972,
+      "upload_time": "2026-09-15T19:29:36",
+      "upload_time_iso_8601": "2026-09-15T19:29:36.253420Z",
+      "url": "https://files.pythonhosted.org/packages/e3/05/b17359e1cefb4f909b5e40b1b90a496d987258916dbbf88e842c729f510e/urllib3-2.8.0.tar.gz",
+      "yanked": false,
+      "yanked_reason": null
+    }
+  ],
+  "wheel_digest_verified": true
+}

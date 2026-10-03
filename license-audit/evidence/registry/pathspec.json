@@ -1,0 +1,121 @@
+{
+  "url": "https://pypi.org/pypi/pathspec/1.1.1/json",
+  "response_sha256": "24f66829a7f40485bdccfcf32294218b0f4260b289ee4806ab644feb6c194766",
+  "info": {
+    "author": null,
+    "author_email": "\"Caleb P. Burns\" <cpburnz@gmail.com>",
+    "bugtrack_url": null,
+    "classifiers": [
+      "Development Status :: 5 - Production/Stable",
+      "Intended Audience :: Developers",
+      "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)",
+      "Operating System :: OS Independent",
+      "Programming Language :: Python",
+      "Programming Language :: Python :: 3",
+      "Programming Language :: Python :: 3.10",
+      "Programming Language :: Python :: 3.11",
+      "Programming Language :: Python :: 3.12",
+      "Programming Language :: Python :: 3.13",
+      "Programming Language :: Python :: 3.14",
+      "Programming Language :: Python :: 3.9",
+      "Programming Language :: Python :: Implementation :: CPython",
+      "Programming Language :: Python :: Implementation :: PyPy",
+      "Topic :: Software Development :: Libraries :: Python Modules",
+      "Topic :: Utilities"
+    ],
+    "description": "\nPathSpec\n========\n\n*pathspec* is a utility library for pattern matching of file paths. So far this\nonly includes Git's `gitignore`_ pattern matching.\n\n.. _`gitignore`: http://git-scm.com/docs/gitignore\n\n\nTutorial\n--------\n\nSay you have a \"Projects\" directory and you want to back it up, but only\ncertain files, and ignore others depending on certain conditions::\n\n\t>>> from pathspec import PathSpec\n\t>>> # The gitignore-style patterns for files to select, but we're including\n\t>>> # instead of ignoring.\n\t>>> spec_text = \"\"\"\n\t...\n\t... # This is a comment because the line begins with a hash: \"#\"\n\t...\n\t... # Include several project directories (and all descendants) relative to\n\t... # the current directory. To reference only a directory you must end with a\n\t... # slash: \"/\"\n\t... /project-a/\n\t... /project-b/\n\t... /project-c/\n\t...\n\t... # Patterns can be negated by prefixing with exclamation mark: \"!\"\n\t...\n\t... # Ignore temporary files beginning or ending with \"~\" and ending with\n\t... # \".swp\".\n\t... !~*\n\t... !*~\n\t... !*.swp\n\t...\n\t... # These are python projects so ignore compiled python files from\n\t... # testing.\n\t... !*.pyc\n\t...\n\t... # Ignore the build directories but only directly under the project\n\t... # directories.\n\t... !/*/build/\n\t...\n\t... \"\"\"\n\nThe ``PathSpec`` class provides an abstraction around pattern implementations,\nand we want to compile our patterns as \"gitignore\" patterns. You could call it a\nwrapper for a list of compiled patterns::\n\n\t>>> spec = PathSpec.from_lines('gitignore', spec_text.splitlines())\n\nIf we wanted to manually compile the patterns, we can use the ``GitIgnoreBasicPattern``\nclass directly. It is used in the background for \"gitignore\" which internally\nconverts patterns to regular expressions::\n\n\t>>> from pathspec.patterns.gitignore.basic import GitIgnoreBasicPattern\n\t>>> patterns = map(GitIgnoreBasicPattern, spec_text.splitlines())\n\t>>> spec = PathSpec(patterns)\n\n``PathSpec.from_lines()`` is a class method which simplifies that.\n\nIf you want to load the patterns from file, you can pass the file object\ndirectly as well::\n\n\t>>> with open('patterns.list', 'r') as fh:\n\t>>>     spec = PathSpec.from_lines('gitignore', fh)\n\nYou can perform matching on a whole directory tree with::\n\n\t>>> matches = set(spec.match_tree_files('path/to/directory'))\n\nOr you can perform matching on a specific set of file paths with::\n\n\t>>> matches = set(spec.match_files(file_paths))\n\nOr check to see if an individual file matches::\n\n\t>>> is_matched = spec.match_file(file_path)\n\nThere's actually two implementations of \"gitignore\". The basic implementation is\nused by ``PathSpec`` and follows patterns as documented by `gitignore`_.\nHowever, Git's behavior differs from the documented patterns. There's some\nedge-cases, and in particular, Git allows including files from excluded\ndirectories which appears to contradict the documentation. ``GitIgnoreSpec``\nhandles these cases to more closely replicate Git's behavior::\n\n\t>>> from pathspec import GitIgnoreSpec\n\t>>> spec = GitIgnoreSpec.from_lines(spec_text.splitlines())\n\nYou do not specify the style of pattern for ``GitIgnoreSpec`` because it should\nalways use ``GitIgnoreSpecPattern`` internally.\n\n\nPerformance\n-----------\n\nRunning lots of regular expression matches against thousands of files in Python\nis slow. Alternate regular expression backends can be used to improve\nperformance. ``PathSpec`` and ``GitIgnoreSpec`` both accept a ``backend``\nparameter to control the backend. The default is \"best\" to automatically choose\nthe best available backend. There are currently 3 backends.\n\nThe \"simple\" backend is the default and it simply uses Python's ``re.Pattern``\nobjects that are normally created. This can be the fastest when there's only 1\nor 2 patterns.\n\nThe \"hyperscan\" backend uses the `hyperscan`_ library. Hyperscan tends to be at\nleast 2 times faster than \"simple\", and generally slower than \"re2\". This can be\nfaster than \"re2\" under the right conditions with pattern counts of 1-25.\n\nThe \"re2\" backend uses the `google-re2`_ library (not to be confused with the\n*re2* library on PyPI which is unrelated and abandoned). Google's re2 tends to\nbe significantly faster than \"simple\", and 3 times faster than \"hyperscan\" at\nhigh pattern counts.\n\nSee `benchmarks_backends.md`_ for comparisons between native Python regular\nexpressions and the optional backends.\n\n\n.. _`benchmarks_backends.md`: https://github.com/cpburnz/python-pathspec/blob/master/benchmarks_backends.md\n.. _`google-re2`: https://pypi.org/project/google-re2/\n.. _`hyperscan`: https://pypi.org/project/hyperscan/\n\n\nFAQ\n---\n\n\n1. How do I ignore files like *.gitignore*?\n+++++++++++++++++++++++++++++++++++++++++++\n\n``GitIgnoreSpec`` (and ``PathSpec``) positively match files by default. To find\nthe files to keep, and exclude files like *.gitignore*, you need to set\n``negate=True`` to flip the results::\n\n\t>>> from pathspec import GitIgnoreSpec\n\t>>> spec = GitIgnoreSpec.from_lines([...])\n\t>>> keep_files = set(spec.match_tree_files('path/to/directory', negate=True))\n\t>>> ignore_files = set(spec.match_tree_files('path/to/directory'))\n\n\nLicense\n-------\n\n*pathspec* is licensed under the `Mozilla Public License Version 2.0`_. See\n`LICENSE`_ or the `FAQ`_ for more information.\n\nIn summary, you may use *pathspec* with any closed or open source project\nwithout affecting the license of the larger work so long as you:\n\n- give credit where credit is due,\n\n- and release any custom changes made to *pathspec*.\n\n.. _`Mozilla Public License Version 2.0`: http://www.mozilla.org/MPL/2.0\n.. _`LICENSE`: LICENSE\n.. _`FAQ`: http://www.mozilla.org/MPL/2.0/FAQ.html\n\n\nSource\n------\n\nThe source code for *pathspec* is available from the GitHub repo\n`cpburnz/python-pathspec`_.\n\n.. _`cpburnz/python-pathspec`: https://github.com/cpburnz/python-pathspec\n\n\nInstallation\n------------\n\n*pathspec* is available for install through `PyPI`_::\n\n\tpip install pathspec\n\n*pathspec* can also be built from source. The following packages will be\nrequired:\n\n- `build`_ (>=0.6.0)\n\n*pathspec* can then be built and installed with::\n\n\tpython -m build\n\tpip install dist/pathspec-*-py3-none-any.whl\n\nThe following optional dependencies can be installed:\n\n- `google-re2`_: Enables optional \"re2\" backend.\n- `hyperscan`_: Enables optional \"hyperscan\" backend.\n- `typing-extensions`_: Improves some type hints.\n\n.. _`PyPI`: http://pypi.python.org/pypi/pathspec\n.. _`build`: https://pypi.org/project/build/\n.. _`typing-extensions`: https://pypi.org/project/typing-extensions/\n\n\nDocumentation\n-------------\n\nDocumentation for *pathspec* is available on `Read the Docs`_.\n\nThe full change history can be found in `CHANGES.rst`_ and `Change History`_.\n\nAn upgrade guide is available in `UPGRADING.rst`_ and `Upgrade Guide`_.\n\n.. _`CHANGES.rst`: https://github.com/cpburnz/python-pathspec/blob/master/CHANGES.rst\n.. _`Change History`: https://python-path-specification.readthedocs.io/en/stable/changes.html\n.. _`Read the Docs`: https://python-path-specification.readthedocs.io\n.. _`UPGRADING.rst`: https://github.com/cpburnz/python-pathspec/blob/master/UPGRADING.rst\n.. _`Upgrade Guide`: https://python-path-specification.readthedocs.io/en/stable/upgrading.html\n\n\nOther Languages\n---------------\n\nThe related project `pathspec-ruby`_ (by *highb*) provides a similar library as\na `Ruby gem`_.\n\n.. _`pathspec-ruby`: https://github.com/highb/pathspec-ruby\n.. _`Ruby gem`: https://rubygems.org/gems/pathspec\n\n\nChange History\n==============\n\n\n1.1.1 (2026-04-26)\n------------------\n\nImprovements:\n\n- Improved type checking with mypy and pyright.\n\nBug fixes:\n\n- Fixed typing on `PathSpec[TPattern]` to `PathSpec[TPattern_co]`.\n- Added missing variant type-hint `type[Pattern]` to `PathSpec.from_lines()` parameter `pattern_factory`.\n- Fixed possible type error when using `+` and `+=` operators on `PathSpec`.\n\n\n1.1.0 (2026-04-22)\n------------------\n\nNew features:\n\n- `Issue #108`_: Specialize pattern type for `PathSpec` as `PathSpec[TPattern]` for better debugging of `PathSpec().patterns`.\n\nBug fixes:\n\n- `Issue #93`_: Git discards invalid range notation. `GitIgnoreSpecPattern` now discards patterns with invalid range notation like Git.\n- `Pull #106`_: Fix escape() not escaping backslash characters.\n\nImprovements:\n\n- `Pull #110`_: Nicer debug print outs (and str for regex pattern).\n\n\n.. _`Pull #106`: https://github.com/cpburnz/python-pathspec/pull/106\n.. _`Issue #108`: https://github.com/cpburnz/python-pathspec/issues/108\n.. _`Pull #110`: https://github.com/cpburnz/python-pathspec/pull/110\n\n\n1.0.4 (2026-01-26)\n------------------\n\nBug fixes:\n\n- `Issue #103`_: Using re2 fails if pyre2 is also installed.\n\n.. _`Issue #103`: https://github.com/cpburnz/python-pathspec/issues/103\n\n\n1.0.3 (2026-01-09)\n------------------\n\nBug fixes:\n\n- `Issue #101`_: pyright strict errors with pathspec >= 1.0.0.\n- `Issue #102`_: No module named 'tomllib'.\n\n\n.. _`Issue #101`: https://github.com/cpburnz/python-pathspec/issues/101\n.. _`Issue #102`: https://github.com/cpburnz/python-pathspec/issues/102\n\n\n1.0.2 (2026-01-07)\n------------------\n\nBug fixes:\n\n- Type hint `collections.abc.Callable` does not properly replace `typing.Callable` until Python 3.9.2.\n\n\n1.0.1 (2026-01-06)\n------------------\n\nBug fixes:\n\n- `Issue #100`_: ValueError(f\"{patterns=!r} cannot be empty.\") when using black.\n\n\n.. _`Issue #100`: https://github.com/cpburnz/python-pathspec/issues/100\n\n\n1.0.0 (2026-01-05)\n------------------\n\nMajor changes:\n\n- `Issue #91`_: Dropped support of EoL Python 3.8.\n- Added concept of backends to allow for faster regular expression matching. The backend can be controlled using the `backend` argument to `PathSpec()`, `PathSpec.from_lines()`, `GitIgnoreSpec()`, and `GitIgnoreSpec.from_lines()`.\n- Renamed \"gitwildmatch\" pattern back to \"gitignore\". The \"gitignore\" pattern behaves slightly differently when used with `PathSpec` (*gitignore* as documented) than with `GitIgnoreSpec` (replicates *Git*'s edge cases).\n\nAPI changes:\n\n- Breaking: protected method `pathspec.pathspec.PathSpec._match_file()` (with a leading underscore) has been removed and replaced by backends. This does not affect normal usage of `PathSpec` or `GitIgnoreSpec`. Only custom subclasses will be affected. If this breaks your usage, let me know by `opening an issue <https://github.com/cpburnz/python-pathspec/issues>`_.\n- Deprecated: \"gitwildmatch\" is now an alias for \"gitignore\".\n- Deprecated: `pathspec.patterns.GitWildMatchPattern` is now an alias for `pathspec.patterns.gitignore.spec.GitIgnoreSpecPattern`.\n- Deprecated: `pathspec.patterns.gitwildmatch` module has been replaced by the `pathspec.patterns.gitignore` package.\n- Deprecated: `pathspec.patterns.gitwildmatch.GitWildMatchPattern` is now an alias for `pathspec.patterns.gitignore.spec.GitIgnoreSpecPattern`.\n- Deprecated: `pathspec.patterns.gitwildmatch.GitWildMatchPatternError` is now an alias for `pathspec.patterns.gitignore.GitIgnorePatternError`.\n- Removed: `pathspec.patterns.gitwildmatch.GitIgnorePattern` has been deprecated since v0.4 (2016-07-15).\n- Signature of method `pathspec.pattern.RegexPattern.match_file()` has been changed from `def match_file(self, file: str) -> RegexMatchResult | None` to `def match_file(self, file: AnyStr) -> RegexMatchResult | None` to reflect usage.\n- Signature of class method `pathspec.pattern.RegexPattern.pattern_to_regex()` has been changed from `def pattern_to_regex(cls, pattern: str) -> tuple[str, bool]` to `def pattern_to_regex(cls, pattern: AnyStr) -> tuple[AnyStr | None, bool | None]` to reflect usage and documentation.\n\nNew features:\n\n- Added optional \"hyperscan\" backend using `hyperscan`_ library. It will automatically be used when installed. This dependency can be installed with ``pip install 'pathspec[hyperscan]'``.\n- Added optional \"re2\" backend using the `google-re2`_ library. It will automatically be used when installed. This dependency can be installed with ``pip install 'pathspec[re2]'``.\n- Added optional dependency on `typing-extensions`_ library to improve some type hints.\n\nBug fixes:\n\n- `Issue #93`_: Do not remove leading spaces.\n- `Issue #95`_: Matching for files inside folder does not seem to behave like .gitignore's.\n- `Issue #98`_: UnboundLocalError in RegexPattern when initialized with `pattern=None`.\n- Type hint on return value of `pathspec.pattern.RegexPattern.match_file()` to match documentation.\n\nImprovements:\n\n- Mark Python 3.13 and 3.14 as supported.\n- No-op patterns are now filtered out when matching files, slightly improving performance.\n- Fix performance regression in `iter_tree_files()` from v0.10.\n\n\n.. _`Issue #38`: https://github.com/cpburnz/python-pathspec/issues/38\n.. _`Issue #91`: https://github.com/cpburnz/python-pathspec/issues/91\n.. _`Issue #93`: https://github.com/cpburnz/python-pathspec/issues/93\n.. _`Issue #95`: https://github.com/cpburnz/python-pathspec/issues/95\n.. _`Issue #98`: https://github.com/cpburnz/python-pathspec/issues/98\n.. _`google-re2`: https://pypi.org/project/google-re2/\n.. _`hyperscan`: https://pypi.org/project/hyperscan/\n.. _`typing-extensions`: https://pypi.org/project/typing-extensions/\n\n",
+    "description_content_type": "text/x-rst",
+    "docs_url": null,
+    "download_url": null,
+    "downloads": {
+      "last_day": -1,
+      "last_month": -1,
+      "last_week": -1
+    },
+    "dynamic": null,
+    "home_page": null,
+    "keywords": null,
+    "license": null,
+    "license_expression": null,
+    "license_files": [
+      "LICENSE"
+    ],
+    "maintainer": null,
+    "maintainer_email": null,
+    "name": "pathspec",
+    "package_url": "https://pypi.org/project/pathspec/",
+    "platform": null,
+    "project_url": "https://pypi.org/project/pathspec/",
+    "project_urls": {
+      "Change Log": "https://python-path-specification.readthedocs.io/en/latest/changes.html",
+      "Documentation": "https://python-path-specification.readthedocs.io/en/latest/index.html",
+      "Issue Tracker": "https://github.com/cpburnz/python-pathspec/issues",
+      "Source Code": "https://github.com/cpburnz/python-pathspec"
+    },
+    "provides_extra": [
+      "hyperscan",
+      "optional",
+      "re2"
+    ],
+    "release_url": "https://pypi.org/project/pathspec/1.1.1/",
+    "requires_dist": [
+      "hyperscan>=0.7; extra == \"hyperscan\"",
+      "typing-extensions>=4; extra == \"optional\"",
+      "google-re2>=1.1; extra == \"re2\""
+    ],
+    "requires_python": ">=3.9",
+    "summary": "Utility library for gitignore style pattern matching of file paths.",
+    "version": "1.1.1",
+    "yanked": false,
+    "yanked_reason": null
+  },
+  "urls": [
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "68de3f158b6592f086e78754c962092f32a761944ab66a660c0d62ad79c4b69b"
+      },
+      "digests": {
+        "blake2b_256": "f1d97fb5aa316bc299258e68c73ba3bddbc499654a07f151cba08f6153988714",
+        "md5": "124d4c96d90978265c9e7b4d8eefa288",
+        "sha256": "a00ce642f577bf7f473932318056212bc4f8bfdf53128c78bbd5af0b9b20b189"
+      },
+      "downloads": -1,
+      "filename": "pathspec-1.1.1-py3-none-any.whl",
+      "has_sig": false,
+      "md5_digest": "124d4c96d90978265c9e7b4d8eefa288",
+      "packagetype": "bdist_wheel",
+      "python_version": "py3",
+      "requires_python": ">=3.9",
+      "size": 57328,
+      "upload_time": "2026-04-27T01:46:07",
+      "upload_time_iso_8601": "2026-04-27T01:46:07.060850Z",
+      "url": "https://files.pythonhosted.org/packages/f1/d9/7fb5aa316bc299258e68c73ba3bddbc499654a07f151cba08f6153988714/pathspec-1.1.1-py3-none-any.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": false,
+      "digests": {
+        "blake2b_256": "5a8242f767fc1c1143d6fd36efb827202a2d997a375e160a71eb2888a925aac1",
+        "md5": "c762d0a00d6cfc9de003e02d5072b26a",
+        "sha256": "17db5ecd524104a120e173814c90367a96a98d07c45b2e10c2f3919fff91bf5a"
+      },
+      "downloads": -1,
+      "filename": "pathspec-1.1.1.tar.gz",
+      "has_sig": false,
+      "md5_digest": "c762d0a00d6cfc9de003e02d5072b26a",
+      "packagetype": "sdist",
+      "python_version": "source",
+      "requires_python": ">=3.9",
+      "size": 135180,
+      "upload_time": "2026-04-27T01:46:08",
+      "upload_time_iso_8601": "2026-04-27T01:46:08.907631Z",
+      "url": "https://files.pythonhosted.org/packages/5a/82/42f767fc1c1143d6fd36efb827202a2d997a375e160a71eb2888a925aac1/pathspec-1.1.1.tar.gz",
+      "yanked": false,
+      "yanked_reason": null
+    }
+  ],
+  "wheel_digest_verified": true
+}

@@ -1,0 +1,130 @@
+{
+  "url": "https://pypi.org/pypi/cyclonedx-python-lib/11.12.0/json",
+  "response_sha256": "83da238d990ceb1570d5c55298f569102c6627f306302855641c1202f96f7f0c",
+  "info": {
+    "author": "Paul Horton",
+    "author_email": "phorton@sonatype.com",
+    "bugtrack_url": null,
+    "classifiers": [
+      "Development Status :: 5 - Production/Stable",
+      "Intended Audience :: Developers",
+      "Intended Audience :: Information Technology",
+      "Intended Audience :: Legal Industry",
+      "Intended Audience :: System Administrators",
+      "License :: OSI Approved :: Apache Software License",
+      "Programming Language :: Python :: 3",
+      "Programming Language :: Python :: 3.10",
+      "Programming Language :: Python :: 3.11",
+      "Programming Language :: Python :: 3.12",
+      "Programming Language :: Python :: 3.13",
+      "Programming Language :: Python :: 3.14",
+      "Programming Language :: Python :: 3.9",
+      "Topic :: Security",
+      "Topic :: Software Development",
+      "Topic :: System :: Software Distribution",
+      "Typing :: Typed"
+    ],
+    "description": "# CycloneDX Python Library\n\n[![shield_pypi-version]][link_pypi]\n[![shield_conda-forge-version]][link_conda-forge]\n[![shield_rtfd]][link_rtfd]\n[![shield_gh-workflow-test]][link_gh-workflow-test]\n[![shield_coverage]][link_codacy]\n[![shield_ossf-best-practices]][link_ossf-best-practices]\n[![shield_license]][license_file]  \n[![shield_website]][link_website]\n[![shield_slack]][link_slack]\n[![shield_groups]][link_discussion]\n[![shield_twitter-follow]][link_twitter]\n\n----\n\nOWASP  [CycloneDX][link_website] is a full‑stack Bill of Materials (BOM) and system‑transparency standard\nthat provides deep visibility into software, services, hardware, and AI components, enabling advanced supply‑chain security and cyber‑risk reduction.\n\nThis Python package provides data models, validators and more,\nto help you create/render/read CycloneDX documents.\n\n> [!NOTE]  \n> This package is a software library not intended for standalone use.  \n> For generating Software Bill of Materials (SBOM), check out [CycloneDX Python][cyclonedx-python] or [Jake][jake].\n\n## Documentation\n\nComplete documentation is available on [Read the Docs][link_rtfd]. This includes:\n- Responsibilities & Capabilities\n- Install Instructions\n- API Reference\n- Usage Examples\n- Integration Guides\n- Best Practices\n\n## Python Support\n\nWe endeavour to support all functionality for all [current actively supported Python versions](https://www.python.org/downloads/).\nHowever, some features may not be possible/present in older Python versions due to their lack of support.\n\n## Changelog\n\nSee our [CHANGELOG][chaneglog_file].\n\n## Contributing\n\nFeel free to open issues, bugreports or pull requests.  \nSee the [CONTRIBUTING][contributing_file] file for details.\n\n## Copyright & License\n\nCycloneDX Python Lib is Copyright (c) OWASP Foundation. All Rights Reserved.  \nPermission to modify and redistribute is granted under the terms of the Apache 2.0 license.  \nSee the [LICENSE][license_file] file for the full license.\n\n[cyclonedx-python]: https://github.com/CycloneDX/cyclonedx-python\n[jake]: https://github.com/sonatype-nexus-community/jake\n\n[license_file]: https://github.com/CycloneDX/cyclonedx-python-lib/blob/master/LICENSE\n[chaneglog_file]: https://github.com/CycloneDX/cyclonedx-python-lib/blob/master/CHANGELOG.md\n[contributing_file]: https://github.com/CycloneDX/cyclonedx-python-lib/blob/master/CONTRIBUTING.md\n\n[shield_gh-workflow-test]: https://img.shields.io/github/actions/workflow/status/CycloneDX/cyclonedx-python-lib/python.yml?branch=main&logo=GitHub&logoColor=white \"build\"\n[shield_coverage]: https://img.shields.io/codacy/coverage/1f9d451e9cdc49ce99c2a1247adab341?logo=Codacy&logoColor=white \"test coverage\"\n[shield_ossf-best-practices]: https://img.shields.io/cii/percentage/7956?label=OpenSSF%20best%20practices \"OpenSSF best practices\"\n[shield_pypi-version]: https://img.shields.io/pypi/v/cyclonedx-python-lib?logo=pypi&logoColor=white&label=PyPI \"PyPI\"\n[shield_conda-forge-version]: https://img.shields.io/conda/vn/conda-forge/cyclonedx-python-lib?logo=anaconda&logoColor=white&label=conda-forge \"conda-forge\"\n[shield_rtfd]: https://img.shields.io/readthedocs/cyclonedx-python-library?logo=readthedocs&logoColor=white \"Read the Docs\"\n[shield_license]: https://img.shields.io/github/license/CycloneDX/cyclonedx-python-lib?logo=open%20source%20initiative&logoColor=white \"license\"\n[shield_website]: https://img.shields.io/badge/https://-cyclonedx.org-blue.svg \"homepage\"\n[shield_slack]: https://img.shields.io/badge/slack-join-blue?logo=Slack&logoColor=white \"slack join\"\n[shield_groups]: https://img.shields.io/badge/discussion-groups.io-blue.svg \"groups discussion\"\n[shield_twitter-follow]: https://img.shields.io/badge/Twitter-follow-blue?logo=Twitter&logoColor=white \"twitter follow\"\n\n[link_gh-workflow-test]: https://github.com/CycloneDX/cyclonedx-python-lib/actions/workflows/python.yml?query=branch%3Amain\n[link_pypi]: https://pypi.org/project/cyclonedx-python-lib/\n[link_conda-forge]: https://anaconda.org/conda-forge/cyclonedx-python-lib\n[link_rtfd]: https://cyclonedx-python-library.readthedocs.io/en/latest/\n[link_codacy]: https://app.codacy.com/gh/CycloneDX/cyclonedx-python-lib\n[link_ossf-best-practices]: https://www.bestpractices.dev/projects/7956\n[link_website]: https://cyclonedx.org/\n[link_slack]: https://cyclonedx.org/slack/invite\n[link_discussion]: https://groups.io/g/CycloneDX\n[link_twitter]: https://twitter.com/CycloneDX_Spec\n\n",
+    "description_content_type": "text/markdown",
+    "docs_url": null,
+    "download_url": null,
+    "downloads": {
+      "last_day": -1,
+      "last_month": -1,
+      "last_week": -1
+    },
+    "dynamic": null,
+    "home_page": null,
+    "keywords": "CycloneDX, library, OWASP, SCA, Software Bill of Materials, Bill of Materials, BOM, SBOM, VEX, VDR, OBOM, MBOM, SaaSBOM, SPDX, PackageURL, PURL",
+    "license": "Apache-2.0",
+    "license_expression": null,
+    "license_files": [
+      "LICENSE",
+      "NOTICE"
+    ],
+    "maintainer": "Jan Kowalleck",
+    "maintainer_email": "jan.kowalleck@gmail.com",
+    "name": "cyclonedx-python-lib",
+    "package_url": "https://pypi.org/project/cyclonedx-python-lib/",
+    "platform": null,
+    "project_url": "https://pypi.org/project/cyclonedx-python-lib/",
+    "project_urls": {
+      "Bug Tracker": "https://github.com/CycloneDX/cyclonedx-python-lib/issues",
+      "Changelog": "https://github.com/CycloneDX/cyclonedx-python-lib/releases",
+      "Documentation": "https://cyclonedx-python-library.readthedocs.io/",
+      "Funding": "https://owasp.org/donate/?reponame=www-project-cyclonedx&title=OWASP+CycloneDX",
+      "Homepage": "https://github.com/CycloneDX/cyclonedx-python-lib/#readme",
+      "Repository": "https://github.com/CycloneDX/cyclonedx-python-lib"
+    },
+    "provides_extra": [
+      "json-validation",
+      "validation",
+      "xml-validation"
+    ],
+    "release_url": "https://pypi.org/project/cyclonedx-python-lib/11.12.0/",
+    "requires_dist": [
+      "jsonschema[format-nongpl]<5.0,>=4.25; extra == \"validation\" or extra == \"json-validation\"",
+      "license-expression<31,>=30",
+      "lxml<7,>=4; extra == \"validation\" or extra == \"xml-validation\"",
+      "packageurl-python<2,>=0.11",
+      "py-serializable<3.0.0,>=2.1.0",
+      "referencing>=0.28.4; extra == \"validation\" or extra == \"json-validation\"",
+      "sortedcontainers<3.0.0,>=2.4.0",
+      "typing_extensions<5.0,>=4.6; python_version < \"3.13\""
+    ],
+    "requires_python": "<4.0,>=3.9",
+    "summary": "Python library for CycloneDX",
+    "version": "11.12.0",
+    "yanked": false,
+    "yanked_reason": null
+  },
+  "urls": [
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "c7ce95aa4f8d1a8b762354ef93d6e3ec72cfd01ecf1db7ebb7997fd0b6568251"
+      },
+      "digests": {
+        "blake2b_256": "cff0b2cb999244f2f4194df63ecff6939228178fa63a33be809c412684ca8db7",
+        "md5": "29175641159f63f99abf8764da881a71",
+        "sha256": "0e807521a921a5c3cb8ce1153f8a61d29eedfe76a46aac2796b7c6b573391a54"
+      },
+      "downloads": -1,
+      "filename": "cyclonedx_python_lib-11.12.0-py3-none-any.whl",
+      "has_sig": false,
+      "md5_digest": "29175641159f63f99abf8764da881a71",
+      "packagetype": "bdist_wheel",
+      "python_version": "py3",
+      "requires_python": "<4.0,>=3.9",
+      "size": 529453,
+      "upload_time": "2026-08-13T07:52:16",
+      "upload_time_iso_8601": "2026-08-13T07:52:16.836824Z",
+      "url": "https://files.pythonhosted.org/packages/cf/f0/b2cb999244f2f4194df63ecff6939228178fa63a33be809c412684ca8db7/cyclonedx_python_lib-11.12.0-py3-none-any.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": false,
+      "digests": {
+        "blake2b_256": "17406509e6cfd7f2f3255501690f46375fdd224949e21fd1e96f4f4c8a9041b1",
+        "md5": "880cb786a984bd7e4b271c37c09c1c50",
+        "sha256": "16767c4039de90c04e9f03348f8f0ed4b8ff842eaa7eefcad3a95685f970dacf"
+      },
+      "downloads": -1,
+      "filename": "cyclonedx_python_lib-11.12.0.tar.gz",
+      "has_sig": false,
+      "md5_digest": "880cb786a984bd7e4b271c37c09c1c50",
+      "packagetype": "sdist",
+      "python_version": "source",
+      "requires_python": "<4.0,>=3.9",
+      "size": 1445378,
+      "upload_time": "2026-08-13T07:52:18",
+      "upload_time_iso_8601": "2026-08-13T07:52:18.675291Z",
+      "url": "https://files.pythonhosted.org/packages/17/40/6509e6cfd7f2f3255501690f46375fdd224949e21fd1e96f4f4c8a9041b1/cyclonedx_python_lib-11.12.0.tar.gz",
+      "yanked": false,
+      "yanked_reason": null
+    }
+  ],
+  "wheel_digest_verified": true
+}

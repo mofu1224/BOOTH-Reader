@@ -1,0 +1,1511 @@
+Credits
+Print
+Chromium software is made available as source code here.
+2-dim General Purpose FFT (Fast Fourier/Cosine/Sine Transform) Package
+homepage
+@bufbuild/protobuf
+homepage
+@puppeteer/replay
+homepage
+Abseil
+homepage
+abseil
+homepage
+Acorn, a tiny, fast JavaScript parser written in JavaScript.
+homepage
+Activity
+homepage
+Activity Compose
+homepage
+Activity Kotlin Extensions
+homepage
+adler2
+homepage
+aho-corasick
+homepage
+Alliance for Open Media Video Codec
+homepage
+Almost Native Graphics Layer Engine
+homepage
+Android Explicit Synchronization
+homepage
+Android for Cars App
+homepage
+Android Graphics Path
+homepage
+Android Multi-Dex Library
+homepage
+Android NDK
+homepage
+Android Open Source Project - App Compat Library
+homepage
+Android SDK
+homepage
+Android Support CardView v7
+homepage
+Android Support Library Async Layout Inflater
+homepage
+Android Support Library core UI
+homepage
+Android Support Library core utils
+homepage
+Android Support Library Cursor Adapter
+homepage
+Android Support Library Interpolators
+homepage
+Android Support Library Local Broadcast Manager
+homepage
+Android Support Library v4
+homepage
+android-jni-wrappers
+homepage
+android_system_properties
+homepage
+AndroidX Test Library
+homepage
+androidx.core:core-pip
+homepage
+androidx.core:core-viewtree
+homepage
+androidx.credentials.registry:registry-provider
+homepage
+androidx.credentials.registry:registry-provider-play-services
+homepage
+androidx.pdf:pdf-core
+homepage
+androidx.pdf:pdf-document-service
+homepage
+androidx.pdf:pdf-ink
+homepage
+androidx.pdf:pdf-viewer
+homepage
+androidx.pdf:pdf-viewer-fragment
+homepage
+androidx.privacysandbox.ads:ads-adservices-java
+homepage
+Animal Sniffer Annotations
+homepage
+AnimatedVectorDrawable
+homepage
+Animation
+homepage
+Annotation
+homepage
+Anonymous Tokens
+homepage
+Anti-Grain Geometry
+homepage
+antlr4rust
+homepage
+anyhow
+homepage
+AppCompat
+homepage
+AppCompat Resources
+homepage
+AppSearch
+homepage
+AppSearch Builtin Types
+homepage
+AppSearch Platform Storage
+homepage
+Arch-Common
+homepage
+Arch-Runtime
+homepage
+ARCore
+homepage
+ARCore SDK
+homepage
+ARCore SDK client library for Chrome
+homepage
+ARM_NEON_2_x86_SSE
+homepage
+array-init
+homepage
+asm
+homepage
+atomicfu
+homepage
+Auto installer for plumber-android-core
+homepage
+autocfg
+homepage
+Autofill
+homepage
+AutoService
+homepage
+AXE-CORE Accessibility Audit
+homepage
+base64
+homepage
+better_any
+homepage
+Biometric
+homepage
+bit-set
+homepage
+bit-vec
+homepage
+bitflags
+homepage
+Blackmagic DeckLink SDK - Mac
+homepage
+blink HTMLTokenizer
+homepage
+BoringSSL
+homepage
+BoringSSL
+homepage
+Braille Translation Library
+homepage
+Brotli
+homepage
+Browser
+homepage
+bytemuck
+homepage
+bytemuck_derive
+homepage
+byteorder
+homepage
+byteorder-lite
+homepage
+bytes
+homepage
+C++ Big Interger Library
+homepage
+C++ port of zxcvbn, an advanced password strength estimation library.
+homepage
+calendrical_calculations
+homepage
+Cardboard SDK
+homepage
+CastCore Publics
+homepage
+CF
+homepage
+cfg-if
+homepage
+Checked in build outputs generated on Windows.
+homepage
+Checker Qual
+homepage
+Checker Util
+homepage
+ChromeOS Components
+homepage
+ChromeVox
+homepage
+ChromiumUpdater
+homepage
+chrono
+homepage
+CityHash
+homepage
+Closure Library
+homepage
+CodeMirror 5
+homepage
+CodeMirror 6
+homepage
+codespan-reporting
+homepage
+collections
+homepage
+Collections Kotlin Extensions
+homepage
+common
+homepage
+Compact Encoding Detection
+homepage
+Compact Language Detector v3
+homepage
+compiler-rt
+homepage
+Compose Animation
+homepage
+Compose Animation Core
+homepage
+Compose Foundation
+homepage
+Compose Geometry
+homepage
+Compose Google Fonts integration
+homepage
+Compose Graphics
+homepage
+Compose Layouts
+homepage
+Compose Material Ripple
+homepage
+Compose Material3 Components
+homepage
+Compose Material3 Ripple
+homepage
+Compose Navigation
+homepage
+Compose Runtime
+homepage
+Compose Runtime Annotation
+homepage
+Compose Runtime Retain
+homepage
+Compose Saveable
+homepage
+Compose UI
+homepage
+Compose UI Text
+homepage
+Compose Unit
+homepage
+Compose Util
+homepage
+ConstraintLayout
+homepage
+ConstraintLayout Core
+homepage
+Coordinator Layout
+homepage
+Core
+homepage
+Core Kotlin Extensions
+homepage
+Core ML Tools
+homepage
+core-common
+homepage
+core-foundation-sys
+homepage
+core_maths
+homepage
+cpu_features
+homepage
+cpuinfo
+homepage
+CrabbyAvif - Library for decoding AVIF files.
+homepage
+Crashpad
+homepage
+CRC32C
+homepage
+crc32fast
+homepage
+Credentials
+homepage
+Credentials Play Services Auth
+homepage
+CSP Evaluator Core Library, a tool that allows developers to check if a Content Security Policy (CSP) serves as mitigation against XSS attacks
+homepage
+Curtains
+homepage
+Custom View
+homepage
+CustomView Pooling Container
+homepage
+cxx
+homepage
+cxxbridge-flags
+homepage
+cxxbridge-macro
+homepage
+d3
+homepage
+d3
+homepage
+Darwin
+homepage
+Darwin configd
+homepage
+DataStore
+homepage
+DataStore Core
+homepage
+DataStore Core Okio
+homepage
+dav1d is an AV1 decoder :)
+homepage
+Dawn
+homepage
+Dependencies sourced from the upstream `chromium` repository
+homepage
+derivre
+homepage
+Devtools-Frontend
+homepage
+diplomat
+homepage
+diplomat-runtime
+homepage
+diplomat_core
+homepage
+DirectX-Shader-Compiler
+homepage
+displaydoc
+homepage
+Document File
+homepage
+dom-distiller-js
+homepage
+dragonbox
+homepage
+Drawer Layout
+homepage
+DynamicAnimation
+homepage
+EasyList
+homepage
+EGL-Registry
+homepage
+Eigen
+homepage
+either
+homepage
+Emoji
+homepage
+Emoji Segmenter
+homepage
+emoji-metadata
+homepage
+Emoji2
+homepage
+Emoji2 Views Helper
+homepage
+equivalent
+homepage
+error-prone annotations
+homepage
+etc1
+homepage
+ExifInterface
+homepage
+Expat XML Parser
+homepage
+Experimental annotation
+homepage
+FarmHash
+homepage
+fast_float
+homepage
+fdeflate
+homepage
+feature-delivery
+homepage
+federated-compute
+homepage
+fend-core
+homepage
+ffmpeg
+homepage
+fft
+homepage
+Fiat-Crypto: Synthesizing Correct-by-Construction Code for Cryptographic Primitives
+homepage
+FideltyFX Single Pass Downsampler
+homepage
+FindBugs-jsr305
+homepage
+firebase-annotations
+homepage
+firebase-common
+homepage
+firebase-components
+homepage
+firebase-datatransport
+homepage
+firebase-encoders
+homepage
+firebase-encoders-json
+homepage
+firebase-encoders-proto
+homepage
+firebase-iid-interop
+homepage
+firebase-installations
+homepage
+firebase-installations-interop
+homepage
+firebase-measurement-connector
+homepage
+firebase-messaging
+homepage
+fixed_decimal
+homepage
+flac
+homepage
+FlatBuffers
+homepage
+flate2
+homepage
+foldhash
+homepage
+font-types
+homepage
+FP16
+homepage
+fragment
+homepage
+Fragment Compose
+homepage
+Fragment Kotlin Extensions
+homepage
+FreeType
+homepage
+FreeType
+homepage
+Fuchsia GN SDK
+homepage
+Fuse.js
+homepage
+Futures
+homepage
+Futures Kotlin Extensions
+homepage
+FXDiv
+homepage
+gemmlowp
+homepage
+genai-common
+homepage
+genai-prompt
+homepage
+genai-schema
+homepage
+General Purpose FFT (Fast Fourier/Cosine/Sine Transform) Package
+homepage
+getopt
+homepage
+getrandom
+homepage
+GifPlayer Animated GIF Library
+homepage
+gl-matrix
+homepage
+Google Chrome Content Analysis Connector Agent SDK
+homepage
+Google Closure Library
+homepage
+Google Double Conversion
+homepage
+Google Input Tools
+homepage
+google-glog's symbolization library
+homepage
+googleapis
+homepage
+googleid
+homepage
+Granite
+homepage
+Graphics Core
+homepage
+Graphics Shapes
+homepage
+Gregory Pietsch getopt
+homepage
+Grid Layout
+homepage
+grpc
+homepage
+Guava InternalFutureFailureAccess and InternalFutures
+homepage
+Guava: Google Core Libraries for Java
+homepage
+harfbuzz
+homepage
+harfrust
+homepage
+hashbrown
+homepage
+Headers for DirectX APIs.
+homepage
+Headers for the Windows WebAuthn API (webauthn.dll)
+homepage
+Headers for WindowsAppsSDK
+homepage
+heck
+homepage
+Highway: C++ library for SIMD
+homepage
+Highway: C++ library for SIMD
+homepage
+hmac-sha256
+homepage
+hunspell
+homepage
+hunspell dictionaries
+homepage
+hyphenation-patterns
+homepage
+IAccessible2 COM interfaces for accessibility
+homepage
+iamf_tools
+homepage
+iana-time-zone
+homepage
+icu
+homepage
+icu_calendar
+homepage
+icu_calendar_data
+homepage
+icu_capi
+homepage
+icu_casemap
+homepage
+icu_casemap_data
+homepage
+icu_collections
+homepage
+icu_decimal
+homepage
+icu_decimal_data
+homepage
+icu_experimental
+homepage
+icu_experimental_data
+homepage
+icu_list
+homepage
+icu_list_data
+homepage
+icu_locale
+homepage
+icu_locale_core
+homepage
+icu_locale_data
+homepage
+icu_normalizer
+homepage
+icu_normalizer_data
+homepage
+icu_pattern
+homepage
+icu_plurals
+homepage
+icu_plurals_data
+homepage
+icu_properties
+homepage
+icu_properties_data
+homepage
+icu_provider
+homepage
+icu_provider_adapters
+homepage
+image
+homepage
+Implementation of WebDriver BiDi standard
+homepage
+impress
+homepage
+In line A-law and u-law conversion routines
+homepage
+incremental-font-transfer
+homepage
+indexmap
+homepage
+Ink
+homepage
+Ink Authoring
+homepage
+Ink Brush
+homepage
+Ink Geometry
+homepage
+Ink Native Loader
+homepage
+Ink Rendering
+homepage
+Ink Strokes
+homepage
+inspector protocol
+homepage
+International Phone Number Library
+homepage
+intl-messageformat
+homepage
+io.grpc:grpc-api
+homepage
+io.grpc:grpc-stub
+homepage
+ipcz
+homepage
+ISimpleDOM COM interfaces for accessibility
+homepage
+itertools
+homepage
+itoa
+homepage
+ixdtf
+homepage
+J2ObjC Annotations
+homepage
+javax.inject
+homepage
+JNI Zero
+homepage
+JNIPP
+homepage
+jpeg-encoder
+homepage
+jpeg-js
+homepage
+JSON for Modern C++
+homepage
+json5
+homepage
+jsoncpp
+homepage
+JSpecify annotations
+homepage
+JSZip
+homepage
+jxl
+homepage
+jxl_macros
+homepage
+jxl_simd
+homepage
+jxl_transforms
+homepage
+Khronos header files
+homepage
+Kotlin Android Extensions Runtime
+homepage
+Kotlin Standard Library
+homepage
+kotlinx-coroutines-android
+homepage
+kotlinx-coroutines-core
+homepage
+kotlinx-coroutines-guava
+homepage
+kotlinx-coroutines-play-services
+homepage
+kotlinx-serialization-core
+homepage
+kotlinx-serialization-json
+homepage
+lazy_static
+homepage
+LeakCanary - GC Utilities
+homepage
+LeakCanary Android
+homepage
+LeakCanary Android Utils
+homepage
+LeakCanary Core
+homepage
+LeakCanary for Android - Core
+homepage
+LeakCanary Object Watcher
+homepage
+LeakCanary Object Watcher for Android - Auto installing
+homepage
+LeakCanary Object Watcher for Android - Core
+homepage
+LeakCanary Object Watcher for Android extension: Android X fragments support
+homepage
+Leanback
+homepage
+Leanback Grid
+homepage
+Leanback Preference
+homepage
+legacy-javascript
+homepage
+Lens Protos
+homepage
+LevelDB: A Fast Persistent Key-Value Store
+homepage
+libaddressinput
+homepage
+libbrlapi
+homepage
+libc
+homepage
+libcxx
+homepage
+libcxxabi
+homepage
+libei
+homepage
+libgav1
+homepage
+libipp
+homepage
+libjingle XMPP and xmllite libraries
+homepage
+libjpeg-turbo
+homepage
+libm
+homepage
+libprotobuf-mutator
+homepage
+libsecret
+homepage
+libsrtp
+homepage
+Libtess2
+homepage
+LibTIFF
+homepage
+libunwind
+homepage
+libusbx
+homepage
+libutf
+homepage
+libvpx
+homepage
+libx11
+homepage
+libxcb-keysyms
+homepage
+libxml
+homepage
+libxslt
+homepage
+libyuv
+homepage
+libzip
+homepage
+Lifecycle Kotlin Extensions
+homepage
+Lifecycle LiveData
+homepage
+Lifecycle LiveData Core
+homepage
+Lifecycle Process
+homepage
+Lifecycle Runtime
+homepage
+Lifecycle Runtime Compose
+homepage
+Lifecycle Service
+homepage
+Lifecycle ViewModel
+homepage
+Lifecycle ViewModel Compose
+homepage
+Lifecycle ViewModel Kotlin Extensions
+homepage
+Lifecycle ViewModel with SavedState
+homepage
+Lifecycle-Common
+homepage
+Lifecycle-Common for Java 8
+homepage
+Lighthouse
+homepage
+Lighthouse i18n.js
+homepage
+Lit
+homepage
+Lit
+homepage
+Lit
+homepage
+litemap
+homepage
+LiteRT
+homepage
+Little CMS
+homepage
+LiveData Core Kotlin Extensions
+homepage
+LiveData Kotlin Extensions
+homepage
+llguidance
+homepage
+llvm-libc
+homepage
+loader
+homepage
+lock_api
+homepage
+log
+homepage
+Lottie
+homepage
+Lottie Web
+homepage
+lottie_ios
+homepage
+LZMA SDK
+homepage
+Mann-Whitney U Test
+homepage
+Marked
+homepage
+Material color utilities
+homepage
+Material Components for Android
+homepage
+Material Web Components
+homepage
+Media
+homepage
+Media3 common module
+homepage
+Media3 Container module
+homepage
+Media3 database module
+homepage
+Media3 DataSource module
+homepage
+Media3 decoder module
+homepage
+Media3 ExoPlayer module
+homepage
+Media3 Extractor module
+homepage
+Media3 Session module
+homepage
+Media3 UI module
+homepage
+MediaController Android sample.
+homepage
+MediaPipe
+homepage
+Mediapipe Tasks Vision
+homepage
+MediaRouter
+homepage
+MediaStoreUtils Android sample.
+homepage
+memchr
+homepage
+memo-map
+homepage
+messageformat
+homepage
+Metrics Protos
+homepage
+Microsoft Authentication Library for JavaScript (MSAL.js) for Browser-Based Single-Page Applications
+homepage
+Microsoft Edge WebView2 SDK
+homepage
+minigbm
+homepage
+minijinja
+homepage
+miniz_oxide
+homepage
+mitt
+homepage
+mitt
+homepage
+ml_dtypes
+homepage
+modp base64 decoder
+homepage
+Motion Prediction
+homepage
+moxcms
+homepage
+Mozilla Personal Security Manager
+homepage
+Mozilla Windows Cert code
+homepage
+murmur3
+homepage
+Navigation Common
+homepage
+Navigation Event
+homepage
+Navigation Runtime
+homepage
+NavigationEvent Compose
+homepage
+Nearby Connections Library
+homepage
+Netscape Portable Runtime (NSPR)
+homepage
+num-bigint
+homepage
+num-complex
+homepage
+num-derive
+homepage
+num-integer
+homepage
+num-rational
+homepage
+num-traits
+homepage
+NVidia Control X Extension Library
+homepage
+oak
+homepage
+Oboe.js
+homepage
+okio
+homepage
+Omnibox Protos
+homepage
+once_cell
+homepage
+One Euro Filter
+homepage
+Open Screen Protocol Library
+homepage
+OpenGL-Registry
+homepage
+OpenH264
+homepage
+OpenJPEG
+homepage
+OpenXR SDK
+homepage
+opus
+homepage
+ordered-float
+homepage
+OTS (OpenType Sanitizer)
+homepage
+Paging-Common
+homepage
+Paging-Common Kotlin Extensions
+homepage
+Paging-Compose
+homepage
+Paging-Runtime
+homepage
+pako
+homepage
+Palette
+homepage
+Parcelize Runtime
+homepage
+parking_lot
+homepage
+parking_lot_core
+homepage
+parsel
+homepage
+Paul Hsieh's SuperFastHash
+homepage
+PDFium
+homepage
+Perfetto
+homepage
+PFFFT: a pretty fast FFT.
+homepage
+play-services-auth
+homepage
+play-services-auth-api-phone
+homepage
+play-services-auth-base
+homepage
+play-services-auth-blockstore
+homepage
+play-services-base
+homepage
+play-services-basement
+homepage
+play-services-cast
+homepage
+play-services-cast-framework
+homepage
+play-services-clearcut
+homepage
+play-services-cloud-messaging
+homepage
+play-services-fido
+homepage
+play-services-flags
+homepage
+play-services-gcm
+homepage
+play-services-identity-credentials
+homepage
+play-services-iid
+homepage
+play-services-instantapps
+homepage
+play-services-location
+homepage
+play-services-phenotype
+homepage
+play-services-stats
+homepage
+play-services-tasks
+homepage
+play-services-time
+homepage
+play-services-vision
+homepage
+play-services-vision-common
+homepage
+Plumber for Android - Core
+homepage
+png
+homepage
+Polymer
+homepage
+Polymer
+homepage
+potential_utf
+homepage
+pprof
+homepage
+Preference
+homepage
+Preferences DataStore
+homepage
+Preferences DataStore Core
+homepage
+Preferences DataStore Proto
+homepage
+Preferences External Protobuf
+homepage
+primal-check
+homepage
+Print
+homepage
+Privacy Sandbox for Ad Services
+homepage
+Private Join and Compute subset
+homepage
+proc-macro2
+homepage
+Profile Installer
+homepage
+Protected Content Interface for libva
+homepage
+Protocol Buffers
+homepage
+Protocol Buffers (javascript)
+homepage
+Protocol Buffers [Lite]
+homepage
+protodatastore-cpp
+homepage
+PSM (Private Set Membership) client side
+homepage
+pthreadpool
+homepage
+Public Khronos WebGL Conformance Tests repository
+homepage
+Puffin deterministic deflate recompressor
+homepage
+Puppeteer Core
+homepage
+pxfm
+homepage
+pybind11
+homepage
+qr_code
+homepage
+QUICHE
+homepage
+quote
+homepage
+rapidhash
+homepage
+re2 - an efficient, principled regular expression library
+homepage
+reactive-streams
+homepage
+read-fonts
+homepage
+readability
+homepage
+Recurrent neural network for audio noise reduction
+homepage
+RecyclerView
+homepage
+ref-cast
+homepage
+ref-cast-impl
+homepage
+regex-automata
+homepage
+regex-lite
+homepage
+regex-syntax
+homepage
+resb
+homepage
+Resource Inspection - Annotations
+homepage
+review
+homepage
+rjsmin
+homepage
+Room-Common
+homepage
+Room-Runtime
+homepage
+rustfft
+homepage
+rustversion
+homepage
+RxAndroid
+homepage
+RxJava
+homepage
+rxjs
+homepage
+ryu
+homepage
+Saved State
+homepage
+Saved State Compose
+homepage
+SavedState Kotlin Extensions
+homepage
+scopeguard
+homepage
+ScreenAI Library
+homepage
+Search Engines resources
+homepage
+Secure Message
+homepage
+Selenium Atoms
+homepage
+Sentencepiece
+homepage
+serde
+homepage
+serde_core
+homepage
+serde_derive
+homepage
+serde_json
+homepage
+serde_json_lenient
+homepage
+Sframe
+homepage
+sfv
+homepage
+shared-brotli-patch-decoder
+homepage
+Shark
+homepage
+Shark for Android heaps
+homepage
+Shark Graph
+homepage
+Shark Hprof
+homepage
+Shark Log
+homepage
+simd-adler32
+homepage
+simdutf unicode transcoder
+homepage
+Simple Homomorphic Encryption Library with Lattices
+homepage
+simplejson
+homepage
+Sizzle
+homepage
+skera
+homepage
+Skia
+homepage
+skrifa
+homepage
+Sliding Pane Layout
+homepage
+smallvec
+homepage
+SMHasher
+homepage
+Snappy: A fast compressor/decompressor
+homepage
+source-map-scopes-codec
+homepage
+Speech Dispatcher
+homepage
+Speech Rule Engine
+homepage
+SPIR-V Headers
+homepage
+SPIR-V Tools
+homepage
+SPIRV-Headers
+homepage
+SPIRV-Tools
+homepage
+spl sqrt floor
+homepage
+SQLite
+homepage
+sqlite
+homepage
+SQLite Framework Integration
+homepage
+stable_deref_trait
+homepage
+Startup Runtime
+homepage
+static_assertions
+homepage
+strck
+homepage
+strength_reduce
+homepage
+strum
+homepage
+strum_macros
+homepage
+subtle
+homepage
+SwiftShader
+homepage
+Swipe Refresh Layout
+homepage
+symphonia
+homepage
+symphonia-bundle-flac
+homepage
+symphonia-bundle-mp3
+homepage
+symphonia-codec-pcm
+homepage
+symphonia-codec-vorbis
+homepage
+symphonia-common
+homepage
+symphonia-core
+homepage
+symphonia-metadata
+homepage
+syn
+homepage
+synstructure
+homepage
+Tamachiyomi
+homepage
+temporal_capi
+homepage
+temporal_rs
+homepage
+TensorFlow Lite
+homepage
+TensorFlow Lite Support
+homepage
+TensorFlow Models
+homepage
+TensorFlow Text
+homepage
+tensorflow-federated
+homepage
+termcolor
+homepage
+Text Fragments Polyfill
+homepage
+The Chromium Project
+homepage
+The Diff Match and Patch libraries offer robust algorithms to perform the operations required for synchronizing plain text.
+homepage
+The ITU G.722 codec, encode and decode part.
+homepage
+The ruy matrix multiplication library
+homepage
+The USB ID Repository
+homepage
+third-party-web
+homepage
+thiserror
+homepage
+thiserror-impl
+homepage
+timezone_provider
+homepage
+Tiny CBOR
+homepage
+tinystr
+homepage
+toktrie
+homepage
+Tracing
+homepage
+Tracing Kotlin Extensions
+homepage
+Transition
+homepage
+transport-api
+homepage
+transport-backend-cct
+homepage
+transport-runtime
+homepage
+transpose
+homepage
+TV Provider
+homepage
+typed-arena
+homepage
+typed-path
+homepage
+UKey2
+homepage
+Unicode Common Locale Data Repository
+homepage
+unicode-ident
+homepage
+unicode-width
+homepage
+UnRAR source for decompressing .RAR and other files.
+homepage
+URI Template Parser
+homepage
+URL Pattern Library
+homepage
+url_parse
+homepage
+utf16_iter
+homepage
+utf8_iter
+homepage
+uuid
+homepage
+v4l-utils
+homepage
+V8 fork of fdlibm
+homepage
+V8 JavaScript Engine
+homepage
+VectorDrawable
+homepage
+VersionedParcelable
+homepage
+ViewPager
+homepage
+ViewPager2
+homepage
+Volk Meta loader for Vulkan API
+homepage
+Vulkan API headers
+homepage
+Vulkan Deps
+homepage
+Vulkan Loader Components
+homepage
+VulkanMemoryAllocator
+homepage
+Wasmparser
+homepage
+Web Vitals
+homepage
+WebKit
+homepage
+Webkit
+homepage
+WebM container parser and writer.
+homepage
+WebP image encoder/decoder
+homepage
+WebRTC
+homepage
+Wicked Good XPath
+homepage
+winapi-util
+homepage
+WindowManager
+homepage
+WindowManager Core
+homepage
+Windows Template Library (WTL)
+homepage
+windows-link
+homepage
+windows-sys
+homepage
+windows-targets
+homepage
+windows_aarch64_msvc
+homepage
+windows_i686_msvc
+homepage
+windows_x86_64_msvc
+homepage
+woff2
+homepage
+WorkManager Multiprocess
+homepage
+WorkManager Runtime
+homepage
+write-fonts
+homepage
+write16
+homepage
+writeable
+homepage
+Wuffs (Wrangling Untrusted File Formats Safely)
+homepage
+x11proto
+homepage
+xdg-user-dirs
+homepage
+xml
+homepage
+XNNPACK
+homepage
+xnu
+homepage
+XR ARCore OpenXR
+homepage
+XR ARCore Runtime
+homepage
+XR Manifest Runtime
+homepage
+XR Projected ARCore
+homepage
+XR Runtime
+homepage
+XR Runtime interfaces
+homepage
+XR SceneCore
+homepage
+XR SceneCore Runtime
+homepage
+XR SceneCore Spatial Core
+homepage
+XR SceneCore Spatial Rendering
+homepage
+xr.runtime:runtime-openxr
+homepage
+xxHash
+homepage
+yoke
+homepage
+yoke-derive
+homepage
+zerofrom
+homepage
+zerofrom-derive
+homepage
+zeroize
+homepage
+zeroize_derive
+homepage
+zerotrie
+homepage
+zerovec
+homepage
+zerovec-derive
+homepage
+zip
+homepage
+zlib
+homepage
+zmij
+homepage
+zod
+homepage
+zoneinfo64
+homepage
+Zstandard
+homepage
+zune-core
+homepage
+zune-jpeg
+homepage

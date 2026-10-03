@@ -1,0 +1,110 @@
+{
+  "url": "https://pypi.org/pypi/py-serializable/2.1.0/json",
+  "response_sha256": "e1f417456edabbaeff4b7d40d4e1e05017010843f66092bc064bcc301ffe1f63",
+  "info": {
+    "author": "Paul Horton",
+    "author_email": "paul.horton@owasp.org",
+    "bugtrack_url": null,
+    "classifiers": [
+      "Development Status :: 5 - Production/Stable",
+      "Intended Audience :: Developers",
+      "Intended Audience :: Information Technology",
+      "License :: OSI Approved :: Apache Software License",
+      "Programming Language :: Python :: 3",
+      "Programming Language :: Python :: 3.10",
+      "Programming Language :: Python :: 3.11",
+      "Programming Language :: Python :: 3.12",
+      "Programming Language :: Python :: 3.13",
+      "Programming Language :: Python :: 3.8",
+      "Programming Language :: Python :: 3.9",
+      "Topic :: Software Development",
+      "Typing :: Typed"
+    ],
+    "description": "# py-serializable\n\n[![shield_pypi-version]][link_pypi]\n[![shield_conda-forge-version]][link_conda-forge]\n[![shield_rtfd]][link_rtfd]\n[![shield_gh-workflow-test]][link_gh-workflow-test]\n[![shield_license]][license_file]\n[![shield_twitter-follow]][link_twitter]\n\n----\n\nThis Pythonic library provides a framework for serializing/deserializing Python classes to and from JSON and XML.\n\nIt relies upon the use of \n[Python Properties](https://docs.python.org/3/library/functions.html?highlight=property#property) in your Python\nclasses.\n\nRead the full [documentation][link_rtfd] for more details.\n\n## Installation\n\nInstall this from [PyPi.org][link_pypi] using your preferred Python package manager.\n\nExample using `pip`:\n\n```shell\npip install py-serializable\n```\n\nExample using `poetry`:\n\n```shell\npoetry add py-serializable\n```\n\n## Usage\n\nSee the full [documentation][link_rtfd] or our [unit tests][link_unit_tests] for usage and details.\n\n## Python Support\n\nWe endeavour to support all functionality for all [current actively supported Python versions](https://www.python.org/downloads/).\nHowever, some features may not be possible/present in older Python versions due to their lack of support.\n\n## Contributing\n\nFeel free to open issues, bugreports or pull requests.  \nSee the [CONTRIBUTING][contributing_file] file for details.\n\n## Copyright & License\n\n`py-serializable` is Copyright (c) Paul Horton 2022. All Rights Reserved.\n\nPermission to modify and redistribute is granted under the terms of the Apache 2.0 license.  \nSee the [LICENSE][license_file] file for the full license.\n\n[license_file]: https://github.com/madpah/serializable/blob/main/LICENSE\n[contributing_file]: https://github.com/madpah/serializable/blob/main/CONTRIBUTING.md\n[link_rtfd]: https://py-serializable.readthedocs.io/\n\n[shield_gh-workflow-test]: https://img.shields.io/github/actions/workflow/status/madpah/serializable/python.yml?branch=main \"build\"\n[shield_rtfd]: https://img.shields.io/readthedocs/py-serializable?logo=readthedocs&logoColor=white\n[shield_pypi-version]: https://img.shields.io/pypi/v/py-serializable?logo=Python&logoColor=white&label=PyPI \"PyPI\"\n[shield_conda-forge-version]: https://img.shields.io/conda/vn/conda-forge/py-serializable?logo=anaconda&logoColor=white&label=conda-forge \"conda-forge\"\n[shield_license]: https://img.shields.io/github/license/madpah/serializable?logo=open%20source%20initiative&logoColor=white \"license\"\n[shield_twitter-follow]: https://img.shields.io/badge/Twitter-follow-blue?logo=Twitter&logoColor=white \"twitter follow\"\n[link_gh-workflow-test]: https://github.com/madpah/serializable/actions/workflows/python.yml?query=branch%3Amain\n[link_pypi]: https://pypi.org/project/py-serializable/\n[link_conda-forge]: https://anaconda.org/conda-forge/py-serializable\n[link_twitter]: https://twitter.com/madpah\n[link_unit_tests]: https://github.com/madpah/serializable/blob/main/tests\n\n",
+    "description_content_type": "text/markdown",
+    "docs_url": null,
+    "download_url": null,
+    "downloads": {
+      "last_day": -1,
+      "last_month": -1,
+      "last_week": -1
+    },
+    "dynamic": null,
+    "home_page": null,
+    "keywords": "serialization, deserialization, JSON, XML",
+    "license": "Apache-2.0",
+    "license_expression": null,
+    "license_files": null,
+    "maintainer": "Jan Kowalleck",
+    "maintainer_email": "jan.kowalleck@gmail.com",
+    "name": "py-serializable",
+    "package_url": "https://pypi.org/project/py-serializable/",
+    "platform": null,
+    "project_url": "https://pypi.org/project/py-serializable/",
+    "project_urls": {
+      "Bug Tracker": "https://github.com/madpah/serializable/issues",
+      "Documentation": "https://py-serializable.readthedocs.io/",
+      "Homepage": "https://github.com/madpah/serializable#readme",
+      "Repository": "https://github.com/madpah/serializable"
+    },
+    "provides_extra": null,
+    "release_url": "https://pypi.org/project/py-serializable/2.1.0/",
+    "requires_dist": [
+      "defusedxml<0.8.0,>=0.7.1"
+    ],
+    "requires_python": "<4.0,>=3.8",
+    "summary": "Library for serializing and deserializing Python Objects to and from JSON and XML.",
+    "version": "2.1.0",
+    "yanked": false,
+    "yanked_reason": null
+  },
+  "urls": [
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "37f9f541366de7038094960f301642ed46dc82f3701358542dd8e200bd5bef57"
+      },
+      "digests": {
+        "blake2b_256": "9bbf7595e817906a29453ba4d99394e781b6fabe55d21f3c15d240f85dd06bb1",
+        "md5": "1ac75f0a28e8576d33017d4e03b6d802",
+        "sha256": "b56d5d686b5a03ba4f4db5e769dc32336e142fc3bd4d68a8c25579ebb0a67304"
+      },
+      "downloads": -1,
+      "filename": "py_serializable-2.1.0-py3-none-any.whl",
+      "has_sig": false,
+      "md5_digest": "1ac75f0a28e8576d33017d4e03b6d802",
+      "packagetype": "bdist_wheel",
+      "python_version": "py3",
+      "requires_python": "<4.0,>=3.8",
+      "size": 23045,
+      "upload_time": "2025-07-21T09:56:46",
+      "upload_time_iso_8601": "2025-07-21T09:56:46.848289Z",
+      "url": "https://files.pythonhosted.org/packages/9b/bf/7595e817906a29453ba4d99394e781b6fabe55d21f3c15d240f85dd06bb1/py_serializable-2.1.0-py3-none-any.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": false,
+      "digests": {
+        "blake2b_256": "7321d250cfca8ff30c2e5a7447bc13861541126ce9bd4426cd5d0c9f08b5547d",
+        "md5": "53b8eb20666b5be6aa1c0363207c111f",
+        "sha256": "9d5db56154a867a9b897c0163b33a793c804c80cee984116d02d49e4578fc103"
+      },
+      "downloads": -1,
+      "filename": "py_serializable-2.1.0.tar.gz",
+      "has_sig": false,
+      "md5_digest": "53b8eb20666b5be6aa1c0363207c111f",
+      "packagetype": "sdist",
+      "python_version": "source",
+      "requires_python": "<4.0,>=3.8",
+      "size": 52368,
+      "upload_time": "2025-07-21T09:56:48",
+      "upload_time_iso_8601": "2025-07-21T09:56:48.070686Z",
+      "url": "https://files.pythonhosted.org/packages/73/21/d250cfca8ff30c2e5a7447bc13861541126ce9bd4426cd5d0c9f08b5547d/py_serializable-2.1.0.tar.gz",
+      "yanked": false,
+      "yanked_reason": null
+    }
+  ],
+  "wheel_digest_verified": true
+}

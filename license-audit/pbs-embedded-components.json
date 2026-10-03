@@ -1,0 +1,292 @@
+[
+  {
+    "name": "_bz2",
+    "parent": "CPython-3.12.13",
+    "classification": "THIRD-PARTY",
+    "status": "NOT VERIFIED",
+    "build_records": [
+      {
+        "in_core": false,
+        "init_fn": "PyInit__bz2",
+        "license_paths": [
+          "licenses/LICENSE.bzip2.txt"
+        ],
+        "license_public_domain": null,
+        "licenses": [
+          "bzip2-1.0.6"
+        ],
+        "links": [],
+        "objs": [
+          "build/extensions/_bz2/_bz2module.obj",
+          "build/extensions/_bz2/blocksort.obj",
+          "build/extensions/_bz2/bzlib.obj",
+          "build/extensions/_bz2/compress.obj",
+          "build/extensions/_bz2/crctable.obj",
+          "build/extensions/_bz2/decompress.obj",
+          "build/extensions/_bz2/huffman.obj",
+          "build/extensions/_bz2/randtable.obj"
+        ],
+        "required": false,
+        "shared_lib": "install/DLLs/_bz2.pyd",
+        "static_lib": null,
+        "variant": "default"
+      }
+    ]
+  },
+  {
+    "name": "_ctypes",
+    "parent": "CPython-3.12.13",
+    "classification": "THIRD-PARTY",
+    "status": "NOT VERIFIED",
+    "build_records": [
+      {
+        "in_core": false,
+        "init_fn": "PyInit__ctypes",
+        "license_paths": [
+          "licenses/LICENSE.libffi.txt"
+        ],
+        "license_public_domain": null,
+        "licenses": [
+          "MIT"
+        ],
+        "links": [
+          {
+            "name": "libffi-8",
+            "path_dynamic": "install/DLLs/libffi-8.dll"
+          }
+        ],
+        "objs": [
+          "build/extensions/_ctypes/_ctypes.obj",
+          "build/extensions/_ctypes/callbacks.obj",
+          "build/extensions/_ctypes/callproc.obj",
+          "build/extensions/_ctypes/cfield.obj",
+          "build/extensions/_ctypes/malloc_closure.obj",
+          "build/extensions/_ctypes/stgdict.obj"
+        ],
+        "required": false,
+        "shared_lib": "install/DLLs/_ctypes.pyd",
+        "static_lib": null,
+        "variant": "default"
+      }
+    ]
+  },
+  {
+    "name": "_hashlib",
+    "parent": "CPython-3.12.13",
+    "classification": "THIRD-PARTY",
+    "status": "NOT VERIFIED",
+    "build_records": [
+      {
+        "in_core": false,
+        "init_fn": "PyInit__hashlib",
+        "license_paths": [
+          "licenses/LICENSE.openssl-3.txt"
+        ],
+        "license_public_domain": null,
+        "licenses": [
+          "Apache-2.0"
+        ],
+        "links": [
+          {
+            "name": "ws2_32",
+            "system": true
+          },
+          {
+            "name": "libcrypto-1_1-x64",
+            "path_dynamic": "install/DLLs/libcrypto-1_1-x64.dll"
+          }
+        ],
+        "objs": [
+          "build/extensions/_hashlib/_hashopenssl.obj"
+        ],
+        "required": false,
+        "shared_lib": "install/DLLs/_hashlib.pyd",
+        "static_lib": null,
+        "variant": "default"
+      }
+    ]
+  },
+  {
+    "name": "_lzma",
+    "parent": "CPython-3.12.13",
+    "classification": "THIRD-PARTY",
+    "status": "NOT VERIFIED",
+    "build_records": [
+      {
+        "in_core": false,
+        "init_fn": "PyInit__lzma",
+        "license_paths": [
+          "licenses/LICENSE.liblzma.txt"
+        ],
+        "license_public_domain": null,
+        "licenses": [
+          "0BSD"
+        ],
+        "links": [],
+        "objs": [
+          "build/extensions/_lzma/_lzmamodule.obj"
+        ],
+        "required": false,
+        "shared_lib": "install/DLLs/_lzma.pyd",
+        "static_lib": null,
+        "variant": "default"
+      }
+    ]
+  },
+  {
+    "name": "_sqlite3",
+    "parent": "CPython-3.12.13",
+    "classification": "THIRD-PARTY",
+    "status": "NOT VERIFIED",
+    "build_records": [
+      {
+        "in_core": false,
+        "init_fn": "PyInit__sqlite3",
+        "license_paths": [
+          "licenses/LICENSE.sqlite.txt"
+        ],
+        "license_public_domain": true,
+        "licenses": [],
+        "links": [
+          {
+            "name": "sqlite3",
+            "path_dynamic": "install/DLLs/sqlite3.dll"
+          }
+        ],
+        "objs": [
+          "build/extensions/_sqlite3/blob.obj",
+          "build/extensions/_sqlite3/connection.obj",
+          "build/extensions/_sqlite3/cursor.obj",
+          "build/extensions/_sqlite3/microprotocols.obj",
+          "build/extensions/_sqlite3/module.obj",
+          "build/extensions/_sqlite3/prepare_protocol.obj",
+          "build/extensions/_sqlite3/row.obj",
+          "build/extensions/_sqlite3/statement.obj",
+          "build/extensions/_sqlite3/util.obj"
+        ],
+        "required": false,
+        "shared_lib": "install/DLLs/_sqlite3.pyd",
+        "static_lib": null,
+        "variant": "default"
+      }
+    ]
+  },
+  {
+    "name": "_ssl",
+    "parent": "CPython-3.12.13",
+    "classification": "THIRD-PARTY",
+    "status": "NOT VERIFIED",
+    "build_records": [
+      {
+        "in_core": false,
+        "init_fn": "PyInit__ssl",
+        "license_paths": [
+          "licenses/LICENSE.openssl-3.txt"
+        ],
+        "license_public_domain": null,
+        "licenses": [
+          "Apache-2.0"
+        ],
+        "links": [
+          {
+            "name": "crypt32",
+            "system": true
+          },
+          {
+            "name": "ws2_32",
+            "system": true
+          },
+          {
+            "name": "libcrypto-1_1-x64",
+            "path_dynamic": "install/DLLs/libcrypto-1_1-x64.dll"
+          },
+          {
+            "name": "libssl-1_1-x64",
+            "path_dynamic": "install/DLLs/libssl-1_1-x64.dll"
+          }
+        ],
+        "objs": [
+          "build/extensions/_ssl/_ssl.obj"
+        ],
+        "required": false,
+        "shared_lib": "install/DLLs/_ssl.pyd",
+        "static_lib": null,
+        "variant": "default"
+      }
+    ]
+  },
+  {
+    "name": "_tkinter",
+    "parent": "CPython-3.12.13",
+    "classification": "THIRD-PARTY",
+    "status": "NOT VERIFIED",
+    "build_records": [
+      {
+        "in_core": false,
+        "init_fn": "PyInit__tkinter",
+        "license_paths": [
+          "licenses/LICENSE.tcl.txt",
+          "licenses/LICENSE.tix.txt"
+        ],
+        "license_public_domain": null,
+        "licenses": [
+          "TCL"
+        ],
+        "links": [
+          {
+            "name": "$(tcltk",
+            "system": true
+          },
+          {
+            "name": "tcl86t",
+            "path_dynamic": "install/DLLs/tcl86t.dll"
+          },
+          {
+            "name": "tk86t",
+            "path_dynamic": "install/DLLs/tk86t.dll"
+          }
+        ],
+        "objs": [
+          "build/extensions/_tkinter/_tkinter.obj",
+          "build/extensions/_tkinter/tkappinit.obj"
+        ],
+        "required": false,
+        "shared_lib": "install/DLLs/_tkinter.pyd",
+        "static_lib": null,
+        "variant": "default"
+      }
+    ]
+  },
+  {
+    "name": "_uuid",
+    "parent": "CPython-3.12.13",
+    "classification": "THIRD-PARTY",
+    "status": "NOT VERIFIED",
+    "build_records": [
+      {
+        "in_core": false,
+        "init_fn": "PyInit__uuid",
+        "license_paths": [
+          "licenses/LICENSE.libuuid.txt"
+        ],
+        "license_public_domain": null,
+        "licenses": [
+          "BSD-3-Clause"
+        ],
+        "links": [
+          {
+            "name": "rpcrt4",
+            "system": true
+          }
+        ],
+        "objs": [
+          "build/extensions/_uuid/_uuidmodule.obj"
+        ],
+        "required": false,
+        "shared_lib": "install/DLLs/_uuid.pyd",
+        "static_lib": null,
+        "variant": "default"
+      }
+    ]
+  }
+]

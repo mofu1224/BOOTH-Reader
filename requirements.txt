@@ -1,0 +1,25 @@
+# BOOTH-Reader runtime dependencies.
+#
+# Playwright is included on purpose. BOOTH publishes no purchase API, so a
+# real-browser login is the only way to authenticate; a "minimal" install
+# without it produces a tool that cannot do its job at all.
+#
+# Runtime version floors for maintainer/compatibility workflows.
+# Normal clone startup uses the complete hash-pinned portable lock and vendor/,
+# including its browser; no package/browser download is performed at startup.
+#
+# Version floors, and why they are floors:
+#   - fastapi >= 0.141  excludes a malicious 0.136.3 release (MAL-2026-4750)
+#   - playwright >= 1.56 includes the CVE-2025-9611 Origin-validation fix
+#   - lxml is deliberately absent: HTML parsing uses the stdlib "html.parser"
+#     backend, and lxml < 6.1.1 has known CVEs (CVE-2026-49825, CVE-2026-41066).
+#     If a transitive dependency ever pulls it in, `pip check` plus the
+#     dependency audit in CI will flag it.
+#
+# For a byte-reproducible install use requirements-lock.txt instead.
+httpx>=0.28
+beautifulsoup4>=4.12
+fastapi>=0.141
+uvicorn>=0.30
+pydantic>=2.0
+playwright>=1.56

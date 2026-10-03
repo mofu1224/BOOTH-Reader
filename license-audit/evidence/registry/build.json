@@ -1,0 +1,120 @@
+{
+  "url": "https://pypi.org/pypi/build/1.6.1/json",
+  "response_sha256": "064e9dcb80e948b5de7a841c3fd9b5644a980eb27bb644fb7f562b7d773b157b",
+  "info": {
+    "author": null,
+    "author_email": "Filipe Laíns <lains@riseup.net>, Bernát Gábor <gaborjbernat@gmail.com>, layday <layday@protonmail.com>, Henry Schreiner <henryschreineriii@gmail.com>",
+    "bugtrack_url": null,
+    "classifiers": [
+      "Programming Language :: Python :: 3",
+      "Programming Language :: Python :: 3 :: Only",
+      "Programming Language :: Python :: 3.10",
+      "Programming Language :: Python :: 3.11",
+      "Programming Language :: Python :: 3.12",
+      "Programming Language :: Python :: 3.13",
+      "Programming Language :: Python :: 3.14",
+      "Programming Language :: Python :: 3.15",
+      "Programming Language :: Python :: Implementation :: CPython",
+      "Programming Language :: Python :: Implementation :: PyPy"
+    ],
+    "description": "# build\n\n[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/pypa/build/main.svg)](https://results.pre-commit.ci/latest/github/pypa/build/main)\n[![CI test](https://github.com/pypa/build/actions/workflows/test.yml/badge.svg)](https://github.com/pypa/build/actions/workflows/test.yml)\n[![codecov](https://codecov.io/gh/pypa/build/branch/main/graph/badge.svg)](https://codecov.io/gh/pypa/build)\n\n[![Documentation Status](https://readthedocs.org/projects/pypa-build/badge/?version=latest)](https://build.pypa.io/en/latest/?badge=latest)\n[![PyPI version](https://badge.fury.io/py/build.svg)](https://pypi.org/project/build/)\n[![Discord](https://img.shields.io/discord/803025117553754132?label=Discord%20chat%20%23build)](https://discord.gg/pypa)\n\nA simple, correct Python build frontend.\n\nSee the [documentation](https://build.pypa.io) for more information.\n\n### Installation\n\n`build` can be installed via `pip` or an equivalent via:\n\n```console\n$ pip install build\n```\n\n### Usage\n\n```console\n$ python -m build\n```\n\nThis will build the package in an isolated environment, generating a source-distribution and wheel in the directory\n`dist/`. See the [documentation](https://build.pypa.io) for full information. Build is also available via the command\nline as `pyproject-build` once installed.\n\n### Common arguments\n\n- `--sdist` (`-s`): Produce just an SDist\n- `--wheel` (`-w`): Produce just a wheel\n- `--metadata`: Produce just the metadata as JSON. Cannot be used with `--sdist`/`--wheel`.\n- `-C<option>=<value>`: A Config-setting, the PEP 517 way of passing options to a backend. Can be passed multiple times.\n  Matching options will make a list. Note that setuptools has very limited support.\n- `--config-json=<value>`: An alternative way to pass in complex config settings as JSON strings. Can't be used with\n  `-C`.\n- `--installer`: Pick an installer for the isolated build (`pip` or `uv`).\n- `--no-isolation` (`-n`): Disable build isolation.\n- `--skip-dependency-check` (`-x`): Disable dependency checking when not isolated; this should be done if some\n  requirements or version ranges are not required for non-isolated builds.\n- `--outdir` (`-o`): The output directory (defaults to `dist`)\n\nSome common combinations of arguments:\n\n- `--sdist --wheel` (`-sw`): Produce an SDist and a wheel, both from the source distribution. The default (if no flag is\n  passed) is to build an SDist and then build a wheel _from_ the SDist.\n- `-nx`: Disable build isolation and dependency checking. Identical to pip and uv's `--no-build-isolation` flag.\n- `--metadata | jq -r .version`: get the version in a bash-like environment.\n\n### Integration with other tools\n\n#### pipx\n\nIf you use [pipx], such as in GitHub Actions, the following command will download and run build in one step:\n\n```console\n$ pipx run build\n```\n\n#### uv\n\nIf you want to use [uv] to speed up the virtual environment creation, you can use `--installer=uv`. You can get a Python\nwheel for `uv` with the `[uv]` extra. For example, using pipx like above:\n\n```console\n$ pipx run 'build[uv]' --installer uv\n```\n\nIf you already have uv, you don't need the extra. For example:\n\n```console\n$ uvx --from build pyproject-build --installer uv\n```\n\n#### cibuildwheel\n\nIf you are using [cibuildwheel], build is integrated and the default builder in 3.0+. If you want to use `uv` as the\ninstaller, you can use:\n\n```toml\n[tool.cibuildwheel]\nbuild-frontend = \"build[uv]\"\n```\n\n(Be sure to pre-install uv before running cibuildwheel for this one!)\n\n#### Conda-forge\n\nOn conda-forge, this package is called [python-build].\n\n### Code of Conduct\n\nEveryone interacting with build's codebase, issue trackers, chat rooms, and mailing lists is expected to follow the\n[PSF Code of Conduct].\n\n[cibuildwheel]: https://cibuildwheel.pypa.io\n[pipx]: https://pipx.pypa.io\n[psf code of conduct]: https://github.com/pypa/.github/blob/main/CODE_OF_CONDUCT.md\n[python-build]: https://github.com/conda-forge/python-build-feedstock\n[uv]: https://docs.astral.sh/uv/\n\n",
+    "description_content_type": "text/markdown",
+    "docs_url": null,
+    "download_url": null,
+    "downloads": {
+      "last_day": -1,
+      "last_month": -1,
+      "last_week": -1
+    },
+    "dynamic": null,
+    "home_page": null,
+    "keywords": null,
+    "license": null,
+    "license_expression": "MIT",
+    "license_files": [
+      "LICENSE"
+    ],
+    "maintainer": null,
+    "maintainer_email": null,
+    "name": "build",
+    "package_url": "https://pypi.org/project/build/",
+    "platform": null,
+    "project_url": "https://pypi.org/project/build/",
+    "project_urls": {
+      "changelog": "https://build.pypa.io/en/stable/changelog.html",
+      "homepage": "https://build.pypa.io",
+      "issues": "https://github.com/pypa/build/issues",
+      "source": "https://github.com/pypa/build"
+    },
+    "provides_extra": [
+      "keyring",
+      "uv",
+      "virtualenv"
+    ],
+    "release_url": "https://pypi.org/project/build/1.6.1/",
+    "requires_dist": [
+      "packaging>=24.0",
+      "pyproject_hooks",
+      "colorama; os_name == \"nt\"",
+      "importlib-metadata>=4.6; python_full_version < \"3.10.2\"",
+      "tomli>=1.1.0; python_version < \"3.11\"",
+      "keyring; extra == \"keyring\"",
+      "uv>=0.1.18; extra == \"uv\"",
+      "virtualenv>=20.36.1; extra == \"virtualenv\""
+    ],
+    "requires_python": ">=3.10",
+    "summary": "A simple, correct Python build frontend",
+    "version": "1.6.1",
+    "yanked": false,
+    "yanked_reason": null
+  },
+  "urls": [
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "f3623590844a25dcf308a71a988c73e293b7ef779a1f43acb83ad1be218d61a0"
+      },
+      "digests": {
+        "blake2b_256": "ad9b9fb3585dabcd73a1b2a6267f63f62649347c9e6d072c9fde365b105abb2c",
+        "md5": "3e56b7429feb7269a90eb7bee67718d7",
+        "sha256": "ecd351a4be9d35a9eaaba244a7687143c9c7d4aea6ac964e7e7ddab20cbcf4e7"
+      },
+      "downloads": -1,
+      "filename": "build-1.6.1-py3-none-any.whl",
+      "has_sig": false,
+      "md5_digest": "3e56b7429feb7269a90eb7bee67718d7",
+      "packagetype": "bdist_wheel",
+      "python_version": "py3",
+      "requires_python": ">=3.10",
+      "size": 31179,
+      "upload_time": "2026-09-10T07:55:59",
+      "upload_time_iso_8601": "2026-09-10T07:55:59.148398Z",
+      "url": "https://files.pythonhosted.org/packages/ad/9b/9fb3585dabcd73a1b2a6267f63f62649347c9e6d072c9fde365b105abb2c/build-1.6.1-py3-none-any.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": false,
+      "digests": {
+        "blake2b_256": "bd674898a44ea4f3f8e213b0954ec0aa0a16971d62a6212d6ea3931e97115b99",
+        "md5": "56f61c2663493ebe4916b8acf40bb039",
+        "sha256": "51cc11666391ab6f092070437ac747002ff46f3e4113a3622177ee6b488bfc53"
+      },
+      "downloads": -1,
+      "filename": "build-1.6.1.tar.gz",
+      "has_sig": false,
+      "md5_digest": "56f61c2663493ebe4916b8acf40bb039",
+      "packagetype": "sdist",
+      "python_version": "source",
+      "requires_python": ">=3.10",
+      "size": 113427,
+      "upload_time": "2026-09-10T07:56:00",
+      "upload_time_iso_8601": "2026-09-10T07:56:00.417084Z",
+      "url": "https://files.pythonhosted.org/packages/bd/67/4898a44ea4f3f8e213b0954ec0aa0a16971d62a6212d6ea3931e97115b99/build-1.6.1.tar.gz",
+      "yanked": false,
+      "yanked_reason": null
+    }
+  ],
+  "wheel_digest_verified": true
+}

@@ -1,0 +1,3770 @@
+[
+  {
+    "path": "python/Lib/idlelib/Icons/idle.ico",
+    "container": "CPython-3.12.13",
+    "size": 57746,
+    "sha256": "7f13eeb5dca39d05e24b9eb069c6dcb2748633822d67288a8bf8b7e21cdddf55",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "python/Lib/idlelib/Icons/idle_16.png",
+    "container": "CPython-3.12.13",
+    "size": 1031,
+    "sha256": "78fb3fb0ec11f61bc6cf0947f3c3923aa18e1c6513684058ed0fa01ac858143e",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "python/Lib/idlelib/Icons/idle_256.png",
+    "container": "CPython-3.12.13",
+    "size": 39205,
+    "sha256": "3f517467d12e0e3ecf20f9bd68ce4bd18a2b8088f32308fd978fd80e87d3628b",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "python/Lib/idlelib/Icons/idle_32.png",
+    "container": "CPython-3.12.13",
+    "size": 2036,
+    "sha256": "797cd05f1964d57c4c6c248ac7f7ea6a38019ada32a9ab7e6c28d060f87b03de",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "python/Lib/idlelib/Icons/idle_48.png",
+    "container": "CPython-3.12.13",
+    "size": 3977,
+    "sha256": "a09f433197c8870b12bb7859cc4c3fe2068908cb1ddbd4880ab0f6fee91b6c23",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "python/tcl/tk8.6/demos/images/earthmenu.png",
+    "container": "CPython-3.12.13",
+    "size": 8157,
+    "sha256": "9bf8d96016039d7fdb2ffc506743724636a70ed5925199aab64ca20820963bde",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "python/tcl/tk8.6/demos/images/ouster.png",
+    "container": "CPython-3.12.13",
+    "size": 54257,
+    "sha256": "a2fe354dfcb09b9eeb488128f4ac0b498766faf4a8becf65bbcd779bdb9c4c8f",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "greenlet/platform/switch_arm64_masm.obj",
+    "container": "greenlet@3.5.6",
+    "size": 746,
+    "sha256": "0e62e7201fe2728107033d676ae7bfa493d366047d12533bf8d9b3b6bfa8f7f5",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "greenlet/platform/switch_x64_masm.obj",
+    "container": "greenlet@3.5.6",
+    "size": 1078,
+    "sha256": "18db5337161da3b89d15462c42ffa6ad75a0c93e4427ddfef6af7494deacbed4",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "playwright/driver/package/lib/server/chromium/appIcon.png",
+    "container": "playwright@1.63.0",
+    "size": 16565,
+    "sha256": "6ba994f05c5cf18e22d9b6bef9898fbdec6ad4d4d77f5187d0609cb42d72d01e",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "playwright/driver/package/lib/tools/dashboard/appIcon.png",
+    "container": "playwright@1.63.0",
+    "size": 18945,
+    "sha256": "38037bcf18c7f9b950da2e1a2d8800d38fb27637ccda293d38368a3704b67f18",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "playwright/driver/package/lib/vite/dashboard/playwright-logo.svg",
+    "container": "playwright@1.63.0",
+    "size": 5645,
+    "sha256": "511524a1c145819303a18fb71870a4307c3e740f9e9722f7686a2b42b0995b6c",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "playwright/driver/package/lib/vite/dashboard/assets/codicon-DCmgc-ay.ttf",
+    "container": "playwright@1.63.0",
+    "size": 80340,
+    "sha256": "0f1d5219934e96e83b8db162d60b4d8c09b5de1e7d38031cbafe4a3c0f2889c9",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "playwright/driver/package/lib/vite/dashboard/assets/firefox-1bWoP6pv.svg",
+    "container": "playwright@1.63.0",
+    "size": 7488,
+    "sha256": "3f3742d1e78c0db6c2d3531250f70c30675ee5310de32fa89befaf738c54efd0",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "playwright/driver/package/lib/vite/dashboard/assets/firefox-beta-k3eOH_eK.svg",
+    "container": "playwright@1.63.0",
+    "size": 9280,
+    "sha256": "7eab5ffdc25903ba33a7202f7fffa1999f119c7be45a39e9e703c118904f917a",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "playwright/driver/package/lib/vite/dashboard/assets/firefox-nightly-Cp5nfeDT.svg",
+    "container": "playwright@1.63.0",
+    "size": 9143,
+    "sha256": "f311c074b0fa999fcd6b73441301fb54ee87a48ff3bf05f318647928110476da",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "playwright/driver/package/lib/vite/dashboard/assets/safari-na3_-uQk.svg",
+    "container": "playwright@1.63.0",
+    "size": 5254,
+    "sha256": "80fd72ca5eb8545f1981277b31f4f92951d469d4efebd078e4086b676fe517dc",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "playwright/driver/package/lib/vite/recorder/playwright-logo.svg",
+    "container": "playwright@1.63.0",
+    "size": 5033,
+    "sha256": "6b0a4367bdeab10995bc239278f04c68c10e48adbec15e799e01909a0d66dcb9",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "playwright/driver/package/lib/vite/recorder/assets/codicon-DCmgc-ay.ttf",
+    "container": "playwright@1.63.0",
+    "size": 80340,
+    "sha256": "0f1d5219934e96e83b8db162d60b4d8c09b5de1e7d38031cbafe4a3c0f2889c9",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "playwright/driver/package/lib/vite/traceViewer/codicon.DCmgc-ay.ttf",
+    "container": "playwright@1.63.0",
+    "size": 80340,
+    "sha256": "0f1d5219934e96e83b8db162d60b4d8c09b5de1e7d38031cbafe4a3c0f2889c9",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "playwright/driver/package/lib/vite/traceViewer/playwright-logo.svg",
+    "container": "playwright@1.63.0",
+    "size": 5033,
+    "sha256": "6b0a4367bdeab10995bc239278f04c68c10e48adbec15e799e01909a0d66dcb9",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/chrome_100_percent.pak",
+    "container": "browser",
+    "size": 737731,
+    "sha256": "035254b60209846763bd19b380d37f59133d6b4670276cc975937eafa72d7eee",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/chrome_200_percent.pak",
+    "container": "browser",
+    "size": 1286352,
+    "sha256": "b2a299c385f75e333849ca41385ffafc9925a604ca54f3cf9066074fb8b19ae2",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/icudtl.dat",
+    "container": "browser",
+    "size": 10823536,
+    "sha256": "a3c6d7824935e87fed17e94c2d84b7683ef360ebc5c4ea92e2ca70f361bc9314",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/af.pak",
+    "container": "browser",
+    "size": 549250,
+    "sha256": "e63a7034abfff73173cf1047a78963e742472075934452aa35e8fcc20e93c086",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/af_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/af_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/af_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/am.pak",
+    "container": "browser",
+    "size": 886152,
+    "sha256": "034baf3f8a973a39b70dfde61973a3e51cd26bb35506c2ffa1933b62a8cbc0b6",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/am_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/am_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/am_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/ar.pak",
+    "container": "browser",
+    "size": 986595,
+    "sha256": "819903bd19661f59a851edbd03efc458ace58beb34d00fdd272c6b0c74933b4c",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/ar_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/ar_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/ar_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/bg.pak",
+    "container": "browser",
+    "size": 1018139,
+    "sha256": "19f45279c1916990fa53ee04eb0cdea46455181c257cf1d2423ddcff38223785",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/bg_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/bg_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/bg_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/bn.pak",
+    "container": "browser",
+    "size": 1297180,
+    "sha256": "c5cd5ea5840917a305476ecea8c3f97316b2b8c2d384f313fe18c12939a53647",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/bn_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/bn_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/bn_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/ca.pak",
+    "container": "browser",
+    "size": 626198,
+    "sha256": "358b7915ef2578caa461b74b0c455993e039914ec8a917ec474e8b99b73cb82d",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/ca_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/ca_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/ca_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/cs.pak",
+    "container": "browser",
+    "size": 642463,
+    "sha256": "f7c8c5c2edf5a33fb3cfaa8302b62e1950bf07dee41485d295c58011b2021cae",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/cs_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/cs_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/cs_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/da.pak",
+    "container": "browser",
+    "size": 579820,
+    "sha256": "497fc29520761c34a009ef96805436b441a281c9a4f94ff219ad42e4e1209408",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/da_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/da_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/da_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/de.pak",
+    "container": "browser",
+    "size": 629329,
+    "sha256": "9952c087e1e520529ef566f50309420aa58394d0e26fe97a0db0289b247db0f5",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/de_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/de_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/de_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/el.pak",
+    "container": "browser",
+    "size": 1118488,
+    "sha256": "dcb3c13ff584b8f20ea659fa1761206e25b53704c1898439ee0b6e2f09b0928f",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/el_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/el_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/el_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/en-GB.pak",
+    "container": "browser",
+    "size": 500340,
+    "sha256": "377c1ee1512b0c8ef4a590082596d56942208d398dd578364dcd18dbf9542a5e",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/en-GB_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/en-GB_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/en-GB_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/en-US.pak",
+    "container": "browser",
+    "size": 506221,
+    "sha256": "86be4cb68c6f5c56e4566f48077dac2371631a9c927f4617181921cc65c798b7",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/en-US_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/en-US_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/en-US_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/es-419.pak",
+    "container": "browser",
+    "size": 612905,
+    "sha256": "71701c3fc9fc7d44bd4bf1ad6f035a4dae20bd1d906e4b2c12135ae162920c71",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/es-419_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/es-419_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/es-419_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/es.pak",
+    "container": "browser",
+    "size": 608691,
+    "sha256": "ab4060c2acc527fac90cd03299ed7fdfb9a0d77bdee69784c75eeece64f28198",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/es_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/es_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/es_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/et.pak",
+    "container": "browser",
+    "size": 558003,
+    "sha256": "38233453e272ad16029d74ab289b875b2596eda33a5ab4ed707add59bd22f495",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/et_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/et_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/et_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/fa.pak",
+    "container": "browser",
+    "size": 918688,
+    "sha256": "6c4d3e7b8c724fecdafe212d31989b665f1356f5b28274f5c0186b12ae351270",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/fa_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/fa_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/fa_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/fi.pak",
+    "container": "browser",
+    "size": 566676,
+    "sha256": "b6431096fd874fe412649057e679c1bd4698c3c7f3dd45813e2a54e9fc0c71ec",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/fi_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/fi_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/fi_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/fil.pak",
+    "container": "browser",
+    "size": 641082,
+    "sha256": "deec89da3d33c7c2c5bf6015cd360deea8d3f4781265c8144d2e7a9aa6986dcd",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/fil_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/fil_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/fil_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/fr.pak",
+    "container": "browser",
+    "size": 665917,
+    "sha256": "3216623c901ddac0efccf1c0efc91be8fd7faea051f96d468c9199f4dd04f47e",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/fr_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/fr_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/fr_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/gu.pak",
+    "container": "browser",
+    "size": 1289444,
+    "sha256": "a5f1accd18b3cff5deebaca294249c58eff92c3d3617d8527307bb79ea4a6093",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/gu_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/gu_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/gu_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/he.pak",
+    "container": "browser",
+    "size": 805746,
+    "sha256": "1caef1e216a5a9b6d709036b707fded62c3339d60b220898e27872dfbd0be14d",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/he_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/he_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/he_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/hi.pak",
+    "container": "browser",
+    "size": 1372229,
+    "sha256": "83f873ed01656295aab16c500e2afd8a5ec5804423b7e4b9d9aa85e7f44a4963",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/hi_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/hi_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/hi_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/hr.pak",
+    "container": "browser",
+    "size": 618549,
+    "sha256": "a4f24b1a0ffd1c91ccdaa1ca78aed149688e7399872ce547923d6f1bd83d4967",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/hr_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/hr_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/hr_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/hu.pak",
+    "container": "browser",
+    "size": 663088,
+    "sha256": "c1072e4e9e85503ac0a910d51e7fcfdf0c584462319b4430acfa3c27fa569d10",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/hu_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/hu_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/hu_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/id.pak",
+    "container": "browser",
+    "size": 548666,
+    "sha256": "c427bc11a3068106704988e6d74c45f9559f7bb57fb37e17b57eb5e74290255d",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/id_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/id_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/id_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/it.pak",
+    "container": "browser",
+    "size": 607419,
+    "sha256": "8e03c35f7d80adcb6ef935dd10e4d00b054326307269d8f55d3e611e42604d1b",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/it_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/it_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/it_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/ja.pak",
+    "container": "browser",
+    "size": 734920,
+    "sha256": "07035a88cb98296d608238b3803052eb136e3edc9a28041fa5db1e49b2fb0365",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/ja_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/ja_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/ja_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/kn.pak",
+    "container": "browser",
+    "size": 1476030,
+    "sha256": "d6abdd02308a6ba02fa4cb5dbc2d8828424d03324fb8b8a373555b960cade9e3",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/kn_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/kn_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/kn_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/ko.pak",
+    "container": "browser",
+    "size": 625300,
+    "sha256": "e58208da7799d48f6d416b4ab120fa571cc05e11ede01f597b39cda81abe9e90",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/ko_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/ko_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/ko_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/lt.pak",
+    "container": "browser",
+    "size": 672783,
+    "sha256": "6a318f74f398168b463798bba54121e845c4a9a80317152231922a0b2b7db62d",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/lt_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/lt_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/lt_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/lv.pak",
+    "container": "browser",
+    "size": 669278,
+    "sha256": "7639659bd8959753bb1e597427d301c171dca4cda0131256fe8d819a42a8fb67",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/lv_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/lv_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/lv_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/ml.pak",
+    "container": "browser",
+    "size": 1518924,
+    "sha256": "5f705fb984fcfbc6cf9df4067bea3a88b74cc620f57273eb910d0d45ffc3bdb2",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/ml_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/ml_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/ml_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/mr.pak",
+    "container": "browser",
+    "size": 1258815,
+    "sha256": "18b0dc7a1e465a7f94931281a341d8591c5921a48411674822a32ea4a8af0244",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/mr_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/mr_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/mr_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/ms.pak",
+    "container": "browser",
+    "size": 576664,
+    "sha256": "7a0930dded2fbcd3a30fc9fe00837e56df3cdb8ed5cc6f0d7b0fb200e2ef6843",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/ms_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/ms_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/ms_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/nb.pak",
+    "container": "browser",
+    "size": 552411,
+    "sha256": "97662be512e1ba9b0867cada79c3b0e8cabc4750438629c0e5504abe221560d6",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/nb_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/nb_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/nb_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/nl.pak",
+    "container": "browser",
+    "size": 576177,
+    "sha256": "7623e55836aa422cf2c83be35a7e3a4e4d41567ecb5a8690a99565df4f81ad2a",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/nl_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/nl_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/nl_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/pl.pak",
+    "container": "browser",
+    "size": 643607,
+    "sha256": "863d2234f84bafb8c6a064e4f204daa2017c48d065df49fd2f1bfb44fca043b1",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/pl_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/pl_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/pl_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/pt-BR.pak",
+    "container": "browser",
+    "size": 602421,
+    "sha256": "ba9491e6a8d837f7eb9b1ba52eb51ed96cff74de3d7e1912e7678fc5828ccd74",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/pt-BR_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/pt-BR_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/pt-BR_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/pt-PT.pak",
+    "container": "browser",
+    "size": 606281,
+    "sha256": "c1710973c4a8488f92dbadd2ffc0ea18427497ffeed05fa5d326618993498820",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/pt-PT_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/pt-PT_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/pt-PT_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/ro.pak",
+    "container": "browser",
+    "size": 628181,
+    "sha256": "9fa52e84f1103d2b1c563b4e04205bb54eb712383aee0d8a4e9e0cf3d392698b",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/ro_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/ro_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/ro_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/ru.pak",
+    "container": "browser",
+    "size": 1036098,
+    "sha256": "1ba30143cd73b950f6f4fa58e62491b2352a4f24b3da3bb222c00f46b9bc23c7",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/ru_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/ru_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/ru_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/sk.pak",
+    "container": "browser",
+    "size": 652994,
+    "sha256": "91abd7a29db21f9d98b3018cd4ee6209663b1cb1cfcc9543240fbd882497ce7c",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/sk_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/sk_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/sk_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/sl.pak",
+    "container": "browser",
+    "size": 623531,
+    "sha256": "c8a43f0cdf378014ab2abd0588641d2d0f89b0ab7695428b743da706c902114a",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/sl_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/sl_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/sl_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/sr.pak",
+    "container": "browser",
+    "size": 958478,
+    "sha256": "f1eec03267e05df1896314e34efc318608d016fb754adaee995e574fd133b06e",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/sr_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/sr_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/sr_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/sv.pak",
+    "container": "browser",
+    "size": 559321,
+    "sha256": "b59b72179b1cc284dd31912b3d7ffed7cd5b1ec183f60f94554a0cca857fd2cc",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/sv_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/sv_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/sv_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/sw.pak",
+    "container": "browser",
+    "size": 591102,
+    "sha256": "b18aa06710480ba2f9ae3dc5d46ded1b347e8bb81250cbcd2eaf2b383a24cef8",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/sw_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/sw_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/sw_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/ta.pak",
+    "container": "browser",
+    "size": 1512590,
+    "sha256": "d8fa15bb30cfc16c1ee1bfa39928c037da8c3f7fc4a0546ae5f0a80863fd0943",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/ta_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/ta_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/ta_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/te.pak",
+    "container": "browser",
+    "size": 1401999,
+    "sha256": "3485d143f8723eb5e8c93616a607a7342dfd283c9d3f021a37d9398c524f6f17",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/te_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/te_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/te_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/th.pak",
+    "container": "browser",
+    "size": 1175060,
+    "sha256": "1ad587441f6c8f499c8d04252666adcd34a14b634e90a27078bc87b146490093",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/th_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/th_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/th_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/tr.pak",
+    "container": "browser",
+    "size": 602416,
+    "sha256": "c92d00a4ecae7374e47b70f89243f12e4b286b830fb1f46f6574eadb17767368",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/tr_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/tr_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/tr_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/uk.pak",
+    "container": "browser",
+    "size": 1043395,
+    "sha256": "467f54b07ffc8db46aba899834c2a1cbcac631756c9d037972b0dc56fab7e5b1",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/uk_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/uk_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/uk_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/ur.pak",
+    "container": "browser",
+    "size": 900239,
+    "sha256": "e283393bfa88ae6ae61e4b53b44dffaa5223dfc43355c84996531d8e92a7cad3",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/ur_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/ur_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/ur_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/vi.pak",
+    "container": "browser",
+    "size": 716953,
+    "sha256": "36577b162ca8afe73718d3fa1f0b8cbada379a62a69ea51441c6a2af0f7b6512",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/vi_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/vi_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/vi_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/zh-CN.pak",
+    "container": "browser",
+    "size": 514477,
+    "sha256": "f4e590cb55d3e2d15ce5868289f0b70419f747d8fd7383aaa7176f5808e90036",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/zh-CN_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/zh-CN_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/zh-CN_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/zh-TW.pak",
+    "container": "browser",
+    "size": 508095,
+    "sha256": "8628ec255c329cc3fb2c89401f3f5b3fc5461a96f75e7ae6910efbf1db76ca0f",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/zh-TW_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/zh-TW_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/locales/zh-TW_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/PrivacySandboxAttestationsPreloaded/privacy-sandbox-attestations.dat",
+    "container": "browser",
+    "size": 7624,
+    "sha256": "59e345dc13aedee9ea46b92e58300ecaca944aaea9384c7af885400ac2ae8806",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium-1243/chrome-win64/resources.pak",
+    "container": "browser",
+    "size": 22880170,
+    "sha256": "2071780bbb6e0a69add3778d36f99ba301c49cbfe813979a6a1280086170ba32",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/headless_command_resources.pak",
+    "container": "browser",
+    "size": 3033,
+    "sha256": "5dacfe683bbd88ab1c96dfbaa1f375b54821235772cb71dd71273350cdfec867",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/headless_lib_data.pak",
+    "container": "browser",
+    "size": 731241,
+    "sha256": "426b6c9c6a068e2931a891c87f345f5ce066c2e6e61cfa50cf1fa2be79213fcf",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/headless_lib_strings.pak",
+    "container": "browser",
+    "size": 4215331,
+    "sha256": "2389deed4167ee7bb289004f33f22dcfe71201336251916c6de788c6eb9166da",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/icudtl.dat",
+    "container": "browser",
+    "size": 10823536,
+    "sha256": "a3c6d7824935e87fed17e94c2d84b7683ef360ebc5c4ea92e2ca70f361bc9314",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/af.pak",
+    "container": "browser",
+    "size": 549250,
+    "sha256": "e63a7034abfff73173cf1047a78963e742472075934452aa35e8fcc20e93c086",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/af_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/af_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/af_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/am.pak",
+    "container": "browser",
+    "size": 886152,
+    "sha256": "034baf3f8a973a39b70dfde61973a3e51cd26bb35506c2ffa1933b62a8cbc0b6",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/am_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/am_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/am_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/ar.pak",
+    "container": "browser",
+    "size": 986595,
+    "sha256": "819903bd19661f59a851edbd03efc458ace58beb34d00fdd272c6b0c74933b4c",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/ar_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/ar_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/ar_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/bg.pak",
+    "container": "browser",
+    "size": 1018139,
+    "sha256": "19f45279c1916990fa53ee04eb0cdea46455181c257cf1d2423ddcff38223785",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/bg_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/bg_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/bg_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/bn.pak",
+    "container": "browser",
+    "size": 1297180,
+    "sha256": "c5cd5ea5840917a305476ecea8c3f97316b2b8c2d384f313fe18c12939a53647",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/bn_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/bn_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/bn_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/ca.pak",
+    "container": "browser",
+    "size": 626198,
+    "sha256": "358b7915ef2578caa461b74b0c455993e039914ec8a917ec474e8b99b73cb82d",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/ca_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/ca_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/ca_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/cs.pak",
+    "container": "browser",
+    "size": 642463,
+    "sha256": "f7c8c5c2edf5a33fb3cfaa8302b62e1950bf07dee41485d295c58011b2021cae",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/cs_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/cs_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/cs_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/da.pak",
+    "container": "browser",
+    "size": 579820,
+    "sha256": "497fc29520761c34a009ef96805436b441a281c9a4f94ff219ad42e4e1209408",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/da_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/da_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/da_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/de.pak",
+    "container": "browser",
+    "size": 629329,
+    "sha256": "9952c087e1e520529ef566f50309420aa58394d0e26fe97a0db0289b247db0f5",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/de_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/de_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/de_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/el.pak",
+    "container": "browser",
+    "size": 1118488,
+    "sha256": "dcb3c13ff584b8f20ea659fa1761206e25b53704c1898439ee0b6e2f09b0928f",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/el_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/el_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/el_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/en-GB.pak",
+    "container": "browser",
+    "size": 500340,
+    "sha256": "377c1ee1512b0c8ef4a590082596d56942208d398dd578364dcd18dbf9542a5e",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/en-GB_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/en-GB_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/en-GB_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/en-US.pak",
+    "container": "browser",
+    "size": 506221,
+    "sha256": "86be4cb68c6f5c56e4566f48077dac2371631a9c927f4617181921cc65c798b7",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/en-US_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/en-US_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/en-US_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/es-419.pak",
+    "container": "browser",
+    "size": 612905,
+    "sha256": "71701c3fc9fc7d44bd4bf1ad6f035a4dae20bd1d906e4b2c12135ae162920c71",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/es-419_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/es-419_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/es-419_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/es.pak",
+    "container": "browser",
+    "size": 608691,
+    "sha256": "ab4060c2acc527fac90cd03299ed7fdfb9a0d77bdee69784c75eeece64f28198",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/es_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/es_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/es_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/et.pak",
+    "container": "browser",
+    "size": 558003,
+    "sha256": "38233453e272ad16029d74ab289b875b2596eda33a5ab4ed707add59bd22f495",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/et_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/et_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/et_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/fa.pak",
+    "container": "browser",
+    "size": 918688,
+    "sha256": "6c4d3e7b8c724fecdafe212d31989b665f1356f5b28274f5c0186b12ae351270",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/fa_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/fa_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/fa_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/fi.pak",
+    "container": "browser",
+    "size": 566676,
+    "sha256": "b6431096fd874fe412649057e679c1bd4698c3c7f3dd45813e2a54e9fc0c71ec",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/fi_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/fi_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/fi_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/fil.pak",
+    "container": "browser",
+    "size": 641082,
+    "sha256": "deec89da3d33c7c2c5bf6015cd360deea8d3f4781265c8144d2e7a9aa6986dcd",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/fil_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/fil_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/fil_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/fr.pak",
+    "container": "browser",
+    "size": 665917,
+    "sha256": "3216623c901ddac0efccf1c0efc91be8fd7faea051f96d468c9199f4dd04f47e",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/fr_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/fr_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/fr_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/gu.pak",
+    "container": "browser",
+    "size": 1289444,
+    "sha256": "a5f1accd18b3cff5deebaca294249c58eff92c3d3617d8527307bb79ea4a6093",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/gu_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/gu_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/gu_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/he.pak",
+    "container": "browser",
+    "size": 805746,
+    "sha256": "1caef1e216a5a9b6d709036b707fded62c3339d60b220898e27872dfbd0be14d",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/he_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/he_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/he_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/hi.pak",
+    "container": "browser",
+    "size": 1372229,
+    "sha256": "83f873ed01656295aab16c500e2afd8a5ec5804423b7e4b9d9aa85e7f44a4963",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/hi_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/hi_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/hi_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/hr.pak",
+    "container": "browser",
+    "size": 618549,
+    "sha256": "a4f24b1a0ffd1c91ccdaa1ca78aed149688e7399872ce547923d6f1bd83d4967",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/hr_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/hr_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/hr_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/hu.pak",
+    "container": "browser",
+    "size": 663088,
+    "sha256": "c1072e4e9e85503ac0a910d51e7fcfdf0c584462319b4430acfa3c27fa569d10",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/hu_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/hu_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/hu_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/id.pak",
+    "container": "browser",
+    "size": 548666,
+    "sha256": "c427bc11a3068106704988e6d74c45f9559f7bb57fb37e17b57eb5e74290255d",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/id_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/id_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/id_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/it.pak",
+    "container": "browser",
+    "size": 607419,
+    "sha256": "8e03c35f7d80adcb6ef935dd10e4d00b054326307269d8f55d3e611e42604d1b",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/it_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/it_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/it_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/ja.pak",
+    "container": "browser",
+    "size": 734920,
+    "sha256": "07035a88cb98296d608238b3803052eb136e3edc9a28041fa5db1e49b2fb0365",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/ja_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/ja_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/ja_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/kn.pak",
+    "container": "browser",
+    "size": 1476030,
+    "sha256": "d6abdd02308a6ba02fa4cb5dbc2d8828424d03324fb8b8a373555b960cade9e3",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/kn_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/kn_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/kn_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/ko.pak",
+    "container": "browser",
+    "size": 625300,
+    "sha256": "e58208da7799d48f6d416b4ab120fa571cc05e11ede01f597b39cda81abe9e90",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/ko_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/ko_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/ko_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/lt.pak",
+    "container": "browser",
+    "size": 672783,
+    "sha256": "6a318f74f398168b463798bba54121e845c4a9a80317152231922a0b2b7db62d",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/lt_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/lt_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/lt_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/lv.pak",
+    "container": "browser",
+    "size": 669278,
+    "sha256": "7639659bd8959753bb1e597427d301c171dca4cda0131256fe8d819a42a8fb67",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/lv_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/lv_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/lv_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/ml.pak",
+    "container": "browser",
+    "size": 1518924,
+    "sha256": "5f705fb984fcfbc6cf9df4067bea3a88b74cc620f57273eb910d0d45ffc3bdb2",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/ml_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/ml_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/ml_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/mr.pak",
+    "container": "browser",
+    "size": 1258815,
+    "sha256": "18b0dc7a1e465a7f94931281a341d8591c5921a48411674822a32ea4a8af0244",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/mr_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/mr_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/mr_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/ms.pak",
+    "container": "browser",
+    "size": 576664,
+    "sha256": "7a0930dded2fbcd3a30fc9fe00837e56df3cdb8ed5cc6f0d7b0fb200e2ef6843",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/ms_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/ms_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/ms_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/nb.pak",
+    "container": "browser",
+    "size": 552411,
+    "sha256": "97662be512e1ba9b0867cada79c3b0e8cabc4750438629c0e5504abe221560d6",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/nb_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/nb_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/nb_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/nl.pak",
+    "container": "browser",
+    "size": 576177,
+    "sha256": "7623e55836aa422cf2c83be35a7e3a4e4d41567ecb5a8690a99565df4f81ad2a",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/nl_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/nl_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/nl_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/pl.pak",
+    "container": "browser",
+    "size": 643607,
+    "sha256": "863d2234f84bafb8c6a064e4f204daa2017c48d065df49fd2f1bfb44fca043b1",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/pl_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/pl_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/pl_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/pt-BR.pak",
+    "container": "browser",
+    "size": 602421,
+    "sha256": "ba9491e6a8d837f7eb9b1ba52eb51ed96cff74de3d7e1912e7678fc5828ccd74",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/pt-BR_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/pt-BR_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/pt-BR_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/pt-PT.pak",
+    "container": "browser",
+    "size": 606281,
+    "sha256": "c1710973c4a8488f92dbadd2ffc0ea18427497ffeed05fa5d326618993498820",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/pt-PT_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/pt-PT_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/pt-PT_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/ro.pak",
+    "container": "browser",
+    "size": 628181,
+    "sha256": "9fa52e84f1103d2b1c563b4e04205bb54eb712383aee0d8a4e9e0cf3d392698b",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/ro_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/ro_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/ro_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/ru.pak",
+    "container": "browser",
+    "size": 1036098,
+    "sha256": "1ba30143cd73b950f6f4fa58e62491b2352a4f24b3da3bb222c00f46b9bc23c7",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/ru_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/ru_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/ru_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/sk.pak",
+    "container": "browser",
+    "size": 652994,
+    "sha256": "91abd7a29db21f9d98b3018cd4ee6209663b1cb1cfcc9543240fbd882497ce7c",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/sk_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/sk_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/sk_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/sl.pak",
+    "container": "browser",
+    "size": 623531,
+    "sha256": "c8a43f0cdf378014ab2abd0588641d2d0f89b0ab7695428b743da706c902114a",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/sl_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/sl_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/sl_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/sr.pak",
+    "container": "browser",
+    "size": 958478,
+    "sha256": "f1eec03267e05df1896314e34efc318608d016fb754adaee995e574fd133b06e",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/sr_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/sr_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/sr_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/sv.pak",
+    "container": "browser",
+    "size": 559321,
+    "sha256": "b59b72179b1cc284dd31912b3d7ffed7cd5b1ec183f60f94554a0cca857fd2cc",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/sv_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/sv_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/sv_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/sw.pak",
+    "container": "browser",
+    "size": 591102,
+    "sha256": "b18aa06710480ba2f9ae3dc5d46ded1b347e8bb81250cbcd2eaf2b383a24cef8",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/sw_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/sw_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/sw_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/ta.pak",
+    "container": "browser",
+    "size": 1512590,
+    "sha256": "d8fa15bb30cfc16c1ee1bfa39928c037da8c3f7fc4a0546ae5f0a80863fd0943",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/ta_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/ta_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/ta_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/te.pak",
+    "container": "browser",
+    "size": 1401999,
+    "sha256": "3485d143f8723eb5e8c93616a607a7342dfd283c9d3f021a37d9398c524f6f17",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/te_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/te_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/te_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/th.pak",
+    "container": "browser",
+    "size": 1175060,
+    "sha256": "1ad587441f6c8f499c8d04252666adcd34a14b634e90a27078bc87b146490093",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/th_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/th_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/th_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/tr.pak",
+    "container": "browser",
+    "size": 602416,
+    "sha256": "c92d00a4ecae7374e47b70f89243f12e4b286b830fb1f46f6574eadb17767368",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/tr_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/tr_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/tr_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/uk.pak",
+    "container": "browser",
+    "size": 1043395,
+    "sha256": "467f54b07ffc8db46aba899834c2a1cbcac631756c9d037972b0dc56fab7e5b1",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/uk_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/uk_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/uk_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/ur.pak",
+    "container": "browser",
+    "size": 900239,
+    "sha256": "e283393bfa88ae6ae61e4b53b44dffaa5223dfc43355c84996531d8e92a7cad3",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/ur_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/ur_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/ur_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/vi.pak",
+    "container": "browser",
+    "size": 716953,
+    "sha256": "36577b162ca8afe73718d3fa1f0b8cbada379a62a69ea51441c6a2af0f7b6512",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/vi_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/vi_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/vi_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/zh-CN.pak",
+    "container": "browser",
+    "size": 514477,
+    "sha256": "f4e590cb55d3e2d15ce5868289f0b70419f747d8fd7383aaa7176f5808e90036",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/zh-CN_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/zh-CN_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/zh-CN_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/zh-TW.pak",
+    "container": "browser",
+    "size": 508095,
+    "sha256": "8628ec255c329cc3fb2c89401f3f5b3fc5461a96f75e7ae6910efbf1db76ca0f",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/zh-TW_FEMININE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/zh-TW_MASCULINE.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/locales/zh-TW_NEUTER.pak",
+    "container": "browser",
+    "size": 18,
+    "sha256": "ca73097bd968b363b7145e86b64f3c595e533808b0763dc8863a27fc363cfa51",
+    "native": false,
+    "asset": true
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/PrivacySandboxAttestationsPreloaded/privacy-sandbox-attestations.dat",
+    "container": "browser",
+    "size": 7624,
+    "sha256": "59e345dc13aedee9ea46b92e58300ecaca944aaea9384c7af885400ac2ae8806",
+    "native": false,
+    "asset": true
+  }
+]
