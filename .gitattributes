@@ -1,0 +1,32 @@
+# Normalize line endings so a clean clone reproduces byte-identical launchers.
+# Windows batch files MUST be CRLF or cmd.exe misparses them.
+* text=auto
+
+*.bat  text eol=crlf
+*.cmd  text eol=crlf
+*.ps1  text eol=crlf
+
+*.py   text eol=lf
+*.md   text eol=lf
+*.txt  text eol=lf
+*.yml  text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+*.toml text eol=lf
+*.cfg  text eol=lf
+*.ini  text eol=lf
+*.cs   text eol=lf
+
+# Binary assets must never be touched.
+*.zip  binary
+*.png  binary
+*.jpg  binary
+*.ico  binary
+*.db   binary
+*.chunk binary
+
+# Upstream notices, preferred sources and downloaded evidence are verbatim.
+# Their publisher/evidence hashes apply to bytes, not normalized text.
+THIRD_PARTY_LICENSES/** -text
+SOURCE_OBLIGATIONS/** -text
+license-audit/evidence/** -text

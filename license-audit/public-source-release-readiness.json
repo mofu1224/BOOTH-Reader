@@ -1,0 +1,56 @@
+{
+  "Release Status": "WITHDRAWN",
+  "withdrawal_reason": "User requires the entire repository folder as the distribution; source-only archives and their dedicated release path are withdrawn.",
+  "historical_evidence_only": true,
+  "current_distribution_scope": "entire repository folder",
+  "current_release_status": "BLOCKED",
+  "profile": "source-online",
+  "distribution": [
+    {
+      "name": "BOOTH-Reader-1.0.3-source-online.zip",
+      "sha256": "2134ab5ed5f71ea7fadfcca42cf1a5d858b794f7ebba4852c404d16abb75f508",
+      "size": 124383,
+      "entries": 46,
+      "runtime_payloads": 0,
+      "unreviewed_secrets": 0,
+      "redaction_templates_reviewed": 1
+    },
+    {
+      "name": "booth_reader-1.0.3.tar.gz",
+      "sha256": "8313880122adf8be36378203512c1c1fe5444883d7a362de6ca1e2a7dadaff0f",
+      "size": 109848,
+      "entries": 54,
+      "runtime_payloads": 0,
+      "unreviewed_secrets": 0,
+      "redaction_templates_reviewed": 1
+    }
+  ],
+  "Total Components": 46,
+  "First-party Components": 0,
+  "Third-party Components": 0,
+  "Generated Components": 46,
+  "Derived Components": 0,
+  "Unknown Components": 0,
+  "count_scope": "source ZIP members, including SOURCE-INPUTS; external recipient-installed packages recorded separately in the SBOM",
+  "PASS WITH OBLIGATIONS": 46,
+  "ACTION REQUIRED": 0,
+  "REPLACEMENT REQUIRED": 0,
+  "REMOVAL REQUIRED": 0,
+  "REIMPLEMENTATION REQUIRED": 0,
+  "NOT VERIFIED": 0,
+  "BLOCKED": 0,
+  "Final Distribution Audited": true,
+  "SBOM Verified": "delivered source and exact publisher download plan; not a redistributed native-runtime SBOM",
+  "Required Notices Included": true,
+  "Required Licenses Included": true,
+  "Source Obligations Satisfied": "all delivered source present; no redistributed copyleft runtime",
+  "Secrets Scan Passed": "all delivered text files checked by scoped rules; known redaction template reviewed",
+  "Clean Environment Test Passed": "OS-only publisher-direct install and offline repair/UI on current Windows host",
+  "limitations": [
+    "technical scoped compliance decision, not an independent legal opinion or warranty of non-infringement/unique AI output",
+    "assignment covers service parties' rights, not third parties' rights",
+    "no approval of model weights, complete native-runtime redistribution, old offline bundles, private data or full Git history",
+    "live BOOTH account and separate OS image untested; documented; clean installed-folder and real browser/UI evidence supplied",
+    "secret/advisory scans are bounded by recorded rules and selected versions"
+  ]
+}

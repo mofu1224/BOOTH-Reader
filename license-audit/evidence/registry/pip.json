@@ -1,0 +1,132 @@
+{
+  "url": "https://pypi.org/pypi/pip/26.2.1/json",
+  "response_sha256": "4f5abeb5acacd5eaaad5e6982f5721dee3592795e59fc5a4067fcca92eed70e1",
+  "info": {
+    "author": null,
+    "author_email": "The pip developers <distutils-sig@python.org>",
+    "bugtrack_url": null,
+    "classifiers": [
+      "Development Status :: 5 - Production/Stable",
+      "Intended Audience :: Developers",
+      "Programming Language :: Python",
+      "Programming Language :: Python :: 3",
+      "Programming Language :: Python :: 3 :: Only",
+      "Programming Language :: Python :: 3.10",
+      "Programming Language :: Python :: 3.11",
+      "Programming Language :: Python :: 3.12",
+      "Programming Language :: Python :: 3.13",
+      "Programming Language :: Python :: 3.14",
+      "Programming Language :: Python :: 3.15",
+      "Programming Language :: Python :: Implementation :: CPython",
+      "Programming Language :: Python :: Implementation :: PyPy",
+      "Topic :: Software Development :: Build Tools"
+    ],
+    "description": "pip - The Python Package Installer\n==================================\n\n.. |pypi-version| image:: https://img.shields.io/pypi/v/pip.svg\n   :target: https://pypi.org/project/pip/\n   :alt: PyPI\n\n.. |python-versions| image:: https://img.shields.io/pypi/pyversions/pip\n   :target: https://pypi.org/project/pip\n   :alt: PyPI - Python Version\n\n.. |docs-badge| image:: https://readthedocs.org/projects/pip/badge/?version=latest\n   :target: https://pip.pypa.io/en/latest\n   :alt: Documentation\n\n|pypi-version| |python-versions| |docs-badge|\n\nPip is the `package installer`_ for Python. You can use pip to install packages from the `Python Package Index`_ and other indexes.\n\nPlease take a look at our documentation for how to install and use pip:\n\n* `Installation`_\n* `Usage`_\n\nWe release updates regularly, with a new version every 3 months. Find more details in our documentation:\n\n* `Release notes`_\n* `Release process`_\n\nIf you find bugs, need help, or want to talk to the developers, please use our mailing lists or chat rooms:\n\n* `Issue tracking`_\n* `Discourse channel`_\n* `User IRC`_\n\nIf you want to get involved, head over to GitHub to get the source code, look at our development documentation and feel free to jump on the developer mailing lists and chat rooms:\n\n* `GitHub page`_\n* `Development documentation`_\n* `Development IRC`_\n\nCode of Conduct\n---------------\n\nEveryone interacting in the pip project's codebases, issue trackers, chat\nrooms, and mailing lists is expected to follow the `PSF Code of Conduct`_.\n\n.. _package installer: https://packaging.python.org/guides/tool-recommendations/\n.. _Python Package Index: https://pypi.org\n.. _Installation: https://pip.pypa.io/en/stable/installation/\n.. _Usage: https://pip.pypa.io/en/stable/\n.. _Release notes: https://pip.pypa.io/en/stable/news.html\n.. _Release process: https://pip.pypa.io/en/latest/development/release-process/\n.. _GitHub page: https://github.com/pypa/pip\n.. _Development documentation: https://pip.pypa.io/en/latest/development\n.. _Issue tracking: https://github.com/pypa/pip/issues\n.. _Discourse channel: https://discuss.python.org/c/packaging\n.. _User IRC: https://kiwiirc.com/nextclient/#ircs://irc.libera.chat:+6697/pypa\n.. _Development IRC: https://kiwiirc.com/nextclient/#ircs://irc.libera.chat:+6697/pypa-dev\n.. _PSF Code of Conduct: https://github.com/pypa/.github/blob/main/CODE_OF_CONDUCT.md\n\n",
+    "description_content_type": "text/x-rst",
+    "docs_url": null,
+    "download_url": null,
+    "downloads": {
+      "last_day": -1,
+      "last_month": -1,
+      "last_week": -1
+    },
+    "dynamic": null,
+    "home_page": null,
+    "keywords": null,
+    "license": null,
+    "license_expression": "MIT",
+    "license_files": [
+      "AUTHORS.txt",
+      "LICENSE.txt",
+      "src/pip/_vendor/cachecontrol/LICENSE.txt",
+      "src/pip/_vendor/certifi/LICENSE",
+      "src/pip/_vendor/distlib/LICENSE.txt",
+      "src/pip/_vendor/distro/LICENSE",
+      "src/pip/_vendor/idna/LICENSE.md",
+      "src/pip/_vendor/msgpack/COPYING",
+      "src/pip/_vendor/packaging/LICENSE",
+      "src/pip/_vendor/packaging/LICENSE.APACHE",
+      "src/pip/_vendor/packaging/LICENSE.BSD",
+      "src/pip/_vendor/pkg_resources/LICENSE",
+      "src/pip/_vendor/platformdirs/LICENSE",
+      "src/pip/_vendor/pygments/LICENSE",
+      "src/pip/_vendor/pyproject_hooks/LICENSE",
+      "src/pip/_vendor/requests/LICENSE",
+      "src/pip/_vendor/resolvelib/LICENSE",
+      "src/pip/_vendor/rich/LICENSE",
+      "src/pip/_vendor/tomli/LICENSE",
+      "src/pip/_vendor/tomli_w/LICENSE",
+      "src/pip/_vendor/truststore/LICENSE",
+      "src/pip/_vendor/urllib3/LICENSE.txt"
+    ],
+    "maintainer": null,
+    "maintainer_email": null,
+    "name": "pip",
+    "package_url": "https://pypi.org/project/pip/",
+    "platform": null,
+    "project_url": "https://pypi.org/project/pip/",
+    "project_urls": {
+      "Changelog": "https://pip.pypa.io/en/stable/news/",
+      "Documentation": "https://pip.pypa.io",
+      "Homepage": "https://pip.pypa.io/",
+      "Source": "https://github.com/pypa/pip"
+    },
+    "provides_extra": null,
+    "release_url": "https://pypi.org/project/pip/26.2.1/",
+    "requires_dist": null,
+    "requires_python": ">=3.10",
+    "summary": "The PyPA recommended tool for installing Python packages.",
+    "version": "26.2.1",
+    "yanked": false,
+    "yanked_reason": null
+  },
+  "urls": [
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "3a561005822841f2c45f442f6c7a7505172c8c376c9fe274d876c8ac912968cb"
+      },
+      "digests": {
+        "blake2b_256": "f36e1736e5b4ae2b778ef2f81c47d797de9f891d4d8acb047a24ca37a60294dd",
+        "md5": "6133db710b3b63a6ddf05d40ca708ab5",
+        "sha256": "71138adf1f4ca900cdb7d289c21b7494329f2332b6d85f0e1c42108c0384ed3e"
+      },
+      "downloads": -1,
+      "filename": "pip-26.2.1-py3-none-any.whl",
+      "has_sig": false,
+      "md5_digest": "6133db710b3b63a6ddf05d40ca708ab5",
+      "packagetype": "bdist_wheel",
+      "python_version": "py3",
+      "requires_python": ">=3.10",
+      "size": 1816632,
+      "upload_time": "2026-08-04T22:51:12",
+      "upload_time_iso_8601": "2026-08-04T22:51:12.472093Z",
+      "url": "https://files.pythonhosted.org/packages/f3/6e/1736e5b4ae2b778ef2f81c47d797de9f891d4d8acb047a24ca37a60294dd/pip-26.2.1-py3-none-any.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": false,
+      "digests": {
+        "blake2b_256": "ae154500e320e6b101ec3b719ae85b697d9940b6cda672bc555bd6016fc60c6f",
+        "md5": "f7e8dc36dcc6cdba3bf5c426ad076902",
+        "sha256": "f6ad667e89a1fe78046c8f13232b247200f5258d7828f3f7883d660878e0813f"
+      },
+      "downloads": -1,
+      "filename": "pip-26.2.1.tar.gz",
+      "has_sig": false,
+      "md5_digest": "f7e8dc36dcc6cdba3bf5c426ad076902",
+      "packagetype": "sdist",
+      "python_version": "source",
+      "requires_python": ">=3.10",
+      "size": 1848877,
+      "upload_time": "2026-08-04T22:51:14",
+      "upload_time_iso_8601": "2026-08-04T22:51:14.148997Z",
+      "url": "https://files.pythonhosted.org/packages/ae/15/4500e320e6b101ec3b719ae85b697d9940b6cda672bc555bd6016fc60c6f/pip-26.2.1.tar.gz",
+      "yanked": false,
+      "yanked_reason": null
+    }
+  ],
+  "wheel_digest_verified": true
+}

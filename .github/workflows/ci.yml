@@ -1,0 +1,159 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  PYTHONUTF8: "1"
+  PYTHONIOENCODING: utf-8
+  HOME: ${{ github.workspace }}/.cache/home
+  USERPROFILE: ${{ github.workspace }}/.cache/home
+  APPDATA: ${{ github.workspace }}/.cache/home/AppData/Roaming
+  LOCALAPPDATA: ${{ github.workspace }}/.cache/home/AppData/Local
+  TEMP: ${{ github.workspace }}/.cache/tmp
+  TMP: ${{ github.workspace }}/.cache/tmp
+  PSModuleAnalysisCachePath: ${{ github.workspace }}/.cache/powershell/ModuleAnalysisCache
+  PIP_CACHE_DIR: ${{ github.workspace }}/.cache/pip
+  PIP_CONFIG_FILE: NUL
+  PLAYWRIGHT_BROWSERS_PATH: ${{ github.workspace }}/.playwright-browsers
+
+jobs:
+  verify:
+    name: quality and clone distribution (Windows x64)
+    runs-on: windows-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Bootstrap the pinned repo-local runtime
+        run: |
+          & ./setup.bat
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+      - name: Verify dependencies
+        run: ./.venv/Scripts/python.exe -m pip check
+      - name: Check privacy and freshness of the complete Git candidate
+        run: ./.venv/Scripts/python.exe tools/check_distribution.py
+      - name: Verify original notices and corresponding sources
+        run: ./.venv/Scripts/python.exe tools/check_license_evidence.py
+      - name: Verify every vendored chunk
+        run: ./.venv/Scripts/python.exe tools/vendor_payload.py verify
+      - name: Lint
+        run: ./.venv/Scripts/python.exe -m ruff check --output-format=github .
+      - name: Format
+        run: ./.venv/Scripts/python.exe -m ruff format --check --diff .
+      - name: Types
+        run: ./.venv/Scripts/python.exe -m mypy
+      - name: Byte compile
+        run: ./.venv/Scripts/python.exe -m compileall -q cli.py redaction.py core web tools tests conftest.py
+      - name: Unit and integration tests
+        run: ./.venv/Scripts/python.exe -m pytest -q --junitxml=.cache/junit.xml
+      - name: CLI roundtrip (fail on each unsuccessful command)
+        run: |
+          $commands = @(
+            @('--version'),
+            @('init-db', '--db', "$env:GITHUB_WORKSPACE/.cache/smoke.db"),
+            @('--db', "$env:GITHUB_WORKSPACE/.cache/smoke.db", 'unclassified', '--json'),
+            @('--db', "$env:GITHUB_WORKSPACE/.cache/smoke.db", 'purchases', 'list', '--json'),
+            @('--db', "$env:GITHUB_WORKSPACE/.cache/smoke.db", 'downloads', 'list', '--json'),
+            @('--db', "$env:GITHUB_WORKSPACE/.cache/smoke.db", 'lists', 'list', '--json'),
+            @('--db', "$env:GITHUB_WORKSPACE/.cache/smoke.db", 'doctor', '--json')
+          )
+          foreach ($argv in $commands) {
+            & ./cli.bat @argv
+            if ($LASTEXITCODE) { exit $LASTEXITCODE }
+          }
+      - name: Check offline hash-pinned resolution
+        run: ./.venv/Scripts/python.exe -m pip install --dry-run --no-index --find-links .cache/wheels --require-hashes --no-deps -r requirements-portable-lock.txt
+      - name: Upload synthetic test report
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: junit
+          path: .cache/junit.xml
+          retention-days: 14
+
+  portable:
+    name: cold clone and offline relocation
+    runs-on: windows-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Bootstrap with OS PowerShell
+        run: |
+          & ./setup.bat
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+      - name: Audit local paths and links
+        run: ./.venv/Scripts/python.exe tools/check_portable.py
+      - name: Verify the complete clone without inherited generated state
+        run: ./.venv/Scripts/python.exe tools/verify_clone.py
+      - name: Upload synthetic portability receipts
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: portable-evidence
+          path: |
+            audit/clone-verification.json
+            audit/junit-clone.xml
+          retention-days: 14
+
+  security:
+    name: dependency and content scans
+    runs-on: windows-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Bootstrap pinned audit tooling
+        run: |
+          & ./setup.bat
+          if ($LASTEXITCODE) { exit $LASTEXITCODE }
+      - name: Audit installed dependencies
+        run: ./.venv/Scripts/python.exe -m pip_audit --local --cache-dir .cache/pip-audit
+      - name: Audit dependencies including optional extras
+        run: ./.venv/Scripts/python.exe tools/dependency_inventory.py --verify-pypi
+      - name: Scan full fetched history for secrets
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = "Stop"
+          $gitleaksVersion = "8.30.1"
+          $gitleaksSha256 = "d29144deff3a68aa93ced33dddf84b7fdc26070add4aa0f4513094c8332afc4e"
+          $directory = Join-Path (Get-Location) ".cache/gitleaks"
+          New-Item -ItemType Directory -Force -Path $directory | Out-Null
+          $archive = Join-Path $directory "gitleaks.zip"
+          $report = Join-Path $directory "gitleaks-results.sarif"
+          $url = "https://github.com/gitleaks/gitleaks/releases/download/v$gitleaksVersion/gitleaks_${gitleaksVersion}_windows_x64.zip"
+          Invoke-WebRequest -Uri $url -OutFile $archive
+          $actual = (Get-FileHash -LiteralPath $archive -Algorithm SHA256).Hash.ToLower()
+          if ($actual -ne $gitleaksSha256) { throw "gitleaks archive checksum mismatch" }
+          Expand-Archive -LiteralPath $archive -DestinationPath $directory -Force
+          & (Join-Path $directory "gitleaks.exe") git --no-banner --redact --config .gitleaks.toml --log-opts=--all --report-format sarif --report-path $report
+          if ($LASTEXITCODE -ne 0) { throw "gitleaks found unresolved secrets (exit $LASTEXITCODE)" }
+      - name: Upload secret scan report
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: gitleaks-results
+          path: .cache/gitleaks/gitleaks-results.sarif
+          retention-days: 14
+      - name: Static security analysis
+        run: ./.venv/Scripts/python.exe -m ruff check cli.py core web tools
+
+# Distribution is git clone. This workflow creates test receipts only;
+# it does not build archives or publish GitHub releases.

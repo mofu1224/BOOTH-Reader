@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/WebPage" class="no-js no-ie" lang="en" dir="ltr">
+<head>
+
+                                                                                                                    <link rel="preconnect" href="https://www.google-analytics.com" >
+                                                                                                                    <link rel="preconnect" href="https://www.googletagmanager.com" >
+                                                                                                                    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="This page provides a preview of the Google Chrome and ChromeOS Additional Terms of Service.">
+
+  <title>Google Chrome and ChromeOS Additional Terms of Service</title>
+
+  <link href="https://www.google.com/images/icons/product/chrome-32.png" rel="icon" type="image/ico">
+<link href="https://www.google.com/chrome/terms/" rel="canonical">
+                                                                                                                    <script nonce="V1yEjxBTfHiuNCAQ3_ibPQ">
+  /*! @license DOMPurify 3.3.1 | (c) Cure53 and other contributors | Released under the Apache license 2.0 and Mozilla Public License 2.0 | github.com/cure53/DOMPurify/blob/3.3.1/LICENSE */
+  !function(e,t){"object"==typeof exports&&"undefined"!=typeof module?module.exports=t():"function"==typeof define&&define.amd?define(t):(e="undefined"!=typeof globalThis?globalThis:e||self).DOMPurify=t()}(this,(function(){"use strict";const{entries:e,setPrototypeOf:t,isFrozen:n,getPrototypeOf:o,getOwnPropertyDescriptor:r}=Object;let{freeze:i,seal:a,create:l}=Object,{apply:c,construct:s}="undefined"!=typeof Reflect&&Reflect;i||(i=function(e){return e}),a||(a=function(e){return e}),c||(c=function(e,t){for(var n=arguments.length,o=new Array(n>2?n-2:0),r=2;r<n;r++)o[r-2]=arguments[r];return e.apply(t,o)}),s||(s=function(e){for(var t=arguments.length,n=new Array(t>1?t-1:0),o=1;o<t;o++)n[o-1]=arguments[o];return new e(...n)});const u=D(Array.prototype.forEach),m=D(Array.prototype.lastIndexOf),p=D(Array.prototype.pop),f=D(Array.prototype.push),d=D(Array.prototype.splice),h=D(String.prototype.toLowerCase),g=D(String.prototype.toString),T=D(String.prototype.match),y=D(String.prototype.replace),E=D(String.prototype.indexOf),A=D(String.prototype.trim),_=D(Object.prototype.hasOwnProperty),b=D(RegExp.prototype.test),S=(N=TypeError,function(){for(var e=arguments.length,t=new Array(e),n=0;n<e;n++)t[n]=arguments[n];return s(N,t)});var N;function D(e){return function(t){t instanceof RegExp&&(t.lastIndex=0);for(var n=arguments.length,o=new Array(n>1?n-1:0),r=1;r<n;r++)o[r-1]=arguments[r];return c(e,t,o)}}function R(e,o){let r=arguments.length>2&&void 0!==arguments[2]?arguments[2]:h;t&&t(e,null);let i=o.length;for(;i--;){let t=o[i];if("string"==typeof t){const e=r(t);e!==t&&(n(o)||(o[i]=e),t=e)}e[t]=!0}return e}function w(e){for(let t=0;t<e.length;t++){_(e,t)||(e[t]=null)}return e}function C(t){const n=l(null);for(const[o,r]of e(t)){_(t,o)&&(Array.isArray(r)?n[o]=w(r):r&&"object"==typeof r&&r.constructor===Object?n[o]=C(r):n[o]=r)}return n}function O(e,t){for(;null!==e;){const n=r(e,t);if(n){if(n.get)return D(n.get);if("function"==typeof n.value)return D(n.value)}e=o(e)}return function(){return null}}const v=i(["a","abbr","acronym","address","area","article","aside","audio","b","bdi","bdo","big","blink","blockquote","body","br","button","canvas","caption","center","cite","code","col","colgroup","content","data","datalist","dd","decorator","del","details","dfn","dialog","dir","div","dl","dt","element","em","fieldset","figcaption","figure","font","footer","form","h1","h2","h3","h4","h5","h6","head","header","hgroup","hr","html","i","img","input","ins","kbd","label","legend","li","main","map","mark","marquee","menu","menuitem","meter","nav","nobr","ol","optgroup","option","output","p","picture","pre","progress","q","rp","rt","ruby","s","samp","search","section","select","shadow","slot","small","source","spacer","span","strike","strong","style","sub","summary","sup","table","tbody","td","template","textarea","tfoot","th","thead","time","tr","track","tt","u","ul","var","video","wbr"]),x=i(["svg","a","altglyph","altglyphdef","altglyphitem","animatecolor","animatemotion","animatetransform","circle","clippath","defs","desc","ellipse","enterkeyhint","exportparts","filter","font","g","glyph","glyphref","hkern","image","inputmode","line","lineargradient","marker","mask","metadata","mpath","part","path","pattern","polygon","polyline","radialgradient","rect","stop","style","switch","symbol","text","textpath","title","tref","tspan","view","vkern"]),L=i(["feBlend","feColorMatrix","feComponentTransfer","feComposite","feConvolveMatrix","feDiffuseLighting","feDisplacementMap","feDistantLight","feDropShadow","feFlood","feFuncA","feFuncB","feFuncG","feFuncR","feGaussianBlur","feImage","feMerge","feMergeNode","feMorphology","feOffset","fePointLight","feSpecularLighting","feSpotLight","feTile","feTurbulence"]),k=i(["animate","color-profile","cursor","discard","font-face","font-face-format","font-face-name","font-face-src","font-face-uri","foreignobject","hatch","hatchpath","mesh","meshgradient","meshpatch","meshrow","missing-glyph","script","set","solidcolor","unknown","use"]),I=i(["math","menclose","merror","mfenced","mfrac","mglyph","mi","mlabeledtr","mmultiscripts","mn","mo","mover","mpadded","mphantom","mroot","mrow","ms","mspace","msqrt","mstyle","msub","msup","msubsup","mtable","mtd","mtext","mtr","munder","munderover","mprescripts"]),M=i(["maction","maligngroup","malignmark","mlongdiv","mscarries","mscarry","msgroup","mstack","msline","msrow","semantics","annotation","annotation-xml","mprescripts","none"]),U=i(["#text"]),z=i(["accept","action","align","alt","autocapitalize","autocomplete","autopictureinpicture","autoplay","background","bgcolor","border","capture","cellpadding","cellspacing","checked","cite","class","clear","color","cols","colspan","controls","controlslist","coords","crossorigin","datetime","decoding","default","dir","disabled","disablepictureinpicture","disableremoteplayback","download","draggable","enctype","enterkeyhint","exportparts","face","for","headers","height","hidden","high","href","hreflang","id","inert","inputmode","integrity","ismap","kind","label","lang","list","loading","loop","low","max","maxlength","media","method","min","minlength","multiple","muted","name","nonce","noshade","novalidate","nowrap","open","optimum","part","pattern","placeholder","playsinline","popover","popovertarget","popovertargetaction","poster","preload","pubdate","radiogroup","readonly","rel","required","rev","reversed","role","rows","rowspan","spellcheck","scope","selected","shape","size","sizes","slot","span","srclang","start","src","srcset","step","style","summary","tabindex","title","translate","type","usemap","valign","value","width","wrap","xmlns","slot"]),P=i(["accent-height","accumulate","additive","alignment-baseline","amplitude","ascent","attributename","attributetype","azimuth","basefrequency","baseline-shift","begin","bias","by","class","clip","clippathunits","clip-path","clip-rule","color","color-interpolation","color-interpolation-filters","color-profile","color-rendering","cx","cy","d","dx","dy","diffuseconstant","direction","display","divisor","dur","edgemode","elevation","end","exponent","fill","fill-opacity","fill-rule","filter","filterunits","flood-color","flood-opacity","font-family","font-size","font-size-adjust","font-stretch","font-style","font-variant","font-weight","fx","fy","g1","g2","glyph-name","glyphref","gradientunits","gradienttransform","height","href","id","image-rendering","in","in2","intercept","k","k1","k2","k3","k4","kerning","keypoints","keysplines","keytimes","lang","lengthadjust","letter-spacing","kernelmatrix","kernelunitlength","lighting-color","local","marker-end","marker-mid","marker-start","markerheight","markerunits","markerwidth","maskcontentunits","maskunits","max","mask","mask-type","media","method","mode","min","name","numoctaves","offset","operator","opacity","order","orient","orientation","origin","overflow","paint-order","path","pathlength","patterncontentunits","patterntransform","patternunits","points","preservealpha","preserveaspectratio","primitiveunits","r","rx","ry","radius","refx","refy","repeatcount","repeatdur","restart","result","rotate","scale","seed","shape-rendering","slope","specularconstant","specularexponent","spreadmethod","startoffset","stddeviation","stitchtiles","stop-color","stop-opacity","stroke-dasharray","stroke-dashoffset","stroke-linecap","stroke-linejoin","stroke-miterlimit","stroke-opacity","stroke","stroke-width","style","surfacescale","systemlanguage","tabindex","tablevalues","targetx","targety","transform","transform-origin","text-anchor","text-decoration","text-rendering","textlength","type","u1","u2","unicode","values","viewbox","visibility","version","vert-adv-y","vert-origin-x","vert-origin-y","width","word-spacing","wrap","writing-mode","xchannelselector","ychannelselector","x","x1","x2","xmlns","y","y1","y2","z","zoomandpan"]),F=i(["accent","accentunder","align","bevelled","close","columnsalign","columnlines","columnspan","denomalign","depth","dir","display","displaystyle","encoding","fence","frame","height","href","id","largeop","length","linethickness","lspace","lquote","mathbackground","mathcolor","mathsize","mathvariant","maxsize","minsize","movablelimits","notation","numalign","open","rowalign","rowlines","rowspacing","rowspan","rspace","rquote","scriptlevel","scriptminsize","scriptsizemultiplier","selection","separator","separators","stretchy","subscriptshift","supscriptshift","symmetric","voffset","width","xmlns"]),H=i(["xlink:href","xml:id","xlink:title","xml:space","xmlns:xlink"]),B=a(/\{\{[\w\W]*|[\w\W]*\}\}/gm),G=a(/<%[\w\W]*|[\w\W]*%>/gm),W=a(/\$\{[\w\W]*/gm),Y=a(/^data-[\-\w.\u00B7-\uFFFF]+$/),j=a(/^aria-[\-\w]+$/),X=a(/^(?:(?:(?:f|ht)tps?|mailto|tel|callto|sms|cid|xmpp|matrix):|[^a-z]|[a-z+.\-]+(?:[^a-z+.\-:]|$))/i),q=a(/^(?:\w+script|data):/i),$=a(/[\u0000-\u0020\u00A0\u1680\u180E\u2000-\u2029\u205F\u3000]/g),K=a(/^html$/i),V=a(/^[a-z][.\w]*(-[.\w]+)+$/i);var Z=Object.freeze({__proto__:null,ARIA_ATTR:j,ATTR_WHITESPACE:$,CUSTOM_ELEMENT:V,DATA_ATTR:Y,DOCTYPE_NAME:K,ERB_EXPR:G,IS_ALLOWED_URI:X,IS_SCRIPT_OR_DATA:q,MUSTACHE_EXPR:B,TMPLIT_EXPR:W});const J=1,Q=3,ee=7,te=8,ne=9,oe=function(){return"undefined"==typeof window?null:window};var re=function t(){let n=arguments.length>0&&void 0!==arguments[0]?arguments[0]:oe();const o=e=>t(e);if(o.version="3.3.1",o.removed=[],!n||!n.document||n.document.nodeType!==ne||!n.Element)return o.isSupported=!1,o;let{document:r}=n;const a=r,c=a.currentScript,{DocumentFragment:s,HTMLTemplateElement:N,Node:D,Element:w,NodeFilter:B,NamedNodeMap:G=n.NamedNodeMap||n.MozNamedAttrMap,HTMLFormElement:W,DOMParser:Y,trustedTypes:j}=n,q=w.prototype,$=O(q,"cloneNode"),V=O(q,"remove"),re=O(q,"nextSibling"),ie=O(q,"childNodes"),ae=O(q,"parentNode");if("function"==typeof N){const e=r.createElement("template");e.content&&e.content.ownerDocument&&(r=e.content.ownerDocument)}let le,ce="";const{implementation:se,createNodeIterator:ue,createDocumentFragment:me,getElementsByTagName:pe}=r,{importNode:fe}=a;let de={afterSanitizeAttributes:[],afterSanitizeElements:[],afterSanitizeShadowDOM:[],beforeSanitizeAttributes:[],beforeSanitizeElements:[],beforeSanitizeShadowDOM:[],uponSanitizeAttribute:[],uponSanitizeElement:[],uponSanitizeShadowNode:[]};o.isSupported="function"==typeof e&&"function"==typeof ae&&se&&void 0!==se.createHTMLDocument;const{MUSTACHE_EXPR:he,ERB_EXPR:ge,TMPLIT_EXPR:Te,DATA_ATTR:ye,ARIA_ATTR:Ee,IS_SCRIPT_OR_DATA:Ae,ATTR_WHITESPACE:_e,CUSTOM_ELEMENT:be}=Z;let{IS_ALLOWED_URI:Se}=Z,Ne=null;const De=R({},[...v,...x,...L,...I,...U]);let Re=null;const we=R({},[...z,...P,...F,...H]);let Ce=Object.seal(l(null,{tagNameCheck:{writable:!0,configurable:!1,enumerable:!0,value:null},attributeNameCheck:{writable:!0,configurable:!1,enumerable:!0,value:null},allowCustomizedBuiltInElements:{writable:!0,configurable:!1,enumerable:!0,value:!1}})),Oe=null,ve=null;const xe=Object.seal(l(null,{tagCheck:{writable:!0,configurable:!1,enumerable:!0,value:null},attributeCheck:{writable:!0,configurable:!1,enumerable:!0,value:null}}));let Le=!0,ke=!0,Ie=!1,Me=!0,Ue=!1,ze=!0,Pe=!1,Fe=!1,He=!1,Be=!1,Ge=!1,We=!1,Ye=!0,je=!1,Xe=!0,qe=!1,$e={},Ke=null;const Ve=R({},["annotation-xml","audio","colgroup","desc","foreignobject","head","iframe","math","mi","mn","mo","ms","mtext","noembed","noframes","noscript","plaintext","script","style","svg","template","thead","title","video","xmp"]);let Ze=null;const Je=R({},["audio","video","img","source","image","track"]);let Qe=null;const et=R({},["alt","class","for","id","label","name","pattern","placeholder","role","summary","title","value","style","xmlns"]),tt="http://www.w3.org/1998/Math/MathML",nt="http://www.w3.org/2000/svg",ot="http://www.w3.org/1999/xhtml";let rt=ot,it=!1,at=null;const lt=R({},[tt,nt,ot],g);let ct=R({},["mi","mo","mn","ms","mtext"]),st=R({},["annotation-xml"]);const ut=R({},["title","style","font","a","script"]);let mt=null;const pt=["application/xhtml+xml","text/html"];let ft=null,dt=null;const ht=r.createElement("form"),gt=function(e){return e instanceof RegExp||e instanceof Function},Tt=function(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};if(!dt||dt!==e){if(e&&"object"==typeof e||(e={}),e=C(e),mt=-1===pt.indexOf(e.PARSER_MEDIA_TYPE)?"text/html":e.PARSER_MEDIA_TYPE,ft="application/xhtml+xml"===mt?g:h,Ne=_(e,"ALLOWED_TAGS")?R({},e.ALLOWED_TAGS,ft):De,Re=_(e,"ALLOWED_ATTR")?R({},e.ALLOWED_ATTR,ft):we,at=_(e,"ALLOWED_NAMESPACES")?R({},e.ALLOWED_NAMESPACES,g):lt,Qe=_(e,"ADD_URI_SAFE_ATTR")?R(C(et),e.ADD_URI_SAFE_ATTR,ft):et,Ze=_(e,"ADD_DATA_URI_TAGS")?R(C(Je),e.ADD_DATA_URI_TAGS,ft):Je,Ke=_(e,"FORBID_CONTENTS")?R({},e.FORBID_CONTENTS,ft):Ve,Oe=_(e,"FORBID_TAGS")?R({},e.FORBID_TAGS,ft):C({}),ve=_(e,"FORBID_ATTR")?R({},e.FORBID_ATTR,ft):C({}),$e=!!_(e,"USE_PROFILES")&&e.USE_PROFILES,Le=!1!==e.ALLOW_ARIA_ATTR,ke=!1!==e.ALLOW_DATA_ATTR,Ie=e.ALLOW_UNKNOWN_PROTOCOLS||!1,Me=!1!==e.ALLOW_SELF_CLOSE_IN_ATTR,Ue=e.SAFE_FOR_TEMPLATES||!1,ze=!1!==e.SAFE_FOR_XML,Pe=e.WHOLE_DOCUMENT||!1,Be=e.RETURN_DOM||!1,Ge=e.RETURN_DOM_FRAGMENT||!1,We=e.RETURN_TRUSTED_TYPE||!1,He=e.FORCE_BODY||!1,Ye=!1!==e.SANITIZE_DOM,je=e.SANITIZE_NAMED_PROPS||!1,Xe=!1!==e.KEEP_CONTENT,qe=e.IN_PLACE||!1,Se=e.ALLOWED_URI_REGEXP||X,rt=e.NAMESPACE||ot,ct=e.MATHML_TEXT_INTEGRATION_POINTS||ct,st=e.HTML_INTEGRATION_POINTS||st,Ce=e.CUSTOM_ELEMENT_HANDLING||{},e.CUSTOM_ELEMENT_HANDLING&&gt(e.CUSTOM_ELEMENT_HANDLING.tagNameCheck)&&(Ce.tagNameCheck=e.CUSTOM_ELEMENT_HANDLING.tagNameCheck),e.CUSTOM_ELEMENT_HANDLING&&gt(e.CUSTOM_ELEMENT_HANDLING.attributeNameCheck)&&(Ce.attributeNameCheck=e.CUSTOM_ELEMENT_HANDLING.attributeNameCheck),e.CUSTOM_ELEMENT_HANDLING&&"boolean"==typeof e.CUSTOM_ELEMENT_HANDLING.allowCustomizedBuiltInElements&&(Ce.allowCustomizedBuiltInElements=e.CUSTOM_ELEMENT_HANDLING.allowCustomizedBuiltInElements),Ue&&(ke=!1),Ge&&(Be=!0),$e&&(Ne=R({},U),Re=[],!0===$e.html&&(R(Ne,v),R(Re,z)),!0===$e.svg&&(R(Ne,x),R(Re,P),R(Re,H)),!0===$e.svgFilters&&(R(Ne,L),R(Re,P),R(Re,H)),!0===$e.mathMl&&(R(Ne,I),R(Re,F),R(Re,H))),e.ADD_TAGS&&("function"==typeof e.ADD_TAGS?xe.tagCheck=e.ADD_TAGS:(Ne===De&&(Ne=C(Ne)),R(Ne,e.ADD_TAGS,ft))),e.ADD_ATTR&&("function"==typeof e.ADD_ATTR?xe.attributeCheck=e.ADD_ATTR:(Re===we&&(Re=C(Re)),R(Re,e.ADD_ATTR,ft))),e.ADD_URI_SAFE_ATTR&&R(Qe,e.ADD_URI_SAFE_ATTR,ft),e.FORBID_CONTENTS&&(Ke===Ve&&(Ke=C(Ke)),R(Ke,e.FORBID_CONTENTS,ft)),e.ADD_FORBID_CONTENTS&&(Ke===Ve&&(Ke=C(Ke)),R(Ke,e.ADD_FORBID_CONTENTS,ft)),Xe&&(Ne["#text"]=!0),Pe&&R(Ne,["html","head","body"]),Ne.table&&(R(Ne,["tbody"]),delete Oe.tbody),e.TRUSTED_TYPES_POLICY){if("function"!=typeof e.TRUSTED_TYPES_POLICY.createHTML)throw S('TRUSTED_TYPES_POLICY configuration option must provide a "createHTML" hook.');if("function"!=typeof e.TRUSTED_TYPES_POLICY.createScriptURL)throw S('TRUSTED_TYPES_POLICY configuration option must provide a "createScriptURL" hook.');le=e.TRUSTED_TYPES_POLICY,ce=le.createHTML("")}else void 0===le&&(le=function(e,t){if("object"!=typeof e||"function"!=typeof e.createPolicy)return null;let n=null;const o="data-tt-policy-suffix";t&&t.hasAttribute(o)&&(n=t.getAttribute(o));const r="dompurify"+(n?"#"+n:"");try{return e.createPolicy(r,{createHTML:e=>e,createScriptURL:e=>e})}catch(e){return console.warn("TrustedTypes policy "+r+" could not be created."),null}}(j,c)),null!==le&&"string"==typeof ce&&(ce=le.createHTML(""));i&&i(e),dt=e}},yt=R({},[...x,...L,...k]),Et=R({},[...I,...M]),At=function(e){f(o.removed,{element:e});try{ae(e).removeChild(e)}catch(t){V(e)}},_t=function(e,t){try{f(o.removed,{attribute:t.getAttributeNode(e),from:t})}catch(e){f(o.removed,{attribute:null,from:t})}if(t.removeAttribute(e),"is"===e)if(Be||Ge)try{At(t)}catch(e){}else try{t.setAttribute(e,"")}catch(e){}},bt=function(e){let t=null,n=null;if(He)e="<remove></remove>"+e;else{const t=T(e,/^[\r\n\t ]+/);n=t&&t[0]}"application/xhtml+xml"===mt&&rt===ot&&(e='<html xmlns="http://www.w3.org/1999/xhtml"><head></head><body>'+e+"</body></html>");const o=le?le.createHTML(e):e;if(rt===ot)try{t=(new Y).parseFromString(o,mt)}catch(e){}if(!t||!t.documentElement){t=se.createDocument(rt,"template",null);try{t.documentElement.innerHTML=it?ce:o}catch(e){}}const i=t.body||t.documentElement;return e&&n&&i.insertBefore(r.createTextNode(n),i.childNodes[0]||null),rt===ot?pe.call(t,Pe?"html":"body")[0]:Pe?t.documentElement:i},St=function(e){return ue.call(e.ownerDocument||e,e,B.SHOW_ELEMENT|B.SHOW_COMMENT|B.SHOW_TEXT|B.SHOW_PROCESSING_INSTRUCTION|B.SHOW_CDATA_SECTION,null)},Nt=function(e){return e instanceof W&&("string"!=typeof e.nodeName||"string"!=typeof e.textContent||"function"!=typeof e.removeChild||!(e.attributes instanceof G)||"function"!=typeof e.removeAttribute||"function"!=typeof e.setAttribute||"string"!=typeof e.namespaceURI||"function"!=typeof e.insertBefore||"function"!=typeof e.hasChildNodes)},Dt=function(e){return"function"==typeof D&&e instanceof D};function Rt(e,t,n){u(e,(e=>{e.call(o,t,n,dt)}))}const wt=function(e){let t=null;if(Rt(de.beforeSanitizeElements,e,null),Nt(e))return At(e),!0;const n=ft(e.nodeName);if(Rt(de.uponSanitizeElement,e,{tagName:n,allowedTags:Ne}),ze&&e.hasChildNodes()&&!Dt(e.firstElementChild)&&b(/<[/\w!]/g,e.innerHTML)&&b(/<[/\w!]/g,e.textContent))return At(e),!0;if(e.nodeType===ee)return At(e),!0;if(ze&&e.nodeType===te&&b(/<[/\w]/g,e.data))return At(e),!0;if(!(xe.tagCheck instanceof Function&&xe.tagCheck(n))&&(!Ne[n]||Oe[n])){if(!Oe[n]&&Ot(n)){if(Ce.tagNameCheck instanceof RegExp&&b(Ce.tagNameCheck,n))return!1;if(Ce.tagNameCheck instanceof Function&&Ce.tagNameCheck(n))return!1}if(Xe&&!Ke[n]){const t=ae(e)||e.parentNode,n=ie(e)||e.childNodes;if(n&&t){for(let o=n.length-1;o>=0;--o){const r=$(n[o],!0);r.__removalCount=(e.__removalCount||0)+1,t.insertBefore(r,re(e))}}}return At(e),!0}return e instanceof w&&!function(e){let t=ae(e);t&&t.tagName||(t={namespaceURI:rt,tagName:"template"});const n=h(e.tagName),o=h(t.tagName);return!!at[e.namespaceURI]&&(e.namespaceURI===nt?t.namespaceURI===ot?"svg"===n:t.namespaceURI===tt?"svg"===n&&("annotation-xml"===o||ct[o]):Boolean(yt[n]):e.namespaceURI===tt?t.namespaceURI===ot?"math"===n:t.namespaceURI===nt?"math"===n&&st[o]:Boolean(Et[n]):e.namespaceURI===ot?!(t.namespaceURI===nt&&!st[o])&&!(t.namespaceURI===tt&&!ct[o])&&!Et[n]&&(ut[n]||!yt[n]):!("application/xhtml+xml"!==mt||!at[e.namespaceURI]))}(e)?(At(e),!0):"noscript"!==n&&"noembed"!==n&&"noframes"!==n||!b(/<\/no(script|embed|frames)/i,e.innerHTML)?(Ue&&e.nodeType===Q&&(t=e.textContent,u([he,ge,Te],(e=>{t=y(t,e," ")})),e.textContent!==t&&(f(o.removed,{element:e.cloneNode()}),e.textContent=t)),Rt(de.afterSanitizeElements,e,null),!1):(At(e),!0)},Ct=function(e,t,n){if(Ye&&("id"===t||"name"===t)&&(n in r||n in ht))return!1;if(ke&&!ve[t]&&b(ye,t));else if(Le&&b(Ee,t));else if(xe.attributeCheck instanceof Function&&xe.attributeCheck(t,e));else if(!Re[t]||ve[t]){if(!(Ot(e)&&(Ce.tagNameCheck instanceof RegExp&&b(Ce.tagNameCheck,e)||Ce.tagNameCheck instanceof Function&&Ce.tagNameCheck(e))&&(Ce.attributeNameCheck instanceof RegExp&&b(Ce.attributeNameCheck,t)||Ce.attributeNameCheck instanceof Function&&Ce.attributeNameCheck(t,e))||"is"===t&&Ce.allowCustomizedBuiltInElements&&(Ce.tagNameCheck instanceof RegExp&&b(Ce.tagNameCheck,n)||Ce.tagNameCheck instanceof Function&&Ce.tagNameCheck(n))))return!1}else if(Qe[t]);else if(b(Se,y(n,_e,"")));else if("src"!==t&&"xlink:href"!==t&&"href"!==t||"script"===e||0!==E(n,"data:")||!Ze[e]){if(Ie&&!b(Ae,y(n,_e,"")));else if(n)return!1}else;return!0},Ot=function(e){return"annotation-xml"!==e&&T(e,be)},vt=function(e){Rt(de.beforeSanitizeAttributes,e,null);const{attributes:t}=e;if(!t||Nt(e))return;const n={attrName:"",attrValue:"",keepAttr:!0,allowedAttributes:Re,forceKeepAttr:void 0};let r=t.length;for(;r--;){const i=t[r],{name:a,namespaceURI:l,value:c}=i,s=ft(a),m=c;let f="value"===a?m:A(m);if(n.attrName=s,n.attrValue=f,n.keepAttr=!0,n.forceKeepAttr=void 0,Rt(de.uponSanitizeAttribute,e,n),f=n.attrValue,!je||"id"!==s&&"name"!==s||(_t(a,e),f="user-content-"+f),ze&&b(/((--!?|])>)|<\/(style|title|textarea)/i,f)){_t(a,e);continue}if("attributename"===s&&T(f,"href")){_t(a,e);continue}if(n.forceKeepAttr)continue;if(!n.keepAttr){_t(a,e);continue}if(!Me&&b(/\/>/i,f)){_t(a,e);continue}Ue&&u([he,ge,Te],(e=>{f=y(f,e," ")}));const d=ft(e.nodeName);if(Ct(d,s,f)){if(le&&"object"==typeof j&&"function"==typeof j.getAttributeType)if(l);else switch(j.getAttributeType(d,s)){case"TrustedHTML":f=le.createHTML(f);break;case"TrustedScriptURL":f=le.createScriptURL(f)}if(f!==m)try{l?e.setAttributeNS(l,a,f):e.setAttribute(a,f),Nt(e)?At(e):p(o.removed)}catch(t){_t(a,e)}}else _t(a,e)}Rt(de.afterSanitizeAttributes,e,null)},xt=function e(t){let n=null;const o=St(t);for(Rt(de.beforeSanitizeShadowDOM,t,null);n=o.nextNode();)Rt(de.uponSanitizeShadowNode,n,null),wt(n),vt(n),n.content instanceof s&&e(n.content);Rt(de.afterSanitizeShadowDOM,t,null)};return o.sanitize=function(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},n=null,r=null,i=null,l=null;if(it=!e,it&&(e="\x3c!--\x3e"),"string"!=typeof e&&!Dt(e)){if("function"!=typeof e.toString)throw S("toString is not a function");if("string"!=typeof(e=e.toString()))throw S("dirty is not a string, aborting")}if(!o.isSupported)return e;if(Fe||Tt(t),o.removed=[],"string"==typeof e&&(qe=!1),qe){if(e.nodeName){const t=ft(e.nodeName);if(!Ne[t]||Oe[t])throw S("root node is forbidden and cannot be sanitized in-place")}}else if(e instanceof D)n=bt("\x3c!----\x3e"),r=n.ownerDocument.importNode(e,!0),r.nodeType===J&&"BODY"===r.nodeName||"HTML"===r.nodeName?n=r:n.appendChild(r);else{if(!Be&&!Ue&&!Pe&&-1===e.indexOf("<"))return le&&We?le.createHTML(e):e;if(n=bt(e),!n)return Be?null:We?ce:""}n&&He&&At(n.firstChild);const c=St(qe?e:n);for(;i=c.nextNode();)wt(i),vt(i),i.content instanceof s&&xt(i.content);if(qe)return e;if(Be){if(Ge)for(l=me.call(n.ownerDocument);n.firstChild;)l.appendChild(n.firstChild);else l=n;return(Re.shadowroot||Re.shadowrootmode)&&(l=fe.call(a,l,!0)),l}let m=Pe?n.outerHTML:n.innerHTML;return Pe&&Ne["!doctype"]&&n.ownerDocument&&n.ownerDocument.doctype&&n.ownerDocument.doctype.name&&b(K,n.ownerDocument.doctype.name)&&(m="<!DOCTYPE "+n.ownerDocument.doctype.name+">\n"+m),Ue&&u([he,ge,Te],(e=>{m=y(m,e," ")})),le&&We?le.createHTML(m):m},o.setConfig=function(){Tt(arguments.length>0&&void 0!==arguments[0]?arguments[0]:{}),Fe=!0},o.clearConfig=function(){dt=null,Fe=!1},o.isValidAttribute=function(e,t,n){dt||Tt({});const o=ft(e),r=ft(t);return Ct(o,r,n)},o.addHook=function(e,t){"function"==typeof t&&f(de[e],t)},o.removeHook=function(e,t){if(void 0!==t){const n=m(de[e],t);return-1===n?void 0:d(de[e],n,1)[0]}return p(de[e])},o.removeHooks=function(e){de[e]=[]},o.removeAllHooks=function(){de={afterSanitizeAttributes:[],afterSanitizeElements:[],afterSanitizeShadowDOM:[],beforeSanitizeAttributes:[],beforeSanitizeElements:[],beforeSanitizeShadowDOM:[],uponSanitizeAttribute:[],uponSanitizeElement:[],uponSanitizeShadowNode:[]}},o}();return re}));
+  //# sourceMappingURL=purify.min.js.map
+</script>
+<script nonce="V1yEjxBTfHiuNCAQ3_ibPQ">
+  if (window.trustedTypes && window.trustedTypes.createPolicy) {
+    DOMPurify.addHook('afterSanitizeAttributes', function(node){
+        if(node.hasAttribute('xlink:href') && !node.getAttribute('xlink:href').match(/^#/)){
+            node.remove();
+        }
+    });
+    ttp = trustedTypes.createPolicy('default', {
+      createHTML: (to_escape) => {
+        // console.log('Raw:', to_escape)
+        const sanitized_content = DOMPurify.sanitize(to_escape, {
+          CUSTOM_ELEMENT_HANDLING: {
+            tagNameCheck: (tagName) => tagName.match(/(?:deprecated-(?:banner|description)|download-(?:button|checkbox|radio|selector)|direct-download|update-link)/),
+            allowCustomizedBuiltInElements: true
+          },
+          ADD_TAGS: ['use', 'svg'],
+          ADD_ATTR: ['target', 'xlink:href'],
+          RETURN_TRUSTED_TYPE: false });
+
+        // console.log('Sanitized:', sanitized_content);
+
+        return sanitized_content;
+      }
+        ,
+      createScriptURL: (string) => {
+        const url = new URL(string, document.baseURI);
+        if(url.origin = window.location.origin || url.origin === "www.googletagmanager.com" || url.origin === "www.google-analytics.com") return url.href
+        throw new TypeError('createScriptURL: invalid URL')
+      }
+    });
+  }
+</script><!-- Google Tag Manager -->
+<script nonce="V1yEjxBTfHiuNCAQ3_ibPQ">
+  window.dataLayer = window.dataLayer || []
+  // Initialize event
+  window.dataLayer.push({
+    event: "dataLayer_initialized",
+    page_name: "Google Chrome and ChromeOS Additional Terms of Service",
+    locale: "en_US",
+    experiments: undefined});
+</script>
+
+<!-- Google Tag Manager -->
+<script nonce="V1yEjxBTfHiuNCAQ3_ibPQ">
+  window.dataLayer = window.dataLayer || [];
+  function glueCookieNotificationBarLoaded() {
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    ((typeof ttp === "undefined") ? ('https://www.googletagmanager.com/gtm.js?id='+i+dl) :
+    ttp.createScriptURL('https://www.googletagmanager.com/gtm.js?id='+i+dl) );
+    f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer',
+    'GTM-PZ6TRJB');
+  }
+</script>
+<!-- End Google Tag Manager --><link rel="stylesheet" href="/chrome/static/css/main.min.css" nonce="V1yEjxBTfHiuNCAQ3_ibPQ">
+</head>
+<body>
+  <div class="chrm-text-only">
+<div class="chr-wrapper tos-content" >
+
+<div class="chr-header__logo">
+        
+<a href="/chrome/"  title="Google Chrome"  class=" chr-header__logo-link" >
+      <svg class="chr-header__logo-icon" >
+        <defs>
+          <linearGradient id="linear-gradient" x1="23.9" y1="1076.02" x2="5.15" y2="1043.54" gradientTransform="translate(0 -1034)" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#1e8e3e"/>
+              <stop offset="1" stop-color="#34a853"/>
+              </linearGradient>
+              <linearGradient id="linear-gradient-2" x1="18.32" y1="1077.42" x2="37.07" y2="1044.93" gradientTransform="translate(0 -1034)" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#fcc934"/>
+                  <stop offset="1" stop-color="#fbbc04"/>
+                  </linearGradient>
+                  <linearGradient id="linear-gradient-3" x1="2.87" y1="1047.56" x2="40.19" y2="1047.56" gradientTransform="translate(0 -1034)" gradientUnits="userSpaceOnUse">
+                    <stop offset="0" stop-color="#d93025"/>
+                      <stop offset="1" stop-color="#ea4335"/>
+                      </linearGradient>
+                    </defs>
+        <title></title>
+        <use xlink:href="#color-google-logo-2023"></use>
+        <image src="/chrome/static/images/fallback/chrome-logo-2023.png" xlink:href="" alt="Google Chrome" width="134" height="36" class="svg-fallback"/>
+        </svg></a></div>
+    <h1 id="google-chrome-terms-of-service">
+Google Chrome and ChromeOS Additional Terms of Service    </h1>
+    <p class="last-date">
+Last modified: 30 September, 2025    </p>
+    <p>
+By using Chrome or ChromeOS, you agree to the Google Terms of Service located at <a data-ga-config="{&#34;click&#34;: {&#34;event&#34;: &#34;general_link_click&#34;, &#34;link_url&#34;: true, &#34;link_text&#34;: true, &#34;link_type&#34;: true, &#34;module_name&#34;: true, &#34;section_header&#34;: true}}" href="https://policies.google.com/terms" target="_blank">https://policies.google.com/terms</a> and these Google Chrome and ChromeOS Additional Terms of Service.    </p>
+    <p>
+These Google Chrome and ChromeOS Additional Terms of Service apply to the executable code version of Chrome and ChromeOS. Most source code for Chrome is available free of charge under open source software license agreements at chrome://credits.    </p>
+    <p>
+Your use of certain components of Chrome and ChromeOS is subject to the following terms:    </p>
+    <section>
+    <p>
+    <strong>
+AVC    </strong>
+    </p>
+    <p>
+THIS PRODUCT IS LICENSED UNDER THE AVC PATENT PORTFOLIO LICENSE FOR THE PERSONAL USE OF A CONSUMER OR OTHER USES IN WHICH IT DOES NOT RECEIVE REMUNERATION TO (i) ENCODE VIDEO IN COMPLIANCE WITH THE AVC STANDARD (“AVC VIDEO”) AND/OR (ii) DECODE AVC VIDEO THAT WAS ENCODED BY A CONSUMER ENGAGED IN A PERSONAL ACTIVITY AND/OR WAS OBTAINED FROM A VIDEO PROVIDER LICENSED TO PROVIDE AVC VIDEO. NO LICENSE IS GRANTED OR SHALL BE IMPLIED FOR ANY OTHER USE. ADDITIONAL INFORMATION MAY BE OBTAINED FROM MPEG LA, L.L.C. SEE <a data-ga-config="{&#34;click&#34;: {&#34;event&#34;: &#34;general_link_click&#34;, &#34;link_url&#34;: true, &#34;link_text&#34;: true, &#34;link_type&#34;: true, &#34;module_name&#34;: true, &#34;section_header&#34;: true}}" href="https://www.via-la.com/" rel="noopener" target="_blank">HTTPS://WWW.VIA-LA.COM</a>.    </p>
+    </section>
+<footer data-comp="Footer">
+        <ul class="chr-footer-help-language chr-footer-help-language--terms">
+          <li class="chr-footer-language-dropdown">
+            <label for="language-selector">Change language or region</label>
+            <select
+              class="chr-footer-language-dropdown__select js-footer-language-select"
+              id="language-selector"
+               ga-on="click"  ga-event-category="chrome-footer-dropdown"  ga-event-action="clicked" ga-event-label="footer:select-language" data-g-event="chrome-footer-dropdown" data-g-action="clicked" data-g-label="footer:select-language" >
+<option value="/intl/ca/chrome/terms/" >
+Català - Espanya</option>
+<option value="/intl/da/chrome/terms/" >
+Dansk - Danmark</option>
+<option value="/intl/de/chrome/terms/" >
+Deutsch - Deutschland</option>
+<option value="/intl/et/chrome/terms/" >
+Eesti - Eesti</option>
+<option value="/intl/en_au/chrome/terms/" >
+English - Australia</option>
+<option value="/intl/en_ca/chrome/terms/" >
+English - Canada</option>
+<option value="/intl/en_uk/chrome/terms/" >
+English - United Kingdom</option>
+<option value="/intl/en_hk/chrome/terms/" >
+English - Hong Kong SAR China</option>
+<option value="/intl/en_ie/chrome/terms/" >
+English - Ireland</option>
+<option value="/intl/en_in/chrome/terms/" >
+English - India</option>
+<option value="/intl/en_ph/chrome/terms/" >
+English - Philippines</option>
+<option value="/intl/en_pk/chrome/terms/" >
+English - Pakistan</option>
+<option value="/intl/en_sg/chrome/terms/" >
+English - Singapore</option>
+<option value="/intl/en_us/chrome/terms/"  selected>
+English - United States</option>
+<option value="/intl/es-419/chrome/terms/" >
+Español - Latinoamérica</option>
+<option value="/intl/es_us/chrome/terms/" >
+Español - Estados Unidos</option>
+<option value="/intl/es_es/chrome/terms/" >
+Español - España</option>
+<option value="/intl/fil/chrome/terms/" >
+Filipino - Pilipinas</option>
+<option value="/intl/fr/chrome/terms/" >
+Français - France</option>
+<option value="/intl/fr_ca/chrome/terms/" >
+Français - Canada</option>
+<option value="/intl/hr/chrome/terms/" >
+Hrvatski - Hrvatska</option>
+<option value="/intl/id/chrome/terms/" >
+Indonesia - Indonesia</option>
+<option value="/intl/it/chrome/terms/" >
+Italiano - Italia</option>
+<option value="/intl/sw_ke/chrome/terms/" >
+Kiswahili - Kenya</option>
+<option value="/intl/lv/chrome/terms/" >
+Latviešu - Latvija</option>
+<option value="/intl/lt/chrome/terms/" >
+Lietuvių - Lietuva</option>
+<option value="/intl/hu/chrome/terms/" >
+Magyar - Magyarország</option>
+<option value="/intl/ms/chrome/terms/" >
+Melayu - Malaysia</option>
+<option value="/intl/nl/chrome/terms/" >
+Nederlands - Nederland</option>
+<option value="/intl/no/chrome/terms/" >
+Norsk Bokmål - Norge</option>
+<option value="/intl/pl/chrome/terms/" >
+Polski - Polska</option>
+<option value="/intl/pt-PT/chrome/terms/" >
+Português - Portugal</option>
+<option value="/intl/pt-BR/chrome/terms/" >
+Português - Brasil</option>
+<option value="/intl/ro/chrome/terms/" >
+Română - România</option>
+<option value="/intl/sk/chrome/terms/" >
+Slovenčina - Slovensko</option>
+<option value="/intl/sl/chrome/terms/" >
+Slovenščina - Slovenija</option>
+<option value="/intl/fi/chrome/terms/" >
+Suomi - Suomi</option>
+<option value="/intl/sv/chrome/terms/" >
+Svenska - Sverige</option>
+<option value="/intl/vi/chrome/terms/" >
+Tiếng Việt - Việt Nam</option>
+<option value="/intl/tr/chrome/terms/" >
+Türkçe - Türkiye</option>
+<option value="/intl/cs/chrome/terms/" >
+Čeština - Česko</option>
+<option value="/intl/el/chrome/terms/" >
+Ελληνικά - Ελλάδα</option>
+<option value="/intl/bg/chrome/terms/" >
+Български - България</option>
+<option value="/intl/ru/chrome/terms/" >
+Русский - Россия</option>
+<option value="/intl/sr/chrome/terms/" >
+Српски - Србија</option>
+<option value="/intl/uk/chrome/terms/" >
+Українська - Україна</option>
+<option value="/intl/iw/chrome/terms/" >
+עברית</option>
+<option value="/intl/ar/chrome/terms/" >
+العربية - المملكة العربية السعودية</option>
+<option value="/intl/fa/chrome/terms/" >
+فارسی</option>
+<option value="/intl/mr_in/chrome/terms/" >
+मराठी - भारत</option>
+<option value="/intl/hi/chrome/terms/" >
+हिन्दी - भारत</option>
+<option value="/intl/bn_in/chrome/terms/" >
+বাংলা - ভারত</option>
+<option value="/intl/gu_in/chrome/terms/" >
+ગુજરાતી - ભારત</option>
+<option value="/intl/ta_in/chrome/terms/" >
+தமிழ் - இந்தியா</option>
+<option value="/intl/te_in/chrome/terms/" >
+తెలుగు - భారతదేశం</option>
+<option value="/intl/kn_in/chrome/terms/" >
+ಕನ್ನಡ - ಭಾರತ</option>
+<option value="/intl/ml_in/chrome/terms/" >
+മലയാളം - ഇന്ത്യ</option>
+<option value="/intl/th/chrome/terms/" >
+ไทย - ไทย</option>
+<option value="/intl/am_et/chrome/terms/" >
+አማርኛ - ኢትዮጵያ</option>
+<option value="/intl/zh-CN/chrome/terms/" >
+中文 - 中国</option>
+<option value="/intl/zh-HK/chrome/terms/" >
+中文 - 中国香港特别行政区</option>
+<option value="/intl/zh-TW/chrome/terms/" >
+中文 - 台灣</option>
+<option value="/intl/ja/chrome/terms/" >
+日本語 - 日本</option>
+<option value="/intl/ko/chrome/terms/" >
+한국어 - 대한민국</option>
+</select>
+          </li>
+        </ul>
+      </footer>
+</div>
+</div>
+<svg class="svg-assets" xmlns="http://www.w3.org/2000/svg">
+  <!-- material design icons -->
+
+  <symbol id="color-google-logo-2023" viewBox="0 0 160 44" fill="none">
+    <g>
+      <path
+      d="M21.5285 32.2928C17.5957 32.2928 14.1563 30.1839 12.2781 27.0347L8.5 20.5L2.88396 10.7643L2.88224 10.7617L2.88052 10.7643C1.04887 13.9307 0 17.6069 0 21.5286C0 33.4183 9.63875 43.0571 21.5285 43.0571L30.7789 27.0347C28.9008 30.1839 25.4614 32.2928 21.5285 32.2928Z"
+      fill="url(#linear-gradient)"/>
+      <path
+      d="M40.1773 10.7646H38H21.5293C27.4746 10.7646 32.2936 15.5836 32.2936 21.5289C32.2936 23.4338 31.7984 25.2223 30.9304 26.775C30.8813 26.8628 30.8313 26.9489 30.7797 27.035L21.5293 43.0574C33.4191 43.0574 43.0578 33.4187 43.0578 21.5289C43.0578 17.6073 42.009 13.9311 40.1773 10.7646Z"
+      fill="url(#linear-gradient-2)"/>
+      <path
+      d="M40.1736 10.7643C36.4501 4.33068 29.4964 0 21.5291 0C13.5618 0 6.60639 4.3281 2.88281 10.7617L7 18L12.128 26.7746C11.26 25.222 10.7648 23.4334 10.7648 21.5285C10.7648 15.5832 15.5838 10.7643 21.5291 10.7643H40.1736Z"
+      fill="url(#linear-gradient-3)"/>
+      <path
+      d="M32.2922 21.5289C32.2922 15.5836 27.4733 10.7646 21.5279 10.7646C15.5826 10.7646 10.7637 15.5836 10.7637 21.5289C10.7637 23.4338 11.2588 25.2223 12.1269 26.775L12.2776 27.035C14.1557 30.1842 17.5951 32.2932 21.5279 32.2932C25.4608 32.2932 28.9002 30.1842 30.7783 27.035L30.929 26.775C31.797 25.2223 32.2922 23.4338 32.2922 21.5289Z"
+      fill="white"/>
+      <path
+      d="M30.3546 21.5288C30.3546 16.6539 26.4028 12.7021 21.5279 12.7021C16.6529 12.7021 12.7012 16.6539 12.7012 21.5288C12.7012 23.091 13.1076 24.5575 13.8189 25.8302L13.9421 26.0438C15.4827 28.6255 18.3029 30.3555 21.5279 30.3555C24.7528 30.3555 27.5731 28.6255 29.1137 26.0438L29.2368 25.8302C29.9481 24.5575 30.3546 23.091 30.3546 21.5288Z"
+      fill="#1A73E8"/>
+      <path
+      d="M59.91 30.4147C59.2374 30.4147 58.5812 30.2631 57.9758 29.9772C57.3705 29.6913 56.8322 29.2875 56.3948 28.7828C55.4191 27.6392 54.8809 26.1589 54.8809 24.6451C54.8809 23.1312 55.4191 21.6681 56.3948 20.5073C56.8322 20.0026 57.3705 19.5988 57.9758 19.3129C58.5812 19.027 59.2374 18.8754 59.91 18.8754C60.8856 18.8246 61.8441 19.0941 62.6518 19.6323C63.4596 20.1706 64.065 20.9611 64.3844 21.886L67.1427 20.7424C66.6045 19.4308 65.696 18.2864 64.5524 17.4459C63.2408 16.5374 61.6762 16.0664 60.0951 16.1344C58.9851 16.1008 57.8914 16.3023 56.8658 16.7234C55.8402 17.1437 54.9145 17.7826 54.1575 18.5731C53.3842 19.38 52.7952 20.3393 52.3913 21.3822C51.9875 22.425 51.8023 23.5523 51.8359 24.6623C51.8023 25.7895 51.9875 26.8995 52.3913 27.9424C52.778 28.9852 53.3834 29.9437 54.1575 30.7514C54.9308 31.5583 55.8393 32.1809 56.8658 32.6011C57.8914 33.0214 58.9851 33.2237 60.0951 33.1902C61.6925 33.241 63.2736 32.7699 64.6023 31.8278C65.7795 31.0037 66.688 29.8601 67.2426 28.5477L64.5687 27.4041C63.711 29.4054 62.1644 30.4147 59.91 30.4147Z"
+      fill="#5F6368"/>
+      <path
+      d="M77.8252 16.1176C76.7659 16.1176 75.724 16.4035 74.8163 16.9253C73.9758 17.3628 73.2534 18.0353 72.7659 18.8603H72.6316L72.7659 16.6394V9.30078H69.752V32.6377H72.7659V23.7912C72.7487 22.5296 73.169 21.3189 73.9423 20.3432C74.2953 19.8721 74.7483 19.4855 75.2865 19.2332C75.8239 18.9645 76.412 18.8465 77.0002 18.8629C79.6379 18.8629 80.9476 20.3432 80.9476 23.3029V32.6377H83.9616V22.8465C83.9616 20.7944 83.4234 19.1626 82.3814 17.9509C81.3214 16.723 79.8092 16.1176 77.8252 16.1176Z"
+      fill="#5F6368"/>
+      <path
+      d="M95.2561 16.2631C94.2795 16.2966 93.3366 16.5989 92.5116 17.1371C91.6358 17.6082 90.9796 18.3642 90.6257 19.2891H90.506V16.7057H87.5781V32.6368H90.5921L90.6257 23.8781C90.5921 23.2564 90.6929 22.651 90.9116 22.0628C91.1303 21.4747 91.467 20.9537 91.8881 20.4999C92.2584 20.096 92.6968 19.7774 93.2014 19.5586C93.6896 19.3399 94.2451 19.2228 94.7842 19.2228C95.3232 19.2056 95.8614 19.29 96.3669 19.4579L97.5122 16.6506C96.8052 16.381 96.0311 16.2467 95.2561 16.2631Z"
+      fill="#5F6368"/>
+      <path
+      d="M113.276 21.3826C112.889 20.3397 112.284 19.3813 111.51 18.5735C109.946 17.0097 107.81 16.1348 105.59 16.1348C103.37 16.1348 101.25 17.0097 99.6693 18.5735C98.896 19.3976 98.2897 20.3397 97.9031 21.3826C97.4992 22.4254 97.314 23.5526 97.3476 24.6626C97.314 25.7899 97.4992 26.8999 97.9031 27.9427C98.2897 28.9856 98.8951 29.944 99.6693 30.7518C101.233 32.3156 103.37 33.1905 105.59 33.1905C107.81 33.1905 109.929 32.3156 111.51 30.7518C112.267 29.9449 112.872 28.9856 113.276 27.9427C113.68 26.8999 113.865 25.7727 113.832 24.6626C113.865 23.5354 113.68 22.4254 113.276 21.3826ZM110.484 26.9154C110.216 27.6387 109.812 28.3113 109.274 28.8667C108.803 29.3714 108.231 29.7752 107.592 30.0439C106.969 30.3298 106.28 30.4642 105.59 30.4642C104.901 30.4642 104.228 30.3126 103.589 30.0439C102.95 29.758 102.378 29.3714 101.907 28.8667C101.369 28.2949 100.965 27.6387 100.697 26.9154C100.428 26.192 100.31 25.4187 100.344 24.6446C100.31 23.8713 100.428 23.0971 100.697 22.3737C100.965 21.6504 101.386 20.9778 101.907 20.4224C102.378 19.9178 102.95 19.5139 103.589 19.2452C104.212 18.9593 104.901 18.825 105.59 18.825C106.28 18.825 106.953 18.9765 107.592 19.2452C108.231 19.5311 108.803 19.9178 109.274 20.4224C109.812 20.9942 110.216 21.6504 110.484 22.3737C110.754 23.0971 110.871 23.8704 110.837 24.6446C110.872 25.4187 110.754 26.1929 110.484 26.9154Z"
+      fill="#5F6368"/>
+      <path
+      d="M135.168 16.0965C134.059 16.063 132.95 16.3325 131.959 16.8716C130.984 17.4106 130.161 18.2193 129.59 19.1794C128.682 17.1411 127.002 16.1138 124.515 16.1138C123.524 16.131 122.565 16.4169 121.709 16.9224C120.834 17.3607 120.112 18.0341 119.591 18.8591H119.439V16.6201H116.598V32.6373H119.612V23.7908C119.594 22.5465 119.999 21.3349 120.774 20.3601C121.111 19.889 121.549 19.5187 122.055 19.25C122.56 18.9977 123.133 18.8634 123.706 18.8634C124.194 18.8126 124.683 18.897 125.154 19.0649C125.626 19.25 126.03 19.5187 126.384 19.8718C126.974 20.5443 127.277 21.6879 127.277 23.3026V32.6373H130.205V23.7908C130.187 22.5465 130.608 21.3349 131.367 20.3601C131.704 19.889 132.142 19.5187 132.648 19.25C133.153 18.9977 133.726 18.8634 134.298 18.8634C134.804 18.8126 135.292 18.897 135.764 19.0649C136.219 19.25 136.64 19.5187 136.994 19.8718C137.584 20.5443 137.87 21.6879 137.87 23.3026V32.6373H140.884V22.8341C140.901 20.7622 140.413 19.1286 139.455 17.9161C138.496 16.7028 137.067 16.0965 135.168 16.0965Z"
+      fill="#5F6368"/>
+      <path
+      d="M154.567 16.6871C153.575 16.2832 152.515 16.098 151.456 16.1489C150.397 16.1316 149.32 16.334 148.345 16.7715C147.369 17.2089 146.495 17.8651 145.805 18.672C144.342 20.3374 143.552 22.4731 143.602 24.6767C143.517 26.9303 144.341 29.134 145.872 30.7822C146.629 31.5891 147.538 32.2117 148.563 32.632C149.573 33.0522 150.683 33.2373 151.776 33.2037C153.357 33.2546 154.887 32.8171 156.182 31.9422C157.326 31.1689 158.217 30.0752 158.755 28.8137L156.081 27.7036C155.308 29.537 153.861 30.4455 151.691 30.4455C151.052 30.4627 150.413 30.3275 149.808 30.0924C149.219 29.8574 148.664 29.5034 148.21 29.0496C147.185 28.0403 146.613 26.6617 146.596 25.2313H159.277L159.311 24.6759C159.311 22.0856 158.604 20.0171 157.175 18.4696C156.434 17.6963 155.56 17.0909 154.567 16.6871ZM146.814 22.734C147.066 21.6403 147.655 20.6655 148.495 19.925C149.303 19.2188 150.329 18.8485 151.388 18.8658C152.918 18.8658 154.062 19.286 154.836 20.1101C155.559 20.7999 155.997 21.742 156.098 22.734H146.814Z"
+      fill="#5F6368"/>
+    </g>
+  </symbol>
+    <symbol id="write-generate" width="334" height="90" viewBox="0 0 334 90" fill="none"
+  xmlns="http://www.w3.org/2000/svg">
+  <rect width="333" height="89" rx="8.29" fill="#F8F9FA" />
+  <g mask="url(#write_generate_mask)">
+    <rect x="13.8711" y="17.6484" width="283" height="52" fill="url(#write_generate_gradient)" />
+  </g>
+</symbol><symbol id="write-icon" width="87" height="87" viewBox="0 0 87 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g filter="url(#write_icon_filter)">
+    <rect x="8" y="6" width="71" height="71" rx="11.8677" fill="#D7F6FF"
+      shape-rendering="crispEdges" />
+    <g clip-path="url(#write_icon_clip)">
+      <path
+        d="M34.2268 52.6181H36.1182L52.0653 36.671L50.1739 34.7796L34.2268 50.7267V52.6181ZM31.6307 55.2142V49.6512L52.0653 29.2908C52.3126 29.0435 52.5846 28.8581 52.8812 28.7345C53.2027 28.5861 53.5364 28.512 53.8826 28.512C54.2287 28.512 54.5625 28.5861 54.8839 28.7345C55.2053 28.8581 55.4897 29.0435 55.7369 29.2908L57.5912 31.1451C57.8385 31.3923 58.0239 31.6767 58.1475 31.9981C58.2711 32.3195 58.3329 32.6533 58.3329 32.9994C58.3329 33.3208 58.2711 33.6423 58.1475 33.9637C58.0239 34.2851 57.8385 34.5694 57.5912 34.8167L37.1937 55.2142H31.6307ZM55.6998 32.9623L53.8826 31.1451L55.6998 32.9623ZM51.1382 35.7438L50.1739 34.7796L52.0653 36.671L51.1382 35.7438ZM35.3394 41.6776C35.3394 39.4525 34.5606 37.5734 33.0029 36.0405C31.47 34.4829 29.591 33.7041 27.3658 33.7041C29.591 33.7041 31.47 32.9376 33.0029 31.4047C34.5606 29.8471 35.3394 27.9557 35.3394 25.7305C35.3394 27.9557 36.1058 29.8471 37.6387 31.4047C39.1964 32.9376 41.0878 33.7041 43.3129 33.7041C41.0878 33.7041 39.1964 34.4829 37.6387 36.0405C36.1058 37.5734 35.3394 39.4525 35.3394 41.6776Z"
+        fill="#202124" />
+    </g>
+  </g>
+</symbol><symbol viewBox="0 0 64 64" fill="none" id="chrome-logo" xmlns="http://www.w3.org/2000/svg">
+  <g clip-path="url(#chrome_logo_clip)">
+  <path d="M32 47.986c8.837 0 16-7.164 16-16 0-8.837-7.163-16-16-16s-16 7.163-16 16c0 8.836 7.163 16 16 16Z" fill="#fff"/>
+  <path d="M45.856 40 32.015 63.975A31.95 31.95 0 0 0 59.685 16H32l-.023.014A15.978 15.978 0 0 1 45.857 40Z" fill="url(#chrome_logo_paint_0)"/>
+  <path d="M18.143 40 4.303 16.027a31.95 31.95 0 0 0 27.713 47.949L45.857 40v-.026A15.98 15.98 0 0 1 18.144 40Z" fill="url(#chrome_logo_paint_1)"/>
+  <path d="M32 44.667c6.995 0 12.667-5.67 12.667-12.666S38.995 19.334 32 19.334c-6.996 0-12.667 5.671-12.667 12.667 0 6.995 5.671 12.666 12.667 12.666Z" fill="#1A73E8"/>
+  <path d="M32 16h27.683a31.95 31.95 0 0 0-55.382.025L18.143 40l.024.013A15.98 15.98 0 0 1 32 16Z" fill="url(#chrome_logo_paint_2)"/>
+  </g>
+</symbol><symbol id="play-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+  xmlns="http://www.w3.org/2000/svg">
+  <path d="M4.33398 3.33325V12.6666L11.6673 7.99992L4.33398 3.33325Z" fill="currentColor" />
+</symbol><symbol id="pause-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+  xmlns="http://www.w3.org/2000/svg">
+  <path d="M4 12.6666H6.66667V3.33325H4V12.6666ZM9.33333 3.33325V12.6666H12V3.33325H9.33333Z"
+    fill="currentColor" />
+</symbol></svg><script defer src="/chrome/static/js/main.min.js" nonce="V1yEjxBTfHiuNCAQ3_ibPQ"></script>
+</body>
+</html>

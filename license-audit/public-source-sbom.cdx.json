@@ -1,0 +1,2241 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "version": 1,
+  "metadata": {
+    "component": {
+      "type": "application",
+      "bom-ref": "application:booth-reader@1.0.3:source-online",
+      "name": "BOOTH-Reader",
+      "version": "1.0.3",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    "properties": [
+      {
+        "name": "distribution:profile",
+        "value": "source-online"
+      },
+      {
+        "name": "audit:scope",
+        "value": "delivered source files and exact publisher wheel download plan; not an approval/SBOM of redistributed Python/Node/Chrome/native bundles"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "file",
+      "bom-ref": "source:.gitignore",
+      "name": ".gitignore",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "c345f97862620c32d6aa002840087916238d15ed93ade7f1ed7d012aab229ba2"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "source:LICENSE",
+      "name": "LICENSE",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "c1aef8b9d4934262e38b7652688ee0adfaf2177f6f8aec6e91700707b16cd9c6"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "source:MANIFEST.in",
+      "name": "MANIFEST.in",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "f0229223a958dbf170527b5c5fd00145395c7095f4538f89a2a2d093e9357724"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "source:NOTICE",
+      "name": "NOTICE",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "0204de9a90889bc64f9f82e14dffe3bc351a7edbd44d48792cafbd75444ab383"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "source:README.md",
+      "name": "README.md",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "f18ebe95ead98b8b51d958b2358d22973cfc3d71281f65ba893578defa2a92e4"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "source:SOURCE-INPUTS.json",
+      "name": "SOURCE-INPUTS.json",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "279fb74e96c6533d14082a4eae36ff7c8b5a54d84a9931ae997cd3d60919a661"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "source:cli.bat",
+      "name": "cli.bat",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "d5177d03e0ca97cd5c92dd9d6665c513acb5cf3e5966b97d4db5b7e209191b3b"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "source:cli.py",
+      "name": "cli.py",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "896576d474070f9aafc8840264d6c4f125a5b6f82d6022d9847ab556294642b9"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "source:core/__init__.py",
+      "name": "core/__init__.py",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "b1c41e6f0f69c9eb43c4a42222f07a4016db858cbd61d002f9297bd80c3290f8"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "source:core/auth.py",
+      "name": "core/auth.py",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "cb958377a40ecb6fc3031d46a72ac739a0e2340e39a8b7e1a2e35b5c9852b14a"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "source:core/db.py",
+      "name": "core/db.py",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "708bcc9c4716eefcd809aa03a280273610c0fd8cb802cbb73dff8aa099315488"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "source:core/download.py",
+      "name": "core/download.py",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "dc97e88e4211d565c9e555d98d73a62954578018448b309e71c625d2e7e89b2c"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "source:core/errors.py",
+      "name": "core/errors.py",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "678b8c31b05e3c8e41ae8b9df4006aceb51a154fb43f722c5a84402c41008d99"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "source:core/library_lock.py",
+      "name": "core/library_lock.py",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "73d48e36c3cb911acd5a8428c63db1e0db353cb8d02b08412cfc0e25a12d11f2"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "source:core/lists.py",
+      "name": "core/lists.py",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "62c492cf8f59e28a87393a6d1c124ce56e9f95c98bbe38fe7748958a7d9ce050"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "source:core/logging_setup.py",
+      "name": "core/logging_setup.py",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "3c0a57aa14efbd6a4e5b57fed8b8662097725e1578d8d662454b6816647d933f"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "source:core/net.py",
+      "name": "core/net.py",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "04c9d07e56680a6edc87158d6f8a21ca04f5e4bbd0205690c34748e9bb45023d"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "source:core/portable.py",
+      "name": "core/portable.py",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "c1a99ce48b76ad751b40fa347967a8e79a0bd03d74493b865c5e01f3fc02490e"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "source:core/purchases.py",
+      "name": "core/purchases.py",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "4382c7358b2438c96a64c57d1dbb05bb83fe0723b117c4d694720d04d2505009"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "source:core/version.py",
+      "name": "core/version.py",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "b8b438f02718fe612414ab77705737e90bc9979c5a8871f35e4245e3098d2ee5"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "source:portable-manifest.json",
+      "name": "portable-manifest.json",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "6dee49fff53f99adc16e16fe43a1120e2e8546235ec8ba9db86a6441409c6ac3"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "source:pyproject.toml",
+      "name": "pyproject.toml",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "91f57a3a6d311dad927a2f11ec2dbebc8e9edd09d5ebedb32ea2b44ddc18766c"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "source:release/download-plan.json",
+      "name": "release/download-plan.json",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "fdc60a70b51cabd464fb7dd2d7028a583e5b4177e907f967d2c6c0641bd9dfbf"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "source:release/setup-online.ps1",
+      "name": "release/setup-online.ps1",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "99a12d0c523d486b34f73837666bce2f2c38a69f77e5804d064fe3694815d387"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "source:requirements-lock.txt",
+      "name": "requirements-lock.txt",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "5b4fbf19eea50cde59ddd2f99d47a053df5e4e64af624d3e9fa907dc39e572d0"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "source:requirements-portable-lock.txt",
+      "name": "requirements-portable-lock.txt",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "0b4e6a99b57e7662ff5cb0bc819f67dd6ad0669efcf1e5bfc6c004f77504ee77"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "source:requirements.txt",
+      "name": "requirements.txt",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "17a954df8b26374373337e9ae5ce8d51c087e4efc02a52903bd7797803a4fbb0"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "source:run.cmd",
+      "name": "run.cmd",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "b28b03a4d5ee0612eebc04a33e6a9e61a4795141f38161a119c83015e40ad5ff"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "source:run.ps1",
+      "name": "run.ps1",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "f70d0f383c6c10dae5be81a5a153573c0f7201ca44f3e0c3a5f926a78551fa27"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "source:run.sh",
+      "name": "run.sh",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "8e1c84c73eae0b53604f62687f5cab3a79e668a7c99345e053efe1ad1ac9db48"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "source:setup.bat",
+      "name": "setup.bat",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "a86ba7833668aa0920ac1c488977a70123b54c43e9f947be8eb83cb16f5c6ab6"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "source:start-web.bat",
+      "name": "start-web.bat",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "cc3230bee5bdf3edc5b01f88f80b6ac48c1da02ddf33651a50527d202642c7fa"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "source:tools/__init__.py",
+      "name": "tools/__init__.py",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "c3616879a08e5b2c7858621c5cad66fd6986893c38209053d59e75ec8a6419b5"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "source:tools/bootstrap.ps1",
+      "name": "tools/bootstrap.ps1",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "fb4042999ac2c746bd94606a20bd025d2071e2c17a6746ae85596e4859cca1d0"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "source:tools/fetch_python.py",
+      "name": "tools/fetch_python.py",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "9953f4c0c0ba580da90dd21f79a0f8ae7cebdbd086d87136732abd12320830be"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "source:tools/fetch_sqlite.py",
+      "name": "tools/fetch_sqlite.py",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "51301e0dff7acadbe0b44397ba6a6a36dc773cd4c9500c0c4e5362b8d8fef51f"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "source:tools/manage_portable.py",
+      "name": "tools/manage_portable.py",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "3e67227b80f30495dfbd396496468933383248c530fe43e87b3b7965ee7eafb9"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "source:tools/pip_runtime_patch.py",
+      "name": "tools/pip_runtime_patch.py",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "67bc35b4f838ac3bd749a3b00e9239efb21c55671d0fb2b57b369cd8d0edbf46"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "source:tools/portable-env.bat",
+      "name": "tools/portable-env.bat",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "c8e5310f6f88ace0825eef80cca549ac0c2e3c4067e27ed02b481719e821468e"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "source:tools/portable.py",
+      "name": "tools/portable.py",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "f4ce49d0bdd047bda2c5dcafc0fe57d6caa30a3e459271b03c027edbd9d8c449"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "source:tools/public_setup.py",
+      "name": "tools/public_setup.py",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "60f5c31a0f40e19b7e8bba0e33d2dd82768b8eeffabf9344d97641127d71208d"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "source:tools/vendor_payload.py",
+      "name": "tools/vendor_payload.py",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "c7c24cb0fd38e97d731443faeda858a5c8da1fff5625019ead3634d50c21a026"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "source:web/__init__.py",
+      "name": "web/__init__.py",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "203c71557c78dd0623fd614ee089e601f4ec776c31b464e82fbfb46791b24fdb"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "source:web/app.py",
+      "name": "web/app.py",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "a8dd4f293321ef6bf54184b9c6648db9d6b4d207ed203875159f5fbb8a982777"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "source:web/cli_bridge.py",
+      "name": "web/cli_bridge.py",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "0305bc2bac583bf156421c1cd79d5a71c34d06d50734fc4e8601860157886f80"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "source:web/ui.py",
+      "name": "web/ui.py",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "cc66aff2c322db9d95c9de47fc5d028667face9765d8a05ad29f4040cda739f1"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "true"
+        },
+        {
+          "name": "provenance:classification",
+          "value": "GENERATED"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/annotated-doc@0.0.5",
+      "name": "annotated-doc",
+      "version": "0.0.5",
+      "purl": "pkg:pypi/annotated-doc@0.0.5",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "117bac03a25ede5df5440e855b32d556049ca169ead221505badf432fed4b101"
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "false"
+        },
+        {
+          "name": "distribution:recipient-download",
+          "value": "true"
+        },
+        {
+          "name": "audit:license-evidence",
+          "value": "public-recipient-dependencies.json"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/annotated-types@0.8.0",
+      "name": "annotated-types",
+      "version": "0.8.0",
+      "purl": "pkg:pypi/annotated-types@0.8.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "f072f4d804ea359e4eaf198b1af7a8b0943881a87f31bb764f8bf219bb9419e0"
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "false"
+        },
+        {
+          "name": "distribution:recipient-download",
+          "value": "true"
+        },
+        {
+          "name": "audit:license-evidence",
+          "value": "public-recipient-dependencies.json"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/anyio@4.15.1",
+      "name": "anyio",
+      "version": "4.15.1",
+      "purl": "pkg:pypi/anyio@4.15.1",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "6152fdbbf9a77fdec97731721bebf7c4c44f7c29b424b0065826173efc7ed101"
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "false"
+        },
+        {
+          "name": "distribution:recipient-download",
+          "value": "true"
+        },
+        {
+          "name": "audit:license-evidence",
+          "value": "public-recipient-dependencies.json"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/beautifulsoup4@4.15.0",
+      "name": "beautifulsoup4",
+      "version": "4.15.0",
+      "purl": "pkg:pypi/beautifulsoup4@4.15.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "d6f88de62e1d4e38ecb1077eb9724cd0eff29d2a08ca16a401e9b9e93f117cf9"
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "false"
+        },
+        {
+          "name": "distribution:recipient-download",
+          "value": "true"
+        },
+        {
+          "name": "audit:license-evidence",
+          "value": "public-recipient-dependencies.json"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/certifi@2026.7.22",
+      "name": "certifi",
+      "version": "2026.7.22",
+      "purl": "pkg:pypi/certifi@2026.7.22",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "62f22742b58a1a33014a2b6b706588a8d7e2a88ae7bd1a6ebe8c992928483775"
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "false"
+        },
+        {
+          "name": "distribution:recipient-download",
+          "value": "true"
+        },
+        {
+          "name": "audit:license-evidence",
+          "value": "public-recipient-dependencies.json"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/click@8.5.0",
+      "name": "click",
+      "version": "8.5.0",
+      "purl": "pkg:pypi/click@8.5.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360"
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "false"
+        },
+        {
+          "name": "distribution:recipient-download",
+          "value": "true"
+        },
+        {
+          "name": "audit:license-evidence",
+          "value": "public-recipient-dependencies.json"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/colorama@0.4.6",
+      "name": "colorama",
+      "version": "0.4.6",
+      "purl": "pkg:pypi/colorama@0.4.6",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6"
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "false"
+        },
+        {
+          "name": "distribution:recipient-download",
+          "value": "true"
+        },
+        {
+          "name": "audit:license-evidence",
+          "value": "public-recipient-dependencies.json"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/fastapi@0.141.1",
+      "name": "fastapi",
+      "version": "0.141.1",
+      "purl": "pkg:pypi/fastapi@0.141.1",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "bfb91aa2d334c61cb35ba9a116fc123b3d3df31640b801cf57a7a78ec3f603b3"
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "false"
+        },
+        {
+          "name": "distribution:recipient-download",
+          "value": "true"
+        },
+        {
+          "name": "audit:license-evidence",
+          "value": "public-recipient-dependencies.json"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/greenlet@3.5.6",
+      "name": "greenlet",
+      "version": "3.5.6",
+      "purl": "pkg:pypi/greenlet@3.5.6",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "7ac4abb3877c43af320392c664774eef6fa2cc063c79a55fc02d844a3cbe7395"
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "false"
+        },
+        {
+          "name": "distribution:recipient-download",
+          "value": "true"
+        },
+        {
+          "name": "audit:license-evidence",
+          "value": "public-recipient-dependencies.json"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/h11@0.16.0",
+      "name": "h11",
+      "version": "0.16.0",
+      "purl": "pkg:pypi/h11@0.16.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86"
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "false"
+        },
+        {
+          "name": "distribution:recipient-download",
+          "value": "true"
+        },
+        {
+          "name": "audit:license-evidence",
+          "value": "public-recipient-dependencies.json"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/httpcore@1.0.9",
+      "name": "httpcore",
+      "version": "1.0.9",
+      "purl": "pkg:pypi/httpcore@1.0.9",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "2d400746a40668fc9dec9810239072b40b4484b640a8c38fd654a024c7a1bf55"
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "false"
+        },
+        {
+          "name": "distribution:recipient-download",
+          "value": "true"
+        },
+        {
+          "name": "audit:license-evidence",
+          "value": "public-recipient-dependencies.json"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/httpx@0.28.1",
+      "name": "httpx",
+      "version": "0.28.1",
+      "purl": "pkg:pypi/httpx@0.28.1",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "d909fcccc110f8c7faf814ca82a9a4d816bc5a6dbfea25d6591d6985b8ba59ad"
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "false"
+        },
+        {
+          "name": "distribution:recipient-download",
+          "value": "true"
+        },
+        {
+          "name": "audit:license-evidence",
+          "value": "public-recipient-dependencies.json"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/idna@3.20",
+      "name": "idna",
+      "version": "3.20",
+      "purl": "pkg:pypi/idna@3.20",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "ab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c"
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "false"
+        },
+        {
+          "name": "distribution:recipient-download",
+          "value": "true"
+        },
+        {
+          "name": "audit:license-evidence",
+          "value": "public-recipient-dependencies.json"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/pip@26.2.1",
+      "name": "pip",
+      "version": "26.2.1",
+      "purl": "pkg:pypi/pip@26.2.1",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "71138adf1f4ca900cdb7d289c21b7494329f2332b6d85f0e1c42108c0384ed3e"
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "false"
+        },
+        {
+          "name": "distribution:recipient-download",
+          "value": "true"
+        },
+        {
+          "name": "audit:license-evidence",
+          "value": "public-recipient-dependencies.json"
+        },
+        {
+          "name": "installation:modification",
+          "value": "recipient-local urllib3 vendor updated to 2.8.0 from separately hash-verified wheel; record in pip/_vendor/BOOTH-MODIFICATIONS.json; shown hash is original publisher input"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/playwright@1.63.0",
+      "name": "playwright",
+      "version": "1.63.0",
+      "purl": "pkg:pypi/playwright@1.63.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "2f9a707a6c6c91157ed77bff2b8caeb04b3c8d46e70d585fc134298cbe4b5cc6"
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "false"
+        },
+        {
+          "name": "distribution:recipient-download",
+          "value": "true"
+        },
+        {
+          "name": "audit:license-evidence",
+          "value": "public-recipient-dependencies.json"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/pydantic@2.13.5",
+      "name": "pydantic",
+      "version": "2.13.5",
+      "purl": "pkg:pypi/pydantic@2.13.5",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "346a034f080da3755d8e9cb5e00e8b07de1d39e4f6e2c87d8ab7cafa0b269a73"
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "false"
+        },
+        {
+          "name": "distribution:recipient-download",
+          "value": "true"
+        },
+        {
+          "name": "audit:license-evidence",
+          "value": "public-recipient-dependencies.json"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/pydantic-core@2.46.5",
+      "name": "pydantic-core",
+      "version": "2.46.5",
+      "purl": "pkg:pypi/pydantic-core@2.46.5",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "5e81740c09e310f5aa5cbd3e434a01c154d4bef93241c7877b39f211d2b78ba8"
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "false"
+        },
+        {
+          "name": "distribution:recipient-download",
+          "value": "true"
+        },
+        {
+          "name": "audit:license-evidence",
+          "value": "public-recipient-dependencies.json"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/pyee@13.0.1",
+      "name": "pyee",
+      "version": "13.0.1",
+      "purl": "pkg:pypi/pyee@13.0.1",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "af2f8fede4171ef667dfded53f96e2ed0d6e6bd7ee3bb46437f77e3b57689228"
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "false"
+        },
+        {
+          "name": "distribution:recipient-download",
+          "value": "true"
+        },
+        {
+          "name": "audit:license-evidence",
+          "value": "public-recipient-dependencies.json"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/soupsieve@2.10",
+      "name": "soupsieve",
+      "version": "2.10",
+      "purl": "pkg:pypi/soupsieve@2.10",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "8596eb8967d744174820280fa62b4542a2e955bfaccca73ed8a13c6eb8e9b502"
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "false"
+        },
+        {
+          "name": "distribution:recipient-download",
+          "value": "true"
+        },
+        {
+          "name": "audit:license-evidence",
+          "value": "public-recipient-dependencies.json"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/starlette@1.7.0",
+      "name": "starlette",
+      "version": "1.7.0",
+      "purl": "pkg:pypi/starlette@1.7.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "67f8e99895493dd2911a03f11314af6ceebeae4e704bb9f43dfc6a9db151c93e"
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "false"
+        },
+        {
+          "name": "distribution:recipient-download",
+          "value": "true"
+        },
+        {
+          "name": "audit:license-evidence",
+          "value": "public-recipient-dependencies.json"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/typing-extensions@4.16.0",
+      "name": "typing-extensions",
+      "version": "4.16.0",
+      "purl": "pkg:pypi/typing-extensions@4.16.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8"
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "false"
+        },
+        {
+          "name": "distribution:recipient-download",
+          "value": "true"
+        },
+        {
+          "name": "audit:license-evidence",
+          "value": "public-recipient-dependencies.json"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/typing-inspection@0.4.4",
+      "name": "typing-inspection",
+      "version": "0.4.4",
+      "purl": "pkg:pypi/typing-inspection@0.4.4",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "65b8397ba37ccbce054456aaccddfc91e6e3083c92824df348d96ca832f3f147"
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "false"
+        },
+        {
+          "name": "distribution:recipient-download",
+          "value": "true"
+        },
+        {
+          "name": "audit:license-evidence",
+          "value": "public-recipient-dependencies.json"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/urllib3@2.8.0",
+      "name": "urllib3",
+      "version": "2.8.0",
+      "purl": "pkg:pypi/urllib3@2.8.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "0cf3cae568d36aa9576b28dfb35f11328f1cb974ca7647d9475ebb86c75ac6e3"
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "false"
+        },
+        {
+          "name": "distribution:recipient-download",
+          "value": "true"
+        },
+        {
+          "name": "audit:license-evidence",
+          "value": "public-recipient-dependencies.json"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/uvicorn@0.54.0",
+      "name": "uvicorn",
+      "version": "0.54.0",
+      "purl": "pkg:pypi/uvicorn@0.54.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "505bdb0f318731d45f1f712071fc781a8981f6847a31c902c9f5e652d4f67faf"
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "false"
+        },
+        {
+          "name": "distribution:recipient-download",
+          "value": "true"
+        },
+        {
+          "name": "audit:license-evidence",
+          "value": "public-recipient-dependencies.json"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "download:.cache/downloads/cpython-3.12.13+20260325-x86_64-pc-windows-msvc-install_only.tar.gz",
+      "name": "cpython-3.12.13+20260325-x86_64-pc-windows-msvc-install_only.tar.gz",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "aaee8e72c20e1a266bbc6b0dcd640679d1aa1ea4257725af336b5ce9e492891b"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20260325/cpython-3.12.13%2B20260325-x86_64-pc-windows-msvc-install_only.tar.gz"
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "false"
+        },
+        {
+          "name": "distribution:recipient-download",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "download:.cache/downloads/sqlite-dll-win-x64-3530400.zip",
+      "name": "sqlite-dll-win-x64-3530400.zip",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "8b959b7eff4a81f6a62fc3468f9273e5cfe78d4a927e62215aed231b654fb104"
+        }
+      ],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://www.sqlite.org/2026/sqlite-dll-win-x64-3530400.zip"
+        }
+      ],
+      "properties": [
+        {
+          "name": "distribution:bundled",
+          "value": "false"
+        },
+        {
+          "name": "distribution:recipient-download",
+          "value": "true"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "application:booth-reader@1.0.3:source-online",
+      "dependsOn": [
+        "source:.gitignore",
+        "source:LICENSE",
+        "source:MANIFEST.in",
+        "source:NOTICE",
+        "source:README.md",
+        "source:SOURCE-INPUTS.json",
+        "source:cli.bat",
+        "source:cli.py",
+        "source:core/__init__.py",
+        "source:core/auth.py",
+        "source:core/db.py",
+        "source:core/download.py",
+        "source:core/errors.py",
+        "source:core/library_lock.py",
+        "source:core/lists.py",
+        "source:core/logging_setup.py",
+        "source:core/net.py",
+        "source:core/portable.py",
+        "source:core/purchases.py",
+        "source:core/version.py",
+        "source:portable-manifest.json",
+        "source:pyproject.toml",
+        "source:release/download-plan.json",
+        "source:release/setup-online.ps1",
+        "source:requirements-lock.txt",
+        "source:requirements-portable-lock.txt",
+        "source:requirements.txt",
+        "source:run.cmd",
+        "source:run.ps1",
+        "source:run.sh",
+        "source:setup.bat",
+        "source:start-web.bat",
+        "source:tools/__init__.py",
+        "source:tools/bootstrap.ps1",
+        "source:tools/fetch_python.py",
+        "source:tools/fetch_sqlite.py",
+        "source:tools/manage_portable.py",
+        "source:tools/pip_runtime_patch.py",
+        "source:tools/portable-env.bat",
+        "source:tools/portable.py",
+        "source:tools/public_setup.py",
+        "source:tools/vendor_payload.py",
+        "source:web/__init__.py",
+        "source:web/app.py",
+        "source:web/cli_bridge.py",
+        "source:web/ui.py",
+        "pkg:pypi/annotated-doc@0.0.5",
+        "pkg:pypi/annotated-types@0.8.0",
+        "pkg:pypi/anyio@4.15.1",
+        "pkg:pypi/beautifulsoup4@4.15.0",
+        "pkg:pypi/certifi@2026.7.22",
+        "pkg:pypi/click@8.5.0",
+        "pkg:pypi/colorama@0.4.6",
+        "pkg:pypi/fastapi@0.141.1",
+        "pkg:pypi/greenlet@3.5.6",
+        "pkg:pypi/h11@0.16.0",
+        "pkg:pypi/httpcore@1.0.9",
+        "pkg:pypi/httpx@0.28.1",
+        "pkg:pypi/idna@3.20",
+        "pkg:pypi/pip@26.2.1",
+        "pkg:pypi/playwright@1.63.0",
+        "pkg:pypi/pydantic@2.13.5",
+        "pkg:pypi/pydantic-core@2.46.5",
+        "pkg:pypi/pyee@13.0.1",
+        "pkg:pypi/soupsieve@2.10",
+        "pkg:pypi/starlette@1.7.0",
+        "pkg:pypi/typing-extensions@4.16.0",
+        "pkg:pypi/typing-inspection@0.4.4",
+        "pkg:pypi/urllib3@2.8.0",
+        "pkg:pypi/uvicorn@0.54.0",
+        "download:.cache/downloads/cpython-3.12.13+20260325-x86_64-pc-windows-msvc-install_only.tar.gz",
+        "download:.cache/downloads/sqlite-dll-win-x64-3530400.zip"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/annotated-doc@0.0.5",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/annotated-types@0.8.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/anyio@4.15.1",
+      "dependsOn": [
+        "pkg:pypi/idna@3.20",
+        "pkg:pypi/typing-extensions@4.16.0"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/beautifulsoup4@4.15.0",
+      "dependsOn": [
+        "pkg:pypi/soupsieve@2.10",
+        "pkg:pypi/typing-extensions@4.16.0"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/certifi@2026.7.22",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/click@8.5.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/colorama@0.4.6",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/fastapi@0.141.1",
+      "dependsOn": [
+        "pkg:pypi/annotated-doc@0.0.5",
+        "pkg:pypi/pydantic@2.13.5",
+        "pkg:pypi/starlette@1.7.0",
+        "pkg:pypi/typing-extensions@4.16.0",
+        "pkg:pypi/typing-inspection@0.4.4"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/greenlet@3.5.6",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/h11@0.16.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/httpcore@1.0.9",
+      "dependsOn": [
+        "pkg:pypi/certifi@2026.7.22",
+        "pkg:pypi/h11@0.16.0"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/httpx@0.28.1",
+      "dependsOn": [
+        "pkg:pypi/anyio@4.15.1",
+        "pkg:pypi/certifi@2026.7.22",
+        "pkg:pypi/httpcore@1.0.9",
+        "pkg:pypi/idna@3.20"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/idna@3.20",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/pip@26.2.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/playwright@1.63.0",
+      "dependsOn": [
+        "pkg:pypi/greenlet@3.5.6",
+        "pkg:pypi/pyee@13.0.1"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/pydantic@2.13.5",
+      "dependsOn": [
+        "pkg:pypi/annotated-types@0.8.0",
+        "pkg:pypi/pydantic-core@2.46.5",
+        "pkg:pypi/typing-extensions@4.16.0",
+        "pkg:pypi/typing-inspection@0.4.4"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/pydantic-core@2.46.5",
+      "dependsOn": [
+        "pkg:pypi/typing-extensions@4.16.0"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/pyee@13.0.1",
+      "dependsOn": [
+        "pkg:pypi/typing-extensions@4.16.0"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/soupsieve@2.10",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/starlette@1.7.0",
+      "dependsOn": [
+        "pkg:pypi/anyio@4.15.1",
+        "pkg:pypi/typing-extensions@4.16.0"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/typing-extensions@4.16.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/typing-inspection@0.4.4",
+      "dependsOn": [
+        "pkg:pypi/typing-extensions@4.16.0"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/urllib3@2.8.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/uvicorn@0.54.0",
+      "dependsOn": [
+        "pkg:pypi/click@8.5.0",
+        "pkg:pypi/h11@0.16.0"
+      ]
+    }
+  ]
+}

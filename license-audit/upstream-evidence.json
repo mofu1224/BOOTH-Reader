@@ -1,0 +1,114 @@
+[
+  {
+    "name": "python-distributions",
+    "url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260325/docs/distributions.rst",
+    "path": "license-audit/evidence/upstream/python-distributions.txt",
+    "sha256": "000cd91bc1818c5e9db78a46da3113ccb81260971a6754805468d4f212e3ad16",
+    "status": "retrieved"
+  },
+  {
+    "name": "playwright-registry",
+    "url": "https://raw.githubusercontent.com/microsoft/playwright/v1.63.0/packages/playwright-core/src/server/registry/index.ts",
+    "path": "license-audit/evidence/upstream/playwright-registry.txt",
+    "sha256": "34497493fbec37f55835099f3688003fa814bf63f9e8feb2792854463df1851c",
+    "status": "retrieved"
+  },
+  {
+    "name": "playwright-license",
+    "url": "https://raw.githubusercontent.com/microsoft/playwright/v1.63.0/LICENSE",
+    "path": "license-audit/evidence/upstream/playwright-license.txt",
+    "sha256": "45873d00a0dd243596deb4aa23b2493b3d1f0671921bf2538ea431d7380220eb",
+    "status": "retrieved"
+  },
+  {
+    "name": "winldd-readme",
+    "url": "https://raw.githubusercontent.com/microsoft/playwright/v1.63.0/browser_patches/winldd/README.md",
+    "path": "license-audit/evidence/upstream/winldd-readme.txt",
+    "sha256": "64d1238db73e43327a508be0ecd1ac97e9105bd355cc13e26e79af9cddc66066",
+    "status": "retrieved"
+  },
+  {
+    "name": "ffmpeg-build-attempt",
+    "url": "https://raw.githubusercontent.com/microsoft/playwright/v1.63.0/browser_patches/ffmpeg/build.sh",
+    "status": "NOT VERIFIED",
+    "error_type": "HTTPError"
+  },
+  {
+    "name": "openssl-license",
+    "url": "https://raw.githubusercontent.com/openssl/openssl/openssl-3.5.5/LICENSE.txt",
+    "path": "license-audit/evidence/upstream/openssl-license.txt",
+    "sha256": "7d5450cb2d142651b8afa315b5f238efc805dad827d91ba367d8516bc9d49e7a",
+    "status": "retrieved"
+  },
+  {
+    "name": "sqlite-copyright",
+    "url": "https://www.sqlite.org/copyright.html",
+    "path": "license-audit/evidence/upstream/sqlite-copyright.txt",
+    "sha256": "44ca9f793055c8e32fc65f65a4f5bcf813a33f5bdaaa084067dd617a4ed3cc70",
+    "status": "retrieved"
+  },
+  {
+    "name": "cpython-license",
+    "url": "https://raw.githubusercontent.com/python/cpython/v3.12.13/LICENSE",
+    "path": "license-audit/evidence/upstream/cpython-license.txt",
+    "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf",
+    "status": "retrieved"
+  },
+  {
+    "name": "cpython-libffi-license",
+    "url": "https://raw.githubusercontent.com/python/cpython/v3.12.13/Modules/_ctypes/libffi_osx/LICENSE",
+    "status": "NOT VERIFIED",
+    "error_type": "HTTPError"
+  },
+  {
+    "name": "ffmpeg-legal",
+    "url": "https://ffmpeg.org/legal.html",
+    "path": "license-audit/evidence/upstream/ffmpeg-legal.txt",
+    "sha256": "cd51dc25f9e3200b1e3953aee036f499ed51f01f7ba30563873186cb3f870eda",
+    "status": "retrieved"
+  },
+  {
+    "name": "ffmpeg-version",
+    "path": "license-audit/evidence/ffmpeg-version.txt",
+    "sha256": "0d67bcb6743cf4e95e2c474599de3a894e5987b4dd96e80a286e1a318e20f5f5",
+    "source": ".playwright-browsers/ffmpeg-1011/ffmpeg-win64.exe"
+  },
+  {
+    "name": "node-version",
+    "path": "license-audit/evidence/node-version.txt",
+    "sha256": "44ce64f1806e1aa8fa0bdd85b10e0413acd78557c88a8d52e94a0eb70f40b7ee",
+    "source": ".venv/Lib/site-packages/playwright/driver/node.exe"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/Chrome-153.0.8010.12/43edd1609638-credits.html",
+    "original_path": "credits.html",
+    "sha256": "43edd16096389fd27f068a839266428feb8716817f5901814d7293dc068bf6cf",
+    "size": 8513730,
+    "source": "embedded:chrome://credits/"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/Chrome-153.0.8010.12/8d12376a7459-credits.txt",
+    "original_path": "credits.txt",
+    "sha256": "8d12376a7459b9df9c5046e63f18ecdc76fedf2a996636d203373085c90f29b0",
+    "size": 20383,
+    "source": "embedded:chrome://credits/"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/Chrome-153.0.8010.12/ca467a9ddd16-terms.html",
+    "original_path": "terms.html",
+    "sha256": "ca467a9ddd16fa1acdd459e843ccf6d697a64090a03d26eff6bb7ddf9325fc2a",
+    "size": 2393,
+    "source": "embedded:chrome://terms/"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/Chrome-153.0.8010.12/1003bedc888d-terms.txt",
+    "original_path": "terms.txt",
+    "sha256": "1003bedc888dc2134d24536371d237c8ca8d58624e93056971bc7b68be4e2594",
+    "size": 1596,
+    "source": "embedded:chrome://terms/"
+  },
+  {
+    "browser_version": "153.0.8010.12",
+    "source": "actual executable"
+  }
+]

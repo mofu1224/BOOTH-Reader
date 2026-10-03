@@ -1,0 +1,122 @@
+{
+  "url": "https://pypi.org/pypi/pygments/2.21.0/json",
+  "response_sha256": "330104a10adc8a587e3f98f4e207557125ca0c1d489e129334da5acb2b813a03",
+  "info": {
+    "author": null,
+    "author_email": "Georg Brandl <georg@python.org>",
+    "bugtrack_url": null,
+    "classifiers": [
+      "Development Status :: 6 - Mature",
+      "Intended Audience :: Developers",
+      "Intended Audience :: End Users/Desktop",
+      "Intended Audience :: System Administrators",
+      "Operating System :: OS Independent",
+      "Programming Language :: Python",
+      "Programming Language :: Python :: 3",
+      "Programming Language :: Python :: 3.10",
+      "Programming Language :: Python :: 3.11",
+      "Programming Language :: Python :: 3.12",
+      "Programming Language :: Python :: 3.13",
+      "Programming Language :: Python :: 3.14",
+      "Programming Language :: Python :: 3.15",
+      "Programming Language :: Python :: 3.9",
+      "Programming Language :: Python :: Implementation :: CPython",
+      "Programming Language :: Python :: Implementation :: PyPy",
+      "Topic :: Text Processing :: Filters",
+      "Topic :: Utilities"
+    ],
+    "description": "Pygments\n~~~~~~~~\n\nPygments is a syntax highlighting package written in Python.\n\nIt is a generic syntax highlighter suitable for use in code hosting, forums,\nwikis or other applications that need to prettify source code.  Highlights\nare:\n\n* a wide range of over 500 languages and other text formats is supported\n* special attention is paid to details, increasing quality by a fair amount\n* support for new languages and formats are added easily\n* a number of output formats, presently HTML, LaTeX, RTF, SVG, all image\n  formats that PIL supports and ANSI sequences\n* it is usable as a command-line tool and as a library\n\nCopyright 2006-present by the Pygments team, see ``AUTHORS``.\nLicensed under the BSD, see ``LICENSE`` for details.\n",
+    "description_content_type": "text/x-rst",
+    "docs_url": null,
+    "download_url": null,
+    "downloads": {
+      "last_day": -1,
+      "last_month": -1,
+      "last_week": -1
+    },
+    "dynamic": null,
+    "home_page": null,
+    "keywords": "syntax highlighting",
+    "license": null,
+    "license_expression": "BSD-2-Clause",
+    "license_files": [
+      "AUTHORS",
+      "LICENSE"
+    ],
+    "maintainer": "Matthäus G. Chajdas",
+    "maintainer_email": "Georg Brandl <georg@python.org>, Jean Abou Samra <jean@abou-samra.fr>",
+    "name": "Pygments",
+    "package_url": "https://pypi.org/project/Pygments/",
+    "platform": null,
+    "project_url": "https://pypi.org/project/Pygments/",
+    "project_urls": {
+      "Bug Tracker": "https://github.com/pygments/pygments/issues",
+      "Changelog": "https://github.com/pygments/pygments/blob/master/CHANGES",
+      "Documentation": "https://pygments.org/docs",
+      "Homepage": "https://pygments.org",
+      "Source": "https://github.com/pygments/pygments"
+    },
+    "provides_extra": [
+      "plugins",
+      "windows-terminal"
+    ],
+    "release_url": "https://pypi.org/project/Pygments/2.21.0/",
+    "requires_dist": [
+      "colorama>=0.4.6; extra == \"windows-terminal\""
+    ],
+    "requires_python": ">=3.9",
+    "summary": "Pygments is a syntax highlighting package written in Python.",
+    "version": "2.21.0",
+    "yanked": false,
+    "yanked_reason": null
+  },
+  "urls": [
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "1dde075570136774c706bf0009183a793fe0ee262e4a5590cc6eff8453eedd43"
+      },
+      "digests": {
+        "blake2b_256": "714617f022dd3e953bf20a04a028a21ec746d942f8d2af30fa0f124fa0e6a684",
+        "md5": "eaaa46b6eef9ba4d6abd73d4f45be371",
+        "sha256": "2363c69b61c4a97c838da3b130dcd6468f4848992b21a82f2a63ec34377137d9"
+      },
+      "downloads": -1,
+      "filename": "pygments-2.21.0-py3-none-any.whl",
+      "has_sig": false,
+      "md5_digest": "eaaa46b6eef9ba4d6abd73d4f45be371",
+      "packagetype": "bdist_wheel",
+      "python_version": "py3",
+      "requires_python": ">=3.9",
+      "size": 1250147,
+      "upload_time": "2026-08-17T08:02:44",
+      "upload_time_iso_8601": "2026-08-17T08:02:44.912148Z",
+      "url": "https://files.pythonhosted.org/packages/71/46/17f022dd3e953bf20a04a028a21ec746d942f8d2af30fa0f124fa0e6a684/pygments-2.21.0-py3-none-any.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": false,
+      "digests": {
+        "blake2b_256": "492eced460408999b33da6b31b0021b0f37d329e202d4169aeb164493778f25b",
+        "md5": "4d661a27d62d2924d4c7b4ab53aa6dcf",
+        "sha256": "610ca751c9bc2492b38eb9a38a7fbc93edbbb2d7182edaf34e66ae493dee5c8c"
+      },
+      "downloads": -1,
+      "filename": "pygments-2.21.0.tar.gz",
+      "has_sig": false,
+      "md5_digest": "4d661a27d62d2924d4c7b4ab53aa6dcf",
+      "packagetype": "sdist",
+      "python_version": "source",
+      "requires_python": ">=3.9",
+      "size": 5005329,
+      "upload_time": "2026-08-17T08:02:48",
+      "upload_time_iso_8601": "2026-08-17T08:02:48.824391Z",
+      "url": "https://files.pythonhosted.org/packages/49/2e/ced460408999b33da6b31b0021b0f37d329e202d4169aeb164493778f25b/pygments-2.21.0.tar.gz",
+      "yanked": false,
+      "yanked_reason": null
+    }
+  ],
+  "wheel_digest_verified": true
+}

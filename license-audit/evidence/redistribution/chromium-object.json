@@ -1,0 +1,20 @@
+{
+  "kind": "storage#object",
+  "id": "chromium-browser-snapshots/Win_x64/1709767/chrome-win.zip/1790930217707292",
+  "selfLink": "https://www.googleapis.com/storage/v1/b/chromium-browser-snapshots/o/Win_x64%2F1709767%2Fchrome-win.zip",
+  "mediaLink": "https://storage.googleapis.com/download/storage/v1/b/chromium-browser-snapshots/o/Win_x64%2F1709767%2Fchrome-win.zip?generation=1790930217707292&alt=media",
+  "name": "Win_x64/1709767/chrome-win.zip",
+  "bucket": "chromium-browser-snapshots",
+  "generation": "1790930217707292",
+  "metageneration": "1",
+  "contentType": "application/x-zip-compressed",
+  "storageClass": "STANDARD",
+  "size": "359883117",
+  "md5Hash": "pHe2Tpov3ecc109CLJLi2g==",
+  "crc32c": "DQz+Gw==",
+  "etag": "CJzOxvv2mpcDEAE=",
+  "timeCreated": "2026-10-02T08:36:57.793Z",
+  "updated": "2026-10-02T08:36:57.793Z",
+  "timeStorageClassUpdated": "2026-10-02T08:36:57.793Z",
+  "timeFinalized": "2026-10-02T08:36:57.793Z"
+}

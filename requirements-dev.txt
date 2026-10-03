@@ -1,0 +1,9 @@
+# Development, test and audit tooling. Not needed to run BOOTH-Reader.
+-r requirements.txt
+
+pytest>=8.0
+ruff>=0.6
+mypy>=1.11
+pip-audit>=2.7
+build>=1.0
+tomli>=2.0; python_version < '3.11'

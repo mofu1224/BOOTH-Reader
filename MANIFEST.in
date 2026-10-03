@@ -1,0 +1,32 @@
+include LICENSE README.md PORTABLE.md CHANGELOG.md THIRD_PARTY_NOTICES.md VERIFY_LOG.md
+include requirements*.txt *.bat *.cmd *.ps1 *.sh .gitignore .gitattributes
+include portable-manifest.json
+recursive-include core *.py
+recursive-include web *.py
+recursive-include tools *.py *.ps1 *.bat
+recursive-include tests *.py
+recursive-include .github *.yml
+recursive-include audit *.md
+recursive-include third_party *.txt *.md
+recursive-include vendor *.md *.json *.chunk
+exclude vendor/windows-x64/browser-47af6dbb37cab8a2-*.chunk
+exclude vendor/windows-x64/browser-receipt-8d4d181b1a706826-*.chunk
+include conftest.py
+include NOTICE
+recursive-include THIRD_PARTY_LICENSES *
+recursive-include SOURCE_OBLIGATIONS *
+recursive-include license-audit *.md *.json *.txt
+exclude license-audit/local-inventory.json
+exclude license-audit/distribution-inventory.json license-audit/final-package-result.json license-audit/clean-candidate-result.json
+exclude license-audit/24-current-final-verification.md
+exclude license-audit/package-reconciliation.json
+exclude license-audit/public-clean-test.json license-audit/creation-session-evidence.json
+exclude license-audit/project-generation-models.json
+global-exclude *.pyc *.pyo *.db *.part *.tmp *.log
+global-exclude *.db-* *.sqlite *.sqlite-* *.sqlite3 *.sqlite3-* *.csv *.har .env .env.* cookies*.json
+prune .cache
+prune .venv
+prune .tools
+prune .playwright-browsers
+prune data
+prune BOOTH-Reader-Library

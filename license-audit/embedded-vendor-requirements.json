@@ -1,0 +1,17 @@
+[
+  {
+    "parent": "ensurepip-25.0.1",
+    "path": "pip/_vendor/vendor.txt",
+    "requirements": "CacheControl==0.14.1\ndistlib==0.3.9\ndistro==1.9.0\nmsgpack==1.1.0\npackaging==24.2\nplatformdirs==4.3.6\npyproject-hooks==1.2.0\nrequests==2.32.3\n    certifi==2024.8.30\n    idna==3.10\n    urllib3==1.26.20\nrich==13.9.4\n    pygments==2.18.0\n    typing_extensions==4.12.2\nresolvelib==1.0.1\nsetuptools==70.3.0\ntomli==2.2.1\ntruststore==0.10.0\n"
+  },
+  {
+    "parent": "CPython-3.12.13",
+    "path": "python/Lib/site-packages/pip/_vendor/vendor.txt",
+    "requirements": "CacheControl==0.14.4\ndistlib==0.4.0\ndistro==1.9.0\nmsgpack==1.1.2\npackaging==26.0\nplatformdirs==4.5.1\npyproject-hooks==1.2.0\nrequests==2.32.5\n    certifi==2026.1.4\n    idna==3.11\n    urllib3==1.26.20\nrich==14.2.0\n    pygments==2.19.2\nresolvelib==1.2.1\nsetuptools==70.3.0\ntomli==2.3.0\ntomli-w==1.2.0\ntruststore==0.10.4\ndependency-groups==1.3.1\n"
+  },
+  {
+    "parent": "pip-26.2.1",
+    "path": "pip/_vendor/vendor.txt",
+    "requirements": "CacheControl==0.14.4\ndistlib==0.4.2\ndistro==1.9.0\nmsgpack==1.1.2\npackaging==26.2\nplatformdirs==4.10.0\npyproject-hooks==1.2.0\nrequests==2.34.2\n    certifi==2026.6.17\n    idna==3.18\n    urllib3==2.7.0\nrich==14.2.0\n    pygments==2.20.0\nresolvelib==1.2.1\nsetuptools==70.3.0\ntomli==2.4.1\ntomli-w==1.2.0\ntruststore==0.10.4\n"
+  }
+]

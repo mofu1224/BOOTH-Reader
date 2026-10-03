@@ -1,0 +1,46 @@
+# Gitleaks configuration for BOOTH-Reader.
+#
+# The default rules stay active. The allowlist covers only:
+#  * the documented synthetic fixtures used by the redaction tests.
+title = "BOOTH-Reader"
+
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Documented synthetic redaction fixtures (no directory-wide exclusions)"
+regexes = [
+    '''BEGIN PRIVATE KEY-----\{_REPLACEMENT\}''',
+    '''MIIEowIBAAKCAQEAxxxxxxxxxxxxxxxx''',
+    '''SUPER-SECRET-COOKIE-VALUE-9f3a''',
+    '''sk-1234567890abcdef-sk-1234567890abcdef''',
+    '''sk-1234567890abcdef''',
+    '''sk-live-abcdef''',
+    '''ghp_ABCdef1234567890''',
+]
+
+[[allowlists]]
+description = "SHA-256 input hashes in audit manifests, not credentials"
+targetRules = ["generic-api-key"]
+condition = "AND"
+paths = ['''(^|/)license-audit/(release-gate|public-source-review|public-source-package-audit)\.json$''']
+regexTarget = "match"
+regexes = ['''[^"\r\n]+":\s*"[0-9a-f]{64}"''']
+
+[[allowlists]]
+description = "License identifiers in the hash-verified upstream ScanCode index"
+targetRules = ["generic-api-key"]
+condition = "AND"
+paths = ['''(^|/)THIRD_PARTY_LICENSES/license-expression-30\.4\.4/d7594273825a-license_expression_data_scancode-licensedb-index\.json$''']
+regexTarget = "match"
+regexes = ['''(?:spdx_)?license_key":\s*"[A-Za-z0-9.+_-]+"''']
+
+[[allowlists]]
+description = "Public Google website frontend identifiers in original hash-verified evidence (10 findings reviewed)"
+targetRules = ["gcp-api-key", "generic-api-key"]
+condition = "AND"
+regexes = ['''^AIza[0-9A-Za-z_-]{35}$''']
+paths = [
+    '''(^|/)license-audit/evidence/legal/google-terms-20260730\.html$''',
+    '''(^|/)license-audit/evidence/upstream/chrome-for-testing-official\.txt$''',
+]

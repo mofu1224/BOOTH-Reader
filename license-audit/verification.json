@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-01",
+  "ruff_changed_files": "PASS",
+  "mypy_project_scope": {"result": "PASS", "source_files": 17},
+  "pytest_repository": {"result": "PASS", "passed": 357, "warnings": 1, "seconds": 39.73},
+  "warning": "Existing Starlette TestClient/httpx deprecation; not suppressed",
+  "release_gate_regressions": "PASS: missing, blocked, and changed-input evidence rejected",
+  "pip_audit_pinned_closure": {"result": "PASS", "packages": 62, "known_vulnerabilities": 0},
+  "license_clearance": "BLOCKED"
+}

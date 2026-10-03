@@ -1,0 +1,3210 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "version": 1,
+  "metadata": {
+    "component": {
+      "type": "application",
+      "name": "BOOTH-Reader",
+      "version": "1.0.3"
+    },
+    "properties": [
+      {
+        "name": "audit:scope",
+        "value": "PARTIAL: pinned wheels and archive containers; embedded native/npm/data closure unresolved"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/annotated-doc@0.0.5",
+      "name": "annotated-doc",
+      "version": "0.0.5",
+      "purl": "pkg:pypi/annotated-doc@0.0.5",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "117bac03a25ede5df5440e855b32d556049ca169ead221505badf432fed4b101"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "runtime"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/annotated-types@0.8.0",
+      "name": "annotated-types",
+      "version": "0.8.0",
+      "purl": "pkg:pypi/annotated-types@0.8.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "f072f4d804ea359e4eaf198b1af7a8b0943881a87f31bb764f8bf219bb9419e0"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "runtime"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/anyio@4.15.1",
+      "name": "anyio",
+      "version": "4.15.1",
+      "purl": "pkg:pypi/anyio@4.15.1",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "6152fdbbf9a77fdec97731721bebf7c4c44f7c29b424b0065826173efc7ed101"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "runtime"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/ast-serialize@0.11.2",
+      "name": "ast-serialize",
+      "version": "0.11.2",
+      "purl": "pkg:pypi/ast-serialize@0.11.2",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "b9065dd23131a23b41f5bab3bf4e9b3c350a3fe8e36e8200eded9b729fcea484"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "development/build"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/beautifulsoup4@4.15.0",
+      "name": "beautifulsoup4",
+      "version": "4.15.0",
+      "purl": "pkg:pypi/beautifulsoup4@4.15.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "d6f88de62e1d4e38ecb1077eb9724cd0eff29d2a08ca16a401e9b9e93f117cf9"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "runtime"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/boolean-py@5.0",
+      "name": "boolean-py",
+      "version": "5.0",
+      "purl": "pkg:pypi/boolean-py@5.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "ef28a70bd43115208441b53a045d1549e2f0ec6e3d08a9d142cbc41c1938e8d9"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "development/build"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/build@1.6.1",
+      "name": "build",
+      "version": "1.6.1",
+      "purl": "pkg:pypi/build@1.6.1",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "ecd351a4be9d35a9eaaba244a7687143c9c7d4aea6ac964e7e7ddab20cbcf4e7"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "development/build"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/cachecontrol@0.14.4",
+      "name": "cachecontrol",
+      "version": "0.14.4",
+      "purl": "pkg:pypi/cachecontrol@0.14.4",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "b7ac014ff72ee199b5f8af1de29d60239954f223e948196fa3d84adaffc71d2b"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "development/build"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/certifi@2026.7.22",
+      "name": "certifi",
+      "version": "2026.7.22",
+      "purl": "pkg:pypi/certifi@2026.7.22",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "62f22742b58a1a33014a2b6b706588a8d7e2a88ae7bd1a6ebe8c992928483775"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "runtime"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/charset-normalizer@3.5.2",
+      "name": "charset-normalizer",
+      "version": "3.5.2",
+      "purl": "pkg:pypi/charset-normalizer@3.5.2",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "780fbe7cab297b81dad9fb8dc5eb003c0468ffb0d9e5f65068c53a34661a96bc"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "development/build"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/click@8.5.0",
+      "name": "click",
+      "version": "8.5.0",
+      "purl": "pkg:pypi/click@8.5.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "255bc9599cf7748b4b1a446ccc735421bd08a2ae529a8b88597d3de5664ee360"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "runtime"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/colorama@0.4.6",
+      "name": "colorama",
+      "version": "0.4.6",
+      "purl": "pkg:pypi/colorama@0.4.6",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "runtime"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/cyclonedx-python-lib@11.12.0",
+      "name": "cyclonedx-python-lib",
+      "version": "11.12.0",
+      "purl": "pkg:pypi/cyclonedx-python-lib@11.12.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "0e807521a921a5c3cb8ce1153f8a61d29eedfe76a46aac2796b7c6b573391a54"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "development/build"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/defusedxml@0.7.1",
+      "name": "defusedxml",
+      "version": "0.7.1",
+      "purl": "pkg:pypi/defusedxml@0.7.1",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "a352e7e428770286cc899e2542b6cdaedb2b4953ff269a210103ec58f6198a61"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "development/build"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/fastapi@0.141.1",
+      "name": "fastapi",
+      "version": "0.141.1",
+      "purl": "pkg:pypi/fastapi@0.141.1",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "bfb91aa2d334c61cb35ba9a116fc123b3d3df31640b801cf57a7a78ec3f603b3"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "runtime"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/filelock@4.0.7",
+      "name": "filelock",
+      "version": "4.0.7",
+      "purl": "pkg:pypi/filelock@4.0.7",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "a93c4d93269b339a6af4848342c7e940d0f9928ad95eff64764699e5f1bf8a6a"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "development/build"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/greenlet@3.5.6",
+      "name": "greenlet",
+      "version": "3.5.6",
+      "purl": "pkg:pypi/greenlet@3.5.6",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "7ac4abb3877c43af320392c664774eef6fa2cc063c79a55fc02d844a3cbe7395"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "runtime"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/h11@0.16.0",
+      "name": "h11",
+      "version": "0.16.0",
+      "purl": "pkg:pypi/h11@0.16.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "runtime"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/httpcore@1.0.9",
+      "name": "httpcore",
+      "version": "1.0.9",
+      "purl": "pkg:pypi/httpcore@1.0.9",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "2d400746a40668fc9dec9810239072b40b4484b640a8c38fd654a024c7a1bf55"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "runtime"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/httpx@0.28.1",
+      "name": "httpx",
+      "version": "0.28.1",
+      "purl": "pkg:pypi/httpx@0.28.1",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "d909fcccc110f8c7faf814ca82a9a4d816bc5a6dbfea25d6591d6985b8ba59ad"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "runtime"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/idna@3.20",
+      "name": "idna",
+      "version": "3.20",
+      "purl": "pkg:pypi/idna@3.20",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "ab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "runtime"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/iniconfig@2.3.0",
+      "name": "iniconfig",
+      "version": "2.3.0",
+      "purl": "pkg:pypi/iniconfig@2.3.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "f631c04d2c48c52b84d0d0549c99ff3859c98df65b3101406327ecc7d53fbf12"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "development/build"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/librt@0.16.0",
+      "name": "librt",
+      "version": "0.16.0",
+      "purl": "pkg:pypi/librt@0.16.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "25a58a19ea8d83b68209f04912df765e9260635ef77646542ed4b4abe6bc7940"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "development/build"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/license-expression@30.4.4",
+      "name": "license-expression",
+      "version": "30.4.4",
+      "purl": "pkg:pypi/license-expression@30.4.4",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "421788fdcadb41f049d2dc934ce666626265aeccefddd25e162a26f23bcbf8a4"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "development/build"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/markdown-it-py@4.2.0",
+      "name": "markdown-it-py",
+      "version": "4.2.0",
+      "purl": "pkg:pypi/markdown-it-py@4.2.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "9f7ebbcd14fe59494226453aed97c1070d83f8d24b6fc3a3bcf9a38092641c4a"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "development/build"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/mdurl@0.1.2",
+      "name": "mdurl",
+      "version": "0.1.2",
+      "purl": "pkg:pypi/mdurl@0.1.2",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "development/build"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/msgpack@1.2.3",
+      "name": "msgpack",
+      "version": "1.2.3",
+      "purl": "pkg:pypi/msgpack@1.2.3",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "3ec409b0d6aa8e9eec6eaf881b893caa215dbe68c5319ca96e8a271d81bb111d"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "development/build"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/mypy@2.3.1",
+      "name": "mypy",
+      "version": "2.3.1",
+      "purl": "pkg:pypi/mypy@2.3.1",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "4c5095a327483591c94e0c8d3ef9e50d4ab1369b541eae007c1f23bc2a41f6bb"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "development/build"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/mypy-extensions@1.1.0",
+      "name": "mypy-extensions",
+      "version": "1.1.0",
+      "purl": "pkg:pypi/mypy-extensions@1.1.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "1be4cccdb0f2482337c4743e60421de3a356cd97508abadd57d47403e94f5505"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "development/build"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/opentelemetry-api@1.45.0",
+      "name": "opentelemetry-api",
+      "version": "1.45.0",
+      "purl": "pkg:pypi/opentelemetry-api@1.45.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "80e068aba7cd56c8b58512d6a36f8d25cb1dfaa0c0a4cc1c938ccf9f362d9cb3"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "development/build"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/packageurl-python@0.17.6",
+      "name": "packageurl-python",
+      "version": "0.17.6",
+      "purl": "pkg:pypi/packageurl-python@0.17.6",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "31a85c2717bc41dd818f3c62908685ff9eebcb68588213745b14a6ee9e7df7c9"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "development/build"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/packaging@26.3",
+      "name": "packaging",
+      "version": "26.3",
+      "purl": "pkg:pypi/packaging@26.3",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "development/build"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/pathspec@1.1.1",
+      "name": "pathspec",
+      "version": "1.1.1",
+      "purl": "pkg:pypi/pathspec@1.1.1",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "a00ce642f577bf7f473932318056212bc4f8bfdf53128c78bbd5af0b9b20b189"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "development/build"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/pip@26.2.1",
+      "name": "pip",
+      "version": "26.2.1",
+      "purl": "pkg:pypi/pip@26.2.1",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "71138adf1f4ca900cdb7d289c21b7494329f2332b6d85f0e1c42108c0384ed3e"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "development/build"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/pip-api@0.0.35",
+      "name": "pip-api",
+      "version": "0.0.35",
+      "purl": "pkg:pypi/pip-api@0.0.35",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "66990d0da25378555cbb538db79384bab92d4617c6350dfd7a2126ba2a3a9894"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "development/build"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/pip-audit@2.10.1",
+      "name": "pip-audit",
+      "version": "2.10.1",
+      "purl": "pkg:pypi/pip-audit@2.10.1",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "99ef3f600a317c1945f1e89e227ef26e1c2d618429b8bd3fa6f4f7c440c4611a"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "development/build"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/pip-requirements-parser@32.0.1",
+      "name": "pip-requirements-parser",
+      "version": "32.0.1",
+      "purl": "pkg:pypi/pip-requirements-parser@32.0.1",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "4659bc2a667783e7a15d190f6fccf8b2486685b6dba4c19c3876314769c57526"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "development/build"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/platformdirs@4.12.2",
+      "name": "platformdirs",
+      "version": "4.12.2",
+      "purl": "pkg:pypi/platformdirs@4.12.2",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "29dbf06d96c500bc6bdbce75fb0a14d63279c93b1842f97e72a135b33e856983"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "development/build"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/playwright@1.63.0",
+      "name": "playwright",
+      "version": "1.63.0",
+      "purl": "pkg:pypi/playwright@1.63.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "2f9a707a6c6c91157ed77bff2b8caeb04b3c8d46e70d585fc134298cbe4b5cc6"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "runtime"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/pluggy@1.6.0",
+      "name": "pluggy",
+      "version": "1.6.0",
+      "purl": "pkg:pypi/pluggy@1.6.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "e920276dd6813095e9377c0bc5566d94c932c33b27a3e3945d8389c374dd4746"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "development/build"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/py-serializable@2.1.0",
+      "name": "py-serializable",
+      "version": "2.1.0",
+      "purl": "pkg:pypi/py-serializable@2.1.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "b56d5d686b5a03ba4f4db5e769dc32336e142fc3bd4d68a8c25579ebb0a67304"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "development/build"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/pydantic@2.13.5",
+      "name": "pydantic",
+      "version": "2.13.5",
+      "purl": "pkg:pypi/pydantic@2.13.5",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "346a034f080da3755d8e9cb5e00e8b07de1d39e4f6e2c87d8ab7cafa0b269a73"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "runtime"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/pydantic-core@2.46.5",
+      "name": "pydantic-core",
+      "version": "2.46.5",
+      "purl": "pkg:pypi/pydantic-core@2.46.5",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "5e81740c09e310f5aa5cbd3e434a01c154d4bef93241c7877b39f211d2b78ba8"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "runtime"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/pyee@13.0.1",
+      "name": "pyee",
+      "version": "13.0.1",
+      "purl": "pkg:pypi/pyee@13.0.1",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "af2f8fede4171ef667dfded53f96e2ed0d6e6bd7ee3bb46437f77e3b57689228"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "runtime"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/pygments@2.21.0",
+      "name": "pygments",
+      "version": "2.21.0",
+      "purl": "pkg:pypi/pygments@2.21.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "2363c69b61c4a97c838da3b130dcd6468f4848992b21a82f2a63ec34377137d9"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "development/build"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/pyparsing@3.3.3",
+      "name": "pyparsing",
+      "version": "3.3.3",
+      "purl": "pkg:pypi/pyparsing@3.3.3",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "ece8c00a69cf01b45d0b1dedabb469c90d8caf996d4fda40f147627a122849a4"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "development/build"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/pyproject-hooks@1.3.3",
+      "name": "pyproject-hooks",
+      "version": "1.3.3",
+      "purl": "pkg:pypi/pyproject-hooks@1.3.3",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "5fc53fdac9f7bd63fbcdc868fb5f90b4784d78a53a3d3388cd738b807441a20b"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "development/build"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/pytest@9.1.1",
+      "name": "pytest",
+      "version": "9.1.1",
+      "purl": "pkg:pypi/pytest@9.1.1",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "37a86b45efb9a47a61a36449063e8e18d0cab3161329fc099eb21783169c4f0c"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "development/build"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/requests@2.34.2",
+      "name": "requests",
+      "version": "2.34.2",
+      "purl": "pkg:pypi/requests@2.34.2",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "2a0d60c172f83ac6ab31e4554906c0f3b3588d37b5cb939b1c061f4907e278e0"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "development/build"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/rich@15.0.0",
+      "name": "rich",
+      "version": "15.0.0",
+      "purl": "pkg:pypi/rich@15.0.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "33bd4ef74232fb73fe9279a257718407f169c09b78a87ad3d296f548e27de0bb"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "development/build"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/ruff@0.16.9",
+      "name": "ruff",
+      "version": "0.16.9",
+      "purl": "pkg:pypi/ruff@0.16.9",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "6bd40fec8cd4c8a3d4dd589bd8ad4e6320c13c29234159bfd959a40d529d597b"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "development/build"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/setuptools@84.0.0",
+      "name": "setuptools",
+      "version": "84.0.0",
+      "purl": "pkg:pypi/setuptools@84.0.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "51a52592b3b99e102b609654876bd65f19f999935166d1352678931132b0c670"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "development/build"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/sortedcontainers@2.4.0",
+      "name": "sortedcontainers",
+      "version": "2.4.0",
+      "purl": "pkg:pypi/sortedcontainers@2.4.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "a163dcaede0f1c021485e957a39245190e74249897e2ae4b2aa38595db237ee0"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "development/build"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/soupsieve@2.10",
+      "name": "soupsieve",
+      "version": "2.10",
+      "purl": "pkg:pypi/soupsieve@2.10",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "8596eb8967d744174820280fa62b4542a2e955bfaccca73ed8a13c6eb8e9b502"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "runtime"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/starlette@1.7.0",
+      "name": "starlette",
+      "version": "1.7.0",
+      "purl": "pkg:pypi/starlette@1.7.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "67f8e99895493dd2911a03f11314af6ceebeae4e704bb9f43dfc6a9db151c93e"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "runtime"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/tomli@2.4.1",
+      "name": "tomli",
+      "version": "2.4.1",
+      "purl": "pkg:pypi/tomli@2.4.1",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "52c8ef851d9a240f11a88c003eacb03c31fc1c9c4ec64a99a0f922b93874fda9"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "development/build"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/tomli-w@1.2.0",
+      "name": "tomli-w",
+      "version": "1.2.0",
+      "purl": "pkg:pypi/tomli-w@1.2.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "188306098d013b691fcadc011abd66727d3c414c571bb01b1a174ba8c983cf90"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "development/build"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/typing-extensions@4.16.0",
+      "name": "typing-extensions",
+      "version": "4.16.0",
+      "purl": "pkg:pypi/typing-extensions@4.16.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "runtime"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/typing-inspection@0.4.4",
+      "name": "typing-inspection",
+      "version": "0.4.4",
+      "purl": "pkg:pypi/typing-inspection@0.4.4",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "65b8397ba37ccbce054456aaccddfc91e6e3083c92824df348d96ca832f3f147"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "runtime"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/urllib3@2.8.0",
+      "name": "urllib3",
+      "version": "2.8.0",
+      "purl": "pkg:pypi/urllib3@2.8.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "0cf3cae568d36aa9576b28dfb35f11328f1cb974ca7647d9475ebb86c75ac6e3"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "development/build"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/uvicorn@0.54.0",
+      "name": "uvicorn",
+      "version": "0.54.0",
+      "purl": "pkg:pypi/uvicorn@0.54.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "505bdb0f318731d45f1f712071fc781a8981f6847a31c902c9f5e652d4f67faf"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "runtime"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/wheel@0.48.0",
+      "name": "wheel",
+      "version": "0.48.0",
+      "purl": "pkg:pypi/wheel@0.48.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "3217dcc807155e45db462d7ef2431f5ddda0d7273b700d05a67b271ceb1287ab"
+        }
+      ],
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:role",
+          "value": "development/build"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/setuptools@84.0.0:embedded:autocommand@2.2.2",
+      "name": "autocommand",
+      "version": "2.2.2",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "pkg:pypi/setuptools@84.0.0"
+        },
+        {
+          "name": "audit:location",
+          "value": "setuptools/_vendor/autocommand-2.2.2.dist-info/METADATA"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/setuptools@84.0.0:embedded:backports.tarfile@1.2.0",
+      "name": "backports.tarfile",
+      "version": "1.2.0",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "pkg:pypi/setuptools@84.0.0"
+        },
+        {
+          "name": "audit:location",
+          "value": "setuptools/_vendor/backports.tarfile-1.2.0.dist-info/METADATA"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/setuptools@84.0.0:embedded:importlib_metadata@8.7.1",
+      "name": "importlib_metadata",
+      "version": "8.7.1",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "pkg:pypi/setuptools@84.0.0"
+        },
+        {
+          "name": "audit:location",
+          "value": "setuptools/_vendor/importlib_metadata-8.7.1.dist-info/METADATA"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/setuptools@84.0.0:embedded:jaraco.text@4.0.0",
+      "name": "jaraco.text",
+      "version": "4.0.0",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "pkg:pypi/setuptools@84.0.0"
+        },
+        {
+          "name": "audit:location",
+          "value": "setuptools/_vendor/jaraco.text-4.0.0.dist-info/METADATA"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/setuptools@84.0.0:embedded:jaraco.context@6.1.0",
+      "name": "jaraco.context",
+      "version": "6.1.0",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "pkg:pypi/setuptools@84.0.0"
+        },
+        {
+          "name": "audit:location",
+          "value": "setuptools/_vendor/jaraco_context-6.1.0.dist-info/METADATA"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/setuptools@84.0.0:embedded:jaraco.functools@4.4.0",
+      "name": "jaraco.functools",
+      "version": "4.4.0",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "pkg:pypi/setuptools@84.0.0"
+        },
+        {
+          "name": "audit:location",
+          "value": "setuptools/_vendor/jaraco_functools-4.4.0.dist-info/METADATA"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/setuptools@84.0.0:embedded:more-itertools@10.8.0",
+      "name": "more-itertools",
+      "version": "10.8.0",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "pkg:pypi/setuptools@84.0.0"
+        },
+        {
+          "name": "audit:location",
+          "value": "setuptools/_vendor/more_itertools-10.8.0.dist-info/METADATA"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/setuptools@84.0.0:embedded:packaging@26.0",
+      "name": "packaging",
+      "version": "26.0",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "pkg:pypi/setuptools@84.0.0"
+        },
+        {
+          "name": "audit:location",
+          "value": "setuptools/_vendor/packaging-26.0.dist-info/METADATA"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/setuptools@84.0.0:embedded:platformdirs@4.4.0",
+      "name": "platformdirs",
+      "version": "4.4.0",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "pkg:pypi/setuptools@84.0.0"
+        },
+        {
+          "name": "audit:location",
+          "value": "setuptools/_vendor/platformdirs-4.4.0.dist-info/METADATA"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/setuptools@84.0.0:embedded:tomli@2.4.0",
+      "name": "tomli",
+      "version": "2.4.0",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "pkg:pypi/setuptools@84.0.0"
+        },
+        {
+          "name": "audit:location",
+          "value": "setuptools/_vendor/tomli-2.4.0.dist-info/METADATA"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/setuptools@84.0.0:embedded:wheel@0.46.3",
+      "name": "wheel",
+      "version": "0.46.3",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "pkg:pypi/setuptools@84.0.0"
+        },
+        {
+          "name": "audit:location",
+          "value": "setuptools/_vendor/wheel-0.46.3.dist-info/METADATA"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/setuptools@84.0.0:embedded:zipp@3.23.0",
+      "name": "zipp",
+      "version": "3.23.0",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "pkg:pypi/setuptools@84.0.0"
+        },
+        {
+          "name": "audit:location",
+          "value": "setuptools/_vendor/zipp-3.23.0.dist-info/METADATA"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "CPython-3.12.13:embedded:pip@25.0.1",
+      "name": "pip",
+      "version": "25.0.1",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "CPython-3.12.13"
+        },
+        {
+          "name": "audit:location",
+          "value": "python/Lib/ensurepip/_bundled/pip-25.0.1-py3-none-any.whl!pip-25.0.1.dist-info/METADATA"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "ensurepip-25.0.1:vendor:CacheControl@0.14.1",
+      "name": "CacheControl",
+      "version": "0.14.1",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "ensurepip-25.0.1"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "ensurepip-25.0.1:vendor:distlib@0.3.9",
+      "name": "distlib",
+      "version": "0.3.9",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "ensurepip-25.0.1"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "ensurepip-25.0.1:vendor:distro@1.9.0",
+      "name": "distro",
+      "version": "1.9.0",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "ensurepip-25.0.1"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "ensurepip-25.0.1:vendor:msgpack@1.1.0",
+      "name": "msgpack",
+      "version": "1.1.0",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "ensurepip-25.0.1"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "ensurepip-25.0.1:vendor:packaging@24.2",
+      "name": "packaging",
+      "version": "24.2",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "ensurepip-25.0.1"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "ensurepip-25.0.1:vendor:platformdirs@4.3.6",
+      "name": "platformdirs",
+      "version": "4.3.6",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "ensurepip-25.0.1"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "ensurepip-25.0.1:vendor:pyproject-hooks@1.2.0",
+      "name": "pyproject-hooks",
+      "version": "1.2.0",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "ensurepip-25.0.1"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "ensurepip-25.0.1:vendor:requests@2.32.3",
+      "name": "requests",
+      "version": "2.32.3",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "ensurepip-25.0.1"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "ensurepip-25.0.1:vendor:certifi@2024.8.30",
+      "name": "certifi",
+      "version": "2024.8.30",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "ensurepip-25.0.1"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "ensurepip-25.0.1:vendor:idna@3.10",
+      "name": "idna",
+      "version": "3.10",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "ensurepip-25.0.1"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "ensurepip-25.0.1:vendor:urllib3@1.26.20",
+      "name": "urllib3",
+      "version": "1.26.20",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "ensurepip-25.0.1"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "ensurepip-25.0.1:vendor:rich@13.9.4",
+      "name": "rich",
+      "version": "13.9.4",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "ensurepip-25.0.1"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "ensurepip-25.0.1:vendor:pygments@2.18.0",
+      "name": "pygments",
+      "version": "2.18.0",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "ensurepip-25.0.1"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "ensurepip-25.0.1:vendor:typing_extensions@4.12.2",
+      "name": "typing_extensions",
+      "version": "4.12.2",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "ensurepip-25.0.1"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "ensurepip-25.0.1:vendor:resolvelib@1.0.1",
+      "name": "resolvelib",
+      "version": "1.0.1",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "ensurepip-25.0.1"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "ensurepip-25.0.1:vendor:setuptools@70.3.0",
+      "name": "setuptools",
+      "version": "70.3.0",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "ensurepip-25.0.1"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "ensurepip-25.0.1:vendor:tomli@2.2.1",
+      "name": "tomli",
+      "version": "2.2.1",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "ensurepip-25.0.1"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "ensurepip-25.0.1:vendor:truststore@0.10.0",
+      "name": "truststore",
+      "version": "0.10.0",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "ensurepip-25.0.1"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "CPython-3.12.13:vendor:CacheControl@0.14.4",
+      "name": "CacheControl",
+      "version": "0.14.4",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "CPython-3.12.13"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "python/Lib/site-packages/pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "CPython-3.12.13:vendor:distlib@0.4.0",
+      "name": "distlib",
+      "version": "0.4.0",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "CPython-3.12.13"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "python/Lib/site-packages/pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "CPython-3.12.13:vendor:distro@1.9.0",
+      "name": "distro",
+      "version": "1.9.0",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "CPython-3.12.13"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "python/Lib/site-packages/pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "CPython-3.12.13:vendor:msgpack@1.1.2",
+      "name": "msgpack",
+      "version": "1.1.2",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "CPython-3.12.13"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "python/Lib/site-packages/pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "CPython-3.12.13:vendor:packaging@26.0",
+      "name": "packaging",
+      "version": "26.0",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "CPython-3.12.13"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "python/Lib/site-packages/pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "CPython-3.12.13:vendor:platformdirs@4.5.1",
+      "name": "platformdirs",
+      "version": "4.5.1",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "CPython-3.12.13"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "python/Lib/site-packages/pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "CPython-3.12.13:vendor:pyproject-hooks@1.2.0",
+      "name": "pyproject-hooks",
+      "version": "1.2.0",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "CPython-3.12.13"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "python/Lib/site-packages/pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "CPython-3.12.13:vendor:requests@2.32.5",
+      "name": "requests",
+      "version": "2.32.5",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "CPython-3.12.13"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "python/Lib/site-packages/pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "CPython-3.12.13:vendor:certifi@2026.1.4",
+      "name": "certifi",
+      "version": "2026.1.4",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "CPython-3.12.13"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "python/Lib/site-packages/pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "CPython-3.12.13:vendor:idna@3.11",
+      "name": "idna",
+      "version": "3.11",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "CPython-3.12.13"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "python/Lib/site-packages/pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "CPython-3.12.13:vendor:urllib3@1.26.20",
+      "name": "urllib3",
+      "version": "1.26.20",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "CPython-3.12.13"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "python/Lib/site-packages/pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "CPython-3.12.13:vendor:rich@14.2.0",
+      "name": "rich",
+      "version": "14.2.0",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "CPython-3.12.13"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "python/Lib/site-packages/pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "CPython-3.12.13:vendor:pygments@2.19.2",
+      "name": "pygments",
+      "version": "2.19.2",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "CPython-3.12.13"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "python/Lib/site-packages/pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "CPython-3.12.13:vendor:resolvelib@1.2.1",
+      "name": "resolvelib",
+      "version": "1.2.1",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "CPython-3.12.13"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "python/Lib/site-packages/pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "CPython-3.12.13:vendor:setuptools@70.3.0",
+      "name": "setuptools",
+      "version": "70.3.0",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "CPython-3.12.13"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "python/Lib/site-packages/pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "CPython-3.12.13:vendor:tomli@2.3.0",
+      "name": "tomli",
+      "version": "2.3.0",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "CPython-3.12.13"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "python/Lib/site-packages/pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "CPython-3.12.13:vendor:tomli-w@1.2.0",
+      "name": "tomli-w",
+      "version": "1.2.0",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "CPython-3.12.13"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "python/Lib/site-packages/pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "CPython-3.12.13:vendor:truststore@0.10.4",
+      "name": "truststore",
+      "version": "0.10.4",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "CPython-3.12.13"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "python/Lib/site-packages/pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "CPython-3.12.13:vendor:dependency-groups@1.3.1",
+      "name": "dependency-groups",
+      "version": "1.3.1",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "CPython-3.12.13"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "python/Lib/site-packages/pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pip-26.2.1:vendor:CacheControl@0.14.4",
+      "name": "CacheControl",
+      "version": "0.14.4",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "pip-26.2.1"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pip-26.2.1:vendor:distlib@0.4.2",
+      "name": "distlib",
+      "version": "0.4.2",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "pip-26.2.1"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pip-26.2.1:vendor:distro@1.9.0",
+      "name": "distro",
+      "version": "1.9.0",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "pip-26.2.1"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pip-26.2.1:vendor:msgpack@1.1.2",
+      "name": "msgpack",
+      "version": "1.1.2",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "pip-26.2.1"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pip-26.2.1:vendor:packaging@26.2",
+      "name": "packaging",
+      "version": "26.2",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "pip-26.2.1"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pip-26.2.1:vendor:platformdirs@4.10.0",
+      "name": "platformdirs",
+      "version": "4.10.0",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "pip-26.2.1"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pip-26.2.1:vendor:pyproject-hooks@1.2.0",
+      "name": "pyproject-hooks",
+      "version": "1.2.0",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "pip-26.2.1"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pip-26.2.1:vendor:requests@2.34.2",
+      "name": "requests",
+      "version": "2.34.2",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "pip-26.2.1"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pip-26.2.1:vendor:certifi@2026.6.17",
+      "name": "certifi",
+      "version": "2026.6.17",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "pip-26.2.1"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pip-26.2.1:vendor:idna@3.18",
+      "name": "idna",
+      "version": "3.18",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "pip-26.2.1"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pip-26.2.1:vendor:urllib3@2.7.0",
+      "name": "urllib3",
+      "version": "2.7.0",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "pip-26.2.1"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pip-26.2.1:vendor:rich@14.2.0",
+      "name": "rich",
+      "version": "14.2.0",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "pip-26.2.1"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pip-26.2.1:vendor:pygments@2.20.0",
+      "name": "pygments",
+      "version": "2.20.0",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "pip-26.2.1"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pip-26.2.1:vendor:resolvelib@1.2.1",
+      "name": "resolvelib",
+      "version": "1.2.1",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "pip-26.2.1"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pip-26.2.1:vendor:setuptools@70.3.0",
+      "name": "setuptools",
+      "version": "70.3.0",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "pip-26.2.1"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pip-26.2.1:vendor:tomli@2.4.1",
+      "name": "tomli",
+      "version": "2.4.1",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "pip-26.2.1"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pip-26.2.1:vendor:tomli-w@1.2.0",
+      "name": "tomli-w",
+      "version": "1.2.0",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "pip-26.2.1"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pip-26.2.1:vendor:truststore@0.10.4",
+      "name": "truststore",
+      "version": "0.10.4",
+      "properties": [
+        {
+          "name": "audit:clearance",
+          "value": "NOT VERIFIED"
+        },
+        {
+          "name": "audit:parent",
+          "value": "pip-26.2.1"
+        },
+        {
+          "name": "audit:evidence",
+          "value": "pip/_vendor/vendor.txt"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "archive:python",
+      "name": "python",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "aaee8e72c20e1a266bbc6b0dcd640679d1aa1ea4257725af336b5ce9e492891b"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "archive:sqlite",
+      "name": "sqlite",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "8b959b7eff4a81f6a62fc3468f9273e5cfe78d4a927e62215aed231b654fb104"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "archive:wheels",
+      "name": "wheels",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "952a7c7c9fcb11fcb5e997266872038ce17096cd3a4169f2efc7aea71ec2d884"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "archive:browser",
+      "name": "browser",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "b67ea3d65a61358b7a1408562cc30f5987f9f155b948689ba0eb71aa4c398cf9"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "bom-ref": "archive:browser-receipt",
+      "name": "browser-receipt",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "e00cff0121594176cdbcf7fd5961ef73ce171ac981edd8e615e8ff428f5566cc"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "pkg:pypi/annotated-doc@0.0.5",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/annotated-types@0.8.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/anyio@4.15.1",
+      "dependsOn": [
+        "pkg:pypi/idna@3.20",
+        "pkg:pypi/typing-extensions@4.16.0"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/ast-serialize@0.11.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/beautifulsoup4@4.15.0",
+      "dependsOn": [
+        "pkg:pypi/soupsieve@2.10",
+        "pkg:pypi/typing-extensions@4.16.0"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/boolean-py@5.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/build@1.6.1",
+      "dependsOn": [
+        "pkg:pypi/packaging@26.3",
+        "pkg:pypi/pyproject-hooks@1.3.3",
+        "pkg:pypi/colorama@0.4.6"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/cachecontrol@0.14.4",
+      "dependsOn": [
+        "pkg:pypi/requests@2.34.2",
+        "pkg:pypi/msgpack@1.2.3"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/certifi@2026.7.22",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/charset-normalizer@3.5.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/click@8.5.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/colorama@0.4.6",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/cyclonedx-python-lib@11.12.0",
+      "dependsOn": [
+        "pkg:pypi/license-expression@30.4.4",
+        "pkg:pypi/packageurl-python@0.17.6",
+        "pkg:pypi/py-serializable@2.1.0",
+        "pkg:pypi/sortedcontainers@2.4.0",
+        "pkg:pypi/typing-extensions@4.16.0"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/defusedxml@0.7.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/fastapi@0.141.1",
+      "dependsOn": [
+        "pkg:pypi/starlette@1.7.0",
+        "pkg:pypi/pydantic@2.13.5",
+        "pkg:pypi/typing-extensions@4.16.0",
+        "pkg:pypi/typing-inspection@0.4.4",
+        "pkg:pypi/annotated-doc@0.0.5"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/filelock@4.0.7",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/greenlet@3.5.6",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/h11@0.16.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/httpcore@1.0.9",
+      "dependsOn": [
+        "pkg:pypi/certifi@2026.7.22",
+        "pkg:pypi/h11@0.16.0"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/httpx@0.28.1",
+      "dependsOn": [
+        "pkg:pypi/anyio@4.15.1",
+        "pkg:pypi/certifi@2026.7.22",
+        "pkg:pypi/httpcore@1.0.9",
+        "pkg:pypi/idna@3.20"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/idna@3.20",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/iniconfig@2.3.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/librt@0.16.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/license-expression@30.4.4",
+      "dependsOn": [
+        "pkg:pypi/boolean-py@5.0"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/markdown-it-py@4.2.0",
+      "dependsOn": [
+        "pkg:pypi/mdurl@0.1.2"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/mdurl@0.1.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/msgpack@1.2.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/mypy@2.3.1",
+      "dependsOn": [
+        "pkg:pypi/typing-extensions@4.16.0",
+        "pkg:pypi/mypy-extensions@1.1.0",
+        "pkg:pypi/pathspec@1.1.1",
+        "pkg:pypi/librt@0.16.0",
+        "pkg:pypi/ast-serialize@0.11.2"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/mypy-extensions@1.1.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/opentelemetry-api@1.45.0",
+      "dependsOn": [
+        "pkg:pypi/typing-extensions@4.16.0"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/packageurl-python@0.17.6",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/packaging@26.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/pathspec@1.1.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/pip@26.2.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/pip-api@0.0.35",
+      "dependsOn": [
+        "pkg:pypi/pip@26.2.1"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/pip-audit@2.10.1",
+      "dependsOn": [
+        "pkg:pypi/cachecontrol@0.14.4",
+        "pkg:pypi/cyclonedx-python-lib@11.12.0",
+        "pkg:pypi/packaging@26.3",
+        "pkg:pypi/pip-api@0.0.35",
+        "pkg:pypi/pip-requirements-parser@32.0.1",
+        "pkg:pypi/requests@2.34.2",
+        "pkg:pypi/rich@15.0.0",
+        "pkg:pypi/tomli@2.4.1",
+        "pkg:pypi/tomli-w@1.2.0",
+        "pkg:pypi/platformdirs@4.12.2"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/pip-requirements-parser@32.0.1",
+      "dependsOn": [
+        "pkg:pypi/packaging@26.3",
+        "pkg:pypi/pyparsing@3.3.3"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/platformdirs@4.12.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/playwright@1.63.0",
+      "dependsOn": [
+        "pkg:pypi/pyee@13.0.1",
+        "pkg:pypi/greenlet@3.5.6"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/pluggy@1.6.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/py-serializable@2.1.0",
+      "dependsOn": [
+        "pkg:pypi/defusedxml@0.7.1"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/pydantic@2.13.5",
+      "dependsOn": [
+        "pkg:pypi/annotated-types@0.8.0",
+        "pkg:pypi/pydantic-core@2.46.5",
+        "pkg:pypi/typing-extensions@4.16.0",
+        "pkg:pypi/typing-inspection@0.4.4"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/pydantic-core@2.46.5",
+      "dependsOn": [
+        "pkg:pypi/typing-extensions@4.16.0"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/pyee@13.0.1",
+      "dependsOn": [
+        "pkg:pypi/typing-extensions@4.16.0"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/pygments@2.21.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/pyparsing@3.3.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/pyproject-hooks@1.3.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/pytest@9.1.1",
+      "dependsOn": [
+        "pkg:pypi/colorama@0.4.6",
+        "pkg:pypi/iniconfig@2.3.0",
+        "pkg:pypi/packaging@26.3",
+        "pkg:pypi/pluggy@1.6.0",
+        "pkg:pypi/pygments@2.21.0"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/requests@2.34.2",
+      "dependsOn": [
+        "pkg:pypi/charset-normalizer@3.5.2",
+        "pkg:pypi/idna@3.20",
+        "pkg:pypi/urllib3@2.8.0",
+        "pkg:pypi/certifi@2026.7.22"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/rich@15.0.0",
+      "dependsOn": [
+        "pkg:pypi/markdown-it-py@4.2.0",
+        "pkg:pypi/pygments@2.21.0"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/ruff@0.16.9",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/setuptools@84.0.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/sortedcontainers@2.4.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/soupsieve@2.10",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/starlette@1.7.0",
+      "dependsOn": [
+        "pkg:pypi/anyio@4.15.1",
+        "pkg:pypi/typing-extensions@4.16.0"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/tomli@2.4.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/tomli-w@1.2.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/typing-extensions@4.16.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/typing-inspection@0.4.4",
+      "dependsOn": [
+        "pkg:pypi/typing-extensions@4.16.0"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/urllib3@2.8.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/uvicorn@0.54.0",
+      "dependsOn": [
+        "pkg:pypi/click@8.5.0",
+        "pkg:pypi/h11@0.16.0"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/wheel@0.48.0",
+      "dependsOn": [
+        "pkg:pypi/packaging@26.3"
+      ]
+    }
+  ]
+}

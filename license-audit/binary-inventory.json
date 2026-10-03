@@ -1,0 +1,3130 @@
+[
+  {
+    "path": "python/DLLs/_asyncio.pyd",
+    "container": "CPython-3.12.13",
+    "size": 59392,
+    "sha256": "3faf2b3caf6265c66477d2dcb24d69d7839cbf1dec6b86c431775aad957ecf63",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/DLLs/_bz2.pyd",
+    "container": "CPython-3.12.13",
+    "size": 73216,
+    "sha256": "0062f9c6ea3782c29345fe88af8546c6626a64d6688f17bce316b744bfbdae42",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/DLLs/_ctypes.pyd",
+    "container": "CPython-3.12.13",
+    "size": 116224,
+    "sha256": "23f86fa460f6173def06efabbb5629faa7335f910896ad398a35950d8ec955d8",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/DLLs/_ctypes_test.pyd",
+    "container": "CPython-3.12.13",
+    "size": 25088,
+    "sha256": "c4fdaeff68e8a45cae50fd38851e8d0d3a6fb8a2b33d51ba0336e3dd0727facd",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/DLLs/_decimal.pyd",
+    "container": "CPython-3.12.13",
+    "size": 247296,
+    "sha256": "2f46087422f55699014f94629c9224771f77ad33f7be94f5342c354a8416e83f",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/DLLs/_elementtree.pyd",
+    "container": "CPython-3.12.13",
+    "size": 121856,
+    "sha256": "206494a5c390ddcab70e006ca8bd15bb1c975f02d83d4cc84bdb5e809340a1b6",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/DLLs/_hashlib.pyd",
+    "container": "CPython-3.12.13",
+    "size": 54784,
+    "sha256": "3520d17461868be5ce11c1a370d67f7a26e9fcc6c684fef56092fc7f37fb6269",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/DLLs/_lzma.pyd",
+    "container": "CPython-3.12.13",
+    "size": 152576,
+    "sha256": "5a6717bd1c9b298254b4ed2b233f2ffec29b82aaf67037773dd0d1f0531fa02d",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/DLLs/_msi.pyd",
+    "container": "CPython-3.12.13",
+    "size": 33280,
+    "sha256": "3592ff940f656f349b2b34741c0e09b7f8d8ccd104d4d7532c983c7b446abd46",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/DLLs/_multiprocessing.pyd",
+    "container": "CPython-3.12.13",
+    "size": 24064,
+    "sha256": "d19f60b4100b2b7f6bdffae821538d1415407661cae0891ef6e22923f4a2e054",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/DLLs/_overlapped.pyd",
+    "container": "CPython-3.12.13",
+    "size": 44032,
+    "sha256": "8246c6cb9d873af1434ef1e94897d03826d7ba4fcce2f7e6595c532022fbf55f",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/DLLs/_queue.pyd",
+    "container": "CPython-3.12.13",
+    "size": 20480,
+    "sha256": "48dc824f4b2a88ad433174817b0683baf894283045bf3e1cfc40347d1c11ff14",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/DLLs/_socket.pyd",
+    "container": "CPython-3.12.13",
+    "size": 71680,
+    "sha256": "a921a7f068ee95d941acfa8d1a3a8be005dc5aa21c1d469dc199ff1b8496cd39",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/DLLs/_sqlite3.pyd",
+    "container": "CPython-3.12.13",
+    "size": 112128,
+    "sha256": "b7245f0d0334f6b1e5161eabc917683821b6a68e2aee96ef64ed2b0e4bafc597",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/DLLs/_ssl.pyd",
+    "container": "CPython-3.12.13",
+    "size": 164864,
+    "sha256": "0d618ec9c2c677e57862b971ef5436d85fa6ed540c21d9a77b1c3bdb65be84c1",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/DLLs/_testbuffer.pyd",
+    "container": "CPython-3.12.13",
+    "size": 43520,
+    "sha256": "819690cc8f0464fd89a7f836fb010697b9bbbee8f871c5436146e4c807497028",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/DLLs/_testcapi.pyd",
+    "container": "CPython-3.12.13",
+    "size": 297984,
+    "sha256": "49d5b04ad762a63ce6dadd8206081c6f9aefbc66e82e1d0b13129aeb26e65bda",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/DLLs/_testclinic.pyd",
+    "container": "CPython-3.12.13",
+    "size": 55296,
+    "sha256": "479608acaa9287d4fb63eec42399bf9e5eb6f1b609d31dc63fb32921e8b57f4e",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/DLLs/_testconsole.pyd",
+    "container": "CPython-3.12.13",
+    "size": 15360,
+    "sha256": "b09d4465aac60b800c7362e7ba9d43041616bfdcf00be6daa1d12418b4e1541a",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/DLLs/_testimportmultiple.pyd",
+    "container": "CPython-3.12.13",
+    "size": 13312,
+    "sha256": "077476aff8ed52a0356b1749dffd33a5ddac8aae25cd8fd4fc40c8d5a9b0f7e9",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/DLLs/_testinternalcapi.pyd",
+    "container": "CPython-3.12.13",
+    "size": 39936,
+    "sha256": "977c8e6306fa428c8bb8f74bf158a5233b37cc1effe5a37095c33504984a52b1",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/DLLs/_testmultiphase.pyd",
+    "container": "CPython-3.12.13",
+    "size": 27648,
+    "sha256": "8986d53f0b34d5def0c676e616a788e8aed194b49afb77321a643bdcd47a5335",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/DLLs/_testsinglephase.pyd",
+    "container": "CPython-3.12.13",
+    "size": 18432,
+    "sha256": "6a2708d9426e1e61badc5676eced30e846b4f0479fbd5c8bc1dff661a1f1dc74",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/DLLs/_tkinter.pyd",
+    "container": "CPython-3.12.13",
+    "size": 55296,
+    "sha256": "0e1e9d407f5332195c716be2f9afef0e7cfd8e251e156ba324833697f50bae5e",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/DLLs/_uuid.pyd",
+    "container": "CPython-3.12.13",
+    "size": 13824,
+    "sha256": "9e0cb13102bbff39e93d3719ea9edefc29ad1d58ad07401469c0eab0c8d7d1ec",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/DLLs/_wmi.pyd",
+    "container": "CPython-3.12.13",
+    "size": 25600,
+    "sha256": "3ab6b942fd6bfee7ebe1ecb464224d34e0536ce9df264f9f3fc3c48a9687713a",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/DLLs/_zoneinfo.pyd",
+    "container": "CPython-3.12.13",
+    "size": 36352,
+    "sha256": "d5cb045d2fc510490eea93f34760870c78ae0de61380512a66e60f35f50e3021",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/DLLs/libcrypto-3-x64.dll",
+    "container": "CPython-3.12.13",
+    "size": 7976960,
+    "sha256": "141c168e0cec48de2b8e2d2962354ffeb5b9be2482109f2fdc3dbce117cda920",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/DLLs/libffi-8.dll",
+    "container": "CPython-3.12.13",
+    "size": 28160,
+    "sha256": "d19a1b7eb116e060ae2e4449a1759f7a3ac597fea43bfe170f2c10ddd6df97a0",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/DLLs/libssl-3-x64.dll",
+    "container": "CPython-3.12.13",
+    "size": 1579008,
+    "sha256": "1e33961ec950e749786901d705a434c93d40b8a5a0f1f0403ee22d1b17ff1601",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/DLLs/pyexpat.pyd",
+    "container": "CPython-3.12.13",
+    "size": 204288,
+    "sha256": "0de81d29eb00dca26648a4de4c1dc401c5ada7a0c20027a4497a7d07cc26f1d8",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/DLLs/select.pyd",
+    "container": "CPython-3.12.13",
+    "size": 18944,
+    "sha256": "3c0e8551946fdf548fb98be984d82754e82a00fc4ade701e7f086763be1d3bda",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/DLLs/sqlite3.dll",
+    "container": "CPython-3.12.13",
+    "size": 1598976,
+    "sha256": "c562bb4185aea9aa85f3251d784eff8b9a3b4bb62c66ce3cb6da2886b3cdff3d",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/DLLs/tcl86t.dll",
+    "container": "CPython-3.12.13",
+    "size": 1866480,
+    "sha256": "fbfd065f861ec0a90dd513bc209c56bbc23c54d2839964a0ec2df95848af7860",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/DLLs/tk86t.dll",
+    "container": "CPython-3.12.13",
+    "size": 1541872,
+    "sha256": "cd2f60075064dfc2e65c88b239a970cb4bd07cb3eec7cc26fb1bf978d4356b08",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/DLLs/unicodedata.pyd",
+    "container": "CPython-3.12.13",
+    "size": 1126400,
+    "sha256": "d567dfc50f0fe333335efa3793d2b5dc62a47aed096d181aed6c0964926a93d2",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/DLLs/winsound.pyd",
+    "container": "CPython-3.12.13",
+    "size": 18432,
+    "sha256": "2f68185d3211312ab6565a0aa951d5e66699d725a74aa09a19c4bc2708c52afb",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/Lib/ensurepip/_bundled/pip-25.0.1-py3-none-any.whl!pip/_vendor/distlib/t32.exe",
+    "container": "CPython-3.12.13",
+    "size": 97792,
+    "sha256": "6b4195e640a85ac32eb6f9628822a622057df1e459df7c17a12f97aeabc9415b",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/Lib/ensurepip/_bundled/pip-25.0.1-py3-none-any.whl!pip/_vendor/distlib/t64-arm.exe",
+    "container": "CPython-3.12.13",
+    "size": 182784,
+    "sha256": "ebc4c06b7d95e74e315419ee7e88e1d0f71e9e9477538c00a93a9ff8c66a6cfc",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/Lib/ensurepip/_bundled/pip-25.0.1-py3-none-any.whl!pip/_vendor/distlib/t64.exe",
+    "container": "CPython-3.12.13",
+    "size": 108032,
+    "sha256": "81a618f21cb87db9076134e70388b6e9cb7c2106739011b6a51772d22cae06b7",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/Lib/ensurepip/_bundled/pip-25.0.1-py3-none-any.whl!pip/_vendor/distlib/w32.exe",
+    "container": "CPython-3.12.13",
+    "size": 91648,
+    "sha256": "47872cc77f8e18cf642f868f23340a468e537e64521d9a3a416c8b84384d064b",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/Lib/ensurepip/_bundled/pip-25.0.1-py3-none-any.whl!pip/_vendor/distlib/w64-arm.exe",
+    "container": "CPython-3.12.13",
+    "size": 168448,
+    "sha256": "c5dc9884a8f458371550e09bd396e5418bf375820a31b9899f6499bf391c7b2e",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/Lib/ensurepip/_bundled/pip-25.0.1-py3-none-any.whl!pip/_vendor/distlib/w64.exe",
+    "container": "CPython-3.12.13",
+    "size": 101888,
+    "sha256": "7a319ffaba23a017d7b1e18ba726ba6c54c53d6446db55f92af53c279894f8ad",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/Lib/site-packages/pip/_vendor/distlib/t32.exe",
+    "container": "CPython-3.12.13",
+    "size": 97792,
+    "sha256": "6b4195e640a85ac32eb6f9628822a622057df1e459df7c17a12f97aeabc9415b",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/Lib/site-packages/pip/_vendor/distlib/t64-arm.exe",
+    "container": "CPython-3.12.13",
+    "size": 182784,
+    "sha256": "ebc4c06b7d95e74e315419ee7e88e1d0f71e9e9477538c00a93a9ff8c66a6cfc",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/Lib/site-packages/pip/_vendor/distlib/t64.exe",
+    "container": "CPython-3.12.13",
+    "size": 108032,
+    "sha256": "81a618f21cb87db9076134e70388b6e9cb7c2106739011b6a51772d22cae06b7",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/Lib/site-packages/pip/_vendor/distlib/w32.exe",
+    "container": "CPython-3.12.13",
+    "size": 91648,
+    "sha256": "47872cc77f8e18cf642f868f23340a468e537e64521d9a3a416c8b84384d064b",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/Lib/site-packages/pip/_vendor/distlib/w64-arm.exe",
+    "container": "CPython-3.12.13",
+    "size": 168448,
+    "sha256": "c5dc9884a8f458371550e09bd396e5418bf375820a31b9899f6499bf391c7b2e",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/Lib/site-packages/pip/_vendor/distlib/w64.exe",
+    "container": "CPython-3.12.13",
+    "size": 101888,
+    "sha256": "7a319ffaba23a017d7b1e18ba726ba6c54c53d6446db55f92af53c279894f8ad",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/Lib/venv/scripts/nt/python.exe",
+    "container": "CPython-3.12.13",
+    "size": 262144,
+    "sha256": "8661511926724dc1efeb3743422208d3b404a7bb08897673700a5264ee3b06cb",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/Lib/venv/scripts/nt/pythonw.exe",
+    "container": "CPython-3.12.13",
+    "size": 249856,
+    "sha256": "a6ac5fa61a156248f30efb35eedadbaf2a834d5e9b44fbbba23871eb402f1c65",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/libs/_asyncio.lib",
+    "container": "CPython-3.12.13",
+    "size": 1750,
+    "sha256": "888b5762b80970cd00854ee9d69344f86d548920700e5c6cafc5a1ff1dab2e3e",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/libs/_bz2.lib",
+    "container": "CPython-3.12.13",
+    "size": 1682,
+    "sha256": "1123d152aa4c06ffb0818f7cf15af14ee2241223cdbd9b73dda31e7cb93b278f",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/libs/_ctypes.lib",
+    "container": "CPython-3.12.13",
+    "size": 1732,
+    "sha256": "d99473d8b1333d47abee94f5b57a41149c7d9ef8bec0758c329e44d7e11fbb43",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/libs/_ctypes_test.lib",
+    "container": "CPython-3.12.13",
+    "size": 30048,
+    "sha256": "ba0fc004bcd00d3fd38714c8a053937da8445f1122fe02df8e1579ff9980e574",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/libs/_decimal.lib",
+    "container": "CPython-3.12.13",
+    "size": 1750,
+    "sha256": "266f990042fe5953f4cba6fdfd2f46989b3322bbec2c35064c8269d43ed1bb00",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/libs/_elementtree.lib",
+    "container": "CPython-3.12.13",
+    "size": 1896,
+    "sha256": "d3456e78fbf5cd62f0fd33662cd1a38d4bb083cf89b354854a82af9320b21337",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/libs/_hashlib.lib",
+    "container": "CPython-3.12.13",
+    "size": 1750,
+    "sha256": "cb7249f3db099f0fcd8d1695aa72a06cbfee2a737fd14659db616c46a48937b9",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/libs/_lzma.lib",
+    "container": "CPython-3.12.13",
+    "size": 1698,
+    "sha256": "d11f1b4fd9c74a91f494a10f2ac2000db2119b0f94777fe1ea9ae09d977233bd",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/libs/_msi.lib",
+    "container": "CPython-3.12.13",
+    "size": 1682,
+    "sha256": "fbdf06b9d67146ffa4e4b3ca51a0f915bc583686f286106a4c72f3342fd70756",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/libs/_multiprocessing.lib",
+    "container": "CPython-3.12.13",
+    "size": 1968,
+    "sha256": "23feded6fa641235b5978db10c5b229fd01f4d46670b03dcb2b5395e29c3603f",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/libs/_overlapped.lib",
+    "container": "CPython-3.12.13",
+    "size": 1800,
+    "sha256": "28a7c180d3fa0935e9c831bb1663a57e490bb0ef07a4c14c6365670d66c53788",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/libs/_queue.lib",
+    "container": "CPython-3.12.13",
+    "size": 1716,
+    "sha256": "c54a390b27e4aa8d3e964c3f7deecac1b493c972fcf2eb8c1f4f8d339a81ebf2",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/libs/_socket.lib",
+    "container": "CPython-3.12.13",
+    "size": 1732,
+    "sha256": "e29180807ace673b28fc58470cf2424441697b7fcd19a77f2f2ecaabc056bf19",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/libs/_sqlite3.lib",
+    "container": "CPython-3.12.13",
+    "size": 1750,
+    "sha256": "93b36c5c9a39ea0925256e2570bdac702a00b4f348e80cc872086e61647c6eac",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/libs/_ssl.lib",
+    "container": "CPython-3.12.13",
+    "size": 1682,
+    "sha256": "5afe83db5406c037594792f4942fbdfc5d5f85afa0812723423d771d6287885d",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/libs/_testbuffer.lib",
+    "container": "CPython-3.12.13",
+    "size": 1800,
+    "sha256": "6e1fa7594eb6fa28b18b85dc8aeebc2a824b3e251384a41ff40a98f8b3afb56e",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/libs/_testcapi.lib",
+    "container": "CPython-3.12.13",
+    "size": 1766,
+    "sha256": "cc0c6a7b156e1c56896a8c5d84c9058a4dcf4c479def8aca5fd358f4b141cb74",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/libs/_testclinic.lib",
+    "container": "CPython-3.12.13",
+    "size": 1800,
+    "sha256": "40728b3f9300ad0f51cf12504c5a269c30043f348fd72917df66240b3136caaf",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/libs/_testconsole.lib",
+    "container": "CPython-3.12.13",
+    "size": 1896,
+    "sha256": "f7b11bdac8082ccc98b4c4e3fb0f87f6896594b1f776a35c28836d460484f6e7",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/libs/_testimportmultiple.lib",
+    "container": "CPython-3.12.13",
+    "size": 2596,
+    "sha256": "cb3a12133fa04b88bcd347a1a8c907a1cd24b3dfe5e904cc54d7d062daa43780",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/libs/_testinternalcapi.lib",
+    "container": "CPython-3.12.13",
+    "size": 1984,
+    "sha256": "679c7b5df2165cd67d194a9f4c1bb3390c94fa8c19be1080158f25034df20656",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/libs/_testmultiphase.lib",
+    "container": "CPython-3.12.13",
+    "size": 10984,
+    "sha256": "1c205dca690324e31b00a245e137179689e6b776ef17409168ef766a82841b1b",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/libs/_testsinglephase.lib",
+    "container": "CPython-3.12.13",
+    "size": 3206,
+    "sha256": "ed0d0bd493b602901d17d37e7b6403c72c9b7dbebbaef8465ba13387f8ee1e12",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/libs/_tkinter.lib",
+    "container": "CPython-3.12.13",
+    "size": 1750,
+    "sha256": "a398f23d2e7d171555289414096c09fa753b2db3bb60b21b3c4780cb3b40d921",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/libs/_uuid.lib",
+    "container": "CPython-3.12.13",
+    "size": 1698,
+    "sha256": "ebf1019c596a31b4e63b7e2f4e82e58aaf624b834292a92184e97cc27c574e6b",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/libs/_wmi.lib",
+    "container": "CPython-3.12.13",
+    "size": 1682,
+    "sha256": "76ba55bf695592dd0344e5b988518da7e61f3ae59ea1fdce66da8b5dda00ff23",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/libs/_zoneinfo.lib",
+    "container": "CPython-3.12.13",
+    "size": 1766,
+    "sha256": "7487fc32fa6bd27539c7ab8e1ea19dad85586f4473880f1b6f2622afcaba2fe3",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/libs/pyexpat.lib",
+    "container": "CPython-3.12.13",
+    "size": 1732,
+    "sha256": "7b4956d45115d57a6dc1545273857bb8fe497e4326d23684633973dcf9d90316",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/libs/python3.lib",
+    "container": "CPython-3.12.13",
+    "size": 186296,
+    "sha256": "9c73c8a325f6976826024d70cd8641fa89de9e1e3fddef468d08356830011c14",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/libs/python312.lib",
+    "container": "CPython-3.12.13",
+    "size": 380762,
+    "sha256": "caed04be2f97ef2e81879c7f5eac2b2d00081f535640f35193ca076d580f694e",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/libs/select.lib",
+    "container": "CPython-3.12.13",
+    "size": 1716,
+    "sha256": "bfbaf7cfb3940d51ae8b9781d0af9a13a273bd223b58cd5eb09e23c2701ae69d",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/libs/sqlite3.lib",
+    "container": "CPython-3.12.13",
+    "size": 66348,
+    "sha256": "7685e4783a088240231d72194b4fdd55730be421bfa7b69c2185e0b910ff6d50",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/libs/unicodedata.lib",
+    "container": "CPython-3.12.13",
+    "size": 1800,
+    "sha256": "76caa70f0a9153d56abe078a240935ecaa2b6e49464fe1bfe523e173d6b70393",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/libs/winsound.lib",
+    "container": "CPython-3.12.13",
+    "size": 1750,
+    "sha256": "3a9bce975def5728163a25b79a400cc26d2b45a8f001be8a5499b01910c1a877",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/python.exe",
+    "container": "CPython-3.12.13",
+    "size": 91648,
+    "sha256": "c925dc62791843bf4c25b79f3e3115779b9c9e0b5d62ea0da5a7b52432770ae8",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/python3.dll",
+    "container": "CPython-3.12.13",
+    "size": 56320,
+    "sha256": "3b050da1f1cc32ea02298f8ec1633f6b447585a387cefad51389db2220641830",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/python312.dll",
+    "container": "CPython-3.12.13",
+    "size": 6971904,
+    "sha256": "5b86d4bc29c737e8aa12520b5504432021245a076eb71c1249745c056587d84a",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/pythonw.exe",
+    "container": "CPython-3.12.13",
+    "size": 90112,
+    "sha256": "17c8748bdfc69f19e90aecdbbbf1961a208360481e10fa310d53f99c0776434f",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/tcl/dde1.4/tcldde14.dll",
+    "container": "CPython-3.12.13",
+    "size": 25088,
+    "sha256": "6b88f753d65c1beb29e681608b49febda726090c5a5d3aa87afa15a002678d3b",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/tcl/reg1.3/tclreg13.dll",
+    "container": "CPython-3.12.13",
+    "size": 22016,
+    "sha256": "92ffeefcea9bc3c14e9bc3c09c57b9299d7ffbcad2e9da2ed9f9ca9d0e72255e",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/tcl/tcl86t.lib",
+    "container": "CPython-3.12.13",
+    "size": 185936,
+    "sha256": "29d65ab5e5c70edd2d65d560971493ef760827ba223faedcf0740a011bc6c88e",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/tcl/tclstub86.lib",
+    "container": "CPython-3.12.13",
+    "size": 9464,
+    "sha256": "22c7537b4d69ab562ec22736e75506512636ef84aeae0fbbea911c8a1891cc77",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/tcl/tix8.4.3/tix84.dll",
+    "container": "CPython-3.12.13",
+    "size": 370688,
+    "sha256": "d41c638ec51487341b9be21f4d9372424c073106f226330e90c05536de416dbe",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/tcl/tix8.4.3/tix84.lib",
+    "container": "CPython-3.12.13",
+    "size": 34156,
+    "sha256": "c538f53e9b662201e7ba7d29295b0e5e24feab94d0982570507fdf6fa7506154",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/tcl/tk86t.lib",
+    "container": "CPython-3.12.13",
+    "size": 125062,
+    "sha256": "584edf3e098277bfb49425b2d8a256867a9ce011e2e5f2e4098614cb176bf1a9",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/tcl/tkstub86.lib",
+    "container": "CPython-3.12.13",
+    "size": 7836,
+    "sha256": "d61c11087a59d29c71304790167714d176ed859c968799297f9993c3af5ea0cc",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/vcruntime140.dll",
+    "container": "CPython-3.12.13",
+    "size": 124544,
+    "sha256": "d5e4d9a3e835fa679450145d6a7d94e36573a509317111904d9b3712c30d9066",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "python/vcruntime140_1.dll",
+    "container": "CPython-3.12.13",
+    "size": 49792,
+    "sha256": "1f2d41c4aa5db0bc33ebf7b66d72943a817d7ce6cbe880502a9403823633093f",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "sqlite3.dll",
+    "container": "sqlite",
+    "size": 3285504,
+    "sha256": "ab57d0437795ecc757cb693f32ea224173fa9856594d95cfa6b5033e645cd1ec",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "ast_serialize/ast_serialize.pyd",
+    "container": "ast-serialize@0.11.2",
+    "size": 2570240,
+    "sha256": "87d194c4c17246721c43ad5925cd64ec3a3f3a47aab2c1b98e4f1fb1b62cae5a",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "charset_normalizer/cd.cp312-win_amd64.pyd",
+    "container": "charset-normalizer@3.5.2",
+    "size": 115712,
+    "sha256": "2bdbc0805f85565d76f8d6166e451bfafa6d5490b06b36c9f423cd0102b4f149",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "charset_normalizer/md.cp312-win_amd64.pyd",
+    "container": "charset-normalizer@3.5.2",
+    "size": 208384,
+    "sha256": "b08be5d29125f39a92e22d0abe4b9160753f7a790fffd07258319a8e16394afa",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "greenlet/_greenlet.cp312-win_amd64.pyd",
+    "container": "greenlet@3.5.6",
+    "size": 221696,
+    "sha256": "891643fc69106d0a91cefbea0d660819b168e56b6991b6dc64c4122a2f2493f2",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "greenlet/tests/_test_extension.cp312-win_amd64.pyd",
+    "container": "greenlet@3.5.6",
+    "size": 14336,
+    "sha256": "9841290a95cbf564f9aa83878a06b3c524d54758d8c996227ab93782759f109d",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "greenlet/tests/_test_extension_cpp.cp312-win_amd64.pyd",
+    "container": "greenlet@3.5.6",
+    "size": 14848,
+    "sha256": "ec5236b182d6247479e216c7cc1dc0e69ad9122f6ff6d3bad48800e189ac6b4f",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "librt/base64.cp312-win_amd64.pyd",
+    "container": "librt@0.16.0",
+    "size": 48128,
+    "sha256": "868c07437663983ab8416097b7575efab9b03e8a3e54d99a933a0c108947e678",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "librt/internal.cp312-win_amd64.pyd",
+    "container": "librt@0.16.0",
+    "size": 40448,
+    "sha256": "11e54013deeeaf4bad1547d1543e2ba7b55f433fcfd460254e80cb714ff11b19",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "librt/random.cp312-win_amd64.pyd",
+    "container": "librt@0.16.0",
+    "size": 33280,
+    "sha256": "8c4c506f396c545b3f6583b23749ab480ae25fe900f0c19479bd7d07821a3de9",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "librt/strings.cp312-win_amd64.pyd",
+    "container": "librt@0.16.0",
+    "size": 48640,
+    "sha256": "2daff36c5392542fdc7fc242b6cf703b55068d46ad102eccc26a26335b77fcfa",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "librt/threading.cp312-win_amd64.pyd",
+    "container": "librt@0.16.0",
+    "size": 17408,
+    "sha256": "7ca86a7bb630aef83987b2486d981d2071549a0b4a92385b3637c8f2e6c36160",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "librt/time.cp312-win_amd64.pyd",
+    "container": "librt@0.16.0",
+    "size": 13312,
+    "sha256": "6f8c379af09414c2a698d1bc6850cce1d445caf92b764d3af6ca9f8e0ca73365",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "librt/vecs.cp312-win_amd64.pyd",
+    "container": "librt@0.16.0",
+    "size": 108544,
+    "sha256": "7752c88b52a8cfde8a08cb806d37ee9b43243671385d9c5a835d9ae3e482cb5b",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "msgpack/_cmsgpack.cp312-win_amd64.pyd",
+    "container": "msgpack@1.2.3",
+    "size": 135168,
+    "sha256": "0f750d717d6a2ddd61b7d2c376d0cb28fc468347cbc0c1a46aa59126a2fb18c0",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "08ae81f72d5a2b5fa9e0__mypyc.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 20096000,
+    "sha256": "4455b5cfdfe3e473b1174fb3b59bf890a1d2bdfa529abb48067a2aa9d20741a7",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/__init__.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "49765dd5a4399e56c4d07cb34c38f45dd0eea72c5191497ead8c7b66c6a7cbe5",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/api.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "0034b2204784ca3183802c7c3d8a8c96d9b1ed6e0b715b19b1abbc280df87cf8",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/applytype.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "774f512d7905a02c13d87ba991da6ce4e1c5988f096c91f8bd8ee7eb305eda5c",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/argmap.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "198fd11b2108bda45091ee134301d3184c26026474262a3a199c598489328a91",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/binder.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "3706b5e1d679b63b93192b576860bdb4a7b67bc70a7e10b37054a24248d169e9",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/build.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "97c699f64a6f49580444f1dd103b4957f7131fcd7eae78d29ce98bafa27dd2d1",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/cache.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "8e320e0aaa3a486ef69932576e2d1a951086094fb576201ff865ff02e642704b",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/checker.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "182220a754b6de222368db5fdbe84d39a8777c6d53731aefd6d5ba21d986d6f0",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/checker_shared.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "f19a8cba8a57eba1a5be4a714d8d79b945545dc2e3f7364f589c86dafd4e942f",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/checker_state.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "7860fbc48063207820298b388fe25b457ca8cd8501899f16220ab0f7c9b3d621",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/checkexpr.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "336d3b9a6894b954199abe97103f071e199bd062158e6c849cb7cbdeb765144c",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/checkmember.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "4d75889d940f01991c0098073225b1061c629dfa299f563d4cd3bcbd70f84427",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/checkpattern.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "c79872a7f10ef5981a46c14c7649a280bfc8e11a5f3a15c37fd5efd1f2a8bf9a",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/checkstrformat.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "11f5bf66e687e06f8c454e708f90a5e19332a0916c547b6f86014e628d66e062",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/config_parser.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "e88ce0680da31f69e9824fe3439e98577e2f27a6a8c1991ad1c98a2ff970e880",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/constant_fold.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "6a7399c4ca9b53744c2cec3ad8255c8e35891f2f83cd8d3a078241ea6531f76f",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/constraints.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "761d188db12488b559cbd76268a9b1fedd4f15d000d2cacc7d95eb4333004fb4",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/copytype.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "3ec6ad901738c74a53b39ba0f64ddb7ef12eed378b15527a2ce2c58c5d93377b",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/defaults.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "639a422f3fdeda1ed3e275d8615959d465b8757e5dc2edacb94bad0ec6d8303c",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/dmypy_os.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "5f0416734db10656702b33e6de33a7d489d06d5a90bad0924fcaf54159c93fde",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/dmypy_server.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "6a72046ef774d0159ba10637f8eaac673df8e1b05f89ffcfe615a9f09b3709e5",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/dmypy_util.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "b1084804117dcce4c13fdf5d353e38bb7251d838c6495b810641b89d917ca9c0",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/erasetype.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "ee62e8ca18524467f7579d8ddd48880d7236e765842cac479992925a5366c1c4",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/error_formatter.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "f2b349ba68642dfa053b976b66ff91823436390705f49659630d9ea90294ba5a",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/errorcodes.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "e414d3731a2a67015a70476f3ddf10d97fb4692fdc87a221419f94d6447d2dbd",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/errors.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "760c047be27ad22e2784b48edf59fb719c365e321622d6e167582a80dc18b58d",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/evalexpr.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "23561385d5a6be6217f3565be98b940d3b68132a40e184d2631978105c07a134",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/expandtype.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "3ccec41f5bab70ac4deb3cb327120b1d23a0ca1631f64fd2197b7e852a02c066",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/exprtotype.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "ea4d0e8b7f1ab385513b7a2f5442c48d52847aba760249f0df5e23fa34de96ab",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/fastparse.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "d7388dbeb930aecc1dec5bd08c95106f647dda07bff807f8df00317f6883bcbe",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/find_sources.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "6629c93e1c3ea9a82ab9865afb0386402b044f146211a7abfcbb4bf5487b42ba",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/fixup.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "4b41d8be7a9a9daa88e3e6f4e402874516cd32754ef4acd42cecd038ae16709f",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/freetree.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "c424f421cf42e3184ed3e89d968587ea6b8f14eb31c7f882011180d50c7791d5",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/fscache.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "5bcfbf77665712f61a7d73c58c1b1b72ab1236b65bae42f29656eba263106d91",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/fswatcher.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "ba5c9487b6820fd700820ffbacb5d285a46210dac4e1893d98ff6d4373870d13",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/gclogger.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "25187fe0d29e1217596d2cb2bbdf7d06ab9caae6c01e8d7c73814756dc7bb243",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/git.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "ebf6f6d2e303838b1970bd392a8c1187befeda08d27d8f9f451b2df6bba8ca4b",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/graph_utils.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "393b257c91b739c72f0163ced2c33821c9d043a33e4659f4d0638cbcedb977a9",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/indirection.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "212474e74cdc789b700af5eed01e9b0d62d2212816fb3b74a4da85785a08bbe2",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/infer.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "e06a58d01c2c3034b98e7ccfee0990af6d723fdb91371ccfcbdc9304f38be1b0",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/inspections.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "d9325a6f1d4b171bec5f5ef6a78f6be84ff0f4113ad176e8f9076b99ac7920fd",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/ipc.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "66469efd241af779e07d6d9ced430224ec9be69b15cb86d35288ccc6748fcbd5",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/join.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "f682e0116d541a57b3b43bffcc43cc2df757b0dea243143641ac84439ab63441",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/known_modules.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "bc53649adf3099869cce62cd1e381d53b13c303bf65e60d84ae750165cf9c20c",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/literals.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "6b2dce492a1530374080efb8d0b39b1a0d97683ab50db613051992eb9c470d87",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/lookup.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "174d0637d2d0d2e02366dad36cec12de7f8c0f84c7092ff11bd2e40aef37ede1",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/main.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "c7ada2598f10a23fb93576bb63dc47155801166e6f3993e59d727b25da6d97ac",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/maptype.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "78451395078d3853ce53ba03f9bb82287cc62cb87dffa63c3ec22e06f2ed2338",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/meet.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "ac4606e1e3833cec19b88ce430a630ad5155b705945957bca6cd0b497ff10c06",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/memprofile.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "2ffd42184919ad2bcc7c4521f09eea9ffd45210f0b0462ead6be50ea3e0003c8",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/message_registry.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "b15a296306ae99c8d316a84c542b54120a5e45a6f113ce0276f2b1980d9b8e47",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/messages.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "e515105d1af907b65b30baab97cca030d29e96d2c46009fe691af1d808eced45",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/metastore.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "5c9c735818fac74f87801706146f718a805b15aa94e9f4f292ec2f7bb1fbf74c",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/mixedtraverser.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "a2a864f02b9483ba7a5b5b897566f0a7d92391457c700e1b32bee10055a4cca3",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/modulefinder.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "ba40f202c596519f0fa3b32bf857a8a0fc57148a3ee38e6340886059a1bc2fd7",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/moduleinspect.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "add99e0e00c586973a3a0f744935f6fca4ba02952c51e2342f8774823f4c5e43",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/modules_state.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "c030a0a955f72cee5b1ee41f1ffbba3479d629f3c12a9cf11e87d96addc4858f",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/mro.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "baa82fd18de523435a0073e0ad468639cb1d01b72d08361df8b6dc0cec765f1b",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/nativeparse.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "e484cbce3fdaa1fd8a9f55bcb86dc025305299b5761e67a2c05bf6c0f8b953e5",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/nodes.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "ab60a9be4e3f983fb10c58f8c0f9f7e0c97afa9251a20c720b255217068fdf4d",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/operators.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "7915d0270a0eaa32b23d5f721ad50a391a1ff1eb4eccd8c42944ac1608b98eb0",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/options.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "4f706685de3bd2e4281087195e8be8255b58cdfbf2a6337c6327944cd5a3d9c9",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/parse.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "f103f1ba2465956488f7779f5f3a1b155fc537920ddb9a4fae56b1ae1c65f637",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/partially_defined.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "e06d51d6fd300dddd8289203a4808f9eb0ed32b0804c3b6879dca653c9199b2d",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/patterns.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "fe16af9c6209afd48ec2576c8854eb3673ae4d2882262bb45bbd1ea1ec9e8a22",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/plugin.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "841ab5f921b553236d8c43d921a5842ff17852f920d5c4acd6664b7df2e893aa",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/reachability.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "fbb632a7f42f39bc87ce814b80dc042d84e3621218b8658230ba87d10e2569e9",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/refinfo.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "75c0462d76a7e4dfb4d9bdeaf6777489933ffa5013e32195b34e3a5df6835010",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/renaming.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "cf7b7012d629fcdc8dd03372cec59977c9d2ec4f2690446ff012d479e0f7a4e5",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/report.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "bfce29e62b7c6defd80a827c66785b94de7d0b8f300b6b7403cc8db014392a06",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/scope.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "f890f6f37c7474e0579d73a9d252176326aeb11287087dcc7a8c45263bb12cba",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/semanal.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "4e866d8e31c5380d76df702356a6ddbfd37df44cbe30c735983ffe1e89e7de66",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/semanal_classprop.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "df182c3f479b65744378c09a6b41d7b5039dc1f8532d47b6bfa8fc1c00599c5f",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/semanal_enum.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "10792aa9ca12b692baf9a893cdc7e9ea5f04ffb6ea080ef4627072946be9c2d8",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/semanal_infer.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "4e08fcfe7abd807097913b52a6a2f48d34e59e43f25679e84bdcbc303dcbf922",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/semanal_main.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "4627de7acabf0ef21887f8a6ae1cbdaf34c012e9be0efb89fb31419ed58e54eb",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/semanal_namedtuple.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "50ffe0b0fe751f044547ec0affaca21e594816f2114470beafa4420b9c108382",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/semanal_newtype.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "a2d219e5e40e021f4889471c71c4e709757a26210c94a4f40e516414c48114e1",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/semanal_pass1.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "ca8bd8013a6ba0ed3a3a70a200be6aad6894842e90c0389eed850e95fd4d332b",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/semanal_shared.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "5e66cda25fabf04d62f053c4d9bce4c1bca6c8c7f40f7b0c48aaf34f161dda25",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/semanal_typeargs.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "6cd3a60995aafc065dfcee2cd8c73293e38d00590363312984f2538449e2f694",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/semanal_typeddict.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "f621a07ea2ccd03996ac4cb9888cc6444562114d99bcba8b465444fd0a5956f9",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/sharedparse.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "8b004f8611e373c5dc0b001816366f37c9850abe524876a0d23a597fb5432c6c",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/solve.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "7a745d3c49de17327127449d3d692db654b418402bfe2febc8fee2a9636b668f",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/state.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "642062541e2401e3c8d5bfb3f4480badf1c45b9232e4b0a2ca647fe303016064",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/stats.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "5112d6c1a62bbcba36bd7f8a4a490c5331f9828a5e6f939376b32a72e7d1d81a",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/strconv.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "f8b520c63a78b35855ba3fd7d3d6a0aa7c2176d42c94b0a38afdfda9728d680f",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/stubgen.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "96c5f6b5871dcb5b40793ae2e1dde3ee9ba0f8b693b74b579a9d3c53501bbc16",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/stubinfo.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "6fc190ec783956034744e44ed7ff62d38002e40f186e51a6fdf5e8ec90f71b78",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/stubutil.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "03c078452af74d5cbb7d210d36ee0b56924990d1e662210d3c6b84a9f0899f70",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/subtypes.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "dcc2c206bca1be8ee8f4085cc4e9b8ab5906f50b082a7f21cf008f0d1b9e98c6",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/suggestions.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "5a619ba16168465a85ae061f85fa0dfc5b0925436d0bb8b462be05494e7bd103",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/traverser.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "abac30fe4cbebf1cdb5b63a42cb2b276740e5f5d7504cee99c9dd3ef9043c908",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/treetransform.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "f6ff0f2640ff9cda0282e0fae6531f99d67e0a6472116fa7b9172936f5c4460e",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/tvar_scope.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "267e5784e7751887da8b22efecfbe1e29773ae19cdc100d6e17ab56df647a580",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/type_visitor.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "55c87d5c14bb20cb9ac1cc77203a9996512318fc7d9e035c86ea9bc7fddb927f",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/typeanal.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "080a69d2ebcad043bb717e9005518766ae6ccce8306f5a8a720b0e6c493e749c",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/typeops.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "59b48370dd9bdbff7feaa2e5d51275ae609301bf38bf66d49a2ab9c53e01fbc4",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/types.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "0bc4d7f4bde7ce4657982f027cc660fa40408e9a2a342674925946e25fec1e6f",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/types_utils.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "4560940505eec1d945520632fd4fd0bfbcc6ca282b6cd2e6348df3985f9733c2",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/typestate.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "1ba8aa1b36b0129ae2b516e30cee33a94ead70fa51a90754f016165b8bc74e91",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/typetraverser.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "e4f126c62e6a465aa80645fb8350598882b055ae78d4d0fd939eb25ed02d096a",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/typevars.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "a79f5ca7d5427b2108cdff5e7f78684a2c78207957f9d92b360ebf433a3de51c",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/typevartuples.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "c44044d4e5baaa8bd6f8e2cb566f3194b38053abf0cf544c520719e525b2353d",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/util.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "883d20a8b4a12ace938465ad0f3500e4c9d88ae21d5fb455bc038a03ec7d0cd4",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/visitor.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "fc1847cc32426ce1ba23b74b1c372389b4779129be6d390174abbee39e3c5d29",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/build_worker/__init__.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "da191ee015a7c402ecacfd3764b7cd4500daceb7b68bd8572ba85cde90aec951",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/build_worker/worker.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "3a9621ac2a69162fceef1a32fdb4ded0b403f509974eb177805674ce79a02039",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/dmypy/__init__.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "ae11a6d0afba05ee6cde4d0926765dc10d3b510300d737c09dba3fbe953ff742",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/dmypy/client.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "436b050230facb84b529c75e789019af0cc7d0d588852aad0a41c58fd8b29040",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/plugins/attrs.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "18a83b4f841e1c827fb84279e8fe113ba27aa4b37a9f4467a32c727f91c4f213",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/plugins/common.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "7f9e05a851ba41dd09d80912d279536836c4f37b77ef378b93f19fd2a76f59ff",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/plugins/constants.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "882a13db884979547f11a0695914363e099dd25674153a2e99fb59b9b05f0dd9",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/plugins/ctypes.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "0fda0967b4c8eead0b561a6cdb82f7d2548a935d3f9fcbbca3a8edae79c84339",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/plugins/dataclasses.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "1d9d99774d44e883afb16aaf8100e45f2e4a0a270cd83a12f9b51342968a2c0a",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/plugins/default.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "d3dc02746a1e6529239f28f8309c972adb0858dcd68001ae7129b9036eab50ce",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/plugins/enums.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "e45139b4a6f41f0ee0e00d1b211850e8d0f5a7283fb928461ce5099c70a9d919",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/plugins/functools.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "7bd266eb42d57d44019ba932acba0bd93db2281416f31b218c8764c3d1d1744b",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/plugins/proper_plugin.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "55889463181de037a2f4da7a698d3a94ba6a0d6172a11720cc1b2753f95f2654",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/plugins/singledispatch.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "c9c5c5eb97a02cf12532b42fc530eb605f2fada678307f76d8b5dd925d59a6f0",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/server/astdiff.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "6933d3458811fc286a7cd259fadfdf2f62c3ace096fdfeba115991f326c19fb5",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/server/astmerge.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "6c9dee51dc1900603ef87093738f49882bd20be696e81e937fb72045b0ceeebb",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/server/aststrip.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "f763ea440faa19e8fb39e635cb7845e651513f01d3cd682e070b2c100e09c3ea",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/server/deps.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "b9923eb2ab43f76d8425504fed3c06bb2ed31c597fffe98abe469432c96f8fe1",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/server/mergecheck.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "accef87b49f4254edc47a502875917ad2986a0b00ed96133c676b442b866ad03",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/server/objgraph.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "cc3b8dc3f28f45768e1cdaa6604eac5c0c63964fd522a5afa40e9505ed27f393",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/server/subexpr.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "2976048d116f46c2be0568a81d422816a2890804e21a7d729dba8b95a012a3d1",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/server/target.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "47c55eba678295cbad00bff4361cf5defde368a7fab13b0778c455aeb9f35365",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/server/trigger.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "dac545412c0ff44ef26901571d7fc76ad860ecaa55c4d0c1ba4e0d54e725fc10",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/server/update.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "1859002efb0e980d6e53b8ffb3a0b63fb5e4ef9dd426713ba36e9ca5e4d93e6e",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypy/test/visitors.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "ba660a722199be488e0d04b707df853cc4404d248abca7ccd1b8763e04f6f959",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/__init__.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "117f8b6259163dcdd0b6f300948b9e8d9528dc4a77d649acc791393805533ac5",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/annotate.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "49514d480e048f491fc765a99d886a8c736c4c046e3618571ac96ff4073086e8",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/build.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "5f4d06f5c3289c2c88623e01cdae21831052beb460e0101d06d32519ae72f7ec",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/common.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "600633354b16a61ac24ef6d6b6d2896e2850f2e5550c26db9280d760dc3d8f25",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/crash.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "c6c3dd62c68393adbc75b9fa2e72c5ac881dadd3a4c39701e860f0bc85f392ae",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/errors.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "1d92a33c2180ac3b40606101c2d379f2a7460fa4828c0c66f7e2be343f8a8329",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/namegen.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "b20373264367a601a8422eff46fac0d095c687f8a35e60eb7329848e90489433",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/options.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "ac2e83ce7c145a972ec07732e77329169c955f15b2a0b597b2b77f0ba90ed4c6",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/rt_expandtype.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "aac02a28ae08c6f1cc4c4c9a438adb4db05c9f9a26fc2d334d6e6510035306d5",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/rt_subtype.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "c0b2189fc5bdcb02b2a744863c919e06a95284af5a626e713f6c2f5e5c438d69",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/sametype.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "676f61b13ef598f8af1499cd9441aea437cc22318e9c65b1aa880a7691b80c13",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/subtype.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "64647e7e705161fc97295573c3d43b9d92195ce43f5b0f9fa852e2d723eae252",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/analysis/__init__.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "360d231b817bbca36ce2cee28269ae6e6162db1d00826366fbfc4d65159ad3f7",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/analysis/attrdefined.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "dc41c593627624a0f55a8be9e00dea81e64c7fea4ca09c6e8578e3c9e8bd18a2",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/analysis/blockfreq.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "94e84091a099bb5d55288288d00f294bd4aed47b329c712683d116433a76e601",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/analysis/capsule_deps.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "9cd27b4a7f54f4079a6fcb5270c95cce1e5cde91bc239bb9b70e3d80f1212f09",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/analysis/dataflow.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "afc650af4dd6befd0e11a0048adc452b36cf80fc130223be656ae8ccfe51bddf",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/analysis/ircheck.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "41a4a10e8fe10cce2128879078d4a12add84436bfb73f31d0401a36848e97b05",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/analysis/selfleaks.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "27c9485f7d44391d846c0a35e32b8a856dd49495fede1328b8aa73c90cac2475",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/codegen/__init__.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "0430e1983043f63ebff928bbacfc54f083f7cf88cb0e50351fe4800d55538fb7",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/codegen/cstring.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "15cf2ea8c5441d8ba7fd99ca41247a73a81df60fab4afef85c149268d382b2aa",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/codegen/emit.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "abafc87878710645eab82e5bef2d9d12ea9e2a76f69662fb92d6a5118c3039dd",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/codegen/emitclass.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "0369c0bf09b2a0a293f1aa55d0cd0b6cf0469bc353d4dab138419e36eb351962",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/codegen/emitfunc.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "6f03d39597aa331661cccc44017f10de92cb89a809279bbf25ce42ec4caa6603",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/codegen/emitmodule.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "76d8654af1a3481b2e20bee3f712510b63d5f1d6523ccdac82e3193106a7b686",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/codegen/emitwrapper.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "fbd9b3271b52198444e807b879290dea6105b273274e232a2e2fbd34cca2ce8a",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/codegen/literals.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "8fe6fc3b1a79e39a0c9190604dedbe0ae398134118b2e107384c81f369111979",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/ir/__init__.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "8273adf2247a555f5ee6de0fba57ec0265b905cbfc67845829f8349722253f04",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/ir/class_ir.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "dbeeb7c3df07b787a85e36d35812687e58ffb3c52de490852605e2e8ce183be2",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/ir/deps.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "41a04b42c6c23df24a22df35adaa213ce935441fb63d9589f0b4e39256b5c3e1",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/ir/func_ir.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "8a896e3e8314047e4582ca1d1795b54a84c65aa6a5e3e9cbfc6badf37d1b5fc9",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/ir/module_ir.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "6cae7d23f6ed78ef19cac6b47eb163d73c9a2b8e0a4b72781a178db8548f7a0f",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/ir/ops.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "74b90753f61c6b84ec37a46231f8332fefea4d9dc7374fbdd5261d43ca46c576",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/ir/pprint.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "7aeff4dea9e2b521ea07be1d09203576d9b6a13d0550d82218db7c87626380dd",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/ir/rtypes.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "7b2e8466e311ded41cd0102a8cc1230f8f6fd063e9eb4797bd4c245e80f150f5",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/irbuild/__init__.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "26fc8e549b02f67f6cdd8304a57fd691846632f2df0456788751df3402968cc3",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/irbuild/ast_helpers.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "0b0d1d9c5d6347ad36f9f07bd86c446cb1db73aa690d99a1edf7ffab6703efff",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/irbuild/builder.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "6aa05498c28b9e768fd268801e137fcb7309b46d3f3006164c2bba66376f424d",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/irbuild/callable_class.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "c20dc4276f35c7f522a9f8441ea475c14af21f5397915f07a1fb988a31e11171",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/irbuild/classdef.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "7839948ba401d427a8d6e69a82653bf02f50fcfbd58a8e48a76704588f8cc8bc",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/irbuild/constant_fold.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "7e5872f0c759ec20ddd9db2bc2dfb3e90fdb6708ceef2fbdc9a768c57ef7b658",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/irbuild/context.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "38038a92156ca849fa85c2c48ba8aeb18eb65a49309b9537edef8100abe8af5d",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/irbuild/env_class.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "97c2bc06bb915891bda0212d6e36af8e421415e414e0ca968cc308bc36da775c",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/irbuild/expression.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "e1aaa87fa5b1123b4369dc04b4e810b05df1877024465f8f591e687ef60bd4d4",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/irbuild/for_helpers.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "73c6a3b257da83db71424c6228a89fd585af67ee5d68854814075c9fa9f925cc",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/irbuild/format_str_tokenizer.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "537e644ae0661a786ee580246593fc3bf4e9d15fd502dc3bcd9498a5f2840ea4",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/irbuild/function.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "7cdd828b8432c67b08aa40c22f8512a7304b0482356d4bc1af8c877d4a71a252",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/irbuild/generator.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "02dbdc212f3d849f37b1eba009e85b9e70112001ef5851e98ba6aeb57fd62e13",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/irbuild/ll_builder.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "83558bc6f9039ba290c1413258f19906203886b7906adc584d4b591f48c6eb4a",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/irbuild/main.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "b9c8806cb1b78f990ead056eddd9d8955d3ee55c1b318806092787c51014b686",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/irbuild/mapper.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "5d3cd1ebf1dcec6b8ee7f78b70276adba87d26e283e3e2f9371a5c5f0b9ece87",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/irbuild/match.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "62830751a5d65f1ffa35f5bc1691cf05b592ffa5b964ea9119a3399abcb58982",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/irbuild/missingtypevisitor.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "3e4687ca2cfd89addc34a78e4c47b433f644fe41b85e53a060badd9c5980c65f",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/irbuild/nonlocalcontrol.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "9846e230cc9f07e6a6276d95dccd078e30ddbdfd78b9b5fe1ac3e8d9bf804783",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/irbuild/prebuildvisitor.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "633553284a4626a03f3c7516fdfb022c08e4ab73383b47e495b9cdf263b96b5d",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/irbuild/prepare.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "a78555804d361eefd994e56f630254378e0673331cc5e8cd92c611ba518b340d",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/irbuild/specialize.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "2790917c26dfc82d81bbc9c6aaf193e3c5bed6472003855d091fd9c9b66625d8",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/irbuild/statement.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "f784bbd5bf7348b7e9afdfdcff55011d7f2181f74b66b0f9bdc146871c850e9c",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/irbuild/targets.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "0c780d861025c43be02821a3ec4346e8fd793aea6ad67edcc8aa18280ede897a",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/irbuild/util.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "4c9b767e03198f47b69dd09fbd393a21932be695f61f2a899c4f73cbf5dfe502",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/irbuild/vec.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "d16cdd7dd37da5417975a3e22c31436c3f051ebecfaa7b068a319802beae605e",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/irbuild/visitor.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "c4ffbd6d57adedc260100b93dc144aeaac03f1bbf5d49f275b817e5d24bae9cc",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/irbuild/vtable.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "00cf2e126ed1949c38443053c2688440463522ebc48b19a840233338340b3ce4",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/lower/__init__.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "e799d17cc99707da575ad9ed6ee2f592ddb0cc87acdc677b505a2d02f0543a6a",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/lower/int_ops.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "8376599b8c994f0328c29fd3bb496cf795310f3da9c348b211197a72de825dc0",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/lower/list_ops.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "65f0b52f15a81bec3c5cb7633b0911267459e84262d5501e9eab808c7bb25add",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/lower/misc_ops.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "4c74e4798f246f9fd7ffed4d08eccad9d308a0792c9687195c84a575e68ec1b9",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/lower/registry.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "ccaf8d8fce8a3c982db8a708549179a202bf322395c18e9827d49c5d020983db",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/lower/vec_ops.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "0da842440695fd844d44e26e5f8f69b05c5bcb1f2751b811481fb62f872e306e",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/primitives/__init__.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "ccf1037681cadd06aea35263d2fac5605cf4ae2bfc7adfd66807caadac4edc5a",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/primitives/bytearray_ops.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "0b4268450e47329fa19ecf27ad727f6312f8c050c7e9c65bfedd5be14e319926",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/primitives/bytes_ops.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "e065ae33c29a46e9a4e305e580ab13eae2d012bce2a46b0bad3b44c65ef1239a",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/primitives/dict_ops.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "350d7973a22a906788d7d3eb48606ff1724b918c2c856b6d3c1a8df2d8fbd65f",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/primitives/exc_ops.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "b8e6bc0fe7e030c8623bb859f42173082330b2023b405c768086280a4af63484",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/primitives/float_ops.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "23734d70fdc9b00c9162f58812cc7b38f02bffa4984eb306055a9f900afa18de",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/primitives/generic_ops.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "0d30b253cc08fe33899f2612e7853353a7f5f7dc8680dbbffb7cdbbdd0fbc593",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/primitives/int_ops.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "e610588d1fbe56cc0b75c23285b481885640d765889a542f9db9c55a1c8dd1ad",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/primitives/librt_random_ops.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "834ac7166fac0982f02471999abff29e2c8c704678914b0dc5fff0a55e479042",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/primitives/librt_strings_ops.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "3a68d5cbabc10fc465a0052dedd22f8c94336807474b76185d8ba27455bae30b",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/primitives/librt_threading_ops.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "eb7ededbfdde0daf4d1a3731a0f1deef7b4dbaf4fd5b098ba9f542cde38a0678",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/primitives/librt_time_ops.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "d006d407dfa39631da0e416f103d2f8f75f471927728f18cf591bd5815db33b9",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/primitives/librt_vecs_ops.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "763b66326bd0af568da789b76a26cfc21dabf3cbdeb6a4dbf47d02370295e2db",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/primitives/list_ops.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "af4c6928522941eae123d52d65061c2126c7ff68872ea54383c7f5c166ce1dbe",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/primitives/misc_ops.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "ac740f587aed5da8e0db76fcd49125ef0f5040aa9e4fcf2c4a54b4cef343db49",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/primitives/registry.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "cdf79a6d2dec34f787eeec36c45056673af2c90128969e6c92ef915b5f3853ef",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/primitives/set_ops.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "fa376b8f033eac12ede63aeea8604d825a5d55eb862f716d7862c488a41c8717",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/primitives/str_ops.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "0b3968c54454beb335a8fae533f015a6700f79ae691d3be792fe204e5a97e625",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/primitives/tuple_ops.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "54a44d0bdb2cded33a612e5f47b68b1bc8d8c1541505962c5390ef085e95fd74",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/primitives/weakref_ops.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "74284cf9abb8f2240b1a8b4c12ee4ca96a8a815d40dbb5c43665fd318c65e3db",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/transform/__init__.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10240,
+    "sha256": "3c280bf2f595b6fc20f2e4e0d2507e23b0645d6d70a774b9ebad08de464589f2",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/transform/copy_propagation.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "94b446076e133fbac989df05a0b2be19d74c4098b163f9a3743690b2c0c72d2c",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/transform/exceptions.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "d8caca4ea117930c419a428407dfccf7736d64f79f95515acf7602c200519d6c",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/transform/flag_elimination.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "e00d0701cc622fa30cbc002f6ba6666d47064bb598215e7246a3e6f8a33563b4",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/transform/ir_transform.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "f5afe7016ebf1bead8d26903b605d07d1a377ea5ca967d22e3a685ac2e66370c",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/transform/log_trace.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "86cf9bb3d093d8611a35bd77a244bf44e76a8e33b8b552432f9d5f662e381ff1",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/transform/lower.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "0ff7c2dafb5d539ab9a607f32c9fcfe62d0fd5c9ba0e53352b21e6b2d0b4e743",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/transform/refcount.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "377fb75e6567e184459fadb8e80e0b3c28d64918cf31b3a868563a5ed0699208",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/transform/spill.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "e00919d44bb42c79ebeb0fac9c7ba122420aa1b86f0c33439d9c60c81256c4dc",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "mypyc/transform/uninit.cp312-win_amd64.pyd",
+    "container": "mypy@2.3.1",
+    "size": 10752,
+    "sha256": "2cb3a8eeb8c14b1fd056e77132b18a3d15d412a88d96de370f47112aa7c7e069",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "pip/_vendor/distlib/t32.exe",
+    "container": "pip@26.2.1",
+    "size": 97792,
+    "sha256": "6b4195e640a85ac32eb6f9628822a622057df1e459df7c17a12f97aeabc9415b",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "pip/_vendor/distlib/t64-arm.exe",
+    "container": "pip@26.2.1",
+    "size": 182784,
+    "sha256": "ebc4c06b7d95e74e315419ee7e88e1d0f71e9e9477538c00a93a9ff8c66a6cfc",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "pip/_vendor/distlib/t64.exe",
+    "container": "pip@26.2.1",
+    "size": 108032,
+    "sha256": "81a618f21cb87db9076134e70388b6e9cb7c2106739011b6a51772d22cae06b7",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "pip/_vendor/distlib/w32.exe",
+    "container": "pip@26.2.1",
+    "size": 91648,
+    "sha256": "47872cc77f8e18cf642f868f23340a468e537e64521d9a3a416c8b84384d064b",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "pip/_vendor/distlib/w64-arm.exe",
+    "container": "pip@26.2.1",
+    "size": 168448,
+    "sha256": "c5dc9884a8f458371550e09bd396e5418bf375820a31b9899f6499bf391c7b2e",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "pip/_vendor/distlib/w64.exe",
+    "container": "pip@26.2.1",
+    "size": 101888,
+    "sha256": "7a319ffaba23a017d7b1e18ba726ba6c54c53d6446db55f92af53c279894f8ad",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "playwright/driver/node.exe",
+    "container": "playwright@1.63.0",
+    "size": 93580104,
+    "sha256": "ba4e6d110e8c1592a1ecd390f6b05f3da124b13871a5be62b341a07a853c6c32",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "playwright/driver/package/lib/webp_codec.wasm",
+    "container": "playwright@1.63.0",
+    "size": 565369,
+    "sha256": "164cd9583a3e4d081f767d3b41ff0a730443dc7535fcc5caff83561463384b79",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "pydantic_core/_pydantic_core.cp312-win_amd64.pyd",
+    "container": "pydantic-core@2.46.5",
+    "size": 5157888,
+    "sha256": "28fd1266fb9946fe61775505a13c0bf803f6932b51b306a0032687393d9a558b",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "ruff-0.16.9.data/scripts/ruff.exe",
+    "container": "ruff@0.16.9",
+    "size": 26428928,
+    "sha256": "87f102f9a4ba087cfaa8eca4f5be335263d6ddf41201f9fda96cbd26ea3b7467",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "setuptools/cli-32.exe",
+    "container": "setuptools@84.0.0",
+    "size": 11776,
+    "sha256": "32acc1bc543116cbe2cff10cb867772df2f254ff2634c870aef0b46c4b696fdb",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "setuptools/cli-64.exe",
+    "container": "setuptools@84.0.0",
+    "size": 14336,
+    "sha256": "bbb3de5707629e6a60a0c238cd477b28f07f0066982fda953fa6fcec39073a4a",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "setuptools/cli-arm64.exe",
+    "container": "setuptools@84.0.0",
+    "size": 13824,
+    "sha256": "b9a7d08da880dfac8bcf548eba4b06fb59b6f09b17d33148a0f6618328926c61",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "setuptools/cli.exe",
+    "container": "setuptools@84.0.0",
+    "size": 11776,
+    "sha256": "32acc1bc543116cbe2cff10cb867772df2f254ff2634c870aef0b46c4b696fdb",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "setuptools/gui-32.exe",
+    "container": "setuptools@84.0.0",
+    "size": 11776,
+    "sha256": "85dae1e95d77845f2cb59bcac3d4afe74bbe4c91a9bcc5bf4a71cd43104dbe7c",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "setuptools/gui-64.exe",
+    "container": "setuptools@84.0.0",
+    "size": 14336,
+    "sha256": "3471b6140eadc6412277dbbefe3fef8c345a0f1a59776086b80a3618c3a83e3b",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "setuptools/gui-arm64.exe",
+    "container": "setuptools@84.0.0",
+    "size": 13824,
+    "sha256": "e694f4743405c8b5926ff457db6fe7f1a12dec7c16a9c3864784d3f4e07ae097",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "setuptools/gui.exe",
+    "container": "setuptools@84.0.0",
+    "size": 11776,
+    "sha256": "85dae1e95d77845f2cb59bcac3d4afe74bbe4c91a9bcc5bf4a71cd43104dbe7c",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "3c22db458360489351e4__mypyc.cp312-win_amd64.pyd",
+    "container": "tomli@2.4.1",
+    "size": 169472,
+    "sha256": "7c750f2ac06915e4b4b28342abae832c8f66207e4a547281607e924ae1673da1",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "tomli/__init__.cp312-win_amd64.pyd",
+    "container": "tomli@2.4.1",
+    "size": 10752,
+    "sha256": "76d644148e26edd3b01c2bc37aaa14c622fdd56af8ee5250e2ee74ba6d84a3f8",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "tomli/_parser.cp312-win_amd64.pyd",
+    "container": "tomli@2.4.1",
+    "size": 10752,
+    "sha256": "e37ece8626d6839917a190bd4c7cfedbee3f4bfe3fdc43c1e5753b40e34809af",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "tomli/_re.cp312-win_amd64.pyd",
+    "container": "tomli@2.4.1",
+    "size": 10752,
+    "sha256": "6de27258a257a45a1432f34ee9aa94720fd1a670a16edad5c258d328061a5d85",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "tomli/_types.cp312-win_amd64.pyd",
+    "container": "tomli@2.4.1",
+    "size": 10752,
+    "sha256": "2d3396fdc3e2364a09a6b4600087d3dcd80f5e26a8fed23bbd2274ae1166fcfd",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "chromium-1243/chrome-win64/chrome.dll",
+    "container": "browser",
+    "size": 301124096,
+    "sha256": "0b69d34d08e1112d5e7de94e389d20e209a890e931863c734378b39b7394da13",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "chromium-1243/chrome-win64/chrome.exe",
+    "container": "browser",
+    "size": 4508160,
+    "sha256": "9b07943f834485b43c9d54caea2951c78715f9f07070a80ab6658465ebd3e711",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "chromium-1243/chrome-win64/chrome_elf.dll",
+    "container": "browser",
+    "size": 2729984,
+    "sha256": "eadf93b6299493818f9b1be3acc3fb5592f38eebc2558b101ee9c9ef9979d2d5",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "chromium-1243/chrome-win64/chrome_proxy.exe",
+    "container": "browser",
+    "size": 2553344,
+    "sha256": "ebd42fcdfdbf0190e5529b52007e8db63f90278be0fc9f50b90335816ad0658b",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "chromium-1243/chrome-win64/chrome_pwa_launcher.exe",
+    "container": "browser",
+    "size": 3182592,
+    "sha256": "6cecc8211f28dbc4de35a273bfca52a7ad412369b3619742464a2affaa3a8b41",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "chromium-1243/chrome-win64/chrome_wer.dll",
+    "container": "browser",
+    "size": 115200,
+    "sha256": "90c58e67e7bb45eb9be5f7dccc7f5057c74df410a502470789a9a4bd5ddf2571",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "chromium-1243/chrome-win64/D3DCompiler_47.dll",
+    "container": "browser",
+    "size": 4753864,
+    "sha256": "f5c95e919b4ffa1ac71049cd45b9f986d2965e6888395ca2806337985334fa56",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "chromium-1243/chrome-win64/dxcompiler.dll",
+    "container": "browser",
+    "size": 25830400,
+    "sha256": "e90d131a9838c42d57ff50b7ea59ebbc3d5c2b03d327797535cbe34288b54f23",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "chromium-1243/chrome-win64/dxil.dll",
+    "container": "browser",
+    "size": 1503728,
+    "sha256": "88d83e71c4f9f2a60deeaa685a6d034a182ca197b6ec53f86144335f663fd690",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "chromium-1243/chrome-win64/elevated_tracing_service.exe",
+    "container": "browser",
+    "size": 4485120,
+    "sha256": "366c945c051d26aa7bf8bcf47e7e253150f3374c2c0242e46cd69d3574b7a8d2",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "chromium-1243/chrome-win64/elevation_service.exe",
+    "container": "browser",
+    "size": 3840512,
+    "sha256": "c1578332b06ead38adc70199f9d60028d9e57b44b3007bea85c098e564e11ee6",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "chromium-1243/chrome-win64/libEGL.dll",
+    "container": "browser",
+    "size": 453120,
+    "sha256": "b1b3c144d8b6e0ed4eed5472fd3daab2bf247b974e25e3f8fe69a06083d07bf8",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "chromium-1243/chrome-win64/libGLESv2.dll",
+    "container": "browser",
+    "size": 453120,
+    "sha256": "81378414d5abb245e38860228648064cd7988859641226fae3e8aa0dc2584e94",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "chromium-1243/chrome-win64/notification_helper.exe",
+    "container": "browser",
+    "size": 2786304,
+    "sha256": "082bbd227a9b58282b54a20c3ffa52a669d47b130dff7551c0ce1cd4953905c2",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "chromium-1243/chrome-win64/setup.exe",
+    "container": "browser",
+    "size": 6154240,
+    "sha256": "1b18972e19dedd6a8adc33d1ddbf91fffcc202d27e273920305922e6f5321db9",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "chromium-1243/chrome-win64/vk_swiftshader.dll",
+    "container": "browser",
+    "size": 5419008,
+    "sha256": "5a2da21f1ad080d29d6d60e55bfa368a33e69718e3470a293d8a46d3f7e70e8a",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "chromium-1243/chrome-win64/vulkan-1.dll",
+    "container": "browser",
+    "size": 986624,
+    "sha256": "0ddf3ef0d813a5e82251ca94c7ca8d1aec5210a209805c7fec910e7686e9e1f6",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/chrome-headless-shell.exe",
+    "container": "browser",
+    "size": 211550720,
+    "sha256": "addfa79abb060e1e514e155ed745d4bf96140bca402735958bb4e223aea0b98c",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/libEGL.dll",
+    "container": "browser",
+    "size": 453120,
+    "sha256": "b1b3c144d8b6e0ed4eed5472fd3daab2bf247b974e25e3f8fe69a06083d07bf8",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/libGLESv2.dll",
+    "container": "browser",
+    "size": 453120,
+    "sha256": "81378414d5abb245e38860228648064cd7988859641226fae3e8aa0dc2584e94",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/vk_swiftshader.dll",
+    "container": "browser",
+    "size": 5419008,
+    "sha256": "5a2da21f1ad080d29d6d60e55bfa368a33e69718e3470a293d8a46d3f7e70e8a",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "chromium_headless_shell-1243/chrome-headless-shell-win64/vulkan-1.dll",
+    "container": "browser",
+    "size": 986624,
+    "sha256": "0ddf3ef0d813a5e82251ca94c7ca8d1aec5210a209805c7fec910e7686e9e1f6",
+    "native": true,
+    "asset": false
+  },
+  {
+    "path": "winldd-1007/PrintDeps.exe",
+    "container": "browser",
+    "size": 258560,
+    "sha256": "020bac54c953c65a0940b314c8afadd2854de2d83125e7b1393054fafd21f330",
+    "native": true,
+    "asset": false
+  }
+]

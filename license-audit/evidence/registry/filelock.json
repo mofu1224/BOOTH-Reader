@@ -1,0 +1,112 @@
+{
+  "url": "https://pypi.org/pypi/filelock/4.0.7/json",
+  "response_sha256": "5eba2582efc69bdbcb85f84c20a39dfc709602dc325c546a2e5eff39434c42f5",
+  "info": {
+    "author": null,
+    "author_email": null,
+    "bugtrack_url": null,
+    "classifiers": [
+      "Development Status :: 5 - Production/Stable",
+      "Intended Audience :: Developers",
+      "License :: OSI Approved :: MIT License",
+      "Operating System :: OS Independent",
+      "Programming Language :: Python",
+      "Programming Language :: Python :: 3 :: Only",
+      "Programming Language :: Python :: 3.10",
+      "Programming Language :: Python :: 3.11",
+      "Programming Language :: Python :: 3.12",
+      "Programming Language :: Python :: 3.13",
+      "Programming Language :: Python :: 3.14",
+      "Programming Language :: Python :: 3.15",
+      "Topic :: Internet",
+      "Topic :: Software Development :: Libraries",
+      "Topic :: System"
+    ],
+    "description": "# filelock\n\n[![PyPI](https://img.shields.io/pypi/v/filelock)](https://pypi.org/project/filelock/)\n[![Supported Python versions](https://img.shields.io/pypi/pyversions/filelock.svg)](https://pypi.org/project/filelock/)\n[![Documentation status](https://readthedocs.org/projects/py-filelock/badge/?version=latest)](https://py-filelock.readthedocs.io/en/latest/?badge=latest)\n[![Downloads](https://static.pepy.tech/badge/filelock/month)](https://pepy.tech/project/filelock)\n[![check](https://github.com/tox-dev/py-filelock/actions/workflows/check.yaml/badge.svg)](https://github.com/tox-dev/py-filelock/actions/workflows/check.yaml)\n\nFor more information checkout the [official documentation](https://py-filelock.readthedocs.io/en/latest/index.html).\n",
+    "description_content_type": "text/markdown",
+    "docs_url": null,
+    "download_url": null,
+    "downloads": {
+      "last_day": -1,
+      "last_month": -1,
+      "last_week": -1
+    },
+    "dynamic": null,
+    "home_page": null,
+    "keywords": "application, cache, directory, log, user",
+    "license": null,
+    "license_expression": "MIT",
+    "license_files": [
+      "LICENSE"
+    ],
+    "maintainer": null,
+    "maintainer_email": "Bernát Gábor <gaborjbernat@gmail.com>",
+    "name": "filelock",
+    "package_url": "https://pypi.org/project/filelock/",
+    "platform": null,
+    "project_url": "https://pypi.org/project/filelock/",
+    "project_urls": {
+      "Documentation": "https://py-filelock.readthedocs.io",
+      "Homepage": "https://github.com/tox-dev/py-filelock",
+      "Source": "https://github.com/tox-dev/py-filelock",
+      "Tracker": "https://github.com/tox-dev/py-filelock/issues"
+    },
+    "provides_extra": null,
+    "release_url": "https://pypi.org/project/filelock/4.0.7/",
+    "requires_dist": null,
+    "requires_python": ">=3.10",
+    "summary": "A platform independent file lock.",
+    "version": "4.0.7",
+    "yanked": false,
+    "yanked_reason": null
+  },
+  "urls": [
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "6a897f004f8d4e552fe078373b859d5f50d21fdbb62c32b40923a88fedb47a0e"
+      },
+      "digests": {
+        "blake2b_256": "06cf1731c0dd182ee35f80a39e63afb3d03056ea0dd561b7498932b10b2e34d9",
+        "md5": "46eba9fdb4261a99ee7e2b8051f9156b",
+        "sha256": "a93c4d93269b339a6af4848342c7e940d0f9928ad95eff64764699e5f1bf8a6a"
+      },
+      "downloads": -1,
+      "filename": "filelock-4.0.7-py3-none-any.whl",
+      "has_sig": false,
+      "md5_digest": "46eba9fdb4261a99ee7e2b8051f9156b",
+      "packagetype": "bdist_wheel",
+      "python_version": "py3",
+      "requires_python": ">=3.10",
+      "size": 109242,
+      "upload_time": "2026-09-29T23:04:04",
+      "upload_time_iso_8601": "2026-09-29T23:04:04.696990Z",
+      "url": "https://files.pythonhosted.org/packages/06/cf/1731c0dd182ee35f80a39e63afb3d03056ea0dd561b7498932b10b2e34d9/filelock-4.0.7-py3-none-any.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": false,
+      "digests": {
+        "blake2b_256": "35f514097cca69f53794270d8c7970b48321636302affe3154c7e0ba114eeff9",
+        "md5": "a7cd5708a35a5a7b475ba493f37dd737",
+        "sha256": "da5915714a70b55d167fdc7e251ad91302b0a36816fb574dfafae8f4f2c9bb21"
+      },
+      "downloads": -1,
+      "filename": "filelock-4.0.7.tar.gz",
+      "has_sig": false,
+      "md5_digest": "a7cd5708a35a5a7b475ba493f37dd737",
+      "packagetype": "sdist",
+      "python_version": "source",
+      "requires_python": ">=3.10",
+      "size": 248489,
+      "upload_time": "2026-09-29T23:04:05",
+      "upload_time_iso_8601": "2026-09-29T23:04:05.995567Z",
+      "url": "https://files.pythonhosted.org/packages/35/f5/14097cca69f53794270d8c7970b48321636302affe3154c7e0ba114eeff9/filelock-4.0.7.tar.gz",
+      "yanked": false,
+      "yanked_reason": null
+    }
+  ],
+  "wheel_digest_verified": true
+}

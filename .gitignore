@@ -1,0 +1,69 @@
+__pycache__/
+*.pyc
+# Tool caches. The canonical location is .cache/ (see pyproject.toml and
+# core/portable.py); the legacy top-level names stay ignored for old checkouts.
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+# Bundled portable interpreter (tools/fetch_python.py). Rebuilt by setup.
+.tools/
+# Playwright browser binaries live inside the repo (PLAYWRIGHT_BROWSERS_PATH).
+.playwright/
+.playwright-browsers/
+app.db
+app.db-journal
+app.db-wal
+app.db-shm
+# Custom --db paths and SQLite sidecars/backups contain purchase history.
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+# Cookie imports and interrupted atomic saves outside data/.
+cookies*.json
+*[cC][oO][oO][kK][iI][eE]*.json
+*storage-state*.json
+.cookies-*.tmp
+*.har
+data/
+.env
+.env.*
+BOOTH-Reader-Library/
+# Custom imports, exports and backups belong in these private directories.
+.private/
+private/
+backups/
+*.db.bak
+*.db.backup
+*.sqlite*.bak
+*.sqlite*.backup
+*.csv
+.playwright/
+dist/
+build/
+*.egg-info/
+release/
+.DS_Store
+Thumbs.db
+*.log
+tmp/
+temp/
+.verify-venv/
+# Local audit receipts may contain account paths, purchase names or screenshots.
+audit/*.json
+audit/*.xml
+audit/*.png
+audit/*-current.md
+license-audit/local-inventory.json
+license-audit/distribution-inventory.json
+license-audit/package-reconciliation.json
+license-audit/final-package-result.json
+license-audit/clean-candidate-result.json
+license-audit/public-clean-test.json
+license-audit/creation-session-evidence.json
+license-audit/project-generation-models.json

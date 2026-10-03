@@ -1,0 +1,32 @@
+BOOTH-Reader 1.0.3 — GitHub clone distribution
+Copyright (c) 2026 mofu1224 (project LICENSE declaration).
+
+The MIT LICENSE applies to project-owned expression only. It does not replace
+the licenses or additional terms of third-party code, binaries, data or assets.
+See THIRD_PARTY_NOTICES.md and THIRD_PARTY_LICENSES for verbatim upstream texts.
+
+Playwright contains code derived from Puppeteer. Its original Microsoft/Google
+notice and Apache-2.0 license are retained in THIRD_PARTY_LICENSES/playwright-1.63.0.
+Node's multi-component notices are retained separately in that directory.
+
+CPython is reconstructed from python-build-standalone release 20260325.
+At setup, its SQLite DLL is replaced by SQLite 3.53.4. No other intended changes
+are made to CPython source. Paths and virtual environments are locally generated.
+The bundled Windows VC runtime files (VCRUNTIME140.dll, VCRUNTIME140_1.dll) are
+Microsoft distributable code; the applicable Microsoft terms are retained under
+license-audit/evidence/redistribution/.
+
+The bundled browser is Microsoft Edge WebView2 Fixed Version 154.0.4258.53
+(Authenticode-verified Microsoft distribution) together with the official
+WebView2 SDK 1.0.4258.31. Microsoft's WebView2 Runtime license grants
+distribution as part of an application; the verbatim terms travel inside the
+vendor snapshot (WEBVIEW2-RUNTIME-LICENSE.txt in the browser archive) and are
+retained in THIRD_PARTY_LICENSES/browser/. Chrome for Testing, Chromium headless
+shell and Playwright FFmpeg are not bundled or distributed.
+
+License clearance for this repository (Git clone distribution): READY.
+Scope, evidence and residual limitations: license-audit/28-clone-distribution-followup.md.
+Microsoft code is subject to THIRD_PARTY_TERMS.md and the incorporated original
+terms. WebView2 includes enabled Microsoft Defender SmartScreen and may collect
+and send end-user information to Microsoft: https://aka.ms/privacy and
+https://learn.microsoft.com/en-us/microsoft-edge/privacy-whitepaper#smartscreen.

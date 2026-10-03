@@ -1,0 +1,108 @@
+{
+  "url": "https://pypi.org/pypi/pip-requirements-parser/32.0.1/json",
+  "response_sha256": "9feedb8034ac2e03f60dca458a9568bb19c56f29ca9b91cb929305feb48f0e3b",
+  "info": {
+    "author": "The pip authors, nexB. Inc. and others",
+    "author_email": "info@aboutcode.org",
+    "bugtrack_url": null,
+    "classifiers": [
+      "Development Status :: 5 - Production/Stable",
+      "Intended Audience :: Developers",
+      "Programming Language :: Python :: 3",
+      "Programming Language :: Python :: 3 :: Only",
+      "Topic :: Software Development",
+      "Topic :: Utilities"
+    ],
+    "description": "pip-requirements-parser - a mostly correct pip requirements parsing library\n================================================================================\n\nCopyright (c) nexB Inc. and others.\nCopyright (c) The pip developers (see AUTHORS.rst file)\nSPDX-License-Identifier: MIT\nHomepage: https://github.com/nexB/pip-requirements and https://www.aboutcode.org/\n\n\n``pip-requirements-parser`` is a mostly correct pip requirements parsing\nlibrary ... because it uses pip's own code!\n\npip is the ``package installer`` for Python that is using \"requirements\" text\nfiles listing the packages to install.\n\nPer https://pip.pypa.io/en/stable/reference/requirements-file-format/ :\n\n    \"The requirements file format is closely tied to a number of internal\n    details of pip (e.g., pip’s command line options). The basic format is\n    relatively stable and portable but the full syntax, as described here,\n    is only intended for consumption by pip, and other tools should take\n    that into account before using it for their own purposes.\"\n\nAnd per https://pip.pypa.io/en/stable/user_guide/#using-pip-from-your-program :\n\n    \"[..] pip is a command line program. While it is implemented in Python, and\n    so is available from your Python code via import pip, you must not use pip’s\n    internal APIs in this way.\"\n    \n    \"What this means in practice is that everything inside of pip is considered\n    an implementation detail. Even the fact that the import name is pip is\n    subject to change without notice. While we do try not to break things as\n    much as possible, all the internal APIs can change at any time, for any\n    reason. It also means that we generally won’t fix issues that are a result\n    of using pip in an unsupported way.\"\n\n\nBecause of all this, pip requirements are notoriously difficult to parse right\nin all their diversity because:\n\n- pip does not have a public API and therefore cannot be reliably used as a\n  stable library. Some libraries attempt to do this though. (See Alternative)\n\n- The pip requirements file syntax is closely aligned with pip's command line\n  interface and command line options. In some ways a pip requirements file is a\n  list of pip command line options and arguments. Therefore, it is hard to parse\n  these short of reproducing the pip command line options parsing. At least one\n  other library is using a command line option parser to parse options correctly.\n\n\nThis ``pip-requirements-parser`` Python library is yet another pip requirements\nfiles parser, but this time doing it hopefully correctly and doing as well as\npip does it, because this is using pip's own code.\n\n\nThe ``pip-requirements-parser`` library offers these key advantages:\n\n- Other requirements parsers typically do not work in all the cases that ``pip``\n  supports: parsing any requirement as seen in the wild will fail parsing some\n  valid pip requirements. Since the ``pip-requirements-parser`` library is based\n  on pip's own code, it works **exactly** like pip and will parse all the\n  requirements files that pip can parse.\n\n- The ``pip-requirements-parser`` library offers a simple and stable code API\n  that will not change without notice.\n\n- The ``pip-requirements-parser`` library is designed to work offline without\n  making any external network call, while the original pip code needs network\n  access.\n\n- The ``pip-requirements-parser`` library is a single file that can easily be\n  copied around as needed for easy vendoring. This is useful as requirements\n  parsing is often needed to bootstrap in a constrained environment.\n\n- The ``pip-requirements-parser`` library has only one external dependency on\n  the common \"packaging\" package. Otherwise it uses only the standard library.\n  The benefits are the same as being a single file: fewer moving parts helps with\n  using it in more cases.\n\n- The ``pip-requirements-parser`` library reuses and passes the full subset of\n  the pip test suite that deals with requirements. This is a not really\n  surprising since this is pip's own code. The suite suite has been carefully\n  ported and adjusted to work with the updated code subset.\n\n- The standard pip requirements parser depends on the ``requests`` HTTP library\n  and makes network connection to PyPI and other referenced repositories when\n  parsing. The ``pip-requirements-parser`` library works entirely offline and the\n  requests dependency and calling has been entirely removed.\n\n- The ``pip-requirements-parser`` library has preserved the complete pip git\n  history for the subset of the code we kept. The original pip code was merged\n  from multiple modules keeping all the git history at the line/blame level using\n  some git fu and git filter repo. The benefit is that we will be able to more\n  easily track and merge future pip updates.\n\n- The ``pip-requirements-parser`` library has an extensive test suite  made of:\n\n  - pip's own tests\n  - new unit tests\n  - new requirements test files (over 40 new test files)\n  - the tests suite of some of the main other requirement parsers including:\n\n     - http://github.com/di/pip-api\n     - https://github.com/pyupio/dparse\n     - https://github.com/landscapeio/requirements-detector\n     - https://github.com/madpah/requirements-parser\n\nAs a result, it has likely the most comprehensive requiremente parsing test\nsuite around.\n\n\nUsage\n~~~~~~~~~~\n\nThe entry point is the ``RequirementsFile`` object::\n\n    >>> from pip_requirements_parser import RequirementsFile\n    >>> rf = RequirementsFile.from_file(\"requirements.txt\")\n\nFrom there, you can dump to a dict::\n    >>> rf.to_dict()\n\nOr access the requirements (either InstallRequirement or EditableRequirement\nobjects)::\n\n    >>> for req in rf.requirements:\n    ...    print(req.to_dict())\n    ...    print(req.dumps())\n\nAnd the various other parsed elements such as options, commenst and invalid lines\nthat have a parsing error::\n\n    >>> rf.options\n    >>> rf.comment_lines\n    >>> rf.invalid_lines\n\nEach of these and the ``requirements`` hahve a \"requirement_line\" attribute\nwith the original text.\n\nFinally you can get a requirements file back as a string::\n\n    >>> rf.dumps()\n\n\nAlternative\n------------------\n\nThere are several other parsers that either:\n\n- Implement their own parsing and can therefore miss some subtle differences\n- Or wrap and import pip as a library, working around the lack of pip API\n\nNone of these use the approach of reusing and forking the subset of pip that is\nneeded to parse requirements.  The ones that wrap pip require network access\nlike pip does. They potentially need updating each time there is a new pip\nrelease. The ones that reimplement pip parsing may not support all pip\nspecifics.\n\n\nImplement a new pip parser\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n- pip-api https://github.com/di/pip-api does not support hashes and certain pip options.\n  It does however use argparse for parsing options and is therefore correctly\n  handling most options. The parser is a single script that only depends on\n  packaging (that is vendored). It is not designed to be used as a single script\n  though and ``pip`` is a dependency.\n\n- requirements-parser https://github.com/madpah/requirements-parse does not\n  support hashes and certain pip options\n\n- dparse https://github.com/pyupio/dparse\n\n- https://github.com/GoogleCloudPlatform/django-cloud-deploy/blob/d316b1e45357761e2b124143e6e12ce34ef6f975/django_cloud_deploy/skeleton/requirements_parser.py\n\n\nReuse and wrap pip's own parser\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n- requirementslib https://github.com/sarugaku/requirementslib uses pip-shim\n  https://github.com/sarugaku/pip-shims which is a set of \"shims\" around each\n  pip versions in an attempt to offer an API to pip. Comes with 20+ dependencies,\n\n- micropipenv https://github.com/thoth-station/micropipenv/blob/d0c37c1bf0aadf5149aebe2df0bf1cb12ded4c40/micropipenv.py#L53\n\n- pip-tools https://github.com/jazzband/pip-tools/blob/9e1be05375104c56e07cdb0904e1b50b86f8b550/piptools/_compat/pip_compat.py\n",
+    "description_content_type": "text/x-rst",
+    "docs_url": null,
+    "download_url": "",
+    "downloads": {
+      "last_day": -1,
+      "last_month": -1,
+      "last_week": -1
+    },
+    "dynamic": null,
+    "home_page": "https://github.com/nexB/pip-requirements-parser",
+    "keywords": "utilities pip requirements parser dependencies pypi",
+    "license": "MIT",
+    "license_expression": null,
+    "license_files": null,
+    "maintainer": "",
+    "maintainer_email": "",
+    "name": "pip-requirements-parser",
+    "package_url": "https://pypi.org/project/pip-requirements-parser/",
+    "platform": null,
+    "project_url": "https://pypi.org/project/pip-requirements-parser/",
+    "project_urls": {
+      "Homepage": "https://github.com/nexB/pip-requirements-parser"
+    },
+    "provides_extra": null,
+    "release_url": "https://pypi.org/project/pip-requirements-parser/32.0.1/",
+    "requires_dist": [
+      "packaging",
+      "pyparsing",
+      "Sphinx (>=3.3.1) ; extra == 'docs'",
+      "sphinx-rtd-theme (>=0.5.0) ; extra == 'docs'",
+      "doc8 (>=0.8.1) ; extra == 'docs'",
+      "pytest (!=7.0.0,>=6) ; extra == 'testing'",
+      "pytest-xdist (>=2) ; extra == 'testing'",
+      "aboutcode-toolkit (>=6.0.0) ; extra == 'testing'",
+      "black ; extra == 'testing'"
+    ],
+    "requires_python": ">=3.6.0",
+    "summary": "pip requirements parser - a mostly correct pip requirements parsing library because it uses pip's own code.",
+    "version": "32.0.1",
+    "yanked": false,
+    "yanked_reason": null
+  },
+  "urls": [
+    {
+      "comment_text": "",
+      "core-metadata": {
+        "sha256": "e21f49c644814ff1bba064a641768f2f534c806cff523e2403652793794ab46d"
+      },
+      "digests": {
+        "blake2b_256": "54d0d04f1d1e064ac901439699ee097f58688caadea42498ec9c4b4ad2ef84ab",
+        "md5": "5eff36482f1eae8c357d635bd3c1eb4c",
+        "sha256": "4659bc2a667783e7a15d190f6fccf8b2486685b6dba4c19c3876314769c57526"
+      },
+      "downloads": -1,
+      "filename": "pip_requirements_parser-32.0.1-py3-none-any.whl",
+      "has_sig": false,
+      "md5_digest": "5eff36482f1eae8c357d635bd3c1eb4c",
+      "packagetype": "bdist_wheel",
+      "python_version": "py3",
+      "requires_python": ">=3.6.0",
+      "size": 35648,
+      "upload_time": "2022-12-21T15:25:21",
+      "upload_time_iso_8601": "2022-12-21T15:25:21.046891Z",
+      "url": "https://files.pythonhosted.org/packages/54/d0/d04f1d1e064ac901439699ee097f58688caadea42498ec9c4b4ad2ef84ab/pip_requirements_parser-32.0.1-py3-none-any.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": "",
+      "core-metadata": false,
+      "digests": {
+        "blake2b_256": "5e2a63b574101850e7f7b306ddbdb02cb294380d37948140eecd468fae392b54",
+        "md5": "512faec09d0c071c5451dd777467324e",
+        "sha256": "b4fa3a7a0be38243123cf9d1f3518da10c51bdb165a2b2985566247f9155a7d3"
+      },
+      "downloads": -1,
+      "filename": "pip-requirements-parser-32.0.1.tar.gz",
+      "has_sig": false,
+      "md5_digest": "512faec09d0c071c5451dd777467324e",
+      "packagetype": "sdist",
+      "python_version": "source",
+      "requires_python": ">=3.6.0",
+      "size": 209359,
+      "upload_time": "2022-12-21T15:25:22",
+      "upload_time_iso_8601": "2022-12-21T15:25:22.732296Z",
+      "url": "https://files.pythonhosted.org/packages/5e/2a/63b574101850e7f7b306ddbdb02cb294380d37948140eecd468fae392b54/pip-requirements-parser-32.0.1.tar.gz",
+      "yanked": false,
+      "yanked_reason": null
+    }
+  ],
+  "wheel_digest_verified": true
+}

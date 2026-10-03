@@ -1,0 +1,1 @@
+"""BOOTH-Reader core package."""
