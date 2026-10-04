@@ -103,7 +103,7 @@ def test_candidate_pythons_prefers_bundled(tmp_path):
 
 
 def test_launchers_stay_portable():
-    for name in ("setup.bat", "cli.bat", "start-web.bat", "run.cmd"):
+    for name in ("start.bat",):
         text = (BASE / name).read_text(encoding="utf-8", errors="replace")
         lowered = text.lower()
         assert "PLAYWRIGHT_BROWSERS_PATH" in text, name
@@ -114,20 +114,43 @@ def test_launchers_stay_portable():
         assert "appdata\\local\\ms-playwright" not in lowered, name
 
 
-def test_generic_entry_points_exist():
-    # Clone-to-Run generic naming: run.cmd / run.ps1 delegate to the same
-    # verified bootstrap; run.sh is a Windows-only stub with a clear message.
-    run_cmd = (BASE / "run.cmd").read_text(encoding="utf-8", errors="replace")
-    assert "bootstrap.ps1" in run_cmd and "-Mode web" in run_cmd
-    run_ps1 = (BASE / "run.ps1").read_text(encoding="utf-8", errors="replace")
-    assert "bootstrap.ps1" in run_ps1 and "PLAYWRIGHT_BROWSERS_PATH" in run_ps1
-    assert "SystemRoot" in run_ps1  # OS-standard PowerShell, never a hardcoded drive
-    run_sh = (BASE / "run.sh").read_text(encoding="utf-8", errors="replace")
-    assert "Windows x64 only" in run_sh
+def test_single_entry_point_exists():
+    # One start.bat is the only launcher; setup runs are decided internally.
+    start = (BASE / "start.bat").read_text(encoding="utf-8", errors="replace")
+    assert "bootstrap.ps1" in start and "-Mode auto" in start
+    assert "%~dp0" in start and "SystemRoot" in start  # OS-standard PowerShell
+    for removed in ("setup.bat", "start-web.bat", "cli.bat", "run.cmd", "run.ps1", "run.sh"):
+        assert not (BASE / removed).exists(), f"{removed} should be gone"
 
 
-def test_setup_bat_supports_repair_and_browser_skip():
-    text = (BASE / "setup.bat").read_text(encoding="utf-8", errors="replace")
+def test_single_entry_routes_arguments():
+    from tools.manage_portable import resolve_mode
+
+    assert resolve_mode([]) == ("web", [])
+    assert resolve_mode(["8080"]) == ("web", ["8080"])
+    assert resolve_mode(["--no-open"]) == ("web", ["--no-open"])
+    assert resolve_mode(["web", "--port", "9000"]) == ("web", ["--port", "9000"])
+    assert resolve_mode(["setup", "--repair"]) == ("setup", ["--repair"])
+    assert resolve_mode(["--repair"]) == ("setup", ["--repair"])
+    assert resolve_mode(["repair"]) == ("setup", ["--repair"])
+    assert resolve_mode(["cli", "lists", "list", "--json"]) == (
+        "cli",
+        ["lists", "list", "--json"],
+    )
+    assert resolve_mode(["doctor", "--json"]) == ("cli", ["doctor", "--json"])
+    assert resolve_mode(["--db", "app.db", "init-db"]) == (
+        "cli",
+        ["--db", "app.db", "init-db"],
+    )
+    assert resolve_mode(["help"]) == ("cli", ["--help"])
+    # Windows-style help spellings and `version` still land on a useful mode.
+    assert resolve_mode(["-?"]) == ("cli", ["--help"])
+    assert resolve_mode(["/?"]) == ("cli", ["--help"])
+    assert resolve_mode(["version"]) == ("cli", ["--version"])
+
+
+def test_single_entry_supports_repair_and_browser_skip():
+    text = (BASE / "start.bat").read_text(encoding="utf-8", errors="replace")
     assert "--repair" in text
     assert "bootstrap.ps1" in text
     manager = (BASE / "tools/manage_portable.py").read_text(encoding="utf-8")
@@ -141,7 +164,7 @@ def test_bat_blocks_contain_no_stray_parens():
     ending in ``(`` / exactly ``)`` / ``) else (``. An ``echo`` or ``rem``
     line inside a block must not contain parentheses of its own.
     """
-    for name in ("setup.bat", "cli.bat", "start-web.bat", "run.cmd"):
+    for name in ("start.bat",):
         lines = (BASE / name).read_text(encoding="utf-8", errors="replace").splitlines()
         depth = 0
         for lineno, raw in enumerate(lines, 1):

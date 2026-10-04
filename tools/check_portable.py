@@ -64,7 +64,7 @@ def check_venv() -> bool:
     record("venv healthy and repo-local", ok, reason)
     # A venv whose base interpreter lives outside the repo runs here but
     # breaks when the folder is moved or the original machine is gone
-    # (pyvenv.cfg `home` is an absolute path). setup.bat rebases it onto the
+    # (pyvenv.cfg `home` is an absolute path). start.bat rebases it onto the
     # bundled interpreter; the audit names it so a moved folder is diagnosable.
     home = venv_base_home(ROOT)
     if home is None:
@@ -74,7 +74,7 @@ def check_venv() -> bool:
         record(
             "venv base is repo-local",
             inside,
-            f"{home} " + ("(bundled)" if inside else "(outside: run setup.bat --repair)"),
+            f"{home} " + ("(bundled)" if inside else "(outside: run start.bat --repair)"),
         )
     return ok
 
@@ -104,7 +104,7 @@ def check_browser_path() -> None:
         record(
             "browser binary not stranded in user profile",
             False,
-            "no browser installed; auth login is unavailable until setup.bat runs.",
+            "no browser installed; auth login is unavailable until start.bat runs.",
         )
 
 
@@ -326,7 +326,7 @@ def main(argv: list[str] | None = None) -> int:
         for name in failures:
             print(f"  - {name}")
         if not venv_ok:
-            print("Hint: run setup.bat (or setup.bat --repair) to rebuild .venv.")
+            print("Hint: run start.bat (or start.bat --repair) to rebuild .venv.")
         return 1
     return 0
 

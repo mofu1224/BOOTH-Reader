@@ -157,7 +157,7 @@ def extract(archive: Path) -> None:
     print(f"[fetch] extracting to {TARGET_DIR.relative_to(ROOT)} ...")
     # Portable: scratch space lives inside the repo (.cache/tmp), never in
     # %TEMP%. The directory is removed afterwards; a crash leaves at most a
-    # repo-local leftover that setup.bat can safely delete on the next run.
+    # repo-local leftover that start.bat can safely delete on the next run.
     tmp_base = ROOT / ".cache" / "tmp"
     tmp_base.mkdir(parents=True, exist_ok=True)
     scratch = Path(tempfile.mkdtemp(prefix="booth-python-", dir=str(tmp_base)))

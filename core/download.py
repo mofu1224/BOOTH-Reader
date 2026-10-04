@@ -431,7 +431,7 @@ def resolve_download_links(
     except ImportError as e:
         raise BoothPrerequisiteError(
             "beautifulsoup4 (HTML パーサ) が未導入です",
-            "`setup.bat --repair` で同梱の固定依存を復元してください。",
+            "`start.bat --repair` で同梱の固定依存を復元してください。",
         ) from e
 
     url = item_page_url(item_url_or_id)

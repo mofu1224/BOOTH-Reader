@@ -59,10 +59,16 @@ def _err_payload(exc: Exception) -> tuple[int, dict[str, Any]]:
             "ok": False,
             "error": safe,
             "code": "BOOTH_AUTH_REQUIRED",
-            "hint": "Cookieを登録するか、python cli.py auth login で再ログインしてください",
+            "hint": "Cookieを登録するか、`start.bat auth login` で再ログインしてください",
         }
     if isinstance(exc, bridge.CliLayoutChangedError):
-        return 502, {"ok": False, "error": safe, "code": "BOOTH_LAYOUT_CHANGED"}
+        return 502, {
+            "ok": False,
+            "error": safe,
+            "code": "BOOTH_LAYOUT_CHANGED",
+            "hint": "BOOTH側のページ構成が変わった可能性があります。"
+            "BOOTH-Readerを更新してから、もう一度お試しください。",
+        }
     if isinstance(exc, bridge.CliBridgeError):
         if exc.returncode == 124:
             return 504, {"ok": False, "error": safe, "code": "TIMEOUT"}
@@ -328,7 +334,9 @@ def create_app(
             error = ""
         except Exception as e:  # noqa: BLE001
             data, error = {}, str(e)[:200]
-        return HTMLResponse(render_index(data, error), media_type="text/html; charset=utf-8")
+        return HTMLResponse(
+            render_index(data, error, library_path=root), media_type="text/html; charset=utf-8"
+        )
 
     return app
 

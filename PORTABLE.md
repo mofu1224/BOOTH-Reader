@@ -4,17 +4,19 @@
 ライセンス判定は **READY FOR CLONE DISTRIBUTION** です。範囲・根拠・残る制限は
 [license-audit/28-clone-distribution-followup.md](license-audit/28-clone-distribution-followup.md) に記録しています。
 
-**Windows x64でクローン後、`start-web.bat` を起動すれば使えます。事前セットアップ、追加ダウンロード、グローバルPython/Nodeは不要です。**
+**Windows x64でクローン後、`start.bat` を起動すれば使えます。事前セットアップは不要で、必要かどうかは起動時に自動判定します。追加ダウンロード、グローバルPython/Nodeも不要です。**
 
 ```bat
-start-web.bat              rem 通常のWeb UI。初回準備も自動
-run.cmd                    rem 同じ汎用入口（cmd用）。PowerShellでは & .\run.ps1
-start-web.bat 8080         rem ポート指定
-cli.bat lists list --json  rem CLI。初回でもstdoutはJSONだけ
-setup.bat --repair         rem 生成環境を同梱物から修復
+start.bat                        rem 通常のWeb UI。初回準備・復旧・ブラウザー起動も自動
+start.bat 8080                   rem ポート指定
+start.bat --no-open              rem ブラウザーを自動で開かない
+start.bat --repair               rem 生成環境を同梱物から修復
+start.bat --check                rem 準備済みかを確認するだけ
+start.bat doctor                 rem CLI。初回でもstdoutはJSONだけ
+start.bat cli lists list --json  rem CLIを明示する場合
 ```
 
-PowerShellでは `& .\start-web.bat` / `& .\cli.bat ...` を使用します。初回は同梱物をフォルダ内に検証・展開します。検証PCではWeb約24秒、CLI約19秒。2回目以降は既存環境を使います。
+PowerShellでは `& .\start.bat ...` を使用します。初回は同梱物をフォルダ内に検証・展開します。検証PCではWeb約24秒、CLI約19秒。2回目以降は既存環境をそのまま使います。入口はこの1つだけで、`.tools` / `.venv` / `.playwright-browsers` / DB の不足や移動後の不整合は起動時に検出して自動復旧します。すでに起動中のときは二重起動せず既存の画面を開き、指定ポートが別アプリに使用中のときは空きポートへ自動で切り替えます。起動失敗時はウィンドウを閉じずにエラーを表示します。`start.bat --check` は準備状態だけを表示し、`start.bat /?` と `start.bat version` も受け付けます。エラーと対処は日本語で案内し、同梱物 (vendor/) の破損が疑われる場合は git clone による復元を案内します。
 
 ## クローンに入るもの
 
@@ -45,7 +47,7 @@ Microsoftコードの利用・再配布条件とSmartScreenのデータ通知は
 | `app.db`, `data/cookies.json`, `BOOTH-Reader-Library/` | 利用者のDB・Cookie・購入ファイル |
 | `.private/` | 任意名のCookieインポート、私用出力、バックアップの推奨保存先（Git対象外） |
 
-BAT段階でHOME/USERPROFILE/APPDATA/LOCALAPPDATA/TEMP/TMPとPowerShellキャッシュ先を固定してからPowerShellを起動します。スクリプトが始まる前にOSのプロフィール側へPowerShellキャッシュができる経路も修正しました。
+`start.bat` 段階でHOME/USERPROFILE/APPDATA/LOCALAPPDATA/TEMP/TMPとPowerShellキャッシュ先を固定してからPowerShellを起動します。スクリプトが始まる前にOSのプロフィール側へPowerShellキャッシュができる経路も修正しました。
 
 すべて子プロセス内の設定です。親シェル、永続PATH、永続環境変数、サービス、タスク、レジストリ登録は変更しません。stdoutのJSONへ準備ログを混ぜず、診断はstderrへ出します。
 
@@ -54,6 +56,7 @@ BAT段階でHOME/USERPROFILE/APPDATA/LOCALAPPDATA/TEMP/TMPとPowerShellキャッ
 ## 移動・修復・削除
 
 - アプリを停止してフォルダ全体をコピー・移動できます。旧venvのhomeを実行前に拒否し、同梱物から再生成します。
+- `--repair` / `--recreate` / `--update` は、起動中のインスタンスを検出すると変更前に終了を案内して停止します。固定環境 (.venv) が使用中で更新できない場合も、終了方法とデータ保護を日本語で案内します。
 - `.tools` / `.venv` / `.cache` / `.playwright-browsers` がなくても、`vendor/` があれば通信なしで自動復元します。
 - 破損した同梱片はハッシュ不一致として停止します。別の配布物やPATH上のツールへフォールバックしません。
 - Web起動とCLIの `auth login` はブラウザを事前起動検査し、既存の実行ファイルが壊れている場合も検証済み同梱原本から一度だけ復旧します。通常のCLI照会ではこの追加検査を行いません。

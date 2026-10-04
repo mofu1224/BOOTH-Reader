@@ -82,7 +82,7 @@ def _require_httpx() -> Any:
     if _httpx is None:
         raise BoothPrerequisiteError(
             "httpx (HTTP クライアント) が未導入です",
-            "`setup.bat --repair` で同梱の固定依存を復元してください。",
+            "`start.bat --repair` で同梱の固定依存を復元してください。",
         )
     return _httpx
 

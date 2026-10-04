@@ -43,7 +43,7 @@ DEFAULT_COOKIE_PATH = Path(__file__).resolve().parent.parent / "data" / "cookies
 
 INSTALL_HINT = (
     "Playwrightが未導入です。"
-    "`setup.bat` を実行してください (同梱の固定依存とブラウザーを repo-local に"
+    "`start.bat` を実行してください (同梱の固定依存とブラウザーを repo-local に"
     "展開します。追加ダウンロードは不要です)。"
 )
 
@@ -325,7 +325,7 @@ def _launch_browser(headless: bool, factory: Any) -> tuple[Any, Any]:
     except Exception as e:
         raise BoothPrerequisiteError(
             "実ブラウザを起動できませんでした",
-            "`setup.bat --repair` で同梱の固定ブラウザーを復元してください。 "
+            "`start.bat --repair` で同梱の固定ブラウザーを復元してください。 "
             f"({type(e).__name__}: {e})",
         ) from e
     try:
@@ -339,7 +339,7 @@ def _launch_browser(headless: bool, factory: Any) -> tuple[Any, Any]:
         # setup restores it from verified local material, so name that remedy.
         raise BoothPrerequisiteError(
             "ブラウザーを起動できませんでした",
-            f"`setup.bat --repair` で同梱の固定ブラウザーを復元してから再実行してください。 ({e})",
+            f"`start.bat --repair` で同梱の固定ブラウザーを復元してから再実行してください。 ({e})",
         ) from e
     return pw, browser
 
@@ -425,7 +425,7 @@ def login(
     except ImportError as e:
         raise BoothPrerequisiteError(
             "Playwright (実ブラウザ操作) が未導入です",
-            "`setup.bat --repair` で同梱の固定依存とブラウザーを復元してください。追加ダウンロードは不要です。",
+            "`start.bat --repair` で同梱の固定依存とブラウザーを復元してください。追加ダウンロードは不要です。",
         ) from e
 
     p = cookie_path(path)
@@ -442,7 +442,7 @@ def login(
         raise BoothPrerequisiteError(
             "実ブラウザの操作に失敗しました",
             "もう一度実行してください。WebView2 が起動しない場合は "
-            f"`python cli.py doctor` で環境を確認してください。 ({type(e).__name__}: {e})",
+            f"`start.bat doctor` で環境を確認してください。 ({type(e).__name__}: {e})",
         ) from e
     finally:
         for closer in (getattr(browser, "close", None), getattr(pw, "stop", None)):

@@ -33,7 +33,7 @@ import time
 import unicodedata
 from contextlib import redirect_stderr, redirect_stdout
 from pathlib import Path
-from typing import Any
+from typing import Any, NoReturn
 
 from core.portable import apply_portable_env, effective_browsers_path
 
@@ -51,13 +51,13 @@ SORT_CHOICES = ("newest", "oldest", "name", "shop")
 
 EPILOG = """\
 使用例:
-  cli.bat unclassified --sort newest          未分類キュー (第一級機能)
-  cli.bat purchases list --update-db           BOOTHから購入一覧を取得
-  cli.bat download --item-id order_12345       1件ダウンロード
-  cli.bat download --all --concurrent 3        全件ダウンロード (上限5)
-  cli.bat auth login                          ブラウザでログイン
-  cli.bat doctor                              環境・整合性を診断
-  cli.bat web --port 8000                     WebUI を起動
+  start.bat unclassified --sort newest          未分類キュー (第一級機能)
+  start.bat purchases list --update-db          BOOTHから購入一覧を取得
+  start.bat download --item-id order_12345      1件ダウンロード
+  start.bat download --all --concurrent 3       全件ダウンロード (上限5)
+  start.bat auth login                          ブラウザでログイン
+  start.bat doctor                              環境・整合性を診断
+  start.bat web --port 8000                     WebUI を起動
 
 終了コード: 0=成功 1=エラー 2=使い方誤り 3=BOOTHレイアウト変更
 """
@@ -78,6 +78,26 @@ def _add_common(p: argparse.ArgumentParser) -> None:
     )
 
 
+class _Parser(argparse.ArgumentParser):
+    """Argparse that ends usage errors with a Japanese next step.
+
+    The stock English ``invalid choice`` / ``unrecognized arguments`` message
+    is the first thing a user sees after mistyping a command. The exit-code
+    contract (2 = usage error) is unchanged; a short Japanese pointer is
+    appended so the user knows the way back without reading a stack of flags.
+    """
+
+    def error(self, message: str) -> NoReturn:
+        self.print_usage(sys.stderr)
+        print(f"ERROR {message}", file=sys.stderr)
+        print(
+            "使い方が正しくありません。`start.bat help` でコマンド一覧を表示できます"
+            " (Web UI は引数なしの `start.bat`、環境の修復は `start.bat --repair` です)。",
+            file=sys.stderr,
+        )
+        self.exit(2)
+
+
 def _resolve(args: argparse.Namespace) -> tuple[str, str]:
     db = getattr(args, "db", None) or DEFAULT_DB
     level = getattr(args, "log_level", None) or "INFO"
@@ -85,7 +105,7 @@ def _resolve(args: argparse.Namespace) -> tuple[str, str]:
 
 
 def build_parser() -> argparse.ArgumentParser:
-    p = argparse.ArgumentParser(
+    p = _Parser(
         prog="cli.py",
         description="BOOTH-Reader: BOOTH購入品の取得・ダウンロード・分類管理",
         epilog=EPILOG,
@@ -645,7 +665,7 @@ def _cmd_doctor(args: argparse.Namespace, db_path: str) -> int:
         engine = "chromium"
 
     # The Playwright package alone is not enough: the browser runtime is
-    # restored from vendor/ by setup.bat. Detecting it here is far better than
+    # restored from vendor/ by start.bat. Detecting it here is far better than
     # letting it surface as a confusing launch failure in `auth login`.
     try:
         from playwright.sync_api import sync_playwright
@@ -661,7 +681,7 @@ def _cmd_doctor(args: argparse.Namespace, db_path: str) -> int:
             add(
                 f"browser:{engine}",
                 False,
-                "ブラウザーを起動できません。`setup.bat --repair` で同梱物から復元してください "
+                "ブラウザーを起動できません。`start.bat --repair` で同梱物から復元してください "
                 f"({type(e).__name__})",
                 fatal=True,
             )
@@ -687,11 +707,11 @@ def _cmd_doctor(args: argparse.Namespace, db_path: str) -> int:
         "portable:venv",
         exe_inside,
         f"{sys.executable} "
-        + ("(リポジトリ内)" if exe_inside else "(リポジトリ外: setup.bat で .venv を作成)")
+        + ("(リポジトリ内)" if exe_inside else "(リポジトリ外: start.bat で .venv を作成)")
         + (
             ""
             if _base_inside
-            else " [baseがリポジトリ外: setup.bat --repair で同梱Pythonに付け替え]"
+            else " [baseがリポジトリ外: start.bat --repair で同梱Pythonに付け替え]"
         ),
     )
     browsers = effective_browsers_path(BASE_DIR)
@@ -706,7 +726,7 @@ def _cmd_doctor(args: argparse.Namespace, db_path: str) -> int:
     add(
         "portable:browsers",
         browsers_inside,
-        f"{browsers} " + ("(ブラウザあり)" if has_repo_browser else "(未導入: setup.bat で導入)"),
+        f"{browsers} " + ("(ブラウザあり)" if has_repo_browser else "(未導入: start.bat で導入)"),
     )
 
     db = Path(db_path)
@@ -737,14 +757,14 @@ def _cmd_doctor(args: argparse.Namespace, db_path: str) -> int:
         except Exception as e:  # noqa: BLE001
             add("db:open", False, f"{type(e).__name__}: {e}", fatal=True)
     else:
-        add("db:exists", False, "未作成。`python cli.py init-db` を実行", fatal=False)
+        add("db:exists", False, "未作成。`start.bat init-db` を実行", fatal=False)
 
     cookie_file = Path(getattr(args, "cookie_path", None) or (BASE_DIR / "data" / "cookies.json"))
     have_jar = has_cookies(cookie_file)
     add(
         "cookies",
         have_jar,
-        f"{cookie_file} " + ("あり" if have_jar else "なし。`python cli.py auth login` を実行"),
+        f"{cookie_file} " + ("あり" if have_jar else "なし。`start.bat auth login` を実行"),
     )
 
     try:
@@ -1016,6 +1036,11 @@ def main(  # noqa: PLR0911 - a flat command table reads better than a dispatch m
         print(f"BOOTH-Reader {__version__}")
         return 0
     if args.cmd is None:
+        print(
+            "コマンドが指定されていません。通常の起動は引数なしの `start.bat` です。"
+            " `start.bat help` でコマンド一覧を表示します。",
+            file=sys.stderr,
+        )
         parser.print_help()
         return 2
     if args.cmd == "rpc":

@@ -59,10 +59,10 @@ def test_prerequisite_is_not_an_auth_error():
 
 
 def test_prerequisite_message_names_component_and_remedy():
-    err = BoothPrerequisiteError("httpx が未導入です", "`setup.bat --repair`")
+    err = BoothPrerequisiteError("httpx が未導入です", "`start.bat --repair`")
     message = str(err)
     assert "httpx" in message
-    assert "setup.bat --repair" in message
+    assert "start.bat --repair" in message
 
 
 def test_auth_error_still_keeps_its_relogin_hint():
@@ -82,7 +82,7 @@ def test_login_without_playwright_reports_a_prerequisite(monkeypatch, tmp_path):
     message = str(exc.value)
     # Names the component and the exact command.
     assert "Playwright" in message
-    assert "setup.bat --repair" in message
+    assert "start.bat --repair" in message
     # The regression: it must NOT tell the user to log in again.
     assert "auth login" not in message
     assert "再ログイン" not in message
@@ -212,9 +212,9 @@ def test_doctor_treats_a_missing_browser_as_fatal(tmp_path, monkeypatch):
     assert rc == 1
 
 
-def test_setup_bat_installs_the_browser():
+def test_single_entry_installs_the_browser():
     """The browser download is the one step a package install cannot do."""
-    text = (BASE / "setup.bat").read_text(encoding="utf-8", errors="replace")
+    text = (BASE / "start.bat").read_text(encoding="utf-8", errors="replace")
     manager = (BASE / "tools/manage_portable.py").read_text(encoding="utf-8")
     manifest = (BASE / "portable-manifest.json").read_text(encoding="utf-8")
     assert "bootstrap.ps1" in text

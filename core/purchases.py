@@ -257,7 +257,7 @@ def parse_library_html(html: str, base_url: str = LIBRARY_URL) -> list[dict]:
     except ImportError as e:
         raise BoothPrerequisiteError(
             "beautifulsoup4 (HTML パーサ) が未導入です",
-            "`setup.bat --repair` で同梱の固定依存を復元してください。",
+            "`start.bat --repair` で同梱の固定依存を復元してください。",
         ) from e
     if not html or not html.strip():
         raise BoothLayoutChangedError("購入一覧のHTMLが空です。")
@@ -453,7 +453,7 @@ def update_from_network(db_path: str | Path, cookie_path: str | Path | None = No
         from bs4 import BeautifulSoup
     except ImportError as e:
         raise BoothPrerequisiteError(
-            "beautifulsoup4 が未導入です", "`setup.bat --repair` で固定依存を復元してください。"
+            "beautifulsoup4 が未導入です", "`start.bat --repair` で固定依存を復元してください。"
         ) from e
 
     from .db import get_connection

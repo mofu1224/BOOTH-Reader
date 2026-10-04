@@ -253,7 +253,7 @@ def main() -> int:
             ALL_PROXY="http://127.0.0.1:9",
             NO_PROXY="127.0.0.1,localhost",
         )
-        # Controller Python runs only the test; start-web.bat itself bootstraps
+        # Controller Python runs only the test; start.bat itself bootstraps
         # exclusively with OS PowerShell and Git-owned binary chunks.
         skip_manual = os.environ.get("BR_SKIP_MANUAL_BROWSER") == "1"
         if not skip_manual:
@@ -288,7 +288,7 @@ def main() -> int:
                 shutil.rmtree(checkout / name)
         (checkout / "app.db").unlink(missing_ok=True)
         cmd = system / "System32/cmd.exe"
-        command = f'"{cmd}" /d /s /c ""{checkout / "cli.bat"}" lists list --json"'
+        command = f'"{cmd}" /d /s /c ""{checkout / "start.bat"}" cli lists list --json"'
         response = run("cold-cli-json", command, work, launch_env)
         assert json.loads(response) == {"count": 0, "lists": []}, response
         assert not list(host.rglob("*")), "App wrote outside checkout"
@@ -370,7 +370,7 @@ def main() -> int:
             "'tools' / 'portable_audit_hook.py'))\n",
             encoding="utf-8",
         )
-        command = f'"{cmd}" /d /s /c ""{checkout / "cli.bat"}" lists list --json"'
+        command = f'"{cmd}" /d /s /c ""{checkout / "start.bat"}" cli lists list --json"'
         assert json.loads(run("relocated-cli", command, work, launch_env)) == {
             "count": 0,
             "lists": [],
@@ -434,7 +434,7 @@ def main() -> int:
         assert not previous.exists()
         assert not list(host.rglob("*")), "Relocated app wrote to outside profile/temp"
         result["relocation"] = "PASS: built tree moved, local data/UI/shutdown/restart verified"
-        result["browser_corruption_auto_repair"] = "PASS via ordinary start-web.bat"
+        result["browser_corruption_auto_repair"] = "PASS via ordinary start.bat"
         result["original_read_isolation"] = (
             "CPython audit hook rejects original and previous checkout"
         )

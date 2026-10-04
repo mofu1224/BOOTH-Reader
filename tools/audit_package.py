@@ -55,9 +55,7 @@ def main(argv: list[str] | None = None) -> int:
                 "requirements-lock.txt",
                 "requirements-portable-lock.txt",
                 "portable-manifest.json",
-                "setup.bat",
-                "cli.bat",
-                "start-web.bat",
+                "start.bat",
             }:
                 expected = (
                     candidate.read(name)
@@ -76,7 +74,7 @@ def main(argv: list[str] | None = None) -> int:
     with tarfile.open(sdist) as archive:
         members = archive.getmembers()
         assert all(not member.issym() and not member.islnk() for member in members)
-        assert any(member.name.endswith("/setup.bat") for member in members)
+        assert any(member.name.endswith("/start.bat") for member in members)
         assert any(member.name.endswith("/tools/portable.py") for member in members)
     report = {
         "checksums": checksums,

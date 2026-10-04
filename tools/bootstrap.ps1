@@ -1,7 +1,8 @@
-#Requires -Version 5.1
-# OS-only bootstrap. ASCII literals keep Windows PowerShell 5.1 interoperable.
+﻿#Requires -Version 5.1
+# OS-only bootstrap. UTF-8 with BOM keeps Windows PowerShell 5.1 and the
+# Japanese guidance messages interoperable.
 param(
-    [ValidateSet('setup', 'cli', 'web')][string]$Mode = 'setup'
+    [ValidateSet('auto', 'setup', 'cli', 'web')][string]$Mode = 'auto'
 )
 # Advanced binding consumes --db as the common -Debug alias before forwarding.
 # A basic script leaves all remaining CLI arguments intact in $args.
@@ -20,14 +21,14 @@ function ArchiveHash([string]$Path) {
 function AssertOwnedPath([string]$Path) {
     $full = [IO.Path]::GetFullPath($Path)
     if (-not $full.StartsWith($root + [IO.Path]::DirectorySeparatorChar, [StringComparison]::OrdinalIgnoreCase)) {
-        throw 'Generated path escapes the repository.'
+        throw '生成先がリポジトリの外を指しています。フォルダー構成を確認してください。'
     }
     $current = $full
     while ($current -and $current -ne $root) {
         if (Test-Path -LiteralPath $current) {
             $item = Get-Item -LiteralPath $current -Force
             if ($item.Attributes -band [IO.FileAttributes]::ReparsePoint) {
-                throw 'Portable generated paths must not use junctions or symlinks.'
+                throw '生成先にジャンクション/シンボリックリンクは使えません。フォルダーを通常のコピーで配置してください。'
             }
         }
         $current = Split-Path -Parent $current
@@ -46,16 +47,16 @@ function RestoreVendorAsset([string]$Name) {
         foreach ($part in $asset.parts) {
             $source = [IO.Path]::GetFullPath((Join-Path $vendor $part.file))
             if (-not $source.StartsWith($vendor + '\', [StringComparison]::OrdinalIgnoreCase)) {
-                throw 'Vendor chunk escapes its directory.'
+                throw '同梱物 (vendor/) の構成が不正です。リポジトリを git clone し直してください。'
             }
             AssertOwnedPath $source
-            if ((ArchiveHash $source) -ne $part.sha256) { throw 'Vendored chunk SHA-256 mismatch.' }
+            if ((ArchiveHash $source) -ne $part.sha256) { throw '同梱物 (vendor/) のハッシュが一致しません。リポジトリを git clone し直してください。' }
             $input = [IO.File]::OpenRead($source)
             try { $input.CopyTo($output) } finally { $input.Dispose() }
         }
     } finally { $output.Dispose() }
     try {
-        if ((ArchiveHash $temporary) -ne $asset.sha256) { throw 'Vendored archive SHA-256 mismatch.' }
+        if ((ArchiveHash $temporary) -ne $asset.sha256) { throw '同梱アーカイブのハッシュが一致しません。リポジトリを git clone し直してください。' }
         Move-Item -LiteralPath $temporary -Destination $destination -Force
     } finally {
         if (Test-Path -LiteralPath $temporary) { Remove-Item -LiteralPath $temporary -Force }
@@ -72,7 +73,7 @@ function Expand-TarGz([string]$Archive, [string]$Destination) {
         while ($Count -gt 0) {
             $chunk = [int][Math]::Min($Count, [long]$buffer.Length)
             $read = $Stream.Read($buffer, 0, $chunk)
-            if ($read -le 0) { throw 'Unexpected end of archive.' }
+            if ($read -le 0) { throw '同梱アーカイブが途中で切れています。リポジトリを git clone し直してください。' }
             $Count -= $read
         }
     }
@@ -94,7 +95,7 @@ function Expand-TarGz([string]$Archive, [string]$Destination) {
             $prefix = [Text.Encoding]::UTF8.GetString($header, 345, 155).TrimEnd([char]0)
             if ($prefix.Length -gt 0) { $name = $prefix + '/' + $name }
             if ($typeByte -ne 0x30 -and $typeByte -ne 0x35 -and $typeByte -ne 0x00) {
-                throw 'Unsupported tar entry; the vendored runtime must be a plain ustar archive.'
+                throw '同梱ランタイムの形式が不正です。リポジトリを git clone し直してください。'
             }
             $relative = $name.Replace('/', [IO.Path]::DirectorySeparatorChar)
             $full = [IO.Path]::GetFullPath((Join-Path $Destination $relative))
@@ -111,7 +112,7 @@ function Expand-TarGz([string]$Archive, [string]$Destination) {
                     while ($remaining -gt 0) {
                         $chunk = [int][Math]::Min($remaining, [long]$buffer.Length)
                         $read = $stream.Read($buffer, 0, $chunk)
-                        if ($read -le 0) { throw 'Unexpected end of archive.' }
+                        if ($read -le 0) { throw '同梱アーカイブが途中で切れています。リポジトリを git clone し直してください。' }
                         $output.Write($buffer, 0, $read)
                         $remaining -= $read
                     }
@@ -129,9 +130,9 @@ try {
     $manifest = [IO.File]::ReadAllText((Join-Path $root 'portable-manifest.json')) | ConvertFrom-Json
     $arch = $env:PROCESSOR_ARCHITECTURE
     if ($env:PROCESSOR_ARCHITEW6432) { $arch = $env:PROCESSOR_ARCHITEW6432 }
-    if ($arch -ne 'AMD64') { throw 'Portable target is Windows x64 (AMD64) only.' }
+    if ($arch -ne 'AMD64') { throw 'このツールは Windows x64 (AMD64) 専用です。' }
     if ([Environment]::OSVersion.Version.Build -lt $manifest.minimumWindowsBuild) {
-        throw 'Windows 10 build 17763 or later is required.'
+        throw 'Windows 10 build 17763 以降が必要です。'
     }
     # Process-local environment; the parent shell and persistent state are untouched.
     $env:PYTHONHOME = $null
@@ -177,12 +178,16 @@ try {
             $probe.Start() | Out-Null
             $version = $probe.StandardOutput.ReadToEnd().Trim()
             $probe.StandardError.ReadToEnd() | Out-Null
-            if (-not $probe.WaitForExit(120000)) { $probe.Kill(); throw 'Runtime probe timed out.' }
+            if (-not $probe.WaitForExit(120000)) { $probe.Kill(); throw '同梱Pythonの起動確認がタイムアウトしました。セキュリティソフトの一時停止や、フォルダーを日本語・空白の少ないパスへ移動して再実行してください。' }
             $usable = ($probe.ExitCode -eq 0 -and $version -eq $manifest.python.version)
         } catch { $usable = $false } finally { $probe.Dispose() }
     }
-    if (-not $usable -and $ForwardArgs -contains '--check') { exit 1 }
+    if (-not $usable -and $ForwardArgs -contains '--check') {
+        [Console]::Error.WriteLine('[portable] まだ準備されていません。start.bat を実行すると同梱物から自動で準備します。')
+        exit 1
+    }
     if (-not $usable) {
+        [Console]::Error.WriteLine('[portable] 初回準備: 同梱Pythonを展開しています (約30秒)...')
         $downloads = Join-Path $root '.cache\downloads'
         [IO.Directory]::CreateDirectory($downloads) | Out-Null
         $archive = Join-Path $downloads $manifest.python.asset
@@ -190,7 +195,7 @@ try {
             ((ArchiveHash $archive) -eq $manifest.python.sha256)
         if (-not $valid) {
             RestoreVendorAsset 'python'
-            if ((ArchiveHash $archive) -ne $manifest.python.sha256) { throw 'Python publisher SHA-256 mismatch.' }
+            if ((ArchiveHash $archive) -ne $manifest.python.sha256) { throw '同梱Pythonのハッシュが一致しません。リポジトリを git clone し直してください。' }
         }
         $scratch = Join-Path $env:TEMP ('bootstrap-' + [Guid]::NewGuid().ToString('N'))
         [IO.Directory]::CreateDirectory($scratch) | Out-Null
@@ -198,7 +203,7 @@ try {
         $inner = Join-Path $scratch 'python'
         $candidate = Join-Path $inner 'python.exe'
         & $candidate -E -s -c "import ssl, sqlite3, venv, ensurepip"
-        if ($LASTEXITCODE -ne 0) { throw 'Python self-check failed.' }
+        if ($LASTEXITCODE -ne 0) { throw '同梱Pythonの自己診断に失敗しました。リポジトリを git clone し直してください。' }
         [IO.Directory]::CreateDirectory((Split-Path -Parent $target)) | Out-Null
         if (Test-Path -LiteralPath $target) {
             $oldRuntime = Join-Path $env:TEMP ('python-backup-' + [Guid]::NewGuid().ToString('N'))
@@ -214,6 +219,7 @@ try {
     exit $result
 } catch {
     [Console]::Error.WriteLine('[ERROR] ' + $_.Exception.Message)
+    [Console]::Error.WriteLine('[ヒント] 解決しない場合は、リポジトリを git clone し直してください。app.db・data・BOOTH-Reader-Library は削除しないでください。')
     exit 1
 } finally {
     if ($scratch -and (Test-Path -LiteralPath $scratch)) {
