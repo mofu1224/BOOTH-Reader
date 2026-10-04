@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parent.parent
 
 def run_launcher(args):
     cmd = Path(os.environ["SYSTEMROOT"]) / "System32/cmd.exe"
-    inner = subprocess.list2cmdline([str(ROOT / "cli.bat"), *args])
+    inner = subprocess.list2cmdline([str(ROOT / "start.bat"), "cli", *args])
     return subprocess.run(
         f'"{cmd}" /d /s /c "{inner}"',
         capture_output=True,

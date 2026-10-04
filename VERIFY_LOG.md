@@ -1,5 +1,25 @@
 # 検証ログ (Verification Log)
 
+## 利用者導線のフールプルーフ化（2026-10-04）
+
+- 起動・復旧の案内を日本語に統一: 初回展開、同梱物 (vendor/) の欠損・破損、起動タイムアウト、非対応OSで次の操作とデータ保護 (app.db・data・BOOTH-Reader-Library を削除しない) を表示する。`bootstrap.ps1` はUTF-8 BOM付きとし、PowerShell 5.1のパーサーで日本語リテラルが解釈できることを確認した。
+- `--repair` / `--recreate` / `--update` は起動中インスタンスを検出すると変更前に停止し、`.venv` が使用中で更新できない場合も終了方法とデータ保護を案内する。実機で `/health` に応答するスタブを8000番に立て、`start.bat --repair` がexit 1で拒否し `.venv` の更新時刻が不変であることを確認した。
+- `--check` のstderr表示と言い回し、`/?` `-?` `help` `version` の別名、日本語のCLI使い方エラーを実BATで確認（`--check` exit 0、`/?` はhelp、`--bogus` はexit 2と日本語案内、`version` は `BOOTH-Reader 1.0.3`）。
+- Web UI: 初回3手順、同期0件時のCookie確認案内、Cookie置き換えと未完了ファイル削除の確認、購入ファイル保存先の表示、レイアウト変更時ヒントを追加。TestClientで描画とヒントを確認し、Playwrightの既存UI回帰もPASS。
+- ローカル全回帰 **425 passed**、ruff/format/mypy19ソース/pip check、`check_portable` 18/18、`check_release_hygiene` 私用パス0、`check_license_evidence` PASS、`vendor_payload verify` PASS。
+- `verify_clone` **88チェックPASS**（候補ツリー、冷間cloneの初回Web/CLI、cookieなしJSON純度、入力等価2,526、移動後のCLI/UI/Web再起動、ブラウザ破損復旧、425 passed、元index不変、外部profile書込み0、後始末含む）。
+- ゲート (`license-audit/release-gate.json`) は `input_hashes` 2,526と `input_count`、`verification` を現行候補へ更新した。新しい第三者コンポーネント・依存・同梱物は追加していない。
+
+## 単一エントリ起動への統合（2026-10-04）
+
+- 起動スクリプトを `start.bat` 一つへ統合。`setup.bat` / `start-web.bat` / `cli.bat` / `run.cmd` / `run.ps1` / `run.sh` を削除し、引数なし・ポート番号はWeb UI、`--repair` などのフラグと `setup` / `repair` / `update` は環境の再同期、その他はCLIとして起動時に自動判定する。
+- `tools/manage_portable.py` に `resolve_mode` / `parse_web_args` を追加し、Web起動の `--port` 指定に対応。CI・検証ツール・案内文・README/PORTABLEを `start.bat` に統一。
+- 引数なしの起動をフールプルーフ化: 準備完了後に既定ブラウザーを自動で開き、すでに起動中なら二重起動せず既存のURLを開き、指定ポートが使用中なら空きポートへ自動で切り替える。ダブルクリック起動の失敗時はウィンドウを閉じずにエラーを表示する（`--no-open` で自動起動を抑止、自動化はこちらを使用）。
+- 実BATで `start.bat cli --db` のサブコマンド前後指定・日本語/空白パス、`--check`（準備済みで0）、`help`、`--version` を確認。Web実起動で二重起動検出（2回目はexit 0で既存URLを案内・サーバー1つのまま）と、使用中ポートからの自動回避（23106→23107）を確認。フォールバック後の再起動も、優先ポート周辺から起動中インスタンスを検出して既存URLを再利用し、二重サーバーを作らないことを確認（9610使用中→9611で起動→2回目は9611を案内）。
+- ローカル全回帰 **417 passed**、ruff/format/mypy/pip check、`check_portable` 18/18、`check_release_hygiene` 私用パス0、`check_license_evidence` 2,137参照/1,506原文 PASS、`vendor_payload verify` PASS。
+- 初回展開の案内を `Write-Host` で出したところ、コンソールなしの子プロセスでstdoutへ混入し `cold-cli-json` のJSON純度検査が失敗。`[Console]::Error.WriteLine` へ変更し、初回の `start.bat cli lists list --json` が純粋なJSONのままであることを再確認した。
+- `verify_clone` **88チェックPASS**（冷間cloneの初回Web/CLI、再配置CLI/UI/Web再起動、`start.bat` からのブラウザ破損復旧、417 passed、入力等価2,525、元index不変、後始末含む）。ゲートの入力ハッシュを更新。
+
 ## GitHub CI 全ジョブPASS（2026-10-03）
 
 - `88afa49` のCI（run 37135441351）で3ジョブすべてPASS: 品質/クローン配布 2m49s、依存/秘密スキャン 1m3s、コールドクローン/再配置 6m22s。未検証だったGitHub runner実行を解消。

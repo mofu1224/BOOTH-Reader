@@ -77,25 +77,25 @@ BOOTH で購入したものを「取得・ダウンロード・解凍・分類�
 
 ### クローンして起動
 
-リポジトリをクローンし、`start-web.bat` を起動します。`setup.bat` の事前実行は不要です。
-初回はGitに含まれる同梱物を検証・展開し、環境とDBを自動生成してからUIを開きます。
-CLIを使う場合は `cli.bat <command>` が同じ自動準備を行います。
+リポジトリをクローンし、`start.bat` を開くだけです。初回はGitに含まれる同梱物を検証・展開し、環境とDBを自動生成してからブラウザーでUIを開きます。セットアップを事前に実行する必要はなく、環境の不足・移動・破損・ポートの競合も起動時に自動判定して復旧します。
 
 ```powershell
 git clone https://github.com/mofu1224/BOOTH-Reader.git
 # クローン先で実行
-& .\start-web.bat
+& .\start.bat
 ```
 
 Windows11 x64のクリーン配置では初回Web起動約24秒、CLI約19秒で完了しました。2回目からは生成済み環境を使用します。
 
 ```bat
-start-web.bat          : クローン後の通常起動。初回準備も自動
-cli.bat --help         : CLIの直接起動。初回準備も自動
-setup.bat              : 固定環境の再同期・診断用。通常起動には不要
-setup.bat --repair     : 環境の作り直し（移動後・破損時）
-setup.bat --skip-browser : ブラウザ導入の省略（auth login を使わない場合）
-setup.bat --offline    : 保管済みのRuntime・wheel・ブラウザから再構築
+start.bat              : クローン後の通常起動（Web UI）。初回準備もブラウザー起動も自動
+start.bat 8080         : ポート番号を指定
+start.bat --repair     : 環境の作り直し（移動後・破損時）
+start.bat --check      : セットアップが必要かだけを確認（0=準備済み）
+start.bat --skip-browser : ブラウザ導入の省略（auth login を使わない場合）
+start.bat doctor       : CLIコマンドはそのまま指定できる
+start.bat cli --help   : CLIを明示的に起動
+start.bat /?           : ヘルプ（help と同じ）
 ```
 
 `vendor/windows-x64/` はクローンに必要な同梱物です。固定版・ハッシュを検証して使用します。
@@ -105,23 +105,30 @@ setup.bat --offline    : 保管済みのRuntime・wheel・ブラウザから再�
 ## 起動
 
 ```bat
-start-web.bat          : ターミナルにWebUIのアクセス先を表示（通常運用はこれ）
-start-web.bat 8080     : ポート番号を指定
-run.cmd                : start-web.bat と同じ汎用入口（cmd用）
-cli.bat --help         : CLI のヘルプ
-setup.bat              : 初回セットアップ
+start.bat              : ブラウザーが自動で開く（通常はこれをダブルクリックするだけ）
+start.bat 8080         : ポート番号を指定
+start.bat --no-open    : ブラウザーを自動で開かない
+start.bat cli --help   : CLI のヘルプ
+start.bat doctor       : CLI 診断（同じ自動準備）
 ```
 
-PowerShellでは `& .\run.ps1`（`start-web.bat` と同じ汎用入口）も使えます。
+PowerShellでは `& .\start.bat` で同じように起動できます。
 
-起動経路は子PythonのUTF-8を有効化します。ターミナルに表示される
-`http://127.0.0.1:8000/` を普段のブラウザで開いてください。
-ウィンドウ幅に合わせて商品一覧の列数や配置が変わります。
+引数なしで起動するとWeb UIを立ち上げ、準備が整い次第お使いのブラウザーで
+`http://127.0.0.1:8000/` を自動的に開きます。すでに起動中の場合は二重起動せず、
+その画面を開くだけです。8000番が別のアプリに使われている場合は空いている番号へ
+自動で切り替えて表示します。起動に失敗した場合はウィンドウが閉じずにエラーを表示します。
 使用中はターミナルを開いたままにし、終了時はCtrl+Cでサーバーを停止します。
-`--no-open` は従来との互換用に引き続き受け付けます。
+ブラウザーを閉じてもサーバーは動き続けます。
+
+`--repair` / `--update` は、起動中のインスタンスがあると固定環境を壊さないよう、
+変更する前に終了を案内して停止します（app.db・data・BOOTH-Reader-Libraryは残ります）。
+`start.bat --check` は準備済みかどうかだけを表示し、セットアップは行いません。
+`start.bat /?` や `start.bat version` も受け付けます。エラー時は次の操作を日本語で案内し、
+同梱物 (vendor/) の破損が疑われる場合は git clone による復元を案内します。
 
 以下の `python cli.py` はCLI構文の説明です。実際のポータブル実行では
-cmdなら `cli.bat`、PowerShellなら `& .\cli.bat` に置き換えます。
+`start.bat <command>`（CLIを明示する場合は `start.bat cli <command>`）に置き換えます。
 PATH上のPythonへ依存せず、移動後の環境も起動前に検査できます。
 
 ## 設定
@@ -148,12 +155,15 @@ Cookie・DB・購入物・ブラウザープロフィール・キャッシュは
 
 ### Web UIのライブラリ
 
-- **Cookieを登録**：BOOTH / pixivのCookie JSON（配列、または `cookies` 配列を持つJSON・1MB以下）を選びます。登録後は購入一覧の全ページを自動同期します。既存CookieやCLIでのログインも画面を開いたときに検出します。
+初回は画面の案内どおり、1) Cookieを登録 → 2) BOOTHと同期 → 3) リストへ分類してダウンロード、の順に進みます。
+
+- **Cookieを登録**：BOOTH / pixivのCookie JSON（配列、または `cookies` 配列を持つJSON・1MB以下）を選びます。登録後は購入一覧の全ページを自動同期します。既存CookieやCLIでのログインも画面を開いたときに検出します。登録済みのCookieを置き換えるときは確認を表示します。
 - **全商品を画像で確認**：左側で「すべての商品」「未分類」「マイリスト」を切り替えます。商品名・ショップ名で検索でき、48件ずつページを移動できます。画像を取得できない商品も名前を表示します。
-- **リストを作成・追加**：「マイリスト」の `+` で作成し、「商品を追加」から未分類の商品を選びます。別のリストに登録済みの商品は追加できません。移す場合は元のリストから外します。
+- **リストを作成・追加**：「マイリスト」の `+` で作成し、「商品を追加」から未分類の商品を選びます。別のリストに登録済みの商品は追加できません。移す場合は元のリストから外します。リスト削除は確認後に実行し、商品は未分類へ戻ります。
 - **商品の並び順を保存**：各リストで購入順（新しい／古い）、名前順、ショップ順を選べます。変更時に自動保存します。
 - **マイリストを並べ替え**：上部の1行バー内で横にドラッグすると、隣のリストと1つずつ滑らかに入れ替わります。マウスを上下に動かしてもリストの高さは固定されます。端ではバーが自動で横スクロールし、マウスを離すと順番を自動保存します。「保存中」→「保存しました」で結果を確認でき、失敗時は元の順番へ戻します。Alt＋左右キーで移動、Escapeでドラッグの取り消しもできます。
-- **同期・ダウンロード**：「BOOTHと同期」で再取得できます。ダウンロードは商品カードから開始し、画面下部の「ダウンロード進捗」で確認します。
+- **同期・ダウンロード**：「BOOTHと同期」で再取得できます。ダウンロードは商品カードから開始し、画面下部の「ダウンロード進捗」で確認します。購入が見つからなかった場合は、Cookieの確認を案内します。
+- **保存先**：購入ファイルはリポジトリ内の `BOOTH-Reader-Library` に保存されます。画面下部の「ダウンロード進捗」に実際の保存先を表示します。「未完了ファイルを削除」は確認後に `.part` だけを消し、完了済み・展開済みファイルは残します。
 
 購入日をBOOTHから取得できない場合、購入順はBOOTHライブラリの掲載順を使用します。更新時もリストと手動順は保持します。旧版で複数リストに登録した既存の商品は削除せず維持します。
 
@@ -326,9 +336,9 @@ python cli.py unclassified --json | ConvertFrom-Json | Select-Object -ExpandProp
 
 ```powershell
 git pull --ff-only                # 個人データを維持してソースを更新
-& .\setup.bat --update            # 新しいソースを配置後、固定環境へ同期
-& .\cli.bat --version
-& .\cli.bat doctor
+& .\start.bat --update            # 新しいソースを配置後、固定環境へ同期
+& .\start.bat --version
+& .\start.bat doctor
 ```
 
 DB とライブラリはそのまま残ります。スキーマの更新は `PRAGMA user_version` によって
@@ -355,19 +365,22 @@ Remove-Item app.db, data, BOOTH-Reader-Library -Recurse -Force   # データの�
 
 | 症状 | 対処 |
 |---|---|
+| コマンドやフラグを間違えた | エラーに日本語で案内が出ます。`start.bat help` でコマンド一覧、Web UIは引数なしの `start.bat` です |
+| `--repair` / `--update` が「起動中です」と表示する | BOOTH-Readerを起動しているウィンドウでCtrl+Cを押して終了し、もう一度実行してください（データは残ります） |
 | `BOOTH_PREREQUISITE_MISSING` | 必要な部品が未導入です。メッセージ内にインストールコマンドが示されます |
 | `BOOTH_SCHEMA_TOO_NEW`（exit 1） | `app.db` が新しいバージョンで作られたものです。BOOTH-Reader を更新してください |
-| `doctor` が FAIL を表示する | 表示された対象名を確認してください（`browser:webview2` は同梱ブラウザーの展開が必要です。`setup.bat --repair` で復元されます） |
+| `doctor` が FAIL を表示する | 表示された対象名を確認してください（`browser:webview2` は同梱ブラウザーの展開が必要です。`start.bat --repair` で復元されます） |
 | `doctor` が `cookies` を「なし」と表示する | 確認先は `data/cookies.json` です。`--cookie-path` を付けた場合は同じパスを指定してください |
+| 初回準備で「同梱物 (vendor/)」のエラーが出る | リポジトリの取得が不完全です。リポジトリを `git clone` し直してください。`app.db`・`data`・`BOOTH-Reader-Library` は削除しないでください |
 | `auth login` が「ログインページを開けませんでした」と表示する | 通信環境（回線・DNS・プロキシ・ファイアウォール）の問題です。ブラウザの再インストールは不要です |
-| `BOOTHへのログインが必要です`（exit 1） | `python cli.py auth login` で再ログイン |
-| `BOOTH_LAYOUT_CHANGED`（exit 3） | BOOTH の HTML が変わった可能性があります。`booth-manager` や `BoothPM-SDK` を参照してセレクタの更新が必要です |
+| `BOOTHへのログインが必要です`（exit 1） | `start.bat auth login` で再ログイン |
+| `BOOTH_LAYOUT_CHANGED`（exit 3） | BOOTH の HTML が変わった可能性があります。`git pull` 後に `start.bat --update` で更新してください。更新しても直らない場合は開発側のセレクタ更新が必要です（`booth-manager` / `BoothPM-SDK` 参照） |
 | `一覧取得に失敗しました`（exit 1） | ネットワーク断またはタイムアウトです。回線を確認して再実行してください（自動リトライ済み） |
 | `database is locked` | 同時実行を避けてください。WAL と busy_timeout により大半は解消します |
 | 日本語ヘルプが化ける | `.bat` 経由で起動してください。子PythonはUTF-8で起動します |
 | `.part` ファイルが残っている | 通信断で途中まで取得できた状態のまま中断したものです。`download` を再実行すると続きから取得します |
 | 展開時に `BOOTH_LIMIT_EXCEEDED` | zip bomb を検出しました。`extracted` ではなく `downloads` の原本を確認してください |
-| WebUI が開かない | `python cli.py web` を実行して表示されるメッセージを確認してください |
+| WebUI が開かない | `start.bat --check` で準備状態を確認し、必要なら `start.bat --repair` を実行してください |
 
 ログの機密性は既定で `core/logging_setup.py` のフィルタが保証します。
 `token=`、`password=`、`Authorization:` などの値は伏せ字化されます。
@@ -397,7 +410,7 @@ Remove-Item app.db, data, BOOTH-Reader-Library -Recurse -Force   # データの�
 
 ## 開発・配布前の検証
 
-固定環境は `setup.bat` で準備します。配布用ZIP・wheel・sdistは生成しません。
+固定環境は `start.bat` で準備します（初回起動時に自動判定）。配布用ZIP・wheel・sdistは生成しません。
 
 ```powershell
 & .\.venv\Scripts\python.exe -m pytest -q

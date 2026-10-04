@@ -1,7 +1,7 @@
 """Portable WebView2 host with Playwright's loopback CDP transport.
 
 The WebView2 SDK's WinForms assembly targets .NET Framework 4.x, so the host is
-a small exe compiled once by ``setup.bat`` from ``tools/webview_host.cs`` using
+a small exe compiled once by ``start.bat`` from ``tools/webview_host.cs`` using
 the OS ``csc.exe``. Playwright talks to it over loopback CDP, which keeps the
 same ``sync_playwright`` API for both login and tests.
 """
@@ -188,7 +188,7 @@ def launch_browser(playwright: Any, *, headless: bool = False) -> Any:
     runtime = webview_runtime_root()
     sdk = ROOT / ".playwright-browsers/webview2-sdk"
     if not (runtime / "msedgewebview2.exe").is_file():
-        raise RuntimeError("WebView2 is missing; run setup.bat")
+        raise RuntimeError("WebView2 is missing; run start.bat")
     scratch = ROOT / ".cache/tmp"
     scratch.mkdir(parents=True, exist_ok=True)
     profile = Path(tempfile.mkdtemp(prefix="webview-profile-", dir=scratch))

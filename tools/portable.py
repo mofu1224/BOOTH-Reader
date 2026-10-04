@@ -176,7 +176,7 @@ def ensure_venv(root: Path = ROOT, recreate: bool = False) -> Path:
             return venv_python(root)
         last_error = (proc.stderr or proc.stdout)[-500:]
     raise SystemExit(
-        "Could not create .venv. Run setup.bat to prepare pinned local Python. "
+        "Could not create .venv. Run start.bat to prepare pinned local Python. "
         f"\nLast error: {last_error}"
     )
 

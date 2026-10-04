@@ -351,23 +351,38 @@ def test_web_index_survives_upstream_failure(tmp_path):
         assert "Cookie" in r.text  # auth line shows the problem
 
 
+def test_web_index_shows_first_steps_and_library_path(tmp_path):
+    db = tmp_path / "app.db"
+    init_db(db)
+    library = tmp_path / "lib"
+    with TestClient(create_app(str(db), library_root=str(library))) as client:
+        text = client.get("/").text
+    assert "empty-steps" in text
+    assert "BOOTHと同期" in text
+    assert "購入ファイルの保存先" in text
+    assert str(library) in text
+
+
+def test_layout_changed_payload_carries_user_hint():
+    from web.app import _err_payload
+
+    code, body = _err_payload(bridge.CliLayoutChangedError("markup changed"))
+    assert code == 502
+    assert body["code"] == "BOOTH_LAYOUT_CHANGED"
+    assert "更新" in body["hint"]
+
+
 # --- Launchers --------------------------------------------------------------
 
 
-def test_bat_launchers_are_valid():
+def test_single_bat_launcher_is_valid():
     base = Path(__file__).resolve().parent.parent
-    for name, markers in [
-        ("setup.bat", ["bootstrap.ps1", "-Mode setup", "%*"]),
-        ("start-web.bat", ["bootstrap.ps1", "-Mode web", "%*"]),
-        ("cli.bat", ["bootstrap.ps1", "-Mode cli", "pause"]),
-        ("run.cmd", ["bootstrap.ps1", "-Mode web", "%*"]),
-    ]:
-        path = base / name
-        assert path.exists(), f"{name} missing"
-        text = path.read_text(encoding="utf-8", errors="replace")
-        for marker in markers:
-            assert marker in text, f"{name} missing marker: {marker}"
-        # cmd.exe misparses LF-only batch files.
-        assert "\r\n" in path.read_bytes().decode("utf-8", "replace"), (
-            f"{name} must use CRLF line endings"
-        )
+    path = base / "start.bat"
+    assert path.exists(), "start.bat missing"
+    text = path.read_text(encoding="utf-8", errors="replace")
+    for marker in ("bootstrap.ps1", "-Mode auto", "%*"):
+        assert marker in text, f"start.bat missing marker: {marker}"
+    # cmd.exe misparses LF-only batch files.
+    assert "\r\n" in path.read_bytes().decode("utf-8", "replace"), (
+        "start.bat must use CRLF line endings"
+    )

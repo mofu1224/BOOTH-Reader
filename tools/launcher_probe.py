@@ -58,7 +58,11 @@ def main() -> int:
     browser = None
     with (cache / "managed-web.log").open("w", encoding="utf-8") as log:
         server = subprocess.Popen(
-            command("start-web.bat", str(port)), cwd=ROOT.parent, env=env, stdout=log, stderr=log
+            command("start.bat", f"{port} --no-open"),
+            cwd=ROOT.parent,
+            env=env,
+            stdout=log,
+            stderr=log,
         )
         try:
             for _ in range(1800):
@@ -204,7 +208,7 @@ def main() -> int:
                 )
                 server.wait(timeout=10)
     cli = subprocess.run(
-        command("cli.bat", "lists list --json"),
+        command("start.bat", "cli lists list --json"),
         cwd=ROOT.parent,
         env=env,
         capture_output=True,

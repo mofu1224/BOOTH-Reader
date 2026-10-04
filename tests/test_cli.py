@@ -62,7 +62,11 @@ def test_version(capsys):
 
 def test_no_args_prints_help(capsys):
     assert cli_mod.main([]) == 2
-    assert "usage" in capsys.readouterr().out.lower()
+    captured = capsys.readouterr()
+    assert "usage" in captured.out.lower()
+    # The pointer to the supported entry point goes to stderr, keeping stdout
+    # free for machines that pipe the help output.
+    assert "start.bat" in captured.err
 
 
 def test_init_db_creates_and_is_idempotent(tmp_path):
@@ -110,6 +114,16 @@ def test_usage_errors_exit_2(tmp_path):
     with pytest.raises(SystemExit) as e:
         cli_mod.main(["--db", str(db), "nosuchcommand"])
     assert e.value.code == 2
+
+
+def test_unknown_command_prints_japanese_guidance(tmp_path, capsys):
+    db = init_db(tmp_path / "app.db")
+    with pytest.raises(SystemExit) as e:
+        cli_mod.main(["--db", str(db), "nosuchcommand"])
+    assert e.value.code == 2
+    err = capsys.readouterr().err
+    assert "使い方" in err
+    assert "start.bat" in err
 
 
 def test_missing_auth_exits_1(tmp_path):

@@ -674,7 +674,7 @@ def test_login_browser_start_failure_is_still_a_prerequisite(monkeypatch, tmp_pa
     )
     with pytest.raises(BoothPrerequisiteError) as exc:
         login(headless=True, path=tmp_path / "ck.json", timeout_s=5)
-    assert "setup.bat --repair" in str(exc.value)
+    assert "start.bat --repair" in str(exc.value)
 
 
 def test_login_playwright_start_failure_is_still_a_prerequisite(monkeypatch, tmp_path):

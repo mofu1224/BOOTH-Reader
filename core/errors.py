@@ -32,7 +32,7 @@ EXIT_ERROR = 1
 EXIT_USAGE = 2
 EXIT_LAYOUT_CHANGED = 3
 
-_RELOGIN_HINT = "BOOTHへのログインが必要です。`python cli.py auth login` で再ログインしてください。"
+_RELOGIN_HINT = "BOOTHへのログインが必要です。`start.bat auth login` で再ログインしてください。"
 
 
 class BoothError(Exception):
@@ -96,8 +96,8 @@ class BoothDatabaseError(BoothError):
             "ファイルが壊れているか、SQLite データベースでない可能性があります。"
             "別の場所を使うには --db <path> を指定してください。"
             "新品で作り直すには、壊れたファイルを退避してから "
-            "`python cli.py init-db` を実行し、"
-            "`python cli.py purchases list --update-db` で再取得してください。"
+            "`start.bat init-db` を実行し、"
+            "`start.bat purchases list --update-db` で再取得してください。"
         )
         super().__init__(f"{base} {detail}".strip())
 
@@ -121,7 +121,7 @@ class BoothSchemaTooNewError(BoothError):
             f"データベース ({path}) のスキーマ版 v{found} は、このバージョン (v{supported}) "
             "より新しいため開けません。BOOTH-Reader を最新に更新してから実行し直してください。"
             "更新できない場合は、更新前のバージョンの BOOTH-Reader で "
-            "`python cli.py doctor` を実行してください。"
+            "`start.bat doctor` を実行してください。"
         )
 
 
@@ -131,7 +131,7 @@ class BoothPrerequisiteError(BoothError):
     Deliberately **not** a :class:`BoothAuthError`. An earlier version reused
     the auth error for "Playwright is not installed", which produced this:
 
-        ERROR BOOTHへのログインが必要です。`python cli.py auth login` で
+        ERROR BOOTHへのログインが必要です。`start.bat auth login` で
         再ログインしてください。 Playwrightが未導入です。
 
     -- telling the user to re-run the command they had just run, while burying
