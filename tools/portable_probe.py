@@ -88,6 +88,8 @@ def main() -> int:
         with sync_playwright() as pw, launch_browser(pw, headless=False) as browser:
             page = browser.new_page()
             requests = []
+            page_errors = []
+            page.on("pageerror", lambda error: page_errors.append(str(error)))
             page.on("request", lambda req: requests.append(req.url))
             page.route(
                 "**/*",
@@ -103,6 +105,14 @@ def main() -> int:
             # Exercise the rendered controls, including their refresh/busy logic.
             result = {}
             page.locator("#b-new-list").click()
+            page.locator("#in-listname").focus()
+            page.keyboard.press("Enter")
+            assert page.locator("#in-listname").evaluate("node => !node.checkValidity()")
+            page.keyboard.press("Escape")
+            assert not page.locator("#create-dialog").evaluate("node => node.open")
+            assert page.locator("#b-new-list").evaluate("node => node === document.activeElement")
+            page.keyboard.press("Enter")
+            assert page.locator("#create-dialog").evaluate("node => node.open")
             page.locator("#in-listname").fill("Portable probe")
             with page.expect_response(lambda response: response.url.endswith("/lists")) as reply:
                 page.locator("#b-list-create").click()
@@ -136,6 +146,24 @@ def main() -> int:
                 }""")
             )
             assert all(value == 200 for value in result.values()), result
+            page.reload(wait_until="networkidle")
+            page.wait_for_function("document.getElementById('c-lists').textContent === '0'")
+            page.set_viewport_size({"width": 650, "height": 900})
+            assert page.evaluate("document.documentElement.scrollWidth <= window.innerWidth"), (
+                "narrow view overflows horizontally"
+            )
+            page.screenshot(path=str(cache / "web-narrow.png"))
+            page.set_viewport_size({"width": 1280, "height": 900})
+            page.evaluate("document.documentElement.style.zoom = '2'")
+            assert page.locator("#main-nav .nav-label").evaluate_all(
+                "nodes => nodes.length === 2 && nodes.every(n => n.clientWidth >= n.scrollWidth)"
+            ), "zoom hides primary navigation labels"
+            assert page.locator("#b-new-list").is_visible()
+            page.locator("#b-new-list").click()
+            assert page.locator("#in-listname").is_visible()
+            page.keyboard.press("Escape")
+            page.screenshot(path=str(cache / "web-zoom.png"))
+            assert page_errors == [], page_errors
             # Keep live subprocesses long enough for the OS module snapshot.
             webview_exe = ROOT / ".playwright-browsers/webview2/msedgewebview2.exe"
             report = {
@@ -150,6 +178,14 @@ def main() -> int:
                 else pw.chromium.executable_path,
                 "browser_version": browser.version,
                 "http": result,
+                "ui_checks": [
+                    "empty name rejected",
+                    "keyboard open/Escape/focus restored",
+                    "classification persisted after reload",
+                    "650px no horizontal overflow",
+                    "200% CSS zoom controls",
+                    "no JavaScript page errors",
+                ],
                 "requests": requests,
                 "temp": os.environ.get("TEMP"),
             }

@@ -77,7 +77,9 @@ def webview() -> None:
             indent=2,
         )
     )
-    state = json.loads(re.search(r'id="__NUXT_DATA__">(.*?)</script>', page, re.S).group(1))
+    match = re.search(r'id="__NUXT_DATA__">(.*?)</script>', page, re.S)
+    assert match is not None
+    state = json.loads(match.group(1))
     for item in state:
         if isinstance(item, str) and (
             item.endswith(".cab") or "eula" in item.lower() or "license terms" in item.lower()
@@ -186,7 +188,9 @@ def acquire_webview() -> None:
     from defusedxml.ElementTree import fromstring
 
     page = (EVIDENCE / "webview-download.html").read_text(encoding="utf-8")
-    state = json.loads(re.search(r'id="__NUXT_DATA__">(.*?)</script>', page, re.S).group(1))
+    match = re.search(r'id="__NUXT_DATA__">(.*?)</script>', page, re.S)
+    assert match is not None
+    state = json.loads(match.group(1))
     url = next(
         item for item in state if isinstance(item, str) and item.endswith("154.0.4258.53.x64.cab")
     )

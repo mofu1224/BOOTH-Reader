@@ -34,7 +34,7 @@ import sys
 import threading
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any
+from typing import Any, cast
 
 log = logging.getLogger("booth_reader.bridge")
 
@@ -110,14 +110,14 @@ def _child_env() -> dict[str, str]:
     return env
 
 
-def _sanitize_item_id(item_id: str) -> str:
+def sanitize_item_id(item_id: str) -> str:
     value = (item_id or "").strip()
     if not _ITEM_ID_RE.match(value):
         raise CliBridgeError(f"不正な item_id です: {value[:32]!r}", returncode=2)
     return value
 
 
-def _sanitize_list_name(name: str) -> str:
+def sanitize_list_name(name: str) -> str:
     value = (name or "").strip()
     if not value or len(value) > MAX_LIST_NAME or any(c in value for c in "\n\r\x00"):
         raise CliBridgeError("不正なリスト名です (1-128文字)", returncode=2)
@@ -329,8 +329,11 @@ class CliWorker:
 
             elapsed = (time.perf_counter() - started) * 1000
             try:
-                response = json.loads(line)
-                if not isinstance(response, dict) or response.get("id") != request["id"]:
+                raw = json.loads(line)
+                if not isinstance(raw, dict):
+                    raise ValueError("response id/shape mismatch")
+                response = cast("dict[str, Any]", raw)
+                if response.get("id") != request["id"]:
                     raise ValueError("response id/shape mismatch")
                 returncode = int(response.get("returncode", 1))
             except (ValueError, TypeError) as e:
@@ -516,27 +519,27 @@ def update_purchases(bridge: Bridge) -> dict[str, Any]:
 
 
 def lists_create(bridge: Bridge, name: str) -> dict[str, Any]:
-    safe = _sanitize_list_name(name)
+    safe = sanitize_list_name(name)
     res = bridge.run(["lists", "create", "--name", safe], timeout=30)
     return {"ok": True, "message": res.stdout.strip()[-500:]}
 
 
 def lists_add(bridge: Bridge, list_name: str, item_id: str) -> dict[str, Any]:
-    safe_list = _sanitize_list_name(list_name)
-    safe_item = _sanitize_item_id(item_id)
+    safe_list = sanitize_list_name(list_name)
+    safe_item = sanitize_item_id(item_id)
     res = bridge.run(["lists", "add", "--list", safe_list, "--item-id", safe_item], timeout=30)
     return {"ok": True, "message": res.stdout.strip()[-500:]}
 
 
 def lists_remove(bridge: Bridge, list_name: str, item_id: str) -> dict[str, Any]:
-    safe_list = _sanitize_list_name(list_name)
-    safe_item = _sanitize_item_id(item_id)
+    safe_list = sanitize_list_name(list_name)
+    safe_item = sanitize_item_id(item_id)
     res = bridge.run(["lists", "remove", "--list", safe_list, "--item-id", safe_item], timeout=30)
     return {"ok": True, "message": res.stdout.strip()[-500:]}
 
 
 def lists_delete(bridge: Bridge, name: str) -> dict[str, Any]:
-    safe = _sanitize_list_name(name)
+    safe = sanitize_list_name(name)
     res = bridge.run(["lists", "delete", "--name", safe], timeout=30)
     return {"ok": True, "message": res.stdout.strip()[-500:]}
 
@@ -563,7 +566,7 @@ def download_argv(
         return [
             "download",
             "--item-id",
-            _sanitize_item_id(item_id),
+            sanitize_item_id(item_id),
             "--concurrent",
             str(conc),
             *extra,

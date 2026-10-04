@@ -436,7 +436,7 @@ def test_check_concurrent_bounds():
     assert check_concurrent(5) == 5
     for bad in (0, -1, 6, 99, "x", None):
         with pytest.raises(ValueError):
-            check_concurrent(bad)
+            check_concurrent(bad)  # type: ignore[arg-type]
 
 
 def test_sha256_of(tmp_path):

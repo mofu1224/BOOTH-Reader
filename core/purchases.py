@@ -15,9 +15,10 @@ import re
 import sqlite3
 import tempfile
 import time
+from collections.abc import Iterable
 from itertools import islice
 from pathlib import Path
-from typing import Any
+from typing import Any, cast
 from urllib.parse import urldefrag, urljoin, urlsplit
 
 from . import net
@@ -63,7 +64,9 @@ def _looks_logged_out(url: str) -> bool:
 
 
 def fetch_library_html(
-    cookies: list[dict] | None = None, cookie_path: str | Path | None = None, timeout: int = TIMEOUT
+    cookies: list[dict[str, Any]] | None = None,
+    cookie_path: str | Path | None = None,
+    timeout: int = TIMEOUT,
 ) -> tuple[str, str]:
     """Fetch the purchase library page. Returns ``(html, final_url)``."""
     if cookies is None:
@@ -92,7 +95,7 @@ def _attr(el: Any, name: str) -> str:
     if value is None:
         return ""
     if isinstance(value, (list, tuple)):
-        return " ".join(str(v) for v in value)
+        return " ".join(str(part) for part in cast("Iterable[Any]", value))
     return str(value)
 
 
@@ -118,7 +121,7 @@ def _row_container(anchor: Any, order_id: str) -> tuple[Any, list[Any]]:
 def _item_id_for(links: list[Any], order_id: str) -> str:
     """Use only a unique product link in the order's own bounded row."""
     if links:
-        products = set()
+        products: set[str] = set()
         for link in links:
             href = _attr(link, "href")
             host = (urlsplit(href).hostname or "").lower()
@@ -147,7 +150,8 @@ def _is_row_sized(node: Any) -> bool:
     """
     if len(node.contents) > MAX_CONTAINER_CHILDREN:
         return False
-    for seen, _ in enumerate(islice(node.descendants, MAX_CONTAINER_DESCENDANTS + 1), start=1):
+    descendants = cast("Iterable[Any]", node.descendants)
+    for seen, _entry in enumerate(islice(descendants, MAX_CONTAINER_DESCENDANTS + 1), start=1):
         if seen > MAX_CONTAINER_DESCENDANTS:
             return False
     return True
@@ -195,12 +199,12 @@ def library_card(thumbnail: Any) -> tuple[Any, str]:
     return card, item_id
 
 
-def _parse_current_library(thumbnails: list[Any], base_url: str) -> list[dict]:
+def _parse_current_library(thumbnails: list[Any], base_url: str) -> list[dict[str, Any]]:
     source, _ = urldefrag(base_url)
     parts = urlsplit(source)
     if parts.scheme != "https" or parts.hostname != "accounts.booth.pm" or parts.path != "/library":
         raise BoothLayoutChangedError("ライブラリの取得元URLが想定外です。")
-    rows: list[dict] = []
+    rows: list[dict[str, Any]] = []
     for thumbnail in thumbnails:
         if len(rows) >= MAX_ROWS:
             raise BoothLimitExceededError(f"購入一覧が上限 {MAX_ROWS} 件を超えました。")
@@ -246,7 +250,7 @@ def _parse_current_library(thumbnails: list[Any], base_url: str) -> list[dict]:
     return rows
 
 
-def parse_library_html(html: str, base_url: str = LIBRARY_URL) -> list[dict]:
+def parse_library_html(html: str, base_url: str = LIBRARY_URL) -> list[dict[str, Any]]:
     """Parse the BOOTH purchase library into rows.
 
     Raises :class:`BoothLayoutChangedError` when the page does not look like a
@@ -292,7 +296,7 @@ def parse_library_html(html: str, base_url: str = LIBRARY_URL) -> list[dict]:
             f"商品カードと注文リンクが見つかりません (html={len(html)}bytes)。"
         )
 
-    rows: list[dict] = []
+    rows: list[dict[str, Any]] = []
     seen: set[str] = set()
     for anchor in anchors:
         href = _attr(anchor, "href")
@@ -338,7 +342,7 @@ def parse_library_html(html: str, base_url: str = LIBRARY_URL) -> list[dict]:
     return rows
 
 
-def upsert_purchases(conn: sqlite3.Connection, rows: list[dict]) -> int:
+def upsert_purchases(conn: sqlite3.Connection, rows: list[dict[str, Any]]) -> int:
     """Insert or refresh items and purchases in one transaction.
 
     Returning 0 rows is not an error; the caller reports the count.
@@ -385,7 +389,7 @@ def upsert_purchases(conn: sqlite3.Connection, rows: list[dict]) -> int:
     return n
 
 
-def list_purchases(conn: sqlite3.Connection, limit: int | None = None) -> list[dict]:
+def list_purchases(conn: sqlite3.Connection, limit: int | None = None) -> list[dict[str, Any]]:
     query = """SELECT i.item_id,i.title,i.url,i.shop,i.thumbnail,i.category,i.published_at,
                       p.purchase_date,p.price,p.library_order,i.created_at
                FROM items i LEFT JOIN purchases p ON p.item_id=i.item_id
@@ -408,7 +412,7 @@ def _csv_cell(value: Any) -> str:
     )
 
 
-def export_csv(rows: list[dict], path: str | Path) -> Path:
+def export_csv(rows: list[dict[str, Any]], path: str | Path) -> Path:
     """Write rows to CSV atomically, with a BOM so Excel reads UTF-8 correctly."""
     target = Path(path)
     tmp = None
@@ -460,7 +464,7 @@ def update_from_network(db_path: str | Path, cookie_path: str | Path | None = No
 
     cookies = load_cookies(cookie_path)
     html, final = fetch_library_html(cookies=cookies)
-    rows_by_order: dict[str, dict] = {}
+    rows_by_order: dict[str, dict[str, Any]] = {}
     visited = {final}
     for _ in range(200):
         for row in parse_library_html(html, base_url=final):

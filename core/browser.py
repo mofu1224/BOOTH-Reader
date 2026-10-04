@@ -29,7 +29,7 @@ log = logging.getLogger("booth_reader.browser")
 
 
 class HostedContext:
-    def __init__(self, context: Any, viewport: dict | None = None) -> None:
+    def __init__(self, context: Any, viewport: dict[str, Any] | None = None) -> None:
         self.context = context
         self.viewport = viewport
 
@@ -44,7 +44,9 @@ class HostedContext:
 
 
 class HostedBrowser:
-    def __init__(self, browser: Any, process: subprocess.Popen, profile: Path, port: int) -> None:
+    def __init__(
+        self, browser: Any, process: subprocess.Popen[Any], profile: Path, port: int
+    ) -> None:
         self.browser, self.process, self.profile, self.port = browser, process, profile, port
 
     def new_context(self, **options: Any) -> HostedContext:
@@ -82,7 +84,7 @@ def remove_profile(profile: Path) -> None:
             time.sleep(0.1)
 
 
-def terminate_host(process: subprocess.Popen) -> None:
+def terminate_host(process: subprocess.Popen[Any]) -> None:
     system = Path(os.environ.get("SYSTEMROOT", r"C:\Windows"))
     if process.poll() is None:
         subprocess.run(  # noqa: S603 - owned child tree, fixed OS tool
@@ -192,13 +194,13 @@ def launch_browser(playwright: Any, *, headless: bool = False) -> Any:
     scratch = ROOT / ".cache/tmp"
     scratch.mkdir(parents=True, exist_ok=True)
     profile = Path(tempfile.mkdtemp(prefix="webview-profile-", dir=scratch))
-    from .auth import _current_account, _icacls
+    from .auth import current_account, icacls
 
-    account = _current_account()
+    account = current_account()
     if (
         not account
-        or not _icacls(profile, "/grant:r", f"{account}:(OI)(CI)F")
-        or not _icacls(profile, "/inheritance:r")
+        or not icacls(profile, "/grant:r", f"{account}:(OI)(CI)F")
+        or not icacls(profile, "/inheritance:r")
     ):
         remove_profile(profile)
         raise RuntimeError("Cannot restrict the temporary login profile to this account")

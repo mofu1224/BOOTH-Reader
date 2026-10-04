@@ -6,7 +6,7 @@ import builtins
 import json
 import logging
 import threading
-from collections.abc import AsyncIterator
+from collections.abc import AsyncGenerator
 from contextlib import asynccontextmanager
 from pathlib import Path
 from typing import Any
@@ -39,8 +39,8 @@ class DownloadReq(BaseModel):
 
 
 class ListsReq(BaseModel):
-    list_ids: builtins.list[int] = Field(default_factory=builtins.list, max_length=20000)
-    item_ids: builtins.list[str] = Field(default_factory=builtins.list, max_length=20000)
+    list_ids: builtins.list[int] = Field(default_factory=builtins.list[int], max_length=20000)
+    item_ids: builtins.list[str] = Field(default_factory=builtins.list[str], max_length=20000)
     action: str = Field(pattern="^(create|add|remove|delete|sort|reorder|reorder-lists)$")
     name: str | None = Field(default=None, max_length=128)
     list: str | None = Field(default=None, max_length=128)
@@ -141,7 +141,7 @@ def create_app(
     download_state: dict[str, Any] = {"running": False, "ok": None, "error": ""}
 
     @asynccontextmanager
-    async def lifespan(app: FastAPI) -> AsyncIterator[None]:  # noqa: ARG001
+    async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:  # noqa: ARG001
         log.info("web ui starting db=%s library=%s", db, root)
         try:
             yield
@@ -253,13 +253,13 @@ def create_app(
             if req.action in member_operations and req.list and req.item_id:
                 return member_operations[req.action](link, req.list, req.item_id)
             if req.action in {"sort", "reorder"} and req.list:
-                key = bridge._sanitize_list_name(req.list)
+                key = bridge.sanitize_list_name(req.list)
                 argv = ["lists", req.action, "--list", key, "--json"]
                 if req.action == "sort":
                     argv += ["--sort", req.sort]
                     result = link.run(argv, timeout=30)
                 else:
-                    ids = [bridge._sanitize_item_id(i) for i in req.item_ids]
+                    ids = [bridge.sanitize_item_id(i) for i in req.item_ids]
                     argv += ["--items", "-"]
                     result = bridge.run_cli_once(
                         argv, db, cli_path, python_exe, timeout=30, stdin_text=json.dumps(ids)
@@ -339,13 +339,6 @@ def create_app(
         )
 
     return app
-
-
-def _prepare_library(root: str) -> None:
-    try:
-        Path(root).mkdir(parents=True, exist_ok=True)
-    except OSError as e:
-        log.warning("library directory %s not writable: %s", root, type(e).__name__)
 
 
 def link_shutdown(db_path: str) -> None:

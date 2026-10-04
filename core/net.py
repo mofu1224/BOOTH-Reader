@@ -23,10 +23,10 @@ import os
 import random
 import threading
 import time
-from collections.abc import Iterable, Iterator
+from collections.abc import Generator, Iterable
 from contextlib import contextmanager
 from http.cookiejar import Cookie, CookieJar, DefaultCookiePolicy
-from typing import Any
+from typing import Any, cast
 from urllib.parse import urlsplit
 
 from .errors import BoothAuthError, BoothNetworkError, BoothPrerequisiteError
@@ -78,7 +78,7 @@ RETRYABLE_EXC: tuple[type[BaseException], ...] = (
 _local = threading.local()
 
 
-def _require_httpx() -> Any:
+def require_httpx() -> Any:
     if _httpx is None:
         raise BoothPrerequisiteError(
             "httpx (HTTP クライアント) が未導入です",
@@ -105,7 +105,7 @@ def default_headers(extra: dict[str, str] | None = None) -> dict[str, str]:
 
 
 def _new_client(timeout: float) -> Any:
-    httpx = _require_httpx()
+    httpx = require_httpx()
     limits = httpx.Limits(max_connections=8, max_keepalive_connections=4, keepalive_expiry=30.0)
     return httpx.Client(
         follow_redirects=True,
@@ -176,7 +176,9 @@ def backoff_delay(attempt: int, retry_after: float | None = None) -> float:
     return random.uniform(0.0, ceiling)  # noqa: S311
 
 
-def cookie_header(cookies: Iterable[dict] | dict[str, str] | None, url: str) -> dict[str, str]:
+def cookie_header(
+    cookies: Iterable[dict[str, Any]] | dict[str, str] | None, url: str
+) -> dict[str, str]:
     """Build a cookie header scoped to ``url``'s host.
 
     BOOTH hands out cookies for several domains (``accounts.booth.pm``,
@@ -194,17 +196,21 @@ def cookie_header(cookies: Iterable[dict] | dict[str, str] | None, url: str) -> 
     )
 
 
-def _cookie_jar(cookies: Iterable[dict] | dict[str, str] | None, url: str) -> CookieJar:
+def _cookie_jar(cookies: Iterable[dict[str, Any]] | dict[str, str] | None, url: str) -> CookieJar:
     """Retain browser scopes, including host-only, on every redirect."""
     jar = CookieJar(
         policy=DefaultCookiePolicy(strict_ns_domain=DefaultCookiePolicy.DomainStrictNonDomain)
     )
     host = (urlsplit(url).hostname or "").lower()
     if isinstance(cookies, dict):
-        cookies = [{"name": k, "value": v, "domain": host} for k, v in cookies.items()]
-    for c in cookies or []:
-        if not isinstance(c, dict):
+        cookies = [
+            {"name": k, "value": v, "domain": host}
+            for k, v in cast("dict[str, Any]", cookies).items()
+        ]
+    for raw in cast("Iterable[object]", cookies or []):
+        if not isinstance(raw, dict):
             continue
+        c = cast("dict[str, Any]", raw)
         name, value = c.get("name"), c.get("value")
         if not name or value is None:
             continue
@@ -245,15 +251,15 @@ def _cookie_jar(cookies: Iterable[dict] | dict[str, str] | None, url: str) -> Co
 
 @contextmanager
 def scoped_cookies(
-    client: Any, cookies: Iterable[dict] | dict[str, str] | None, url: str
-) -> Iterator[None]:
+    client: Any, cookies: Iterable[dict[str, Any]] | dict[str, str] | None, url: str
+) -> Generator[None, None, None]:
     """Connections are reusable; authentication state is not reusable after logout.
 
     httpx copies CookieJar when building redirects and loses its strict policy.
     The request hook reapplies that policy before each redirected send.
     """
     jar = _cookie_jar(cookies, url)
-    client.cookies = _require_httpx().Cookies(jar)
+    client.cookies = require_httpx().Cookies(jar)
 
     def scope_request(request: Any) -> None:
         request.headers.pop("cookie", None)
@@ -273,7 +279,7 @@ def scoped_cookies(
 def request(
     url: str,
     *,
-    cookies: Iterable[dict] | dict[str, str] | None = None,
+    cookies: Iterable[dict[str, Any]] | dict[str, str] | None = None,
     headers: dict[str, str] | None = None,
     timeout: float = DEFAULT_TIMEOUT,
     max_retries: int = MAX_RETRIES,
@@ -284,7 +290,7 @@ def request(
     ``accept_statuses`` are statuses the caller wants back verbatim (e.g. 206
     or 416 for range downloads). Everything else outside 2xx raises.
     """
-    httpx = _require_httpx()
+    httpx = require_httpx()
     client = get_client(timeout)
     accept = set(accept_statuses)
     last_error: BaseException | None = None
@@ -304,7 +310,7 @@ def request(
                 "http retry %d/%d url=%s err=%s sleep=%.2fs",
                 attempt,
                 max_retries,
-                _safe_url(url),
+                safe_url(url),
                 type(e).__name__,
                 delay,
             )
@@ -312,7 +318,7 @@ def request(
             continue
         except httpx.HTTPError as e:
             raise BoothNetworkError(
-                f"HTTPクライアントエラー ({type(e).__name__}): {_safe_url(url)}"
+                f"HTTPクライアントエラー ({type(e).__name__}): {safe_url(url)}"
             ) from e
 
         if response.status_code in accept or 200 <= response.status_code < 300:
@@ -320,7 +326,7 @@ def request(
 
         if response.status_code in (401, 403):
             response.close()
-            raise BoothAuthError(f"HTTP {response.status_code} for {_safe_url(url)}")
+            raise BoothAuthError(f"HTTP {response.status_code} for {safe_url(url)}")
 
         if response.status_code in RETRYABLE_STATUS and attempt < max_retries:
             delay = backoff_delay(attempt, _retry_after(response))
@@ -328,7 +334,7 @@ def request(
                 "http retry %d/%d url=%s status=%d sleep=%.2fs",
                 attempt,
                 max_retries,
-                _safe_url(url),
+                safe_url(url),
                 response.status_code,
                 delay,
             )
@@ -336,15 +342,15 @@ def request(
             time.sleep(delay)
             continue
 
-        raise BoothNetworkError(f"HTTP {response.status_code} for {_safe_url(url)}")
+        raise BoothNetworkError(f"HTTP {response.status_code} for {safe_url(url)}")
 
     raise BoothNetworkError(
-        f"要求に失敗しました ({_safe_url(url)}: "
+        f"要求に失敗しました ({safe_url(url)}: "
         f"{type(last_error).__name__ if last_error else 'unknown'})"
     )
 
 
-def _safe_url(url: str) -> str:
+def safe_url(url: str) -> str:
     """Strip query and fragment so signed URLs never reach the log."""
     try:
         parts = urlsplit(url)

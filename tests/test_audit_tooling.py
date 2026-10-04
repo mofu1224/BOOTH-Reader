@@ -7,6 +7,25 @@ from types import SimpleNamespace
 from tools import rc_test
 
 
+def test_launcher_probe_does_not_kill_unowned_processes(tmp_path, monkeypatch):
+    import pytest
+
+    from tools import launcher_probe
+
+    (tmp_path / "OWNED-BY-PORTABILITY-TEST.txt").touch()
+    monkeypatch.setattr(launcher_probe, "ROOT", tmp_path / "checkout")
+    calls = []
+    monkeypatch.setattr(launcher_probe.subprocess, "run", lambda *a, **k: calls.append(a))
+
+    def stop_before_launch():
+        raise RuntimeError("probe boundary")
+
+    monkeypatch.setattr(launcher_probe.socket, "socket", stop_before_launch)
+    with pytest.raises(RuntimeError, match="probe boundary"):
+        launcher_probe.main()
+    assert calls == [], "An isolated probe must not terminate pre-existing applications"
+
+
 def test_a11_rc_startup_preserves_paths_with_spaces(tmp_path, monkeypatch):
     work = tmp_path / "path with spaces"
     work.mkdir()
