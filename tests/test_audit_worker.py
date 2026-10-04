@@ -40,10 +40,13 @@ def test_a06_first_concurrent_calls_create_one_worker(seeded_db, monkeypatch):
 def test_a06_close_releases_all_pipes(seeded_db):
     link = bridge.Bridge(seeded_db)
     bridge.get_purchases(link)
+    assert link._worker is not None
     proc = link._worker._proc
+    assert proc is not None and proc.stdin is not None and proc.stdout is not None
+    stdin, stdout = proc.stdin, proc.stdout
     link.close()
     assert proc.poll() is not None
-    assert proc.stdin.closed and proc.stdout.closed
+    assert stdin.closed and stdout.closed
 
 
 def test_a06_relative_db_agrees_in_both_transports(tmp_path, monkeypatch):

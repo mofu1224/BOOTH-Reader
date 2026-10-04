@@ -31,6 +31,7 @@ body{font-family:Arial,'Yu Gothic UI',Meiryo,system-ui,sans-serif;font-size:14px
 button,input,select{border-radius:var(--radius);font-size:13px;min-height:42px;padding:10px 16px}
 button:hover{background:var(--soft);border-color:#aaa}button.primary{font-weight:400}button.primary:hover{background:#333;color:#fff}
 .skip{background:var(--surface)}
+.shell{container-type:inline-size}
 .nav{display:flex;flex-wrap:wrap;gap:4px;min-width:0}.nav button{width:auto;max-width:100%;font-size:13px;padding:10px 14px;border-radius:2px}.nav button[aria-current=page]{color:var(--ink);font-weight:400;background:var(--soft)}.count{font-size:11px}
 #main-nav{grid-column:2;grid-row:1;align-self:center;padding-bottom:24px}
 .sidebar-heading{grid-column:1;grid-row:2;margin:0;padding:12px 0;font-size:11px;font-weight:400;border-top:1px solid var(--line);gap:20px}.sidebar-heading button{font-size:18px;background:transparent}
@@ -46,6 +47,8 @@ dialog{border-radius:4px;padding:32px;background:var(--surface)}dialog::backdrop
 @media(max-width:650px){.sidebar{grid-template-columns:minmax(0,1fr) auto;padding:20px 16px 0;gap:0 12px}.brand{font-size:18px}.connection{grid-column:2;grid-row:1 / 3;padding-bottom:20px;gap:6px}.connection button{padding:7px 12px;min-height:36px}.auth-state{font-size:10px}#main-nav{grid-column:1 / 3;grid-row:3;border-top:1px solid var(--line);padding:10px 0}.sidebar-heading{grid-column:1 / 3;grid-row:4;padding:10px 0 0;border-top:1px solid var(--line);justify-content:flex-start}#list-nav{grid-column:1 / 3;grid-row:5;border-top:0;padding:0 0 12px}.nav button{padding:8px 12px;font-size:12px}.nav-label{max-width:220px}main{padding:40px 16px 48px}h1{font-size:30px;margin:0}.topbar{margin-bottom:32px}.topbar .actions{margin-top:24px;gap:8px}.topbar .actions button{min-width:0}.topbar .actions .primary{min-width:170px;gap:20px}.toolbar{padding-top:20px;gap:12px}.search{flex-basis:100%;max-width:none}.toolbar label{margin-left:0;font-size:11px}.toolbar select{margin-left:6px;padding:8px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 14px}.product-info{padding:12px 0 0}.product h2{font-size:12px}.product-actions{gap:6px}.product-actions button{font-size:10px;padding:6px 8px;min-height:36px}.shop,.meta{font-size:10px}.summary{font-size:10px}.empty{padding:56px 16px}.empty h2{font-size:21px}dialog{padding:20px}.candidate{align-items:flex-start}.candidate button{font-size:12px;padding:6px 10px}}
 @media(max-width:650px){.brand{padding-bottom:20px}.connection{grid-row:1}#main-nav{grid-row:2}.sidebar-heading{grid-row:3}#list-nav{grid-row:4}main{padding-top:32px}}
 @media(prefers-reduced-motion:no-preference){button{transition:border-color .15s,background .15s}.cover{transition:border-color .15s}.product:hover .cover{border-color:#999}}
+@container(max-width:1000px){.sidebar{grid-template-columns:minmax(0,1fr) auto}.connection{grid-column:2;flex-direction:column;align-items:flex-end;gap:8px}#main-nav{grid-column:1 / 3;grid-row:2}.sidebar-heading{grid-column:1;grid-row:3}#list-nav{grid-column:2;grid-row:3}.topbar{display:block}.topbar .actions{margin-top:24px}}
+@container(max-width:650px){.sidebar{gap:0 12px;padding:20px 16px 0}.brand{font-size:18px}.sidebar-heading{grid-column:1 / 3}#list-nav{grid-column:1 / 3;grid-row:4;border-top:0}#main-nav{border-top:1px solid var(--line);padding:10px 0}.connection{max-width:280px}.connection a{font-size:12px}main{padding:32px 16px 48px}}
 """
 
 SCRIPT = r"""
@@ -188,7 +191,7 @@ def render_index(data: dict[str, Any], error: str = "", library_path: str = "") 
         else ""
     )
     initial = json.dumps(data, ensure_ascii=True).replace("<", "\\u003c").replace("&", "\\u0026")
-    cards = []
+    cards: list[str] = []
     for item in data["items"][:48]:
         title = html.escape(str(item.get("title", "")))
         shop = html.escape(str(item.get("shop", "")))

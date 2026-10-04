@@ -25,7 +25,7 @@ from __future__ import annotations
 import io
 import logging
 import sys
-from typing import Any
+from typing import Any, cast
 
 from redaction import contains_secret, redact
 
@@ -121,11 +121,13 @@ def setup_logging(
     ensure_pipe_encoding()
     root = logging.getLogger()
     for existing in root.handlers:
-        if (
-            isinstance(existing, logging.StreamHandler)
-            and any(isinstance(f, SecretRedactingFilter) for f in existing.filters)
-            and getattr(existing.stream, "closed", False)
+        if not isinstance(existing, logging.StreamHandler) or not any(
+            isinstance(f, SecretRedactingFilter) for f in existing.filters
         ):
+            continue
+        raw_handler = cast("logging.Handler", existing)
+        stream_obj: Any = getattr(raw_handler, "stream", None)
+        if getattr(stream_obj, "closed", False):
             existing.stream = sys.stderr
     root.setLevel(numeric)
     if force and _configured:

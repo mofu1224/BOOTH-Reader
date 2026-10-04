@@ -197,21 +197,21 @@ def test_clone_cleanup_accepts_supported_shutil_api(tmp_path, monkeypatch, versi
 def test_cookie_atomic_publish_and_logout_in_modify_only_directory(tmp_path):
     directory = tmp_path / "modify-only"
     directory.mkdir()
-    account = auth._current_account()
+    account = auth.current_account()
     assert account
-    assert auth._icacls(directory, "/grant:r", f"{account}:(OI)(CI)(M)")
-    assert auth._icacls(directory, "/inheritance:r")
+    assert auth.icacls(directory, "/grant:r", f"{account}:(OI)(CI)(M)")
+    assert auth.icacls(directory, "/inheritance:r")
     path = directory / "cookies.json"
     try:
         auth.save_cookies([{"name": "synthetic", "value": "first"}], path)
         # A jar created by the previous version has read/write but no DELETE.
-        assert auth._icacls(path, "/grant:r", f"{account}:(R,W)")
+        assert auth.icacls(path, "/grant:r", f"{account}:(R,W)")
         auth.save_cookies([{"name": "synthetic", "value": "second"}], path)
         assert auth.load_cookies(path)[0]["value"] == "second"
-        assert auth._icacls(path, "/grant:r", f"{account}:(R,W)")
+        assert auth.icacls(path, "/grant:r", f"{account}:(R,W)")
         assert auth.logout(path)
         assert not list(directory.iterdir())
     finally:
         # Only test-owned files: restore cleanup access even on the red run.
         for file in directory.iterdir():
-            assert auth._icacls(file, "/grant:r", f"{account}:(F)")
+            assert auth.icacls(file, "/grant:r", f"{account}:(F)")

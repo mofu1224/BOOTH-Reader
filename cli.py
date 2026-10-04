@@ -33,7 +33,7 @@ import time
 import unicodedata
 from contextlib import redirect_stderr, redirect_stdout
 from pathlib import Path
-from typing import Any, NoReturn
+from typing import Any, NoReturn, cast
 
 from core.portable import apply_portable_env, effective_browsers_path
 
@@ -275,7 +275,7 @@ def _pad(text: str, width: int) -> str:
     return str(text) + " " * max(0, width - _display_width(text))
 
 
-def _print_table(rows: list[dict], cols: list[str], maxcol: int = 80) -> None:
+def _print_table(rows: list[dict[str, Any]], cols: list[str], maxcol: int = 80) -> None:
     if not rows:
         print("(0件)")
         return
@@ -328,30 +328,34 @@ def _cmd_auth(args: argparse.Namespace) -> int:
         if len(payload) > 1_048_576:
             raise ValueError("Cookieファイルは1MB以下にしてください")
         try:
-            cookies = json.loads(payload)
+            raw_cookies: object = json.loads(payload)
         except ValueError as e:
             raise ValueError("Cookie JSONの形式が不正です") from e
-        if isinstance(cookies, dict):
-            cookies = cookies.get("cookies")
-        if (
-            not isinstance(cookies, list)
-            or not cookies
-            or any(
-                not isinstance(c, dict)
-                or not isinstance(c.get("name"), str)
-                or not isinstance(c.get("value"), str)
-                or not isinstance(c.get("domain"), str)
-                or not (
-                    c["domain"].lstrip(".") == "booth.pm"
-                    or c["domain"].lstrip(".").endswith(".booth.pm")
-                    or c["domain"].lstrip(".") == "pixiv.net"
-                    or c["domain"].lstrip(".").endswith(".pixiv.net")
-                )
-                for c in cookies
-            )
-        ):
+        if isinstance(raw_cookies, dict):
+            raw_cookies = cast("dict[str, Any]", raw_cookies).get("cookies")
+        if not isinstance(raw_cookies, list) or not raw_cookies:
             raise ValueError("BOOTH / pixivのCookie JSONを指定してください")
-        cookies = [dict(c, expires=c.get("expires", c.get("expirationDate", -1))) for c in cookies]
+        cookies: list[dict[str, Any]] = []
+        for entry in cast("list[object]", raw_cookies):
+            if not isinstance(entry, dict):
+                raise ValueError("BOOTH / pixivのCookie JSONを指定してください")
+            c = cast("dict[str, Any]", entry)
+            domain = c.get("domain")
+            if (
+                not isinstance(c.get("name"), str)
+                or not isinstance(c.get("value"), str)
+                or not isinstance(domain, str)
+            ):
+                raise ValueError("BOOTH / pixivのCookie JSONを指定してください")
+            host = domain.lstrip(".")
+            if (
+                host != "booth.pm"
+                and not host.endswith(".booth.pm")
+                and host != "pixiv.net"
+                and not host.endswith(".pixiv.net")
+            ):
+                raise ValueError("BOOTH / pixivのCookie JSONを指定してください")
+            cookies.append(dict(c, expires=c.get("expires", c.get("expirationDate", -1))))
         auth_mod.save_cookies(cookies, cpath)
         _print_json({"ok": True, "count": len(cookies)})
         return 0
@@ -482,7 +486,7 @@ def _cmd_downloads(args: argparse.Namespace, db_path: str) -> int:
         with library_lock(args.output_dir):
             conn = get_connection(db_path)
             try:
-                protected = []
+                protected: list[Path] = []
                 for row in conn.execute("SELECT path FROM downloads WHERE path != ''"):
                     path = Path(row["path"])
                     protected.append(path)
@@ -577,25 +581,28 @@ def _cmd_lists(args: argparse.Namespace, db_path: str) -> int:
             _print_json({"ok": True})
         elif args.lists_cmd == "reorder":
             try:
-                item_ids = json.loads(
+                raw_items: object = json.loads(
                     sys.stdin.read(4_000_001) if args.items == "-" else args.items
                 )
             except ValueError as e:
                 raise ValueError("商品ID配列の形式が不正です") from e
-            if not isinstance(item_ids, list) or any(not isinstance(i, str) for i in item_ids):
+            if not isinstance(raw_items, list):
                 raise ValueError("商品ID配列の形式が不正です")
-            lists_mod.reorder(conn, args.list, item_ids)
+            item_ids = cast("list[object]", raw_items)
+            if any(not isinstance(i, str) for i in item_ids):
+                raise ValueError("商品ID配列の形式が不正です")
+            lists_mod.reorder(conn, args.list, cast("list[str]", item_ids))
             _print_json({"ok": True})
         elif args.lists_cmd == "reorder-lists":
             try:
-                list_ids = json.loads(
+                raw_lists: object = json.loads(
                     sys.stdin.read(4_000_001) if args.lists == "-" else args.lists
                 )
             except ValueError as e:
                 raise ValueError("リストID配列の形式が不正です") from e
-            if not isinstance(list_ids, list):
+            if not isinstance(raw_lists, list):
                 raise ValueError("リストID配列の形式が不正です")
-            lists_mod.reorder_lists(conn, list_ids)
+            lists_mod.reorder_lists(conn, cast("list[int]", raw_lists))
             _print_json({"ok": True})
         elif args.lists_cmd == "create":
             lid = lists_mod.create_list(conn, args.name)
@@ -833,7 +840,7 @@ def _run_capture(argv: list[str]) -> tuple[int, str, str, Any]:
 
     out_text = out_buffer.getvalue()
     err_text = err_buffer.getvalue()
-    payload = None
+    payload: Any = None
     if "--json" in argv:
         for line in reversed(out_text.strip().splitlines()):
             try:
@@ -864,17 +871,18 @@ def _serve_rpc(db_path: str, level: str) -> int:
     stdout = sys.stdout
     # The protocol is ASCII-only; reconfigure defensively in case the parent
     # did not set PYTHONUTF8.
-    for stream, kwargs in (
+    reconfigures: tuple[tuple[Any, dict[str, Any]], ...] = (
         (stdin, {"encoding": "utf-8", "errors": "replace"}),
         (stdout, {"encoding": "utf-8", "line_buffering": True}),
-    ):
+    )
+    for stream, options in reconfigures:
         reconfigure = getattr(stream, "reconfigure", None)
         # A stream that cannot be reconfigured (a test double, for instance)
         # is still usable with its default encoding.
         if reconfigure is None:
             continue
         with contextlib.suppress(ValueError, OSError):
-            reconfigure(**kwargs)
+            reconfigure(**options)
 
     while True:
         line = stdin.readline()
@@ -884,7 +892,7 @@ def _serve_rpc(db_path: str, level: str) -> int:
         if not line:
             continue
         try:
-            request = json.loads(line)
+            request: object = json.loads(line)
         except ValueError:
             _rpc_emit(
                 stdout, {"id": None, "ok": False, "returncode": 2, "error": "invalid JSON request"}
@@ -901,9 +909,12 @@ def _serve_rpc(db_path: str, level: str) -> int:
                 },
             )
             continue
-        request_id = request.get("id")
-        argv = request.get("args")
-        if not isinstance(argv, list) or not all(isinstance(a, str) for a in argv):
+        body = cast("dict[str, Any]", request)
+        request_id = body.get("id")
+        raw_argv = body.get("args")
+        if not isinstance(raw_argv, list) or not all(
+            isinstance(a, str) for a in cast("list[object]", raw_argv)
+        ):
             _rpc_emit(
                 stdout,
                 {
@@ -914,6 +925,7 @@ def _serve_rpc(db_path: str, level: str) -> int:
                 },
             )
             continue
+        argv = cast("list[str]", raw_argv)
         # Never let a request reach a subcommand's own --db: the worker's DB is
         # authoritative for its lifetime.
         filtered = [a for i, a in enumerate(argv) if not (a == "--db" or _is_db_value(argv, i))]
@@ -954,7 +966,7 @@ def _serve_rpc(db_path: str, level: str) -> int:
             )
             continue
         elapsed_ms = round((time.perf_counter() - started) * 1000, 2)
-        response = {
+        response: dict[str, Any] = {
             "id": request_id,
             "ok": code == 0,
             "returncode": code,

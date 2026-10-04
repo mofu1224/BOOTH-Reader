@@ -22,7 +22,7 @@ import subprocess
 import tempfile
 import time
 from pathlib import Path
-from typing import Any
+from typing import Any, cast
 from urllib.parse import urlsplit
 
 from . import net
@@ -73,7 +73,7 @@ def _windows_tool(name: str) -> str:
     return name
 
 
-def _icacls(path: Path, *args: str) -> bool:
+def icacls(path: Path, *args: str) -> bool:
     """Run icacls. Never raises; returns True on success.
 
     Only the exit code matters, so the output is decoded leniently: icacls
@@ -95,7 +95,7 @@ def _icacls(path: Path, *args: str) -> bool:
         return False
 
 
-def _current_account() -> str:
+def current_account() -> str:
     """Best-effort ``DOMAIN\\user`` for the current process owner.
 
     ``whoami`` is authoritative; the environment is only a fallback. Returning
@@ -149,21 +149,21 @@ def restrict_permissions(path: str | Path) -> bool:
     if os.name != "nt":
         return True
 
-    account = _current_account()
+    account = current_account()
     if not account:
         log.warning("current account unknown; leaving ACLs untouched")
         return False
 
     # DELETE is required for atomic rename and logout when the parent grants
     # Modify rather than Full Control (no FILE_DELETE_CHILD on the directory).
-    granted = _icacls(p, "/grant:r", f"{account}:(R,W,D)")
+    granted = icacls(p, "/grant:r", f"{account}:(R,W,D)")
     if not granted:
         return False
-    restricted = _icacls(p, "/inheritance:r")
+    restricted = icacls(p, "/inheritance:r")
     if not _is_readable(p):
         log.error("ACL change made %s unreadable; restoring inherited access", p.name)
-        _icacls(p, "/grant:r", f"{account}:(F)")
-        _icacls(p, "/inheritance:e")
+        icacls(p, "/grant:r", f"{account}:(F)")
+        icacls(p, "/inheritance:e")
         return False
     return restricted
 
@@ -177,14 +177,16 @@ _restrict_permissions = restrict_permissions
 # ---------------------------------------------------------------------------
 
 
-def save_cookies(cookies: list[dict], path: str | Path | None = None) -> Path:
+def save_cookies(cookies: list[dict[str, Any]], path: str | Path | None = None) -> Path:
     """Persist a cookie jar atomically, then lock it to this account."""
     p = cookie_path(path)
     # Validate before doing anything, including logging, so a malformed argument
     # produces a clean error rather than a TypeError from len()/json.dumps.
-    if not isinstance(cookies, list) or not cookies:
+    raw_cookies = cast("object", cookies)
+    if not isinstance(raw_cookies, list) or not raw_cookies:
         raise BoothAuthError("保存するCookieが空または形式不正です。")
-    if not any(isinstance(c, dict) and c.get("name") for c in cookies):
+    entries = cast("list[object]", raw_cookies)
+    if not any(isinstance(c, dict) and cast("dict[str, Any]", c).get("name") for c in entries):
         raise BoothAuthError("Cookieの形式が不正です (name がありません)。")
     p.parent.mkdir(parents=True, exist_ok=True)
     # Values are never logged; only the count and the path.
@@ -219,19 +221,20 @@ def save_cookies(cookies: list[dict], path: str | Path | None = None) -> Path:
     return p
 
 
-def load_cookies(path: str | Path | None = None) -> list[dict]:
+def load_cookies(path: str | Path | None = None) -> list[dict[str, Any]]:
     p = cookie_path(path)
     if not p.exists():
         raise BoothAuthError(f"Cookieがありません ({p})。")
     try:
-        data = json.loads(p.read_text(encoding="utf-8"))
+        data: object = json.loads(p.read_text(encoding="utf-8"))
     except (OSError, ValueError) as e:
         raise BoothAuthError(f"Cookie読取に失敗しました ({type(e).__name__})。") from e
     if not isinstance(data, list) or not data:
         raise BoothAuthError("Cookieが空または形式不正です。")
-    if not any(isinstance(c, dict) and c.get("name") for c in data):
+    entries = cast("list[object]", data)
+    if not any(isinstance(c, dict) and cast("dict[str, Any]", c).get("name") for c in entries):
         raise BoothAuthError("Cookieの形式が不正です (name がありません)。")
-    return data
+    return cast("list[dict[str, Any]]", data)
 
 
 def has_cookies(path: str | Path | None = None) -> bool:
@@ -257,17 +260,20 @@ def logout(path: str | Path | None = None) -> bool:
     return False
 
 
-def cookies_to_jar(cookies: list[dict]) -> dict[str, str]:
+def cookies_to_jar(cookies: list[dict[str, Any]]) -> dict[str, str]:
     """Flatten a cookie jar to ``name -> value``.
 
     Callers that know the target URL should prefer
     :func:`core.net.cookie_header`, which scopes the jar to the request host.
     """
-    return {
-        str(c["name"]): str(c["value"])
-        for c in cookies or []
-        if isinstance(c, dict) and c.get("name")
-    }
+    jar: dict[str, str] = {}
+    for c in cast("list[object]", cookies or []):
+        if not isinstance(c, dict):
+            continue
+        entry = cast("dict[str, Any]", c)
+        if entry.get("name"):
+            jar[str(entry["name"])] = str(entry["value"])
+    return jar
 
 
 # ---------------------------------------------------------------------------
@@ -344,7 +350,7 @@ def _launch_browser(headless: bool, factory: Any) -> tuple[Any, Any]:
     return pw, browser
 
 
-def _run_login_session(browser: Any, timeout_s: int) -> list[dict]:
+def _run_login_session(browser: Any, timeout_s: int) -> list[dict[str, Any]]:
     """Drive the browser: open the login page, wait for Enter, verify, read cookies."""
     try:
         context = browser.new_context()
@@ -462,7 +468,7 @@ def login(
 # ---------------------------------------------------------------------------
 
 
-def status(path: str | Path | None = None, verify_network: bool = False) -> dict:
+def status(path: str | Path | None = None, verify_network: bool = False) -> dict[str, Any]:
     """Report cookie state. Values are never logged or returned.
 
     Expiry is judged from the cookie timestamps: if every cookie that carries
@@ -472,19 +478,22 @@ def status(path: str | Path | None = None, verify_network: bool = False) -> dict
     p = cookie_path(path)
     if not has_cookies(p):
         raise BoothAuthError("未ログインです。")
-    info: dict = {"path": str(p), "ok": True, "count": 0}
+    info: dict[str, Any] = {"path": str(p), "ok": True, "count": 0}
     cookies = load_cookies(p)
     info["count"] = len(cookies)
 
     now = time.time()
-    dated = [
-        float(c["expires"])
-        for c in cookies
-        if isinstance(c, dict)
-        and isinstance(c.get("expires"), (int, float))
-        and not isinstance(c.get("expires"), bool)
-        and float(c["expires"]) > 0
-    ]
+    dated: list[float] = []
+    for c in cast("list[object]", cookies):
+        if not isinstance(c, dict):
+            continue
+        expires = cast("dict[str, Any]", c).get("expires")
+        if (
+            isinstance(expires, (int, float))
+            and not isinstance(expires, bool)
+            and float(expires) > 0
+        ):
+            dated.append(float(expires))
     if dated and len(dated) == len(cookies) and all(e < now for e in dated):
         raise BoothAuthError("Cookieの有効期限が切れています。")
 

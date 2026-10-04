@@ -56,9 +56,19 @@ def main() -> int:
     parser.add_argument("--out", type=Path, default=ROOT / "audit/clone-verification.json")
     parser.add_argument("--junit-out", type=Path, default=ROOT / "audit/junit-clone.xml")
     parser.add_argument(
+        "--candidate-out",
+        type=Path,
+        help="retain pristine candidate files in a new .cache directory",
+    )
+    parser.add_argument(
         "--gitleaks-exe", type=Path, help="scan the clean candidate before generating runtime/data"
     )
     args = parser.parse_args()
+    candidate = args.candidate_out.resolve() if args.candidate_out else None
+    if candidate is not None and (
+        not candidate.is_relative_to((ROOT / ".cache").resolve()) or candidate.exists()
+    ):
+        parser.error("--candidate-out must be a new directory inside the repository's .cache")
     if args.cleanup_work:
         work = args.cleanup_work.resolve()
         remove_owned(work)
@@ -121,8 +131,19 @@ def main() -> int:
             returncode = process.returncode
         except subprocess.TimeoutExpired:
             timed_out = True
-            process.kill()
-            stdout, stderr = process.communicate()
+            subprocess.run(
+                [
+                    str(Path(os.environ["SYSTEMROOT"]) / "System32/taskkill.exe"),
+                    "/PID",
+                    str(process.pid),
+                    "/T",
+                    "/F",
+                ],
+                capture_output=True,
+                timeout=30,
+                check=False,
+            )
+            stdout, stderr = process.communicate(timeout=30)
             returncode = -1
             stdout += f"\n[timeout] {name} exceeded 600s and was killed\n"
         log = work / f"{name}.log"
@@ -212,6 +233,19 @@ def main() -> int:
                 checkout,
                 env,
             )
+        if candidate is not None:
+            shutil.copytree(checkout, candidate, ignore=shutil.ignore_patterns(".git"))
+            candidate_hashes = {
+                name: hashlib.sha256((candidate / name).read_bytes()).hexdigest() for name in files
+            }
+            result["fixed_candidate"] = {
+                "path": str(candidate.relative_to(ROOT)),
+                "files": len(candidate_hashes),
+                "sha256": hashlib.sha256(
+                    json.dumps(candidate_hashes, sort_keys=True, separators=(",", ":")).encode()
+                ).hexdigest(),
+                "file_sha256": candidate_hashes,
+            }
         if args.gitleaks_exe:
             run(
                 "candidate-secret-scan",

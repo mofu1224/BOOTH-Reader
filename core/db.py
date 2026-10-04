@@ -28,6 +28,7 @@ from __future__ import annotations
 import sqlite3
 from collections.abc import Callable
 from pathlib import Path
+from typing import Any
 
 from .errors import BoothDatabaseError, BoothSchemaTooNewError
 
@@ -245,7 +246,7 @@ def schema_version(db_path: str | Path) -> int:
         conn.close()
 
 
-def check_integrity(db_path: str | Path) -> dict:
+def check_integrity(db_path: str | Path) -> dict[str, Any]:
     """Run SQLite's structural and FK checks. Used by ``doctor`` and tests."""
     conn = get_connection(db_path)
     try:

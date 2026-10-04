@@ -26,8 +26,8 @@ def test_a12_failed_acl_grant_never_removes_inheritance(tmp_path, monkeypatch):
     calls = []
     path = tmp_path / "ck.json"
     path.write_bytes(b"empty")
-    monkeypatch.setattr(auth, "_current_account", lambda: "fake")
-    monkeypatch.setattr(auth, "_icacls", lambda p, *args: calls.append(args) or False)
+    monkeypatch.setattr(auth, "current_account", lambda: "fake")
+    monkeypatch.setattr(auth, "icacls", lambda p, *args: calls.append(args) or False)
     assert auth.restrict_permissions(path) is False
     assert all("/inheritance:r" not in call for call in calls)
 

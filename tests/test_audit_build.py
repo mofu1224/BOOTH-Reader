@@ -1,11 +1,13 @@
 """The retired archive command must leave existing output and user data intact."""
 
+from pathlib import Path
+
 import pytest
 
 from tools import build_release
 
 
-def test_a10_existing_output_is_preserved(tmp_path):
+def test_a10_existing_output_is_preserved(tmp_path: Path) -> None:
     output = tmp_path / "valuable"
     output.mkdir()
     sentinel = output / "keep.txt"
@@ -15,7 +17,7 @@ def test_a10_existing_output_is_preserved(tmp_path):
     assert sentinel.read_text(encoding="utf-8") == "original"
 
 
-def test_archive_command_creates_no_output(tmp_path):
+def test_archive_command_creates_no_output(tmp_path: Path) -> None:
     output = tmp_path / "new-output"
     with pytest.raises(SystemExit, match="retired"):
         build_release.main(["--out", str(output), "--offline-bundle", "--audit-candidate"])

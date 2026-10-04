@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import sqlite3
+from typing import Any
 
 SORTS = ("newest", "oldest", "name", "shop")
 
@@ -51,7 +52,7 @@ def create_list(conn: sqlite3.Connection, name: str) -> int:
     return int(row["list_id"])
 
 
-def list_lists(conn: sqlite3.Connection) -> list[dict]:
+def list_lists(conn: sqlite3.Connection) -> list[dict[str, Any]]:
     return [
         dict(r)
         for r in conn.execute(
@@ -77,7 +78,7 @@ def delete_list(conn: sqlite3.Connection, name_or_id: str) -> int:
     return cur.rowcount
 
 
-def add_member(conn: sqlite3.Connection, list_id_or_name: str, item_id: str) -> None:
+def add_member(conn: sqlite3.Connection, list_id_or_name: str | int, item_id: str) -> None:
     key = _check_name(str(list_id_or_name))
     # item存在確認
     if conn.execute("SELECT 1 FROM items WHERE item_id=?", (item_id,)).fetchone() is None:
@@ -170,7 +171,7 @@ def reorder_lists(conn: sqlite3.Connection, list_ids: list[int]) -> None:
         raise
 
 
-def library(conn: sqlite3.Connection) -> dict:
+def library(conn: sqlite3.Connection) -> dict[str, Any]:
     from .purchases import list_purchases
 
     return {
@@ -187,7 +188,7 @@ def library(conn: sqlite3.Connection) -> dict:
 
 def get_unclassified(
     conn: sqlite3.Connection, sort: str = "newest", limit: int | None = None
-) -> list[dict]:
+) -> list[dict[str, Any]]:
     """Return items that are not in any list.
 
     The only interpolated fragment is ``ORDER_BY[sort]``, a constant taken from
@@ -211,7 +212,7 @@ def get_unclassified(
 
 def get_classified(
     conn: sqlite3.Connection, sort: str = "newest", limit: int | None = None
-) -> list[dict]:
+) -> list[dict[str, Any]]:
     """Return items that belong to at least one list."""
     order = _order(sort)
     q = f"""SELECT DISTINCT i.item_id,i.title,i.url,i.shop,i.thumbnail,i.category,i.published_at,

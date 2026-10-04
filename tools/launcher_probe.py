@@ -20,11 +20,6 @@ ROOT = Path(__file__).resolve().parent.parent
 def main() -> int:
     if not (ROOT.parent / "OWNED-BY-PORTABILITY-TEST.txt").is_file():
         raise SystemExit("Run this probe only in verify_portable.py's isolated copy")
-    # Sweep leftovers from previous probes inside this owned copy only.
-    for name in ("msedgewebview2.exe", "booth-webview-host.exe"):
-        subprocess.run(
-            ["taskkill", "/IM", name, "/T", "/F"], capture_output=True, timeout=30, check=False
-        )
     cmd = Path(os.environ["SYSTEMROOT"]) / "System32/cmd.exe"
     env = dict(os.environ)
     for key in ("PYTHONHOME", "PYTHONPATH", "PIP_TARGET"):
@@ -51,6 +46,18 @@ def main() -> int:
             tail = managed.read_text(encoding="utf-8", errors="replace").splitlines()[-60:]
             for line in tail:
                 print(line, file=sys.stderr)
+        subprocess.run(
+            [
+                str(Path(os.environ["SYSTEMROOT"]) / "System32/taskkill.exe"),
+                "/PID",
+                str(os.getpid()),
+                "/T",
+                "/F",
+            ],
+            capture_output=True,
+            timeout=30,
+            check=False,
+        )
         os._exit(97)
 
     threading.Thread(target=watchdog, daemon=True).start()
@@ -113,6 +120,7 @@ def main() -> int:
                 text=True,
                 encoding="utf-8",
             )
+            assert browser.stdout is not None
             announcement = browser.stdout.readline().strip()
             assert announcement.startswith("CDP-PORT "), announcement
             cdp = int(announcement.split()[1])
@@ -127,6 +135,7 @@ def main() -> int:
                     time.sleep(0.2)
             # Close only after the page finished loading; closing the window
             # mid-navigation aborts goto and looks like a browser crash.
+            assert browser.stdout is not None
             ready = browser.stdout.readline().strip()
             assert ready == "PAGE-READY", ready
             kernel = ctypes.WinDLL("kernel32", use_last_error=True)
@@ -178,11 +187,14 @@ def main() -> int:
                     break
                 time.sleep(0.1)
             # The managed browser must also close cleanly on request.
+            assert browser.stdin is not None
             browser.stdin.write("CLOSE\n")
             browser.stdin.flush()
             assert browser.wait(timeout=30) == 0
             assert server.poll() is None, "server stopped when browser closed"
-            subprocess.run(["taskkill", "/PID", str(server.pid), "/T", "/F"], check=True)
+            subprocess.run(
+                ["taskkill", "/PID", str(server.pid), "/T", "/F"], check=True, timeout=30
+            )
             server.wait(timeout=30)
             with socket.socket() as sock:
                 assert sock.connect_ex(("127.0.0.1", port)) != 0, (
@@ -197,7 +209,12 @@ def main() -> int:
                     for line in tail:
                         print(line, file=sys.stderr)
             if browser is not None and browser.poll() is None:
-                browser.kill()
+                subprocess.run(
+                    ["taskkill", "/PID", str(browser.pid), "/T", "/F"],
+                    capture_output=True,
+                    timeout=30,
+                    check=False,
+                )
                 browser.wait(timeout=10)
             if server is not None and server.poll() is None:
                 subprocess.run(
@@ -215,6 +232,7 @@ def main() -> int:
         text=True,
         encoding="utf-8",
         check=True,
+        timeout=120,
     )
     assert "lists" in json.loads(cli.stdout), cli.stdout
     report = {

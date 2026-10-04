@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import os
-from collections.abc import Iterator
+from collections.abc import Generator
 from contextlib import contextmanager
 from pathlib import Path
 
@@ -11,7 +11,7 @@ from .errors import BoothError
 
 
 @contextmanager
-def library_lock(root: str | Path) -> Iterator[None]:
+def library_lock(root: str | Path) -> Generator[None, None, None]:
     if os.name != "nt":
         raise BoothError("ダウンロードの排他制御は Windows のみ対応しています。")
     import msvcrt

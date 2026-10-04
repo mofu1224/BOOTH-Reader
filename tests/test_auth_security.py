@@ -39,7 +39,7 @@ def test_save_and_load_roundtrip(tmp_path):
 def test_save_rejects_empty_jar(tmp_path):
     for bad in ([], None, "nope", {"a": 1}):
         with pytest.raises(BoothAuthError):
-            save_cookies(bad, tmp_path / "ck.json")
+            save_cookies(bad, tmp_path / "ck.json")  # type: ignore[arg-type]
 
 
 def test_load_rejects_corrupted_files(tmp_path):
@@ -151,7 +151,7 @@ def test_restrict_permissions_keeps_file_readable(tmp_path):
 def test_restrict_permissions_unknown_account_keeps_file(tmp_path, monkeypatch):
     import core.auth as auth_mod
 
-    monkeypatch.setattr(auth_mod, "_current_account", lambda: "")
+    monkeypatch.setattr(auth_mod, "current_account", lambda: "")
     path = tmp_path / "s.json"
     path.write_text("[]", encoding="utf-8")
     assert auth_mod.restrict_permissions(path) is False
@@ -181,11 +181,11 @@ def test_cookies_are_scoped_to_the_request_host():
 
 
 def test_url_logging_drops_query_string():
-    from core.net import _safe_url
+    from core.net import safe_url
 
-    assert "SECRET" not in _safe_url("https://booth.pm/dl/a.zip?sig=SECRET&t=1#f")
-    assert _safe_url("https://booth.pm/dl/a.zip?sig=X") == "https://booth.pm/dl/a.zip"
-    assert _safe_url("") == "<invalid-url>"
+    assert "SECRET" not in safe_url("https://booth.pm/dl/a.zip?sig=SECRET&t=1#f")
+    assert safe_url("https://booth.pm/dl/a.zip?sig=X") == "https://booth.pm/dl/a.zip"
+    assert safe_url("") == "<invalid-url>"
 
 
 # ---------------------------------------------------------------------------

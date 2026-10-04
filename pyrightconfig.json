@@ -1,0 +1,12 @@
+{
+  "typeCheckingMode": "basic",
+  "venvPath": ".",
+  "venv": ".venv",
+  "include": ["cli.py", "redaction.py", "conftest.py", "core", "web", "tools", "tests"],
+  "ignore": [
+    "THIRD_PARTY_LICENSES",
+    "SOURCE_OBLIGATIONS",
+    "third_party",
+    "vendor"
+  ]
+}

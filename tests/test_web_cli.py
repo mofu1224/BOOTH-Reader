@@ -173,9 +173,11 @@ def test_bridge_survives_worker_death(seeded_db):
     link = bridge.Bridge(str(seeded_db))
     try:
         assert bridge.get_purchases(link)["count"] == 3
-        assert link._worker is not None
-        link._worker._proc.kill()
-        link._worker._proc.wait(timeout=10)
+        worker = link._worker
+        assert worker is not None and worker._proc is not None
+        proc = worker._proc
+        proc.kill()
+        proc.wait(timeout=10)
         # Next call: the worker is dead, so the bridge must recover.
         assert bridge.get_purchases(link)["count"] == 3
     finally:

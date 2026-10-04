@@ -59,6 +59,7 @@ def source_package(package: dict) -> tuple[dict, list[dict]]:
                 if member.isfile():
                     relative = member.name.split("/", 1)[-1]
                     stream = archive.extractfile(member)
+                    assert stream is not None
                     data = stream.read()
                     git_hash = hashlib.sha1(
                         b"blob " + str(len(data)).encode() + b"\0" + data, usedforsecurity=False

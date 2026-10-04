@@ -44,6 +44,7 @@ def main(argv: list[str] | None = None) -> int:
         link = Bridge(db)
         try:
             get_purchases(link)
+            assert link._worker is not None and link._worker._proc is not None
             worker_pid = link._worker._proc.pid
             gc.collect()
             before = handles()
@@ -63,7 +64,9 @@ def main(argv: list[str] | None = None) -> int:
             del pool
             gc.collect()
             after = handles()
+            assert link._worker is not None and link._worker._proc is not None
             assert worker_pid == link._worker._proc.pid
+            restarts = link._worker.restarts
             stress = {
                 "reads": 1000,
                 "writes": 40,
@@ -72,7 +75,7 @@ def main(argv: list[str] | None = None) -> int:
                 "handles_before": before,
                 "handles_after": after,
                 "handles_after_before_gc": raw_after,
-                "worker_restarts": link._worker.restarts,
+                "worker_restarts": restarts,
             }
             print(json.dumps(stress))
             assert after <= before + 8, "process handles grew unexpectedly"
@@ -92,16 +95,18 @@ def main(argv: list[str] | None = None) -> int:
             text=True,
             encoding="utf-8",
         )
+        stdout, stderr = proc.stdout, proc.stderr
+        assert stdout is not None and stderr is not None
         try:
-            assert proc.stdout.readline().strip() == "READY"
+            assert stdout.readline().strip() == "READY"
             proc.kill()
             proc.wait(timeout=10)
         finally:
             if proc.poll() is None:
                 proc.kill()
                 proc.wait(timeout=10)
-            proc.stdout.close()
-            proc.stderr.close()
+            stdout.close()
+            stderr.close()
         conn = get_connection(db)
         try:
             assert conn.execute("SELECT item_id FROM items").fetchall()[0][0] == "keep"

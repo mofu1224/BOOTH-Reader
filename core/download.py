@@ -32,11 +32,11 @@ import sqlite3
 import tempfile
 import time
 import zipfile
-from collections.abc import Callable
+from collections.abc import Callable, Iterable, Mapping
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any
+from typing import Any, cast
 from urllib.parse import urljoin, urlsplit
 
 from . import net
@@ -119,7 +119,8 @@ def sanitize_component(name: str, maxlen: int = _MAX_COMPONENT, fallback: str = 
     device names, and strips trailing dots/spaces (which Windows silently
     discards, so ``a.`` and ``a`` would collide).
     """
-    raw = name if isinstance(name, str) else ""
+    value = cast("object", name)
+    raw = value if isinstance(value, str) else ""
     cleaned = FORBIDDEN.sub("_", raw).strip()
     # Collapse whitespace runs so control characters removed above do not leave
     # stray tabs that make paths awkward to handle.
@@ -411,10 +412,10 @@ def item_page_url(item_url_or_id: str) -> str:
 
 def resolve_download_links(
     item_url_or_id: str,
-    cookies: list[dict],
+    cookies: list[dict[str, Any]],
     timeout: int = 30,
     max_links: int = 64,
-) -> list[dict]:
+) -> list[dict[str, Any]]:
     """Fetch the item/order page and extract download links.
 
     Raises ``BoothLayoutChangedError`` when the page does not look like a BOOTH
@@ -435,7 +436,7 @@ def resolve_download_links(
         ) from e
 
     url = item_page_url(item_url_or_id)
-    log.info("resolving download links item=%s", net._safe_url(url))
+    log.info("resolving download links item=%s", net.safe_url(url))
     source = urlsplit(url)
     library_item = re.fullmatch(r"item-(\d+)", source.fragment)
     if library_item and (
@@ -457,7 +458,7 @@ def resolve_download_links(
     if "年齢確認" in text and not soup.select("a[href]"):
         raise BoothLayoutChangedError("年齢確認ページの可能性。実ブラウザで確認してください。")
 
-    links: dict[str, dict] = {}
+    links: dict[str, dict[str, Any]] = {}
     if library_item:
         from .purchases import library_card
 
@@ -505,7 +506,7 @@ def resolve_download_links(
             if len(links) > max_links:
                 raise BoothLimitExceededError(
                     f"ダウンロードリンクが上限 ({max_links}) を超えています: "
-                    f"{net._safe_url(url)}。この商品はまとめて取得できません。"
+                    f"{net.safe_url(url)}。この商品はまとめて取得できません。"
                 )
 
     if not links:
@@ -600,7 +601,7 @@ def _fsync_dir(directory: Path) -> None:
 def download_file(
     url: str,
     dest: str | Path,
-    cookies: list[dict],
+    cookies: list[dict[str, Any]],
     resume: bool = True,
     timeout: int = 60,
     progress_cb: Callable[[int, int | None], None] | None = None,
@@ -611,7 +612,7 @@ def download_file(
     ``dest`` is only created (or replaced) once the transfer is verified
     complete, so the library never contains a truncated file.
     """
-    httpx = net._require_httpx()
+    httpx = net.require_httpx()
     dest = Path(dest)
     dest.parent.mkdir(parents=True, exist_ok=True)
     part = dest.with_name(dest.name + PART_SUFFIX)
@@ -679,7 +680,7 @@ def download_file(
                         _sleep_backoff(attempt)
                         continue
                     raise BoothNetworkError(
-                        f"ダウンロード失敗 (HTTP {status}): {net._safe_url(url)}"
+                        f"ダウンロード失敗 (HTTP {status}): {net.safe_url(url)}"
                     )
 
                 if status == 206:
@@ -842,14 +843,6 @@ def _set_status(
     conn.commit()
 
 
-def _existing_status(conn: sqlite3.Connection, item_id: str, file_name: str) -> str:
-    row = conn.execute(
-        "SELECT status FROM downloads WHERE item_id=? AND file_name=?",
-        (item_id, file_name),
-    ).fetchone()
-    return str(row["status"]) if row else ""
-
-
 def _stable_item_dir(root: Path, item_id: str, title: str, conn: sqlite3.Connection) -> Path:
     recorded_paths = conn.execute(
         "SELECT path FROM downloads WHERE item_id=?", (item_id,)
@@ -859,7 +852,7 @@ def _stable_item_dir(root: Path, item_id: str, title: str, conn: sqlite3.Connect
     if not recorded_paths:
         return item_dir(root, item_id, title)
     resolved_root = root.resolve()
-    candidates = set()
+    candidates: set[Path] = set()
     for row in recorded_paths:
         recorded = Path(row["path"])
         # A copied library can recover the old folder by basename without an
@@ -904,7 +897,7 @@ class _NameLedger:
     may only be consulted for names this application does not own.
     """
 
-    def __init__(self, rows: list[sqlite3.Row]) -> None:
+    def __init__(self, rows: Iterable[sqlite3.Row | Mapping[str, object]]) -> None:
         self.by_url: dict[str, str] = {}
         self.legacy_names: set[str] = set()
         self.names: set[str] = set()
@@ -942,7 +935,7 @@ def download_item(
     timeout: int = 60,
     force: bool = False,
     max_extracted_listed: int = 500,
-) -> dict:
+) -> dict[str, Any]:
     """Download every file belonging to one item.
 
     A failure on one file is recorded and the remaining files are still
@@ -1001,8 +994,10 @@ def download_item(
         results: list[dict[str, Any]] = []
         failures: list[dict[str, Any]] = []
         try:
-            previous = json.loads((ddir / "meta.json").read_text(encoding="utf-8"))
-            previous_files = {f["file"]: f for f in previous.get("files", [])}
+            previous: Any = json.loads((ddir / "meta.json").read_text(encoding="utf-8"))
+            previous_files: dict[str, dict[str, Any]] = {
+                f["file"]: f for f in previous.get("files", [])
+            }
         except (OSError, ValueError, TypeError, KeyError, AttributeError):
             previous_files = {}
         used_names: set[str] = set()
@@ -1028,7 +1023,7 @@ def download_item(
                 and (not existing["sha256"] or sha256_of(dest) == existing["sha256"])
             ):
                 log.info("[%s] %s already downloaded; skipping", safe_id, fname)
-                cached = {
+                cached: dict[str, Any] = {
                     **previous_files.get(fname, {}),
                     "file": fname,
                     "path": str(dest),
@@ -1191,7 +1186,8 @@ def _file_name_for(
             used.add(bound)
             return bound
 
-    reserved = {n.casefold() for n in set(used) | (ledger.names if ledger is not None else set())}
+    ledger_names: set[str] = ledger.names if ledger is not None else set()
+    reserved = {n.casefold() for n in set(used) | ledger_names}
     name = preferred
     counter = 2
     while {

@@ -50,6 +50,7 @@ def test_exception_cookie_header_is_redacted():
             "privacy", logging.ERROR, __file__, 1, "failed", (), sys.exc_info()
         )
     assert SecretRedactingFilter().filter(record)
+    assert record.exc_text is not None
     assert "synthetic-first" not in record.exc_text
     assert "synthetic-second" not in record.exc_text
 

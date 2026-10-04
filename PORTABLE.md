@@ -12,7 +12,7 @@ start.bat 8080                   rem ポート指定
 start.bat --no-open              rem ブラウザーを自動で開かない
 start.bat --repair               rem 生成環境を同梱物から修復
 start.bat --check                rem 準備済みかを確認するだけ
-start.bat doctor                 rem CLI。初回でもstdoutはJSONだけ
+start.bat doctor --json          rem CLI。初回でもstdoutはJSONだけ
 start.bat cli lists list --json  rem CLIを明示する場合
 ```
 
@@ -56,6 +56,7 @@ Microsoftコードの利用・再配布条件とSmartScreenのデータ通知は
 ## 移動・修復・削除
 
 - アプリを停止してフォルダ全体をコピー・移動できます。旧venvのhomeを実行前に拒否し、同梱物から再生成します。
+- 更新前のバックアップ・別フォルダーへの復元・旧版へ戻す条件は [READMEのバックアップと復旧](README.md#バックアップと復旧) を参照してください。環境修復ではDBや購入物は復元されません。
 - `--repair` / `--recreate` / `--update` は、起動中のインスタンスを検出すると変更前に終了を案内して停止します。固定環境 (.venv) が使用中で更新できない場合も、終了方法とデータ保護を日本語で案内します。
 - `.tools` / `.venv` / `.cache` / `.playwright-browsers` がなくても、`vendor/` があれば通信なしで自動復元します。
 - 破損した同梱片はハッシュ不一致として停止します。別の配布物やPATH上のツールへフォールバックしません。
@@ -65,7 +66,7 @@ Microsoftコードの利用・再配布条件とSmartScreenのデータ通知は
 
 ## 取得・更新
 
-通常の起動・修復は無通信です。BOOTH/pixivログイン、購入情報更新、新しい購入ファイルの取得だけは本来の外部通信です。
+環境の準備・修復は同梱物だけで行えます。BOOTH/pixivログイン、購入情報更新、購入ファイル・商品画像の取得は外部通信です。WebView2自身のSmartScreen等の通信は、上記のデータ通知も参照してください。
 
 新しいソース・manifest・同梱物をGitから取得すると、次の起動で固定環境へ同期します。依存を意図的に更新する開発時は、検証済みローカル原本から `tools/vendor_payload.py build` で同梱物を更新します。未固定の最新版を通常起動で導入しません。
 

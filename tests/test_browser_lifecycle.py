@@ -49,8 +49,8 @@ def test_failed_host_spawn_removes_private_profile(tmp_path, monkeypatch):
     (runtime / "msedgewebview2.exe").write_bytes(b"synthetic")
     from core import auth
 
-    monkeypatch.setattr(auth, "_current_account", lambda: "synthetic-account")
-    monkeypatch.setattr(auth, "_icacls", lambda *args: True)
+    monkeypatch.setattr(auth, "current_account", lambda: "synthetic-account")
+    monkeypatch.setattr(auth, "icacls", lambda *args: True)
     monkeypatch.setattr(browser, "compile_host", lambda sdk: tmp_path / "host.exe")
 
     def fail_spawn(*args, **kwargs):

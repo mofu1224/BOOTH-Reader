@@ -53,7 +53,7 @@ def main() -> int:
         licenses = []
         for relative in dist.files or []:
             if re.search(r"license|copying|notice", str(relative), re.I):
-                path = Path(dist.locate_file(relative))
+                path = Path(str(dist.locate_file(relative)))
                 if path.is_file():
                     licenses.append(
                         {"path": str(relative), "sha256": sha(path), "bytes": path.stat().st_size}
