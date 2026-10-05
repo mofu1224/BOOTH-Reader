@@ -75,7 +75,7 @@ def fetch_library_html(
     response = net.request(LIBRARY_URL, cookies=cookies, timeout=timeout)
     final = str(response.url)
     if response.status_code in (401, 403) or _looks_logged_out(final):
-        raise BoothAuthError("購入一覧の取得に失敗しました (要再ログイン)。")
+        raise BoothAuthError("Failed to fetch purchases.")
     return response.text, final
 
 
@@ -131,7 +131,7 @@ def _item_id_for(links: list[Any], order_id: str) -> str:
         if len(products) == 1:
             return products.pop()
     log.warning(
-        "order %s: 商品リンクなし、暫定ID order_%s。BOOTH構造変更の可能性。",
+        "order %s: no product link, using provisional ID order_%s; possible layout change",
         order_id,
         order_id,
     )
@@ -194,7 +194,7 @@ def library_card(thumbnail: Any) -> tuple[Any, str]:
         card, item_id = node, next(iter(ids))
         node = node.parent
     if card is None:
-        raise BoothLayoutChangedError("ライブラリの商品カードから商品IDを確認できません。")
+        raise BoothLayoutChangedError("Product card has no product ID.")
     return card, item_id
 
 
@@ -202,11 +202,11 @@ def _parse_current_library(thumbnails: list[Any], base_url: str) -> list[dict[st
     source, _ = urldefrag(base_url)
     parts = urlsplit(source)
     if parts.scheme != "https" or parts.hostname != "accounts.booth.pm" or parts.path != "/library":
-        raise BoothLayoutChangedError("ライブラリの取得元URLが想定外です。")
+        raise BoothLayoutChangedError("Unexpected library source URL.")
     rows: list[dict[str, Any]] = []
     for thumbnail in thumbnails:
         if len(rows) >= MAX_ROWS:
-            raise BoothLimitExceededError(f"購入一覧が上限 {MAX_ROWS} 件を超えました。")
+            raise BoothLimitExceededError(f"Purchase count exceeds {MAX_ROWS}.")
         card, item_id = library_card(thumbnail)
         anchors = card.select("a[href]")
         title = next(
@@ -218,7 +218,7 @@ def _parse_current_library(thumbnails: list[Any], base_url: str) -> list[dict[st
             "",
         )
         if not title:
-            raise BoothLayoutChangedError("ライブラリの商品カードから商品名を確認できません。")
+            raise BoothLayoutChangedError("Product card has no title.")
         shop = ""
         for anchor in anchors:
             shop_url = urlsplit(urljoin(source, _attr(anchor, "href")))
@@ -259,11 +259,11 @@ def parse_library_html(html: str, base_url: str = LIBRARY_URL) -> list[dict[str,
         from bs4 import BeautifulSoup
     except ImportError as e:
         raise BoothPrerequisiteError(
-            "beautifulsoup4 (HTML パーサ) が未導入です",
-            "`start.bat --repair` で同梱の固定依存を復元してください。",
+            "beautifulsoup4 (HTML parser)",
+            "Run `start.bat --repair` to restore bundled dependencies.",
         ) from e
     if not html or not html.strip():
-        raise BoothLayoutChangedError("購入一覧のHTMLが空です。")
+        raise BoothLayoutChangedError("Empty purchases HTML.")
 
     soup = BeautifulSoup(html, "html.parser")
     page_text = soup.get_text(" ", strip=True)
@@ -276,24 +276,18 @@ def parse_library_html(html: str, base_url: str = LIBRARY_URL) -> list[dict[str,
 
     # Age-gate and other interstitial pages are surfaced, never treated as data.
     if "年齢確認" in page_text and len(page_text) < 2000 and not soup.select('a[href*="/orders/"]'):
-        raise BoothLayoutChangedError(
-            "年齢確認ページの可能性があります。実ブラウザで確認してください。"
-        )
+        raise BoothLayoutChangedError("Possible age verification page. Check in the browser.")
     if "ギフト" in page_text:
         log.warning("gifts may be included as normal rows")
 
     anchors = soup.select('a[href*="/orders/"]')
     if not anchors:
         if "booth" not in html.lower() and "pixiv" not in html.lower():
-            raise BoothLayoutChangedError(
-                "購入一覧のマーカーが見つかりません。HTML構造が変更された可能性があります。"
-            )
+            raise BoothLayoutChangedError("Purchase markers missing; possible HTML layout change.")
         if any(marker in page_text for marker in EMPTY_LIBRARY_MARKERS):
             log.info("library empty")
             return []
-        raise BoothLayoutChangedError(
-            f"商品カードと注文リンクが見つかりません (html={len(html)}bytes)。"
-        )
+        raise BoothLayoutChangedError(f"No product cards or order links (html={len(html)} bytes).")
 
     rows: list[dict[str, Any]] = []
     seen: set[str] = set()
@@ -309,9 +303,7 @@ def parse_library_html(html: str, base_url: str = LIBRARY_URL) -> list[dict[str,
             continue
         seen.add(order_id)
         if len(rows) >= MAX_ROWS:
-            raise BoothLimitExceededError(
-                f"購入一覧が上限 {MAX_ROWS} 件を超えました。DBは更新しません。"
-            )
+            raise BoothLimitExceededError(f"Purchase count exceeds {MAX_ROWS}. Database unchanged.")
 
         title = _text(anchor) or _attr(anchor, "title")
         container, product_links = _row_container(anchor, order_id)
@@ -336,7 +328,7 @@ def parse_library_html(html: str, base_url: str = LIBRARY_URL) -> list[dict[str,
         )
 
     if not rows:
-        raise BoothLayoutChangedError("注文リンクから有効な注文を解析できませんでした。")
+        raise BoothLayoutChangedError("Could not parse valid orders from order links.")
     log.info("parsed library rows=%d", len(rows))
     return rows
 
@@ -384,7 +376,7 @@ def upsert_purchases(conn: sqlite3.Connection, rows: list[dict[str, Any]]) -> in
         conn.commit()
     except Exception as e:
         conn.rollback()
-        raise BoothNetworkError(f"購入データの保存に失敗しました ({type(e).__name__})") from e
+        raise BoothNetworkError(f"Failed to save purchases ({type(e).__name__})") from e
     return n
 
 
@@ -442,7 +434,7 @@ def export_csv(rows: list[dict[str, Any]], path: str | Path) -> Path:
                     raise
                 time.sleep(0.01 * (attempt + 1))
     except OSError as e:
-        raise BoothNetworkError(f"CSV出力に失敗しました ({target}: {type(e).__name__})") from e
+        raise BoothNetworkError(f"CSV export failed ({target}: {type(e).__name__})") from e
     finally:
         if tmp is not None:
             with contextlib.suppress(OSError):
@@ -456,7 +448,7 @@ def update_from_network(db_path: str | Path, cookie_path: str | Path | None = No
         from bs4 import BeautifulSoup
     except ImportError as e:
         raise BoothPrerequisiteError(
-            "beautifulsoup4 が未導入です", "`start.bat --repair` で固定依存を復元してください。"
+            "beautifulsoup4", "Run `start.bat --repair` to restore bundled dependencies."
         ) from e
 
     from .db import get_connection
@@ -469,9 +461,7 @@ def update_from_network(db_path: str | Path, cookie_path: str | Path | None = No
         for row in parse_library_html(html, base_url=final):
             rows_by_order.setdefault(row["order_id"], row)
         if len(rows_by_order) > MAX_ROWS:
-            raise BoothLimitExceededError(
-                f"購入一覧が上限 {MAX_ROWS} 件を超えました。DBは更新しません。"
-            )
+            raise BoothLimitExceededError(f"Purchase count exceeds {MAX_ROWS}. Database unchanged.")
         soup = BeautifulSoup(html, "html.parser")
         next_link = soup.select_one('a[rel~="next"]')
         if next_link is None:
@@ -484,15 +474,15 @@ def update_from_network(db_path: str | Path, cookie_path: str | Path | None = No
             or parts.path.rstrip("/") != "/library"
             or next_url in visited
         ):
-            raise BoothLayoutChangedError("購入一覧の次ページリンクが不正または循環しています。")
+            raise BoothLayoutChangedError("Invalid or cyclic purchase pagination link.")
         visited.add(next_url)
         response = net.request(next_url, cookies=cookies)
         final = str(response.url)
         if _looks_logged_out(final):
-            raise BoothAuthError("購入一覧の次ページ取得で認証が切れました。")
+            raise BoothAuthError("Session expired during purchase pagination.")
         html = response.text
     else:
-        raise BoothLimitExceededError("購入一覧のページ数が上限200を超えました。DBは更新しません。")
+        raise BoothLimitExceededError("Purchase pages exceed 200. Database unchanged.")
     rows = list(rows_by_order.values())
     conn = get_connection(db_path)
     try:

@@ -371,7 +371,7 @@ def test_layout_changed_payload_carries_user_hint():
     code, body = _err_payload(bridge.CliLayoutChangedError("markup changed"))
     assert code == 502
     assert body["code"] == "BOOTH_LAYOUT_CHANGED"
-    assert "更新" in body["hint"]
+    assert "Update" in body["hint"]
 
 
 # --- Launchers --------------------------------------------------------------

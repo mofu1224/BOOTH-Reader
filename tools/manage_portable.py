@@ -32,7 +32,6 @@ RECEIPT = SNAPSHOT.with_suffix(".json")
 PIP_PATCH = Path(__file__).with_name("pip_runtime_patch.py")
 SETUP_FLAGS = {"--offline", "--repair", "--recreate", "--skip-browser", "--check", "--update"}
 RESTORE_FLAGS = {"--repair", "--recreate", "--update"}
-RESTORE_HINT_MARKERS = ("同梱", "vendor", "ブラウザ", "wheelhouse", "wheel")
 LAUNCHER_REDIRECTS = {
     "repair": ("setup", "--repair"),
     "update": ("setup", "--update"),
@@ -196,7 +195,7 @@ def wheelhouse_ready() -> bool:
 
 def install_environment(*, offline: bool, repair: bool) -> Path:
     if environment_ready() and not repair:
-        print("[portable] 準備済み", file=sys.stderr)
+        print("[portable] Ready", file=sys.stderr)
         return venv_python()
     if not wheelhouse_ready():
         from tools.vendor_payload import restore_wheels
@@ -205,8 +204,8 @@ def install_environment(*, offline: bool, repair: bool) -> Path:
             restore_wheels(ROOT)
         except (OSError, ValueError, RuntimeError) as error:
             raise RuntimeError(
-                "同梱の依存パッケージ (vendor/) が欠損・破損。再クローンしてください。"
-                "app.db・data・BOOTH-Reader-Library は保持してください。"
+                "Bundled dependencies (vendor/) are missing or corrupt. Clone again. "
+                "Preserve app.db, data and BOOTH-Reader-Library."
             ) from error
     # Move only disposable environment state, never DB/cookies/library. Keep the
     # old environment until installation+self-check succeeds; failures roll back.
@@ -218,8 +217,7 @@ def install_environment(*, offline: bool, repair: bool) -> Path:
             old.rename(backup)
         except OSError as error:
             raise RuntimeError(
-                ".venv が使用中です。BOOTH-ReaderをCtrl+Cで終了してから再実行してください。"
-                "DB・Cookie・購入物は保持します。"
+                ".venv is in use. Stop BOOTH-Reader with Ctrl+C, then retry. Data retained."
             ) from error
     try:
         python = ensure_venv(ROOT)
@@ -268,9 +266,7 @@ def install_environment(*, offline: bool, repair: bool) -> Path:
             encoding="utf-8",
         )
         if not environment_ready():
-            raise RuntimeError(
-                "固定環境の検証に失敗しました。もう一度 start.bat --repair を実行してください。"
-            )
+            raise RuntimeError("Pinned environment check failed. Run start.bat --repair again.")
     except BaseException:
         if old.exists():
             shutil.rmtree(old)
@@ -318,18 +314,16 @@ def extract_snapshot(archive: Path, destination: Path) -> None:
         for entry in bundle.infolist():
             target = (destination / entry.filename).resolve()
             if not target.is_relative_to(destination.resolve()) or ":" in entry.filename:
-                raise RuntimeError("同梱ブラウザーの内容が不正です (不正なパス)")
+                raise RuntimeError("Invalid bundled browser path")
             if (entry.external_attr >> 16) & 0o170000 == 0o120000:
-                raise RuntimeError("同梱ブラウザーの内容が不正です (シンボリックリンク)")
+                raise RuntimeError("Invalid bundled browser symlink")
         bundle.extractall(destination)
 
 
 def ensure_browser(python: Path, *, offline: bool, repair: bool = False) -> None:
     files = browser_files(python)
     if len(files) not in {2, 4}:
-        raise RuntimeError(
-            "同梱ブラウザーの構成が想定と異なります。リポジトリを git clone し直してください。"
-        )
+        raise RuntimeError("Unexpected bundled browser layout. Clone the repository again.")
     base = ROOT / ".playwright-browsers"
     if repair or not all(p.is_file() for p in files):
         from tools.vendor_payload import materialize
@@ -347,12 +341,12 @@ def ensure_browser(python: Path, *, offline: bool, repair: bool = False) -> None
         if SNAPSHOT.is_file() and RECEIPT.is_file():
             saved = json.loads(RECEIPT.read_text(encoding="utf-8"))
             if saved["sha256"] != digest(SNAPSHOT):
-                raise RuntimeError("同梱ブラウザーのハッシュ不一致。再クローンしてください。")
+                raise RuntimeError("Bundled browser hash mismatch. Clone again.")
             extract_snapshot(SNAPSHOT, base)
         else:
             raise RuntimeError(
-                "同梱ブラウザー (vendor/) がありません。再クローンしてください。"
-                "app.db・data・BOOTH-Reader-Library は保持してください。"
+                "Bundled browser (vendor/) missing. Clone again. "
+                "Preserve app.db, data and BOOTH-Reader-Library."
             )
     code = (
         "from playwright.sync_api import sync_playwright; "
@@ -368,7 +362,7 @@ def ensure_browser(python: Path, *, offline: bool, repair: bool = False) -> None
         if repair:
             raise
         print(
-            "[portable] ブラウザー起動失敗。同梱原本から復元します",
+            "[portable] Browser launch failed. Restoring bundled copy",
             file=sys.stderr,
         )
         ensure_browser(python, offline=True, repair=True)
@@ -407,18 +401,16 @@ def parse_web_args(args: list[str]) -> tuple[int, bool]:
             index += 1
         elif arg == "--port":
             if index + 1 >= len(args):
-                raise RuntimeError("ポート番号がありません (例: start.bat --port 8000)")
+                raise RuntimeError("Missing port number (example: start.bat --port 8000)")
             port = args[index + 1]
             index += 2
         elif arg.isdecimal():
             port = arg
             index += 1
         else:
-            raise RuntimeError(
-                f"web起動のオプションが不明です: {arg} (使い方: start.bat [ポート番号] [--no-open])"
-            )
+            raise RuntimeError(f"Unknown web option: {arg} (usage: start.bat [port] [--no-open])")
     if not port.isdecimal() or not 1 <= int(port) <= 65535:
-        raise RuntimeError("ポート番号は1〜65535で指定してください")
+        raise RuntimeError("Port must be 1-65535")
     return int(port), open_browser
 
 
@@ -484,15 +476,13 @@ def web(python: Path, args: list[str]) -> int:
     running = find_existing_web_instance(port)
     if running is not None:
         url = f"http://127.0.0.1:{running}/"
-        print(f"[OK] すでに起動しています: {url}", flush=True)
-        print("このウィンドウは閉じて構いません。", flush=True)
+        print(f"[portable] Already running: {url}", flush=True)
         if open_browser:
             open_web_browser(url)
         return 0
     served = pick_free_port(port)
-    url = f"http://127.0.0.1:{served}/"
     if served != port:
-        print(f"[portable] ポート {port} 使用中 → {served}", flush=True)
+        print(f"[portable] Port {port} in use; using {served}", flush=True)
     cmd = [
         str(python),
         "-s",
@@ -503,9 +493,6 @@ def web(python: Path, args: list[str]) -> int:
         "--port",
         str(served),
     ]
-    print(f"Web UI: {url}", flush=True)
-    print("この画面は閉じず、Ctrl+Cで終了。", flush=True)
-    print(f"保存先: {ROOT / 'BOOTH-Reader-Library'}", flush=True)
     if open_browser:
         schedule_web_browser(served)
     return subprocess.call(cmd, cwd=ROOT, env=child_env())
@@ -517,12 +504,6 @@ def main(argv: list[str] | None = None) -> int:
     mode = args.pop(0) if args else "auto"
     if mode == "auto":
         mode, args = resolve_mode(args)
-    if mode == "web":
-        print(
-            "[portable] 準備確認中 (初回は時間がかかります)",
-            file=sys.stderr,
-            flush=True,
-        )
     # Rebase inherited temp settings before tempfile/Node are used.
     os.environ.update(child_env())
     try:
@@ -533,16 +514,14 @@ def main(argv: list[str] | None = None) -> int:
             unknown = set(args) - SETUP_FLAGS
             if unknown:
                 raise RuntimeError(
-                    "セットアップのオプションが不明です: "
+                    "Unknown setup option: "
                     f"{', '.join(sorted(unknown))} "
                     "(--repair / --recreate / --update / --check / --skip-browser)"
                 )
             if "--check" in args:
                 ready = environment_ready()
                 print(
-                    "[OK] 準備済み。start.bat で起動"
-                    if ready
-                    else "[portable] まだ準備されていません。 start.bat で自動準備。",
+                    "[portable] Ready" if ready else "[portable] Not ready. Run start.bat.",
                     file=sys.stderr,
                 )
                 return 0 if ready else 1
@@ -550,8 +529,8 @@ def main(argv: list[str] | None = None) -> int:
                 running = find_existing_web_instance(DEFAULT_WEB_PORT)
                 if running is not None:
                     raise RuntimeError(
-                        f"起動中です (http://127.0.0.1:{running}/)。Ctrl+Cで終了後、再実行してください。"
-                        "DB・Cookie・購入物は保持します。"
+                        f"Already running (http://127.0.0.1:{running}/). Stop with Ctrl+C, then retry. "
+                        "Data retained."
                     )
             repair = "--repair" in args or "--recreate" in args
             python = install_environment(offline=True, repair=repair)
@@ -559,7 +538,7 @@ def main(argv: list[str] | None = None) -> int:
                 ensure_browser(python, offline=True, repair=repair)
             if not (ROOT / "app.db").exists():
                 call([str(python), "-s", str(ROOT / "cli.py"), "init-db"])
-            print("[OK] 準備完了 (DB・Cookie・購入物は保持)")
+            print("[portable] Setup complete")
             return 0
         with contextlib.redirect_stdout(sys.stderr):
             python = install_environment(offline=True, repair=False)
@@ -579,15 +558,9 @@ def main(argv: list[str] | None = None) -> int:
             )
         if mode == "web":
             return web(python, args)
-        raise RuntimeError(f"内部モードが不明です: {mode}")
+        raise RuntimeError(f"Unknown internal mode: {mode}")
     except (OSError, ValueError, RuntimeError, subprocess.SubprocessError) as error:
         print(f"[ERROR] {error}", file=sys.stderr)
-        if any(marker in str(error) for marker in RESTORE_HINT_MARKERS):
-            print(
-                "[ヒント] vendor欠損・破損は別フォルダーへ再クローン。"
-                "app.db・data・BOOTH-Reader-Library は保持してください。",
-                file=sys.stderr,
-            )
         return 1
     except KeyboardInterrupt:
         return 130

@@ -13,5 +13,5 @@ set "PLAYWRIGHT_BROWSERS_PATH=%~dp0.playwright-browsers"
 "%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoLogo -NoProfile -ExecutionPolicy Bypass -File "%~dp0tools\bootstrap.ps1" -Mode auto %*
 set "RESULT=%ERRORLEVEL%"
 rem Keep the window open only when a plain double-click fails, not on Ctrl+C.
-if not "%RESULT%"=="0" if not "%RESULT%"=="130" if "%~1"=="" pause
+if not "%RESULT%"=="0" if not "%RESULT%"=="130" if "%~1"=="" pause >nul
 endlocal & exit /b %RESULT%

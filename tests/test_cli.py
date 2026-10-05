@@ -90,7 +90,7 @@ def test_read_commands_on_empty_db(tmp_path, capsys):
     init_db(db)
     for argv in (["purchases", "list"], ["unclassified"], ["downloads", "list"], ["lists", "list"]):
         assert cli_mod.main(["--db", str(db), *argv]) == 0
-    assert "(0件)" in capsys.readouterr().out
+    assert "(0 rows)" in capsys.readouterr().out
 
 
 # ---------------------------------------------------------------------------
@@ -116,13 +116,13 @@ def test_usage_errors_exit_2(tmp_path):
     assert e.value.code == 2
 
 
-def test_unknown_command_prints_japanese_guidance(tmp_path, capsys):
+def test_unknown_command_prints_english_guidance(tmp_path, capsys):
     db = init_db(tmp_path / "app.db")
     with pytest.raises(SystemExit) as e:
         cli_mod.main(["--db", str(db), "nosuchcommand"])
     assert e.value.code == 2
     err = capsys.readouterr().err
-    assert "使い方" in err
+    assert "Help:" in err
     assert "start.bat" in err
 
 
@@ -351,7 +351,7 @@ def test_rpc_reports_errors_without_dying(tmp_path):
     )
     assert responses[0]["ok"] is False
     assert responses[0]["returncode"] == 1
-    assert "ログイン" in responses[0]["error"]
+    assert "login required" in responses[0]["error"]
     assert responses[1]["ok"] is True
 
 

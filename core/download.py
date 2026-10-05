@@ -98,11 +98,11 @@ def check_concurrent(n: int) -> int:
     try:
         v = int(n)
     except (TypeError, ValueError) as e:
-        raise ValueError("concurrentは整数で指定してください") from e
+        raise ValueError("concurrent must be an integer") from e
     if v < 1:
         raise ValueError("concurrent must be >= 1")
     if v > MAX_CONCURRENT:
-        raise ValueError(f"concurrent上限は{MAX_CONCURRENT}です (負荷配慮)。要求={v}")
+        raise ValueError(f"concurrent must not exceed {MAX_CONCURRENT}; requested={v}")
     return v
 
 
@@ -149,11 +149,11 @@ def validate_item_id(item_id: str) -> str:
     """
     value = (item_id or "").strip()
     if not value or len(value) > 128:
-        raise ValueError("item_id が不正です (1〜128文字)")
+        raise ValueError("Invalid item_id (1-128 characters)")
     if FORBIDDEN.search(value) or _DRIVE_RE.match(value) or ".." in value:
-        raise ValueError(f"item_id に使用できない文字が含まれています: {value[:64]!r}")
+        raise ValueError(f"Invalid characters in item_id: {value[:64]!r}")
     if value in (".", ".."):
-        raise ValueError("item_id が不正です")
+        raise ValueError("Invalid item_id")
     return value
 
 
@@ -226,24 +226,24 @@ def _iter_safe_parts(name: str) -> list[str]:
     Raises ``ValueError`` for anything that must not be written to disk.
     """
     if not name:
-        raise ValueError("空のエントリ名")
+        raise ValueError("Empty archive entry name")
     if "\x00" in name or any(ord(c) < 32 or ord(c) == 127 for c in name):
-        raise ValueError("制御文字を含むエントリ名")
+        raise ValueError("Control characters in archive entry name")
     normalized = name.replace("\\", "/")
     if normalized.startswith("/") or _DRIVE_RE.match(name):
-        raise ValueError("絶対パスのエントリ名")
+        raise ValueError("Absolute archive entry path")
     if normalized.startswith("//"):
-        raise ValueError("UNC パスのエントリ名")
+        raise ValueError("UNC archive entry path")
     parts = [p for p in normalized.split("/") if p not in ("", ".")]
     if not parts:
-        raise ValueError("空のエントリ名")
+        raise ValueError("Empty archive entry name")
     if any(p == ".." for p in parts):
-        raise ValueError("親ディレクトリ参照を含むエントリ名")
+        raise ValueError("Parent traversal in archive entry path")
     for part in parts:
         if FORBIDDEN.search(part) or part != part.rstrip(" .") or _reserved_stem(part):
-            raise ValueError(f"使用できないエントリ名: {part[:64]!r}")
+            raise ValueError(f"Invalid archive entry name: {part[:64]!r}")
     if len(normalized) > _MAX_WIN_PATH:
-        raise ValueError("パス長超過のエントリ名")
+        raise ValueError("Archive entry path too long")
     return parts
 
 
@@ -275,7 +275,7 @@ def safe_extract_zip(
         infos = z.infolist()
         if len(infos) > limits.max_entries:
             raise BoothLimitExceededError(
-                f"エントリ数が上限を超えています ({len(infos)} > {limits.max_entries})"
+                f"Archive entry count exceeds limit ({len(infos)} > {limits.max_entries})"
             )
         declared_total = 0
         targets: set[str] = set()
@@ -284,29 +284,26 @@ def safe_extract_zip(
                 key = "/".join(_iter_safe_parts(info.filename)).casefold()
             except ValueError:
                 if strict:
-                    raise BoothNetworkError(
-                        f"ZIP に安全でないエントリがあります: {info.filename[:80]!r}"
-                    ) from None
+                    raise BoothNetworkError(f"Unsafe ZIP entry: {info.filename[:80]!r}") from None
             else:
                 if key in targets:
-                    raise BoothNetworkError(f"ZIP の展開先が重複しています: {info.filename[:80]!r}")
+                    raise BoothNetworkError(f"Duplicate ZIP destination: {info.filename[:80]!r}")
                 targets.add(key)
             if info.file_size > limits.max_entry_bytes:
                 raise BoothLimitExceededError(
-                    f"エントリが大きすぎます ({info.filename[:80]}: {info.file_size} bytes)"
+                    f"Archive entry too large ({info.filename[:80]}: {info.file_size} bytes)"
                 )
             declared_total += info.file_size
             if info.compress_size > 0:
                 ratio = info.file_size / max(1, info.compress_size)
                 if ratio > limits.max_compression_ratio:
                     raise BoothLimitExceededError(
-                        f"圧縮比が異常です ({info.filename[:80]}: {ratio:.0f}:1)。"
-                        "zip bomb の可能性があります。"
+                        f"Abnormal compression ratio ({info.filename[:80]}: {ratio:.0f}:1); "
+                        "possible zip bomb."
                     )
         if declared_total > limits.max_total_bytes:
             raise BoothLimitExceededError(
-                f"展開後サイズが上限を超えています "
-                f"({declared_total} > {limits.max_total_bytes} bytes)"
+                f"Extracted size exceeds limit ({declared_total} > {limits.max_total_bytes} bytes)"
             )
 
         for info in infos:
@@ -323,7 +320,7 @@ def safe_extract_zip(
             # residual traversal that survived textual validation.
             if not _is_within(resolved_base, target.resolve()):
                 if strict:
-                    raise BoothNetworkError("ZIP の展開先が出力フォルダ外です")
+                    raise BoothNetworkError("ZIP destination is outside the output folder")
                 log.warning("skip zip entry escaping destination: %s", name[:80])
                 skipped.append(name)
                 continue
@@ -344,7 +341,7 @@ def safe_extract_zip(
                         total += len(block)
                         if total > limits.max_total_bytes:
                             raise BoothLimitExceededError(
-                                f"展開後サイズが上限を超えました (> {limits.max_total_bytes} bytes)"
+                                f"Extracted size exceeds limit (> {limits.max_total_bytes} bytes)"
                             )
                         dst.write(block)
                     dst.flush()
@@ -407,7 +404,7 @@ def item_page_url(item_url_or_id: str) -> str:
         return f"https://accounts.booth.pm/orders/{value[len('order_') :]}"
     if value.isdigit():
         return f"https://booth.pm/ja/items/{value}"
-    raise ValueError(f"item_id から商品URLを判定できません: {value[:64]!r}")
+    raise ValueError(f"Cannot resolve product URL from item_id: {value[:64]!r}")
 
 
 def resolve_download_links(
@@ -431,8 +428,8 @@ def resolve_download_links(
         from bs4 import BeautifulSoup
     except ImportError as e:
         raise BoothPrerequisiteError(
-            "beautifulsoup4 (HTML パーサ) が未導入です",
-            "`start.bat --repair` で同梱の固定依存を復元してください。",
+            "beautifulsoup4 (HTML parser)",
+            "Run `start.bat --repair` to restore bundled dependencies.",
         ) from e
 
     url = item_page_url(item_url_or_id)
@@ -444,19 +441,19 @@ def resolve_download_links(
         or source.hostname != "accounts.booth.pm"
         or source.path != "/library"
     ):
-        raise ValueError("ライブラリのダウンロード元URLが不正です")
+        raise ValueError("Invalid library download source URL")
     response = net.request(
         url.split("#", 1)[0], cookies=cookies, timeout=timeout, accept_statuses=(200,)
     )
     final = str(response.url)
     if response.status_code in (401, 403) or "login" in final.lower():
-        raise BoothAuthError("DLリンク取得に失敗 (要再ログイン)。")
+        raise BoothAuthError("Failed to fetch download links.")
     html = response.text
 
     soup = BeautifulSoup(html, "html.parser")
     text = soup.get_text(" ", strip=True)
     if "年齢確認" in text and not soup.select("a[href]"):
-        raise BoothLayoutChangedError("年齢確認ページの可能性。実ブラウザで確認してください。")
+        raise BoothLayoutChangedError("Possible age verification page. Check in the browser.")
 
     links: dict[str, dict[str, Any]] = {}
     if library_item:
@@ -474,7 +471,7 @@ def resolve_download_links(
                     or endpoint.hostname not in {"booth.pm", "accounts.booth.pm"}
                     or not re.fullmatch(r"/downloadables/\d+", endpoint.path)
                 ):
-                    raise BoothLayoutChangedError("商品のダウンロード先が想定外です。")
+                    raise BoothLayoutChangedError("Unexpected product download URL.")
                 row = button.parent
                 for _ in range(3):
                     if row is None or row.get_text(" ", strip=True):
@@ -484,11 +481,11 @@ def resolve_download_links(
                 links.setdefault(absolute, {"url": absolute, "label": label})
                 if len(links) > max_links:
                     raise BoothLimitExceededError(
-                        f"ダウンロードリンクが上限 ({max_links}) を超えています。"
+                        f"Download link count exceeds limit ({max_links})."
                     )
         if not links:
             raise BoothLayoutChangedError(
-                "選択した商品のダウンロードリンクを確認できません。再同期してください。"
+                "Cannot verify download links for this product. Sync again."
             )
         return list(links.values())
     for a in soup.select("a[href]"):
@@ -505,8 +502,8 @@ def resolve_download_links(
             )
             if len(links) > max_links:
                 raise BoothLimitExceededError(
-                    f"ダウンロードリンクが上限 ({max_links}) を超えています: "
-                    f"{net.safe_url(url)}。この商品はまとめて取得できません。"
+                    f"Download link count exceeds limit ({max_links}): "
+                    f"{net.safe_url(url)}. Cannot download this product as a batch."
                 )
 
     if not links:
@@ -516,10 +513,8 @@ def resolve_download_links(
             if any(k in text for k in ("無料", "ギフト", "プレゼント", "複数")):
                 log.warning("no direct links (free/gift/multi-file?) url=%s", url)
                 return []
-            raise BoothLayoutChangedError(
-                "DLリンクが見つかりません。BOOTH側マークアップ変更の可能性があります。"
-            )
-        raise BoothLayoutChangedError("DLページの取得内容が想定外です。")
+            raise BoothLayoutChangedError("Download links missing; possible BOOTH markup change.")
+        raise BoothLayoutChangedError("Unexpected download page content.")
     return list(links.values())
 
 
@@ -659,16 +654,16 @@ def download_file(
             ):
                 status = r.status_code
                 if net.is_login_url(str(r.url)):
-                    raise BoothAuthError("DL先がログインページへ転送されました。")
+                    raise BoothAuthError("Download redirected to login page.")
                 if status in (401, 403):
-                    raise BoothAuthError("DL中に認証切れ (要再ログイン)。")
+                    raise BoothAuthError("Session expired during download.")
                 if status == 416:
                     # Equal length does not prove equal content. A 416 never
                     # authenticates the local prefix; restart with a full GET.
                     # The local file does not match what the server has.
                     _unlink(part)
                     last_error = BoothNetworkError(
-                        "ローカルの部分ファイルが想定外です。再ダウンロードします。"
+                        "Unexpected local partial file. Restarting download."
                     )
                     if attempt < max_retries:
                         continue
@@ -679,9 +674,7 @@ def download_file(
                         r.close()
                         _sleep_backoff(attempt)
                         continue
-                    raise BoothNetworkError(
-                        f"ダウンロード失敗 (HTTP {status}): {net.safe_url(url)}"
-                    )
+                    raise BoothNetworkError(f"Download failed (HTTP {status}): {net.safe_url(url)}")
 
                 if status == 206:
                     # Verify the range actually starts at our offset before
@@ -692,8 +685,8 @@ def download_file(
                     ):
                         _unlink(part)
                         last_error = _RangeMismatchError(
-                            f"サーバーが返した範囲の開始位置が要求と一致しません "
-                            f"(要求={offset} 応答={served})。ローカルの部分ファイルを破棄しました。"
+                            f"Server range start mismatch "
+                            f"(requested={offset} received={served}). Local partial file discarded."
                         )
                         if attempt < max_retries:
                             continue
@@ -701,12 +694,12 @@ def download_file(
 
                 if r.headers.get("content-encoding", "identity").lower() not in {"", "identity"}:
                     raise BoothNetworkError(
-                        "サーバーが圧縮された応答を返しました。安全に再開できません。"
+                        "Server returned compressed content. Cannot safely resume."
                     )
                 if status == 200 or not offset:
                     _unlink(part)
                     if part.exists():
-                        raise BoothNetworkError("古い部分ファイルを置換できませんでした。")
+                        raise BoothNetworkError("Cannot replace old partial file.")
                 etag = r.headers.get("etag", "")
                 header = "etag" if etag and not etag.startswith("W/") else "last-modified"
                 _atomic_write_json(
@@ -754,8 +747,8 @@ def download_file(
             # Out of disk space, read-only volume, permission denied. Retrying
             # cannot help, and the message must say so.
             raise BoothNetworkError(
-                f"ファイル書き込みに失敗しました ({dest}: {type(e).__name__}。"
-                "空き容量と書き込み権限を確認してください。"
+                f"File write failed ({dest}: {type(e).__name__}). "
+                "Check free space and write permissions."
             ) from e
         except net.RETRYABLE_EXC as e:
             last_error = e
@@ -776,7 +769,7 @@ def download_file(
             )
             _sleep_backoff(attempt, delay)
 
-    raise BoothNetworkError(f"ダウンロード失敗 ({dest.name}: {_reason(last_error)})")
+    raise BoothNetworkError(f"Download failed ({dest.name}: {_reason(last_error)})")
 
 
 def _sleep_backoff(attempt: int, delay: float | None = None) -> None:
@@ -818,7 +811,7 @@ def _atomic_write_json(path: Path, payload: dict[str, Any]) -> None:
         os.replace(tmp, path)  # noqa: PTH105 - atomic publish
         _fsync_dir(path.parent)
     except OSError as e:
-        raise BoothNetworkError(f"{path.name} の書込に失敗しました ({type(e).__name__})") from e
+        raise BoothNetworkError(f"Cannot write {path.name} ({type(e).__name__})") from e
     finally:
         _unlink(tmp)
 
@@ -877,7 +870,7 @@ def _stable_item_dir(root: Path, item_id: str, title: str, conn: sqlite3.Connect
             and p.resolve().parent == resolved_root
         }
     if len(candidates) > 1:
-        raise ValueError(f"同じ商品の保存先が複数あります: {item_id}")
+        raise ValueError(f"Multiple folders for the same product: {item_id}")
     return next(iter(candidates)) if candidates else item_dir(root, item_id, title)
 
 
@@ -953,7 +946,7 @@ def download_item(
         row = conn.execute("SELECT * FROM items WHERE item_id=?", (safe_id,)).fetchone()
         if row is None:
             raise ValueError(
-                f"item_id not found in DB: {safe_id} (先に purchases list --update-db を実行)"
+                f"item_id not found in DB: {safe_id} (run purchases list --update-db first)"
             )
         title = row["title"] or safe_id
         url = row["url"] or ""
@@ -962,7 +955,7 @@ def download_item(
         ex_dir = ddir / "extracted"
         for directory in (dl_dir, ex_dir):
             if not _is_within(ddir, directory.resolve()):
-                raise ValueError("ライブラリのサブフォルダが出力先外を参照しています")
+                raise ValueError("Library subfolder points outside the output folder")
         dl_dir.mkdir(parents=True, exist_ok=True)
         ex_dir.mkdir(parents=True, exist_ok=True)
 
@@ -1074,7 +1067,7 @@ def download_item(
                     try:
                         extracted = safe_extract_zip(dest, ex_dir, strict=True)
                     except zipfile.BadZipFile as e:
-                        raise BoothNetworkError(f"ZIP が破損しています: {dest.name}") from e
+                        raise BoothNetworkError(f"Corrupt ZIP: {dest.name}") from e
                     except BoothLimitExceededError:
                         raise
                 _set_status(conn, safe_id, fname, "done", str(dest), sha, url=link_url)
@@ -1177,12 +1170,12 @@ def _file_name_for(
             if bound != sanitize_component(bound) or not _is_within(
                 dl_dir.resolve(), (dl_dir / bound).resolve()
             ):
-                raise ValueError("ダウンロード台帳のファイル名が安全でありません")
+                raise ValueError("Unsafe file name in download ledger")
             scratch_names = {bound + suffix for suffix in (".part", ".part.json", ".part.json.tmp")}
             if {name.casefold() for name in scratch_names} & {
                 name.casefold() for name in ledger.names
             }:
-                raise ValueError("ダウンロードの一時保存先が別の原本と衝突しています")
+                raise ValueError("Temporary download path conflicts with another original file")
             used.add(bound)
             return bound
 

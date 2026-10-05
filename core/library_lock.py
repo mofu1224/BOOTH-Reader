@@ -13,7 +13,7 @@ from .errors import BoothError
 @contextmanager
 def library_lock(root: str | Path) -> Generator[None, None, None]:
     if os.name != "nt":
-        raise BoothError("ダウンロードの排他制御は Windows のみ対応しています。")
+        raise BoothError("Download locking requires Windows.")
     import msvcrt
 
     directory = Path(root)
@@ -28,7 +28,7 @@ def library_lock(root: str | Path) -> Generator[None, None, None]:
         try:
             msvcrt.locking(handle.fileno(), msvcrt.LK_NBLCK, 1)
         except OSError as e:
-            raise BoothError("ライブラリで別のダウンロードまたは削除処理が実行中です。") from e
+            raise BoothError("Another download or cleanup is running in this library.") from e
         try:
             yield
         finally:

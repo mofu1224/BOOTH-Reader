@@ -9,7 +9,7 @@ description = "BOOTH購入品の取得・ダウンロード・解凍・分類を
 readme = { file = "README.md", content-type = "text/markdown" }
 requires-python = ">=3.10"
 license = "MIT"
-license-files = ["LICENSE", "NOTICE", "THIRD_PARTY_NOTICES.md", "THIRD_PARTY_TERMS.md", "THIRD_PARTY_LICENSES/**/*", "SOURCE_OBLIGATIONS/README.md"]
+license-files = ["LICENSE", "NOTICE", "THIRD_PARTY_NOTICES.md", "THIRD_PARTY_TERMS.md", "THIRD_PARTY_TERMS_EN.md", "THIRD_PARTY_LICENSES/**/*", "SOURCE_OBLIGATIONS/README.md"]
 authors = [{ name = "mofu1224" }]
 keywords = ["booth", "download", "library", "organizer", "windows"]
 classifiers = [
@@ -18,6 +18,7 @@ classifiers = [
     "Environment :: Web Environment",
     "Intended Audience :: End Users/Desktop",
     "Natural Language :: Japanese",
+    "Natural Language :: English",
     "Operating System :: Microsoft :: Windows",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.10",

@@ -32,7 +32,7 @@ EXIT_ERROR = 1
 EXIT_USAGE = 2
 EXIT_LAYOUT_CHANGED = 3
 
-_RELOGIN_HINT = "BOOTHへのログインが必要です。`start.bat auth login` で再ログインしてください。"
+_RELOGIN_HINT = "BOOTH login required. Run `start.bat auth login`."
 
 
 class BoothError(Exception):
@@ -56,10 +56,7 @@ class BoothLayoutChangedError(BoothError):
     CODE = BOOTH_LAYOUT_CHANGED
 
     def __init__(self, msg: str = "") -> None:
-        base = (
-            "BOOTHのページレイアウトが想定と異なります (BOOTH_LAYOUT_CHANGED)。"
-            "booth-manager / BoothPM-SDK の実装も参照し、セレクタ更新が必要です。"
-        )
+        base = "Unexpected BOOTH page layout (BOOTH_LAYOUT_CHANGED). Update BOOTH-Reader."
         super().__init__(f"{base} {msg}".strip())
 
 
@@ -92,12 +89,9 @@ class BoothDatabaseError(BoothError):
 
     def __init__(self, path: str = "", detail: str = "") -> None:
         base = (
-            f"データベースを読み込めませんでした ({path})。"
-            "ファイルが壊れているか、SQLite データベースでない可能性があります。"
-            "別の場所を使うには --db <path> を指定してください。"
-            "新品で作り直すには、壊れたファイルを退避してから "
-            "`start.bat init-db` を実行し、"
-            "`start.bat purchases list --update-db` で再取得してください。"
+            f"Cannot read database ({path}); it may be corrupt or not SQLite. "
+            "Use --db <path> for another database. To rebuild, back up the damaged file, "
+            "then run `start.bat init-db` and `start.bat purchases list --update-db`."
         )
         super().__init__(f"{base} {detail}".strip())
 
@@ -118,10 +112,9 @@ class BoothSchemaTooNewError(BoothError):
 
     def __init__(self, path: str = "", found: int = 0, supported: int = 0) -> None:
         super().__init__(
-            f"データベース ({path}) のスキーマ版 v{found} は、このバージョン (v{supported}) "
-            "より新しいため開けません。BOOTH-Reader を最新に更新してから実行し直してください。"
-            "更新できない場合は、更新前のバージョンの BOOTH-Reader で "
-            "`start.bat doctor` を実行してください。"
+            f"Database ({path}) schema v{found} is newer than supported v{supported}. "
+            "Update BOOTH-Reader. If unavailable, run `start.bat doctor` with the version "
+            "that last opened this database."
         )
 
 
@@ -142,7 +135,7 @@ class BoothPrerequisiteError(BoothError):
     CODE = BOOTH_PREREQUISITE_MISSING
 
     def __init__(self, component: str, remedy: str) -> None:
-        super().__init__(f"{component} が必要です。{remedy}")
+        super().__init__(f"Required component: {component}. {remedy}")
 
 
 EXIT_CODE_BY_ERROR: dict[type[BoothError], int] = {

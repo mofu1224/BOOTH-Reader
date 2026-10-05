@@ -378,7 +378,7 @@ def test_wrong_range_start_never_reaches_the_published_file(tmp_path):
     assert not dest.exists(), "a corrupt file was published as if it were complete"
     # The poisoned part must be gone, or the next resume splices it in.
     assert not part.exists(), "a .part with the wrong bytes survived for the next attempt"
-    assert "範囲" in str(exc.value) or "Range" in str(exc.value)
+    assert "range" in str(exc.value).lower()
 
 
 def test_resume_after_a_wrong_range_yields_identical_bytes(tmp_path):
@@ -441,7 +441,7 @@ def test_too_many_download_links_is_reported_not_silently_truncated(tmp_path):
     with ItemServer(files, anchors=anchors) as server:
         with pytest.raises(BoothLimitExceededError) as exc:
             resolve_download_links(server.item_url, [], max_links=4)
-        assert "上限" in str(exc.value)
+        assert "limit" in str(exc.value)
 
         # Under the cap it still works.
         links = resolve_download_links(server.item_url, [], max_links=10)
@@ -466,7 +466,7 @@ def test_a_provisional_item_id_is_logged(tmp_path, caplog):
     with caplog.at_level(logging.WARNING, logger="core.purchases"):
         rows = parse_library_html(html)
     assert rows[0]["item_id"] == "order_111"
-    assert any("暫定ID" in r.getMessage() for r in caplog.records)
+    assert any("provisional ID" in r.getMessage() for r in caplog.records)
 
 
 # ---------------------------------------------------------------------------
@@ -662,7 +662,7 @@ def test_login_network_failure_is_not_reported_as_a_missing_browser(monkeypatch,
     assert not isinstance(exc.value, BoothPrerequisiteError)
     message = str(exc.value)
     assert "chromium" not in message.lower()
-    assert "通信" in message or "DNS" in message
+    assert "network" in message or "DNS" in message
 
 
 def test_login_browser_start_failure_is_still_a_prerequisite(monkeypatch, tmp_path):
@@ -746,5 +746,5 @@ def test_login_reports_an_unreadable_stdin_instead_of_crashing_a_thread(monkeypa
     monkeypatch.setattr(builtins, "input", broken_input)
     with pytest.raises(BoothAuthError) as exc:
         login(headless=True, path=tmp_path / "ck.json", timeout_s=5)
-    assert "標準入力" in str(exc.value)
+    assert "stdin" in str(exc.value)
     assert fake.closed and fake.stopped

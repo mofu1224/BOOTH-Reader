@@ -95,7 +95,7 @@ class CliResult:
 def resolve_cli(cli_path: str | Path | None = None) -> Path:
     p = Path(cli_path) if cli_path else DEFAULT_CLI
     if not p.exists():
-        raise CliBridgeError(f"cli.py が見つかりません: {p}")
+        raise CliBridgeError(f"cli.py not found: {p}")
     return p
 
 
@@ -104,7 +104,7 @@ def resolve_python(python_exe: str | Path | None = None) -> str:
 
 
 def _child_env() -> dict[str, str]:
-    """Child environment. ``--json`` stdout is ASCII, but logs are Japanese."""
+    """Child environment. JSON stdout is ASCII-escaped; logs use UTF-8."""
     env = dict(os.environ)
     env.update(CHILD_ENV_BASE)
     return env
@@ -113,14 +113,14 @@ def _child_env() -> dict[str, str]:
 def sanitize_item_id(item_id: str) -> str:
     value = (item_id or "").strip()
     if not _ITEM_ID_RE.match(value):
-        raise CliBridgeError(f"不正な item_id です: {value[:32]!r}", returncode=2)
+        raise CliBridgeError(f"Invalid item_id: {value[:32]!r}", returncode=2)
     return value
 
 
 def sanitize_list_name(name: str) -> str:
     value = (name or "").strip()
     if not value or len(value) > MAX_LIST_NAME or any(c in value for c in "\n\r\x00"):
-        raise CliBridgeError("不正なリスト名です (1-128文字)", returncode=2)
+        raise CliBridgeError("Invalid list name (1-128 characters)", returncode=2)
     return value
 
 
@@ -151,10 +151,10 @@ def _classify(returncode: int, stdout: str, stderr: str) -> CliBridgeError:
         raise CliLayoutChangedError(
             last_err or "BOOTH_LAYOUT_CHANGED", returncode=3, stderr=err[-2000:]
         )
-    if "ログイン" in err or "auth login" in err or "再ログイン" in err:
-        raise CliAuthError(last_err or "要再ログイン", returncode=returncode, stderr=err[-2000:])
+    if "auth login" in err or "BOOTH_AUTH_REQUIRED" in err:
+        raise CliAuthError(last_err or "Login required", returncode=returncode, stderr=err[-2000:])
     raise CliBridgeError(
-        last_err or last_out or f"CLI失敗 (exit={returncode})",
+        last_err or last_out or f"CLI failed (exit={returncode})",
         returncode=returncode,
         stderr=err[-2000:],
     )
@@ -199,9 +199,9 @@ def run_cli_once(
             check=False,
         )
     except subprocess.TimeoutExpired as e:
-        raise CliBridgeError(f"CLIがタイムアウトしました ({timeout}s)", returncode=124) from e
+        raise CliBridgeError(f"CLI timed out ({timeout}s)", returncode=124) from e
     except OSError as e:
-        raise CliBridgeError(f"CLI起動に失敗しました ({type(e).__name__})") from e
+        raise CliBridgeError(f"CLI launch failed ({type(e).__name__})") from e
     elapsed = (time.perf_counter() - started) * 1000
 
     data = None
@@ -210,7 +210,7 @@ def run_cli_once(
             data = json.loads(proc.stdout)
         except ValueError as e:
             raise CliBridgeError(
-                "CLIのJSON応答を解析できませんでした",
+                "Cannot parse CLI JSON response",
                 returncode=proc.returncode,
                 stderr=proc.stderr[-2000:],
             ) from e
@@ -301,7 +301,7 @@ class CliWorker:
                     self._spawn()
                 except OSError as e:
                     raise WorkerTransportError(
-                        f"CLIワーカーを起動できませんでした ({type(e).__name__})", returncode=125
+                        f"Cannot start CLI worker ({type(e).__name__})", returncode=125
                     ) from e
             assert self._proc is not None and self._proc.stdin and self._proc.stdout
             self._next_id += 1
@@ -314,7 +314,7 @@ class CliWorker:
                 self.restarts += 1
                 self._stop()
                 raise WorkerTransportError(
-                    f"CLIワーカーへの送信に失敗 ({type(e).__name__})", returncode=125
+                    f"Cannot send to CLI worker ({type(e).__name__})", returncode=125
                 ) from e
 
             line = _read_line(self._proc, timeout)
@@ -324,7 +324,7 @@ class CliWorker:
                 self.restarts += 1
                 self._stop()
                 raise WorkerTransportError(
-                    f"CLIワーカーが応答しませんでした ({timeout}s)", returncode=124
+                    f"CLI worker did not respond ({timeout}s)", returncode=124
                 )
 
             elapsed = (time.perf_counter() - started) * 1000
@@ -339,9 +339,7 @@ class CliWorker:
             except (ValueError, TypeError) as e:
                 self.restarts += 1
                 self._stop()
-                raise WorkerTransportError(
-                    "ワーカーの応答を解析できませんでした", returncode=125
-                ) from e
+                raise WorkerTransportError("Cannot parse worker response", returncode=125) from e
 
             stdout = str(response.get("stdout") or "")
             stderr = str(response.get("stderr") or "")
@@ -349,7 +347,7 @@ class CliWorker:
                 if stderr:
                     _classify(returncode, stdout, stderr)
                 raise CliBridgeError(
-                    str(response.get("error") or f"CLI失敗 (exit={returncode})"),
+                    str(response.get("error") or f"CLI failed (exit={returncode})"),
                     returncode=returncode,
                     stderr=stderr[-2000:],
                 )
@@ -359,9 +357,7 @@ class CliWorker:
 @contextlib.contextmanager
 def _request_lock(lock: Any, timeout: int) -> Any:
     if not lock.acquire(timeout=timeout):
-        raise CliBridgeError(
-            f"CLIワーカーの待機がタイムアウトしました ({timeout}s)", returncode=124
-        )
+        raise CliBridgeError(f"CLI worker wait timed out ({timeout}s)", returncode=124)
     try:
         yield
     finally:
@@ -438,7 +434,7 @@ class Bridge:
                 self._disable_worker()
                 if not _read_only(argv):
                     raise CliBridgeError(
-                        f"{e}。処理が完了したか確認してから再実行してください。",
+                        f"{e}. Check whether the operation completed before retrying.",
                         returncode=e.returncode,
                     ) from e
                 log.warning("worker transport failure (%s); using one-shot", e)
@@ -554,11 +550,11 @@ def download_argv(
     try:
         conc = int(concurrent)
     except (TypeError, ValueError) as e:
-        raise CliBridgeError("concurrentは整数で指定してください", returncode=2) from e
+        raise CliBridgeError("concurrent must be an integer", returncode=2) from e
     if conc < 1 or conc > 5:
-        raise CliBridgeError("concurrentは1〜5です", returncode=2)
+        raise CliBridgeError("concurrent must be 1-5", returncode=2)
     if item_id and all:
-        raise CliBridgeError("--item-id と --all は同時に指定できません", returncode=2)
+        raise CliBridgeError("--item-id and --all are mutually exclusive", returncode=2)
     extra = ["--output-dir", str(output_dir)] if output_dir else []
     if all:
         return ["download", "--all", "--concurrent", str(conc), *extra]
@@ -571,7 +567,7 @@ def download_argv(
             str(conc),
             *extra,
         ]
-    raise CliBridgeError("item_id または all を指定してください", returncode=2)
+    raise CliBridgeError("Specify item_id or all", returncode=2)
 
 
 def run_download_blocking(

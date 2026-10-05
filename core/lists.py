@@ -34,7 +34,7 @@ def _clamp_limit(limit: int | None) -> int | None:
 def _check_name(name: str) -> str:
     v = (name or "").strip()
     if not v or len(v) > 128 or any(c in v for c in "\r\n\x00"):
-        raise ValueError("リスト名は1〜128文字で指定してください")
+        raise ValueError("List name must contain 1-128 characters")
     return v
 
 
@@ -91,7 +91,7 @@ def add_member(conn: sqlite3.Connection, list_id_or_name: str | int, item_id: st
             (item_id, list_id if list_id is not None else -1),
         ).fetchone()
         if existing is not None:
-            raise ValueError("この商品は既に別のリストに登録されています")
+            raise ValueError("Product already belongs to another list")
         if list_id is None:
             conn.execute(
                 "INSERT INTO lists(name,position) SELECT ?,COALESCE(MAX(position),-1)+1 FROM lists",
@@ -110,7 +110,7 @@ def add_member(conn: sqlite3.Connection, list_id_or_name: str | int, item_id: st
         raise
     except sqlite3.Error as e:
         conn.rollback()
-        raise ValueError(f"リスト追加に失敗しました ({type(e).__name__})") from e
+        raise ValueError(f"Failed to add product to list ({type(e).__name__})") from e
 
 
 def remove_member(conn: sqlite3.Connection, list_id_or_name: str, item_id: str) -> int:
@@ -122,10 +122,10 @@ def remove_member(conn: sqlite3.Connection, list_id_or_name: str, item_id: str) 
 
 def set_sort(conn: sqlite3.Connection, key: str, sort: str) -> None:
     if sort not in (*SORTS, "manual"):
-        raise ValueError("並び順が不正です")
+        raise ValueError("Invalid sort order")
     list_id = _resolve_list(conn, key)
     if list_id is None:
-        raise ValueError("リストが見つかりません")
+        raise ValueError("List not found")
     conn.execute("UPDATE lists SET sort=? WHERE list_id=?", (sort, list_id))
     conn.commit()
 
@@ -133,7 +133,7 @@ def set_sort(conn: sqlite3.Connection, key: str, sort: str) -> None:
 def reorder(conn: sqlite3.Connection, key: str, item_ids: list[str]) -> None:
     list_id = _resolve_list(conn, key)
     if list_id is None:
-        raise ValueError("リストが見つかりません")
+        raise ValueError("List not found")
     try:
         conn.execute("BEGIN IMMEDIATE")
         members = {
@@ -141,7 +141,7 @@ def reorder(conn: sqlite3.Connection, key: str, item_ids: list[str]) -> None:
             for r in conn.execute("SELECT item_id FROM list_members WHERE list_id=?", (list_id,))
         }
         if len(item_ids) != len(set(item_ids)) or set(item_ids) != members:
-            raise ValueError("リストの商品が変更されています。表示を更新してください")
+            raise ValueError("List products changed. Refresh the page")
         conn.executemany(
             "UPDATE list_members SET position=? WHERE list_id=? AND item_id=?",
             [(position, list_id, item_id) for position, item_id in enumerate(item_ids)],
@@ -155,12 +155,12 @@ def reorder(conn: sqlite3.Connection, key: str, item_ids: list[str]) -> None:
 
 def reorder_lists(conn: sqlite3.Connection, list_ids: list[int]) -> None:
     if any(type(i) is not int or not 1 <= i <= 2**63 - 1 for i in list_ids):
-        raise ValueError("リストID配列の形式が不正です")
+        raise ValueError("Invalid list ID array")
     try:
         conn.execute("BEGIN IMMEDIATE")
         existing = {row[0] for row in conn.execute("SELECT list_id FROM lists")}
         if len(list_ids) != len(set(list_ids)) or set(list_ids) != existing:
-            raise ValueError("マイリストが変更されています。表示を更新してください")
+            raise ValueError("Lists changed. Refresh the page")
         conn.executemany(
             "UPDATE lists SET position=? WHERE list_id=?",
             [(position, list_id) for position, list_id in enumerate(list_ids)],

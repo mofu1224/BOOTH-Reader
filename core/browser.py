@@ -180,8 +180,8 @@ def launch_browser(playwright: Any, *, headless: bool = False) -> Any:
         return playwright.chromium.launch(headless=headless)
 
     print(
-        "[WebView2] 利用・再配布には THIRD_PARTY_TERMS.md と同梱Microsoft原文の条件が適用されます。\n"
-        "Microsoft Defender SmartScreenは有効です。WebView2は情報を収集してMicrosoftへ送信することがあります。\n"
+        "[WebView2] Terms: THIRD_PARTY_TERMS.md and bundled Microsoft licenses.\n"
+        "SmartScreen enabled. WebView2 may send data to Microsoft.\n"
         "https://aka.ms/privacy | https://learn.microsoft.com/en-us/microsoft-edge/privacy-whitepaper#smartscreen",
         file=sys.stderr,
         flush=True,
