@@ -71,7 +71,7 @@ def fetch_library_html(
     """Fetch the purchase library page. Returns ``(html, final_url)``."""
     if cookies is None:
         cookies = load_cookies(cookie_path)
-    log.info("fetching library (cookie count=%d)", len(cookies or []))
+    log.info("library fetch cookies count=%d", len(cookies or []))
     response = net.request(LIBRARY_URL, cookies=cookies, timeout=timeout)
     final = str(response.url)
     if response.status_code in (401, 403) or _looks_logged_out(final):
@@ -131,8 +131,7 @@ def _item_id_for(links: list[Any], order_id: str) -> str:
         if len(products) == 1:
             return products.pop()
     log.warning(
-        "order %s: 商品リンクが見つからないため暫定ID order_%s で記録します。"
-        "BOOTH側のマークアップ変更が疑われます。",
+        "order %s: 商品リンクなし、暫定ID order_%s。BOOTH構造変更の可能性。",
         order_id,
         order_id,
     )
@@ -281,7 +280,7 @@ def parse_library_html(html: str, base_url: str = LIBRARY_URL) -> list[dict[str,
             "年齢確認ページの可能性があります。実ブラウザで確認してください。"
         )
     if "ギフト" in page_text:
-        log.warning("gift items may be present; they are recorded as normal rows")
+        log.warning("gifts may be included as normal rows")
 
     anchors = soup.select('a[href*="/orders/"]')
     if not anchors:
@@ -290,7 +289,7 @@ def parse_library_html(html: str, base_url: str = LIBRARY_URL) -> list[dict[str,
                 "購入一覧のマーカーが見つかりません。HTML構造が変更された可能性があります。"
             )
         if any(marker in page_text for marker in EMPTY_LIBRARY_MARKERS):
-            log.info("library appears empty; returning 0 rows")
+            log.info("library empty")
             return []
         raise BoothLayoutChangedError(
             f"商品カードと注文リンクが見つかりません (html={len(html)}bytes)。"

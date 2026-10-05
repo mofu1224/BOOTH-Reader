@@ -51,10 +51,10 @@ SORT_CHOICES = ("newest", "oldest", "name", "shop")
 
 EPILOG = """\
 使用例:
-  start.bat unclassified --sort newest          未分類キュー (第一級機能)
-  start.bat purchases list --update-db          BOOTHから購入一覧を取得
-  start.bat download --item-id order_12345      1件ダウンロード
-  start.bat download --all --concurrent 3       全件ダウンロード (上限5)
+  start.bat unclassified --sort newest          未分類
+  start.bat purchases list --update-db          購入一覧を同期
+  start.bat download --item-id order_12345      1件取得
+  start.bat download --all --concurrent 3       全件取得 (上限5)
   start.bat auth login                          ブラウザでログイン
   start.bat doctor                              環境・整合性を診断
   start.bat web --port 8000                     WebUI を起動
@@ -91,8 +91,8 @@ class _Parser(argparse.ArgumentParser):
         self.print_usage(sys.stderr)
         print(f"ERROR {message}", file=sys.stderr)
         print(
-            "使い方が正しくありません。`start.bat help` でコマンド一覧を表示できます"
-            " (Web UI は引数なしの `start.bat`、環境の修復は `start.bat --repair` です)。",
+            "使い方が正しくありません。ヘルプ: start.bat help / "
+            "Web: start.bat / 修復: start.bat --repair",
             file=sys.stderr,
         )
         self.exit(2)
@@ -365,11 +365,11 @@ def _cmd_auth(args: argparse.Namespace) -> int:
             path=cpath,
             timeout_s=max(30, int(getattr(args, "timeout", 600))),
         )
-        print(f"login ok. cookies saved to {p} (パスワードは保存していません)")
+        print(f"login ok: {p} (パスワード非保存)")
         return 0
     if args.auth_cmd == "logout":
         ok = auth_mod.logout(cpath)
-        print("logout ok (Cookie削除)" if ok else "Cookieはありませんでした")
+        print("logout ok (Cookie削除)" if ok else "Cookieなし")
         return 0
     if args.auth_cmd == "status":
         info = auth_mod.status(cpath, verify_network=args.verify_network)
@@ -1049,8 +1049,7 @@ def main(  # noqa: PLR0911 - a flat command table reads better than a dispatch m
         return 0
     if args.cmd is None:
         print(
-            "コマンドが指定されていません。通常の起動は引数なしの `start.bat` です。"
-            " `start.bat help` でコマンド一覧を表示します。",
+            "コマンド未指定。起動: start.bat / ヘルプ: start.bat help",
             file=sys.stderr,
         )
         parser.print_help()

@@ -11,6 +11,7 @@ from tools.check_release_hygiene import private_path
 
 ROOT = Path(__file__).resolve().parent.parent
 GATE = "license-audit/release-gate.json"
+MAX_RELATIVE_PATH_UNITS = 180  # 78-unit checkout root + separator + path < MAX_PATH.
 
 
 def collect(root: Path = ROOT) -> list[Path]:
@@ -46,6 +47,8 @@ def collect(root: Path = ROOT) -> list[Path]:
             raise SystemExit("Clone candidate contains a link or path outside the repository")
         if not path.exists():
             continue  # A worktree deletion is part of the candidate.
+        if len(name.encode("utf-16-le")) // 2 > MAX_RELATIVE_PATH_UNITS:
+            raise SystemExit(f"Clone candidate path is too long for Windows copying: {name}")
         if not path.is_file():
             raise SystemExit("Clone candidate contains a submodule or non-file entry")
         if path.stat().st_size >= 100 * 1024 * 1024:

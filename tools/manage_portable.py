@@ -196,7 +196,7 @@ def wheelhouse_ready() -> bool:
 
 def install_environment(*, offline: bool, repair: bool) -> Path:
     if environment_ready() and not repair:
-        print("[portable] 固定環境は準備済みです", file=sys.stderr)
+        print("[portable] 準備済み", file=sys.stderr)
         return venv_python()
     if not wheelhouse_ready():
         from tools.vendor_payload import restore_wheels
@@ -205,9 +205,8 @@ def install_environment(*, offline: bool, repair: bool) -> Path:
             restore_wheels(ROOT)
         except (OSError, ValueError, RuntimeError) as error:
             raise RuntimeError(
-                "同梱の依存パッケージ (vendor/) が見つからないか破損しています。"
-                "リポジトリを git clone し直すと復元されます。"
-                "app.db・data・BOOTH-Reader-Library は削除しないでください。"
+                "同梱の依存パッケージ (vendor/) が欠損・破損。再クローンしてください。"
+                "app.db・data・BOOTH-Reader-Library は保持してください。"
             ) from error
     # Move only disposable environment state, never DB/cookies/library. Keep the
     # old environment until installation+self-check succeeds; failures roll back.
@@ -219,9 +218,8 @@ def install_environment(*, offline: bool, repair: bool) -> Path:
             old.rename(backup)
         except OSError as error:
             raise RuntimeError(
-                "固定環境 (.venv) が使用中のため更新できません。"
-                "起動中の BOOTH-Reader を Ctrl+C で終了してから、もう一度実行してください。"
-                "app.db・data・BOOTH-Reader-Library は削除されません。"
+                ".venv が使用中です。BOOTH-ReaderをCtrl+Cで終了してから再実行してください。"
+                "DB・Cookie・購入物は保持します。"
             ) from error
     try:
         python = ensure_venv(ROOT)
@@ -349,16 +347,12 @@ def ensure_browser(python: Path, *, offline: bool, repair: bool = False) -> None
         if SNAPSHOT.is_file() and RECEIPT.is_file():
             saved = json.loads(RECEIPT.read_text(encoding="utf-8"))
             if saved["sha256"] != digest(SNAPSHOT):
-                raise RuntimeError(
-                    "同梱ブラウザーのハッシュが一致しません。"
-                    "リポジトリを git clone し直してください。"
-                )
+                raise RuntimeError("同梱ブラウザーのハッシュ不一致。再クローンしてください。")
             extract_snapshot(SNAPSHOT, base)
         else:
             raise RuntimeError(
-                "同梱ブラウザー (vendor/) が見つかりません。"
-                "リポジトリを git clone し直すと復元されます。"
-                "app.db・data・BOOTH-Reader-Library は削除しないでください。"
+                "同梱ブラウザー (vendor/) がありません。再クローンしてください。"
+                "app.db・data・BOOTH-Reader-Library は保持してください。"
             )
     code = (
         "from playwright.sync_api import sync_playwright; "
@@ -374,7 +368,7 @@ def ensure_browser(python: Path, *, offline: bool, repair: bool = False) -> None
         if repair:
             raise
         print(
-            "[portable] ブラウザーを起動できないため、検証済みの同梱スナップショットから復元します",
+            "[portable] ブラウザー起動失敗。同梱原本から復元します",
             file=sys.stderr,
         )
         ensure_browser(python, offline=True, repair=True)
@@ -490,15 +484,15 @@ def web(python: Path, args: list[str]) -> int:
     running = find_existing_web_instance(port)
     if running is not None:
         url = f"http://127.0.0.1:{running}/"
-        print(f"[OK] BOOTH-Reader はすでに起動しています: {url}", flush=True)
-        print("このウィンドウは閉じてかまいません。", flush=True)
+        print(f"[OK] すでに起動しています: {url}", flush=True)
+        print("このウィンドウは閉じて構いません。", flush=True)
         if open_browser:
             open_web_browser(url)
         return 0
     served = pick_free_port(port)
     url = f"http://127.0.0.1:{served}/"
     if served != port:
-        print(f"[portable] ポート {port} は使用中のため {served} を使います。", flush=True)
+        print(f"[portable] ポート {port} 使用中 → {served}", flush=True)
     cmd = [
         str(python),
         "-s",
@@ -509,9 +503,9 @@ def web(python: Path, args: list[str]) -> int:
         "--port",
         str(served),
     ]
-    print(f"ブラウザーで開いてください: {url}", flush=True)
-    print("この画面は開いたままにしてください。終了は Ctrl+C です。", flush=True)
-    print(f"購入ファイルの保存先: {ROOT / 'BOOTH-Reader-Library'}", flush=True)
+    print(f"Web UI: {url}", flush=True)
+    print("この画面は閉じず、Ctrl+Cで終了。", flush=True)
+    print(f"保存先: {ROOT / 'BOOTH-Reader-Library'}", flush=True)
     if open_browser:
         schedule_web_browser(served)
     return subprocess.call(cmd, cwd=ROOT, env=child_env())
@@ -525,7 +519,7 @@ def main(argv: list[str] | None = None) -> int:
         mode, args = resolve_mode(args)
     if mode == "web":
         print(
-            "[portable] 起動準備を確認しています。初回は少し時間がかかります...",
+            "[portable] 準備確認中 (初回は時間がかかります)",
             file=sys.stderr,
             flush=True,
         )
@@ -546,10 +540,9 @@ def main(argv: list[str] | None = None) -> int:
             if "--check" in args:
                 ready = environment_ready()
                 print(
-                    "[OK] 準備済みです。start.bat をそのまま実行できます。"
+                    "[OK] 準備済み。start.bat で起動"
                     if ready
-                    else "[portable] まだ準備されていません。"
-                    " start.bat を実行すると同梱物から自動で準備します。",
+                    else "[portable] まだ準備されていません。 start.bat で自動準備。",
                     file=sys.stderr,
                 )
                 return 0 if ready else 1
@@ -557,9 +550,8 @@ def main(argv: list[str] | None = None) -> int:
                 running = find_existing_web_instance(DEFAULT_WEB_PORT)
                 if running is not None:
                     raise RuntimeError(
-                        f"BOOTH-Reader が起動中です (http://127.0.0.1:{running}/)。"
-                        "そのウィンドウで Ctrl+C を押して終了してから、もう一度実行してください。"
-                        "app.db・data・BOOTH-Reader-Library は削除されません。"
+                        f"起動中です (http://127.0.0.1:{running}/)。Ctrl+Cで終了後、再実行してください。"
+                        "DB・Cookie・購入物は保持します。"
                     )
             repair = "--repair" in args or "--recreate" in args
             python = install_environment(offline=True, repair=repair)
@@ -567,10 +559,7 @@ def main(argv: list[str] | None = None) -> int:
                 ensure_browser(python, offline=True, repair=repair)
             if not (ROOT / "app.db").exists():
                 call([str(python), "-s", str(ROOT / "cli.py"), "init-db"])
-            print(
-                "[OK] セットアップが完了しました。"
-                "Cookie・購入履歴・購入ファイルはそのまま残っています。"
-            )
+            print("[OK] 準備完了 (DB・Cookie・購入物は保持)")
             return 0
         with contextlib.redirect_stdout(sys.stderr):
             python = install_environment(offline=True, repair=False)
@@ -595,9 +584,8 @@ def main(argv: list[str] | None = None) -> int:
         print(f"[ERROR] {error}", file=sys.stderr)
         if any(marker in str(error) for marker in RESTORE_HINT_MARKERS):
             print(
-                "[ヒント] 同梱物 (vendor/) が欠損・破損している場合は、"
-                "リポジトリを git clone し直すと復元されます。"
-                "app.db・data・BOOTH-Reader-Library は削除しないでください。",
+                "[ヒント] vendor欠損・破損は別フォルダーへ再クローン。"
+                "app.db・data・BOOTH-Reader-Library は保持してください。",
                 file=sys.stderr,
             )
         return 1

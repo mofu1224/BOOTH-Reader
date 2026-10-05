@@ -87,3 +87,20 @@ def test_collector_excludes_local_receipts_and_private_sidecars(tmp_path, monkey
         path.write_text("synthetic")
     collected = {path.relative_to(tmp_path).as_posix() for path in build_release.collect()}
     assert collected == {".gitignore", "tools/check.py", "license-audit/pathspec-source.json"}
+
+
+def test_collector_rejects_paths_that_leave_no_room_for_checkout_root(tmp_path):
+    import subprocess
+
+    from tools.repository_files import collect
+
+    subprocess.run(["git", "init", str(tmp_path)], check=True, capture_output=True)
+    directory = tmp_path / ("a" * 80)
+    directory.mkdir()
+    boundary = directory / ("b" * 99)
+    boundary.write_bytes(b"notice")
+    assert boundary in collect(tmp_path)
+    boundary.unlink()
+    (directory / ("b" * 100)).write_bytes(b"notice")
+    with pytest.raises(SystemExit, match=r"path.*long"):
+        collect(tmp_path)

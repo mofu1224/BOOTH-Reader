@@ -26,6 +26,9 @@ from packaging.utils import canonicalize_name
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
+
+from tools.repository_files import MAX_RELATIVE_PATH_UNITS  # noqa: E402
+
 AUDIT = ROOT / "license-audit"
 LICENSES = ROOT / "THIRD_PARTY_LICENSES"
 NOTICE_RE = re.compile(r"license|copying|notice|copyright|authors|credits|about", re.I)
@@ -95,6 +98,9 @@ def safe_name(name: str) -> str:
 
 def retain(component: str, name: str, data: bytes, source: str) -> dict:
     path = LICENSES / safe_name(component) / (digest(data)[:12] + "-" + safe_name(name))
+    if len(path.relative_to(ROOT).as_posix().encode("utf-16-le")) // 2 > MAX_RELATIVE_PATH_UNITS:
+        directory = digest(component.encode("utf-8"))[:12] + "-" + safe_name(component)[:48]
+        path = LICENSES / directory / (digest(data)[:12] + "-" + safe_name(Path(name).name)[:64])
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_bytes(data)
     return {

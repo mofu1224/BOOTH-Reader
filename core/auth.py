@@ -151,7 +151,7 @@ def restrict_permissions(path: str | Path) -> bool:
 
     account = current_account()
     if not account:
-        log.warning("current account unknown; leaving ACLs untouched")
+        log.warning("account unknown; ACL unchanged")
         return False
 
     # DELETE is required for atomic rename and logout when the parent grants
@@ -161,7 +161,7 @@ def restrict_permissions(path: str | Path) -> bool:
         return False
     restricted = icacls(p, "/inheritance:r")
     if not _is_readable(p):
-        log.error("ACL change made %s unreadable; restoring inherited access", p.name)
+        log.error("ACL unreadable %s; restoring inheritance", p.name)
         icacls(p, "/grant:r", f"{account}:(F)")
         icacls(p, "/inheritance:e")
         return False
@@ -190,7 +190,7 @@ def save_cookies(cookies: list[dict[str, Any]], path: str | Path | None = None) 
         raise BoothAuthError("Cookieの形式が不正です (name がありません)。")
     p.parent.mkdir(parents=True, exist_ok=True)
     # Values are never logged; only the count and the path.
-    log.info("saving cookies: count=%d path=%s", len(cookies), p)
+    log.info("cookies save count=%d path=%s", len(cookies), p)
     try:
         payload = json.dumps(cookies, ensure_ascii=False)
     except (TypeError, ValueError) as e:
@@ -256,7 +256,7 @@ def logout(path: str | Path | None = None) -> bool:
             raise BoothAuthError(f"Cookieを削除できませんでした ({type(e).__name__})") from e
         log.info("cookies removed path=%s", p)
         return True
-    log.info("no cookie file to remove")
+    log.info("cookies absent")
     return False
 
 
@@ -310,7 +310,7 @@ def _verify_login(page: Any, timeout_ms: int = 30000) -> bool:
     try:
         count = page.locator('a[href*="/orders/"]').count()
         if count == 0:
-            log.info("library reachable but no orders listed (empty library is valid)")
+            log.info("library reachable, empty")
     except Exception as e:  # noqa: BLE001
         log.debug("order probe failed: %s", type(e).__name__)
     return True
@@ -403,7 +403,7 @@ def _run_login_session(browser: Any, timeout_s: int) -> list[dict[str, Any]]:
     if not _verify_login(page):
         # Give the user a second chance: the page may still have been
         # mid-redirect when Enter was pressed.
-        log.info("login not confirmed on first check; retrying once")
+        log.info("login unconfirmed; retry once")
         if not _verify_login(page):
             raise BoothAuthError(
                 "ログインを確認できませんでした。ブラウザでログインし直してから"
@@ -435,7 +435,7 @@ def login(
         ) from e
 
     p = cookie_path(path)
-    log.info("opening browser for login; the password is never stored")
+    log.info("login browser; password not stored")
     pw, browser = _launch_browser(headless, sync_playwright)
     try:
         cookies = _run_login_session(browser, timeout_s)
