@@ -436,7 +436,7 @@ def resolve_download_links(
         ) from e
 
     url = item_page_url(item_url_or_id)
-    log.info("resolving download links item=%s", net.safe_url(url))
+    log.info("download links item=%s", net.safe_url(url))
     source = urlsplit(url)
     library_item = re.fullmatch(r"item-(\d+)", source.fragment)
     if library_item and (
@@ -514,7 +514,7 @@ def resolve_download_links(
             # Free / gift / multi-file cases are reported, never silently
             # treated as a layout break.
             if any(k in text for k in ("無料", "ギフト", "プレゼント", "複数")):
-                log.warning("no direct download links (free/gift/multi-file case?) url=%s", url)
+                log.warning("no direct links (free/gift/multi-file?) url=%s", url)
                 return []
             raise BoothLayoutChangedError(
                 "DLリンクが見つかりません。BOOTH側マークアップ変更の可能性があります。"
@@ -624,7 +624,7 @@ def download_file(
         # download continues instead of starting over.
         try:
             os.replace(dest, part)  # noqa: PTH105 - atomic adopt of the partial file
-            log.info("resuming partial download %s (%d bytes)", dest.name, part.stat().st_size)
+            log.info("resume %s offset=%d", dest.name, part.stat().st_size)
         except OSError as e:
             log.warning("could not adopt partial file %s: %s", dest, type(e).__name__)
 
@@ -723,7 +723,7 @@ def download_file(
                 if offset and not append:
                     # The server ignored our Range header, so the body starts at
                     # byte 0. Appending would corrupt the file.
-                    log.info("server ignored Range for %s; restarting", dest.name)
+                    log.info("Range ignored %s; restart", dest.name)
                     offset = 0
                 mode = "ab" if append else "wb"
                 written = 0
@@ -767,7 +767,7 @@ def download_file(
         if attempt < max_retries:
             delay = net.backoff_delay(attempt)
             log.warning(
-                "download retry %d/%d for %s: %s (sleep %.2fs)",
+                "retry %d/%d %s: %s wait=%.2fs",
                 attempt,
                 max_retries,
                 dest.name,
@@ -982,7 +982,7 @@ def download_item(
                 "generated_at": time.strftime("%Y-%m-%dT%H:%M:%S"),
             }
             _atomic_write_json(ddir / "meta.json", meta)
-            log.warning("no files for item=%s; recorded with a note", safe_id)
+            log.warning("no files item=%s; note saved", safe_id)
             return {
                 "item_id": safe_id,
                 "files": [],
@@ -1022,7 +1022,7 @@ def download_item(
                 and dest.is_file()
                 and (not existing["sha256"] or sha256_of(dest) == existing["sha256"])
             ):
-                log.info("[%s] %s already downloaded; skipping", safe_id, fname)
+                log.info("[%s] %s skip (done)", safe_id, fname)
                 cached: dict[str, Any] = {
                     **previous_files.get(fname, {}),
                     "file": fname,
@@ -1061,7 +1061,7 @@ def download_item(
                 continue
 
             _set_status(conn, safe_id, fname, "downloading", str(dest), url=link_url)
-            log.info("[%s] %s downloading...", safe_id, fname)
+            log.info("[%s] %s download", safe_id, fname)
             try:
                 # Existing published files are complete versions, never resume
                 # prefixes. Force/repair must leave them intact until replacement.
@@ -1088,7 +1088,7 @@ def download_item(
                         "extraction_completed": extract and dest.suffix.lower() == ".zip",
                     }
                 )
-                log.info("[%s] %s done sha256=%s...", safe_id, fname, sha[:12])
+                log.info("[%s] %s done sha256=%s", safe_id, fname, sha[:12])
             except BoothAuthError:
                 _set_status(conn, safe_id, fname, "failed", str(dest), url=link_url)
                 raise

@@ -21,14 +21,14 @@ function ArchiveHash([string]$Path) {
 function AssertOwnedPath([string]$Path) {
     $full = [IO.Path]::GetFullPath($Path)
     if (-not $full.StartsWith($root + [IO.Path]::DirectorySeparatorChar, [StringComparison]::OrdinalIgnoreCase)) {
-        throw '生成先がリポジトリの外を指しています。フォルダー構成を確認してください。'
+        throw '生成先がリポジトリ外です。配置を確認してください。'
     }
     $current = $full
     while ($current -and $current -ne $root) {
         if (Test-Path -LiteralPath $current) {
             $item = Get-Item -LiteralPath $current -Force
             if ($item.Attributes -band [IO.FileAttributes]::ReparsePoint) {
-                throw '生成先にジャンクション/シンボリックリンクは使えません。フォルダーを通常のコピーで配置してください。'
+                throw '生成先のリンクは非対応です。通常のコピーで配置してください。'
             }
         }
         $current = Split-Path -Parent $current
@@ -47,16 +47,16 @@ function RestoreVendorAsset([string]$Name) {
         foreach ($part in $asset.parts) {
             $source = [IO.Path]::GetFullPath((Join-Path $vendor $part.file))
             if (-not $source.StartsWith($vendor + '\', [StringComparison]::OrdinalIgnoreCase)) {
-                throw '同梱物 (vendor/) の構成が不正です。リポジトリを git clone し直してください。'
+                throw 'vendorの構成不正。再クローンしてください。'
             }
             AssertOwnedPath $source
-            if ((ArchiveHash $source) -ne $part.sha256) { throw '同梱物 (vendor/) のハッシュが一致しません。リポジトリを git clone し直してください。' }
+            if ((ArchiveHash $source) -ne $part.sha256) { throw 'vendorのハッシュ不一致。再クローンしてください。' }
             $input = [IO.File]::OpenRead($source)
             try { $input.CopyTo($output) } finally { $input.Dispose() }
         }
     } finally { $output.Dispose() }
     try {
-        if ((ArchiveHash $temporary) -ne $asset.sha256) { throw '同梱アーカイブのハッシュが一致しません。リポジトリを git clone し直してください。' }
+        if ((ArchiveHash $temporary) -ne $asset.sha256) { throw '同梱アーカイブのハッシュ不一致。再クローンしてください。' }
         Move-Item -LiteralPath $temporary -Destination $destination -Force
     } finally {
         if (Test-Path -LiteralPath $temporary) { Remove-Item -LiteralPath $temporary -Force }
@@ -73,7 +73,7 @@ function Expand-TarGz([string]$Archive, [string]$Destination) {
         while ($Count -gt 0) {
             $chunk = [int][Math]::Min($Count, [long]$buffer.Length)
             $read = $Stream.Read($buffer, 0, $chunk)
-            if ($read -le 0) { throw '同梱アーカイブが途中で切れています。リポジトリを git clone し直してください。' }
+            if ($read -le 0) { throw '同梱アーカイブが不完全です。再クローンしてください。' }
             $Count -= $read
         }
     }
@@ -95,7 +95,7 @@ function Expand-TarGz([string]$Archive, [string]$Destination) {
             $prefix = [Text.Encoding]::UTF8.GetString($header, 345, 155).TrimEnd([char]0)
             if ($prefix.Length -gt 0) { $name = $prefix + '/' + $name }
             if ($typeByte -ne 0x30 -and $typeByte -ne 0x35 -and $typeByte -ne 0x00) {
-                throw '同梱ランタイムの形式が不正です。リポジトリを git clone し直してください。'
+                throw '同梱ランタイムの形式不正。再クローンしてください。'
             }
             $relative = $name.Replace('/', [IO.Path]::DirectorySeparatorChar)
             $full = [IO.Path]::GetFullPath((Join-Path $Destination $relative))
@@ -112,7 +112,7 @@ function Expand-TarGz([string]$Archive, [string]$Destination) {
                     while ($remaining -gt 0) {
                         $chunk = [int][Math]::Min($remaining, [long]$buffer.Length)
                         $read = $stream.Read($buffer, 0, $chunk)
-                        if ($read -le 0) { throw '同梱アーカイブが途中で切れています。リポジトリを git clone し直してください。' }
+                        if ($read -le 0) { throw '同梱アーカイブが不完全です。再クローンしてください。' }
                         $output.Write($buffer, 0, $read)
                         $remaining -= $read
                     }
@@ -130,7 +130,7 @@ try {
     $manifest = [IO.File]::ReadAllText((Join-Path $root 'portable-manifest.json')) | ConvertFrom-Json
     $arch = $env:PROCESSOR_ARCHITECTURE
     if ($env:PROCESSOR_ARCHITEW6432) { $arch = $env:PROCESSOR_ARCHITEW6432 }
-    if ($arch -ne 'AMD64') { throw 'このツールは Windows x64 (AMD64) 専用です。' }
+    if ($arch -ne 'AMD64') { throw 'Windows x64 (AMD64) 専用です。' }
     if ([Environment]::OSVersion.Version.Build -lt $manifest.minimumWindowsBuild) {
         throw 'Windows 10 build 17763 以降が必要です。'
     }
@@ -178,16 +178,16 @@ try {
             $probe.Start() | Out-Null
             $version = $probe.StandardOutput.ReadToEnd().Trim()
             $probe.StandardError.ReadToEnd() | Out-Null
-            if (-not $probe.WaitForExit(120000)) { $probe.Kill(); throw '同梱Pythonの起動確認がタイムアウトしました。セキュリティソフトの一時停止や、フォルダーを日本語・空白の少ないパスへ移動して再実行してください。' }
+            if (-not $probe.WaitForExit(120000)) { $probe.Kill(); throw '同梱Pythonが起動しません。保存先・実行制限を確認してください。' }
             $usable = ($probe.ExitCode -eq 0 -and $version -eq $manifest.python.version)
         } catch { $usable = $false } finally { $probe.Dispose() }
     }
     if (-not $usable -and $ForwardArgs -contains '--check') {
-        [Console]::Error.WriteLine('[portable] まだ準備されていません。start.bat を実行すると同梱物から自動で準備します。')
+        [Console]::Error.WriteLine('[portable] 未準備。start.bat で自動準備。')
         exit 1
     }
     if (-not $usable) {
-        [Console]::Error.WriteLine('[portable] 初回準備: 同梱Pythonを展開しています (約30秒)...')
+        [Console]::Error.WriteLine('[portable] Python展開中（約30秒）')
         $downloads = Join-Path $root '.cache\downloads'
         [IO.Directory]::CreateDirectory($downloads) | Out-Null
         $archive = Join-Path $downloads $manifest.python.asset
@@ -195,7 +195,7 @@ try {
             ((ArchiveHash $archive) -eq $manifest.python.sha256)
         if (-not $valid) {
             RestoreVendorAsset 'python'
-            if ((ArchiveHash $archive) -ne $manifest.python.sha256) { throw '同梱Pythonのハッシュが一致しません。リポジトリを git clone し直してください。' }
+            if ((ArchiveHash $archive) -ne $manifest.python.sha256) { throw '同梱Pythonのハッシュ不一致。再クローンしてください。' }
         }
         $scratch = Join-Path $env:TEMP ('bootstrap-' + [Guid]::NewGuid().ToString('N'))
         [IO.Directory]::CreateDirectory($scratch) | Out-Null
@@ -203,7 +203,7 @@ try {
         $inner = Join-Path $scratch 'python'
         $candidate = Join-Path $inner 'python.exe'
         & $candidate -E -s -c "import ssl, sqlite3, venv, ensurepip"
-        if ($LASTEXITCODE -ne 0) { throw '同梱Pythonの自己診断に失敗しました。リポジトリを git clone し直してください。' }
+        if ($LASTEXITCODE -ne 0) { throw '同梱Pythonの診断失敗。再クローンしてください。' }
         [IO.Directory]::CreateDirectory((Split-Path -Parent $target)) | Out-Null
         if (Test-Path -LiteralPath $target) {
             $oldRuntime = Join-Path $env:TEMP ('python-backup-' + [Guid]::NewGuid().ToString('N'))
@@ -219,7 +219,7 @@ try {
     exit $result
 } catch {
     [Console]::Error.WriteLine('[ERROR] ' + $_.Exception.Message)
-    [Console]::Error.WriteLine('[ヒント] 解決しない場合は、リポジトリを git clone し直してください。app.db・data・BOOTH-Reader-Library は削除しないでください。')
+    [Console]::Error.WriteLine('[ヒント] 別フォルダーへ再クローン。app.db・data・BOOTH-Reader-Library は保持してください。')
     exit 1
 } finally {
     if ($scratch -and (Test-Path -LiteralPath $scratch)) {
