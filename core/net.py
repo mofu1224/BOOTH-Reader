@@ -81,8 +81,8 @@ _local = threading.local()
 def require_httpx() -> Any:
     if _httpx is None:
         raise BoothPrerequisiteError(
-            "httpx (HTTP クライアント) が未導入です",
-            "`start.bat --repair` で同梱の固定依存を復元してください。",
+            "httpx (HTTP client)",
+            "Run `start.bat --repair` to restore bundled dependencies.",
         )
     return _httpx
 
@@ -318,7 +318,7 @@ def request(
             continue
         except httpx.HTTPError as e:
             raise BoothNetworkError(
-                f"HTTPクライアントエラー ({type(e).__name__}): {safe_url(url)}"
+                f"HTTP client error ({type(e).__name__}): {safe_url(url)}"
             ) from e
 
         if response.status_code in accept or 200 <= response.status_code < 300:
@@ -345,7 +345,7 @@ def request(
         raise BoothNetworkError(f"HTTP {response.status_code} for {safe_url(url)}")
 
     raise BoothNetworkError(
-        f"要求に失敗しました ({safe_url(url)}: "
+        f"Request failed ({safe_url(url)}: "
         f"{type(last_error).__name__ if last_error else 'unknown'})"
     )
 

@@ -59,24 +59,27 @@ def _err_payload(exc: Exception) -> tuple[int, dict[str, Any]]:
             "ok": False,
             "error": safe,
             "code": "BOOTH_AUTH_REQUIRED",
-            "hint": "Cookieを登録するか、`start.bat auth login` で再ログインしてください",
+            "hint": "Register cookies or run `start.bat auth login`.",
         }
     if isinstance(exc, bridge.CliLayoutChangedError):
         return 502, {
             "ok": False,
             "error": safe,
             "code": "BOOTH_LAYOUT_CHANGED",
-            "hint": "BOOTH側のページ構成が変わった可能性があります。"
-            "BOOTH-Readerを更新してから、もう一度お試しください。",
+            "hint": "BOOTH's page layout may have changed. Update BOOTH-Reader.",
         }
     if isinstance(exc, bridge.CliBridgeError):
         if exc.returncode == 124:
             return 504, {"ok": False, "error": safe, "code": "TIMEOUT"}
         if exc.returncode == 2:
             return 400, {"ok": False, "error": safe, "code": "BAD_REQUEST"}
-        return 500, {"ok": False, "error": safe}
+        return 500, {"ok": False, "error": safe, "code": "OPERATION_FAILED"}
     log.error("unhandled web error: %s", type(exc).__name__)
-    return 500, {"ok": False, "error": f"予期しないエラーが発生しました ({type(exc).__name__})"}
+    return 500, {
+        "ok": False,
+        "error": f"Unexpected error ({type(exc).__name__})",
+        "code": "INTERNAL_ERROR",
+    }
 
 
 def _error(exc: Exception) -> JSONResponse:
@@ -158,7 +161,7 @@ def create_app(
     async def validation_error(_request: Any, exc: RequestValidationError) -> JSONResponse:
         # Pydantic's input/ctx can contain a complete Cookie jar or request body.
         errors = [
-            {"type": error["type"], "loc": error["loc"], "msg": "入力形式が不正です"}
+            {"type": error["type"], "loc": error["loc"], "msg": "Invalid input format"}
             for error in exc.errors()
         ]
         return JSONResponse({"detail": errors}, status_code=422)
@@ -168,9 +171,9 @@ def create_app(
         return {"ok": True, "transport": link.transport, "download": dict(download_state)}
 
     @app.get("/third-party-terms", response_class=PlainTextResponse)
-    def third_party_terms() -> str:
+    def third_party_terms(lang: str = Query("ja", pattern="^(ja|en)$")) -> str:
         documents = [
-            _REPO_ROOT / "THIRD_PARTY_TERMS.md",
+            _REPO_ROOT / ("THIRD_PARTY_TERMS_EN.md" if lang == "en" else "THIRD_PARTY_TERMS.md"),
             _REPO_ROOT / "THIRD_PARTY_LICENSES/browser/15bc46c641bc-WEBVIEW2-RUNTIME-LICENSE.txt",
             _REPO_ROOT / "THIRD_PARTY_LICENSES/browser/0af8f1b80751-webview2-sdk_LICENSE.txt",
             _REPO_ROOT / "THIRD_PARTY_LICENSES/CPython-3.12.13/886a0ead2d89-python_LICENSE.txt",
@@ -226,7 +229,9 @@ def create_app(
     @app.post("/auth/import")
     def post_auth_import(req: CookieReq) -> Any:
         if not sync_lock.acquire(blocking=False):
-            return JSONResponse({"ok": False, "error": "同期中です"}, status_code=409)
+            return JSONResponse(
+                {"ok": False, "error": "Sync is in progress", "code": "SYNC_BUSY"}, status_code=409
+            )
         try:
             return bridge.import_cookies(link, req.content)
         except Exception as e:  # noqa: BLE001
@@ -266,7 +271,12 @@ def create_app(
                     )
                 return result.data
             return JSONResponse(
-                {"ok": False, "error": "リスト名・商品・操作を指定してください"}, status_code=400
+                {
+                    "ok": False,
+                    "error": "Specify list name, product and action",
+                    "code": "BAD_REQUEST",
+                },
+                status_code=400,
             )
         except Exception as e:  # noqa: BLE001
             return _error(e)
@@ -274,7 +284,9 @@ def create_app(
     @app.post("/purchases/update")
     def post_purchases_update() -> Any:
         if not sync_lock.acquire(blocking=False):
-            return JSONResponse({"ok": False, "error": "同期中です"}, status_code=409)
+            return JSONResponse(
+                {"ok": False, "error": "Sync is in progress", "code": "SYNC_BUSY"}, status_code=409
+            )
         try:
             return {"ok": True, **bridge.update_purchases(link)}
         except Exception as e:  # noqa: BLE001
@@ -285,7 +297,10 @@ def create_app(
     @app.post("/downloads/cleanup")
     def post_downloads_cleanup() -> Any:
         if not job_lock.acquire(blocking=False):
-            return JSONResponse({"ok": False, "error": "ダウンロード実行中です"}, status_code=409)
+            return JSONResponse(
+                {"ok": False, "error": "Download is in progress", "code": "DOWNLOAD_BUSY"},
+                status_code=409,
+            )
         try:
             return link.run_blocking(
                 ["downloads", "cleanup", "--output-dir", root, "--json"], timeout=60
@@ -318,7 +333,10 @@ def create_app(
         except Exception as e:  # noqa: BLE001
             return _error(e)
         if not job_lock.acquire(blocking=False):
-            return JSONResponse({"ok": False, "error": "ダウンロード実行中です"}, status_code=409)
+            return JSONResponse(
+                {"ok": False, "error": "Download is in progress", "code": "DOWNLOAD_BUSY"},
+                status_code=409,
+            )
         download_state.update(running=True, ok=None, error="")
         bg.add_task(_run_download, req.item_id, req.all, req.concurrent)
         return (
@@ -329,11 +347,12 @@ def create_app(
 
     @app.get("/", response_class=HTMLResponse)
     def index() -> Any:
+        error: str | dict[str, Any] = ""
         try:
             data = bridge.get_library(link)
-            error = ""
         except Exception as e:  # noqa: BLE001
-            data, error = {}, str(e)[:200]
+            data = {}
+            _, error = _err_payload(e)
         return HTMLResponse(
             render_index(data, error, library_path=root), media_type="text/html; charset=utf-8"
         )
@@ -357,9 +376,9 @@ def run(
     python_exe: str | Path | None = None,
 ) -> None:
     if host not in {"127.0.0.1", "localhost", "::1"}:
-        raise ValueError("Web UI は loopback アドレスのみで起動できます")
+        raise ValueError("Web UI requires a loopback address")
     if not 1 <= int(port) <= 65535:
-        raise ValueError("port は1〜65535で指定してください")
+        raise ValueError("port must be 1-65535")
     import uvicorn
 
     bridge.run_cli_once(["init-db"], db_path, cli_path=cli_path, python_exe=python_exe, timeout=60)

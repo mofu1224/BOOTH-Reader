@@ -41,9 +41,9 @@ def test_membership_is_exclusive_and_reorder_is_atomic(seeded_db):
         lists.add_member(conn, "A", "id0")
         lists.add_member(conn, "A", "id1")
         lists.add_member(conn, "A", "id0")  # idempotent
-        with pytest.raises(ValueError, match="別のリスト"):
+        with pytest.raises(ValueError, match="another list"):
             lists.add_member(conn, "B", "id0")
-        with pytest.raises(ValueError, match="別のリスト"):
+        with pytest.raises(ValueError, match="another list"):
             lists.add_member(conn, "not-created", "id0")
         assert len(lists.list_lists(conn)) == 2
         lists.reorder(conn, "A", ["id1", "id0"])

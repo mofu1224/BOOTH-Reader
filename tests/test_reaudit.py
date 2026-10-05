@@ -100,7 +100,7 @@ def test_legacy_scratch_collision_fails_before_writing(tmp_path):
             {"file_name": "model.bin.part", "url": "other"},
         ]
     )
-    with pytest.raises(ValueError, match="衝突"):
+    with pytest.raises(ValueError, match="conflicts"):
         download._file_name_for(tmp_path, {"label": "model.bin", "url": "old"}, 1, set(), ledger)
 
 

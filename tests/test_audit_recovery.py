@@ -113,6 +113,6 @@ def test_write_permission_or_disk_full_preserves_published_file(
         return original_open(path, *args, **kwargs)
 
     monkeypatch.setattr(Path, "open", denied)
-    with pytest.raises(BoothNetworkError, match="空き容量"):
+    with pytest.raises(BoothNetworkError, match="free space"):
         download.download_file("https://booth.pm/downloads/1", dest, [], resume=False)
     assert dest.read_bytes() == b"original bytes"

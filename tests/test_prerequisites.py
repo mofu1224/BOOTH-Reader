@@ -69,7 +69,7 @@ def test_auth_error_still_keeps_its_relogin_hint():
     """The legitimate auth message must not be weakened by the split."""
     message = str(BoothAuthError("購入一覧の取得に失敗しました。"))
     assert "auth login" in message
-    assert "再ログイン" in message
+    assert "login required" in message
 
 
 # --- missing Playwright -----------------------------------------------------
@@ -85,8 +85,8 @@ def test_login_without_playwright_reports_a_prerequisite(monkeypatch, tmp_path):
     assert "start.bat --repair" in message
     # The regression: it must NOT tell the user to log in again.
     assert "auth login" not in message
-    assert "再ログイン" not in message
-    assert "ログインが必要" not in message
+    assert "auth login" not in message
+    assert "login required" not in message
 
 
 def test_login_playwright_message_has_no_contradiction(monkeypatch, tmp_path):

@@ -187,10 +187,10 @@ def test_newer_schema_is_refused(tmp_path):
     with pytest.raises(BoothSchemaTooNewError) as exc:
         init_db(db)
     message = str(exc.value)
-    assert "スキーマ版" in message
+    assert "schema" in message
     # The remedy is to update the program, not to repair the file.
-    assert "更新" in message
-    assert "スキーマ版" in str(sqlite3.DatabaseError(message))
+    assert "Update" in message
+    assert "schema" in str(sqlite3.DatabaseError(message))
 
 
 def test_newer_schema_is_reported_without_a_traceback(tmp_path):
@@ -207,8 +207,8 @@ def test_newer_schema_is_reported_without_a_traceback(tmp_path):
     )
     assert proc.returncode == 1
     assert "Traceback" not in proc.stderr
-    assert "予期しないエラー" not in proc.stderr
-    assert "スキーマ版" in proc.stderr
+    assert "Unexpected error" not in proc.stderr
+    assert "schema" in proc.stderr
 
 
 def _newer_schema_db(tmp_path: Path) -> Path:

@@ -41,11 +41,7 @@ LOGIN_URL = "https://accounts.pixiv.net/login?lang=ja&source=booth&view_type=pag
 
 DEFAULT_COOKIE_PATH = Path(__file__).resolve().parent.parent / "data" / "cookies.json"
 
-INSTALL_HINT = (
-    "Playwrightが未導入です。"
-    "`start.bat` を実行してください (同梱の固定依存とブラウザーを repo-local に"
-    "展開します。追加ダウンロードは不要です)。"
-)
+INSTALL_HINT = "Playwright is missing. Run `start.bat` to restore bundled dependencies and browser."
 
 _TMP_SUFFIX = ".tmp"
 
@@ -184,17 +180,17 @@ def save_cookies(cookies: list[dict[str, Any]], path: str | Path | None = None) 
     # produces a clean error rather than a TypeError from len()/json.dumps.
     raw_cookies = cast("object", cookies)
     if not isinstance(raw_cookies, list) or not raw_cookies:
-        raise BoothAuthError("保存するCookieが空または形式不正です。")
+        raise BoothAuthError("Cookies to save are empty or invalid.")
     entries = cast("list[object]", raw_cookies)
     if not any(isinstance(c, dict) and cast("dict[str, Any]", c).get("name") for c in entries):
-        raise BoothAuthError("Cookieの形式が不正です (name がありません)。")
+        raise BoothAuthError("Invalid cookie format (missing name).")
     p.parent.mkdir(parents=True, exist_ok=True)
     # Values are never logged; only the count and the path.
     log.info("cookies save count=%d path=%s", len(cookies), p)
     try:
         payload = json.dumps(cookies, ensure_ascii=False)
     except (TypeError, ValueError) as e:
-        raise BoothAuthError(f"CookieをJSONに変換できませんでした ({type(e).__name__})。") from e
+        raise BoothAuthError(f"Cookie JSON conversion failed ({type(e).__name__}).") from e
     fd, temporary = tempfile.mkstemp(prefix=".cookies-", suffix=_TMP_SUFFIX, dir=p.parent)
     tmp = Path(temporary)
     try:
@@ -203,7 +199,7 @@ def save_cookies(cookies: list[dict[str, Any]], path: str | Path | None = None) 
         with os.fdopen(fd, "w", encoding="utf-8") as fh:
             if not restrict_permissions(tmp):
                 raise BoothAuthError(
-                    "Cookie保存先のアクセス制限に失敗しました。以前のCookieは維持します。"
+                    "Failed to restrict cookie file access. Previous cookies retained."
                 )
             fh.write(payload)
             fh.flush()
@@ -211,10 +207,12 @@ def save_cookies(cookies: list[dict[str, Any]], path: str | Path | None = None) 
         # os.replace is the atomic rename on Windows and POSIX; a crash here
         # leaves the previous jar intact rather than a truncated one.
         if os.name == "nt" and p.is_file() and not restrict_permissions(p):
-            raise BoothAuthError("以前のCookieの更新権限を準備できませんでした。内容は維持します。")
+            raise BoothAuthError(
+                "Cannot prepare cookie update permissions. Previous cookies retained."
+            )
         os.replace(tmp, p)  # noqa: PTH105
     except OSError as e:
-        raise BoothAuthError(f"Cookieを保存できませんでした ({p}: {type(e).__name__})") from e
+        raise BoothAuthError(f"Cannot save cookies ({p}: {type(e).__name__})") from e
     finally:
         with contextlib.suppress(OSError):
             tmp.unlink(missing_ok=True)
@@ -224,16 +222,16 @@ def save_cookies(cookies: list[dict[str, Any]], path: str | Path | None = None) 
 def load_cookies(path: str | Path | None = None) -> list[dict[str, Any]]:
     p = cookie_path(path)
     if not p.exists():
-        raise BoothAuthError(f"Cookieがありません ({p})。")
+        raise BoothAuthError(f"Cookies not found ({p}).")
     try:
         data: object = json.loads(p.read_text(encoding="utf-8"))
     except (OSError, ValueError) as e:
-        raise BoothAuthError(f"Cookie読取に失敗しました ({type(e).__name__})。") from e
+        raise BoothAuthError(f"Cannot read cookies ({type(e).__name__}).") from e
     if not isinstance(data, list) or not data:
-        raise BoothAuthError("Cookieが空または形式不正です。")
+        raise BoothAuthError("Cookies are empty or invalid.")
     entries = cast("list[object]", data)
     if not any(isinstance(c, dict) and cast("dict[str, Any]", c).get("name") for c in entries):
-        raise BoothAuthError("Cookieの形式が不正です (name がありません)。")
+        raise BoothAuthError("Invalid cookie format (missing name).")
     return cast("list[dict[str, Any]]", data)
 
 
@@ -250,10 +248,10 @@ def logout(path: str | Path | None = None) -> bool:
     if p.exists():
         try:
             if os.name == "nt" and p.is_file() and not restrict_permissions(p):
-                raise BoothAuthError("Cookieの削除権限を準備できませんでした。")
+                raise BoothAuthError("Cannot prepare cookie deletion permissions.")
             p.unlink()
         except OSError as e:
-            raise BoothAuthError(f"Cookieを削除できませんでした ({type(e).__name__})") from e
+            raise BoothAuthError(f"Cannot delete cookies ({type(e).__name__})") from e
         log.info("cookies removed path=%s", p)
         return True
     log.info("cookies absent")
@@ -330,9 +328,8 @@ def _launch_browser(headless: bool, factory: Any) -> tuple[Any, Any]:
         pw = factory().start()
     except Exception as e:
         raise BoothPrerequisiteError(
-            "実ブラウザを起動できませんでした",
-            "`start.bat --repair` で同梱の固定ブラウザーを復元してください。 "
-            f"({type(e).__name__}: {e})",
+            "Browser launch failed",
+            f"Run `start.bat --repair` to restore the bundled browser. ({type(e).__name__}: {e})",
         ) from e
     try:
         from .browser import launch_browser
@@ -344,8 +341,8 @@ def _launch_browser(headless: bool, factory: Any) -> tuple[Any, Any]:
         # The usual cause is a missing or corrupt browser runtime. The bundled
         # setup restores it from verified local material, so name that remedy.
         raise BoothPrerequisiteError(
-            "ブラウザーを起動できませんでした",
-            f"`start.bat --repair` で同梱の固定ブラウザーを復元してから再実行してください。 ({e})",
+            "Browser launch failed",
+            f"Run `start.bat --repair` to restore the bundled browser. ({e})",
         ) from e
     return pw, browser
 
@@ -356,19 +353,15 @@ def _run_login_session(browser: Any, timeout_s: int) -> list[dict[str, Any]]:
         context = browser.new_context()
         page = context.new_page()
     except Exception as e:
-        raise BoothNetworkError(
-            f"ブラウザセッションを開始できませんでした。 ({type(e).__name__}: {e})"
-        ) from e
+        raise BoothNetworkError(f"Cannot start browser session ({type(e).__name__}: {e})") from e
     try:
         page.goto(LOGIN_URL, wait_until="domcontentloaded", timeout=60000)
     except Exception as e:
         raise BoothNetworkError(
-            "ログインページを開けませんでした。通信環境 (回線・DNS・プロキシ・"
-            f"ファイアウォール) を確認してください。 ({type(e).__name__}: {e})"
+            "Cannot open login page. Check network, DNS, proxy and firewall. "
+            f"({type(e).__name__}: {e})"
         ) from e
-    print("ブラウザで pixiv/BOOTH にログインしてください。")
-    print(f"完了後、このターミナルで Enter を押してください (制限 {timeout_s}s)。")
-    print(f"ログイン先目安: {LIBRARY_URL}")
+    print("Log in to pixiv/BOOTH in the browser, then press Enter here.")
 
     # Windows has no SIGALRM, so a daemon thread bounds the wait.
     # input() itself cannot be interrupted; the thread is daemonic
@@ -380,7 +373,7 @@ def _run_login_session(browser: Any, timeout_s: int) -> list[dict[str, Any]]:
 
     def _wait_enter() -> None:
         try:
-            input("ログイン完了後にEnter > ")
+            input("Press Enter after login > ")
         except (EOFError, KeyboardInterrupt):
             pass
         except OSError as e:
@@ -393,11 +386,10 @@ def _run_login_session(browser: Any, timeout_s: int) -> list[dict[str, Any]]:
 
     threading.Thread(target=_wait_enter, daemon=True, name="br-login-wait").start()
     if not done.wait(timeout=timeout_s):
-        raise BoothAuthError(f"ログイン待ちがタイムアウトしました ({timeout_s}s)。")
+        raise BoothAuthError(f"Login timed out ({timeout_s}s).")
     if unreadable:
         raise BoothAuthError(
-            "標準入力が読み取れないため、ログイン完了を待てませんでした "
-            f"({unreadable[0]})。対話型のターミナルから実行してください。"
+            f"Cannot read stdin ({unreadable[0]}). Run from an interactive terminal."
         )
 
     if not _verify_login(page):
@@ -406,13 +398,12 @@ def _run_login_session(browser: Any, timeout_s: int) -> list[dict[str, Any]]:
         log.info("login unconfirmed; retry once")
         if not _verify_login(page):
             raise BoothAuthError(
-                "ログインを確認できませんでした。ブラウザでログインし直してから"
-                "Enter を押してください (またはもう一度実行してください)。"
+                "Login not verified. Log in again in the browser, then press Enter or retry."
             )
     try:
         return list(context.cookies())
     except Exception as e:
-        raise BoothNetworkError(f"Cookieを読み取れませんでした。 ({type(e).__name__}: {e})") from e
+        raise BoothNetworkError(f"Cannot read browser cookies ({type(e).__name__}: {e})") from e
 
 
 def login(
@@ -430,8 +421,8 @@ def login(
         from playwright.sync_api import sync_playwright
     except ImportError as e:
         raise BoothPrerequisiteError(
-            "Playwright (実ブラウザ操作) が未導入です",
-            "`start.bat --repair` で同梱の固定依存とブラウザーを復元してください。追加ダウンロードは不要です。",
+            "Playwright",
+            "Run `start.bat --repair` to restore bundled dependencies and browser.",
         ) from e
 
     p = cookie_path(path)
@@ -446,9 +437,8 @@ def login(
         # network problem is still a distinct condition; it is named as such
         # instead of being folded into one of the two.
         raise BoothPrerequisiteError(
-            "実ブラウザの操作に失敗しました",
-            "もう一度実行してください。WebView2 が起動しない場合は "
-            f"`start.bat doctor` で環境を確認してください。 ({type(e).__name__}: {e})",
+            "Browser operation failed",
+            f"Retry or run `start.bat doctor` if WebView2 cannot start. ({type(e).__name__}: {e})",
         ) from e
     finally:
         for closer in (getattr(browser, "close", None), getattr(pw, "stop", None)):
@@ -457,7 +447,7 @@ def login(
                     closer()
 
     if not cookies:
-        raise BoothAuthError("Cookieが取得できませんでした。")
+        raise BoothAuthError("No cookies received.")
     # Playwright returns its own cookie objects; normalise to plain dicts so
     # the on-disk format does not depend on the library version.
     return save_cookies([dict(c) for c in cookies], p)
@@ -477,7 +467,7 @@ def status(path: str | Path | None = None, verify_network: bool = False) -> dict
     """
     p = cookie_path(path)
     if not has_cookies(p):
-        raise BoothAuthError("未ログインです。")
+        raise BoothAuthError("Not logged in.")
     info: dict[str, Any] = {"path": str(p), "ok": True, "count": 0}
     cookies = load_cookies(p)
     info["count"] = len(cookies)
@@ -495,13 +485,13 @@ def status(path: str | Path | None = None, verify_network: bool = False) -> dict
         ):
             dated.append(float(expires))
     if dated and len(dated) == len(cookies) and all(e < now for e in dated):
-        raise BoothAuthError("Cookieの有効期限が切れています。")
+        raise BoothAuthError("Cookies have expired.")
 
     if verify_network:
         response = net.request(LIBRARY_URL, cookies=cookies, timeout=20)
         final = str(response.url)
         if response.status_code in (401, 403) or _looks_logged_out(final):
-            raise BoothAuthError("Cookieが失効しています。")
+            raise BoothAuthError("Cookies are no longer valid.")
         info["http_status"] = response.status_code
 
     log.info("auth status ok count=%d", info["count"])

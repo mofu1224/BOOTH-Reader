@@ -127,7 +127,7 @@ def test_snapshot_rejects_external_paths(tmp_path, name):
     with zipfile.ZipFile(snapshot, "w") as bundle:
         bundle.writestr(name, b"untrusted")
     destination = tmp_path / "browsers"
-    with pytest.raises(RuntimeError, match="同梱ブラウザー"):
+    with pytest.raises(RuntimeError, match="bundled browser"):
         manage_portable.extract_snapshot(snapshot, destination)
     assert not (tmp_path / "escape").exists()
 
@@ -140,7 +140,7 @@ def test_repair_refuses_while_web_ui_is_running(isolated_env, monkeypatch, capsy
     )
     assert manage_portable.main(["setup", "--repair"]) == 1
     captured = capsys.readouterr()
-    assert "起動中" in captured.err
+    assert "Already running" in captured.err
     assert "8000" in captured.err
     assert installed == [], "repair must not touch a running instance"
 
@@ -148,25 +148,25 @@ def test_repair_refuses_while_web_ui_is_running(isolated_env, monkeypatch, capsy
 def test_check_reports_readiness_on_stderr(isolated_env, monkeypatch, capsys):
     monkeypatch.setattr(manage_portable, "environment_ready", lambda: False)
     assert manage_portable.main(["setup", "--check"]) == 1
-    assert "まだ準備されていません" in capsys.readouterr().err
+    assert "Not ready" in capsys.readouterr().err
 
     monkeypatch.setattr(manage_portable, "environment_ready", lambda: True)
     assert manage_portable.main(["setup", "--check"]) == 0
-    assert "準備済み" in capsys.readouterr().err
+    assert "Ready" in capsys.readouterr().err
 
 
-def test_web_argument_errors_are_japanese():
-    with pytest.raises(RuntimeError, match="1〜65535"):
+def test_web_argument_errors_are_english():
+    with pytest.raises(RuntimeError, match="1-65535"):
         manage_portable.parse_web_args(["99999"])
-    with pytest.raises(RuntimeError, match="不明"):
+    with pytest.raises(RuntimeError, match="Unknown"):
         manage_portable.parse_web_args(["--bogus"])
-    with pytest.raises(RuntimeError, match="ポート番号"):
+    with pytest.raises(RuntimeError, match="port number"):
         manage_portable.parse_web_args(["--port"])
 
 
-def test_setup_flag_errors_are_japanese(isolated_env, capsys):
+def test_setup_flag_errors_are_english(isolated_env, capsys):
     assert manage_portable.main(["setup", "--bogus-flag"]) == 1
-    assert "オプションが不明" in capsys.readouterr().err
+    assert "Unknown setup option" in capsys.readouterr().err
 
 
 def test_offline_repair_preserves_old_environment_on_missing_wheels(tmp_path, monkeypatch):
@@ -176,7 +176,7 @@ def test_offline_repair_preserves_old_environment_on_missing_wheels(tmp_path, mo
     monkeypatch.setattr(manage_portable, "ROOT", tmp_path)
     monkeypatch.setattr(manage_portable, "environment_ready", lambda: False)
     monkeypatch.setattr(manage_portable, "wheelhouse_ready", lambda: False)
-    with pytest.raises(RuntimeError, match="依存パッケージ"):
+    with pytest.raises(RuntimeError, match="Bundled dependencies"):
         manage_portable.install_environment(offline=True, repair=True)
     assert old.read_bytes() == b"previous environment"
 
@@ -308,7 +308,7 @@ def test_locked_environment_reports_stop_first(tmp_path, monkeypatch):
         return real_rename(self, target)
 
     monkeypatch.setattr(Path, "rename", locked_rename)
-    with pytest.raises(RuntimeError, match="終了してから"):
+    with pytest.raises(RuntimeError, match=r"Stop BOOTH-Reader with Ctrl\+C"):
         manage_portable.install_environment(offline=True, repair=True)
     assert old.read_bytes() == b"running environment"
 
@@ -334,7 +334,7 @@ def test_ci_global_install_is_detected(tmp_path, monkeypatch):
         (["--port", "9000", "--no-open"], "9000", False),
     ],
 )
-def test_web_launch_prints_url_and_schedules_browser(monkeypatch, capsys, args, port, opens):
+def test_web_launch_schedules_browser_without_extra_output(monkeypatch, capsys, args, port, opens):
     calls = []
     opened = []
     monkeypatch.setattr(manage_portable, "find_existing_web_instance", lambda p: None)
@@ -347,8 +347,7 @@ def test_web_launch_prints_url_and_schedules_browser(monkeypatch, capsys, args, 
     assert len(calls) == 1
     assert calls[0][-5:] == ["web", "--host", "127.0.0.1", "--port", port]
     output = capsys.readouterr().out
-    assert f"http://127.0.0.1:{port}/" in output
-    assert "Ctrl+C" in output
+    assert output == ""
     assert opened == ([int(port)] if opens else [])
 
 
@@ -367,7 +366,7 @@ def test_web_reuses_an_already_running_instance(monkeypatch, capsys, running, ur
     assert manage_portable.web(Path("python.exe"), []) == 0
     assert calls == []
     assert opened == [url]
-    assert "すでに起動しています" in capsys.readouterr().out
+    assert "Already running" in capsys.readouterr().out
 
 
 def test_web_port_conflict_uses_the_next_free_port(monkeypatch, capsys):

@@ -50,16 +50,16 @@ apply_portable_env(BASE_DIR)
 SORT_CHOICES = ("newest", "oldest", "name", "shop")
 
 EPILOG = """\
-使用例:
-  start.bat unclassified --sort newest          未分類
-  start.bat purchases list --update-db          購入一覧を同期
-  start.bat download --item-id order_12345      1件取得
-  start.bat download --all --concurrent 3       全件取得 (上限5)
-  start.bat auth login                          ブラウザでログイン
-  start.bat doctor                              環境・整合性を診断
-  start.bat web --port 8000                     WebUI を起動
+Examples:
+  start.bat unclassified --sort newest
+  start.bat purchases list --update-db
+  start.bat download --item-id order_12345
+  start.bat download --all --concurrent 3
+  start.bat auth login
+  start.bat doctor
+  start.bat web --port 8000
 
-終了コード: 0=成功 1=エラー 2=使い方誤り 3=BOOTHレイアウト変更
+Exit codes: 0=success 1=error 2=usage error 3=BOOTH layout changed
 """
 
 
@@ -69,30 +69,23 @@ def _add_common(p: argparse.ArgumentParser) -> None:
     ``SUPPRESS`` keeps the subparser from overwriting a value that was already
     given at the top level.
     """
-    p.add_argument("--db", default=argparse.SUPPRESS, help="DBパス (既定: app.db)")
+    p.add_argument("--db", default=argparse.SUPPRESS, help="Database path (default: app.db)")
     p.add_argument(
         "--log-level",
         default=argparse.SUPPRESS,
         choices=["DEBUG", "INFO", "WARNING", "ERROR"],
-        help="ログレベル",
+        help="Log level",
     )
 
 
 class _Parser(argparse.ArgumentParser):
-    """Argparse that ends usage errors with a Japanese next step.
-
-    The stock English ``invalid choice`` / ``unrecognized arguments`` message
-    is the first thing a user sees after mistyping a command. The exit-code
-    contract (2 = usage error) is unchanged; a short Japanese pointer is
-    appended so the user knows the way back without reading a stack of flags.
-    """
+    """Usage errors retain exit code 2 and a concise help command."""
 
     def error(self, message: str) -> NoReturn:
         self.print_usage(sys.stderr)
         print(f"ERROR {message}", file=sys.stderr)
         print(
-            "使い方が正しくありません。ヘルプ: start.bat help / "
-            "Web: start.bat / 修復: start.bat --repair",
+            "Help: start.bat help",
             file=sys.stderr,
         )
         self.exit(2)
@@ -107,146 +100,150 @@ def _resolve(args: argparse.Namespace) -> tuple[str, str]:
 def build_parser() -> argparse.ArgumentParser:
     p = _Parser(
         prog="cli.py",
-        description="BOOTH-Reader: BOOTH購入品の取得・ダウンロード・分類管理",
+        description="BOOTH-Reader: sync, download and organize BOOTH purchases",
         epilog=EPILOG,
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
-    p.add_argument("--db", default=DEFAULT_DB, help="DBパス (既定: app.db)")
+    p.add_argument("--db", default=DEFAULT_DB, help="Database path (default: app.db)")
     p.add_argument(
         "--log-level",
         default="INFO",
         choices=["DEBUG", "INFO", "WARNING", "ERROR"],
-        help="ログレベル",
+        help="Log level",
     )
-    p.add_argument("--version", action="store_true", help="バージョン表示")
+    p.add_argument("--version", action="store_true", help="Show version")
     sub = p.add_subparsers(dest="cmd", required=False)
 
-    sp = sub.add_parser("init-db", help="app.db を作成・更新する")
+    sp = sub.add_parser("init-db", help="Create or update app.db")
     _add_common(sp)
 
-    ap = sub.add_parser("auth", help="ブラウザログイン管理")
+    ap = sub.add_parser("auth", help="Browser login management")
     _add_common(ap)
     asub = ap.add_subparsers(dest="auth_cmd", required=True)
-    l = asub.add_parser("login", help="実ブラウザを開きログインしてCookieを保存")  # noqa: E741
-    l.add_argument("--headless", action="store_true", help="ヘッドレスで開く (既定は表示)")
-    l.add_argument("--cookie-path", default=None, help="Cookie保存先")
-    l.add_argument("--timeout", type=int, default=600, help="ログイン待ちの上限秒数")
+    l = asub.add_parser("login", help="Open browser, log in and save cookies")  # noqa: E741
+    l.add_argument("--headless", action="store_true", help="Use headless browser")
+    l.add_argument("--cookie-path", default=None, help="Cookie file path")
+    l.add_argument("--timeout", type=int, default=600, help="Login timeout in seconds")
     _add_common(l)
-    o = asub.add_parser("logout", help="Cookieを削除")
+    o = asub.add_parser("logout", help="Delete cookies")
     o.add_argument("--cookie-path", default=None)
     _add_common(o)
-    s = asub.add_parser("status", help="Cookieの状態確認")
+    s = asub.add_parser("status", help="Check cookie status")
     s.add_argument("--cookie-path", default=None)
-    s.add_argument("--verify-network", action="store_true", help="HTTPで失効を検証")
-    s.add_argument("--json", action="store_true", help="JSON出力 (WebUI取込用)")
+    s.add_argument("--verify-network", action="store_true", help="Verify session over HTTP")
+    s.add_argument("--json", action="store_true", help="JSON output")
     _add_common(s)
 
-    imp = asub.add_parser("import", help="標準入力からCookie JSONを登録")
+    imp = asub.add_parser("import", help="Import cookie JSON from stdin")
     imp.add_argument("--cookie-path", default=None)
     imp.add_argument("--json", action="store_true")
     _add_common(imp)
 
-    pp = sub.add_parser("purchases", help="購入一覧")
+    pp = sub.add_parser("purchases", help="Purchases")
     _add_common(pp)
     psub = pp.add_subparsers(dest="purchases_cmd", required=True)
-    pl = psub.add_parser("list", help="一覧表示 (既定はDBの内容)")
-    pl.add_argument("--update-db", action="store_true", help="BOOTHから取得してDBへ取り込む")
-    pl.add_argument("--csv", default=None, help="CSVの出力先")
-    pl.add_argument("--limit", type=int, default=None, help="表示件数 (0以下で全件)")
+    pl = psub.add_parser("list", help="List purchases (database by default)")
+    pl.add_argument("--update-db", action="store_true", help="Sync purchases from BOOTH")
+    pl.add_argument("--csv", default=None, help="CSV output path")
+    pl.add_argument("--limit", type=int, default=None, help="Row limit (<=0: all)")
     pl.add_argument("--cookie-path", default=None)
-    pl.add_argument("--json", action="store_true", help="JSON出力 (WebUI取込用)")
+    pl.add_argument("--json", action="store_true", help="JSON output")
     _add_common(pl)
 
-    dp = sub.add_parser("download", help="ダウンロード・解凍・検証")
-    dp.add_argument("--item-id", default=None, help="指定IDを1件ダウンロード")
-    dp.add_argument("--all", action="store_true", help="登録済みすべてをダウンロード")
-    dp.add_argument("--output-dir", default=None, help="出力先 (既定: BOOTH-Reader-Library)")
-    dp.add_argument("--concurrent", type=int, default=3, help="並列数 (1-5, 既定3)")
-    dp.add_argument("--no-extract", action="store_true", help="zipの自動解凍を無効化")
-    dp.add_argument("--force", action="store_true", help="完了済みでも再ダウンロード")
+    dp = sub.add_parser("download", help="Download, extract and verify files")
+    dp.add_argument("--item-id", default=None, help="Download one product ID")
+    dp.add_argument("--all", action="store_true", help="Download all products")
+    dp.add_argument(
+        "--output-dir", default=None, help="Output folder (default: BOOTH-Reader-Library)"
+    )
+    dp.add_argument("--concurrent", type=int, default=3, help="Concurrency (1-5, default: 3)")
+    dp.add_argument("--no-extract", action="store_true", help="Disable automatic ZIP extraction")
+    dp.add_argument("--force", action="store_true", help="Download completed files again")
     dp.add_argument("--cookie-path", default=None)
-    dp.add_argument("--json", action="store_true", help="JSON出力 (WebUI取込用)")
+    dp.add_argument("--json", action="store_true", help="JSON output")
     _add_common(dp)
 
-    dlp = sub.add_parser("downloads", help="ダウンロード進捗の照会")
+    dlp = sub.add_parser("downloads", help="Query download records")
     _add_common(dlp)
     dlsub = dlp.add_subparsers(dest="downloads_cmd", required=True)
-    dll = dlsub.add_parser("list", help="ダウンロード状態の一覧")
-    dll.add_argument("--limit", type=int, default=200, help="表示件数 (1-1000)")
+    dll = dlsub.add_parser("list", help="List download records")
+    dll.add_argument("--limit", type=int, default=200, help="Row limit (1-1000)")
     dll.add_argument("--status", default=None, choices=["pending", "downloading", "done", "failed"])
-    dll.add_argument("--json", action="store_true", help="JSON出力 (WebUI取込用)")
+    dll.add_argument("--json", action="store_true", help="JSON output")
     _add_common(dll)
 
-    clean = dlsub.add_parser("cleanup", help="中断時に残った .part を削除")
+    clean = dlsub.add_parser("cleanup", help="Delete incomplete .part files")
     clean.add_argument("--output-dir", default=DEFAULT_LIBRARY)
     clean.add_argument("--json", action="store_true")
     _add_common(clean)
 
-    up = sub.add_parser("unclassified", help="未分類キューのみ表示 (分類済みは既定で非表示)")
-    up.add_argument("--sort", default="newest", choices=SORT_CHOICES, help="並び順 (既定: newest)")
-    up.add_argument("--limit", type=int, default=None, help="表示件数 (0以下で全件)")
-    up.add_argument("--csv", default=None, help="CSVの出力先")
-    up.add_argument("--json", action="store_true", help="JSON出力 (WebUI取込用)")
+    up = sub.add_parser("unclassified", help="List unclassified products")
+    up.add_argument(
+        "--sort", default="newest", choices=SORT_CHOICES, help="Sort order (default: newest)"
+    )
+    up.add_argument("--limit", type=int, default=None, help="Row limit (<=0: all)")
+    up.add_argument("--csv", default=None, help="CSV output path")
+    up.add_argument("--json", action="store_true", help="JSON output")
     _add_common(up)
 
-    lp = sub.add_parser("lists", help="分類リスト操作")
+    lp = sub.add_parser("lists", help="Manage product lists")
     _add_common(lp)
     lsub = lp.add_subparsers(dest="lists_cmd", required=True)
-    c = lsub.add_parser("create", help="リストを作成 (同名作成は冪等)")
+    c = lsub.add_parser("create", help="Create list (idempotent by name)")
     c.add_argument("--name", required=True)
     _add_common(c)
-    ll = lsub.add_parser("list", help="リスト一覧")
-    ll.add_argument("--json", action="store_true", help="JSON出力 (WebUI取込用)")
+    ll = lsub.add_parser("list", help="List lists")
+    ll.add_argument("--json", action="store_true", help="JSON output")
     _add_common(ll)
-    a = lsub.add_parser("add", help="リストへ分類を追加")
-    a.add_argument("--list", required=True, help="リスト名またはID")
+    a = lsub.add_parser("add", help="Add product to list")
+    a.add_argument("--list", required=True, help="List name or ID")
     a.add_argument("--item-id", required=True)
     _add_common(a)
-    r = lsub.add_parser("remove", help="リストから除外")
+    r = lsub.add_parser("remove", help="Remove product from list")
     r.add_argument("--list", required=True)
     r.add_argument("--item-id", required=True)
     _add_common(r)
-    d = lsub.add_parser("delete", help="リストを削除")
-    d.add_argument("--name", required=True, help="リスト名またはID")
+    d = lsub.add_parser("delete", help="Delete list")
+    d.add_argument("--name", required=True, help="List name or ID")
     _add_common(d)
 
-    lib = lsub.add_parser("library", help="全商品とリスト所属をJSONで表示")
+    lib = lsub.add_parser("library", help="Show products and list memberships as JSON")
     lib.add_argument("--json", action="store_true")
     _add_common(lib)
-    order = lsub.add_parser("sort", help="リストの並び順を保存")
+    order = lsub.add_parser("sort", help="Save list sort order")
     order.add_argument("--list", required=True)
     order.add_argument("--sort", required=True, choices=[*SORT_CHOICES, "manual"])
     order.add_argument("--json", action="store_true")
     _add_common(order)
-    move = lsub.add_parser("reorder", help="リストの手動順を保存")
+    move = lsub.add_parser("reorder", help="Save manual product order")
     move.add_argument("--list", required=True)
-    move.add_argument("--items", required=True, help="商品ID配列のJSON")
+    move.add_argument("--items", required=True, help="JSON array of product IDs")
     move.add_argument("--json", action="store_true")
     _add_common(move)
-    nav_order = lsub.add_parser("reorder-lists", help="マイリスト自体の並び順を保存")
-    nav_order.add_argument("--lists", required=True, help="リストID配列のJSON (-で標準入力)")
+    nav_order = lsub.add_parser("reorder-lists", help="Save list navigation order")
+    nav_order.add_argument("--lists", required=True, help="JSON array of list IDs (- for stdin)")
     nav_order.add_argument("--json", action="store_true")
     _add_common(nav_order)
 
-    wp = sub.add_parser("web", help="localhostのWebUIを起動")
-    wp.add_argument("--host", default="127.0.0.1", help="待ち受けアドレス (既定: 127.0.0.1)")
-    wp.add_argument("--port", type=int, default=8000, help="ポート (既定: 8000)")
-    wp.add_argument("--output-dir", default=None, help="ライブラリ出力先")
+    wp = sub.add_parser("web", help="Start local Web UI")
+    wp.add_argument("--host", default="127.0.0.1", help="Listen address (default: 127.0.0.1)")
+    wp.add_argument("--port", type=int, default=8000, help="Port (default: 8000)")
+    wp.add_argument("--output-dir", default=None, help="Library output folder")
     _add_common(wp)
 
-    dp2 = sub.add_parser("doctor", help="環境・DB整合性・依存関係を診断")
+    dp2 = sub.add_parser("doctor", help="Check environment, database and dependencies")
     dp2.add_argument(
-        "--library", default=None, help="ライブラリ出力先 (既定: BOOTH-Reader-Library)"
+        "--library", default=None, help="Library output folder (default: BOOTH-Reader-Library)"
     )
     # Without this the cookie check always inspected the default jar, so a user
     # who authenticated with `--cookie-path` was told "not logged in" and told
     # to log in again -- they were logged in, in the place they had chosen.
-    dp2.add_argument("--cookie-path", default=None, help="Cookie保存先 (確認する対象)")
-    dp2.add_argument("--json", action="store_true", help="JSON出力")
+    dp2.add_argument("--cookie-path", default=None, help="Cookie file to check")
+    dp2.add_argument("--json", action="store_true", help="JSON output")
     _add_common(dp2)
 
-    rp = sub.add_parser("rpc", help="内部用: JSON行プロトコルで常駐し_stdoutを汚さない")
-    rp.add_argument("--max-workers", type=int, default=1, help="予約 (常に1: 処理は逐次実行)")
+    rp = sub.add_parser("rpc", help="Internal: persistent JSON-line worker")
+    rp.add_argument("--max-workers", type=int, default=1, help="Reserved (always 1, sequential)")
     _add_common(rp)
 
     return p
@@ -277,7 +274,7 @@ def _pad(text: str, width: int) -> str:
 
 def _print_table(rows: list[dict[str, Any]], cols: list[str], maxcol: int = 80) -> None:
     if not rows:
-        print("(0件)")
+        print("(0 rows)")
         return
     # Widths are measured from the *truncated* cell so the header and the
     # body line up; the previous version measured full values and then cut
@@ -326,19 +323,19 @@ def _cmd_auth(args: argparse.Namespace) -> int:
     if args.auth_cmd == "import":
         payload = sys.stdin.read(1_048_577)
         if len(payload) > 1_048_576:
-            raise ValueError("Cookieファイルは1MB以下にしてください")
+            raise ValueError("Cookie file must be at most 1 MB")
         try:
             raw_cookies: object = json.loads(payload)
         except ValueError as e:
-            raise ValueError("Cookie JSONの形式が不正です") from e
+            raise ValueError("Invalid cookie JSON") from e
         if isinstance(raw_cookies, dict):
             raw_cookies = cast("dict[str, Any]", raw_cookies).get("cookies")
         if not isinstance(raw_cookies, list) or not raw_cookies:
-            raise ValueError("BOOTH / pixivのCookie JSONを指定してください")
+            raise ValueError("Provide BOOTH / pixiv cookie JSON")
         cookies: list[dict[str, Any]] = []
         for entry in cast("list[object]", raw_cookies):
             if not isinstance(entry, dict):
-                raise ValueError("BOOTH / pixivのCookie JSONを指定してください")
+                raise ValueError("Provide BOOTH / pixiv cookie JSON")
             c = cast("dict[str, Any]", entry)
             domain = c.get("domain")
             if (
@@ -346,7 +343,7 @@ def _cmd_auth(args: argparse.Namespace) -> int:
                 or not isinstance(c.get("value"), str)
                 or not isinstance(domain, str)
             ):
-                raise ValueError("BOOTH / pixivのCookie JSONを指定してください")
+                raise ValueError("Provide BOOTH / pixiv cookie JSON")
             host = domain.lstrip(".")
             if (
                 host != "booth.pm"
@@ -354,7 +351,7 @@ def _cmd_auth(args: argparse.Namespace) -> int:
                 and host != "pixiv.net"
                 and not host.endswith(".pixiv.net")
             ):
-                raise ValueError("BOOTH / pixivのCookie JSONを指定してください")
+                raise ValueError("Provide BOOTH / pixiv cookie JSON")
             cookies.append(dict(c, expires=c.get("expires", c.get("expirationDate", -1))))
         auth_mod.save_cookies(cookies, cpath)
         _print_json({"ok": True, "count": len(cookies)})
@@ -365,11 +362,11 @@ def _cmd_auth(args: argparse.Namespace) -> int:
             path=cpath,
             timeout_s=max(30, int(getattr(args, "timeout", 600))),
         )
-        print(f"login ok: {p} (パスワード非保存)")
+        print(f"login ok: {p}")
         return 0
     if args.auth_cmd == "logout":
         ok = auth_mod.logout(cpath)
-        print("logout ok (Cookie削除)" if ok else "Cookieなし")
+        print("logout ok" if ok else "No cookies")
         return 0
     if args.auth_cmd == "status":
         info = auth_mod.status(cpath, verify_network=args.verify_network)
@@ -409,7 +406,7 @@ def _cmd_purchases(args: argparse.Namespace, db_path: str) -> int:
         out = purch_mod.export_csv(rows, args.csv)
         csv_out = str(out)
         if not getattr(args, "json", False):
-            print(f"csv -> {out} ({len(rows)}件)")
+            print(f"csv -> {out} ({len(rows)} rows)")
 
     if getattr(args, "json", False):
         payload: dict[str, Any] = {"count": len(rows), "items": rows}
@@ -426,9 +423,9 @@ def _cmd_purchases(args: argparse.Namespace, db_path: str) -> int:
 def _cmd_download(args: argparse.Namespace, db_path: str, parser: argparse.ArgumentParser) -> int:
     # Mutually exclusive / required selection is a usage error.
     if args.item_id and args.all:
-        parser.error("--item-id と --all は同時に指定できません")
+        parser.error("--item-id and --all are mutually exclusive")
     if not args.item_id and not args.all:
-        parser.error("--item-id または --all を指定してください")
+        parser.error("Specify --item-id or --all")
 
     from core import download as dl_mod
     from core.db import get_connection
@@ -444,7 +441,7 @@ def _cmd_download(args: argparse.Namespace, db_path: str, parser: argparse.Argum
             if args.json:
                 _print_json({"ok": [], "failed": [], "ok_count": 0, "failed_count": 0})
             else:
-                print("(0件: 先に purchases list --update-db を実行)")
+                print("(0 rows: run purchases list --update-db first)")
             return 0
     else:
         ids = [args.item_id]
@@ -556,7 +553,7 @@ def _cmd_unclassified(args: argparse.Namespace, db_path: str) -> int:
         out = export_csv(rows, args.csv)
         csv_out = str(out)
         if not getattr(args, "json", False):
-            print(f"csv -> {out} ({len(rows)}件)")
+            print(f"csv -> {out} ({len(rows)} rows)")
 
     if getattr(args, "json", False):
         payload: dict[str, Any] = {"sort": args.sort, "count": len(rows), "items": rows}
@@ -585,12 +582,12 @@ def _cmd_lists(args: argparse.Namespace, db_path: str) -> int:
                     sys.stdin.read(4_000_001) if args.items == "-" else args.items
                 )
             except ValueError as e:
-                raise ValueError("商品ID配列の形式が不正です") from e
+                raise ValueError("Invalid product ID array") from e
             if not isinstance(raw_items, list):
-                raise ValueError("商品ID配列の形式が不正です")
+                raise ValueError("Invalid product ID array")
             item_ids = cast("list[object]", raw_items)
             if any(not isinstance(i, str) for i in item_ids):
-                raise ValueError("商品ID配列の形式が不正です")
+                raise ValueError("Invalid product ID array")
             lists_mod.reorder(conn, args.list, cast("list[str]", item_ids))
             _print_json({"ok": True})
         elif args.lists_cmd == "reorder-lists":
@@ -599,9 +596,9 @@ def _cmd_lists(args: argparse.Namespace, db_path: str) -> int:
                     sys.stdin.read(4_000_001) if args.lists == "-" else args.lists
                 )
             except ValueError as e:
-                raise ValueError("リストID配列の形式が不正です") from e
+                raise ValueError("Invalid list ID array") from e
             if not isinstance(raw_lists, list):
-                raise ValueError("リストID配列の形式が不正です")
+                raise ValueError("Invalid list ID array")
             lists_mod.reorder_lists(conn, cast("list[int]", raw_lists))
             _print_json({"ok": True})
         elif args.lists_cmd == "create":
@@ -615,16 +612,16 @@ def _cmd_lists(args: argparse.Namespace, db_path: str) -> int:
                 for row in rows:
                     print(f"{row['list_id']}\t{row['name']}")
                 if not rows:
-                    print("(0件)")
+                    print("(0 rows)")
         elif args.lists_cmd == "add":
             lists_mod.add_member(conn, args.list, args.item_id)
             print(f"added {args.item_id} -> {args.list}")
         elif args.lists_cmd == "remove":
             n = lists_mod.remove_member(conn, args.list, args.item_id)
-            print(f"removed {n}件")
+            print(f"removed {n} memberships")
         elif args.lists_cmd == "delete":
             n = lists_mod.delete_list(conn, args.name)
-            print(f"deleted {n}件")
+            print(f"deleted {n} lists")
     finally:
         conn.close()
     return 0
@@ -658,7 +655,7 @@ def _cmd_doctor(args: argparse.Namespace, db_path: str) -> int:
             mod = __import__(module)
             ver = getattr(mod, "__version__", "?")
         except ImportError:
-            add(f"dep:{module}", False, "未導入", fatal=required)
+            add(f"dep:{module}", False, "not installed", fatal=required)
         else:
             add(f"dep:{module}", True, str(ver))
 
@@ -683,17 +680,16 @@ def _cmd_doctor(args: argparse.Namespace, db_path: str) -> int:
 
                 browser = launch_browser(pw, headless=True)
                 browser.close()
-            add(f"browser:{engine}", True, "導入済み")
+            add(f"browser:{engine}", True, "installed")
         except Exception as e:  # noqa: BLE001
             add(
                 f"browser:{engine}",
                 False,
-                "ブラウザーを起動できません。`start.bat --repair` で同梱物から復元してください "
-                f"({type(e).__name__})",
+                f"Cannot launch browser. Run `start.bat --repair` ({type(e).__name__})",
                 fatal=True,
             )
     except ImportError:
-        add(f"browser:{engine}", False, "playwright が未導入", fatal=True)
+        add(f"browser:{engine}", False, "playwright not installed", fatal=True)
 
     # Portable layout: the interpreter and the browser should travel with the
     # folder. Informational (fatal=False): a system-wide setup still runs, but
@@ -714,12 +710,8 @@ def _cmd_doctor(args: argparse.Namespace, db_path: str) -> int:
         "portable:venv",
         exe_inside,
         f"{sys.executable} "
-        + ("(リポジトリ内)" if exe_inside else "(リポジトリ外: start.bat で .venv を作成)")
-        + (
-            ""
-            if _base_inside
-            else " [baseがリポジトリ外: start.bat --repair で同梱Pythonに付け替え]"
-        ),
+        + ("(repo-local)" if exe_inside else "(outside repo: run start.bat to create .venv)")
+        + ("" if _base_inside else " [base outside repo: run start.bat --repair]"),
     )
     browsers = effective_browsers_path(BASE_DIR)
     try:
@@ -733,7 +725,7 @@ def _cmd_doctor(args: argparse.Namespace, db_path: str) -> int:
     add(
         "portable:browsers",
         browsers_inside,
-        f"{browsers} " + ("(ブラウザあり)" if has_repo_browser else "(未導入: start.bat で導入)"),
+        f"{browsers} " + ("(installed)" if has_repo_browser else "(not installed: run start.bat)"),
     )
 
     db = Path(db_path)
@@ -744,12 +736,14 @@ def _cmd_doctor(args: argparse.Namespace, db_path: str) -> int:
 
             expected = {"items", "purchases", "downloads", "lists", "list_members"}
             present = set(table_names(db))
-            add("db:tables", expected <= present, ",".join(sorted(present)) or "(空)", fatal=True)
+            add(
+                "db:tables", expected <= present, ",".join(sorted(present)) or "(empty)", fatal=True
+            )
             version = schema_version(db)
             add(
                 "db:schema",
                 version == SCHEMA_VERSION,
-                f"v{version} (必要: v{SCHEMA_VERSION})",
+                f"v{version} (required: v{SCHEMA_VERSION})",
                 fatal=True,
             )
             report = check_integrity(db)
@@ -764,14 +758,14 @@ def _cmd_doctor(args: argparse.Namespace, db_path: str) -> int:
         except Exception as e:  # noqa: BLE001
             add("db:open", False, f"{type(e).__name__}: {e}", fatal=True)
     else:
-        add("db:exists", False, "未作成。`start.bat init-db` を実行", fatal=False)
+        add("db:exists", False, "not created; run `start.bat init-db`", fatal=False)
 
     cookie_file = Path(getattr(args, "cookie_path", None) or (BASE_DIR / "data" / "cookies.json"))
     have_jar = has_cookies(cookie_file)
     add(
         "cookies",
         have_jar,
-        f"{cookie_file} " + ("あり" if have_jar else "なし。`start.bat auth login` を実行"),
+        f"{cookie_file} " + ("present" if have_jar else "missing; run `start.bat auth login`"),
     )
 
     try:
@@ -781,7 +775,7 @@ def _cmd_doctor(args: argparse.Namespace, db_path: str) -> int:
         with tempfile.TemporaryFile(dir=library) as probe:
             probe.write(b"ok")
         free = shutil.disk_usage(str(library)).free
-        add("library", True, f"{library} (空き {free / 1024**3:.1f} GB)")
+        add("library", True, f"{library} ({free / 1024**3:.1f} GB free)")
     except OSError as e:
         add("library", False, f"{library}: {type(e).__name__}", fatal=True)
 
@@ -796,9 +790,11 @@ def _cmd_doctor(args: argparse.Namespace, db_path: str) -> int:
             print(f"[{mark}] {c['name']:16} {c['detail']}")
         print()
         print(
-            "すべて問題なし"
+            "All checks passed"
             if ok and not warnings
-            else ("重大な問題あり" if not ok else f"警告 {len(warnings)} 件 (続行可能)")
+            else (
+                "Critical checks failed" if not ok else f"{len(warnings)} warnings (can continue)"
+            )
         )
     return 0 if ok else 1
 
@@ -1049,7 +1045,7 @@ def main(  # noqa: PLR0911 - a flat command table reads better than a dispatch m
         return 0
     if args.cmd is None:
         print(
-            "コマンド未指定。起動: start.bat / ヘルプ: start.bat help",
+            "No command specified. Help: start.bat help",
             file=sys.stderr,
         )
         parser.print_help()
@@ -1071,7 +1067,7 @@ def main(  # noqa: PLR0911 - a flat command table reads better than a dispatch m
         print(f"ERROR {BoothDatabaseError(db_path, type(e).__name__)}", file=sys.stderr)
         return 1
     except KeyboardInterrupt:
-        print("中断しました", file=sys.stderr)
+        print("Interrupted", file=sys.stderr)
         return 130
     except Exception as e:  # noqa: BLE001 - never surface a raw traceback
         from core.logging_setup import get_logger
@@ -1080,7 +1076,7 @@ def main(  # noqa: PLR0911 - a flat command table reads better than a dispatch m
             "unhandled error in %s: %s", args.cmd, type(e).__name__
         )
         print(
-            redact(f"ERROR 予期しないエラーが発生しました: {type(e).__name__}: {e}"),
+            redact(f"ERROR Unexpected error: {type(e).__name__}: {e}"),
             file=sys.stderr,
         )
         return 1
