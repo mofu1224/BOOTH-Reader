@@ -19,9 +19,12 @@ def checksum(data: bytes) -> str:
 
 
 def patch_wheel(root: Path) -> Path:
-    lock = (root / "requirements-portable-lock.txt").read_text(encoding="utf-8")
+    from core.platforms import load_manifest
+
+    runtime = load_manifest(root)
+    lock = (root / runtime["lock"]).read_text(encoding="utf-8")
     allowed = set(re.findall(r"--hash=sha256:([0-9a-f]{64})", lock))
-    wheels = root / ".cache/wheels"
+    wheels = root / runtime["wheelhouse"]
     pip_path = wheels / "pip-26.2.1-py3-none-any.whl"
     urllib3_path = wheels / "urllib3-2.8.0-py3-none-any.whl"
     original, replacement = pip_path.read_bytes(), urllib3_path.read_bytes()
@@ -107,21 +110,27 @@ def patch_wheel(root: Path) -> Path:
 
 
 def update_ensurepip(root: Path, patched: Path) -> None:
+    from core.platforms import load_manifest, target_id
+
     base = root / ".tools/python"
-    module = base / "Lib/ensurepip/__init__.py"
+    version = ".".join(load_manifest(root)["python"]["version"].split(".")[:2])
+    stdlib = base / ("Lib" if target_id() == "windows-x64" else f"lib/python{version}")
+    module = stdlib / "ensurepip/__init__.py"
     text = module.read_text(encoding="utf-8")
-    if '_PIP_VERSION = "25.0.1"' not in text and '_PIP_VERSION = "26.2.1"' not in text:
+    match = re.search(r'^_PIP_VERSION = "([0-9.]+)"$', text, re.M)
+    if not match:
         raise RuntimeError("Unexpected ensurepip version")
-    bundled = base / "Lib/ensurepip/_bundled"
+    bundled = stdlib / "ensurepip/_bundled"
     shutil.copyfile(patched, bundled / patched.name)
-    (bundled / "pip-25.0.1-py3-none-any.whl").unlink(missing_ok=True)
+    if match[1] != "26.2.1":
+        (bundled / f"pip-{match[1]}-py3-none-any.whl").unlink(missing_ok=True)
     module.write_text(
-        text.replace('_PIP_VERSION = "25.0.1"', '_PIP_VERSION = "26.2.1"'), encoding="utf-8"
+        text[: match.start()] + '_PIP_VERSION = "26.2.1"' + text[match.end() :], encoding="utf-8"
     )
     # The base interpreter's obsolete pip is not used to install applications.
     # Remove only these exact disposable installation directories.
     for name in ("pip", "pip-26.0.1.dist-info"):
-        path = base / "Lib/site-packages" / name
+        path = stdlib / "site-packages" / name
         if path.is_symlink() or not path.resolve().is_relative_to(base.resolve()):
             raise RuntimeError("Unexpected base pip location")
         if path.exists():

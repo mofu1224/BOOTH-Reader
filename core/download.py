@@ -31,6 +31,7 @@ import re
 import sqlite3
 import tempfile
 import time
+import unicodedata
 import zipfile
 from collections.abc import Callable, Iterable, Mapping
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -47,6 +48,7 @@ from .errors import (
     BoothNetworkError,
     BoothPrerequisiteError,
 )
+from .library_paths import record_path, resolve_record
 from .logging_setup import get_logger, redact
 
 log = get_logger(__name__)
@@ -281,7 +283,7 @@ def safe_extract_zip(
         targets: set[str] = set()
         for info in infos:
             try:
-                key = "/".join(_iter_safe_parts(info.filename)).casefold()
+                key = _filename_key("/".join(_iter_safe_parts(info.filename)))
             except ValueError:
                 if strict:
                     raise BoothNetworkError(f"Unsafe ZIP entry: {info.filename[:80]!r}") from None
@@ -826,12 +828,20 @@ def _set_status(
     url: str = "",
 ) -> None:
     conn.execute(
-        """INSERT INTO downloads(item_id,file_name,path,status,sha256,downloaded_at,url)
-           VALUES(?,?,?,?,?,datetime('now'),?)
+        """INSERT INTO downloads(item_id,file_name,path,status,sha256,downloaded_at,url,path_encoding)
+           VALUES(?,?,?,?,?,datetime('now'),?,?)
            ON CONFLICT(item_id,file_name) DO UPDATE SET
              path=excluded.path, status=excluded.status, sha256=excluded.sha256,
-             downloaded_at=excluded.downloaded_at, url=excluded.url""",
-        (item_id, file_name, path, status, sha256, url),
+              downloaded_at=excluded.downloaded_at, url=excluded.url, path_encoding=excluded.path_encoding""",
+        (
+            item_id,
+            file_name,
+            path,
+            status,
+            sha256,
+            url,
+            "library-relative" if path.startswith("library:/") else "legacy",
+        ),
     )
     conn.commit()
 
@@ -847,7 +857,10 @@ def _stable_item_dir(root: Path, item_id: str, title: str, conn: sqlite3.Connect
     resolved_root = root.resolve()
     candidates: set[Path] = set()
     for row in recorded_paths:
-        recorded = Path(row["path"])
+        recovered = resolve_record(str(row["path"]), root)
+        if recovered is None:
+            continue
+        recorded = recovered
         # A copied library can recover the old folder by basename without an
         # O(library-size) scan, even while its ledger still stores the old root.
         for directory in {
@@ -936,11 +949,12 @@ def download_item(
     purchase. The item result reports ``ok`` and ``failed`` separately.
     """
     from .auth import load_cookies
-    from .db import get_connection
+    from .db import ensure_current_schema, get_connection
 
     safe_id = validate_item_id(item_id)
     root = Path(output_dir) if output_dir else Path(library_root)
     cookies = load_cookies(cookie_path)
+    ensure_current_schema(db_path)
     conn = get_connection(db_path)
     try:
         row = conn.execute("SELECT * FROM items WHERE item_id=?", (safe_id,)).fetchone()
@@ -1003,6 +1017,7 @@ def download_item(
             link_url = str(link.get("url") or "")
             fname = _file_name_for(dl_dir, link, index, used_names, ledger)
             dest = dl_dir / fname
+            ledger_path = record_path(dest, root)
 
             existing = conn.execute(
                 "SELECT status,sha256 FROM downloads WHERE item_id=? AND file_name=?",
@@ -1046,14 +1061,20 @@ def download_item(
                     BoothLimitExceededError,
                 ) as e:
                     _set_status(
-                        conn, safe_id, fname, "failed", str(dest), existing["sha256"], url=link_url
+                        conn,
+                        safe_id,
+                        fname,
+                        "failed",
+                        ledger_path,
+                        existing["sha256"],
+                        url=link_url,
                     )
                     failures.append({"file": fname, "error": f"{type(e).__name__}: {e}"})
                     continue
                 results.append(cached)
                 continue
 
-            _set_status(conn, safe_id, fname, "downloading", str(dest), url=link_url)
+            _set_status(conn, safe_id, fname, "downloading", ledger_path, url=link_url)
             log.info("[%s] %s download", safe_id, fname)
             try:
                 # Existing published files are complete versions, never resume
@@ -1070,7 +1091,7 @@ def download_item(
                         raise BoothNetworkError(f"Corrupt ZIP: {dest.name}") from e
                     except BoothLimitExceededError:
                         raise
-                _set_status(conn, safe_id, fname, "done", str(dest), sha, url=link_url)
+                _set_status(conn, safe_id, fname, "done", ledger_path, sha, url=link_url)
                 results.append(
                     {
                         "file": fname,
@@ -1083,10 +1104,10 @@ def download_item(
                 )
                 log.info("[%s] %s done sha256=%s", safe_id, fname, sha[:12])
             except BoothAuthError:
-                _set_status(conn, safe_id, fname, "failed", str(dest), url=link_url)
+                _set_status(conn, safe_id, fname, "failed", ledger_path, url=link_url)
                 raise
             except Exception as e:  # noqa: BLE001 - record and continue
-                _set_status(conn, safe_id, fname, "failed", str(dest), url=link_url)
+                _set_status(conn, safe_id, fname, "failed", ledger_path, url=link_url)
                 log.error("download failed %s/%s: %s: %s", safe_id, fname, type(e).__name__, e)
                 failures.append({"file": fname, "error": f"{type(e).__name__}: {e}"})
 
@@ -1140,6 +1161,10 @@ def _preferred_name(link: dict[str, Any], index: int) -> tuple[str, str]:
     return name, ext
 
 
+def _filename_key(name: str) -> str:
+    return unicodedata.normalize("NFC", name).casefold()
+
+
 def _file_name_for(
     dl_dir: Path,
     link: dict[str, Any],
@@ -1172,19 +1197,19 @@ def _file_name_for(
             ):
                 raise ValueError("Unsafe file name in download ledger")
             scratch_names = {bound + suffix for suffix in (".part", ".part.json", ".part.json.tmp")}
-            if {name.casefold() for name in scratch_names} & {
-                name.casefold() for name in ledger.names
+            if {_filename_key(name) for name in scratch_names} & {
+                _filename_key(name) for name in ledger.names
             }:
                 raise ValueError("Temporary download path conflicts with another original file")
             used.add(bound)
             return bound
 
     ledger_names: set[str] = ledger.names if ledger is not None else set()
-    reserved = {n.casefold() for n in set(used) | ledger_names}
+    reserved = {_filename_key(n) for n in set(used) | ledger_names}
     name = preferred
     counter = 2
     while {
-        name.casefold() + suffix for suffix in ("", ".part", ".part.json", ".part.json.tmp")
+        _filename_key(name) + suffix for suffix in ("", ".part", ".part.json", ".part.json.tmp")
     } & reserved or _untracked_file_exists(dl_dir, name):
         name = f"{preferred.rsplit('.', 1)[0]}_{counter}{ext}"
         counter += 1

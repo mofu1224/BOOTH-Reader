@@ -1,0 +1,60 @@
+{
+  "schema": 1,
+  "target": "macos-arm64",
+  "lock_sha256": "69cd82b5d2a4afab7af2d5ffcb78ad27d638c7bc698fc7fa91e245c6cffe5f47",
+  "assets": {
+    "python": {
+      "destination": ".cache/downloads/cpython-3.12.15+20261003-aarch64-apple-darwin-install_only.tar.gz",
+      "sha256": "316a463172740e71d8dca1f2730784e325f3f720941137b5d674d5801a632213",
+      "size": 25146462,
+      "parts": [
+        {
+          "file": "python-316a463172740e71-000.chunk",
+          "sha256": "316a463172740e71d8dca1f2730784e325f3f720941137b5d674d5801a632213",
+          "size": 25146462
+        }
+      ]
+    },
+    "wheels": {
+      "destination": ".cache/vendor/wheels.zip",
+      "sha256": "c6c9f796c2eec4a6e9e7d6913524637cc83e70fabe648dad1b5948d5a6e8702f",
+      "size": 79355187,
+      "parts": [
+        {
+          "file": "wheels-c6c9f796c2eec4a6-000.chunk",
+          "sha256": "36e17a622b2ee71a56f3ef34879c4d60702ea05c07710eef16d5b9a404f10446",
+          "size": 41943040
+        },
+        {
+          "file": "wheels-c6c9f796c2eec4a6-001.chunk",
+          "sha256": "829bb60ea505982f03100898825e51e73f6ea37172073a85dd473cc0e5215888",
+          "size": 37412147
+        }
+      ]
+    },
+    "browser": {
+      "destination": ".cache/downloads/native-webkit-macos-arm64.tar.gz",
+      "sha256": "0e0183b3576281ac5d2c14cdc343d2dbb39655c9c5550739035ea13dd9f6a62c",
+      "size": 25980,
+      "parts": [
+        {
+          "file": "browser-0e0183b3576281ac-000.chunk",
+          "sha256": "0e0183b3576281ac5d2c14cdc343d2dbb39655c9c5550739035ea13dd9f6a62c",
+          "size": 25980
+        }
+      ]
+    },
+    "browser-receipt": {
+      "destination": ".cache/downloads/native-webkit-macos-arm64.tar.json",
+      "sha256": "d3e680716665e9aa95b2f011e5cc4372d3092e64b4f48a4e3ecb58fcde5d3493",
+      "size": 3025,
+      "parts": [
+        {
+          "file": "browser-receipt-d3e680716665e9aa-000.chunk",
+          "sha256": "d3e680716665e9aa95b2f011e5cc4372d3092e64b4f48a4e3ecb58fcde5d3493",
+          "size": 3025
+        }
+      ]
+    }
+  }
+}

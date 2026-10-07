@@ -95,7 +95,7 @@ def test_venv_health_reports_current_repo():
 def test_candidate_pythons_prefers_bundled(tmp_path):
     from tools.portable import candidate_pythons, tools_python
 
-    bundled = tmp_path / ".tools" / "python" / "python.exe"
+    bundled = tools_python(tmp_path)
     bundled.parent.mkdir(parents=True)
     bundled.write_bytes(b"")
     first = candidate_pythons(tmp_path)[0]

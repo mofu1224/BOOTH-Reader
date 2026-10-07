@@ -1,5 +1,13 @@
 # 変更履歴
 
+## 1.1.0（2026-10-06）
+
+- Apple Silicon MacとWindows x64の完全ポータブル構成。両OSの固定Python・wheel・オフライン初回準備と修復を同梱。
+- Macの認証を本体MITの自作WebKitホストへ変更。OSライブラリだけを使い、Google Chromeの配布payloadを除外。
+- DB v5でライブラリ基準の取得パスを保存し、旧Windows/POSIX記録を移動後も解決。Unicode衝突・両OSの排他制御に対応。
+- Macのfull/通常Python1,653ファイル照合、原文通知、Mach-Oから同版ソースへの対応、内包certifiの実ソースを追加。
+- 起動時のウィンドウちらつきを解消し、アプリアイコンとWeb UIのfaviconをBOOTH色（#FC4D50）の丸へ統一。
+
 ## 未リリース（2026-10-05）
 
 - Windowsで長すぎるtikv-jemalloc-sys通知3件のパスを短縮。生成・配布前検査で再発を防止。

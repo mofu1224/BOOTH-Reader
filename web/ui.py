@@ -265,7 +265,7 @@ def render_index(
             f'<article class="product"><div class="cover"><span class="no-image">画像なし</span>{image}</div><div class="product-info"><p class="shop">{shop}</p><h2>{title}</h2></div></article>'
         )
     return f"""<!doctype html>
-<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BOOTH-Reader — ライブラリ</title><style>{STYLE}</style></head>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BOOTH-Reader — ライブラリ</title><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23FC4D50'/%3E%3C/svg%3E"><style>{STYLE}</style></head>
 <body><a class="skip" href="#main">商品一覧へ移動</a><div class="shell">
 <aside class="sidebar"><div class="brand">BOOTH<span> Reader</span></div>
 <nav aria-label="ライブラリ" id="main-nav" class="nav"></nav>

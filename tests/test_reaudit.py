@@ -147,6 +147,7 @@ def test_concurrent_csv_exports_publish_complete_snapshots(tmp_path, monkeypatch
     assert not list(tmp_path.glob("*.tmp"))
 
 
+@pytest.mark.skipif(os.name != "nt", reason="Windows concurrent CSV publish denial")
 def test_csv_transient_windows_publish_denial_recovers(tmp_path, monkeypatch):
     replace = os.replace
     attempts = []
@@ -194,6 +195,7 @@ def test_clone_cleanup_accepts_supported_shutil_api(tmp_path, monkeypatch, versi
     assert not work.exists()
 
 
+@pytest.mark.skipif(os.name != "nt", reason="Windows Modify-only ACL")
 def test_cookie_atomic_publish_and_logout_in_modify_only_directory(tmp_path):
     directory = tmp_path / "modify-only"
     directory.mkdir()

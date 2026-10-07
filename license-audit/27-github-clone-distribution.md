@@ -1,5 +1,7 @@
 # GitHubクローン配布のライセンス判定（2026-10-03）
 
+**更新（2026-10-06）**: 1.1.0の両OS最終判定は [31-cross-platform-clone-distribution.md](31-cross-platform-clone-distribution.md)。本文のWindows向け条件は継続します。
+
 ## 判定
 
 **READY FOR CLONE DISTRIBUTION** — このリポジトリをGitHubへ公開し、`git clone` で配布する範囲

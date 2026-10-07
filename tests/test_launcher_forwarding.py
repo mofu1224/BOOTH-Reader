@@ -3,6 +3,7 @@
 import json
 import os
 import subprocess
+import sys
 from pathlib import Path
 
 import pytest
@@ -11,6 +12,15 @@ ROOT = Path(__file__).resolve().parent.parent
 
 
 def run_launcher(args):
+    if sys.platform == "darwin":
+        return subprocess.run(
+            ["/bin/bash", str(ROOT / "start.sh"), "cli", *args],
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            timeout=180,
+            check=False,
+        )
     cmd = Path(os.environ["SYSTEMROOT"]) / "System32/cmd.exe"
     inner = subprocess.list2cmdline([str(ROOT / "start.bat"), "cli", *args])
     return subprocess.run(

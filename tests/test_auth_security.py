@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import logging
+import os
 import time
 
 import pytest
@@ -154,7 +155,7 @@ def test_restrict_permissions_unknown_account_keeps_file(tmp_path, monkeypatch):
     monkeypatch.setattr(auth_mod, "current_account", lambda: "")
     path = tmp_path / "s.json"
     path.write_text("[]", encoding="utf-8")
-    assert auth_mod.restrict_permissions(path) is False
+    assert auth_mod.restrict_permissions(path) is (os.name != "nt")
     assert path.exists()
 
 

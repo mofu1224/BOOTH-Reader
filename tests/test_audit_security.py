@@ -1,6 +1,7 @@
 """Fail-closed secret persistence and local Web trust boundaries."""
 
 import logging
+import sys
 
 import pytest
 from fastapi.testclient import TestClient
@@ -22,6 +23,7 @@ def test_a12_cookie_lockdown_failure_preserves_previous_jar(tmp_path, monkeypatc
     assert not list(tmp_path.glob("*.tmp"))
 
 
+@pytest.mark.skipif(sys.platform != "win32", reason="Windows ACL inheritance")
 def test_a12_failed_acl_grant_never_removes_inheritance(tmp_path, monkeypatch):
     calls = []
     path = tmp_path / "ck.json"

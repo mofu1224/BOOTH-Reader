@@ -11,20 +11,23 @@ import shutil
 import socket
 import subprocess
 import sys
+import tarfile
 import threading
 import time
 import urllib.request
 import webbrowser
 import zipfile
+from collections.abc import Callable
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
+from core.platforms import launcher_name, load_manifest, site_packages, target_id  # noqa: E402
 from core.portable import portable_env  # noqa: E402
 from tools.portable import ensure_venv, setup_marker, venv_health, venv_python  # noqa: E402
 
-MANIFEST = json.loads((ROOT / "portable-manifest.json").read_text(encoding="utf-8"))
+MANIFEST = load_manifest(ROOT)
 LOCK = ROOT / MANIFEST["lock"]
 WHEELS = ROOT / MANIFEST["wheelhouse"]
 SNAPSHOT = ROOT / MANIFEST["browser"]["offlineSnapshot"]
@@ -111,16 +114,14 @@ def child_env() -> dict[str, str]:
     env["HOMEPATH"] = env["HOME"][len(env["HOMEDRIVE"]) :]
     env["PLAYWRIGHT_SKIP_BROWSER_GC"] = "1"
     env["PLAYWRIGHT_NODEJS_PATH"] = str(
-        ROOT / ".venv" / "Lib" / "site-packages" / "playwright" / "driver" / "node.exe"
+        site_packages(ROOT) / "playwright/driver" / ("node.exe" if os.name == "nt" else "node")
     )
     # Never search CWD or a developer PATH for a child executable/DLL.
     system = Path(env.get("SYSTEMROOT", r"C:\Windows"))
     env["PATH"] = os.pathsep.join(
-        [
-            str(ROOT / ".tools" / "python"),
-            str(system / "System32"),
-            str(system),
-        ]
+        [str(ROOT / ".tools/python"), str(system / "System32"), str(system)]
+        if os.name == "nt"
+        else [str(ROOT / ".tools/python/bin"), "/usr/bin", "/bin", "/usr/sbin", "/sbin"]
     )
     for path in (
         ROOT / ".cache" / "tmp",
@@ -172,6 +173,8 @@ def environment_ready() -> bool:
         if marker["lock_sha256"] != digest(LOCK) or marker["root"] != str(ROOT):
             return False
         if marker.get("pip_patch_sha256") != digest(PIP_PATCH):
+            return False
+        if marker.get("target", "windows-x64") != target_id():
             return False
         code = (
             "import importlib.metadata as m, json, re; "
@@ -261,6 +264,7 @@ def install_environment(*, offline: bool, repair: bool) -> Path:
                     "root": str(ROOT),
                     "lock_sha256": digest(LOCK),
                     "pip_patch_sha256": digest(PIP_PATCH),
+                    "target": target_id(),
                 }
             ),
             encoding="utf-8",
@@ -279,6 +283,14 @@ def install_environment(*, offline: bool, repair: bool) -> Path:
 
 
 def browser_files(python: Path) -> list[Path]:
+    if MANIFEST["browser"].get("executable"):
+        executable = ROOT / ".playwright-browsers" / MANIFEST["browser"]["executable"]
+        if MANIFEST["browser"].get("executableReceipt"):
+            return [
+                executable,
+                ROOT / ".playwright-browsers" / MANIFEST["browser"]["executableReceipt"],
+            ]
+        return [executable, executable.parent.parent / "Info.plist"]
     if MANIFEST["browser"].get("engine") == "webview2":
         return [
             ROOT / ".playwright-browsers/webview2/msedgewebview2.exe",
@@ -310,6 +322,10 @@ def browser_files(python: Path) -> list[Path]:
 
 
 def extract_snapshot(archive: Path, destination: Path) -> None:
+    if archive.name.endswith(".tar.gz"):
+        with tarfile.open(archive, "r:gz") as bundle:
+            bundle.extractall(destination, filter="data")
+        return
     with zipfile.ZipFile(archive) as bundle:
         for entry in bundle.infolist():
             target = (destination / entry.filename).resolve()
@@ -317,7 +333,24 @@ def extract_snapshot(archive: Path, destination: Path) -> None:
                 raise RuntimeError("Invalid bundled browser path")
             if (entry.external_attr >> 16) & 0o170000 == 0o120000:
                 raise RuntimeError("Invalid bundled browser symlink")
-        bundle.extractall(destination)
+        bundle.extractall(destination)  # noqa: S202 - ZIP entries checked above; tar uses data filter
+
+
+def verify_browser_signature(executable: Path) -> None:
+    if MANIFEST["browser"].get("verifyCodesign"):
+        call(
+            ["/usr/bin/codesign", "--verify", "--strict", str(executable)], capture=True, timeout=30
+        )
+        return
+    team = MANIFEST["browser"].get("signerTeam")
+    if team:
+        app = executable.parent.parent.parent
+        requirement = f'=anchor apple generic and certificate leaf[subject.OU] = "{team}"'
+        call(
+            ["/usr/bin/codesign", "--verify", "--deep", "--strict", "-R", requirement, str(app)],
+            capture=True,
+            timeout=90,
+        )
 
 
 def ensure_browser(python: Path, *, offline: bool, repair: bool = False) -> None:
@@ -330,12 +363,6 @@ def ensure_browser(python: Path, *, offline: bool, repair: bool = False) -> None
 
         # A hung health check can leave the app's WebView2 host holding the
         # runtime binary; release it before restoring the verified snapshot.
-        subprocess.run(
-            ["taskkill", "/IM", "booth-webview-host.exe", "/T", "/F"],
-            capture_output=True,
-            timeout=30,
-            check=False,
-        )
         materialize("browser", ROOT)
         materialize("browser-receipt", ROOT)
         if SNAPSHOT.is_file() and RECEIPT.is_file():
@@ -357,6 +384,7 @@ def ensure_browser(python: Path, *, offline: bool, repair: bool = False) -> None
         "assert page.title() == 'portable'; a.close(); p.stop()"
     )
     try:
+        verify_browser_signature(files[0])
         call([str(python), "-s", "-c", code], capture=True, timeout=150)
     except (OSError, RuntimeError, subprocess.TimeoutExpired):
         if repair:
@@ -498,7 +526,7 @@ def web(python: Path, args: list[str]) -> int:
     return subprocess.call(cmd, cwd=ROOT, env=child_env())
 
 
-def main(argv: list[str] | None = None) -> int:
+def _main(argv: list[str] | None = None, downgrade: Callable[[], None] = lambda: None) -> int:
     args = list(sys.argv[1:] if argv is None else argv)
     # bootstrap.ps1 always forwards its mode first; only "auto" needs routing.
     mode = args.pop(0) if args else "auto"
@@ -551,19 +579,37 @@ def main(argv: list[str] | None = None) -> int:
             if not (ROOT / "app.db").exists():
                 call([str(python), "-s", str(ROOT / "cli.py"), "init-db"])
         if mode == "cli":
+            downgrade()
             return subprocess.call(
                 [str(python), "-s", str(ROOT / "cli.py"), *(args or ["--help"])],
                 cwd=ROOT,
                 env=child_env(),
             )
         if mode == "web":
+            downgrade()
             return web(python, args)
         raise RuntimeError(f"Unknown internal mode: {mode}")
     except (OSError, ValueError, RuntimeError, subprocess.SubprocessError) as error:
-        print(f"[ERROR] {error}", file=sys.stderr)
+        print(f"[ERROR] {str(error).replace('start.bat', launcher_name())}", file=sys.stderr)
         return 1
     except KeyboardInterrupt:
         return 130
+
+
+def main(argv: list[str] | None = None) -> int:
+    from core.runtime_lock import runtime_lock
+
+    args = list(sys.argv[1:] if argv is None else argv)
+    mode = args[0] if args else "auto"
+    if mode == "auto":
+        mode, _ = resolve_mode(args[1:])
+    exclusive = "--check" not in args and (mode == "setup" or not environment_ready())
+    try:
+        with runtime_lock(ROOT, exclusive=exclusive) as downgrade:
+            return _main(args, downgrade)
+    except RuntimeError as error:
+        print(f"[ERROR] {error}", file=sys.stderr)
+        return 1
 
 
 if __name__ == "__main__":

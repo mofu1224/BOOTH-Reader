@@ -5,7 +5,7 @@
 ユーザー指示により配布対象はこのフォルダー全体・リポジトリそのものです。別配布用ソース一式・アーカイブは不要として撤回しました。
 以下のsource-online限定のREADY FOR RELEASE判定は取り下げ済みです。完成物の出力先は現存せず、専用生成・試験・承認経路も削除しました。
 以下は当時の検証証拠を保持する過去記録です。再生成手順は撤去し、現在の配布手順には使用しません。
-全体の監査状態は `19-release-readiness.md` の **BLOCKED** を参照してください。
+全体の監査状態は `release-gate.json` と最新の [31-cross-platform-clone-distribution.md](31-cross-platform-clone-distribution.md) を参照してください。
 
 ## 判定と配布対象
 
@@ -35,7 +35,7 @@ OpenCodeの初期3セッションを読み取り専用で調査し、61write/95e
 原入力・認証値を監査文書へ複製せず、モデル、日時、生成ファイルhashと入力basenameを保存した。
 初期の外部検索2件は依存CVE調査で、source repositoryの取り込みではなかった。
 
-証拠: `creation-session-evidence.json`、`project-generation-models.json`。
+証拠（私用保全・cloneには非同梱）: `creation-session-evidence.json`、`project-generation-models.json`。
 
 OpenCode利用規約のeffective dateは2026-08-15で、初期生成の2026-09-29より前。
 “Your IP”は当事者間で利用者がOutputを所有し、OpenCode側の権利を利用者へ譲渡することを明記する。

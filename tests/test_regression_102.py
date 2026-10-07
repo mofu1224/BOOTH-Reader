@@ -592,7 +592,7 @@ class _FakePw:
     def stop(self):
         self.stopped = True
 
-    def launch(self, headless: bool = False):
+    def launch(self, headless: bool = False, **options):
         if self.launch_error:
             raise self.launch_error
         return self
@@ -632,7 +632,12 @@ class _FakePw:
 def _install_fake(monkeypatch, factory) -> None:
     import playwright.sync_api as pwapi
 
+    from core import browser
+
     monkeypatch.setattr(pwapi, "sync_playwright", factory)
+    monkeypatch.setattr(
+        browser, "launch_browser", lambda pw, headless=False: pw.chromium.launch(headless=headless)
+    )
 
 
 @pytest.fixture
@@ -674,7 +679,9 @@ def test_login_browser_start_failure_is_still_a_prerequisite(monkeypatch, tmp_pa
     )
     with pytest.raises(BoothPrerequisiteError) as exc:
         login(headless=True, path=tmp_path / "ck.json", timeout_s=5)
-    assert "start.bat --repair" in str(exc.value)
+    from core.platforms import launcher_name
+
+    assert f"{launcher_name()} --repair" in str(exc.value)
 
 
 def test_login_playwright_start_failure_is_still_a_prerequisite(monkeypatch, tmp_path):

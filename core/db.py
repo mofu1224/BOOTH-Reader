@@ -32,7 +32,7 @@ from typing import Any
 
 from .errors import BoothDatabaseError, BoothSchemaTooNewError
 
-SCHEMA_VERSION = 4
+SCHEMA_VERSION = 5
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS items (
@@ -54,6 +54,7 @@ CREATE TABLE IF NOT EXISTS downloads (
   item_id TEXT NOT NULL REFERENCES items(item_id) ON DELETE CASCADE,
   file_name TEXT NOT NULL DEFAULT '',
   path TEXT NOT NULL DEFAULT '',
+  path_encoding TEXT NOT NULL DEFAULT 'legacy' CHECK (path_encoding IN ('legacy','library-relative')),
   status TEXT NOT NULL DEFAULT 'pending' CHECK (status IN ('pending','downloading','done','failed')),
   sha256 TEXT NOT NULL DEFAULT '',
   downloaded_at TEXT NOT NULL DEFAULT '',
@@ -113,6 +114,19 @@ def get_connection(db_path: str | Path) -> sqlite3.Connection:
         conn.close()
         raise BoothDatabaseError(str(db_path), type(e).__name__) from e
     return conn
+
+
+def ensure_current_schema(db_path: str | Path) -> None:
+    """Upgrade known existing schemas; do not create or repair an empty DB."""
+    if not Path(db_path).is_file():
+        return
+    conn = get_connection(db_path)
+    try:
+        current = _user_version(conn)
+    finally:
+        conn.close()
+    if 0 < current < SCHEMA_VERSION:
+        init_db(db_path)
 
 
 def _set_wal(conn: sqlite3.Connection) -> bool:
@@ -218,11 +232,22 @@ def _add_navigation_order(conn: sqlite3.Connection) -> None:
     )
 
 
+def _add_download_path_encoding(conn: sqlite3.Connection) -> None:
+    columns = {str(row["name"]) for row in conn.execute("PRAGMA table_info(downloads)")}
+    if "path_encoding" not in columns:
+        conn.execute(
+            "ALTER TABLE downloads ADD COLUMN path_encoding TEXT NOT NULL DEFAULT 'legacy' CHECK (path_encoding IN ('legacy','library-relative'))"
+        )
+
+
 _MIGRATIONS: list[_Migration] = [
     _Migration(1, _add_perf_indexes, "add list_members.item_id and downloads.status indexes"),
     _Migration(2, _add_download_url, "record the source url of each downloads row"),
     _Migration(3, _add_list_order, "persist list sorting and BOOTH library order"),
     _Migration(4, _add_navigation_order, "persist my-list navigation order"),
+    _Migration(
+        5, _add_download_path_encoding, "support portable download paths; retain legacy records"
+    ),
 ]
 
 

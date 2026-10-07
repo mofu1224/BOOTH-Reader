@@ -9,7 +9,7 @@ import uvicorn
 from fastapi.testclient import TestClient
 from playwright.sync_api import sync_playwright
 
-from core.browser import launch_browser
+from tests.browser_helpers import launch_browser
 from web import cli_bridge as bridge
 from web.app import create_app
 

@@ -14,6 +14,7 @@ def test_launcher_probe_does_not_kill_unowned_processes(tmp_path, monkeypatch):
 
     (tmp_path / "OWNED-BY-PORTABILITY-TEST.txt").touch()
     monkeypatch.setattr(launcher_probe, "ROOT", tmp_path / "checkout")
+    monkeypatch.setenv("SYSTEMROOT", "C:/Windows")
     calls = []
     monkeypatch.setattr(launcher_probe.subprocess, "run", lambda *a, **k: calls.append(a))
 
@@ -60,3 +61,42 @@ def test_a11_lock_regenerator_metadata_and_hash(tmp_path):
     text = output.read_text(encoding="utf-8")
     assert "fake-package==1.0" in text
     assert hashlib.sha256(wheel.read_bytes()).hexdigest() in text
+
+
+def test_clone_gate_requires_real_git_executable_modes(tmp_path):
+    import subprocess
+
+    import pytest
+
+    from tools.repository_files import require_clone_script_modes
+
+    subprocess.run(["git", "init", "-q", str(tmp_path)], check=True)
+    scripts = [tmp_path / "start.sh", tmp_path / "start with space.command"]
+    for script in scripts:
+        script.write_text("#!/bin/sh\nexit 0\n", encoding="utf-8")
+    with pytest.raises(SystemExit, match="100755"):
+        require_clone_script_modes(scripts, tmp_path)
+    subprocess.run(
+        ["git", "-C", str(tmp_path), "add", "--", *(p.name for p in scripts)], check=True
+    )
+    subprocess.run(
+        ["git", "-C", str(tmp_path), "update-index", "--chmod=-x", "--", scripts[1].name],
+        check=True,
+    )
+    with pytest.raises(SystemExit, match=r"start with space\.command"):
+        require_clone_script_modes(scripts, tmp_path)
+    subprocess.run(
+        [
+            "git",
+            "-C",
+            str(tmp_path),
+            "update-index",
+            "--chmod=+x",
+            "--",
+            *(p.name for p in scripts),
+        ],
+        check=True,
+    )
+    assert require_clone_script_modes(scripts, tmp_path) == {
+        script.name: "100755" for script in scripts
+    }

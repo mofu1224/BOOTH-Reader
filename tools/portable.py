@@ -22,6 +22,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
+from core.platforms import python_relative, venv_relative  # noqa: E402
 from core.portable import (  # noqa: E402
     BROWSERS_DIR_NAME,
     CACHE_DIR_NAME,
@@ -39,12 +40,12 @@ def venv_dir(root: Path = ROOT) -> Path:
 
 
 def venv_python(root: Path = ROOT) -> Path:
-    return venv_dir(root) / "Scripts" / "python.exe"
+    return venv_dir(root) / venv_relative()
 
 
 def tools_python(root: Path = ROOT) -> Path:
     """Bundled interpreter (``tools/fetch_python.py``), when present."""
-    return root / TOOLS_PYTHON_DIR_NAME / "python" / "python.exe"
+    return root / TOOLS_PYTHON_DIR_NAME / "python" / python_relative()
 
 
 def candidate_pythons(root: Path = ROOT) -> list[list[str]]:

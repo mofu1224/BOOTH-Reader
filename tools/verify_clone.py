@@ -20,7 +20,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
-from tools.repository_files import collect, input_hashes  # noqa: E402
+from tools.repository_files import collect, input_hashes, require_clone_script_modes  # noqa: E402
 
 
 def remove_owned(work: Path) -> None:
@@ -180,6 +180,16 @@ def main() -> int:
             run(
                 f"candidate-files-{number}",
                 [git_exe, "-c", "core.longpaths=true", "add", "--", *files[offset : offset + 35]],
+                ROOT,
+                candidate_env,
+            )
+        source_modes = require_clone_script_modes(candidate_files, ROOT)
+        scripts = list(source_modes)
+        result["source_script_modes"] = source_modes
+        if scripts:
+            run(
+                "candidate-executable-modes",
+                [git_exe, "update-index", "--chmod=+x", "--", *scripts],
                 ROOT,
                 candidate_env,
             )

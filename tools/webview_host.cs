@@ -2,6 +2,7 @@
 // time). The SDK WinForms assembly targets .NET Framework 4.x; PowerShell 7
 // hosts load a different Forms identity, so the host must be a native exe.
 using System;
+using System.Drawing;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Web.WebView2.Core;
@@ -22,6 +23,18 @@ public static class BoothWebViewHost {
             window.Width = 1100;
             window.Height = 800;
             window.ShowInTaskbar = !hidden;
+            try {
+                var icon = Icon.ExtractAssociatedIcon(Application.ExecutablePath);
+                if (icon != null) window.Icon = icon;
+            } catch (Exception) {
+            }
+            if (hidden) {
+                // The startup health check launches this host hidden; keep the window
+                // off-screen so it never flashes while WebView2 initializes.
+                window.FormBorderStyle = FormBorderStyle.None;
+                window.StartPosition = FormStartPosition.Manual;
+                window.Location = new Point(-32000, -32000);
+            }
             view.Dock = DockStyle.Fill;
             window.Controls.Add(view);
             window.Shown += (sender, args) => {

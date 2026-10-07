@@ -1,7 +1,8 @@
 # 最終リリースゲート
 
-## 最新判定: READY FOR CLONE DISTRIBUTION（2026-10-03）
+## 最新判定: READY FOR CLONE DISTRIBUTION（2026-10-03、1.1.0補足 2026-10-06）
 
+- 2026-10-06補足: 1.1.0（Mac対応・Mac用Chrome除外と自作WebKitホスト）の最終判定は [31-cross-platform-clone-distribution.md](31-cross-platform-clone-distribution.md)。本節のWindows向け条件と27/28の記録は継続します。品質記録は [../audit/21-portable-distribution-1.1.0.md](../audit/21-portable-distribution-1.1.0.md)。
 - 配布対象: GitHubリポジトリのクローン（Git追跡内容のみ）。Cookie・購入履歴DB・購入物・profileはGit外で含まれない。
 - 判定根拠: [27-github-clone-distribution.md](27-github-clone-distribution.md)。WebView2 Fixed Versionの配布条件、CPython/VCランタイム、
   wheel通知、Playwright/Node、pip patch、初期生成の由来を証拠付きで整理。`release-gate.json` は現行ツリーのハッシュで再生成する。

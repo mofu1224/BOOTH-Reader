@@ -66,7 +66,9 @@ def test_no_args_prints_help(capsys):
     assert "usage" in captured.out.lower()
     # The pointer to the supported entry point goes to stderr, keeping stdout
     # free for machines that pipe the help output.
-    assert "start.bat" in captured.err
+    from core.platforms import launcher_name
+
+    assert launcher_name() in captured.err
 
 
 def test_init_db_creates_and_is_idempotent(tmp_path):
@@ -123,7 +125,9 @@ def test_unknown_command_prints_english_guidance(tmp_path, capsys):
     assert e.value.code == 2
     err = capsys.readouterr().err
     assert "Help:" in err
-    assert "start.bat" in err
+    from core.platforms import launcher_name
+
+    assert launcher_name() in err
 
 
 def test_missing_auth_exits_1(tmp_path):

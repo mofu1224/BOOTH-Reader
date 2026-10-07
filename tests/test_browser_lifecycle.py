@@ -9,11 +9,13 @@ import pytest
 from core import browser
 
 
-def test_host_is_reused_until_source_or_sdk_changes(tmp_path, monkeypatch):
+def test_host_is_reused_until_source_sdk_or_icon_changes(tmp_path, monkeypatch):
     monkeypatch.setattr(browser, "ROOT", tmp_path)
     source = tmp_path / "tools/webview_host.cs"
     source.parent.mkdir()
     source.write_text("synthetic source")
+    icon = tmp_path / "tools/webview_host.ico"
+    icon.write_bytes(b"synthetic icon")
     sdk = tmp_path / "sdk"
     sdk.mkdir()
     for name in ("Microsoft.Web.WebView2.Core.dll", "Microsoft.Web.WebView2.WinForms.dll"):
@@ -33,14 +35,19 @@ def test_host_is_reused_until_source_or_sdk_changes(tmp_path, monkeypatch):
     changed = browser.compile_host(sdk)
     assert changed != first
     assert len(calls) == 2
-    changed.write_bytes(b"corrupted generated host")
-    assert browser.compile_host(sdk) == changed
-    assert changed.read_bytes() == b"synthetic host"
+    icon.write_bytes(b"changed synthetic icon")
+    recolored = browser.compile_host(sdk)
+    assert recolored != changed
     assert len(calls) == 3
+    recolored.write_bytes(b"corrupted generated host")
+    assert browser.compile_host(sdk) == recolored
+    assert recolored.read_bytes() == b"synthetic host"
+    assert len(calls) == 4
 
 
 def test_failed_host_spawn_removes_private_profile(tmp_path, monkeypatch):
     monkeypatch.setattr(browser, "ROOT", tmp_path)
+    monkeypatch.setattr(browser, "load_manifest", lambda root: {"browser": {"engine": "webview2"}})
     (tmp_path / "portable-manifest.json").write_text(
         json.dumps({"browser": {"engine": "webview2"}})
     )

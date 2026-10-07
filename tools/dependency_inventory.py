@@ -19,6 +19,7 @@ from packaging.utils import canonicalize_name
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
+from core.platforms import site_packages, target_id  # noqa: E402
 from core.portable import apply_portable_env  # noqa: E402
 from tools.manage_portable import WHEELS, locked_versions  # noqa: E402
 
@@ -79,7 +80,7 @@ def main() -> int:
             "requires": dist.requires or [],
             "license": dist.metadata.get("License-Expression") or dist.metadata.get("License", ""),
             "license_files": licenses,
-            "location": ".venv/Lib/site-packages",
+            "location": site_packages(ROOT).relative_to(ROOT).as_posix(),
             "source": f"https://pypi.org/project/{name}/{ver}/",
             "migration": "ハッシュ固定wheelを.cache/wheelsへ保管し.venvへ導入",
             "verification": "SHA-256、pip check、import、全回帰試験",
@@ -94,7 +95,10 @@ def main() -> int:
         row["wheel"] = {"file": wheel.name, "sha256": sha(wheel), "bytes": wheel.stat().st_size}
         with zipfile.ZipFile(wheel) as archive:
             row["embedded_native_files"] = [
-                p for p in archive.namelist() if p.lower().endswith((".dll", ".exe", ".pyd"))
+                p
+                for p in archive.namelist()
+                if p.lower().endswith((".dll", ".exe", ".pyd", ".so", ".dylib"))
+                or p.endswith("/driver/node")
             ]
             row["vendored_metadata"] = [
                 p
@@ -132,7 +136,7 @@ def main() -> int:
     for base in (ROOT / ".tools/python", ROOT / ".playwright-browsers"):
         for path in base.rglob("*"):
             if path.is_file() and (
-                path.suffix.lower() in {".exe", ".dll", ".pyd"}
+                path.suffix.lower() in {".exe", ".dll", ".pyd", ".so", ".dylib"}
                 or re.search(r"license|copying|about", path.name, re.I)
             ):
                 assets.append(
@@ -143,7 +147,7 @@ def main() -> int:
                     }
                 )
     report = {
-        "target": "Windows x64 / CPython 3.12.13",
+        "target": target_id() + " / CPython " + sys.version.split()[0],
         "packages": packages,
         "stdlib_native": {"openssl": ssl.OPENSSL_VERSION, "sqlite": sqlite3.sqlite_version},
         "runtime_assets": assets,
