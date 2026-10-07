@@ -21,7 +21,6 @@ from __future__ import annotations
 
 import contextlib
 import hashlib
-import json
 import shutil
 import subprocess
 import sys
@@ -32,13 +31,13 @@ import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(ROOT))
+from core.platforms import load_manifest, python_relative  # noqa: E402
 
 # Pinned distribution. Update the three values together from
 # https://github.com/astral-sh/python-build-standalone/releases and keep the
 # digest in sync with the asset's published sha256.
-_PYTHON: dict[str, str] = json.loads((ROOT / "portable-manifest.json").read_text(encoding="utf-8"))[
-    "python"
-]
+_PYTHON: dict[str, str] = load_manifest(ROOT)["python"]
 PBS_RELEASE = _PYTHON["release"]
 PBS_PYTHON_VERSION = _PYTHON["version"]
 PBS_ASSET = _PYTHON["asset"]
@@ -47,7 +46,7 @@ PBS_SHA256 = _PYTHON["sha256"]
 PBS_SIZE = int(_PYTHON.get("size", 45842109))
 
 TARGET_DIR = ROOT / ".tools" / "python"
-TARGET_EXE = TARGET_DIR / "python.exe"
+TARGET_EXE = TARGET_DIR / python_relative()
 DOWNLOAD_DIR = ROOT / ".cache" / "downloads"
 ARCHIVE = DOWNLOAD_DIR / PBS_ASSET
 
@@ -166,8 +165,8 @@ def extract(archive: Path) -> None:
             # "data" filter: refuse absolute paths, .. escapes and devices.
             tar.extractall(scratch, filter="data")
         inner = scratch / "python"
-        if not (inner / "python.exe").is_file():
-            raise SystemExit("[fetch] unexpected archive layout (no python/python.exe)")
+        if not (inner / python_relative()).is_file():
+            raise SystemExit("[fetch] unexpected archive layout (missing Python)")
         if TARGET_DIR.exists():
             shutil.rmtree(TARGET_DIR, ignore_errors=True)
         TARGET_DIR.parent.mkdir(parents=True, exist_ok=True)

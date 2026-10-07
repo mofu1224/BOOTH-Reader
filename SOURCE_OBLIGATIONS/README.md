@@ -34,4 +34,12 @@ CPython/PBSの対応原文と全3,371ファイルの一致は `license-audit/pbs
 `THIRD_PARTY_LICENSES/` と `license-audit/license-evidence.json` に保持しています。
 WebView2の再配布条件と原文は `license-audit/27-github-clone-distribution.md` を参照してください。
 このフォルダーは、同梱するMPL対象（certifi、pathspec）のSource Code Formと、通知対応を証明する同版sdistを提供します。
-判定の入口は `license-audit/release-gate.json` と `license-audit/27-github-clone-distribution.md` です。
+判定の入口は `license-audit/release-gate.json` と `license-audit/31-cross-platform-clone-distribution.md` です。
+
+## Mac対応の追加（1.1.0）
+
+`macos-vendored-certifi-source.tar.gz`はMac用CPython原本・ensurepip・固定pip wheelに含まれるcertifiの実ソースをbyte変更せず収録します。元ファイルとhashは`license-audit/macos-distribution-evidence.json`の`vendored_certifi_source`に記録します。
+
+MacのネイティブwheelはWindowsと同じ版です。同じ版のsdistとRust lock依存の提供は`native/`・`rust-lock/`で行い、Macの実Mach-Oファイルから対応先へ結び付けた表も同じ証拠ファイルへ保存しています。Python 3.12.15の公式full/通常アーカイブ1,653ファイル一致と追加通知19件を確認しています。
+
+MacのWebKitホストは本体MITの`tools/webkit_host.swift`とビルド手順を提供します。リンクするWebKit・AppKit・SwiftはmacOS標準ライブラリであり、このリポジトリに再配布しません。Google Chrome・Firefox・Playwright用WebKit・FFmpegのブラウザー本体を配布しません。

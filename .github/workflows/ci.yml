@@ -44,8 +44,6 @@ jobs:
           if ($LASTEXITCODE) { exit $LASTEXITCODE }
       - name: Verify dependencies
         run: ./.venv/Scripts/python.exe -m pip check
-      - name: Check privacy and freshness of the complete Git candidate
-        run: ./.venv/Scripts/python.exe tools/check_distribution.py
       - name: Verify original notices and corresponding sources
         run: ./.venv/Scripts/python.exe tools/check_license_evidence.py
       - name: Verify every vendored chunk
@@ -77,6 +75,8 @@ jobs:
           }
       - name: Check offline hash-pinned resolution
         run: ./.venv/Scripts/python.exe -m pip install --dry-run --no-index --find-links .cache/wheels --require-hashes --no-deps -r requirements-portable-lock.txt
+      - name: Check privacy and freshness of the complete Git candidate
+        run: ./.venv/Scripts/python.exe tools/check_distribution.py
       - name: Upload synthetic test report
         if: always()
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
@@ -109,6 +109,48 @@ jobs:
           path: |
             audit/clone-verification.json
             audit/junit-clone.xml
+          retention-days: 14
+
+  macos:
+    name: quality and offline portability (Mac arm64)
+    runs-on: macos-15
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Require Apple Silicon and bootstrap pinned local inputs
+        run: |
+          test "$(uname -m)" = arm64
+          bash ./start.sh setup
+      - name: Verify dependency integrity
+        run: .venv/bin/python3 -m pip check
+      - name: Prepare personal-use UI automation driver in ignored local cache
+        run: bash tools/prepare_ui_test_driver.sh
+      - name: Verify every platform payload
+        run: .venv/bin/python3 tools/vendor_payload.py verify --target all
+      - name: Lint and format
+        run: |
+          .venv/bin/python3 -m ruff check .
+          .venv/bin/python3 -m ruff format --check .
+      - name: Types
+        run: .venv/bin/python3 -m mypy
+      - name: Unit and integration tests
+        run: .venv/bin/python3 -m pytest -q --junitxml=.cache/junit-macos.xml
+      - name: Local paths and cold offline relocation
+        run: |
+          .venv/bin/python3 tools/check_portable.py
+          .venv/bin/python3 tools/verify_clone_macos.py
+      - name: Check distribution clearance
+        run: .venv/bin/python3 tools/check_distribution.py
+      - name: Upload synthetic Mac receipts
+        if: always()
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: macos-evidence
+          path: |
+            .cache/junit-macos.xml
+            .cache/macos-clone-result.json
           retention-days: 14
 
   security:

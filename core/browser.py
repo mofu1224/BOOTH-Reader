@@ -10,7 +10,6 @@ from __future__ import annotations
 
 import contextlib
 import hashlib
-import json
 import logging
 import os
 import shutil
@@ -22,6 +21,7 @@ import time
 from pathlib import Path
 from typing import Any
 
+from core.platforms import load_manifest
 from core.portable import portable_env
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -129,12 +129,13 @@ def _host_intact(host: Path) -> bool:
 
 def compile_host(sdk: Path) -> Path:
     source = ROOT / "tools/webview_host.cs"
+    icon = ROOT / "tools/webview_host.ico"
     assemblies = [
         sdk / "Microsoft.Web.WebView2.Core.dll",
         sdk / "Microsoft.Web.WebView2.WinForms.dll",
     ]
     digest = hashlib.sha256()
-    for path in [source, *assemblies]:
+    for path in [source, icon, *assemblies]:
         digest.update(path.read_bytes())
     host = sdk / f"booth-webview-host-{digest.hexdigest()[:20]}.exe"
     if _host_intact(host):
@@ -152,6 +153,7 @@ def compile_host(sdk: Path) -> Path:
                 "-nologo",
                 "-target:winexe",
                 f"-out:{candidate}",
+                f"-win32icon:{icon}",
                 *(f"-reference:{path}" for path in assemblies),
                 str(source),
             ],
@@ -174,8 +176,28 @@ def compile_host(sdk: Path) -> Path:
 
 
 def launch_browser(playwright: Any, *, headless: bool = False) -> Any:
-    manifest = json.loads((ROOT / "portable-manifest.json").read_text(encoding="utf-8"))
+    manifest = load_manifest(ROOT)
     engine = manifest["browser"].get("engine")
+    executable = manifest["browser"].get("executable")
+    if executable:
+        path = ROOT / ".playwright-browsers" / executable
+        if not path.is_file() or not path.resolve().is_relative_to(ROOT.resolve()):
+            raise RuntimeError("Bundled browser missing; run ./start.sh --repair")
+        if engine == "native-webkit":
+            import json
+
+            from .native_webkit import WebKitBrowser
+
+            receipt = ROOT / ".playwright-browsers" / manifest["browser"]["executableReceipt"]
+            build = json.loads(receipt.read_text(encoding="utf-8"))
+            if hashlib.sha256(path.read_bytes()).hexdigest() != build["executable_sha256"]:
+                raise RuntimeError(
+                    "Private WebKit host integrity mismatch; run bash ./start.sh --repair"
+                )
+            return WebKitBrowser(path, browser_env(), headless=headless)
+        return playwright.chromium.launch(
+            headless=headless, executable_path=str(path), env=browser_env()
+        )
     if engine != "webview2" or not hasattr(playwright.chromium, "connect_over_cdp"):
         return playwright.chromium.launch(headless=headless)
 

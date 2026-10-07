@@ -76,7 +76,7 @@ def test_launcher_environment_removes_developer_tool_injection(tmp_path, monkeyp
         "PLAYWRIGHT_BROWSERS_PATH",
     ):
         assert Path(env[key]).is_relative_to(tmp_path)
-    assert env["PIP_CONFIG_FILE"].lower() == "nul"
+    assert env["PIP_CONFIG_FILE"] == os.devnull
     assert "outside-repo" not in env["PATH"]
 
 
@@ -273,6 +273,7 @@ def test_corrupt_existing_browser_restored_once_from_verified_snapshot(
     monkeypatch.setattr(manage_portable, "SNAPSHOT", snapshot)
     monkeypatch.setattr(manage_portable, "RECEIPT", receipt)
     monkeypatch.setattr(manage_portable, "browser_files", lambda python: [browser, browser])
+    monkeypatch.setattr(manage_portable, "verify_browser_signature", lambda executable: None)
     restored = []
     monkeypatch.setattr(vendor_payload, "materialize", lambda name, root: restored.append(name))
     probes = []

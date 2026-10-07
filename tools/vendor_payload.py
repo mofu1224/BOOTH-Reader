@@ -7,13 +7,17 @@ import hashlib
 import json
 import re
 import shutil
+import sys
 import tempfile
 import zipfile
 from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parent.parent
-VENDOR = ROOT / "vendor/windows-x64"
+sys.path.insert(0, str(ROOT))
+from core.platforms import TARGETS, load_manifest, target_id  # noqa: E402
+
+VENDOR = ROOT / "vendor" / target_id()
 MANIFEST = VENDOR / "manifest.json"
 CHUNK_SIZE = 40 * 1024 * 1024
 
@@ -32,9 +36,12 @@ def owned(path: Path, root: Path = ROOT) -> Path:
     return path
 
 
-def materialize(name: str, root: Path = ROOT) -> Path:
+def materialize(name: str, root: Path = ROOT, *, target: str | None = None) -> Path:
     """Restore a cache asset from Git blobs, validating before publishing it."""
-    vendor = root / "vendor/windows-x64"
+    target = target_id() if target is None else target
+    if target not in TARGETS:
+        raise ValueError(f"Unsupported portable target: {target}")
+    vendor = root / "vendor" / target
     manifest = json.loads((vendor / "manifest.json").read_text(encoding="utf-8"))
     spec = manifest["assets"][name]
     destination = owned(root / spec["destination"], root)
@@ -66,12 +73,9 @@ def materialize(name: str, root: Path = ROOT) -> Path:
 
 def restore_wheels(root: Path = ROOT) -> None:
     archive = materialize("wheels", root)
-    wanted = set(
-        re.findall(
-            r"--hash=sha256:([0-9a-f]{64})", (root / "requirements-portable-lock.txt").read_text()
-        )
-    )
-    destination = owned(root / ".cache/wheels", root)
+    runtime = load_manifest(root)
+    wanted = set(re.findall(r"--hash=sha256:([0-9a-f]{64})", (root / runtime["lock"]).read_text()))
+    destination = owned(root / runtime["wheelhouse"], root)
     destination.mkdir(parents=True, exist_ok=True)
     with zipfile.ZipFile(archive) as bundle:
         entries = bundle.namelist()
@@ -93,45 +97,47 @@ def restore_wheels(root: Path = ROOT) -> None:
             raise RuntimeError("Incomplete vendored wheel closure")
 
 
-def build() -> None:
+def build(target: str | None = None) -> None:
     """Maintainer operation: package already verified materials, no downloads."""
-    runtime = json.loads((ROOT / "portable-manifest.json").read_text(encoding="utf-8"))
-    VENDOR.mkdir(parents=True, exist_ok=True)
+    target = target_id() if target is None else target
+    runtime = load_manifest(ROOT, target)
+    vendor = ROOT / "vendor" / target
+    vendor.mkdir(parents=True, exist_ok=True)
     scratch = ROOT / ".cache/tmp"
     scratch.mkdir(parents=True, exist_ok=True)
     wheel_archive = scratch / "vendor-wheels.zip"
-    wheels = sorted((ROOT / ".cache/wheels").glob("*.whl"))
-    hashes = set(
-        re.findall(
-            r"--hash=sha256:([0-9a-f]{64})", (ROOT / "requirements-portable-lock.txt").read_text()
-        )
-    )
+    wheels = sorted((ROOT / runtime["wheelhouse"]).glob("*.whl"))
+    hashes = set(re.findall(r"--hash=sha256:([0-9a-f]{64})", (ROOT / runtime["lock"]).read_text()))
     if {sha(path) for path in wheels} != hashes or len(wheels) != len(hashes):
         raise RuntimeError("Wheelhouse does not exactly match the portable lock")
     with zipfile.ZipFile(wheel_archive, "w", zipfile.ZIP_STORED) as archive:
         for path in wheels:
             archive.writestr(zipfile.ZipInfo(path.name), path.read_bytes())
     python_archive = ROOT / ".cache/downloads" / runtime["python"]["asset"]
-    sqlite_archive = ROOT / ".cache/downloads" / runtime["sqlite"]["asset"]
     if sha(python_archive) != runtime["python"]["sha256"]:
         raise RuntimeError("Python publisher hash mismatch")
-    if hashlib.sha3_256(sqlite_archive.read_bytes()).hexdigest() != runtime["sqlite"]["sha3_256"]:
-        raise RuntimeError("SQLite publisher hash mismatch")
     browser = ROOT / runtime["browser"]["offlineSnapshot"]
     receipt = browser.with_suffix(".json")
     if sha(browser) != json.loads(receipt.read_text(encoding="utf-8"))["sha256"]:
         raise RuntimeError("Browser snapshot hash mismatch")
     sources = {
         "python": python_archive,
-        "sqlite": sqlite_archive,
         "wheels": wheel_archive,
         "browser": browser,
         "browser-receipt": receipt,
     }
+    if not runtime["sqlite"].get("bundled"):
+        sqlite_archive = ROOT / ".cache/downloads" / runtime["sqlite"]["asset"]
+        if (
+            hashlib.sha3_256(sqlite_archive.read_bytes()).hexdigest()
+            != runtime["sqlite"]["sha3_256"]
+        ):
+            raise RuntimeError("SQLite publisher hash mismatch")
+        sources["sqlite"] = sqlite_archive
     manifest: dict[str, Any] = {
         "schema": 1,
-        "target": "windows-x86_64",
-        "lock_sha256": sha(ROOT / "requirements-portable-lock.txt"),
+        "target": target,
+        "lock_sha256": sha(ROOT / runtime["lock"]),
         "assets": {},
     }
     try:
@@ -142,7 +148,7 @@ def build() -> None:
                 for index in range((source.stat().st_size + CHUNK_SIZE - 1) // CHUNK_SIZE):
                     data = stream.read(CHUNK_SIZE)
                     filename = f"{name}-{digest[:16]}-{index:03d}.chunk"
-                    part = VENDOR / filename
+                    part = vendor / filename
                     part_hash = hashlib.sha256(data).hexdigest()
                     if part.exists() and sha(part) != part_hash:
                         raise RuntimeError(f"Refusing to overwrite changed vendor file: {filename}")
@@ -160,7 +166,9 @@ def build() -> None:
                 "size": source.stat().st_size,
                 "parts": parts,
             }
-        MANIFEST.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
+        (vendor / "manifest.json").write_text(
+            json.dumps(manifest, indent=2) + "\n", encoding="utf-8"
+        )
     finally:
         wheel_archive.unlink(missing_ok=True)
     print(f"Vendored {len(wheels)} wheels, Python, SQLite and browser; all chunks <=40 MiB")
@@ -169,23 +177,32 @@ def build() -> None:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("action", choices=["build", "verify"])
+    parser.add_argument("--target", choices=["windows-x64", "macos-arm64", "all"])
     args = parser.parse_args()
     if args.action == "build":
-        build()
+        targets = list(TARGETS) if args.target == "all" else [args.target or target_id()]
+        for target in targets:
+            build(target)
     else:
-        manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
-        if manifest["lock_sha256"] != sha(ROOT / "requirements-portable-lock.txt"):
-            raise RuntimeError("Vendored payload does not match current lock")
-        for spec in manifest["assets"].values():
-            digest = hashlib.sha256()
-            for part in spec["parts"]:
-                path = owned(VENDOR / part["file"], VENDOR)
-                if path.stat().st_size != part["size"] or sha(path) != part["sha256"]:
-                    raise RuntimeError(f"Invalid vendor part: {path.name}")
-                digest.update(path.read_bytes())
-            if digest.hexdigest() != spec["sha256"]:
-                raise RuntimeError("Invalid joined asset digest")
-        print("Vendor integrity: PASS")
+        targets = (
+            ["windows-x64", "macos-arm64"] if args.target == "all" else [args.target or target_id()]
+        )
+        for target in targets:
+            vendor = ROOT / "vendor" / target
+            manifest = json.loads((vendor / "manifest.json").read_text(encoding="utf-8"))
+            runtime = load_manifest(ROOT, target)
+            if manifest["lock_sha256"] != sha(ROOT / runtime["lock"]):
+                raise RuntimeError("Vendored payload does not match current lock")
+            for spec in manifest["assets"].values():
+                digest = hashlib.sha256()
+                for part in spec["parts"]:
+                    path = owned(vendor / part["file"], vendor)
+                    if path.stat().st_size != part["size"] or sha(path) != part["sha256"]:
+                        raise RuntimeError(f"Invalid vendor part: {path.name}")
+                    digest.update(path.read_bytes())
+                if digest.hexdigest() != spec["sha256"]:
+                    raise RuntimeError("Invalid joined asset digest")
+            print(f"Vendor integrity ({target}): PASS")
     return 0
 
 

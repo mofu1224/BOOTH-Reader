@@ -35,6 +35,7 @@ from contextlib import redirect_stderr, redirect_stdout
 from pathlib import Path
 from typing import Any, NoReturn, cast
 
+from core.platforms import launcher_name
 from core.portable import apply_portable_env, effective_browsers_path
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -60,7 +61,7 @@ Examples:
   start.bat web --port 8000
 
 Exit codes: 0=success 1=error 2=usage error 3=BOOTH layout changed
-"""
+""".replace("start.bat", launcher_name())
 
 
 def _add_common(p: argparse.ArgumentParser) -> None:
@@ -85,7 +86,7 @@ class _Parser(argparse.ArgumentParser):
         self.print_usage(sys.stderr)
         print(f"ERROR {message}", file=sys.stderr)
         print(
-            "Help: start.bat help",
+            f"Help: {launcher_name()} help",
             file=sys.stderr,
         )
         self.exit(2)
@@ -479,6 +480,7 @@ def _cmd_downloads(args: argparse.Namespace, db_path: str) -> int:
         from core.db import get_connection
         from core.download import cleanup_partials
         from core.library_lock import library_lock
+        from core.library_paths import resolve_record
 
         with library_lock(args.output_dir):
             conn = get_connection(db_path)
@@ -487,14 +489,9 @@ def _cmd_downloads(args: argparse.Namespace, db_path: str) -> int:
                 for row in conn.execute("SELECT path FROM downloads WHERE path != ''"):
                     path = Path(row["path"])
                     protected.append(path)
-                    # The library may have moved while the ledger kept its old root.
-                    if path.parent.name == "downloads":
-                        protected.append(
-                            Path(args.output_dir)
-                            / path.parent.parent.name
-                            / "downloads"
-                            / path.name
-                        )
+                    recovered = resolve_record(str(row["path"]), Path(args.output_dir))
+                    if recovered is not None:
+                        protected.append(recovered)
                 removed = cleanup_partials(args.output_dir, protected, downloads_only=True)
             finally:
                 conn.close()
@@ -662,9 +659,9 @@ def _cmd_doctor(args: argparse.Namespace, db_path: str) -> int:
     # The runtime manifest names the concrete engine (WebView2 in the shipped
     # bundle) so doctor reports exactly what `auth login` will launch.
     try:
-        engine = json.loads((BASE_DIR / "portable-manifest.json").read_text(encoding="utf-8"))[
-            "browser"
-        ]["engine"]
+        from core.platforms import load_manifest
+
+        engine = load_manifest(BASE_DIR)["browser"]["engine"]
     except (OSError, KeyError, ValueError):
         engine = "chromium"
 
@@ -685,7 +682,7 @@ def _cmd_doctor(args: argparse.Namespace, db_path: str) -> int:
             add(
                 f"browser:{engine}",
                 False,
-                f"Cannot launch browser. Run `start.bat --repair` ({type(e).__name__})",
+                f"Cannot launch browser. Run `{launcher_name()} --repair` ({type(e).__name__})",
                 fatal=True,
             )
     except ImportError:
@@ -720,6 +717,8 @@ def _cmd_doctor(args: argparse.Namespace, db_path: str) -> int:
         browsers_inside = False
     if engine == "webview2":
         has_repo_browser = (browsers / "webview2/msedgewebview2.exe").is_file()
+    elif engine == "native-webkit":
+        has_repo_browser = (browsers / "native-webkit/booth-webkit-host").is_file()
     else:
         has_repo_browser = any(browsers.glob("chromium*")) if browsers.is_dir() else False
     add(
@@ -800,8 +799,10 @@ def _cmd_doctor(args: argparse.Namespace, db_path: str) -> int:
 
 
 def _cmd_web(args: argparse.Namespace, db_path: str) -> int:
+    from core.db import ensure_current_schema
     from web.app import run
 
+    ensure_current_schema(db_path)
     run(
         host=args.host,
         port=int(args.port),
@@ -1045,7 +1046,7 @@ def main(  # noqa: PLR0911 - a flat command table reads better than a dispatch m
         return 0
     if args.cmd is None:
         print(
-            "No command specified. Help: start.bat help",
+            f"No command specified. Help: {launcher_name()} help",
             file=sys.stderr,
         )
         parser.print_help()

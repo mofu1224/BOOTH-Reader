@@ -4,7 +4,7 @@ include requirements*.txt *.bat *.cmd *.ps1 *.sh .gitignore .gitattributes
 include portable-manifest.json
 recursive-include core *.py
 recursive-include web *.py
-recursive-include tools *.py *.ps1 *.bat
+recursive-include tools *.py *.ps1 *.bat *.ico
 recursive-include tests *.py
 recursive-include .github *.yml
 recursive-include audit *.md

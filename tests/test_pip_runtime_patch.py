@@ -39,25 +39,31 @@ def test_pip_patch_replaces_only_vendor_and_preserves_upstream_inputs(tmp_path):
     from pathlib import Path
 
     root = Path(__file__).resolve().parent.parent
-    wheels = tmp_path / ".cache/wheels"
+    from core.platforms import load_manifest, manifest_path
+
+    runtime = load_manifest(root)
+    config = manifest_path(tmp_path)
+    config.parent.mkdir(parents=True, exist_ok=True)
+    config.write_text(json.dumps(runtime))
+    wheels = tmp_path / runtime["wheelhouse"]
     wheels.mkdir(parents=True)
     names = ["pip-26.2.1-py3-none-any.whl", "urllib3-2.8.0-py3-none-any.whl"]
     before = {}
     for name in names:
-        data = (root / ".cache/wheels" / name).read_bytes()
+        data = (root / runtime["wheelhouse"] / name).read_bytes()
         before[name] = hashlib.sha256(data).hexdigest()
         (wheels / name).write_bytes(data)
-    (tmp_path / "requirements-portable-lock.txt").write_text(
+    (tmp_path / runtime["lock"]).write_text(
         "\n".join("--hash=sha256:" + value for value in before.values())
     )
     patched = patch_wheel(tmp_path)
     with zipfile.ZipFile(patched) as archive:
         assert "urllib3==2.8.0" in archive.read("pip/_vendor/vendor.txt").decode()
-        with zipfile.ZipFile(root / ".cache/wheels" / names[0]) as original:
+        with zipfile.ZipFile(root / runtime["wheelhouse"] / names[0]) as original:
             assert archive.read("pip/_internal/cli/main.py") == original.read(
                 "pip/_internal/cli/main.py"
             )
-        with zipfile.ZipFile(root / ".cache/wheels" / names[1]) as upstream:
+        with zipfile.ZipFile(root / runtime["wheelhouse"] / names[1]) as upstream:
             assert archive.read("pip/_vendor/urllib3/response.py") == upstream.read(
                 "urllib3/response.py"
             )

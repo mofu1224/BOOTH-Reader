@@ -1,4 +1,4 @@
-BOOTH-Reader 1.0.3 — GitHub clone distribution
+BOOTH-Reader 1.1.0 — GitHub clone distribution
 Copyright (c) 2026 mofu1224 (project LICENSE declaration).
 
 The MIT LICENSE applies to project-owned expression only. It does not replace
@@ -25,8 +25,18 @@ retained in THIRD_PARTY_LICENSES/browser/. Chrome for Testing, Chromium headless
 shell and Playwright FFmpeg are not bundled or distributed.
 
 License clearance for this repository (Git clone distribution): READY.
-Scope, evidence and residual limitations: license-audit/28-clone-distribution-followup.md.
+Scope, evidence and residual limitations: license-audit/31-cross-platform-clone-distribution.md.
 Microsoft code is subject to THIRD_PARTY_TERMS.md and the incorporated original
 terms. WebView2 includes enabled Microsoft Defender SmartScreen and may collect
 and send end-user information to Microsoft: https://aka.ms/privacy and
 https://learn.microsoft.com/en-us/microsoft-edge/privacy-whitepaper#smartscreen.
+
+The macOS runtime is CPython 3.12.15 (PBS 20261003), with its original
+Python and embedded-library notices retained under THIRD_PARTY_LICENSES/macos.
+Mac wheel versions match the above reviewed pinned packages; corresponding
+native sources and exact vendored certifi sources are provided in SOURCE_OBLIGATIONS.
+The Mac login host (tools/webkit_host.swift) is first-party MIT code. It links
+only to macOS-provided AppKit/WebKit/Swift/system libraries, which are not bundled.
+It uses an in-memory nonpersistent website data store. No Google Chrome,
+Chrome for Testing, Firefox, separate WebKit distribution or FFmpeg browser
+runtime is shipped. Generated UI test tools stay outside the Git candidate.

@@ -19,6 +19,8 @@ Code  Meaning
 
 from __future__ import annotations
 
+from .platforms import launcher_name
+
 BOOTH_LAYOUT_CHANGED = "BOOTH_LAYOUT_CHANGED"
 BOOTH_AUTH_REQUIRED = "BOOTH_AUTH_REQUIRED"
 BOOTH_NETWORK_ERROR = "BOOTH_NETWORK_ERROR"
@@ -32,7 +34,7 @@ EXIT_ERROR = 1
 EXIT_USAGE = 2
 EXIT_LAYOUT_CHANGED = 3
 
-_RELOGIN_HINT = "BOOTH login required. Run `start.bat auth login`."
+_RELOGIN_HINT = f"BOOTH login required. Run `{launcher_name()} auth login`."
 
 
 class BoothError(Exception):
@@ -93,7 +95,7 @@ class BoothDatabaseError(BoothError):
             "Use --db <path> for another database. To rebuild, back up the damaged file, "
             "then run `start.bat init-db` and `start.bat purchases list --update-db`."
         )
-        super().__init__(f"{base} {detail}".strip())
+        super().__init__(f"{base.replace('start.bat', launcher_name())} {detail}".strip())
 
 
 class BoothSchemaTooNewError(BoothError):
@@ -135,6 +137,7 @@ class BoothPrerequisiteError(BoothError):
     CODE = BOOTH_PREREQUISITE_MISSING
 
     def __init__(self, component: str, remedy: str) -> None:
+        remedy = remedy.replace("start.bat", launcher_name())
         super().__init__(f"Required component: {component}. {remedy}")
 
 

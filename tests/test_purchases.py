@@ -185,7 +185,9 @@ def test_missing_beautifulsoup_reports_a_prerequisite(monkeypatch):
         parse_library_html(LIBRARY_HTML)
     message = str(exc.value)
     assert "beautifulsoup4" in message
-    assert "start.bat --repair" in message
+    from core.platforms import launcher_name
+
+    assert f"{launcher_name()} --repair" in message
     assert "auth login" not in message
 
 

@@ -16,6 +16,9 @@
 *.cfg  text eol=lf
 *.ini  text eol=lf
 *.cs   text eol=lf
+*.swift text eol=lf
+*.sh   text eol=lf
+*.command text eol=lf
 
 # Binary assets must never be touched.
 *.zip  binary

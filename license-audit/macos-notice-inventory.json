@@ -1,0 +1,1093 @@
+{
+  "target": "macos-arm64",
+  "release_status": "NOTICE RETAINED",
+  "reason": "Notice retention does not verify redistribution permission or native source obligations",
+  "notices": [
+    {
+      "component": "CPython-3.12.15",
+      "source_path": "python/lib/python3.12/LICENSE.txt",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/CPython-3.12.15/3b2f81fe21d1-LICENSE.txt",
+      "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf"
+    },
+    {
+      "component": "CPython-3.12.15",
+      "source_path": "python/lib/python3.12/site-packages/pip-26.2.1.dist-info/licenses/LICENSE.txt",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/CPython-3.12.15/634300a669d4-LICENSE.txt",
+      "sha256": "634300a669d49aeae65b12c6c48c924c51a4cdf3d1ff086dc3456dc8bcaa2104"
+    },
+    {
+      "component": "CPython-3.12.15",
+      "source_path": "python/lib/python3.12/site-packages/pip-26.2.1.dist-info/licenses/src/pip/_vendor/cachecontrol/LICENSE.txt",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/CPython-3.12.15/86eeee87be2a-LICENSE.txt",
+      "sha256": "86eeee87be2a43f3ff1f56496f451f69243926f025fedbb033666c304c4c161b"
+    },
+    {
+      "component": "CPython-3.12.15",
+      "source_path": "python/lib/python3.12/site-packages/pip-26.2.1.dist-info/licenses/src/pip/_vendor/certifi/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/CPython-3.12.15/e93716da6b9c-LICENSE",
+      "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7"
+    },
+    {
+      "component": "CPython-3.12.15",
+      "source_path": "python/lib/python3.12/site-packages/pip-26.2.1.dist-info/licenses/src/pip/_vendor/distlib/LICENSE.txt",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/CPython-3.12.15/808e10c8a6ab-LICENSE.txt",
+      "sha256": "808e10c8a6ab8deb149ff9b3fb19f447a808094606d712a9ca57fead3552599d"
+    },
+    {
+      "component": "CPython-3.12.15",
+      "source_path": "python/lib/python3.12/site-packages/pip-26.2.1.dist-info/licenses/src/pip/_vendor/distro/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/CPython-3.12.15/cb5e8e7e5f4a-LICENSE",
+      "sha256": "cb5e8e7e5f4a3988e1063c142c60dc2df75605f4c46515e776e3aca6df976e14"
+    },
+    {
+      "component": "CPython-3.12.15",
+      "source_path": "python/lib/python3.12/site-packages/pip-26.2.1.dist-info/licenses/src/pip/_vendor/idna/LICENSE.md",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/CPython-3.12.15/1a9a4f0e3d47-LICENSE.md",
+      "sha256": "1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04"
+    },
+    {
+      "component": "CPython-3.12.15",
+      "source_path": "python/lib/python3.12/site-packages/pip-26.2.1.dist-info/licenses/src/pip/_vendor/msgpack/COPYING",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/CPython-3.12.15/492dedba85da-COPYING",
+      "sha256": "492dedba85da5872f78e6091bcd1fea474d660d35acb4dee964b8aab3f007427"
+    },
+    {
+      "component": "CPython-3.12.15",
+      "source_path": "python/lib/python3.12/site-packages/pip-26.2.1.dist-info/licenses/src/pip/_vendor/packaging/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/CPython-3.12.15/cad1ef5bd340-LICENSE",
+      "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48"
+    },
+    {
+      "component": "CPython-3.12.15",
+      "source_path": "python/lib/python3.12/site-packages/pip-26.2.1.dist-info/licenses/src/pip/_vendor/packaging/LICENSE.APACHE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/CPython-3.12.15/0d542e0c8804-LICENSE.APACHE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "component": "CPython-3.12.15",
+      "source_path": "python/lib/python3.12/site-packages/pip-26.2.1.dist-info/licenses/src/pip/_vendor/packaging/LICENSE.BSD",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/CPython-3.12.15/b70e7e9b742f-LICENSE.BSD",
+      "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5"
+    },
+    {
+      "component": "CPython-3.12.15",
+      "source_path": "python/lib/python3.12/site-packages/pip-26.2.1.dist-info/licenses/src/pip/_vendor/pkg_resources/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/CPython-3.12.15/86da0f01aeae-LICENSE",
+      "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741"
+    },
+    {
+      "component": "CPython-3.12.15",
+      "source_path": "python/lib/python3.12/site-packages/pip-26.2.1.dist-info/licenses/src/pip/_vendor/platformdirs/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/CPython-3.12.15/29e0fd62e929-LICENSE",
+      "sha256": "29e0fd62e929850e86eb28c3fdccf0cefdf4fa94879011cffb3d0d4bed6d4db6"
+    },
+    {
+      "component": "CPython-3.12.15",
+      "source_path": "python/lib/python3.12/site-packages/pip-26.2.1.dist-info/licenses/src/pip/_vendor/pygments/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/CPython-3.12.15/a9d66f1d526d-LICENSE",
+      "sha256": "a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17"
+    },
+    {
+      "component": "CPython-3.12.15",
+      "source_path": "python/lib/python3.12/site-packages/pip-26.2.1.dist-info/licenses/src/pip/_vendor/pyproject_hooks/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/CPython-3.12.15/1b22b049b526-LICENSE",
+      "sha256": "1b22b049b5267d6dfc23a67bf4a84d8ec04b9fdfb1a51d360e42b4342c8b4154"
+    },
+    {
+      "component": "CPython-3.12.15",
+      "source_path": "python/lib/python3.12/site-packages/pip-26.2.1.dist-info/licenses/src/pip/_vendor/requests/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/CPython-3.12.15/09e8a9bcec80-LICENSE",
+      "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b"
+    },
+    {
+      "component": "CPython-3.12.15",
+      "source_path": "python/lib/python3.12/site-packages/pip-26.2.1.dist-info/licenses/src/pip/_vendor/resolvelib/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/CPython-3.12.15/f388fd38cad1-LICENSE",
+      "sha256": "f388fd38cad13112c1dc0f669bbe80e7f84541edbafb72f3030d2ca7642c3c9d"
+    },
+    {
+      "component": "CPython-3.12.15",
+      "source_path": "python/lib/python3.12/site-packages/pip-26.2.1.dist-info/licenses/src/pip/_vendor/rich/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/CPython-3.12.15/deed7c17a431-LICENSE",
+      "sha256": "deed7c17a4318158190a3ea239cc879a5a50271cebb98ae7025f48fbe58dca15"
+    },
+    {
+      "component": "CPython-3.12.15",
+      "source_path": "python/lib/python3.12/site-packages/pip-26.2.1.dist-info/licenses/src/pip/_vendor/tomli/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/CPython-3.12.15/b80816b0d530-LICENSE",
+      "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe"
+    },
+    {
+      "component": "CPython-3.12.15",
+      "source_path": "python/lib/python3.12/site-packages/pip-26.2.1.dist-info/licenses/src/pip/_vendor/tomli_w/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/CPython-3.12.15/b80816b0d530-LICENSE",
+      "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe"
+    },
+    {
+      "component": "CPython-3.12.15",
+      "source_path": "python/lib/python3.12/site-packages/pip-26.2.1.dist-info/licenses/src/pip/_vendor/truststore/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/CPython-3.12.15/33be7b7e8fa4-LICENSE",
+      "sha256": "33be7b7e8fa4fd19b1760e1a8ed8a668bdab852c91b692dd41424bcb725a9fca"
+    },
+    {
+      "component": "CPython-3.12.15",
+      "source_path": "python/lib/python3.12/site-packages/pip-26.2.1.dist-info/licenses/src/pip/_vendor/urllib3/LICENSE.txt",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/CPython-3.12.15/130e3a64d5fd-LICENSE.txt",
+      "sha256": "130e3a64d5fdd5d096a752694634a7d9df284469de86e5732100268041e3d686"
+    },
+    {
+      "component": "CPython-3.12.15",
+      "source_path": "python/lib/python3.12/site-packages/pip/_vendor/cachecontrol/LICENSE.txt",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/CPython-3.12.15/86eeee87be2a-LICENSE.txt",
+      "sha256": "86eeee87be2a43f3ff1f56496f451f69243926f025fedbb033666c304c4c161b"
+    },
+    {
+      "component": "CPython-3.12.15",
+      "source_path": "python/lib/python3.12/site-packages/pip/_vendor/certifi/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/CPython-3.12.15/e93716da6b9c-LICENSE",
+      "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7"
+    },
+    {
+      "component": "CPython-3.12.15",
+      "source_path": "python/lib/python3.12/site-packages/pip/_vendor/distlib/LICENSE.txt",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/CPython-3.12.15/808e10c8a6ab-LICENSE.txt",
+      "sha256": "808e10c8a6ab8deb149ff9b3fb19f447a808094606d712a9ca57fead3552599d"
+    },
+    {
+      "component": "CPython-3.12.15",
+      "source_path": "python/lib/python3.12/site-packages/pip/_vendor/distro/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/CPython-3.12.15/cb5e8e7e5f4a-LICENSE",
+      "sha256": "cb5e8e7e5f4a3988e1063c142c60dc2df75605f4c46515e776e3aca6df976e14"
+    },
+    {
+      "component": "CPython-3.12.15",
+      "source_path": "python/lib/python3.12/site-packages/pip/_vendor/idna/LICENSE.md",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/CPython-3.12.15/1a9a4f0e3d47-LICENSE.md",
+      "sha256": "1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04"
+    },
+    {
+      "component": "CPython-3.12.15",
+      "source_path": "python/lib/python3.12/site-packages/pip/_vendor/msgpack/COPYING",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/CPython-3.12.15/492dedba85da-COPYING",
+      "sha256": "492dedba85da5872f78e6091bcd1fea474d660d35acb4dee964b8aab3f007427"
+    },
+    {
+      "component": "CPython-3.12.15",
+      "source_path": "python/lib/python3.12/site-packages/pip/_vendor/packaging/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/CPython-3.12.15/cad1ef5bd340-LICENSE",
+      "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48"
+    },
+    {
+      "component": "CPython-3.12.15",
+      "source_path": "python/lib/python3.12/site-packages/pip/_vendor/packaging/LICENSE.APACHE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/CPython-3.12.15/0d542e0c8804-LICENSE.APACHE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "component": "CPython-3.12.15",
+      "source_path": "python/lib/python3.12/site-packages/pip/_vendor/packaging/LICENSE.BSD",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/CPython-3.12.15/b70e7e9b742f-LICENSE.BSD",
+      "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5"
+    },
+    {
+      "component": "CPython-3.12.15",
+      "source_path": "python/lib/python3.12/site-packages/pip/_vendor/pkg_resources/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/CPython-3.12.15/86da0f01aeae-LICENSE",
+      "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741"
+    },
+    {
+      "component": "CPython-3.12.15",
+      "source_path": "python/lib/python3.12/site-packages/pip/_vendor/platformdirs/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/CPython-3.12.15/29e0fd62e929-LICENSE",
+      "sha256": "29e0fd62e929850e86eb28c3fdccf0cefdf4fa94879011cffb3d0d4bed6d4db6"
+    },
+    {
+      "component": "CPython-3.12.15",
+      "source_path": "python/lib/python3.12/site-packages/pip/_vendor/pygments/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/CPython-3.12.15/a9d66f1d526d-LICENSE",
+      "sha256": "a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17"
+    },
+    {
+      "component": "CPython-3.12.15",
+      "source_path": "python/lib/python3.12/site-packages/pip/_vendor/pyproject_hooks/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/CPython-3.12.15/1b22b049b526-LICENSE",
+      "sha256": "1b22b049b5267d6dfc23a67bf4a84d8ec04b9fdfb1a51d360e42b4342c8b4154"
+    },
+    {
+      "component": "CPython-3.12.15",
+      "source_path": "python/lib/python3.12/site-packages/pip/_vendor/requests/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/CPython-3.12.15/09e8a9bcec80-LICENSE",
+      "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b"
+    },
+    {
+      "component": "CPython-3.12.15",
+      "source_path": "python/lib/python3.12/site-packages/pip/_vendor/resolvelib/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/CPython-3.12.15/f388fd38cad1-LICENSE",
+      "sha256": "f388fd38cad13112c1dc0f669bbe80e7f84541edbafb72f3030d2ca7642c3c9d"
+    },
+    {
+      "component": "CPython-3.12.15",
+      "source_path": "python/lib/python3.12/site-packages/pip/_vendor/rich/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/CPython-3.12.15/deed7c17a431-LICENSE",
+      "sha256": "deed7c17a4318158190a3ea239cc879a5a50271cebb98ae7025f48fbe58dca15"
+    },
+    {
+      "component": "CPython-3.12.15",
+      "source_path": "python/lib/python3.12/site-packages/pip/_vendor/tomli/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/CPython-3.12.15/b80816b0d530-LICENSE",
+      "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe"
+    },
+    {
+      "component": "CPython-3.12.15",
+      "source_path": "python/lib/python3.12/site-packages/pip/_vendor/tomli_w/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/CPython-3.12.15/b80816b0d530-LICENSE",
+      "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe"
+    },
+    {
+      "component": "CPython-3.12.15",
+      "source_path": "python/lib/python3.12/site-packages/pip/_vendor/truststore/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/CPython-3.12.15/33be7b7e8fa4-LICENSE",
+      "sha256": "33be7b7e8fa4fd19b1760e1a8ed8a668bdab852c91b692dd41424bcb725a9fca"
+    },
+    {
+      "component": "CPython-3.12.15",
+      "source_path": "python/lib/python3.12/site-packages/pip/_vendor/urllib3/LICENSE.txt",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/CPython-3.12.15/130e3a64d5fd-LICENSE.txt",
+      "sha256": "130e3a64d5fdd5d096a752694634a7d9df284469de86e5732100268041e3d686"
+    },
+    {
+      "component": "annotated_doc-0.0.5",
+      "source_path": "annotated_doc-0.0.5.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/annotated_doc-0.0.5/fff170779a6a-LICENSE",
+      "sha256": "fff170779a6acbf65abdb405c087f1cee1786691e4a96a4034517e4a504a0cdf"
+    },
+    {
+      "component": "annotated_types-0.8.0",
+      "source_path": "annotated_types-0.8.0.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/annotated_types-0.8.0/fe1049884b1a-LICENSE",
+      "sha256": "fe1049884b1a0d9342901e88e07f32925d24b3121d9972b6a6805fb9824b095d"
+    },
+    {
+      "component": "anyio-4.15.1",
+      "source_path": "anyio-4.15.1.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/anyio-4.15.1/5361ac9dc58f-LICENSE",
+      "sha256": "5361ac9dc58f2ef5fd2e9b09c68297c17f04950909bbc8023bdb82eacf22c2b0"
+    },
+    {
+      "component": "ast_serialize-0.11.2",
+      "source_path": "ast_serialize-0.11.2.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/ast_serialize-0.11.2/db90b8fd0ae1-LICENSE",
+      "sha256": "db90b8fd0ae1748117ab467680a5193bfd057a3119846cb53ee3b64f16577b3b"
+    },
+    {
+      "component": "ast_serialize-0.11.2",
+      "source_path": "ast_serialize-0.11.2.dist-info/licenses/crates/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/ast_serialize-0.11.2/2597d854122b-LICENSE",
+      "sha256": "2597d854122b77ddc71971564ca2350a37608575ce324adc5650a2b2051c8f18"
+    },
+    {
+      "component": "beautifulsoup4-4.15.0",
+      "source_path": "beautifulsoup4-4.15.0.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/beautifulsoup4-4.15.0/55b4d8d4b1e5-LICENSE",
+      "sha256": "55b4d8d4b1e5bc86d10efac91b74c87bcb77526b0f5b9edaf8b9cd2adc7397b2"
+    },
+    {
+      "component": "boolean_py-5.0",
+      "source_path": "boolean_py-5.0.dist-info/licenses/LICENSE.txt",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/boolean_py-5.0/5ea0cdf8cfc8-LICENSE.txt",
+      "sha256": "5ea0cdf8cfc824b446cccf597ff6518c3607a659e9804bc75f1261f9c6ac4ada"
+    },
+    {
+      "component": "build-1.6.1",
+      "source_path": "build-1.6.1.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/build-1.6.1/aaf9a29ca590-LICENSE",
+      "sha256": "aaf9a29ca5907971ccf07de025375db34539a8d5eeebce20b46099805722106f"
+    },
+    {
+      "component": "cachecontrol-0.14.4",
+      "source_path": "cachecontrol-0.14.4.dist-info/licenses/LICENSE.txt",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/cachecontrol-0.14.4/86eeee87be2a-LICENSE.txt",
+      "sha256": "86eeee87be2a43f3ff1f56496f451f69243926f025fedbb033666c304c4c161b"
+    },
+    {
+      "component": "certifi-2026.7.22",
+      "source_path": "certifi-2026.7.22.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/certifi-2026.7.22/e93716da6b9c-LICENSE",
+      "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7"
+    },
+    {
+      "component": "charset_normalizer-3.5.2",
+      "source_path": "charset_normalizer-3.5.2.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/charset_normalizer-3.5.2/6d0d41bfe170-LICENSE",
+      "sha256": "6d0d41bfe170ac6c7dc248c9a63e254d0fb45a60d50a8257d0af92c6e249b887"
+    },
+    {
+      "component": "click-8.5.0",
+      "source_path": "click-8.5.0.dist-info/licenses/LICENSE.txt",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/click-8.5.0/9a8ad106a394-LICENSE.txt",
+      "sha256": "9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d"
+    },
+    {
+      "component": "colorama-0.4.6",
+      "source_path": "colorama-0.4.6.dist-info/licenses/LICENSE.txt",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/colorama-0.4.6/cac35c02686e-LICENSE.txt",
+      "sha256": "cac35c02686e5d04a5a7140bfb3b36e73aed496656e891102e428886d7930318"
+    },
+    {
+      "component": "cyclonedx_python_lib-11.12.0",
+      "source_path": "cyclonedx/factory/license.py",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/cyclonedx_python_lib-11.12.0/021381eed6e3-license.py",
+      "sha256": "021381eed6e355e7d325cb3e22dfd5ab1e3d244839467fada27ab3b3f6f7beb6"
+    },
+    {
+      "component": "cyclonedx_python_lib-11.12.0",
+      "source_path": "cyclonedx/model/license.py",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/cyclonedx_python_lib-11.12.0/245ab06d6246-license.py",
+      "sha256": "245ab06d6246854878c3a00d7183353c53634568d01af27791ffa9f8b122f34a"
+    },
+    {
+      "component": "cyclonedx_python_lib-11.12.0",
+      "source_path": "cyclonedx_python_lib-11.12.0.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/cyclonedx_python_lib-11.12.0/c71d239df917-LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "component": "cyclonedx_python_lib-11.12.0",
+      "source_path": "cyclonedx_python_lib-11.12.0.dist-info/licenses/NOTICE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/cyclonedx_python_lib-11.12.0/1c3bd67b9688-NOTICE",
+      "sha256": "1c3bd67b96888a4ca25f3a94683d929b3f66d7e4cdfe6c04d24f16501a9375c3"
+    },
+    {
+      "component": "defusedxml-0.7.1",
+      "source_path": "defusedxml-0.7.1.dist-info/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/defusedxml-0.7.1/b80ce9da8c42-LICENSE",
+      "sha256": "b80ce9da8c42a1f91079627fbbe2bf27210ae108a0ffe5f077d5b08e076c24c8"
+    },
+    {
+      "component": "fastapi-0.141.1",
+      "source_path": "fastapi-0.141.1.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/fastapi-0.141.1/4ec89ffc8148-LICENSE",
+      "sha256": "4ec89ffc81485b97fec584b2d4a961032eeffe834453894fd9c1274906cc744e"
+    },
+    {
+      "component": "filelock-4.0.7",
+      "source_path": "filelock-4.0.7.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/filelock-4.0.7/608c89d5060a-LICENSE",
+      "sha256": "608c89d5060ae9921adccf3236695bc654a9946e12323ef6c021dfa04e294d48"
+    },
+    {
+      "component": "greenlet-3.5.6",
+      "source_path": "greenlet-3.5.6.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/greenlet-3.5.6/769831d6e5df-LICENSE",
+      "sha256": "769831d6e5dfaf2c20802faccff1fafb4c2025dd8f6253dfa47fcad59d4d0979"
+    },
+    {
+      "component": "greenlet-3.5.6",
+      "source_path": "greenlet-3.5.6.dist-info/licenses/LICENSE.PSF",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/greenlet-3.5.6/e5ff3c23c110-LICENSE.PSF",
+      "sha256": "e5ff3c23c110e494cd7d736c10fd96d462457bafeca310840db6527298c7d46b"
+    },
+    {
+      "component": "h11-0.16.0",
+      "source_path": "h11-0.16.0.dist-info/licenses/LICENSE.txt",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/h11-0.16.0/37db5bb85926-LICENSE.txt",
+      "sha256": "37db5bb85926db28a427a25867f10b1232003aea1be69ccb851138adb8e6f361"
+    },
+    {
+      "component": "httpcore-1.0.9",
+      "source_path": "httpcore-1.0.9.dist-info/licenses/LICENSE.md",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/httpcore-1.0.9/fdcb59154c74-LICENSE.md",
+      "sha256": "fdcb59154c74cbaba16a11242f7740bea9f23d6feb5547917d8c5f94a80392a5"
+    },
+    {
+      "component": "httpx-0.28.1",
+      "source_path": "httpx-0.28.1.dist-info/licenses/LICENSE.md",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/httpx-0.28.1/4ec59d544f12-LICENSE.md",
+      "sha256": "4ec59d544f12b5f539a3a716fd321ac58ccd8030b465221f2c880200cdf28d8d"
+    },
+    {
+      "component": "idna-3.20",
+      "source_path": "idna-3.20.dist-info/licenses/LICENSE.md",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/idna-3.20/1a9a4f0e3d47-LICENSE.md",
+      "sha256": "1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04"
+    },
+    {
+      "component": "iniconfig-2.3.0",
+      "source_path": "iniconfig-2.3.0.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/iniconfig-2.3.0/3409fa91f7ac-LICENSE",
+      "sha256": "3409fa91f7ace557894632676656e32264fe5ef7581535725dc9a23774551bd4"
+    },
+    {
+      "component": "librt-0.16.0",
+      "source_path": "librt-0.16.0.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/librt-0.16.0/88f9e379c684-LICENSE",
+      "sha256": "88f9e379c684580053c58e75e296ca2eb243b6edcc6e5357f247310e96eeef8a"
+    },
+    {
+      "component": "license_expression-30.4.4",
+      "source_path": "license_expression/data/cc-by-4.0.LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/license_expression-30.4.4/2a82ac9bbc3e-cc-by-4.0.LICENSE",
+      "sha256": "2a82ac9bbc3e3ee066908381e8d373896db5a6025d083fbd59692fe9ccfb9111"
+    },
+    {
+      "component": "license_expression-30.4.4",
+      "source_path": "license_expression/data/license_key_index.json.ABOUT",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/license_expression-30.4.4/fb5ce1f2dbd2-license_key_index.json.ABOUT",
+      "sha256": "fb5ce1f2dbd2bedc01fad9507be71ca19ec37b4d6f8dfb9516fbfefee410d85d"
+    },
+    {
+      "component": "license_expression-30.4.4",
+      "source_path": "license_expression/data/scancode-licensedb-index.json",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/license_expression-30.4.4/d7594273825a-scancode-licensedb-index.json",
+      "sha256": "d7594273825a68b2d5676d76d336c560210072f07a77edb193ad608694067596"
+    },
+    {
+      "component": "license_expression-30.4.4",
+      "source_path": "license_expression-30.4.4.dist-info/licenses/NOTICE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/license_expression-30.4.4/ef97db07e32f-NOTICE",
+      "sha256": "ef97db07e32f6e5d34363461acf5acc7d72db924533bce3d9f3b87046313363c"
+    },
+    {
+      "component": "license_expression-30.4.4",
+      "source_path": "license_expression-30.4.4.dist-info/licenses/apache-2.0.LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/license_expression-30.4.4/c71d239df917-apache-2.0.LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "component": "markdown_it_py-4.2.0",
+      "source_path": "markdown_it_py-4.2.0.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/markdown_it_py-4.2.0/4a2260d6e2cd-LICENSE",
+      "sha256": "4a2260d6e2cd0f5a151a1e86dbfe7d3ed552b1e2beabf9941c1ba5c49cbce484"
+    },
+    {
+      "component": "markdown_it_py-4.2.0",
+      "source_path": "markdown_it_py-4.2.0.dist-info/licenses/LICENSE.markdown-it",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/markdown_it_py-4.2.0/792c48c5a849-LICENSE.markdown-it",
+      "sha256": "792c48c5a849a15fdf9e37e8bcf9e6d1dd13b32b46c642a748a0a46a9919d473"
+    },
+    {
+      "component": "mdurl-0.1.2",
+      "source_path": "mdurl-0.1.2.dist-info/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/mdurl-0.1.2/7c605df6e286-LICENSE",
+      "sha256": "7c605df6e28667a9603118e98274f64a49ce3eed0d26fccce9534a345e0ef955"
+    },
+    {
+      "component": "msgpack-1.2.3",
+      "source_path": "msgpack-1.2.3.dist-info/licenses/COPYING",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/msgpack-1.2.3/492dedba85da-COPYING",
+      "sha256": "492dedba85da5872f78e6091bcd1fea474d660d35acb4dee964b8aab3f007427"
+    },
+    {
+      "component": "mypy-2.3.1",
+      "source_path": "mypy-2.3.1.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/mypy-2.3.1/fdf1cd17f50e-LICENSE",
+      "sha256": "fdf1cd17f50e1305ed8cfd37467312d27a984648dba622cef70573b5512e4e1b"
+    },
+    {
+      "component": "mypy-2.3.1",
+      "source_path": "mypy-2.3.1.dist-info/licenses/mypy/typeshed/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/mypy-2.3.1/295f8538c94a-LICENSE",
+      "sha256": "295f8538c94ae5c3043301cf7cff1c852dab6a786a8ddee471e061b40d5ecabe"
+    },
+    {
+      "component": "mypy-2.3.1",
+      "source_path": "mypy/typeshed/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/mypy-2.3.1/295f8538c94a-LICENSE",
+      "sha256": "295f8538c94ae5c3043301cf7cff1c852dab6a786a8ddee471e061b40d5ecabe"
+    },
+    {
+      "component": "mypy_extensions-1.1.0",
+      "source_path": "mypy_extensions-1.1.0.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/mypy_extensions-1.1.0/a50450da1d53-LICENSE",
+      "sha256": "a50450da1d53cd777b80ced77c58ff96abe0ccd879706bd142c3ec20e245f0b4"
+    },
+    {
+      "component": "opentelemetry_api-1.45.0",
+      "source_path": "opentelemetry_api-1.45.0.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/opentelemetry_api-1.45.0/c71d239df917-LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "component": "packaging-26.3",
+      "source_path": "packaging-26.3.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/packaging-26.3/cad1ef5bd340-LICENSE",
+      "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48"
+    },
+    {
+      "component": "packaging-26.3",
+      "source_path": "packaging-26.3.dist-info/licenses/LICENSE.APACHE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/packaging-26.3/0d542e0c8804-LICENSE.APACHE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "component": "packaging-26.3",
+      "source_path": "packaging-26.3.dist-info/licenses/LICENSE.BSD",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/packaging-26.3/b70e7e9b742f-LICENSE.BSD",
+      "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5"
+    },
+    {
+      "component": "pathspec-1.1.1",
+      "source_path": "pathspec-1.1.1.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pathspec-1.1.1/fab3dd6bdab2-LICENSE",
+      "sha256": "fab3dd6bdab226f1c08630b1dd917e11fcb4ec5e1e020e2c16f83a0a13863e85"
+    },
+    {
+      "component": "pip-26.2.1",
+      "source_path": "pip/_vendor/cachecontrol/LICENSE.txt",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pip-26.2.1/86eeee87be2a-LICENSE.txt",
+      "sha256": "86eeee87be2a43f3ff1f56496f451f69243926f025fedbb033666c304c4c161b"
+    },
+    {
+      "component": "pip-26.2.1",
+      "source_path": "pip/_vendor/certifi/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pip-26.2.1/e93716da6b9c-LICENSE",
+      "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7"
+    },
+    {
+      "component": "pip-26.2.1",
+      "source_path": "pip/_vendor/distlib/LICENSE.txt",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pip-26.2.1/808e10c8a6ab-LICENSE.txt",
+      "sha256": "808e10c8a6ab8deb149ff9b3fb19f447a808094606d712a9ca57fead3552599d"
+    },
+    {
+      "component": "pip-26.2.1",
+      "source_path": "pip/_vendor/distro/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pip-26.2.1/cb5e8e7e5f4a-LICENSE",
+      "sha256": "cb5e8e7e5f4a3988e1063c142c60dc2df75605f4c46515e776e3aca6df976e14"
+    },
+    {
+      "component": "pip-26.2.1",
+      "source_path": "pip/_vendor/idna/LICENSE.md",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pip-26.2.1/1a9a4f0e3d47-LICENSE.md",
+      "sha256": "1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04"
+    },
+    {
+      "component": "pip-26.2.1",
+      "source_path": "pip/_vendor/msgpack/COPYING",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pip-26.2.1/492dedba85da-COPYING",
+      "sha256": "492dedba85da5872f78e6091bcd1fea474d660d35acb4dee964b8aab3f007427"
+    },
+    {
+      "component": "pip-26.2.1",
+      "source_path": "pip/_vendor/packaging/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pip-26.2.1/cad1ef5bd340-LICENSE",
+      "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48"
+    },
+    {
+      "component": "pip-26.2.1",
+      "source_path": "pip/_vendor/packaging/LICENSE.APACHE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pip-26.2.1/0d542e0c8804-LICENSE.APACHE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "component": "pip-26.2.1",
+      "source_path": "pip/_vendor/packaging/LICENSE.BSD",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pip-26.2.1/b70e7e9b742f-LICENSE.BSD",
+      "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5"
+    },
+    {
+      "component": "pip-26.2.1",
+      "source_path": "pip/_vendor/pkg_resources/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pip-26.2.1/86da0f01aeae-LICENSE",
+      "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741"
+    },
+    {
+      "component": "pip-26.2.1",
+      "source_path": "pip/_vendor/platformdirs/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pip-26.2.1/29e0fd62e929-LICENSE",
+      "sha256": "29e0fd62e929850e86eb28c3fdccf0cefdf4fa94879011cffb3d0d4bed6d4db6"
+    },
+    {
+      "component": "pip-26.2.1",
+      "source_path": "pip/_vendor/pygments/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pip-26.2.1/a9d66f1d526d-LICENSE",
+      "sha256": "a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17"
+    },
+    {
+      "component": "pip-26.2.1",
+      "source_path": "pip/_vendor/pyproject_hooks/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pip-26.2.1/1b22b049b526-LICENSE",
+      "sha256": "1b22b049b5267d6dfc23a67bf4a84d8ec04b9fdfb1a51d360e42b4342c8b4154"
+    },
+    {
+      "component": "pip-26.2.1",
+      "source_path": "pip/_vendor/requests/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pip-26.2.1/09e8a9bcec80-LICENSE",
+      "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b"
+    },
+    {
+      "component": "pip-26.2.1",
+      "source_path": "pip/_vendor/resolvelib/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pip-26.2.1/f388fd38cad1-LICENSE",
+      "sha256": "f388fd38cad13112c1dc0f669bbe80e7f84541edbafb72f3030d2ca7642c3c9d"
+    },
+    {
+      "component": "pip-26.2.1",
+      "source_path": "pip/_vendor/rich/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pip-26.2.1/deed7c17a431-LICENSE",
+      "sha256": "deed7c17a4318158190a3ea239cc879a5a50271cebb98ae7025f48fbe58dca15"
+    },
+    {
+      "component": "pip-26.2.1",
+      "source_path": "pip/_vendor/tomli/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pip-26.2.1/b80816b0d530-LICENSE",
+      "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe"
+    },
+    {
+      "component": "pip-26.2.1",
+      "source_path": "pip/_vendor/tomli_w/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pip-26.2.1/b80816b0d530-LICENSE",
+      "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe"
+    },
+    {
+      "component": "pip-26.2.1",
+      "source_path": "pip/_vendor/truststore/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pip-26.2.1/33be7b7e8fa4-LICENSE",
+      "sha256": "33be7b7e8fa4fd19b1760e1a8ed8a668bdab852c91b692dd41424bcb725a9fca"
+    },
+    {
+      "component": "pip-26.2.1",
+      "source_path": "pip/_vendor/urllib3/LICENSE.txt",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pip-26.2.1/130e3a64d5fd-LICENSE.txt",
+      "sha256": "130e3a64d5fdd5d096a752694634a7d9df284469de86e5732100268041e3d686"
+    },
+    {
+      "component": "pip-26.2.1",
+      "source_path": "pip-26.2.1.dist-info/licenses/LICENSE.txt",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pip-26.2.1/634300a669d4-LICENSE.txt",
+      "sha256": "634300a669d49aeae65b12c6c48c924c51a4cdf3d1ff086dc3456dc8bcaa2104"
+    },
+    {
+      "component": "pip-26.2.1",
+      "source_path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/cachecontrol/LICENSE.txt",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pip-26.2.1/86eeee87be2a-LICENSE.txt",
+      "sha256": "86eeee87be2a43f3ff1f56496f451f69243926f025fedbb033666c304c4c161b"
+    },
+    {
+      "component": "pip-26.2.1",
+      "source_path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/certifi/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pip-26.2.1/e93716da6b9c-LICENSE",
+      "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7"
+    },
+    {
+      "component": "pip-26.2.1",
+      "source_path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/distlib/LICENSE.txt",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pip-26.2.1/808e10c8a6ab-LICENSE.txt",
+      "sha256": "808e10c8a6ab8deb149ff9b3fb19f447a808094606d712a9ca57fead3552599d"
+    },
+    {
+      "component": "pip-26.2.1",
+      "source_path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/distro/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pip-26.2.1/cb5e8e7e5f4a-LICENSE",
+      "sha256": "cb5e8e7e5f4a3988e1063c142c60dc2df75605f4c46515e776e3aca6df976e14"
+    },
+    {
+      "component": "pip-26.2.1",
+      "source_path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/idna/LICENSE.md",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pip-26.2.1/1a9a4f0e3d47-LICENSE.md",
+      "sha256": "1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04"
+    },
+    {
+      "component": "pip-26.2.1",
+      "source_path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/msgpack/COPYING",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pip-26.2.1/492dedba85da-COPYING",
+      "sha256": "492dedba85da5872f78e6091bcd1fea474d660d35acb4dee964b8aab3f007427"
+    },
+    {
+      "component": "pip-26.2.1",
+      "source_path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/packaging/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pip-26.2.1/cad1ef5bd340-LICENSE",
+      "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48"
+    },
+    {
+      "component": "pip-26.2.1",
+      "source_path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/packaging/LICENSE.APACHE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pip-26.2.1/0d542e0c8804-LICENSE.APACHE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "component": "pip-26.2.1",
+      "source_path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/packaging/LICENSE.BSD",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pip-26.2.1/b70e7e9b742f-LICENSE.BSD",
+      "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5"
+    },
+    {
+      "component": "pip-26.2.1",
+      "source_path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/pkg_resources/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pip-26.2.1/86da0f01aeae-LICENSE",
+      "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741"
+    },
+    {
+      "component": "pip-26.2.1",
+      "source_path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/platformdirs/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pip-26.2.1/29e0fd62e929-LICENSE",
+      "sha256": "29e0fd62e929850e86eb28c3fdccf0cefdf4fa94879011cffb3d0d4bed6d4db6"
+    },
+    {
+      "component": "pip-26.2.1",
+      "source_path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/pygments/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pip-26.2.1/a9d66f1d526d-LICENSE",
+      "sha256": "a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17"
+    },
+    {
+      "component": "pip-26.2.1",
+      "source_path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/pyproject_hooks/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pip-26.2.1/1b22b049b526-LICENSE",
+      "sha256": "1b22b049b5267d6dfc23a67bf4a84d8ec04b9fdfb1a51d360e42b4342c8b4154"
+    },
+    {
+      "component": "pip-26.2.1",
+      "source_path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/requests/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pip-26.2.1/09e8a9bcec80-LICENSE",
+      "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b"
+    },
+    {
+      "component": "pip-26.2.1",
+      "source_path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/resolvelib/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pip-26.2.1/f388fd38cad1-LICENSE",
+      "sha256": "f388fd38cad13112c1dc0f669bbe80e7f84541edbafb72f3030d2ca7642c3c9d"
+    },
+    {
+      "component": "pip-26.2.1",
+      "source_path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/rich/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pip-26.2.1/deed7c17a431-LICENSE",
+      "sha256": "deed7c17a4318158190a3ea239cc879a5a50271cebb98ae7025f48fbe58dca15"
+    },
+    {
+      "component": "pip-26.2.1",
+      "source_path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/tomli/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pip-26.2.1/b80816b0d530-LICENSE",
+      "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe"
+    },
+    {
+      "component": "pip-26.2.1",
+      "source_path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/tomli_w/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pip-26.2.1/b80816b0d530-LICENSE",
+      "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe"
+    },
+    {
+      "component": "pip-26.2.1",
+      "source_path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/truststore/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pip-26.2.1/33be7b7e8fa4-LICENSE",
+      "sha256": "33be7b7e8fa4fd19b1760e1a8ed8a668bdab852c91b692dd41424bcb725a9fca"
+    },
+    {
+      "component": "pip-26.2.1",
+      "source_path": "pip-26.2.1.dist-info/licenses/src/pip/_vendor/urllib3/LICENSE.txt",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pip-26.2.1/130e3a64d5fd-LICENSE.txt",
+      "sha256": "130e3a64d5fdd5d096a752694634a7d9df284469de86e5732100268041e3d686"
+    },
+    {
+      "component": "pip_api-0.0.35",
+      "source_path": "pip_api-0.0.35.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pip_api-0.0.35/14ed54990120-LICENSE",
+      "sha256": "14ed54990120efea26042269885df36e1b53db858bf04b40c8cfc8c5e12f6fb1"
+    },
+    {
+      "component": "pip_audit-2.10.1",
+      "source_path": "pip_audit-2.10.1.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pip_audit-2.10.1/0d542e0c8804-LICENSE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "component": "pip_requirements_parser-32.0.1",
+      "source_path": "pip_requirements_parser-32.0.1.dist-info/mit.LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pip_requirements_parser-32.0.1/18081c2c8277-mit.LICENSE",
+      "sha256": "18081c2c82771ca09d99d08cdac405924309e09fd19b16f1eea59cbc6ab809ed"
+    },
+    {
+      "component": "platformdirs-4.12.2",
+      "source_path": "platformdirs-4.12.2.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/platformdirs-4.12.2/29e0fd62e929-LICENSE",
+      "sha256": "29e0fd62e929850e86eb28c3fdccf0cefdf4fa94879011cffb3d0d4bed6d4db6"
+    },
+    {
+      "component": "playwright-1.63.0",
+      "source_path": "playwright/driver/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/playwright-1.63.0/5888dbb9a1d2-LICENSE",
+      "sha256": "5888dbb9a1d2b18f2c3e6c5f6af1b39de658372b402a0577b002777f14c62ace"
+    },
+    {
+      "component": "playwright-1.63.0",
+      "source_path": "playwright/driver/package/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/playwright-1.63.0/45873d00a0dd-LICENSE",
+      "sha256": "45873d00a0dd243596deb4aa23b2493b3d1f0671921bf2538ea431d7380220eb"
+    },
+    {
+      "component": "playwright-1.63.0",
+      "source_path": "playwright/driver/package/NOTICE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/playwright-1.63.0/6d602191187b-NOTICE",
+      "sha256": "6d602191187b35b9b01d2cffa01c8469c2c8d9de8a96f1bf868e0f264f51c81d"
+    },
+    {
+      "component": "playwright-1.63.0",
+      "source_path": "playwright/driver/package/ThirdPartyNotices.txt",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/playwright-1.63.0/a549d329bad8-ThirdPartyNotices.txt",
+      "sha256": "a549d329bad8806fe279f0ecae0fc0270dec7e7c2dc8ec10f90e394f7c32b144"
+    },
+    {
+      "component": "playwright-1.63.0",
+      "source_path": "playwright/driver/package/lib/serverRegistry.js.LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/playwright-1.63.0/3098a6efcbc1-serverRegistry.js.LICENSE",
+      "sha256": "3098a6efcbc11752cbdf6075fa65480f5470f78c8d981fab9c0796dc9a41cefe"
+    },
+    {
+      "component": "playwright-1.63.0",
+      "source_path": "playwright/driver/package/lib/utilsBundle.js.LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/playwright-1.63.0/2495f30be296-utilsBundle.js.LICENSE",
+      "sha256": "2495f30be29620d54b58339821eda0ebabdfb6ee9b09455f7285a06fd46fb9f3"
+    },
+    {
+      "component": "playwright-1.63.0",
+      "source_path": "playwright/driver/package/lib/webp_codec.LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/playwright-1.63.0/995c7ee35ace-webp_codec.LICENSE",
+      "sha256": "995c7ee35aceb7666829b7a501ca89c0864e12b493c1174b155774ab1e03d831"
+    },
+    {
+      "component": "playwright-1.63.0",
+      "source_path": "playwright-1.63.0.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/playwright-1.63.0/7fab1461b419-LICENSE",
+      "sha256": "7fab1461b41970ff376f1c9303a637076bfaaeb71cd12dd3a1c44aaf59a1a2b9"
+    },
+    {
+      "component": "pluggy-1.6.0",
+      "source_path": "pluggy-1.6.0.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pluggy-1.6.0/d6b65e6c213a-LICENSE",
+      "sha256": "d6b65e6c213a5d0b577911d34d6e5949b9f59d76c238c5071a2f3fc16cfb2606"
+    },
+    {
+      "component": "py_serializable-2.1.0",
+      "source_path": "py_serializable-2.1.0.dist-info/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/py_serializable-2.1.0/c71d239df917-LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "component": "pydantic-2.13.5",
+      "source_path": "pydantic-2.13.5.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pydantic-2.13.5/a9e186f3ca16-LICENSE",
+      "sha256": "a9e186f3ca16b5eef84318e7a701721351a00cb7b8ae3a4394b67b49e3529ef3"
+    },
+    {
+      "component": "pydantic_core-2.46.5",
+      "source_path": "pydantic_core-2.46.5.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pydantic_core-2.46.5/2afdd30d54b4-LICENSE",
+      "sha256": "2afdd30d54b4d62b6f488a6bcc1546e84ec5061f13f4209c03d012348783795a"
+    },
+    {
+      "component": "pyee-13.0.1",
+      "source_path": "pyee-13.0.1.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pyee-13.0.1/1ff556ca206b-LICENSE",
+      "sha256": "1ff556ca206b107f10e1c562ae454d3292e0296c3510eb90eb7f114caee32a66"
+    },
+    {
+      "component": "pygments-2.21.0",
+      "source_path": "pygments-2.21.0.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pygments-2.21.0/a9d66f1d526d-LICENSE",
+      "sha256": "a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17"
+    },
+    {
+      "component": "pyparsing-3.3.3",
+      "source_path": "pyparsing-3.3.3.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pyparsing-3.3.3/a5425f9dc14a-LICENSE",
+      "sha256": "a5425f9dc14ac74d4c5f0b679e941f2442e32cca7452a4418d5b1a49893ebe4e"
+    },
+    {
+      "component": "pyproject_hooks-1.3.3",
+      "source_path": "pyproject_hooks-1.3.3.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pyproject_hooks-1.3.3/1b22b049b526-LICENSE",
+      "sha256": "1b22b049b5267d6dfc23a67bf4a84d8ec04b9fdfb1a51d360e42b4342c8b4154"
+    },
+    {
+      "component": "pytest-9.1.1",
+      "source_path": "pytest-9.1.1.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/pytest-9.1.1/ca836a5f9ecc-LICENSE",
+      "sha256": "ca836a5f9ecca3b2f350230faa20a48fb8b145653b5568d784862df864706b9b"
+    },
+    {
+      "component": "requests-2.34.2",
+      "source_path": "requests-2.34.2.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/requests-2.34.2/09e8a9bcec80-LICENSE",
+      "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b"
+    },
+    {
+      "component": "requests-2.34.2",
+      "source_path": "requests-2.34.2.dist-info/licenses/NOTICE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/requests-2.34.2/f5110972deda-NOTICE",
+      "sha256": "f5110972dedad2b4e9d314518daf3b7d72d6e02e499acd802181de6f74571dcc"
+    },
+    {
+      "component": "rich-15.0.0",
+      "source_path": "rich-15.0.0.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/rich-15.0.0/deed7c17a431-LICENSE",
+      "sha256": "deed7c17a4318158190a3ea239cc879a5a50271cebb98ae7025f48fbe58dca15"
+    },
+    {
+      "component": "ruff-0.16.9",
+      "source_path": "ruff-0.16.9.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/ruff-0.16.9/2597d854122b-LICENSE",
+      "sha256": "2597d854122b77ddc71971564ca2350a37608575ce324adc5650a2b2051c8f18"
+    },
+    {
+      "component": "setuptools-84.0.0",
+      "source_path": "setuptools/_vendor/importlib_metadata-8.7.1.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/setuptools-84.0.0/458502e12d97-LICENSE",
+      "sha256": "458502e12d97bbf64438606a20044aa85eb05fb0a8a807bb35dbec253fd1fc04"
+    },
+    {
+      "component": "setuptools-84.0.0",
+      "source_path": "setuptools/_vendor/jaraco_context-6.1.0.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/setuptools-84.0.0/9755a1851966-LICENSE",
+      "sha256": "9755a18519666e5f0f4cae3daad3d7012bcae48a600b31237d75e9fe134e6683"
+    },
+    {
+      "component": "setuptools-84.0.0",
+      "source_path": "setuptools/_vendor/jaraco_functools-4.4.0.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/setuptools-84.0.0/5a57cb4db85e-LICENSE",
+      "sha256": "5a57cb4db85e2a2dd88c290628908add57e3451449e0a9a71fdfb38776fd759d"
+    },
+    {
+      "component": "setuptools-84.0.0",
+      "source_path": "setuptools/_vendor/more_itertools-10.8.0.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/setuptools-84.0.0/09f1c8c9e941-LICENSE",
+      "sha256": "09f1c8c9e941af3e584d59641ea9b87d83c0cb0fd007eb5ef391a7e2643c1a46"
+    },
+    {
+      "component": "setuptools-84.0.0",
+      "source_path": "setuptools/_vendor/packaging-26.0.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/setuptools-84.0.0/cad1ef5bd340-LICENSE",
+      "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48"
+    },
+    {
+      "component": "setuptools-84.0.0",
+      "source_path": "setuptools/_vendor/packaging-26.0.dist-info/licenses/LICENSE.APACHE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/setuptools-84.0.0/0d542e0c8804-LICENSE.APACHE",
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "component": "setuptools-84.0.0",
+      "source_path": "setuptools/_vendor/packaging-26.0.dist-info/licenses/LICENSE.BSD",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/setuptools-84.0.0/b70e7e9b742f-LICENSE.BSD",
+      "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5"
+    },
+    {
+      "component": "setuptools-84.0.0",
+      "source_path": "setuptools/_vendor/platformdirs-4.4.0.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/setuptools-84.0.0/29e0fd62e929-LICENSE",
+      "sha256": "29e0fd62e929850e86eb28c3fdccf0cefdf4fa94879011cffb3d0d4bed6d4db6"
+    },
+    {
+      "component": "setuptools-84.0.0",
+      "source_path": "setuptools/_vendor/tomli-2.4.0.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/setuptools-84.0.0/b80816b0d530-LICENSE",
+      "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe"
+    },
+    {
+      "component": "setuptools-84.0.0",
+      "source_path": "setuptools/_vendor/wheel-0.46.3.dist-info/licenses/LICENSE.txt",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/setuptools-84.0.0/30c236186791-LICENSE.txt",
+      "sha256": "30c23618679108f3e8ea1d2a658c7ca417bdfc891c98ef1a89fa4ff0c9828654"
+    },
+    {
+      "component": "setuptools-84.0.0",
+      "source_path": "setuptools/_vendor/zipp-3.23.0.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/setuptools-84.0.0/5a57cb4db85e-LICENSE",
+      "sha256": "5a57cb4db85e2a2dd88c290628908add57e3451449e0a9a71fdfb38776fd759d"
+    },
+    {
+      "component": "setuptools-84.0.0",
+      "source_path": "setuptools/config/NOTICE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/setuptools-84.0.0/2dddf0881829-NOTICE",
+      "sha256": "2dddf08818297a3b89d43d95ff659d8da85741108c9136dfa3a4d856c0623bd8"
+    },
+    {
+      "component": "setuptools-84.0.0",
+      "source_path": "setuptools/config/_validate_pyproject/NOTICE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/setuptools-84.0.0/09c9bcea95ca-NOTICE",
+      "sha256": "09c9bcea95ca086f8bc5bed174e40bc835b297d40fb5f86bbbb570fe0a5581a7"
+    },
+    {
+      "component": "setuptools-84.0.0",
+      "source_path": "setuptools-84.0.0.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/setuptools-84.0.0/86da0f01aeae-LICENSE",
+      "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741"
+    },
+    {
+      "component": "setuptools-84.0.0",
+      "source_path": "setuptools/_vendor/autocommand-2.2.2.dist-info/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/setuptools-84.0.0/ade78d04982d-LICENSE",
+      "sha256": "ade78d04982d69972d444a8e14a94f87a2334dd3855cc80348ea8e240aa0df2d"
+    },
+    {
+      "component": "setuptools-84.0.0",
+      "source_path": "setuptools/_vendor/backports.tarfile-1.2.0.dist-info/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/setuptools-84.0.0/86da0f01aeae-LICENSE",
+      "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741"
+    },
+    {
+      "component": "setuptools-84.0.0",
+      "source_path": "setuptools/_vendor/jaraco.text-4.0.0.dist-info/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/setuptools-84.0.0/86da0f01aeae-LICENSE",
+      "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741"
+    },
+    {
+      "component": "sortedcontainers-2.4.0",
+      "source_path": "sortedcontainers-2.4.0.dist-info/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/sortedcontainers-2.4.0/1db7cae7fce6-LICENSE",
+      "sha256": "1db7cae7fce6452e2e608e401a0f953e0133e4c2d75db69fb8ae851d2086f5b6"
+    },
+    {
+      "component": "soupsieve-2.10",
+      "source_path": "soupsieve-2.10.dist-info/licenses/LICENSE.md",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/soupsieve-2.10/76a0acdb98c3-LICENSE.md",
+      "sha256": "76a0acdb98c3a63681e20b6f096699ef8cad5fb35d56eef8387e0fa71d797a9a"
+    },
+    {
+      "component": "starlette-1.7.0",
+      "source_path": "starlette-1.7.0.dist-info/licenses/LICENSE.md",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/starlette-1.7.0/dcb95677a022-LICENSE.md",
+      "sha256": "dcb95677a02240243187e964f941847d19b17821cf99e5afae684fab328c19bf"
+    },
+    {
+      "component": "tomli-2.4.1",
+      "source_path": "tomli-2.4.1.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/tomli-2.4.1/b80816b0d530-LICENSE",
+      "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe"
+    },
+    {
+      "component": "tomli_w-1.2.0",
+      "source_path": "tomli_w-1.2.0.dist-info/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/tomli_w-1.2.0/b80816b0d530-LICENSE",
+      "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe"
+    },
+    {
+      "component": "typing_extensions-4.16.0",
+      "source_path": "typing_extensions-4.16.0.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/typing_extensions-4.16.0/3b2f81fe21d1-LICENSE",
+      "sha256": "3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf"
+    },
+    {
+      "component": "typing_inspection-0.4.4",
+      "source_path": "typing_inspection-0.4.4.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/typing_inspection-0.4.4/804b59b25f2c-LICENSE",
+      "sha256": "804b59b25f2c31bd278f9202a19ae49a3945aa2664387e2d0a128c7cacc61ec3"
+    },
+    {
+      "component": "urllib3-2.8.0",
+      "source_path": "urllib3-2.8.0.dist-info/licenses/LICENSE.txt",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/urllib3-2.8.0/130e3a64d5fd-LICENSE.txt",
+      "sha256": "130e3a64d5fdd5d096a752694634a7d9df284469de86e5732100268041e3d686"
+    },
+    {
+      "component": "uvicorn-0.54.0",
+      "source_path": "uvicorn-0.54.0.dist-info/licenses/LICENSE.md",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/uvicorn-0.54.0/efe1acf3e62f-LICENSE.md",
+      "sha256": "efe1acf3e62fb99c288b0ec73e5a773b7268ef4320fe757ea994214e4b63c371"
+    },
+    {
+      "component": "wheel-0.48.0",
+      "source_path": "wheel-0.48.0.dist-info/licenses/LICENSE.txt",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/wheel-0.48.0/30c236186791-LICENSE.txt",
+      "sha256": "30c23618679108f3e8ea1d2a658c7ca417bdfc891c98ef1a89fa4ff0c9828654"
+    }
+  ]
+}

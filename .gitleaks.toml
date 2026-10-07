@@ -31,7 +31,10 @@ regexes = ['''[^"\r\n]+":\s*"[0-9a-f]{64}"''']
 description = "License identifiers in the hash-verified upstream ScanCode index"
 targetRules = ["generic-api-key"]
 condition = "AND"
-paths = ['''(^|/)THIRD_PARTY_LICENSES/license-expression-30\.4\.4/d7594273825a-license_expression_data_scancode-licensedb-index\.json$''']
+paths = [
+    '''(^|/)THIRD_PARTY_LICENSES/license-expression-30\.4\.4/d7594273825a-license_expression_data_scancode-licensedb-index\.json$''',
+    '''(^|/)THIRD_PARTY_LICENSES/macos/license_expression-30\.4\.4/d7594273825a-scancode-licensedb-index\.json$''',
+]
 regexTarget = "match"
 regexes = ['''(?:spdx_)?license_key":\s*"[A-Za-z0-9.+_-]+"''']
 

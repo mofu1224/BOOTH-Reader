@@ -94,6 +94,8 @@ def check_browser_path() -> None:
     found = sorted((browsers_path(ROOT)).glob("chromium*")) if browsers_path(ROOT).is_dir() else []
     if (browsers_path(ROOT) / "webview2/msedgewebview2.exe").is_file():
         found = [browsers_path(ROOT) / "webview2"]
+    if (browsers_path(ROOT) / "native-webkit/booth-webkit-host").is_file():
+        found = [browsers_path(ROOT) / "native-webkit"]
     if found:
         record(
             "browser binary not stranded in user profile",
@@ -198,7 +200,14 @@ def check_machine_state() -> None:
     # already depends on OS-provided cmd/PowerShell/tar/whoami/icacls (see
     # PORTABLE.md); taskkill.exe ships with Windows and is not a third-party
     # dependency that breaks clone-to-run portability.
-    os_standard = {"taskkill"}
+    os_standard = {
+        "taskkill",
+        "/usr/bin/codesign",
+        "/usr/sbin/spctl",
+        "/usr/bin/otool",
+        "/usr/bin/swiftc",
+        "/bin/bash",
+    }
     # Git is used only for developer provenance and clone-candidate checks,
     # never by the app's runtime/bootstrap or this portability auditor.
     git_audit_tools = {
@@ -207,6 +216,7 @@ def check_machine_state() -> None:
         "check_release_hygiene.py",
         "release_provenance.py",
         "repository_files.py",
+        "verify_clone_macos.py",
     }
     paths = list(ROOT.glob("*.py")) + list(ROOT.glob("*.bat")) + list(ROOT.glob("*.cmd"))
     paths += list(ROOT.glob("*.ps1"))

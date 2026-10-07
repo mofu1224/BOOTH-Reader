@@ -62,7 +62,9 @@ def test_prerequisite_message_names_component_and_remedy():
     err = BoothPrerequisiteError("httpx が未導入です", "`start.bat --repair`")
     message = str(err)
     assert "httpx" in message
-    assert "start.bat --repair" in message
+    from core.platforms import launcher_name
+
+    assert f"{launcher_name()} --repair" in message
 
 
 def test_auth_error_still_keeps_its_relogin_hint():
@@ -82,7 +84,9 @@ def test_login_without_playwright_reports_a_prerequisite(monkeypatch, tmp_path):
     message = str(exc.value)
     # Names the component and the exact command.
     assert "Playwright" in message
-    assert "start.bat --repair" in message
+    from core.platforms import launcher_name
+
+    assert f"{launcher_name()} --repair" in message
     # The regression: it must NOT tell the user to log in again.
     assert "auth login" not in message
     assert "auth login" not in message
@@ -183,12 +187,17 @@ def _doctor(*argv: str) -> tuple[int, dict]:
 
 
 def test_doctor_reports_playwright_and_the_browser(tmp_path):
+    from pathlib import Path
+
+    from core.platforms import load_manifest
+
+    engine = load_manifest(Path(__file__).resolve().parent.parent)["browser"]["engine"]
     rc, payload = _doctor(
         "--db", str(init_db(tmp_path / "d.db")), "--library", str(tmp_path / "lib")
     )
     names = {c["name"]: c for c in payload["checks"]}
     assert "dep:playwright" in names
-    assert "browser:webview2" in names
+    assert f"browser:{engine}" in names
     assert rc == 0, [c for c in payload["checks"] if not c["ok"]]
 
 
@@ -199,15 +208,20 @@ def test_doctor_treats_a_missing_browser_as_fatal(tmp_path, monkeypatch):
     is exactly the case `doctor` exists to catch before they hit it.
     """
     monkeypatch.setattr(builtins, "__import__", _block("playwright"))
+    from pathlib import Path
+
+    from core.platforms import load_manifest
+
+    engine = load_manifest(Path(__file__).resolve().parent.parent)["browser"]["engine"]
     rc, payload = _doctor(
         "--db", str(init_db(tmp_path / "d.db")), "--library", str(tmp_path / "lib")
     )
     names = {c["name"]: c for c in payload["checks"]}
     assert names["dep:playwright"]["ok"] is False
     assert names["dep:playwright"]["fatal"] is True
-    assert names["browser:webview2"]["ok"] is False
-    assert names["browser:webview2"]["fatal"] is True
-    assert "playwright" in names["browser:webview2"]["detail"]
+    assert names[f"browser:{engine}"]["ok"] is False
+    assert names[f"browser:{engine}"]["fatal"] is True
+    assert "playwright" in names[f"browser:{engine}"]["detail"]
     assert payload["ok"] is False
     assert rc == 1
 

@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import hashlib
-import json
 import subprocess
 import sys
 import time
@@ -12,15 +11,18 @@ import zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-SPEC = json.loads((ROOT / "portable-manifest.json").read_text(encoding="utf-8"))["sqlite"]
-ARCHIVE = ROOT / ".cache/downloads" / SPEC["asset"]
+sys.path.insert(0, str(ROOT))
+from core.platforms import load_manifest, python_relative  # noqa: E402
+
+SPEC = load_manifest(ROOT)["sqlite"]
+ARCHIVE = ROOT / ".cache/downloads" / SPEC.get("asset", "sqlite-bundled")
 TARGET = ROOT / ".tools/python/DLLs/sqlite3.dll"
 
 
 def sqlite_version() -> str:
     process = subprocess.run(
         [
-            str(ROOT / ".tools/python/python.exe"),
+            str(ROOT / ".tools/python" / python_relative()),
             "-E",
             "-s",
             "-c",
@@ -35,6 +37,14 @@ def sqlite_version() -> str:
 
 
 def ensure_sqlite(*, offline: bool) -> None:
+    if SPEC.get("bundled"):
+        actual = sqlite_version()
+        minimum = tuple(int(part) for part in SPEC["minimumVersion"].split("."))
+        if actual == "unusable" or tuple(int(part) for part in actual.split(".")) < minimum:
+            raise RuntimeError(
+                f"Bundled SQLite {actual} is below required {SPEC['minimumVersion']}"
+            )
+        return
     if (
         TARGET.is_file()
         and hashlib.sha256(TARGET.read_bytes()).hexdigest() == SPEC["dll_sha256"]

@@ -8,11 +8,12 @@ from pathlib import Path
 
 import pytest
 
+from core.platforms import target_id
 from tools.vendor_payload import materialize
 
 
 def fixture_payload(root: Path, destination: str = ".cache/downloads/python.tar.gz") -> Path:
-    vendor = root / "vendor/windows-x64"
+    vendor = root / "vendor" / target_id()
     vendor.mkdir(parents=True)
     chunks = [b"first half", b"second half"]
     parts = []

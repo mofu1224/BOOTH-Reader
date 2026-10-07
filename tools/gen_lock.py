@@ -48,7 +48,7 @@ def main(argv: list[str] | None = None) -> int:
             f"    --hash=sha256:{digest}" + (" \\" if i < len(values) - 1 else "")
             for i, digest in enumerate(values)
         )
-    args.output.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    args.output.write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
     print(f"locked {len(packages)} packages: {args.output}")
     return 0
 

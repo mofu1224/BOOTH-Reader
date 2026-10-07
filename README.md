@@ -4,13 +4,27 @@ BOOTH購入品の取得・ダウンロード・ZIP展開・分類を管理する
 
 ## インストール・起動
 
-**GitHubからクローンし、`start.bat` をダブルクリック。** 初回準備・復旧・ブラウザー起動は自動です。Pythonの導入、Git LFS、追加ダウンロードは不要です。
+**クローン後、Windowsは`start.bat`、Apple Silicon Macは`start.command`で起動します。** 初回準備・復旧・ブラウザー起動は自動です。Pythonの導入、Git LFS、追加ダウンロードは不要です。
+
+Mac・Windows対応版は`1.1.0`です。Macの認証には同梱の自作ホストとOS標準WebKitを使います。[構成・確認範囲](CROSS_PLATFORM.md)を参照してください。
+
+このリポジトリ自体が利用者向けの配布物です。通常のクローンには両OSの同梱物が含まれ、別の配布フォルダーの作成・コピーは不要です。
 
 ```powershell
 git clone https://github.com/mofu1224/BOOTH-Reader.git
 # クローン先で実行
 & .\start.bat
 ```
+
+Macではターミナルからも起動できます。
+
+```bash
+bash ./start.sh
+bash ./start.sh --no-open
+bash ./start.sh doctor --json
+```
+
+以降の`start.bat`の例は、Macでは`bash ./start.sh`に置き換えます。CLI引数・終了コード・保存先は共通です。
 
 | コマンド | 用途 |
 |---|---|
@@ -30,9 +44,9 @@ CLIも `start.bat <command>` で実行できます（`start.bat cli <command>` �
 
 ## 動作環境
 
-- Windows x64・書込み可能なローカルディスク。Windows 11で検証、Windows 10 build 17763以降は未検証です。
+- Windows x64またはApple Silicon Mac（arm64）・書込み可能なローカルディスク。Windows 10 build 17763以降、macOS 14以降を対応範囲とします。実際の検証範囲は[対応状況](CROSS_PLATFORM.md)に記録します。
 - 起動・環境準備はオフライン可。BOOTH/pixiv認証、同期、購入ファイル・商品画像の取得は通信が必要です。
-- Mac/Linux、ARM64/x86、UNC/NASからの直接実行、公開サーバー・複数ユーザー運用は対象外です。NASはバックアップ用に使います。
+- Intel Mac、Windows ARM64/x86、Linux、UNC/NASからの直接実行、公開サーバー・複数ユーザー運用は対象外です。NASはバックアップ用に使います。
 - 同梱WebView2のSmartScreenは有効で、Microsoftへの情報送信があります。[利用条件・データ通知](THIRD_PARTY_TERMS.md)を確認してください。
 
 同梱物・保存先・移動時の詳細は [PORTABLE.md](PORTABLE.md)。
@@ -157,6 +171,8 @@ git pull --ff-only
 
 DB・購入ファイルは保持します。DB移行は前方向のみで、新版DBを旧アプリで開くと拒否します。Gitは取得・更新・開発検査に必要ですが、通常実行には不要です。更新時もローカル変更を自動破棄しません。
 
+この開発候補はDB v5を使用します。旧DBの分類・取得記録を保持し、新しい取得パスをライブラリ基準で記録します。旧版へ戻す場合は、更新前のバックアップを使ってください。
+
 ### バックアップと復旧
 
 1. **全インスタンスを停止**し、`app.db`、存在する `app.db-wal` / `app.db-shm`、`data/`、`BOOTH-Reader-Library/` を一組で別の私用保存先へコピーします。独自DB・保存先も含め、アプリの版を控えます。
@@ -192,22 +208,22 @@ DB・購入ファイルは保持します。DB移行は前方向のみで、新�
 - FBXプレビュー・VCC連携・常駐監視・自動分類には非対応です。
 - HTML解析のためBOOTHの構造変更で停止します。上限超過も明示エラーとなり、購入一覧はDBを更新しません。
 - 上限：64リンク/商品、20,000購入・200ページ/同期、ZIP 50,000エントリ・展開後8GiB・圧縮比200:1。
-- **実BOOTHのログイン→購入取得→DL通し、Windows 10・別PC・長時間運転は未検証です。** 自動試験は合成データ・モック・ローカルHTTPで実施しています。
+- 実BOOTHの同期・購入ファイル取得・ZIP展開はWindowsの既存セッションで確認済みです。検証はWindows 11 x64とApple Silicon Mac（macOS 27）で実施しており、Windows 10・macOS 14の実機、別PC、長時間運転、実BOOTHの対話的ログイン入力は検証範囲外です。自動試験は合成データ・モック・ローカルHTTPで実施しています。
 
 ## 配布・ライセンス
 
 配布は**Gitクローン**です。利用中フォルダーには個人データがあるため第三者へ渡さないでください。Cookie・DB・購入物・プロフィール・CSV・ログ等はGit対象外です。任意名の私用出力は `.private/` へ保存します（未知のファイル名や外部保存先は自動判別できません）。
 
 - [本体MIT](LICENSE)・[第三者通知](THIRD_PARTY_NOTICES.md)・[Microsoft利用条件](THIRD_PARTY_TERMS.md)
-- [対応ソース](SOURCE_OBLIGATIONS/README.md)・[ライセンス配布判定](license-audit/28-clone-distribution-followup.md)
-- [製品の判定条件・未確認範囲](audit/19-release-scope.md)・[前回クローン検証](audit/18-clone-distribution-followup.md)
+- [対応ソース](SOURCE_OBLIGATIONS/README.md)・[両OS配布判定](license-audit/31-cross-platform-clone-distribution.md)
+- [製品の判定条件・検証範囲](audit/19-release-scope.md)・[実装・検証記録](audit/21-portable-distribution-1.1.0.md)
 - [変更履歴](CHANGELOG.md)・[検証ログ](VERIFY_LOG.md)
 
 ライセンスゲートの合格と製品全体の完成判定は別です。第三者原文は `THIRD_PARTY_LICENSES/` に保持します。
 
 ## 開発・配布前の検証
 
-`start.bat` で固定環境を準備し、次を実行します。配布ZIP・wheel・sdistは生成しません。
+OSに合う起動入口で固定環境を準備し、次を実行します。MacのPythonは`.venv/bin/python3`です。配布ZIP・wheel・sdistは生成しません。
 
 ```powershell
 & .\.venv\Scripts\python.exe -m pytest -q

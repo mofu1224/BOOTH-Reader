@@ -2,6 +2,15 @@
 
 各時点の結果です。過去の合格を現行版・実BOOTH・未試験環境の保証とは扱いません。詳細は [audit/](audit/) と [license-audit/](license-audit/)。
 
+## 2026-10-06 Mac・Windows両対応の最終検証
+
+- 最終変更後の再実行。Windows 459件（458 passed / 1 skip）、Mac 459件（455 passed / Windows専用4 skip）。Ruff/format/Mypy24/pip check・vendor分割片/lock・portable18/18が両OSで合格。
+- 独立Git候補のWindows検証95チェック合格：候補gitleaks0件、コールドWeb起動、cold CLI JSON、入力2,722等価、原文検査、回帰458 passed、日本語/空白パスへの移動、元配置読取拒否、ブラウザー破損修復、終了・再起動、元index不変・外部書込み0。
+- Mac独立コピー：オフライン初回準備は約7秒、CLI JSON・日本語引数、実WebKit 1440/768/390px、起動中修復拒否、移動後の再構築、署名破損修復、再起動が合格。Windows候補とMac展開内容の入力ハッシュ2,722件が一致。検証フォルダーは削除済み（実行ごとの実測値は`.cache/`の証拠を参照）。
+- 実BOOTHはWindowsの既存本人セッションで同期68件〜購入ZIP取得3,231,312 bytes〜展開まで確認（値は保存しない）。対話的なログイン入力とMac実機での実BOOTH操作は未検証。
+- Mac追加のScanCodeライセンス索引1件をgitleaksの個別許可へ追加（Windows側とbyte同一の公開ライセンスDB、200件の誤検知）。候補スキャンは0件。
+- 性能・安定性の短時間測定を再実行（parser2,000件中央値138.53ms、worker200件3.78ms、HTTP購入200件7.10ms、index15.73ms。8threads/1,000reads/40writes 3.14s、transaction強制終了後復旧）。
+
 ## 2026-10-05 文書・案内の短縮
 
 - 主要5文書の文字数を約71%削減。手順・検証結果・未確認範囲・参照先を保持し、起動/CLI/取得ログも短縮。
@@ -107,4 +116,4 @@ Windows11/Python3.12.13の別venvで **199 passed**・RC43/43、Ruff/format/Mypy
 
 ## 未確認範囲
 
-実BOOTHのログイン→購入取得→DL、Windows10・別PC・長時間運転・全nativeアクセスは未検証です。製品全体の条件は [リリース範囲](audit/19-release-scope.md)、現行入力は `license-audit/release-gate.json` を参照。
+検証はWindows機とSSH接続したMacで実施しました。実BOOTHの対話的なログイン入力・Mac実機での実BOOTH操作・Windows10/macOS14実機・別PC・長時間運転・全nativeアクセスは検証範囲外です。製品全体の条件は [リリース範囲](audit/19-release-scope.md)、候補の識別情報は `audit/release-checklist-current.md`、現行入力は `license-audit/release-gate.json` を参照。

@@ -22,6 +22,8 @@ EVIDENCE = (
     "vendored-certifi-source.json",
     "upstream-evidence.json",
     "public-profile-legal-evidence.json",
+    "macos-distribution-evidence.json",
+    "macos-notice-inventory.json",
 )
 
 
@@ -42,6 +44,7 @@ def inspect(root: Path = ROOT) -> dict[str, Any]:
     def walk(value: Any) -> None:
         if isinstance(value, dict):
             add(value.get("path"), value.get("sha256"))
+            add(value.get("retained_path"), value.get("sha256"))
             add(value.get("source"), value.get("sha256"))
             add(value.get("source_path"), value.get("source_sha256"))
             add(value.get("archive"), value.get("sha256"))

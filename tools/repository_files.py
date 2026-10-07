@@ -22,13 +22,16 @@ def collect(root: Path = ROOT) -> list[Path]:
         timeout=60,
     )
     names = sorted(set(result.stdout.decode("utf-8").rstrip("\0").split("\0")) - {""})
-    manifest = root / "vendor/windows-x64/manifest.json"
-    active_chunks = None
-    if manifest.is_file():
+    active_chunks: set[str] | None = None
+    for manifest in (root / "vendor").glob("*/manifest.json"):
+        if active_chunks is None:
+            active_chunks = set()
         payload = json.loads(manifest.read_text(encoding="utf-8"))
-        active_chunks = {
-            part["file"] for asset in payload["assets"].values() for part in asset["parts"]
-        }
+        active_chunks.update(
+            (manifest.parent / part["file"]).relative_to(root).as_posix()
+            for asset in payload["assets"].values()
+            for part in asset["parts"]
+        )
     files = []
     for name in names:
         path = root / name
@@ -40,7 +43,7 @@ def collect(root: Path = ROOT) -> list[Path]:
             name.startswith("vendor/")
             and path.suffix == ".chunk"
             and active_chunks is not None
-            and path.name not in active_chunks
+            and name not in active_chunks
         ):
             raise SystemExit("Clone candidate contains an inactive vendor chunk")
         if path.is_symlink() or not path.resolve().is_relative_to(root.resolve()):
@@ -55,6 +58,33 @@ def collect(root: Path = ROOT) -> list[Path]:
             raise SystemExit("Clone candidate exceeds GitHub's per-file size limit")
         files.append(path)
     return files
+
+
+def require_clone_script_modes(files: list[Path], root: Path = ROOT) -> dict[str, str]:
+    """Require executable Git entries, rather than repairing only the test copy."""
+    scripts = [
+        path.relative_to(root).as_posix() for path in files if path.suffix in {".sh", ".command"}
+    ]
+    if not scripts:
+        return {}
+    result = subprocess.run(
+        ["git", "-C", str(root), "ls-files", "--stage", "-z", "--", *scripts],
+        capture_output=True,
+        check=True,
+        timeout=60,
+    )
+    modes = {}
+    for entry in result.stdout.decode("utf-8").split("\0"):
+        if not entry:
+            continue
+        metadata, name = entry.split("\t", 1)
+        mode, _object_id, stage = metadata.split()
+        if stage == "0":
+            modes[name] = mode
+    missing = [name for name in scripts if modes.get(name) != "100755"]
+    if missing:
+        raise SystemExit("Clone scripts must have Git mode 100755: " + ", ".join(missing))
+    return {name: modes[name] for name in scripts}
 
 
 def sha256(path: Path) -> str:

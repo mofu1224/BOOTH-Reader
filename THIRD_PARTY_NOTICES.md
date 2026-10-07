@@ -2,7 +2,7 @@
 
 判定: **READY FOR CLONE DISTRIBUTION**（[license-audit/27-github-clone-distribution.md](license-audit/27-github-clone-distribution.md)）。
 
-現行の追加監査は [license-audit/28-clone-distribution-followup.md](license-audit/28-clone-distribution-followup.md)。Microsoftコードの利用・再配布条件、SmartScreen・情報送信の通知は [THIRD_PARTY_TERMS.md](THIRD_PARTY_TERMS.md) にあります。
+Windows構成の追加監査は[license-audit/28-clone-distribution-followup.md](license-audit/28-clone-distribution-followup.md)、1.1.0の両OS構成は[license-audit/31-cross-platform-clone-distribution.md](license-audit/31-cross-platform-clone-distribution.md)を参照してください。Microsoftコードの利用・再配布条件、SmartScreen・情報送信の通知は[THIRD_PARTY_TERMS.md](THIRD_PARTY_TERMS.md)にあります。
 
 本体のMIT宣言は第三者の条件を上書きしません。下表はmetadataの申告と使用版原文の確認結果です。
 colorama、markdown-it-py、mdurl、pathspec、pip-api、pip-audit、tomli-wは原文から識別しました。
@@ -86,6 +86,14 @@ Statusは原文通知の保持状態（NOTICE RETAINED）を示し、ライセ�
 - certifi 2026.7.22とpackageurl-python 0.17.6は同版公式sdistを `SOURCE_OBLIGATIONS/` へ収録しました。
 
 元通知の保全だけで全義務の充足を断定しません。範囲と残る制限は [license-audit/27-github-clone-distribution.md](license-audit/27-github-clone-distribution.md) を参照してください。
+
+### Mac用同梱物
+
+- CPython 3.12.15/PBS20261003: PSFの履歴を含む原文と内蔵ライブラリ通知を`THIRD_PARTY_LICENSES/macos/CPython-3.12.15/`に保持。公式full版とのbyte一致は`macos-distribution-evidence.json`で確認。
+- 固定62wheel: 上表と同じ版・条件。Mac用の通知と同版対応ソースの対応を同じ証拠ファイルへ記録。
+- WebKit認証ホスト: 本体MITの自作コード。OSライブラリは同梱しない。
+- Mac原本に内包するcertifiの実ソース: `SOURCE_OBLIGATIONS/macos-vendored-certifi-source.tar.gz`。
+- UI検証用に取得するChromeは私用`.cache/`に置き、Git候補・vendor・配布物に含めない。
 
 ## 今回の追加対応
 

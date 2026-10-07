@@ -1,5 +1,7 @@
 # GitHubクローン配布の追加監査（2026-10-03）
 
+**更新（2026-10-06）**: 1.1.0の両OS最終判定は [31-cross-platform-clone-distribution.md](31-cross-platform-clone-distribution.md)。本文の記録は当時のまま保全します。
+
 対象はGit追跡ファイルと、除外されていない追加候補の全体です。前回の [27-github-clone-distribution.md](27-github-clone-distribution.md) の同梱構成を維持し、利用条件・検証範囲・CIの残件を修正しました。最終判定と入力ハッシュは `release-gate.json`、実行結果は [../audit/18-clone-distribution-followup.md](../audit/18-clone-distribution-followup.md) を参照してください。
 
 判定: **READY FOR CLONE DISTRIBUTION**。現行Git候補の範囲で、原文・対応ソース・利用者向け条件と検証を整備しました。変更後はゲートの入力一致を再確認します。
