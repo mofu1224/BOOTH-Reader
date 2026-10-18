@@ -12,10 +12,11 @@ from urllib.parse import urlsplit
 from .i18n import ERROR_DETAILS, ERRORS, JAPANESE_FORMATS, MESSAGES
 
 STYLE = """
-:root{color-scheme:light;--bg:#fafafa;--surface:#fff;--ink:#1a1a1a;--muted:#666;--line:#e5e5e5;--accent:#1a1a1a;--soft:#ededed;--radius:2px;--danger:#a32929;--gutter:clamp(20px,4.2vw,64px)}
+:root{color-scheme:light;--bg:#fafafa;--surface:#fff;--ink:#1a1a1a;--muted:#666;--line:#e5e5e5;--accent:#1a1a1a;--on-accent:#fff;--accent-hover:#333;--soft:#ededed;--radius:2px;--danger:#a32929;--gutter:clamp(20px,4.2vw,64px)}
+:root[data-theme=dark]{color-scheme:dark;--bg:#181818;--surface:#222;--ink:#eee;--muted:#aaa;--line:#404040;--accent:#eee;--on-accent:#181818;--accent-hover:#ccc;--soft:#303030;--danger:#ffabab}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);line-height:1.6}
 button,input,select{font:inherit;color:inherit;border:1px solid var(--line);background:var(--surface)}button{cursor:pointer}
-button:disabled{opacity:.5;cursor:not-allowed}button.primary{background:var(--accent);border-color:var(--accent);color:white}
+button:disabled{opacity:.5;cursor:not-allowed}button.primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
 button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}a{color:var(--accent)}[hidden]{display:none!important}
 .skip{position:absolute;left:16px;top:-80px;padding:12px;z-index:10}.skip:focus{top:12px}
 .shell{min-height:100vh}.sidebar{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:0 32px;align-items:center;background:var(--bg);border-bottom:1px solid var(--line);padding:24px var(--gutter) 0}
@@ -31,8 +32,10 @@ details.downloads{border-top:1px solid var(--line)}summary{cursor:pointer}#downl
 dialog{border:1px solid var(--line);width:min(680px,calc(100% - 32px));max-height:85vh;color:var(--ink)}.dialog-header{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:18px}.dialog-header h2{margin:0}.dialog-header button{min-height:36px;padding:5px 12px}.field{display:grid;gap:8px;margin:18px 0}.field input{width:100%}.candidate{display:flex;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}.candidate img{width:56px;height:56px;object-fit:contain;background:var(--bg)}.candidate-info{flex:1;min-width:0;font-size:13px;overflow-wrap:anywhere}.candidate-info small{display:block;color:var(--muted)}#candidate-rows{max-height:42vh;overflow:auto}.dialog-error{font-size:13px;margin:12px 0}.dialog-error:empty{display:none}
 body{font-family:Arial,'Yu Gothic UI',Meiryo,system-ui,sans-serif;font-size:14px}
 button,input,select{border-radius:var(--radius);font-size:13px;min-height:42px;padding:10px 16px}
-button:hover{background:var(--soft);border-color:#aaa}button.primary{font-weight:400}button.primary:hover{background:#333;color:#fff}
+button:hover{background:var(--soft);border-color:#aaa}button.primary{font-weight:400}button.primary:hover{background:var(--accent-hover);color:var(--on-accent)}
 .skip{background:var(--surface)}
+:root[data-theme=dark] .cover{background:#252525}:root[data-theme=dark] .notice.error{background:#361f1f}
+#theme{display:grid;place-items:center;width:42px;min-height:42px;padding:9px;flex-shrink:0}#theme svg{width:20px;height:20px}#theme .theme-sun{display:none}:root[data-theme=dark] #theme .theme-sun{display:block}:root[data-theme=dark] #theme .theme-moon{display:none}
 .shell{container-type:inline-size}
 .nav{display:flex;flex-wrap:wrap;gap:4px;min-width:0}.nav button{width:auto;max-width:100%;font-size:13px;padding:10px 14px;border-radius:2px}.nav button[aria-current=page]{color:var(--ink);font-weight:400;background:var(--soft)}.count{font-size:11px}
 #main-nav{grid-column:2;grid-row:1;align-self:center;padding-bottom:24px}
@@ -76,6 +79,7 @@ function applyLanguage(){
   for(const [node,key] of staticText)node.textContent=t(key);
   for(const [el,attr,key] of staticAttributes)el.setAttribute(attr,t(key));
   $('terms-link').href='/third-party-terms?lang='+language;
+  renderThemeControl();
 }
 function apiError(payload){if(payload.uiKey)return t(payload.uiKey);const detail=String(payload.error||'').replace(/^ERROR\s+/,''),localized=translations.details[detail];if(language==='ja'&&localized)return localized;const entry=translations.errors[payload.code];if(language==='en')return detail||(entry?entry[1]:t('処理に失敗しました'));return entry?entry[0]:detail||t('処理に失敗しました');}
 let data=JSON.parse($('initial-data').textContent), view='all', page=1, busy=false, lastAuth=null, listDrag=null;
@@ -204,14 +208,20 @@ const authKey=a=>String(a.revision??a.count);
 function renderAuth(){$('auth-state').textContent=t(!authChecked?'Cookieを確認中':lastAuth?'Cookie登録済み':'Cookie未登録');$('b-cookie').textContent=t(lastAuth?'Cookieを更新':'Cookieを登録');}
 async function checkAuth(){if(busy||listDrag||document.querySelector('dialog[open]'))return;try{const a=await request('/auth/status');if(listDrag)return;const key=authKey(a);authChecked=true;if(key!==lastAuth){lastAuth=key;renderAuth();await sync();}else renderAuth();}catch{authChecked=true;lastAuth=null;renderAuth();}}
 $('language').onchange=()=>{finishListDrag(true);language=$('language').value;try{localStorage.setItem('booth-reader.language',language);}catch{}collator=new Intl.Collator(language,{numeric:true,sensitivity:'base'});applyLanguage();render();renderAuth();renderDownloads();if($('add-dialog').open){$('add-title').textContent=t(candidateItem?'追加先のリストを選ぶ':'商品を追加');renderCandidates();}if(notice)say(notice.text,notice.error,notice.values);for(const id of ['add-error','cookie-error','create-error'])if($(id).errorPayload)$(id).textContent=apiError($(id).errorPayload);};
+function renderThemeControl(){const dark=document.documentElement.dataset.theme==='dark';$('theme').setAttribute('aria-pressed',String(dark));$('theme').title=t(dark?'ライトモードに切り替える':'ダークモードに切り替える');}
+$('theme').onclick=async()=>{const control=$('theme'),next=document.documentElement.dataset.theme==='dark'?'light':'dark';control.disabled=true;try{const saved=await request('/ui/theme',{theme:next});document.documentElement.dataset.theme=saved.theme;renderThemeControl();}catch(e){const detail=e.payload||{error:e.message,code:'OPERATION_FAILED'};say(detail,true);logFailure(detail);}finally{control.disabled=false;}};
 document.addEventListener('error',ev=>{if(ev.target.tagName==='IMG')ev.target.hidden=true;},true);
 applyLanguage();indexData();render();const initialError=JSON.parse($('initial-error').textContent);if(initialError){say(initialError,true);logFailure(initialError);}checkAuth();setInterval(checkAuth,8000);setInterval(pollDownloads,3000);
 """
 
 
 def render_index(
-    data: dict[str, Any], error: str | dict[str, Any] = "", library_path: str = ""
+    data: dict[str, Any],
+    error: str | dict[str, Any] = "",
+    library_path: str = "",
+    theme: str = "light",
 ) -> str:
+    theme = theme if theme in ("light", "dark") else "light"
     data = {
         "items": data.get("items", []),
         "lists": data.get("lists", []),
@@ -265,12 +275,12 @@ def render_index(
             f'<article class="product"><div class="cover"><span class="no-image">画像なし</span>{image}</div><div class="product-info"><p class="shop">{shop}</p><h2>{title}</h2></div></article>'
         )
     return f"""<!doctype html>
-<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BOOTH-Reader — ライブラリ</title><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23FC4D50'/%3E%3C/svg%3E"><style>{STYLE}</style></head>
+<html lang="ja" data-theme="{theme}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BOOTH-Reader — ライブラリ</title><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23FC4D50'/%3E%3C/svg%3E"><style>{STYLE}</style></head>
 <body><a class="skip" href="#main">商品一覧へ移動</a><div class="shell">
 <aside class="sidebar"><div class="brand">BOOTH<span> Reader</span></div>
 <nav aria-label="ライブラリ" id="main-nav" class="nav"></nav>
 <div class="sidebar-heading"><span><span>マイリスト</span> <span id="c-lists">0</span></span><button id="b-new-list" data-write aria-label="リストを作成">＋</button></div><nav aria-label="マイリスト" id="list-nav" class="nav"></nav>
-<div class="connection"><select id="language" aria-label="Language / 言語"><option value="ja">JA — 日本語</option><option value="en">EN — English</option></select><span class="auth-state" id="auth-state">Cookieを確認中</span><button id="b-cookie" data-write>Cookieを登録</button><a id="terms-link" href="/third-party-terms" target="_blank" rel="noopener">第三者ソフトウェアの利用条件・データ通知</a></div></aside>
+<div class="connection"><button id="theme" type="button" aria-label="ダークモード" aria-pressed="{str(theme == "dark").lower()}"><svg class="theme-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.9 13.3A9 9 0 0 1 10.7 3.1 9 9 0 1 0 20.9 13.3Z"/></svg><svg class="theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4m0-14.2-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg></button><select id="language" aria-label="Language / 言語"><option value="ja">JA — 日本語</option><option value="en">EN — English</option></select><span class="auth-state" id="auth-state">Cookieを確認中</span><button id="b-cookie" data-write>Cookieを登録</button><a id="terms-link" href="/third-party-terms" target="_blank" rel="noopener">第三者ソフトウェアの利用条件・データ通知</a></div></aside>
 <main id="main"><header class="topbar"><div><h1 id="view-title">すべての商品</h1></div><div class="actions"><button id="b-update" class="primary" data-write><span>BOOTHと同期</span><span aria-hidden="true">→</span></button><button id="b-refresh" data-write>表示更新</button></div></header>
 <div id="msg" class="notice" role="status" aria-live="polite">{html.escape(error_text)}</div>
 <div class="toolbar"><div class="search"><input id="search" type="search" placeholder="商品名・ショップ名で検索" aria-label="商品を検索"></div><label for="sel-sort">商品の並び順<select id="sel-sort"><option value="newest">購入順（新しい順）</option><option value="oldest">購入順（古い順）</option><option value="name">名前順</option><option value="shop">ショップ順</option></select></label><button id="b-add-items" class="primary" data-write hidden>商品を追加</button><button id="b-delete-list" hidden>リスト削除</button></div>

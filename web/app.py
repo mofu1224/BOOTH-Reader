@@ -5,11 +5,12 @@ from __future__ import annotations
 import builtins
 import json
 import logging
+import tempfile
 import threading
 from collections.abc import AsyncGenerator
 from contextlib import asynccontextmanager
 from pathlib import Path
-from typing import Any
+from typing import Any, Literal
 
 from fastapi import BackgroundTasks, FastAPI, Query
 from fastapi.exceptions import RequestValidationError
@@ -50,6 +51,10 @@ class ListsReq(BaseModel):
 
 class CookieReq(BaseModel):
     content: str = Field(min_length=1, max_length=1_048_576)
+
+
+class ThemeReq(BaseModel):
+    theme: Literal["light", "dark"]
 
 
 def _err_payload(exc: Exception) -> tuple[int, dict[str, Any]]:
@@ -141,7 +146,20 @@ def create_app(
     link = bridge.Bridge(db, cli_path=cli_path, python_exe=python_exe)
     job_lock = threading.Lock()
     sync_lock = threading.Lock()
+    theme_lock = threading.Lock()
+    theme_path = Path(db).with_name(Path(db).name + ".ui.json")
     download_state: dict[str, Any] = {"running": False, "ok": None, "error": ""}
+
+    def read_theme() -> str:
+        try:
+            saved = json.loads(theme_path.read_text(encoding="utf-8"))
+            if isinstance(saved, dict) and saved.get("theme") in ("light", "dark"):
+                return str(saved["theme"])
+        except FileNotFoundError:
+            pass
+        except (OSError, ValueError):
+            log.warning("could not read UI theme")
+        return "light"
 
     @asynccontextmanager
     async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:  # noqa: ARG001
@@ -169,6 +187,31 @@ def create_app(
     @app.get("/health")
     def health() -> dict[str, Any]:
         return {"ok": True, "transport": link.transport, "download": dict(download_state)}
+
+    @app.post("/ui/theme")
+    def save_theme(req: ThemeReq) -> Any:
+        temporary: Path | None = None
+        try:
+            with theme_lock:
+                theme_path.parent.mkdir(parents=True, exist_ok=True)
+                try:
+                    with tempfile.NamedTemporaryFile(
+                        mode="w",
+                        encoding="utf-8",
+                        dir=theme_path.parent,
+                        prefix=".ui-theme-",
+                        suffix=".tmp",
+                        delete=False,
+                    ) as handle:
+                        temporary = Path(handle.name)
+                        json.dump({"theme": req.theme}, handle)
+                    temporary.replace(theme_path)
+                finally:
+                    if temporary is not None:
+                        temporary.unlink(missing_ok=True)
+            return {"ok": True, "theme": req.theme}
+        except OSError as exc:
+            return _error(exc)
 
     @app.get("/third-party-terms", response_class=PlainTextResponse)
     def third_party_terms(lang: str = Query("ja", pattern="^(ja|en)$")) -> str:
@@ -354,7 +397,8 @@ def create_app(
             data = {}
             _, error = _err_payload(e)
         return HTMLResponse(
-            render_index(data, error, library_path=root), media_type="text/html; charset=utf-8"
+            render_index(data, error, library_path=root, theme=read_theme()),
+            media_type="text/html; charset=utf-8",
         )
 
     return app
