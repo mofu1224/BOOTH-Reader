@@ -24,6 +24,8 @@ app.db-shm
 *.sqlite-*
 *.sqlite3
 *.sqlite3-*
+*.ui.json
+.ui-theme-*.tmp
 # Cookie imports and interrupted atomic saves outside data/.
 cookies*.json
 *[cC][oO][oO][kK][iI][eE]*.json

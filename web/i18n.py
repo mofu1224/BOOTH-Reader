@@ -3,6 +3,9 @@
 # ruff: noqa: RUF001 -- Native Japanese punctuation in translation copy.
 
 MESSAGES = {
+    "ダークモード": "Dark mode",
+    "ライトモードに切り替える": "Switch to light mode",
+    "ダークモードに切り替える": "Switch to dark mode",
     "ライブラリ": "Library",
     "商品一覧へ移動": "Skip to products",
     "マイリスト": "My lists",
