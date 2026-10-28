@@ -1,0 +1,131 @@
+{
+  "date": "2026-10-28",
+  "packages": [
+    {
+      "name": "certifi",
+      "previous": "2026.7.22",
+      "version": "2026.10.19",
+      "wheel": "certifi-2026.10.19-py3-none-any.whl",
+      "wheel_sha256": "42d35340cc5b9ba78e818ddbff0c5b1c2b779de448a340fd1b989f5fa8670e1b",
+      "sdist_sha256": "035c1e85572b141bf1c3a3eff0e33a8eb74917522f2559075ff8d2fea780a1ae",
+      "license": "MPL-2.0",
+      "native_files_matched_to_source": 0
+    },
+    {
+      "name": "filelock",
+      "previous": "4.0.7",
+      "version": "4.2.1",
+      "wheel": "filelock-4.2.1-py3-none-any.whl",
+      "wheel_sha256": "7be2662e9e826b9bba28afc0f843a123280d799a2ea44bb5d35ccec67905ae44",
+      "sdist_sha256": "c4c937ccac2a813cee448e662a56366cfb374c0f8702e75f295c412cc1c5d5a3",
+      "license": "MIT",
+      "native_files_matched_to_source": 0
+    },
+    {
+      "name": "opentelemetry-api",
+      "previous": "1.45.0",
+      "version": "1.45.1",
+      "wheel": "opentelemetry_api-1.45.1-py3-none-any.whl",
+      "wheel_sha256": "b31553efa588ae44bc306f863c785c5333a9ecc091248c6ee68b4b6c87fdedfb",
+      "sdist_sha256": "aa38ed19bcc084ba42782a73255b3582283eced7ad6dddbd6695189e69adfb75",
+      "license": "Apache-2.0",
+      "native_files_matched_to_source": 0
+    },
+    {
+      "name": "setuptools",
+      "previous": "84.0.0",
+      "version": "84.1.0",
+      "wheel": "setuptools-84.1.0-py3-none-any.whl",
+      "wheel_sha256": "5231689c6ac8156cd155cfb98c3fd6fb252c3e7e9bd3d78b64d3c55f132624c9",
+      "sdist_sha256": "23657205b63d4d31395ab917815247f694aafad28cd21316bf5fd45a51048ea0",
+      "license": "MIT",
+      "native_files_matched_to_source": 8
+    }
+  ],
+  "targets": [
+    "windows-x64",
+    "macos-arm64"
+  ],
+  "active_ca_source": {
+    "archive": "SOURCE_OBLIGATIONS/patched-pip-certifi-source.tar.gz",
+    "sha256": "184930219da3b9928f1d3690b435aabbaf7e4f564ea2a5bcc1877acb2113a768",
+    "upstream_source": {
+      "path": "SOURCE_OBLIGATIONS/certifi-2026.10.19.tar.gz",
+      "sha256": "035c1e85572b141bf1c3a3eff0e33a8eb74917522f2559075ff8d2fea780a1ae",
+      "url": "https://files.pythonhosted.org/packages/a6/bd/1436c50cc46699de0230fbaacc1d1de7bfec413176099949e9d5112e88f2/certifi-2026.10.19.tar.gz"
+    },
+    "modification_tool": "tools/pip_runtime_patch.py",
+    "modifications": "importlib.resources package name changed to pip._vendor.certifi; CA bundle and LICENSE match publisher wheel",
+    "files": [
+      {
+        "path": "pip/_vendor/certifi/LICENSE",
+        "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7"
+      },
+      {
+        "path": "pip/_vendor/certifi/__init__.py",
+        "sha256": "f8ccfc10235998c7edd340f2f305b5f3d71aed978aea82a02af30d7877bee902"
+      },
+      {
+        "path": "pip/_vendor/certifi/__main__.py",
+        "sha256": "c410688fdd394d45812d118034e71fee88ba7beddd30fe1c1281bd3b232cd758"
+      },
+      {
+        "path": "pip/_vendor/certifi/cacert.pem",
+        "sha256": "50f79f98dac192b20dbf73f35c56f0b0c557ab267ff5199d1117cc1180b70785"
+      },
+      {
+        "path": "pip/_vendor/certifi/core.py",
+        "sha256": "82efc40952359b746ad32b69b0d13ad6181019c29a380b7d46cf46f0ab1308e2"
+      },
+      {
+        "path": "pip/_vendor/certifi/py.typed",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "pip/_vendor/certifi/tests/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "pip/_vendor/certifi/tests/test_certify.py",
+        "sha256": "7c179d1edf37f7e912b133663735fb46c6338d5d0e5f8915d11c3bc287d227b8"
+      }
+    ]
+  },
+  "scope": "four published wheel updates; runtime Python, browser and native host inputs unchanged; installation refreshes pip CA vendor before network use",
+  "verification": {
+    "windows_pytest": "481 passed, 1 macOS-only skipped, 1 foreground-window test deselected",
+    "windows_pip_audit_local": "0 known vulnerabilities in installed distributions",
+    "windows_offline_operation": "PASS: fresh setup, fixed versions, pip CA bytes, Web/API/native browser, relocation, classification/theme retention, process/port cleanup, no inherited-profile writes",
+    "protected_user_files": "DB, Cookie and theme hashes unchanged during Windows environment update",
+    "license_evidence": "2317 references, 1720 hash-named originals, 0 failures",
+    "vendor_integrity": "PASS on both target payloads",
+    "macos_ui_driver_preparation": "PASS after copying without DMG Finder metadata; original Google signature, strict codesign and Gatekeeper verification retained; test-only cache, not a shipped runtime input",
+    "macos_pytest": "478 passed, 4 Windows-only skipped, 1 foreground-window test deselected",
+    "macos_pip_audit_local": "0 known vulnerabilities in installed distributions",
+    "macos_runtime": "PASS: cold offline CLI, fixed versions and pip CA bytes, real WebKit 1440/768/390px, relocation, classification/theme retention, process/port cleanup, no inherited-profile writes",
+    "macos_repair": "PASS: concurrent repair refusal, relocated venv rebuild, host signature-damage recovery from local vendor, retained DB and restart",
+    "quality_checks": "Both OS: Ruff, format 174 files, Mypy 24 sources, pip check, portable 18/18, retained notices and both vendor payloads PASS"
+  },
+  "embedded_vendor_review": {
+    "scope": "post-setup pip 26.2.1 vendor declarations; version-only matches require implementation review",
+    "scanner_matches": 8,
+    "independent_ids": [
+      "CVE-2026-114613",
+      "GHSA-xmj3-9gf7-h52w",
+      "PYSEC-2025-49",
+      "PYSEC-2026-3447",
+      "PYSEC-2026-3625"
+    ],
+    "msgpack": "Only pure-Python fallback is bundled; no msgpack C extension. The Unpacker native-memory defects PYSEC-2026-3625 and CVE-2026-114613 do not apply to the bundled implementation.",
+    "setuptools": "Only pkg_resources is bundled. PackageIndex, FileList and setuptools.wheel.Wheel implementations affected by PYSEC-2025-49, PYSEC-2026-3447 and GHSA-xmj3-9gf7-h52w are absent. The separately installed full setuptools package is updated to 84.1.0.",
+    "implementation_sha256": {
+      "vendor.txt": "1e8d959bd1b137c476b4f7f6e04ca14f2dd0cc7dd2440bb48f9966c67ca72a1d",
+      "msgpack/__init__.py": "440f2072a2b5ed8a64c419cdc172556b5a1ad8bca058381f1759c0d4d3f0de6a",
+      "msgpack/fallback.py": "d20d4fce9d2fb66044989e70f45decffe24c55444ff114b81b571ce5345a02c2",
+      "pkg_resources/__init__.py": "bdb4c9d3faee5201b1423944aacaee16688d3d5ca1dadf6afb3c930d3d39df12"
+    },
+    "applicable_unresolved": 0,
+    "cross_platform_implementation_hashes": "The four recorded implementation hashes match the post-setup Mac runtime",
+    "limitation": "Does not certify historical commits, untouched bootstrap archives, or arbitrary installations."
+  }
+}

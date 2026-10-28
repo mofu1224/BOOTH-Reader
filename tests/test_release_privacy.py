@@ -2,6 +2,7 @@
 
 import logging
 
+import pytest
 from fastapi.testclient import TestClient
 
 from core.logging_setup import SecretRedactingFilter, redact
@@ -76,6 +77,9 @@ def test_git_private_path_rules_do_not_exclude_license_sources():
         "my-Cookies-export.json",
         "browser-storage-state.json",
         "backups/history.db.bak",
+        "app.db.ui.json",
+        "settings/Library.UI.JSON",
+        "settings/.ui-theme-synthetic.tmp",
     ):
         assert private_path(path), path
     for path in (
@@ -84,6 +88,22 @@ def test_git_private_path_rules_do_not_exclude_license_sources():
         "license-audit/pathspec-source.json",
     ):
         assert not private_path(path), path
+
+
+@pytest.mark.parametrize("name", ["app.db.ui.json", ".ui-theme-synthetic.tmp"])
+def test_force_tracked_ui_settings_block_clone_candidate(tmp_path, name):
+    import subprocess
+
+    from tools.repository_files import collect
+
+    subprocess.run(["git", "init", str(tmp_path)], check=True, capture_output=True)
+    (tmp_path / ".gitignore").write_text("*.ui.json\n.ui-theme-*.tmp\n")
+    (tmp_path / name).write_text('{"theme":"dark"}')
+    subprocess.run(
+        ["git", "-C", str(tmp_path), "add", "--force", name], check=True, capture_output=True
+    )
+    with pytest.raises(SystemExit, match="private"):
+        collect(tmp_path)
 
 
 def test_real_git_ignore_rules_cover_private_imports_and_backups():
@@ -103,9 +123,30 @@ def test_real_git_ignore_rules_cover_private_imports_and_backups():
         "history.sqlite3.bak",
         "custom.db.backup",
         "backups/arbitrary.json",
+        "app.db.ui.json",
+        ".ui-theme-synthetic.tmp",
+        "settings/Library.UI.JSON",
+        "IMPORT-Cookies.JSON",
+        "browser-storage-state.JSON",
+        "HISTORY.DB",
+        "HISTORY.SQLITE3-WAL",
+        "HISTORY.DB.BACKUP",
+        "EXPORT.CSV",
+        "TRACE.HAR",
+        ".ENV.PRIVATE",
     ]
     process = subprocess.run(
-        ["git", "-C", str(root), "check-ignore", "--no-index", "--stdin", "-z"],
+        [
+            "git",
+            "-c",
+            "core.ignorecase=false",
+            "-C",
+            str(root),
+            "check-ignore",
+            "--no-index",
+            "--stdin",
+            "-z",
+        ],
         input="\0".join(paths).encode() + b"\0",
         capture_output=True,
         check=True,

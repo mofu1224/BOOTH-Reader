@@ -1,4 +1,4 @@
-"""Update the recipient's pip HTTP vendor from a hash-verified publisher wheel."""
+"""Update pip's HTTP and CA vendors from hash-verified publisher wheels."""
 
 from __future__ import annotations
 
@@ -11,11 +11,50 @@ import json
 import re
 import shutil
 import zipfile
+from email.parser import BytesParser
 from pathlib import Path
 
 
 def checksum(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
+
+
+def _update_certifi(files: dict[str, bytes], replacement: bytes) -> str:
+    for name in list(files):
+        if name.startswith("pip/_vendor/certifi/"):
+            del files[name]
+    with zipfile.ZipFile(io.BytesIO(replacement)) as archive:
+        metadata_names = [
+            name
+            for name in archive.namelist()
+            if name.count("/") == 1 and name.endswith(".dist-info/METADATA")
+        ]
+        if len(metadata_names) != 1:
+            raise RuntimeError("Unexpected certifi wheel metadata")
+        metadata = BytesParser().parsebytes(archive.read(metadata_names[0]))
+        version = str(metadata["Version"])
+        if metadata["Name"] != "certifi" or not re.fullmatch(r"[0-9.]+", version):
+            raise RuntimeError("Unexpected certifi identity")
+        for name in archive.namelist():
+            if name.endswith("/"):
+                continue
+            if name.startswith("certifi/"):
+                data = archive.read(name)
+                if name == "certifi/core.py":
+                    text = data.decode("utf-8")
+                    for call in ("files", "get_path", "read_text"):
+                        text = text.replace(f'{call}("certifi"', f'{call}("pip._vendor.certifi"')
+                    ast.parse(text)
+                    data = text.encode("utf-8")
+                files["pip/_vendor/" + name] = data
+        license_name = metadata_names[0].rsplit("/", 1)[0] + "/licenses/LICENSE"
+        files["pip/_vendor/certifi/LICENSE"] = archive.read(license_name)
+    vendor = files["pip/_vendor/vendor.txt"].decode("utf-8")
+    vendor, count = re.subn(r"(?m)^(\s*)certifi==[^\r\n]+$", rf"\g<1>certifi=={version}", vendor)
+    if count != 1:
+        raise RuntimeError("Unexpected pip certifi vendor entry")
+    files["pip/_vendor/vendor.txt"] = vendor.encode("utf-8")
+    return version
 
 
 def patch_wheel(root: Path) -> Path:
@@ -28,15 +67,22 @@ def patch_wheel(root: Path) -> Path:
     pip_path = wheels / "pip-26.2.1-py3-none-any.whl"
     urllib3_path = wheels / "urllib3-2.8.0-py3-none-any.whl"
     original, replacement = pip_path.read_bytes(), urllib3_path.read_bytes()
-    if checksum(original) not in allowed or checksum(replacement) not in allowed:
+    certifi_paths = list(wheels.glob("certifi-*.whl"))
+    if len(certifi_paths) != 1:
+        raise RuntimeError("Exactly one locked certifi wheel is required")
+    certifi_replacement = certifi_paths[0].read_bytes()
+    if any(checksum(data) not in allowed for data in (original, replacement, certifi_replacement)):
         raise RuntimeError("Pip patch inputs are not publisher-hash-verified lock files")
     with zipfile.ZipFile(io.BytesIO(original)) as archive:
         files = {name: archive.read(name) for name in archive.namelist() if not name.endswith("/")}
+    original_sha = checksum(original)
     if "urllib3==2.8.0" in files["pip/_vendor/vendor.txt"].decode("utf-8"):
         modifications = json.loads(files["pip/_vendor/BOOTH-MODIFICATIONS.json"])
         if modifications["urllib3_publisher_sha256"] != checksum(replacement):
             raise RuntimeError("Derived pip has unexpected upstream vendor provenance")
-        return pip_path
+        original_sha = modifications["original_sha256"]
+        if modifications.get("certifi_publisher_sha256") == checksum(certifi_replacement):
+            return pip_path
     files = {
         name: data for name, data in files.items() if not name.startswith("pip/_vendor/urllib3/")
     }
@@ -70,15 +116,19 @@ def patch_wheel(root: Path) -> Path:
             if name.endswith(".dist-info/licenses/LICENSE.txt"):
                 files["pip/_vendor/urllib3/LICENSE.txt"] = archive.read(name)
     vendor = files["pip/_vendor/vendor.txt"].decode("utf-8")
-    if "urllib3==2.7.0" not in vendor:
+    if not any(version in vendor for version in ("urllib3==2.7.0", "urllib3==2.8.0")):
         raise RuntimeError("Unexpected pip vendor version")
     files["pip/_vendor/vendor.txt"] = vendor.replace("urllib3==2.7.0", "urllib3==2.8.0").encode(
         "utf-8"
     )
+    certifi_version = _update_certifi(files, certifi_replacement)
     details = {
         "parent": "pip-26.2.1",
-        "original_sha256": checksum(original),
+        "original_sha256": original_sha,
         "urllib3_publisher_sha256": checksum(replacement),
+        "certifi_publisher_sha256": checksum(certifi_replacement),
+        "updated_certifi": certifi_version,
+        "certifi_resource_namespace": "pip._vendor.certifi",
         "updated_vendor": "urllib3-2.8.0",
         "import_namespace_changes": changed_imports,
         "distribution": "locally derived installation; upstream archives retained unchanged; see license-audit/19-release-readiness.md for folder redistribution status",

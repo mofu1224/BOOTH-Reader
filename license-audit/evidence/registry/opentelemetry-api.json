@@ -1,6 +1,5 @@
 {
-  "url": "https://pypi.org/pypi/opentelemetry-api/1.45.0/json",
-  "response_sha256": "997377fe036918b729c445f8256d340e64fabda5ff00b7d1f52d4e485090ced3",
+  "url": "https://pypi.org/pypi/opentelemetry-api/1.45.1/json",
   "info": {
     "author": null,
     "author_email": "OpenTelemetry Authors <cncf-opentelemetry-contributors@lists.cncf.io>",
@@ -46,13 +45,13 @@
       "Repository": "https://github.com/open-telemetry/opentelemetry-python"
     },
     "provides_extra": null,
-    "release_url": "https://pypi.org/project/opentelemetry-api/1.45.0/",
+    "release_url": "https://pypi.org/project/opentelemetry-api/1.45.1/",
     "requires_dist": [
       "typing-extensions>=4.5.0"
     ],
     "requires_python": ">=3.10",
     "summary": "OpenTelemetry Python API",
-    "version": "1.45.0",
+    "version": "1.45.1",
     "yanked": false,
     "yanked_reason": null
   },
@@ -60,24 +59,24 @@
     {
       "comment_text": null,
       "core-metadata": {
-        "sha256": "a05106d3a686244448191983a1d38701270190bab7687298f981135e387ba234"
+        "sha256": "5bc71e90cb421be92a43bf5ad5b0f25dccfa2a24ddceaa2877779879962a4c9e"
       },
       "digests": {
-        "blake2b_256": "44b9040d1a1c7836922828e6480cd2366bb8fe0ebf75b413d2bb51a9b0e7f78f",
-        "md5": "71b4e90a5e69b3f6394d6ef8aacbcc6d",
-        "sha256": "80e068aba7cd56c8b58512d6a36f8d25cb1dfaa0c0a4cc1c938ccf9f362d9cb3"
+        "blake2b_256": "1e41f7dcf80b81ee8e71c1a2b59f14208bc723edbd89ed027a73b175abf6348e",
+        "md5": "28d429b00698494344186f7342c15689",
+        "sha256": "b31553efa588ae44bc306f863c785c5333a9ecc091248c6ee68b4b6c87fdedfb"
       },
       "downloads": -1,
-      "filename": "opentelemetry_api-1.45.0-py3-none-any.whl",
+      "filename": "opentelemetry_api-1.45.1-py3-none-any.whl",
       "has_sig": false,
-      "md5_digest": "71b4e90a5e69b3f6394d6ef8aacbcc6d",
+      "md5_digest": "28d429b00698494344186f7342c15689",
       "packagetype": "bdist_wheel",
       "python_version": "py3",
       "requires_python": ">=3.10",
-      "size": 60020,
-      "upload_time": "2026-09-25T12:32:03",
-      "upload_time_iso_8601": "2026-09-25T12:32:03.192401Z",
-      "url": "https://files.pythonhosted.org/packages/44/b9/040d1a1c7836922828e6480cd2366bb8fe0ebf75b413d2bb51a9b0e7f78f/opentelemetry_api-1.45.0-py3-none-any.whl",
+      "size": 60256,
+      "upload_time": "2026-10-06T17:32:33",
+      "upload_time_iso_8601": "2026-10-06T17:32:33.506615Z",
+      "url": "https://files.pythonhosted.org/packages/1e/41/f7dcf80b81ee8e71c1a2b59f14208bc723edbd89ed027a73b175abf6348e/opentelemetry_api-1.45.1-py3-none-any.whl",
       "yanked": false,
       "yanked_reason": null
     },
@@ -85,21 +84,21 @@
       "comment_text": null,
       "core-metadata": false,
       "digests": {
-        "blake2b_256": "1fdce12c1fe1ed8a7b7149777127b1a0e12ce5bd5a81d97408bedc2128c260f5",
-        "md5": "7ad5b73590259f0da66c9d9314f1af80",
-        "sha256": "711ede81773c8025c2c03dac0450bc89f3d30aea6eabcc815c570d4e35a963f7"
+        "blake2b_256": "2e026e0ae9cc61bd3169d401077b507b3ebc344745171e1051ab430be012dcd9",
+        "md5": "54bb20b0cb8b4d0ef8a3389cebc4a81b",
+        "sha256": "aa38ed19bcc084ba42782a73255b3582283eced7ad6dddbd6695189e69adfb75"
       },
       "downloads": -1,
-      "filename": "opentelemetry_api-1.45.0.tar.gz",
+      "filename": "opentelemetry_api-1.45.1.tar.gz",
       "has_sig": false,
-      "md5_digest": "7ad5b73590259f0da66c9d9314f1af80",
+      "md5_digest": "54bb20b0cb8b4d0ef8a3389cebc4a81b",
       "packagetype": "sdist",
       "python_version": "source",
       "requires_python": ">=3.10",
-      "size": 72115,
-      "upload_time": "2026-09-25T12:32:28",
-      "upload_time_iso_8601": "2026-09-25T12:32:28.399446Z",
-      "url": "https://files.pythonhosted.org/packages/1f/dc/e12c1fe1ed8a7b7149777127b1a0e12ce5bd5a81d97408bedc2128c260f5/opentelemetry_api-1.45.0.tar.gz",
+      "size": 72804,
+      "upload_time": "2026-10-06T17:32:58",
+      "upload_time_iso_8601": "2026-10-06T17:32:58.133911Z",
+      "url": "https://files.pythonhosted.org/packages/2e/02/6e0ae9cc61bd3169d401077b507b3ebc344745171e1051ab430be012dcd9/opentelemetry_api-1.45.1.tar.gz",
       "yanked": false,
       "yanked_reason": null
     }

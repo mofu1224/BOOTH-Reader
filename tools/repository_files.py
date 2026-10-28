@@ -44,6 +44,7 @@ def collect(root: Path = ROOT) -> list[Path]:
             and path.suffix == ".chunk"
             and active_chunks is not None
             and name not in active_chunks
+            and path.exists()
         ):
             raise SystemExit("Clone candidate contains an inactive vendor chunk")
         if path.is_symlink() or not path.resolve().is_relative_to(root.resolve()):

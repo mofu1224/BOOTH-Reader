@@ -55,7 +55,11 @@ CLIも `start.bat <command>` で実行できます（`start.bat cli <command>` �
 
 **Cookie登録 → BOOTHと同期 → 分類・ダウンロード** の順に進みます。
 
+運用前に `start.bat --check` と `start.bat doctor --json` で環境・DB・保存先を確認してください。更新前は[バックアップ](#バックアップと復旧)を作成します。Cookie未登録の警告は初回登録で解消します。
+
 画面右上の **JA / EN** で日本語・英語を切り替えます。設定はブラウザーに保存します。ログ・CLI・起動出力は英語です。
+
+太陽／月ボタンでライト・ダークを切り替えます。テーマはDBの隣の `<DB名>.ui.json` に保存し、次回起動時も保持します。この設定ファイルもGit対象外です。
 
 - **Cookie**：BOOTH/pixivのCookie JSON（配列、または `cookies` 配列を持つJSON・1MB以下）を登録すると全ページを同期します。CLIでのログインも検出します。置換時は確認があります。
 - **商品**：「すべての商品」「未分類」「マイリスト」を切替。商品名・ショップ名で検索し、48件ずつ表示します。画像がない商品も名前で確認できます。
@@ -213,6 +217,8 @@ DB・購入ファイルは保持します。DB移行は前方向のみで、新�
 ## 配布・ライセンス
 
 配布は**Gitクローン**です。利用中フォルダーには個人データがあるため第三者へ渡さないでください。Cookie・DB・購入物・プロフィール・CSV・ログ等はGit対象外です。任意名の私用出力は `.private/` へ保存します（未知のファイル名や外部保存先は自動判別できません）。
+
+独自のDB・ダウンロード先・インポート・画面保存も `.private/` 配下へまとめてください。コミット前は `tools/check_release_hygiene.py --git-only` で追跡・追加候補・履歴の私用パスを検査します。`.gitignore` は既に追跡済みのファイルには効かないため、既存データを強制追加しないでください。この検査はパスの検査であり、内容の秘密情報検査とは別です。
 
 - [本体MIT](LICENSE)・[第三者通知](THIRD_PARTY_NOTICES.md)・[Microsoft利用条件](THIRD_PARTY_TERMS.md)
 - [対応ソース](SOURCE_OBLIGATIONS/README.md)・[両OS配布判定](license-audit/31-cross-platform-clone-distribution.md)

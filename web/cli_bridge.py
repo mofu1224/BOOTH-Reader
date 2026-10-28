@@ -18,8 +18,8 @@ behaviourally identical; the worker only removes process startup from the loop.
 If it cannot start, or dies, the bridge transparently falls back to one-shot
 subprocesses.
 
-Long-running work (``download``) always uses a one-shot subprocess so a
-multi-hour transfer can never block the worker's request loop.
+Network sync and downloads use dedicated subprocesses so slow network work
+never blocks the worker's request loop.
 """
 
 from __future__ import annotations
@@ -508,7 +508,9 @@ def get_auth_status(bridge: Bridge) -> dict[str, Any]:
 
 
 def update_purchases(bridge: Bridge) -> dict[str, Any]:
-    return bridge.run(["purchases", "list", "--update-db", "--json"], timeout=300).data or {
+    return bridge.run_blocking(
+        ["purchases", "list", "--update-db", "--json"], timeout=300
+    ).data or {
         "count": 0,
         "items": [],
     }

@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "target": "windows-x86_64",
-  "lock_sha256": "a1b58b316c3b6de5908e9ee1de44270ce54fc7362e3608cc832da688257a3593",
+  "target": "windows-x64",
+  "lock_sha256": "6ebd25ac610cb79c746aaae02e8d9364de0d90d36e1d2ec84f8666e09775bd71",
   "assets": {
     "python": {
       "destination": ".cache/downloads/cpython-3.12.13-booth-runtime.tar.gz",
@@ -15,32 +15,20 @@
         }
       ]
     },
-    "sqlite": {
-      "destination": ".cache/downloads/sqlite-dll-win-x64-3530400.zip",
-      "sha256": "8b959b7eff4a81f6a62fc3468f9273e5cfe78d4a927e62215aed231b654fb104",
-      "size": 1370147,
-      "parts": [
-        {
-          "file": "sqlite-8b959b7eff4a81f6-000.chunk",
-          "sha256": "8b959b7eff4a81f6a62fc3468f9273e5cfe78d4a927e62215aed231b654fb104",
-          "size": 1370147
-        }
-      ]
-    },
     "wheels": {
       "destination": ".cache/vendor/wheels.zip",
-      "sha256": "b24ecc5fba13bb3c35957c93580e3c2b9e4f012eb0b48618bef7085baee875b8",
-      "size": 72742721,
+      "sha256": "d74f79dd934db21d8a7306ab9a4a2e7766020850560762069fb57d0e3af0ee35",
+      "size": 72796817,
       "parts": [
         {
-          "file": "wheels-b24ecc5fba13bb3c-000.chunk",
-          "sha256": "0df5fcacd6a0a175c71efd53cfdcdee18514bb89c85055cdb704d156a1a13f84",
+          "file": "wheels-d74f79dd934db21d-000.chunk",
+          "sha256": "5edbcc081d5eb86ab71663da4e729ab22cfe0883b4addfe0c4dd440ab562ea79",
           "size": 41943040
         },
         {
-          "file": "wheels-b24ecc5fba13bb3c-001.chunk",
-          "sha256": "aeefce9edcd57d225d974aba80d60e93bb75f213d3c9623d3e06c59cd652c72d",
-          "size": 30799681
+          "file": "wheels-d74f79dd934db21d-001.chunk",
+          "sha256": "ad333e53d6bb93df5af732012cae5211f2feb8cdedbff1cbedb2de0ad6f03daa",
+          "size": 30853777
         }
       ]
     },
@@ -105,6 +93,18 @@
           "file": "browser-receipt-fd6533dd1d0220a0-000.chunk",
           "sha256": "fd6533dd1d0220a0f36e86048ef3cd7b66ae228891233895eb7ed70eabfa4010",
           "size": 1144
+        }
+      ]
+    },
+    "sqlite": {
+      "destination": ".cache/downloads/sqlite-dll-win-x64-3530400.zip",
+      "sha256": "8b959b7eff4a81f6a62fc3468f9273e5cfe78d4a927e62215aed231b654fb104",
+      "size": 1370147,
+      "parts": [
+        {
+          "file": "sqlite-8b959b7eff4a81f6-000.chunk",
+          "sha256": "8b959b7eff4a81f6a62fc3468f9273e5cfe78d4a927e62215aed231b654fb104",
+          "size": 1370147
         }
       ]
     }

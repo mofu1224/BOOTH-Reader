@@ -1,8 +1,8 @@
 # 対応ソースと提供条件
 
-## certifi 2026.7.22
+## certifi 2026.10.19
 
-`certifi-2026.7.22.tar.gz` は同じ版のPyPI公式sdistを取得し、公開SHA-256と照合した原本です。
+`certifi-2026.10.19.tar.gz` は同じ版のPyPI公式sdistを取得し、公開SHA-256と照合した原本です。
 取得URL・ハッシュは `license-audit/packages.json` のcertifi行にあります。
 MPL-2.0対象ファイルを変更せず配布する場合のSource Code Formを同梱します。
 このフォルダーをバイナリ配布と同じ場所で入手できる状態に保ち、MPL原文と権利通知を保持してください。
@@ -15,6 +15,8 @@ Python初期アーカイブ内のpipが同梱する別版certifiは、このsdis
 固定wheelのpip26.2.1内certifi2026.6.17です。pipによるimport書換えも保持しています。
 全22ファイルの元パス・SHA-256は `license-audit/vendored-certifi-source.json` を参照してください。
 原文ライセンスは `THIRD_PARTY_LICENSES/` と元アーカイブ内に保持します。
+
+2026-10-28以降の準備では、pip内のcertifiも2026.10.19へ更新します。原本CA束とLICENSEを保ち、リソース参照のパッケージ名だけを変更した8ソースを`patched-pip-certifi-source.tar.gz`へ収録しました。元sdistと変更ツール`tools/pip_runtime_patch.py`も同じリポジトリに保持します。初期アーカイブ内の旧版ソースと、準備後に使用する新版ソースを区別し、対応は`license-audit/vendored-certifi-source.json`の`security_update_2026_10_28`で照合します。
 
 ## packageurl-python 0.17.6
 

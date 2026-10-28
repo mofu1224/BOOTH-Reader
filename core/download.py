@@ -34,8 +34,9 @@ import time
 import unicodedata
 import zipfile
 from collections.abc import Callable, Iterable, Mapping
-from concurrent.futures import ThreadPoolExecutor, as_completed
+from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
 from dataclasses import dataclass
+from itertools import islice
 from pathlib import Path
 from typing import Any, cast
 from urllib.parse import urljoin, urlsplit
@@ -1307,14 +1308,20 @@ def _download_many(
         return results
 
     with ThreadPoolExecutor(max_workers=workers, thread_name_prefix="br-dl") as ex:
-        futures = {ex.submit(run, iid): iid for iid in ids}
-        for fut in as_completed(futures):
-            iid = futures[fut]
-            completed += 1
-            try:
-                record(fut.result())
-            except Exception as e:  # noqa: BLE001
-                results["failed"].append({"item_id": iid, "error": f"{type(e).__name__}: {e}"})
-            if progress_cb:
-                progress_cb(completed, total)
+        remaining = iter(ids)
+        futures = {ex.submit(run, iid): iid for iid in islice(remaining, workers)}
+        while futures:
+            done, _ = wait(futures, return_when=FIRST_COMPLETED)
+            for fut in done:
+                iid = futures.pop(fut)
+                completed += 1
+                try:
+                    record(fut.result())
+                except Exception as e:  # noqa: BLE001
+                    results["failed"].append({"item_id": iid, "error": f"{type(e).__name__}: {e}"})
+                if progress_cb:
+                    progress_cb(completed, total)
+                next_id = next(remaining, None)
+                if next_id is not None:
+                    futures[ex.submit(run, next_id)] = next_id
     return results

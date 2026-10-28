@@ -1,5 +1,6 @@
 """The clone candidate must match Git, including files omitted by old ZIP lists."""
 
+import json
 import subprocess
 
 import pytest
@@ -49,6 +50,25 @@ def test_candidate_preserves_deletions_and_does_not_touch_index(tmp_path):
     source.unlink()
     assert collect(tmp_path) == []
     assert (tmp_path / ".git/index").read_bytes() == index
+
+
+def test_candidate_preserves_deleted_vendor_chunks(tmp_path):
+    git(tmp_path, "init")
+    vendor = tmp_path / "vendor/windows-x64"
+    vendor.mkdir(parents=True)
+    previous = vendor / "wheels-old.chunk"
+    previous.write_bytes(b"old synthetic wheel archive")
+    git(tmp_path, "add", ".")
+    previous.unlink()
+    current = vendor / "wheels-current.chunk"
+    current.write_bytes(b"new synthetic wheel archive")
+    (vendor / "manifest.json").write_text(
+        json.dumps({"assets": {"wheels": {"parts": [{"file": current.name}]}}})
+    )
+    assert {path.relative_to(tmp_path).as_posix() for path in collect(tmp_path)} == {
+        "vendor/windows-x64/manifest.json",
+        "vendor/windows-x64/wheels-current.chunk",
+    }
 
 
 def test_gate_hashes_survive_git_line_endings_without_altering_upstream(tmp_path):

@@ -15,9 +15,10 @@ mkdir "$mount"
 trap '/usr/bin/hdiutil detach "$mount" >/dev/null 2>&1 || true; /bin/rmdir "$mount" 2>/dev/null || true' EXIT
 /usr/bin/hdiutil verify "$image" >/dev/null
 /usr/bin/hdiutil attach -readonly -nobrowse -noautoopen -mountpoint "$mount" "$image" >/dev/null
-app="$mount/Google Chrome.app"
+mkdir -p .cache/ui-test-driver
+app="$root/.cache/ui-test-driver/Google Chrome.app"
+# DMG Finder metadata is not signed code and can fail strict resource checks.
+/usr/bin/ditto --norsrc --noextattr "$mount/Google Chrome.app" "$app"
 /usr/bin/codesign --verify --deep --strict -R '=anchor apple generic and certificate leaf[subject.OU] = "EQHXZ8M8AV"' "$app"
 /usr/sbin/spctl --assess --type execute "$app"
-mkdir -p .cache/ui-test-driver
-/usr/bin/ditto "$app" '.cache/ui-test-driver/Google Chrome.app'
 printf 'Signature-verified UI test driver ready in ignored .cache; not redistributed.\n'

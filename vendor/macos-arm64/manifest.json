@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "target": "macos-arm64",
-  "lock_sha256": "69cd82b5d2a4afab7af2d5ffcb78ad27d638c7bc698fc7fa91e245c6cffe5f47",
+  "lock_sha256": "32d38b4e41ddd23c4cf6545f968e707b67c5d96ed2fc18786e8f6e54b4f279d0",
   "assets": {
     "python": {
       "destination": ".cache/downloads/cpython-3.12.15+20261003-aarch64-apple-darwin-install_only.tar.gz",
@@ -17,18 +17,18 @@
     },
     "wheels": {
       "destination": ".cache/vendor/wheels.zip",
-      "sha256": "c6c9f796c2eec4a6e9e7d6913524637cc83e70fabe648dad1b5948d5a6e8702f",
-      "size": 79355187,
+      "sha256": "985669788cf188d74db2b14101b1bb50819f85d00f4bbaf125dec72e4bbcc77e",
+      "size": 79409283,
       "parts": [
         {
-          "file": "wheels-c6c9f796c2eec4a6-000.chunk",
-          "sha256": "36e17a622b2ee71a56f3ef34879c4d60702ea05c07710eef16d5b9a404f10446",
+          "file": "wheels-985669788cf188d7-000.chunk",
+          "sha256": "188c9a4cedcf28fd466d66f5f52fc030daa10ed6e1e727dd185bd7fc19e35e68",
           "size": 41943040
         },
         {
-          "file": "wheels-c6c9f796c2eec4a6-001.chunk",
-          "sha256": "829bb60ea505982f03100898825e51e73f6ea37172073a85dd473cc0e5215888",
-          "size": 37412147
+          "file": "wheels-985669788cf188d7-001.chunk",
+          "sha256": "440191ba37ca67a997fcccd0e1a1848f358d752cc77c32edbcfda71fff68f4c9",
+          "size": 37466243
         }
       ]
     },

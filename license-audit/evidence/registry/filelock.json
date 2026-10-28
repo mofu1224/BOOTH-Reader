@@ -1,6 +1,5 @@
 {
-  "url": "https://pypi.org/pypi/filelock/4.0.7/json",
-  "response_sha256": "5eba2582efc69bdbcb85f84c20a39dfc709602dc325c546a2e5eff39434c42f5",
+  "url": "https://pypi.org/pypi/filelock/4.2.1/json",
   "info": {
     "author": null,
     "author_email": null,
@@ -12,7 +11,6 @@
       "Operating System :: OS Independent",
       "Programming Language :: Python",
       "Programming Language :: Python :: 3 :: Only",
-      "Programming Language :: Python :: 3.10",
       "Programming Language :: Python :: 3.11",
       "Programming Language :: Python :: 3.12",
       "Programming Language :: Python :: 3.13",
@@ -52,11 +50,11 @@
       "Tracker": "https://github.com/tox-dev/py-filelock/issues"
     },
     "provides_extra": null,
-    "release_url": "https://pypi.org/project/filelock/4.0.7/",
+    "release_url": "https://pypi.org/project/filelock/4.2.1/",
     "requires_dist": null,
-    "requires_python": ">=3.10",
+    "requires_python": ">=3.11",
     "summary": "A platform independent file lock.",
-    "version": "4.0.7",
+    "version": "4.2.1",
     "yanked": false,
     "yanked_reason": null
   },
@@ -64,24 +62,24 @@
     {
       "comment_text": null,
       "core-metadata": {
-        "sha256": "6a897f004f8d4e552fe078373b859d5f50d21fdbb62c32b40923a88fedb47a0e"
+        "sha256": "bfaf7126025d4e55327f6d9497b754e469b5ce54224d46e6118150dd13598037"
       },
       "digests": {
-        "blake2b_256": "06cf1731c0dd182ee35f80a39e63afb3d03056ea0dd561b7498932b10b2e34d9",
-        "md5": "46eba9fdb4261a99ee7e2b8051f9156b",
-        "sha256": "a93c4d93269b339a6af4848342c7e940d0f9928ad95eff64764699e5f1bf8a6a"
+        "blake2b_256": "2800db89d339bc4ecdc8087fa7b8607ba22ffc27bf96286f340c9620bea428b3",
+        "md5": "49e4d55f00a3b71a24911c305f9223bf",
+        "sha256": "7be2662e9e826b9bba28afc0f843a123280d799a2ea44bb5d35ccec67905ae44"
       },
       "downloads": -1,
-      "filename": "filelock-4.0.7-py3-none-any.whl",
+      "filename": "filelock-4.2.1-py3-none-any.whl",
       "has_sig": false,
-      "md5_digest": "46eba9fdb4261a99ee7e2b8051f9156b",
+      "md5_digest": "49e4d55f00a3b71a24911c305f9223bf",
       "packagetype": "bdist_wheel",
       "python_version": "py3",
-      "requires_python": ">=3.10",
-      "size": 109242,
-      "upload_time": "2026-09-29T23:04:04",
-      "upload_time_iso_8601": "2026-09-29T23:04:04.696990Z",
-      "url": "https://files.pythonhosted.org/packages/06/cf/1731c0dd182ee35f80a39e63afb3d03056ea0dd561b7498932b10b2e34d9/filelock-4.0.7-py3-none-any.whl",
+      "requires_python": ">=3.11",
+      "size": 162455,
+      "upload_time": "2026-10-17T16:48:12",
+      "upload_time_iso_8601": "2026-10-17T16:48:12.937020Z",
+      "url": "https://files.pythonhosted.org/packages/28/00/db89d339bc4ecdc8087fa7b8607ba22ffc27bf96286f340c9620bea428b3/filelock-4.2.1-py3-none-any.whl",
       "yanked": false,
       "yanked_reason": null
     },
@@ -89,21 +87,21 @@
       "comment_text": null,
       "core-metadata": false,
       "digests": {
-        "blake2b_256": "35f514097cca69f53794270d8c7970b48321636302affe3154c7e0ba114eeff9",
-        "md5": "a7cd5708a35a5a7b475ba493f37dd737",
-        "sha256": "da5915714a70b55d167fdc7e251ad91302b0a36816fb574dfafae8f4f2c9bb21"
+        "blake2b_256": "d598771d8ca889f220d7d7e352addf500666368f0fd081c6080a83767580c6e4",
+        "md5": "0bae131cb287639bbab88d659a1c5cf6",
+        "sha256": "c4c937ccac2a813cee448e662a56366cfb374c0f8702e75f295c412cc1c5d5a3"
       },
       "downloads": -1,
-      "filename": "filelock-4.0.7.tar.gz",
+      "filename": "filelock-4.2.1.tar.gz",
       "has_sig": false,
-      "md5_digest": "a7cd5708a35a5a7b475ba493f37dd737",
+      "md5_digest": "0bae131cb287639bbab88d659a1c5cf6",
       "packagetype": "sdist",
       "python_version": "source",
-      "requires_python": ">=3.10",
-      "size": 248489,
-      "upload_time": "2026-09-29T23:04:05",
-      "upload_time_iso_8601": "2026-09-29T23:04:05.995567Z",
-      "url": "https://files.pythonhosted.org/packages/35/f5/14097cca69f53794270d8c7970b48321636302affe3154c7e0ba114eeff9/filelock-4.0.7.tar.gz",
+      "requires_python": ">=3.11",
+      "size": 650997,
+      "upload_time": "2026-10-17T16:48:14",
+      "upload_time_iso_8601": "2026-10-17T16:48:14.435351Z",
+      "url": "https://files.pythonhosted.org/packages/d5/98/771d8ca889f220d7d7e352addf500666368f0fd081c6080a83767580c6e4/filelock-4.2.1.tar.gz",
       "yanked": false,
       "yanked_reason": null
     }

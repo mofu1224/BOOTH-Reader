@@ -584,11 +584,11 @@
     }
   },
   {
-    "id": "pkg:pypi/certifi@2026.7.22",
+    "id": "pkg:pypi/certifi@2026.10.19",
     "name": "certifi",
-    "version": "2026.7.22",
-    "wheel": "certifi-2026.7.22-py3-none-any.whl",
-    "sha256": "62f22742b58a1a33014a2b6b706588a8d7e2a88ae7bd1a6ebe8c992928483775",
+    "version": "2026.10.19",
+    "wheel": "certifi-2026.10.19-py3-none-any.whl",
+    "sha256": "42d35340cc5b9ba78e818ddbff0c5b1c2b779de448a340fd1b989f5fa8670e1b",
     "role": "runtime",
     "reported_license": "MPL-2.0",
     "authors": "Kenneth Reitz",
@@ -601,18 +601,18 @@
     "unsatisfied": [],
     "notices": [
       {
-        "path": "THIRD_PARTY_LICENSES/certifi-2026.7.22/e93716da6b9c-certifi-2026.7.22.dist-info_licenses_LICENSE",
-        "original_path": "certifi-2026.7.22.dist-info/licenses/LICENSE",
+        "path": "THIRD_PARTY_LICENSES/certifi-2026.10.19/e93716da6b9c-certifi-2026.10.19.dist-info_licenses_LICENSE",
+        "original_path": "certifi-2026.10.19.dist-info/licenses/LICENSE",
         "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7",
         "size": 989,
-        "source": "certifi-2026.7.22-py3-none-any.whl"
+        "source": "certifi-2026.10.19-py3-none-any.whl"
       },
       {
-        "path": "THIRD_PARTY_LICENSES/certifi-2026.7.22/e93716da6b9c-certifi-2026.7.22_LICENSE",
-        "original_path": "certifi-2026.7.22/LICENSE",
+        "path": "THIRD_PARTY_LICENSES/certifi-2026.10.19/e93716da6b9c-certifi-2026.10.19_LICENSE",
+        "original_path": "certifi-2026.10.19/LICENSE",
         "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7",
         "size": 989,
-        "source": "https://files.pythonhosted.org/packages/a3/c2/24167ea9858356b47a87a50d39908bfdb72ceeefe0041586e704e5376b3a/certifi-2026.7.22.tar.gz"
+        "source": "https://files.pythonhosted.org/packages/a6/bd/1436c50cc46699de0230fbaacc1d1de7bfec413176099949e9d5112e88f2/certifi-2026.10.19.tar.gz"
       }
     ],
     "nested_metadata": [],
@@ -621,26 +621,26 @@
     "status": "NOT VERIFIED",
     "classification": "THIRD-PARTY",
     "registry": {
-      "url": "https://pypi.org/pypi/certifi/2026.7.22/json",
+      "url": "https://pypi.org/pypi/certifi/2026.10.19/json",
       "wheel_digest_verified": true,
       "source": {
-        "path": "SOURCE_OBLIGATIONS/certifi-2026.7.22.tar.gz",
-        "sha256": "741e2c3b351ddf169a738da9f2c048608ff7f2c5cc02f1ebc6b118bb090d5d55",
-        "url": "https://files.pythonhosted.org/packages/a3/c2/24167ea9858356b47a87a50d39908bfdb72ceeefe0041586e704e5376b3a/certifi-2026.7.22.tar.gz"
+        "path": "SOURCE_OBLIGATIONS/certifi-2026.10.19.tar.gz",
+        "sha256": "035c1e85572b141bf1c3a3eff0e33a8eb74917522f2559075ff8d2fea780a1ae",
+        "url": "https://files.pythonhosted.org/packages/a6/bd/1436c50cc46699de0230fbaacc1d1de7bfec413176099949e9d5112e88f2/certifi-2026.10.19.tar.gz"
       },
       "source_notices": [
         {
-          "path": "THIRD_PARTY_LICENSES/certifi-2026.7.22/e93716da6b9c-certifi-2026.7.22_LICENSE",
-          "original_path": "certifi-2026.7.22/LICENSE",
+          "path": "THIRD_PARTY_LICENSES/certifi-2026.10.19/e93716da6b9c-certifi-2026.10.19_LICENSE",
+          "original_path": "certifi-2026.10.19/LICENSE",
           "sha256": "e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7",
           "size": 989,
-          "source": "https://files.pythonhosted.org/packages/a3/c2/24167ea9858356b47a87a50d39908bfdb72ceeefe0041586e704e5376b3a/certifi-2026.7.22.tar.gz"
+          "source": "https://files.pythonhosted.org/packages/a6/bd/1436c50cc46699de0230fbaacc1d1de7bfec413176099949e9d5112e88f2/certifi-2026.10.19.tar.gz"
         }
       ],
       "source_matches_wheel": {
-        "certifi/cacert.pem": "9cc2a774b5198dcff14d9be1e66091f538975d867ce029a96bce15a55dfd730f",
+        "certifi/cacert.pem": "50f79f98dac192b20dbf73f35c56f0b0c557ab267ff5199d1117cc1180b70785",
         "certifi/core.py": "5c55f2727746e697f7edac9e17c377d8752e0da7ecca191531b3b80403d61dad",
-        "certifi/__init__.py": "7a52e5f4205f9b3d12a31898ceaa7e3f6837d19cc230700bcae1a9d91d1486c1"
+        "certifi/__init__.py": "f8ccfc10235998c7edd340f2f305b5f3d71aed978aea82a02af30d7877bee902"
       }
     }
   },
@@ -1694,11 +1694,11 @@
     }
   },
   {
-    "id": "pkg:pypi/filelock@4.0.7",
+    "id": "pkg:pypi/filelock@4.2.1",
     "name": "filelock",
-    "version": "4.0.7",
-    "wheel": "filelock-4.0.7-py3-none-any.whl",
-    "sha256": "a93c4d93269b339a6af4848342c7e940d0f9928ad95eff64764699e5f1bf8a6a",
+    "version": "4.2.1",
+    "wheel": "filelock-4.2.1-py3-none-any.whl",
+    "sha256": "7be2662e9e826b9bba28afc0f843a123280d799a2ea44bb5d35ccec67905ae44",
     "role": "development/build",
     "reported_license": "MIT",
     "authors": "NOT VERIFIED",
@@ -1713,11 +1713,11 @@
     "unsatisfied": [],
     "notices": [
       {
-        "path": "THIRD_PARTY_LICENSES/filelock-4.0.7/608c89d5060a-filelock-4.0.7.dist-info_licenses_LICENSE",
-        "original_path": "filelock-4.0.7.dist-info/licenses/LICENSE",
+        "path": "THIRD_PARTY_LICENSES/filelock-4.2.1/608c89d5060a-filelock-4.2.1.dist-info_licenses_LICENSE",
+        "original_path": "filelock-4.2.1.dist-info/licenses/LICENSE",
         "sha256": "608c89d5060ae9921adccf3236695bc654a9946e12323ef6c021dfa04e294d48",
         "size": 1088,
-        "source": "filelock-4.0.7-py3-none-any.whl"
+        "source": "filelock-4.2.1-py3-none-any.whl"
       }
     ],
     "nested_metadata": [],
@@ -1743,6 +1743,12 @@
         ]
       },
       {
+        "path": "filelock/_util.py",
+        "markers": [
+          "source:"
+        ]
+      },
+      {
         "path": "filelock/_soft_rw/_protocol.py",
         "markers": [
           "source:"
@@ -1764,7 +1770,7 @@
     "status": "NOT VERIFIED",
     "classification": "THIRD-PARTY",
     "registry": {
-      "url": "https://pypi.org/pypi/filelock/4.0.7/json",
+      "url": "https://pypi.org/pypi/filelock/4.2.1/json",
       "wheel_digest_verified": true
     }
   },
@@ -3600,11 +3606,11 @@
     }
   },
   {
-    "id": "pkg:pypi/opentelemetry-api@1.45.0",
+    "id": "pkg:pypi/opentelemetry-api@1.45.1",
     "name": "opentelemetry-api",
-    "version": "1.45.0",
-    "wheel": "opentelemetry_api-1.45.0-py3-none-any.whl",
-    "sha256": "80e068aba7cd56c8b58512d6a36f8d25cb1dfaa0c0a4cc1c938ccf9f362d9cb3",
+    "version": "1.45.1",
+    "wheel": "opentelemetry_api-1.45.1-py3-none-any.whl",
+    "sha256": "b31553efa588ae44bc306f863c785c5333a9ecc091248c6ee68b4b6c87fdedfb",
     "role": "development/build",
     "reported_license": "Apache-2.0",
     "authors": "OpenTelemetry Authors <cncf-opentelemetry-contributors@lists.cncf.io>",
@@ -3619,11 +3625,11 @@
     "unsatisfied": [],
     "notices": [
       {
-        "path": "THIRD_PARTY_LICENSES/opentelemetry-api-1.45.0/c71d239df917-opentelemetry_api-1.45.0.dist-info_licenses_LICENSE",
-        "original_path": "opentelemetry_api-1.45.0.dist-info/licenses/LICENSE",
+        "path": "THIRD_PARTY_LICENSES/opentelemetry-api-1.45.1/c71d239df917-opentelemetry_api-1.45.1.dist-info_licenses_LICENSE",
+        "original_path": "opentelemetry_api-1.45.1.dist-info/licenses/LICENSE",
         "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
         "size": 11357,
-        "source": "opentelemetry_api-1.45.0-py3-none-any.whl"
+        "source": "opentelemetry_api-1.45.1-py3-none-any.whl"
       }
     ],
     "nested_metadata": [],
@@ -3822,7 +3828,7 @@
     "status": "NOT VERIFIED",
     "classification": "THIRD-PARTY",
     "registry": {
-      "url": "https://pypi.org/pypi/opentelemetry-api/1.45.0/json",
+      "url": "https://pypi.org/pypi/opentelemetry-api/1.45.1/json",
       "wheel_digest_verified": true
     }
   },
@@ -10558,11 +10564,11 @@
     }
   },
   {
-    "id": "pkg:pypi/setuptools@84.0.0",
+    "id": "pkg:pypi/setuptools@84.1.0",
     "name": "setuptools",
-    "version": "84.0.0",
-    "wheel": "setuptools-84.0.0-py3-none-any.whl",
-    "sha256": "51a52592b3b99e102b609654876bd65f19f999935166d1352678931132b0c670",
+    "version": "84.1.0",
+    "wheel": "setuptools-84.1.0-py3-none-any.whl",
+    "sha256": "5231689c6ac8156cd155cfb98c3fd6fb252c3e7e9bd3d78b64d3c55f132624c9",
     "role": "development/build",
     "reported_license": "MIT",
     "authors": "Python Packaging Authority <distutils-sig@python.org>",
@@ -10627,123 +10633,123 @@
     "unsatisfied": [],
     "notices": [
       {
-        "path": "THIRD_PARTY_LICENSES/setuptools-84.0.0/458502e12d97-setuptools__vendor_importlib_metadata-8.7.1.dist-info_licenses_LICENSE",
+        "path": "THIRD_PARTY_LICENSES/setuptools-84.1.0/458502e12d97-setuptools__vendor_importlib_metadata-8.7.1.dist-info_licenses_LICENSE",
         "original_path": "setuptools/_vendor/importlib_metadata-8.7.1.dist-info/licenses/LICENSE",
         "sha256": "458502e12d97bbf64438606a20044aa85eb05fb0a8a807bb35dbec253fd1fc04",
         "size": 10278,
-        "source": "setuptools-84.0.0-py3-none-any.whl"
+        "source": "setuptools-84.1.0-py3-none-any.whl"
       },
       {
-        "path": "THIRD_PARTY_LICENSES/setuptools-84.0.0/9755a1851966-setuptools__vendor_jaraco_context-6.1.0.dist-info_licenses_LICENSE",
+        "path": "THIRD_PARTY_LICENSES/setuptools-84.1.0/9755a1851966-setuptools__vendor_jaraco_context-6.1.0.dist-info_licenses_LICENSE",
         "original_path": "setuptools/_vendor/jaraco_context-6.1.0.dist-info/licenses/LICENSE",
         "sha256": "9755a18519666e5f0f4cae3daad3d7012bcae48a600b31237d75e9fe134e6683",
         "size": 1076,
-        "source": "setuptools-84.0.0-py3-none-any.whl"
+        "source": "setuptools-84.1.0-py3-none-any.whl"
       },
       {
-        "path": "THIRD_PARTY_LICENSES/setuptools-84.0.0/5a57cb4db85e-setuptools__vendor_jaraco_functools-4.4.0.dist-info_licenses_LICENSE",
+        "path": "THIRD_PARTY_LICENSES/setuptools-84.1.0/5a57cb4db85e-setuptools__vendor_jaraco_functools-4.4.0.dist-info_licenses_LICENSE",
         "original_path": "setuptools/_vendor/jaraco_functools-4.4.0.dist-info/licenses/LICENSE",
         "sha256": "5a57cb4db85e2a2dd88c290628908add57e3451449e0a9a71fdfb38776fd759d",
         "size": 1076,
-        "source": "setuptools-84.0.0-py3-none-any.whl"
+        "source": "setuptools-84.1.0-py3-none-any.whl"
       },
       {
-        "path": "THIRD_PARTY_LICENSES/setuptools-84.0.0/09f1c8c9e941-setuptools__vendor_more_itertools-10.8.0.dist-info_licenses_LICENSE",
+        "path": "THIRD_PARTY_LICENSES/setuptools-84.1.0/09f1c8c9e941-setuptools__vendor_more_itertools-10.8.0.dist-info_licenses_LICENSE",
         "original_path": "setuptools/_vendor/more_itertools-10.8.0.dist-info/licenses/LICENSE",
         "sha256": "09f1c8c9e941af3e584d59641ea9b87d83c0cb0fd007eb5ef391a7e2643c1a46",
         "size": 1053,
-        "source": "setuptools-84.0.0-py3-none-any.whl"
+        "source": "setuptools-84.1.0-py3-none-any.whl"
       },
       {
-        "path": "THIRD_PARTY_LICENSES/setuptools-84.0.0/cad1ef5bd340-setuptools__vendor_packaging-26.0.dist-info_licenses_LICENSE",
+        "path": "THIRD_PARTY_LICENSES/setuptools-84.1.0/cad1ef5bd340-setuptools__vendor_packaging-26.0.dist-info_licenses_LICENSE",
         "original_path": "setuptools/_vendor/packaging-26.0.dist-info/licenses/LICENSE",
         "sha256": "cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48",
         "size": 197,
-        "source": "setuptools-84.0.0-py3-none-any.whl"
+        "source": "setuptools-84.1.0-py3-none-any.whl"
       },
       {
-        "path": "THIRD_PARTY_LICENSES/setuptools-84.0.0/0d542e0c8804-setuptools__vendor_packaging-26.0.dist-info_licenses_LICENSE.APACHE",
+        "path": "THIRD_PARTY_LICENSES/setuptools-84.1.0/0d542e0c8804-setuptools__vendor_packaging-26.0.dist-info_licenses_LICENSE.APACHE",
         "original_path": "setuptools/_vendor/packaging-26.0.dist-info/licenses/LICENSE.APACHE",
         "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594",
         "size": 10174,
-        "source": "setuptools-84.0.0-py3-none-any.whl"
+        "source": "setuptools-84.1.0-py3-none-any.whl"
       },
       {
-        "path": "THIRD_PARTY_LICENSES/setuptools-84.0.0/b70e7e9b742f-setuptools__vendor_packaging-26.0.dist-info_licenses_LICENSE.BSD",
+        "path": "THIRD_PARTY_LICENSES/setuptools-84.1.0/b70e7e9b742f-setuptools__vendor_packaging-26.0.dist-info_licenses_LICENSE.BSD",
         "original_path": "setuptools/_vendor/packaging-26.0.dist-info/licenses/LICENSE.BSD",
         "sha256": "b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5",
         "size": 1344,
-        "source": "setuptools-84.0.0-py3-none-any.whl"
+        "source": "setuptools-84.1.0-py3-none-any.whl"
       },
       {
-        "path": "THIRD_PARTY_LICENSES/setuptools-84.0.0/29e0fd62e929-setuptools__vendor_platformdirs-4.4.0.dist-info_licenses_LICENSE",
+        "path": "THIRD_PARTY_LICENSES/setuptools-84.1.0/29e0fd62e929-setuptools__vendor_platformdirs-4.4.0.dist-info_licenses_LICENSE",
         "original_path": "setuptools/_vendor/platformdirs-4.4.0.dist-info/licenses/LICENSE",
         "sha256": "29e0fd62e929850e86eb28c3fdccf0cefdf4fa94879011cffb3d0d4bed6d4db6",
         "size": 1089,
-        "source": "setuptools-84.0.0-py3-none-any.whl"
+        "source": "setuptools-84.1.0-py3-none-any.whl"
       },
       {
-        "path": "THIRD_PARTY_LICENSES/setuptools-84.0.0/b80816b0d530-setuptools__vendor_tomli-2.4.0.dist-info_licenses_LICENSE",
+        "path": "THIRD_PARTY_LICENSES/setuptools-84.1.0/b80816b0d530-setuptools__vendor_tomli-2.4.0.dist-info_licenses_LICENSE",
         "original_path": "setuptools/_vendor/tomli-2.4.0.dist-info/licenses/LICENSE",
         "sha256": "b80816b0d530b8accb4c2211783790984a6e3b61922c2b5ee92f3372ab2742fe",
         "size": 1072,
-        "source": "setuptools-84.0.0-py3-none-any.whl"
+        "source": "setuptools-84.1.0-py3-none-any.whl"
       },
       {
-        "path": "THIRD_PARTY_LICENSES/setuptools-84.0.0/30c236186791-setuptools__vendor_wheel-0.46.3.dist-info_licenses_LICENSE.txt",
+        "path": "THIRD_PARTY_LICENSES/setuptools-84.1.0/30c236186791-setuptools__vendor_wheel-0.46.3.dist-info_licenses_LICENSE.txt",
         "original_path": "setuptools/_vendor/wheel-0.46.3.dist-info/licenses/LICENSE.txt",
         "sha256": "30c23618679108f3e8ea1d2a658c7ca417bdfc891c98ef1a89fa4ff0c9828654",
         "size": 1107,
-        "source": "setuptools-84.0.0-py3-none-any.whl"
+        "source": "setuptools-84.1.0-py3-none-any.whl"
       },
       {
-        "path": "THIRD_PARTY_LICENSES/setuptools-84.0.0/5a57cb4db85e-setuptools__vendor_zipp-3.23.0.dist-info_licenses_LICENSE",
+        "path": "THIRD_PARTY_LICENSES/setuptools-84.1.0/5a57cb4db85e-setuptools__vendor_zipp-3.23.0.dist-info_licenses_LICENSE",
         "original_path": "setuptools/_vendor/zipp-3.23.0.dist-info/licenses/LICENSE",
         "sha256": "5a57cb4db85e2a2dd88c290628908add57e3451449e0a9a71fdfb38776fd759d",
         "size": 1076,
-        "source": "setuptools-84.0.0-py3-none-any.whl"
+        "source": "setuptools-84.1.0-py3-none-any.whl"
       },
       {
-        "path": "THIRD_PARTY_LICENSES/setuptools-84.0.0/2dddf0881829-setuptools_config_NOTICE",
+        "path": "THIRD_PARTY_LICENSES/setuptools-84.1.0/2dddf0881829-setuptools_config_NOTICE",
         "original_path": "setuptools/config/NOTICE",
         "sha256": "2dddf08818297a3b89d43d95ff659d8da85741108c9136dfa3a4d856c0623bd8",
         "size": 493,
-        "source": "setuptools-84.0.0-py3-none-any.whl"
+        "source": "setuptools-84.1.0-py3-none-any.whl"
       },
       {
-        "path": "THIRD_PARTY_LICENSES/setuptools-84.0.0/09c9bcea95ca-setuptools_config__validate_pyproject_NOTICE",
+        "path": "THIRD_PARTY_LICENSES/setuptools-84.1.0/09c9bcea95ca-setuptools_config__validate_pyproject_NOTICE",
         "original_path": "setuptools/config/_validate_pyproject/NOTICE",
         "sha256": "09c9bcea95ca086f8bc5bed174e40bc835b297d40fb5f86bbbb570fe0a5581a7",
         "size": 18737,
-        "source": "setuptools-84.0.0-py3-none-any.whl"
+        "source": "setuptools-84.1.0-py3-none-any.whl"
       },
       {
-        "path": "THIRD_PARTY_LICENSES/setuptools-84.0.0/86da0f01aeae-setuptools-84.0.0.dist-info_licenses_LICENSE",
-        "original_path": "setuptools-84.0.0.dist-info/licenses/LICENSE",
+        "path": "THIRD_PARTY_LICENSES/setuptools-84.1.0/86da0f01aeae-setuptools-84.1.0.dist-info_licenses_LICENSE",
+        "original_path": "setuptools-84.1.0.dist-info/licenses/LICENSE",
         "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
         "size": 1023,
-        "source": "setuptools-84.0.0-py3-none-any.whl"
+        "source": "setuptools-84.1.0-py3-none-any.whl"
       },
       {
-        "path": "THIRD_PARTY_LICENSES/setuptools-84.0.0/ade78d04982d-setuptools__vendor_autocommand-2.2.2.dist-info_LICENSE",
+        "path": "THIRD_PARTY_LICENSES/setuptools-84.1.0/ade78d04982d-setuptools__vendor_autocommand-2.2.2.dist-info_LICENSE",
         "original_path": "setuptools/_vendor/autocommand-2.2.2.dist-info/LICENSE",
         "sha256": "ade78d04982d69972d444a8e14a94f87a2334dd3855cc80348ea8e240aa0df2d",
         "size": 7634,
-        "source": "setuptools-84.0.0-py3-none-any.whl"
+        "source": "setuptools-84.1.0-py3-none-any.whl"
       },
       {
-        "path": "THIRD_PARTY_LICENSES/setuptools-84.0.0/86da0f01aeae-setuptools__vendor_backports.tarfile-1.2.0.dist-info_LICENSE",
+        "path": "THIRD_PARTY_LICENSES/setuptools-84.1.0/86da0f01aeae-setuptools__vendor_backports.tarfile-1.2.0.dist-info_LICENSE",
         "original_path": "setuptools/_vendor/backports.tarfile-1.2.0.dist-info/LICENSE",
         "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
         "size": 1023,
-        "source": "setuptools-84.0.0-py3-none-any.whl"
+        "source": "setuptools-84.1.0-py3-none-any.whl"
       },
       {
-        "path": "THIRD_PARTY_LICENSES/setuptools-84.0.0/86da0f01aeae-setuptools__vendor_jaraco.text-4.0.0.dist-info_LICENSE",
+        "path": "THIRD_PARTY_LICENSES/setuptools-84.1.0/86da0f01aeae-setuptools__vendor_jaraco.text-4.0.0.dist-info_LICENSE",
         "original_path": "setuptools/_vendor/jaraco.text-4.0.0.dist-info/LICENSE",
         "sha256": "86da0f01aeae46348a3c3d465195dc1ceccde79f79e87769a64b8da04b2a4741",
         "size": 1023,
-        "source": "setuptools-84.0.0-py3-none-any.whl"
+        "source": "setuptools-84.1.0-py3-none-any.whl"
       }
     ],
     "nested_metadata": [
@@ -11347,7 +11353,7 @@
     "status": "NOT VERIFIED",
     "classification": "THIRD-PARTY",
     "registry": {
-      "url": "https://pypi.org/pypi/setuptools/84.0.0/json",
+      "url": "https://pypi.org/pypi/setuptools/84.1.0/json",
       "wheel_digest_verified": true
     }
   },
