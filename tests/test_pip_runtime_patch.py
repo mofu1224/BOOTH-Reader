@@ -5,6 +5,8 @@ import hashlib
 import json
 import zipfile
 
+import pytest
+
 from tools.pip_runtime_patch import patch_wheel
 
 
@@ -35,7 +37,8 @@ def test_offline_folder_setup_applies_pip_security_patch(tmp_path, monkeypatch):
     assert updates == [(tmp_path, patched)]
 
 
-def test_pip_patch_replaces_only_vendor_and_preserves_upstream_inputs(tmp_path):
+@pytest.mark.parametrize("pip_source", ["bundled", "upstream"])
+def test_pip_patch_replaces_only_vendor_and_preserves_upstream_inputs(tmp_path, pip_source):
     from pathlib import Path
 
     root = Path(__file__).resolve().parent.parent
@@ -47,19 +50,35 @@ def test_pip_patch_replaces_only_vendor_and_preserves_upstream_inputs(tmp_path):
     config.write_text(json.dumps(runtime))
     wheels = tmp_path / runtime["wheelhouse"]
     wheels.mkdir(parents=True)
-    names = ["pip-26.2.1-py3-none-any.whl", "urllib3-2.8.0-py3-none-any.whl"]
+    names = [
+        "pip-26.2.1-py3-none-any.whl",
+        "urllib3-2.8.0-py3-none-any.whl",
+        "certifi-2026.10.19-py3-none-any.whl",
+    ]
     before = {}
     for name in names:
         data = (root / runtime["wheelhouse"] / name).read_bytes()
+        if name.startswith("pip-") and pip_source == "upstream":
+            from tools.vendor_payload import materialize
+
+            with zipfile.ZipFile(materialize("wheels", root, target="macos-arm64")) as archive:
+                data = archive.read(name)
         before[name] = hashlib.sha256(data).hexdigest()
         (wheels / name).write_bytes(data)
     (tmp_path / runtime["lock"]).write_text(
         "\n".join("--hash=sha256:" + value for value in before.values())
     )
     patched = patch_wheel(tmp_path)
+    with zipfile.ZipFile(wheels / names[2]) as certifi_input:
+        certificate_hash = hashlib.sha256(certifi_input.read("certifi/cacert.pem")).hexdigest()
     with zipfile.ZipFile(patched) as archive:
         assert "urllib3==2.8.0" in archive.read("pip/_vendor/vendor.txt").decode()
-        with zipfile.ZipFile(root / runtime["wheelhouse"] / names[0]) as original:
+        assert "certifi==2026.10.19" in archive.read("pip/_vendor/vendor.txt").decode()
+        assert (
+            hashlib.sha256(archive.read("pip/_vendor/certifi/cacert.pem")).hexdigest()
+            == certificate_hash
+        )
+        with zipfile.ZipFile(wheels / names[0]) as original:
             assert archive.read("pip/_internal/cli/main.py") == original.read(
                 "pip/_internal/cli/main.py"
             )
@@ -73,6 +92,7 @@ def test_pip_patch_replaces_only_vendor_and_preserves_upstream_inputs(tmp_path):
                 ast.parse(archive.read(name).decode("utf-8"))
         details = json.loads(archive.read("pip/_vendor/BOOTH-MODIFICATIONS.json"))
         assert details["urllib3_publisher_sha256"] == before[names[1]]
+        assert details["certifi_publisher_sha256"] == before[names[2]]
     assert all(
         hashlib.sha256((wheels / name).read_bytes()).hexdigest() == value
         for name, value in before.items()
@@ -83,11 +103,16 @@ def test_pip_patch_replaces_only_vendor_and_preserves_upstream_inputs(tmp_path):
 
     code = "\n".join(
         [
-            "import io, sys",
+            "import hashlib, io, sys",
+            "from pathlib import Path",
             "from types import SimpleNamespace",
             "sys.path.insert(0, sys.argv[1])",
             "from pip._vendor import urllib3",
             "assert urllib3.__version__ == '2.8.0'",
+            "from pip._vendor import certifi",
+            "assert certifi.__version__ == '2026.10.19'",
+            "assert hashlib.sha256(certifi.contents().encode('ascii')).hexdigest() == sys.argv[2]",
+            "assert Path(certifi.where()).read_bytes() == certifi.contents().encode('ascii')",
             "from pip._vendor.requests import Session",
             "assert Session()",
             "reader = io.BytesIO(b'f' * 70000 + b'\\r\\n')",
@@ -103,5 +128,15 @@ def test_pip_patch_replaces_only_vendor_and_preserves_upstream_inputs(tmp_path):
             "assert reader.tell() <= 65537, reader.tell()",
         ]
     )
-    result = subprocess.run([sys.executable, "-I", "-c", code, str(patched)], capture_output=True)
+    result = subprocess.run(
+        [sys.executable, "-I", "-c", code, str(patched), certificate_hash], capture_output=True
+    )
     assert result.returncode == 0, result.stderr.decode()
+    (wheels / names[0]).write_bytes(patched.read_bytes())
+    (tmp_path / runtime["lock"]).write_text(
+        "\n".join(
+            "--hash=sha256:" + hashlib.sha256((wheels / name).read_bytes()).hexdigest()
+            for name in names
+        )
+    )
+    assert patch_wheel(tmp_path) == wheels / names[0]

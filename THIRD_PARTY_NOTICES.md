@@ -20,14 +20,14 @@ Statusは原文通知の保持状態（NOTICE RETAINED）を示し、ライセ�
 | boolean-py | 5.0 | development/build | BSD-2-Clause | 1 | NOTICE RETAINED |
 | build | 1.6.1 | development/build | MIT | 1 | NOTICE RETAINED |
 | cachecontrol | 0.14.4 | development/build | Apache-2.0 | 1 | NOTICE RETAINED |
-| certifi | 2026.7.22 | runtime | MPL-2.0 | 2 | NOTICE RETAINED |
+| certifi | 2026.10.19 | runtime | MPL-2.0 | 2 | NOTICE RETAINED |
 | charset-normalizer | 3.5.2 | development/build | MIT | 1 | NOTICE RETAINED |
 | click | 8.5.0 | runtime | BSD-3-Clause | 1 | NOTICE RETAINED |
 | colorama | 0.4.6 | runtime | BSD-3-Clause | 1 | NOTICE RETAINED |
 | cyclonedx-python-lib | 11.12.0 | development/build | Apache-2.0 | 4 | NOTICE RETAINED |
 | defusedxml | 0.7.1 | development/build | PSFL | 1 | NOTICE RETAINED |
 | fastapi | 0.141.1 | runtime | MIT | 1 | NOTICE RETAINED |
-| filelock | 4.0.7 | development/build | MIT | 1 | NOTICE RETAINED |
+| filelock | 4.2.1 | development/build | MIT | 1 | NOTICE RETAINED |
 | greenlet | 3.5.6 | runtime | MIT AND PSF-2.0 | 2 | NOTICE RETAINED |
 | h11 | 0.16.0 | runtime | MIT | 1 | NOTICE RETAINED |
 | httpcore | 1.0.9 | runtime | BSD-3-Clause | 1 | NOTICE RETAINED |
@@ -41,7 +41,7 @@ Statusは原文通知の保持状態（NOTICE RETAINED）を示し、ライセ�
 | msgpack | 1.2.3 | development/build | Apache-2.0 | 1 | NOTICE RETAINED |
 | mypy | 2.3.1 | development/build | MIT | 3 | NOTICE RETAINED |
 | mypy-extensions | 1.1.0 | development/build | MIT | 1 | NOTICE RETAINED |
-| opentelemetry-api | 1.45.0 | development/build | Apache-2.0 | 1 | NOTICE RETAINED |
+| opentelemetry-api | 1.45.1 | development/build | Apache-2.0 | 1 | NOTICE RETAINED |
 | packageurl-python | 0.17.6 | development/build | MIT | 1 | NOTICE RETAINED |
 | packaging | 26.3 | development/build | Apache-2.0 OR BSD-2-Clause | 3 | NOTICE RETAINED |
 | pathspec | 1.1.1 | development/build | MPL-2.0 | 1 | NOTICE RETAINED |
@@ -63,7 +63,7 @@ Statusは原文通知の保持状態（NOTICE RETAINED）を示し、ライセ�
 | requests | 2.34.2 | development/build | Apache-2.0 | 2 | NOTICE RETAINED |
 | rich | 15.0.0 | development/build | MIT | 1 | NOTICE RETAINED |
 | ruff | 0.16.9 | development/build | MIT | 1 | NOTICE RETAINED |
-| setuptools | 84.0.0 | development/build | MIT | 17 | NOTICE RETAINED |
+| setuptools | 84.1.0 | development/build | MIT | 17 | NOTICE RETAINED |
 | sortedcontainers | 2.4.0 | development/build | Apache 2.0 | 1 | NOTICE RETAINED |
 | soupsieve | 2.10 | runtime | MIT | 1 | NOTICE RETAINED |
 | starlette | 1.7.0 | runtime | BSD-3-Clause | 1 | NOTICE RETAINED |
@@ -83,7 +83,7 @@ Statusは原文通知の保持状態（NOTICE RETAINED）を示し、ライセ�
 - Playwright 1.63.0内のNode 24.21.0: 同梱LICENSEに依存ライブラリの原文を含みます。PlaywrightにはPuppeteer由来コードとnpm sidecarsがあります。
 - pip 26.0.1（CPython初期アーカイブ内）、ensurepip内pip 25.0.1、固定pip 26.2.1: 3系統が内包するcertifiの実ソース22ファイルを `SOURCE_OBLIGATIONS/vendored-certifi-source.tar.gz` へ収録しました。
 - Chrome for Testing・Chromium headless shell・FFmpeg 1011は非同梱です。旧chunkと旧配布物は公開リポジトリへ含めません（`license-audit/browser-pruning.json`）。
-- certifi 2026.7.22とpackageurl-python 0.17.6は同版公式sdistを `SOURCE_OBLIGATIONS/` へ収録しました。
+- certifi 2026.10.19とpackageurl-python 0.17.6は同版公式sdistを `SOURCE_OBLIGATIONS/` へ収録しました。旧版の原文・対応ソースも過去の同梱物に対応する資料として保持します。
 
 元通知の保全だけで全義務の充足を断定しません。範囲と残る制限は [license-audit/27-github-clone-distribution.md](license-audit/27-github-clone-distribution.md) を参照してください。
 
@@ -98,4 +98,6 @@ Statusは原文通知の保持状態（NOTICE RETAINED）を示し、ライセ�
 ## 今回の追加対応
 
 pathspec 1.1.1はMPL-2.0です。同版の公式sdistを `SOURCE_OBLIGATIONS/` に追加し、固定wheelの全31 Pythonファイルとのbyte一致を確認しました。公開hash・取得URL・原通知は `license-audit/pathspec-source.json` を参照してください。
-pip内urllib3更新は現在の同梱構成の通常・オフラインセットアップにも適用します。元wheelは変更せず、改変記録・原LICENSE・更新済みRECORDを派生wheelに保持します。元アーカイブのadvisory適用範囲は `security-embedded-vendors.json` に記録し、旧Git履歴は公開リポジトリに含めないため配布対象外です。
+pip内urllib3更新は現在の同梱構成の通常・オフラインセットアップにも適用します。元wheelは変更せず、改変記録・原LICENSE・更新済みRECORDを派生wheelに保持します。元アーカイブの過去のadvisory評価は `security-embedded-vendors.json` に保持しています。今回の更新はGit履歴を変更しません。現在の起動準備で使う修正版と、旧コミットや初期アーカイブ内に残る旧版を区別し、現行環境の監査合格を旧版の安全性の保証とは扱いません。
+
+2026-10-28の更新では、両OSのcertifi・filelock・opentelemetry-api・setuptoolsを上表の版へ固定しました。公開wheelとsdistのSHA-256、原通知、setuptoolsの8実行ファイルと同版ソースの一致を確認しています。pipの内包certifiもオフライン準備中に2026.10.19へ更新し、CA束とLICENSEは原本を維持、リソース参照先だけを`pip._vendor.certifi`へ変更します。変更後の8ソースファイルは`SOURCE_OBLIGATIONS/patched-pip-certifi-source.tar.gz`、由来は`license-audit/vendored-certifi-source.json`に保持します。Python・ブラウザー・ネイティブホストの原本は変更していません。

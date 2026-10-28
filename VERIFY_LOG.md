@@ -2,6 +2,18 @@
 
 各時点の結果です。過去の合格を現行版・実BOOTH・未試験環境の保証とは扱いません。詳細は [audit/](audit/) と [license-audit/](license-audit/)。
 
+## 2026-10-28 軽量化・運用前確認
+
+- 初回のオンライン依存監査は4パッケージ・7検出（同一ID重複を除くと6件）。ユーザー承認で両OSのcertifi 2026.10.19、filelock 4.2.1、opentelemetry-api 1.45.1、setuptools 84.1.0へ更新し、更新後Windowsの `pip-audit --local` は既知脆弱性0件。pip内包certifiも準備時に更新し、CA束とLICENSEを原本と照合。内包版の申告だけでは8検出・5独立IDがあるものの、対象のmsgpack C拡張・setuptools PackageIndex/FileList/Wheel実装は同梱されていないことを確認。範囲と根拠は`license-audit/security-update-2026-10-28.json`。
+- 更新後Windowsの回帰481件合格、Mac専用1件スキップ、前面ウィンドウ操作1件は除外。Ruff・整形174ファイル・Mypy24ソース・pip checkが合格。コンパイル・portable18/18も確認。強制追加したテーマ設定の拒否を含むプライバシー試験14件合格。既存Starlette警告1件は継続。
+- 実配置の更新後 `doctor --json` は終了0、17項目・警告0。環境更新中のDB・Cookie・テーマ設定のhashは不変。実BOOTHへは通信しておらず、Cookieの実サービス上の有効性は今回未確認。
+- 更新後のGit候補2,791ファイルをWindowsで独立コピー。個人データ・生成環境なし、OSのみのPATH・到達不能プロキシからオフライン初回CLI JSON起動27.72秒。修正4版とpipのCA内容、Web/API・実WebView2の1440/768/390px表示、分類・テーマ保存、日本語/空白パスへの移動後の再起動と状態保持、サーバー/ポート回収が合格。外部profile/temp書込み0・入力不変を確認し、検証コピーを削除。依存更新前の検索・キーボード操作・元index不変の確認とは分けて記録する。
+- Mac独立コピーは回帰478件合格・Windows専用4件スキップ・前面ウィンドウ操作1件除外。Ruff・整形174・Mypy24・pip check・依存監査0件・原文・両OSvendor・portable18/18が合格。新規コピーのオフライン初回CLIは6.08秒、修正版とpipのCA内容、実WebKitの1440/768/390px、移動後の分類・テーマ保持、終了・ポート回収を確認。別のコールド/修復試験でも初回準備6.338秒、起動中の修復拒否、移動後の再構築、署名破損からのローカル修復とDB保持、再起動が合格。内包vendorの確認用4ファイルhashもWindowsと一致。
+- Macの検証専用ChromeはDMG内のFinderメタデータで厳格な署名検査が失敗したため、メタデータを持ち込まずコピーする手順へ修正し、元のGoogle署名・Gatekeeper検査成功を確認。製品の同梱ブラウザーや署名は変更していない。
+- DB・Cookie・購入物・テーマ設定・CSV・ログ等をGit除外。大文字拡張子でも除外し、強制追加された設定も候補検査で拒否。追跡・追加候補・履歴の私用パス0件。既存13コミットと依存更新前のクリーン候補はgitleaks検出0件。最終候補・ステージ済み差分はコミット直前に検査し、結果は`license-audit/release-gate.json`の`verification`を参照する。任意名の私用出力は `.private/` へ保存する。
+- 原文/対応ソース2,317参照・1,720原文の不一致0件、両OSのvendor整合が合格。修正4wheelの公開hash・原通知・同版ソースを保持し、setuptoolsの8実行ファイルとsdistのbyte一致を確認。Python・SQLite・ブラウザー・ネイティブホストの原本、DB形式は変更なし。
+- 合成2万商品・500リスト・12検索で、入力処理中央値39.5→1.1ms。描画完了時間や実データ全体の速度を示す値ではない。実BOOTH通信・OSウィンドウ操作・最低OS実機・長時間運転は今回未確認。証拠はGit対象外の `.cache/security-update/` と `.cache/gitleaks/`。
+
 ## 2026-10-06 Mac・Windows両対応の最終検証
 
 - 最終変更後の再実行。Windows 459件（458 passed / 1 skip）、Mac 459件（455 passed / Windows専用4 skip）。Ruff/format/Mypy24/pip check・vendor分割片/lock・portable18/18が両OSで合格。

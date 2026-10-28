@@ -255,6 +255,10 @@ def parse_library_html(html: str, base_url: str = LIBRARY_URL) -> list[dict[str,
     Raises :class:`BoothLayoutChangedError` when the page does not look like a
     library we can read, so a markup change is reported instead of guessed at.
     """
+    return _parse_library_document(_library_document(html), html, base_url)
+
+
+def _html_parser() -> Any:
     try:
         from bs4 import BeautifulSoup
     except ImportError as e:
@@ -262,12 +266,18 @@ def parse_library_html(html: str, base_url: str = LIBRARY_URL) -> list[dict[str,
             "beautifulsoup4 (HTML parser)",
             "Run `start.bat --repair` to restore bundled dependencies.",
         ) from e
+    return BeautifulSoup
+
+
+def _library_document(html: str) -> Any:
+    parser = _html_parser()
     if not html or not html.strip():
         raise BoothLayoutChangedError("Empty purchases HTML.")
 
-    soup = BeautifulSoup(html, "html.parser")
-    page_text = soup.get_text(" ", strip=True)
+    return parser(html, "html.parser")
 
+
+def _parse_library_document(soup: Any, html: str, base_url: str) -> list[dict[str, Any]]:
     thumbnails = soup.select("img.l-library-item-thumbnail")
     if thumbnails:
         current_rows = _parse_current_library(thumbnails, base_url)
@@ -275,6 +285,7 @@ def parse_library_html(html: str, base_url: str = LIBRARY_URL) -> list[dict[str,
         return current_rows
 
     # Age-gate and other interstitial pages are surfaced, never treated as data.
+    page_text = soup.get_text(" ", strip=True)
     if "年齢確認" in page_text and len(page_text) < 2000 and not soup.select('a[href*="/orders/"]'):
         raise BoothLayoutChangedError("Possible age verification page. Check in the browser.")
     if "ギフト" in page_text:
@@ -444,25 +455,19 @@ def export_csv(rows: list[dict[str, Any]], path: str | Path) -> Path:
 
 def update_from_network(db_path: str | Path, cookie_path: str | Path | None = None) -> int:
     """Fetch, parse and store the purchase list. Returns the number of rows."""
-    try:
-        from bs4 import BeautifulSoup
-    except ImportError as e:
-        raise BoothPrerequisiteError(
-            "beautifulsoup4", "Run `start.bat --repair` to restore bundled dependencies."
-        ) from e
-
     from .db import get_connection
 
+    _html_parser()
     cookies = load_cookies(cookie_path)
     html, final = fetch_library_html(cookies=cookies)
     rows_by_order: dict[str, dict[str, Any]] = {}
     visited = {final}
     for _ in range(200):
-        for row in parse_library_html(html, base_url=final):
+        soup = _library_document(html)
+        for row in _parse_library_document(soup, html, final):
             rows_by_order.setdefault(row["order_id"], row)
         if len(rows_by_order) > MAX_ROWS:
             raise BoothLimitExceededError(f"Purchase count exceeds {MAX_ROWS}. Database unchanged.")
-        soup = BeautifulSoup(html, "html.parser")
         next_link = soup.select_one('a[rel~="next"]')
         if next_link is None:
             break

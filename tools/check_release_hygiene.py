@@ -39,6 +39,8 @@ def private_path(name: str) -> bool:
     if (
         lower == ".env"
         or lower.startswith((".env.", "cookies", ".cookies-"))
+        or lower.endswith(".ui.json")
+        or (lower.startswith(".ui-theme-") and lower.endswith(".tmp"))
         or (lower.endswith(".json") and ("cookie" in lower or "storage-state" in lower))
         or (
             lower.endswith((".bak", ".backup"))

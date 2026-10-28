@@ -1,6 +1,5 @@
 {
-  "url": "https://pypi.org/pypi/certifi/2026.7.22/json",
-  "response_sha256": "c6fe912677e373608eab51e324946005998faeb0fa999e6ddada24676e3556d3",
+  "url": "https://pypi.org/pypi/certifi/2026.10.19/json",
   "info": {
     "author": "Kenneth Reitz",
     "author_email": "me@kennethreitz.com",
@@ -18,6 +17,7 @@
       "Programming Language :: Python :: 3.12",
       "Programming Language :: Python :: 3.13",
       "Programming Language :: Python :: 3.14",
+      "Programming Language :: Python :: 3.15",
       "Programming Language :: Python :: 3.7",
       "Programming Language :: Python :: 3.8",
       "Programming Language :: Python :: 3.9"
@@ -61,11 +61,11 @@
       "Source": "https://github.com/certifi/python-certifi"
     },
     "provides_extra": null,
-    "release_url": "https://pypi.org/project/certifi/2026.7.22/",
+    "release_url": "https://pypi.org/project/certifi/2026.10.19/",
     "requires_dist": null,
     "requires_python": ">=3.7",
     "summary": "Python package for providing Mozilla's CA Bundle.",
-    "version": "2026.7.22",
+    "version": "2026.10.19",
     "yanked": false,
     "yanked_reason": null
   },
@@ -73,24 +73,24 @@
     {
       "comment_text": null,
       "core-metadata": {
-        "sha256": "ef5af1638fbb23676ac3c5777dfcfc2cd9c348fe4172ed5ba3d277655b248090"
+        "sha256": "a5c0be3a42daeef0edfaf58e6ea5b7550f3e4e8eb35420f72e902df9bcf00f5c"
       },
       "digests": {
-        "blake2b_256": "0ba771ac2cff56fec219ed242bb11b8efb69fcc4bec75db06fb7bfe35de520e6",
-        "md5": "edeeb8218c0de1993d874d818064553c",
-        "sha256": "62f22742b58a1a33014a2b6b706588a8d7e2a88ae7bd1a6ebe8c992928483775"
+        "blake2b_256": "c45129046e48f693c54e5b7412216d447a1d8362c9653148d98c02cdf65fa733",
+        "md5": "8d90a156570cc0080f37bb6ea41971b1",
+        "sha256": "42d35340cc5b9ba78e818ddbff0c5b1c2b779de448a340fd1b989f5fa8670e1b"
       },
       "downloads": -1,
-      "filename": "certifi-2026.7.22-py3-none-any.whl",
+      "filename": "certifi-2026.10.19-py3-none-any.whl",
       "has_sig": false,
-      "md5_digest": "edeeb8218c0de1993d874d818064553c",
+      "md5_digest": "8d90a156570cc0080f37bb6ea41971b1",
       "packagetype": "bdist_wheel",
       "python_version": "py3",
       "requires_python": ">=3.7",
-      "size": 136983,
-      "upload_time": "2026-07-22T03:35:11",
-      "upload_time_iso_8601": "2026-07-22T03:35:11.276376Z",
-      "url": "https://files.pythonhosted.org/packages/0b/a7/71ac2cff56fec219ed242bb11b8efb69fcc4bec75db06fb7bfe35de520e6/certifi-2026.7.22-py3-none-any.whl",
+      "size": 136464,
+      "upload_time": "2026-10-20T02:24:15",
+      "upload_time_iso_8601": "2026-10-20T02:24:15.072385Z",
+      "url": "https://files.pythonhosted.org/packages/c4/51/29046e48f693c54e5b7412216d447a1d8362c9653148d98c02cdf65fa733/certifi-2026.10.19-py3-none-any.whl",
       "yanked": false,
       "yanked_reason": null
     },
@@ -98,21 +98,21 @@
       "comment_text": null,
       "core-metadata": false,
       "digests": {
-        "blake2b_256": "a3c224167ea9858356b47a87a50d39908bfdb72ceeefe0041586e704e5376b3a",
-        "md5": "926857e560a3ae443ee35c2de270d75b",
-        "sha256": "741e2c3b351ddf169a738da9f2c048608ff7f2c5cc02f1ebc6b118bb090d5d55"
+        "blake2b_256": "a6bd1436c50cc46699de0230fbaacc1d1de7bfec413176099949e9d5112e88f2",
+        "md5": "f64fcaadfe9a0ced492ccbfe88bc4a27",
+        "sha256": "035c1e85572b141bf1c3a3eff0e33a8eb74917522f2559075ff8d2fea780a1ae"
       },
       "downloads": -1,
-      "filename": "certifi-2026.7.22.tar.gz",
+      "filename": "certifi-2026.10.19.tar.gz",
       "has_sig": false,
-      "md5_digest": "926857e560a3ae443ee35c2de270d75b",
+      "md5_digest": "f64fcaadfe9a0ced492ccbfe88bc4a27",
       "packagetype": "sdist",
       "python_version": "source",
       "requires_python": ">=3.7",
-      "size": 138112,
-      "upload_time": "2026-07-22T03:35:12",
-      "upload_time_iso_8601": "2026-07-22T03:35:12.644458Z",
-      "url": "https://files.pythonhosted.org/packages/a3/c2/24167ea9858356b47a87a50d39908bfdb72ceeefe0041586e704e5376b3a/certifi-2026.7.22.tar.gz",
+      "size": 137598,
+      "upload_time": "2026-10-20T02:24:16",
+      "upload_time_iso_8601": "2026-10-20T02:24:16.604828Z",
+      "url": "https://files.pythonhosted.org/packages/a6/bd/1436c50cc46699de0230fbaacc1d1de7bfec413176099949e9d5112e88f2/certifi-2026.10.19.tar.gz",
       "yanked": false,
       "yanked_reason": null
     }

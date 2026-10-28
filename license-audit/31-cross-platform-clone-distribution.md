@@ -23,6 +23,14 @@ Mac CPythonの複合ライブラリは、full版metadataに記録された0BSD/A
 
 高度なUI試験のため保守者・CIが個人利用として取得するChromeは、無配布の`.cache/ui-test-driver`に限定します。配布payloadの検査は生成環境を対象に混ぜず、Git候補とvendorアーカイブから列挙します。
 
+## 2026-10-28の依存更新
+
+両OSの固定62wheelのうち、certifiを2026.10.19、filelockを4.2.1、opentelemetry-apiを1.45.1、setuptoolsを84.1.0へ更新しました。公式wheel/sdistの公開SHA-256と原通知を照合し、MPLのcertifi同版sdistとsetuptools同版ソースを保持しています。setuptoolsの8実行ファイルはsdistとbyte一致します。その他のPython・SQLite・ブラウザー・ネイティブホスト入力は変更していません。
+
+通常準備で生成するpip派生wheelではcertifiも更新します。CA束とLICENSEは公開wheelの原本を保ち、リソース参照先だけを内包名前空間へ変更します。変更後8ソースを`SOURCE_OBLIGATIONS/patched-pip-certifi-source.tar.gz`へ収録し、元sdist・変更ツール・変更記録を同じクローンから取得できる状態にします。旧版の原通知・対応ソースは旧入力に対応する資料として保持します。
+
+更新の由来・ソースhash・検証範囲は`security-update-2026-10-28.json`、製品検証は`../VERIFY_LOG.md`を参照してください。依存監査はライセンス条件の判定と区別します。
+
 ## 判定と制限
 
 この文書は記録した原文と同梱構成に基づく技術的な配布条件整理で、法律専門家の保証ではありません。正式な候補固定は`release-gate.json`の全入力hashと`check_distribution.py`で照合します。入力や同梱物が変わった場合は古い合格を流用しません。
