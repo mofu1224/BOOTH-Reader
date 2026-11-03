@@ -5,6 +5,7 @@ from __future__ import annotations
 import argparse
 import json
 import sys
+from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -18,6 +19,11 @@ from tools.repository_files import collect, input_hashes, require_clone_script_m
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--reviewed", action="store_true", required=True)
+    parser.add_argument(
+        "--report",
+        default="audit/22-portable-distribution-1.2.0.md",
+        help="release verification report bound to this candidate",
+    )
     args = parser.parse_args()
     if not args.reviewed:
         raise RuntimeError("Review the corresponding-source and notice conditions first")
@@ -33,6 +39,9 @@ def main() -> None:
     report_path = ROOT / "license-audit/31-cross-platform-clone-distribution.md"
     if not report_path.is_file():
         raise RuntimeError("Cross-platform redistribution review missing")
+    release_report = ROOT / args.report
+    if not release_report.is_file():
+        raise RuntimeError(f"Release verification report missing: {args.report}")
     files = collect(ROOT)
     require_clone_script_modes(files, ROOT)
     gate_path = ROOT / "license-audit/release-gate.json"
@@ -42,11 +51,12 @@ def main() -> None:
         {
             "release_status": "READY FOR RELEASE",
             "scope": "github-repository-clone",
-            "latest_report": "audit/21-portable-distribution-1.1.0.md",
+            "latest_report": args.report,
             "license_report": "license-audit/31-cross-platform-clone-distribution.md",
             "blockers": [],
             "input_count": len(hashes),
             "input_hashes": hashes,
+            "date": date.today().isoformat(),
             "supported_targets": ["windows-x64", "macos-arm64"],
             "product_readiness": "Repository-clone distribution; validation coverage is documented separately; uncommitted changes are not in HEAD",
         }

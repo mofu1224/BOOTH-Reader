@@ -6,7 +6,7 @@ BOOTH購入品の取得・ダウンロード・ZIP展開・分類を管理する
 
 **クローン後、Windowsは`start.bat`、Apple Silicon Macは`start.command`で起動します。** 初回準備・復旧・ブラウザー起動は自動です。Pythonの導入、Git LFS、追加ダウンロードは不要です。
 
-Mac・Windows対応版は`1.1.0`です。Macの認証には同梱の自作ホストとOS標準WebKitを使います。[構成・確認範囲](CROSS_PLATFORM.md)を参照してください。
+Mac・Windows対応版は`1.2.0`です。Macの認証には同梱の自作ホストとOS標準WebKitを使います。[構成・確認範囲](CROSS_PLATFORM.md)を参照してください。
 
 このリポジトリ自体が利用者向けの配布物です。通常のクローンには両OSの同梱物が含まれ、別の配布フォルダーの作成・コピーは不要です。
 
@@ -223,7 +223,7 @@ DB・購入ファイルは保持します。DB移行は前方向のみで、新�
 
 - [本体MIT](LICENSE)・[第三者通知](THIRD_PARTY_NOTICES.md)・[Microsoft利用条件](THIRD_PARTY_TERMS.md)
 - [対応ソース](SOURCE_OBLIGATIONS/README.md)・[両OS配布判定](license-audit/31-cross-platform-clone-distribution.md)
-- [製品の判定条件・検証範囲](audit/19-release-scope.md)・[実装・検証記録](audit/21-portable-distribution-1.1.0.md)
+- [製品の判定条件・検証範囲](audit/19-release-scope.md)・[実装・検証記録](audit/22-portable-distribution-1.2.0.md)
 - [変更履歴](CHANGELOG.md)・[検証ログ](VERIFY_LOG.md)
 
 ライセンスゲートの合格と製品全体の完成判定は別です。第三者原文は `THIRD_PARTY_LICENSES/` に保持します。
