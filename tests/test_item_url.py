@@ -232,7 +232,7 @@ def test_schema_migration_adds_source_to_existing_items(tmp_path):
     try:
         row = conn.execute("SELECT source FROM items WHERE item_id='old'").fetchone()
         assert row["source"] == "purchase"
-        assert conn.execute("PRAGMA user_version").fetchone()[0] == 6
+        assert conn.execute("PRAGMA user_version").fetchone()[0] == 7
     finally:
         conn.close()
 

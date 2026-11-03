@@ -47,7 +47,8 @@ def test_a07_invalid_order_links_do_not_become_empty_success():
         purchases.parse_library_html('<a href="/orders/">invalid booth order</a>')
 
 
-def test_a07_paginated_library_imports_all_pages(mock_http, tmp_path):
+def test_a07_paginated_library_imports_all_pages(mock_http, tmp_path, monkeypatch):
+    monkeypatch.setattr(purchases, "enrich_purchase_dates", lambda *args, **kwargs: {})
     seen = []
 
     def handler(request):

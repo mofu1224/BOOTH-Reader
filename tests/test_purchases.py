@@ -18,9 +18,12 @@ from core.errors import (
     exit_code_for,
 )
 from core.purchases import (
+    enrich_purchase_dates,
     export_csv,
+    fetch_order_ids,
     list_purchases,
     parse_library_html,
+    parse_order_page,
     upsert_purchases,
 )
 
@@ -278,6 +281,110 @@ def test_list_purchases_limits(tmp_path):
         assert len(list_purchases(conn, limit=2)) == 2
         assert len(list_purchases(conn, limit=10**9)) == 5
         assert len(list_purchases(conn)) == 5
+    finally:
+        conn.close()
+
+
+ORDER_HTML = """
+<html><body>
+<div class="l-row text-14">
+  <div class="l-col-pc-3">注文日時</div>
+  <div class="l-col-pc-9 l-col-3of5 u-pt-300">2026/11/01 03:40:27</div>
+</div>
+<div class="l-order-detail-by-shop">
+  <a href="https://shop.booth.pm/items/111">product</a>
+  <a href="https://shop.booth.pm/items/111">duplicate</a>
+</div>
+<aside><a href="https://booth.pm/items/999">recommended</a></aside>
+</body></html>
+"""
+
+
+def test_parse_order_page_extracts_date_and_only_ordered_items():
+    assert parse_order_page(ORDER_HTML, "123") == ("2026-11-01", ["111"])
+
+
+def test_parse_order_page_requires_a_date():
+    with pytest.raises(BoothLayoutChangedError):
+        parse_order_page('<div class="l-order-detail-by-shop"></div>', "123")
+
+
+def test_fetch_order_ids_follows_pagination(monkeypatch):
+    from core import purchases
+
+    pages = {
+        "https://accounts.booth.pm/orders": (
+            '<a href="/orders/101">a</a><a href="/orders/102">b</a>'
+            '<a rel="next" href="/orders?page=2">next</a>'
+        ),
+        "https://accounts.booth.pm/orders?page=2": '<a href="/orders/103">c</a>',
+    }
+
+    class Response:
+        def __init__(self, url, text):
+            self.url = url
+            self.text = text
+            self.status_code = 200
+
+    def fake_request(url, **kwargs):
+        return Response(url, pages[url])
+
+    monkeypatch.setattr(purchases.net, "request", fake_request)
+    assert fetch_order_ids(cookies=[]) == ["101", "102", "103"]
+
+
+def test_enrich_purchase_dates_backfills_and_caches_orders(tmp_path, monkeypatch):
+    from core import purchases
+
+    db = init_db(tmp_path / "app.db")
+    conn = get_connection(db)
+    calls = []
+    try:
+        conn.execute("INSERT INTO items(item_id,title) VALUES('i1','A'),('i2','B')")
+        conn.execute("INSERT INTO purchases(item_id) VALUES('i1'),('i2')")
+        conn.commit()
+        monkeypatch.setattr(purchases, "fetch_order_ids", lambda *a, **k: ["100", "200"])
+
+        def detail(order_id, *args, **kwargs):
+            calls.append(order_id)
+            if order_id == "100":
+                return "2026-01-01", ["i1"]
+            return "2026-02-02", ["i2"]
+
+        monkeypatch.setattr(purchases, "fetch_order_detail", detail)
+        first = enrich_purchase_dates(conn, cookies=[])
+        assert first["fetched"] == 2
+        assert first["updated"] == 2
+        assert [
+            row["purchase_date"]
+            for row in conn.execute("SELECT purchase_date FROM purchases ORDER BY item_id")
+        ] == ["2026-01-01", "2026-02-02"]
+        second = enrich_purchase_dates(conn, cookies=[])
+        assert second["fetched"] == 0
+        assert second["cached"] == 2
+        assert calls == ["100", "200"]
+    finally:
+        conn.close()
+
+
+def test_upsert_preserves_dates_enriched_from_order_history(tmp_path):
+    conn = get_connection(init_db(tmp_path / "app.db"))
+    try:
+        upsert_purchases(conn, [{"item_id": "1", "title": "A", "purchase_date": ""}])
+        conn.execute("UPDATE purchases SET purchase_date='2026-01-01' WHERE item_id='1'")
+        conn.commit()
+        upsert_purchases(conn, [{"item_id": "1", "title": "A2", "purchase_date": ""}])
+        row = conn.execute(
+            "SELECT i.title,p.purchase_date FROM items i JOIN purchases p USING(item_id)"
+            " WHERE i.item_id='1'"
+        ).fetchone()
+        assert row["title"] == "A2"
+        assert row["purchase_date"] == "2026-01-01"
+        upsert_purchases(conn, [{"item_id": "1", "title": "A3", "purchase_date": "2026-03-03"}])
+        assert (
+            conn.execute("SELECT purchase_date FROM purchases WHERE item_id='1'").fetchone()[0]
+            == "2026-03-03"
+        )
     finally:
         conn.close()
 
