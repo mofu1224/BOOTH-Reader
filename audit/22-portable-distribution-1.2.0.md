@@ -19,12 +19,13 @@
 - URL追加した無料ダウンロード商品を一時ライブラリへ取得し、1ファイルのダウンロード・展開・検証が成功した。実DB・Cookie・購入物は証拠に保存しない。
 - Windowsの独立Git候補検証（`tools/verify_clone.py`）は合格。候補ツリーの回帰は508 passed、1 skipped、入力等価2,793ファイル、移動後のCLI/UI、旧配置読み取り拒否、終了・再起動を確認した。手動の前面GUI起動だけはヘッドレスUI試験済みのため省略した。結果は`audit/clone-verification.json`と`audit/junit-clone.xml`に保存する。
 - 候補固定後のWindows配布検査（`tools/check_distribution.py`）は2,794ファイルでPASS。`license-audit/release-gate.json`を1.2.0の全入力hashへ更新した。
+- GitHub Actions run `41584608002` は、Windows品質・Windows独立クローン、Mac arm64品質・Mac独立クローン、依存監査・秘密検査の全ジョブが成功した。この実行はリリース準備コミット `a95e791` を対象とする。最終mainのCI実行記録を公開後の最終確認とする。
 
 ## Macの確認範囲
 
 - 今回のWindowsセッションではMac実機へ接続できなかった（Tailscale上でオフライン）。Mac実機の対話的ログイン、実BOOTH操作、macOS 14実機は未確認。
 - 変更はPython・Web UI・DBスキーマ・テスト・文書が中心で、Mac固有のWebKitホスト、vendor、固定wheel、起動スクリプトは変更していない。1.1.0で確認済みのMac構成を継承する。
-- 最終候補のMac検証はGitHub Actionsの`macos-15`ジョブ（テスト、`verify_clone_macos.py`、配布検査）で行う。実行結果はCIの実行記録を正とし、成功していない場合は本候補をMac対応済みと扱わない。
+- GitHub Actions run `41584608002` の`macos-15`ジョブは成功した。macOS上で依存整合・Lint・型検査・全テスト・`verify_clone_macos.py`・配布検査を実行している。macOS 14実機と実BOOTHの対話操作は引き続き未確認で、これらを確認済みとは扱わない。
 
 ## 配布範囲
 

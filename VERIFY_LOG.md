@@ -7,7 +7,7 @@
 - Windows: `pytest -q` は508 passed、1 skipped（macOS WebKit専用）。Ruff・format・mypy（25ソース）・pip check・portable 18/18・vendor整合・private path検査・原文照合（2,317参照／1,720原文）が合格。
 - 実BOOTHの既存セッションで、購入日0件の実DBを注文83件から補完し、購入71件すべてに購入日を設定。通常同期の再実行は3.8秒で、補完済み日付を保持した。URL追加した無料商品は一時ライブラリへダウンロード・展開・検証成功。
 - Windowsの独立Git候補検証は合格（508 passed、1 skipped、入力等価2,793ファイル、移動後CLI/UI、旧配置読み取り拒否）。前面GUI起動のみヘッドレスUI試験済みのため省略。
-- Mac実機はTailscale上でオフラインのため本次未接続。最終候補はGitHub Actions `macos-15` のテスト・`verify_clone_macos.py`・配布検査で確認する。成功していない場合はMac対応済みと扱わない。
+- GitHub Actions run `41584608002` は、Windows品質・Windows独立クローン、Mac arm64品質・Mac独立クローン、依存監査・秘密検査の全ジョブが成功。Macは`macos-15`上で全テスト・`verify_clone_macos.py`・配布検査を実行した。macOS 14実機・実BOOTHの対話操作は引き続き未確認。
 - `license-audit/release-gate.json` は1.2.0の全入力hashで再固定。公開・pushは本検証とは別操作。
 
 ## 2026-10-28 軽量化・運用前確認
