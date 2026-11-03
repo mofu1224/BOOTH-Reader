@@ -229,6 +229,46 @@ def test_cookie_import_uses_stdin_and_rejects_invalid_without_replacing(tmp_path
         link.close()
 
 
+def test_url_import_dialog_targets_a_list(live_ui):
+    with sync_playwright() as pw:
+        browser = launch_browser(pw, headless=True)
+        try:
+            page = browser.new_page(viewport={"width": 1440, "height": 1000})
+            page.goto(live_ui)
+            page.locator("#b-new-list").click()
+            page.locator("#in-listname").fill("URL追加先")
+            page.locator("#b-list-create").click()
+            expect(page.locator("#view-title")).to_have_text("URL追加先")
+
+            calls = []
+
+            def accept_add_url(route):
+                calls.append(route.request.post_data_json)
+                route.fulfill(
+                    status=200,
+                    content_type="application/json",
+                    body='{"ok":true,"item_id":"1234567"}',
+                )
+
+            page.route("**/lists", accept_add_url)
+            page.locator("#b-add-url").click()
+            expect(page.locator("#url-add-dialog")).to_be_visible()
+            expect(page.locator("#url-add-input")).to_be_visible()
+            expect(page.locator("#url-list")).to_have_value("1")
+            page.locator("#url-add-input").fill("https://booth.pm/ja/items/1234567")
+            page.locator("#url-add-submit").click()
+            expect(page.locator("#msg")).to_have_text("URLからリストに追加しました。")
+            assert calls == [
+                {
+                    "action": "add-url",
+                    "list": "1",
+                    "url": "https://booth.pm/ja/items/1234567",
+                }
+            ]
+        finally:
+            browser.close()
+
+
 def test_rendered_library_sort_membership_and_mobile(live_ui, tmp_path):
     with sync_playwright() as pw:
         browser = launch_browser(pw, headless=True)

@@ -63,6 +63,8 @@ MESSAGES = {
     "商品名・ショップ名": "Product or shop name",
     "BOOTHの商品URLから追加": "Add from a BOOTH product URL",
     "URLから追加": "Add from URL",
+    "追加先のリスト": "Target list",
+    "URL追加を閉じる": "Close URL import",
     "前へ": "Previous",
     "次へ": "Next",
     "Cookie登録を閉じる": "Close cookie registration",
