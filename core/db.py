@@ -32,7 +32,7 @@ from typing import Any
 
 from .errors import BoothDatabaseError, BoothSchemaTooNewError
 
-SCHEMA_VERSION = 6
+SCHEMA_VERSION = 7
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS items (
@@ -72,11 +72,21 @@ CREATE TABLE IF NOT EXISTS list_members (
   added_at TEXT NOT NULL DEFAULT (datetime('now')),
   PRIMARY KEY (list_id, item_id)
 );
+CREATE TABLE IF NOT EXISTS orders (
+  order_id TEXT PRIMARY KEY,
+  purchased_at TEXT NOT NULL DEFAULT ''
+);
+CREATE TABLE IF NOT EXISTS order_items (
+  order_id TEXT NOT NULL REFERENCES orders(order_id) ON DELETE CASCADE,
+  item_id TEXT NOT NULL,
+  PRIMARY KEY (order_id, item_id)
+);
 CREATE INDEX IF NOT EXISTS idx_purchases_date ON purchases(purchase_date);
 CREATE INDEX IF NOT EXISTS idx_items_title ON items(title);
 CREATE INDEX IF NOT EXISTS idx_items_shop ON items(shop);
 CREATE INDEX IF NOT EXISTS idx_list_members_item ON list_members(item_id);
 CREATE INDEX IF NOT EXISTS idx_downloads_status ON downloads(status);
+CREATE INDEX IF NOT EXISTS idx_order_items_item ON order_items(item_id);
 """
 
 BUSY_TIMEOUT_MS = 15000
@@ -250,6 +260,24 @@ def _add_item_source(conn: sqlite3.Connection) -> None:
         )
 
 
+def _add_order_history(conn: sqlite3.Connection) -> None:
+    """Cache order dates and item membership for purchase-date backfill."""
+    conn.execute(
+        """CREATE TABLE IF NOT EXISTS orders (
+             order_id TEXT PRIMARY KEY,
+             purchased_at TEXT NOT NULL DEFAULT ''
+           )"""
+    )
+    conn.execute(
+        """CREATE TABLE IF NOT EXISTS order_items (
+             order_id TEXT NOT NULL REFERENCES orders(order_id) ON DELETE CASCADE,
+             item_id TEXT NOT NULL,
+             PRIMARY KEY (order_id, item_id)
+           )"""
+    )
+    conn.execute("CREATE INDEX IF NOT EXISTS idx_order_items_item ON order_items(item_id)")
+
+
 _MIGRATIONS: list[_Migration] = [
     _Migration(1, _add_perf_indexes, "add list_members.item_id and downloads.status indexes"),
     _Migration(2, _add_download_url, "record the source url of each downloads row"),
@@ -259,6 +287,7 @@ _MIGRATIONS: list[_Migration] = [
         5, _add_download_path_encoding, "support portable download paths; retain legacy records"
     ),
     _Migration(6, _add_item_source, "record products added from a public URL"),
+    _Migration(7, _add_order_history, "cache order dates for purchase-date backfill"),
 ]
 
 

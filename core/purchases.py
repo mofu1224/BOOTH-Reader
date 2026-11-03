@@ -16,6 +16,7 @@ import sqlite3
 import tempfile
 import time
 from collections.abc import Iterable
+from datetime import date
 from itertools import islice
 from pathlib import Path
 from typing import Any, cast
@@ -25,6 +26,7 @@ from . import net
 from .auth import LIBRARY_URL, load_cookies
 from .errors import (
     BoothAuthError,
+    BoothError,
     BoothLayoutChangedError,
     BoothLimitExceededError,
     BoothNetworkError,
@@ -39,9 +41,16 @@ PRODUCT_HREF_RE = re.compile(r"booth\.pm/(?:[a-z]{2}/)?items/(\d+)")
 PRICE_RE = re.compile(r"[¥￥]\s?[\d,]+|無料|FREE", re.I)
 ITEM_LINK_RE = re.compile(r"/items/")
 SHOP_CLASS_RE = re.compile(r"shop", re.I)
+ORDER_DATE_RE = re.compile(r"注文日時\s*(\d{4})/(\d{1,2})/(\d{1,2})")
+ORDER_DATE_FALLBACK_RE = re.compile(r"(\d{4})/(\d{1,2})/(\d{1,2})")
+ORDER_ID_RE = re.compile(r"^[0-9a-zA-Z_-]{1,80}$")
+
+ORDERS_URL = "https://accounts.booth.pm/orders"
 
 TIMEOUT = 30
 MAX_ROWS = 20_000
+MAX_ORDER_PAGES = 200
+MAX_ORDER_DETAILS = 500
 CONTAINER_WALK = 4
 # A row container holds a handful of nodes. Anything larger is a list or page
 # wrapper, and searching it would make parsing quadratic.
@@ -344,6 +353,169 @@ def _parse_library_document(soup: Any, html: str, base_url: str) -> list[dict[st
     return rows
 
 
+def fetch_order_ids(
+    cookies: list[dict[str, Any]] | None = None, timeout: int = TIMEOUT
+) -> list[str]:
+    """Return all order IDs from the BOOTH purchase history.
+
+    The library page no longer carries order dates, but the order history does.
+    Only the IDs are read here; each detail page is fetched lazily and cached in
+    the local ``orders`` tables.
+    """
+    if cookies is None:
+        cookies = load_cookies()
+    ids: list[str] = []
+    seen_ids: set[str] = set()
+    visited: set[str] = set()
+    url = ORDERS_URL
+    for _ in range(MAX_ORDER_PAGES):
+        if url in visited:
+            raise BoothLayoutChangedError("Cyclic order pagination link.")
+        visited.add(url)
+        response = net.request(url, cookies=cookies, timeout=timeout)
+        final = str(response.url)
+        if _looks_logged_out(final):
+            raise BoothAuthError("Failed to fetch purchase history.")
+        soup = _library_document(response.text)
+        for anchor in soup.select('a[href*="/orders/"]'):
+            match = ORDER_HREF_RE.search(_attr(anchor, "href"))
+            if match and match.group(1) not in seen_ids:
+                seen_ids.add(match.group(1))
+                ids.append(match.group(1))
+        if len(ids) > MAX_ROWS:
+            raise BoothLimitExceededError(f"Order count exceeds {MAX_ROWS}.")
+        next_link = soup.select_one('a[rel~="next"]')
+        if next_link is None:
+            return ids
+        next_url = urljoin(final, _attr(next_link, "href"))
+        parts = urlsplit(next_url)
+        if (
+            parts.scheme != "https"
+            or parts.hostname != "accounts.booth.pm"
+            or parts.path.rstrip("/") != "/orders"
+        ):
+            raise BoothLayoutChangedError("Invalid order pagination link.")
+        url = next_url
+    raise BoothLimitExceededError(f"Order pages exceed {MAX_ORDER_PAGES}.")
+
+
+def parse_order_page(html: str, order_id: str = "") -> tuple[str, list[str]]:
+    """Return ``(purchase_date, item_ids)`` from one order detail page."""
+    soup = _library_document(html)
+    text = soup.get_text(" ", strip=True)
+    match = ORDER_DATE_RE.search(text) or ORDER_DATE_FALLBACK_RE.search(text)
+    if match is None:
+        raise BoothLayoutChangedError(f"Order date missing (order={order_id or '?'}).")
+    try:
+        purchased_at = date(
+            int(match.group(1)), int(match.group(2)), int(match.group(3))
+        ).isoformat()
+    except ValueError as e:
+        raise BoothLayoutChangedError(f"Invalid order date (order={order_id or '?'}).") from e
+
+    containers = soup.select(".l-order-detail-by-shop") or [soup]
+    item_ids: list[str] = []
+    seen: set[str] = set()
+    for container in containers:
+        for anchor in container.select('a[href*="/items/"]'):
+            href = _attr(anchor, "href")
+            host = (urlsplit(href).hostname or "").lower()
+            scoped = PRODUCT_HREF_RE.search(href)
+            if scoped and (host == "booth.pm" or host.endswith(".booth.pm")):
+                item_id = scoped.group(1)
+                if item_id not in seen:
+                    seen.add(item_id)
+                    item_ids.append(item_id)
+    if not item_ids:
+        raise BoothLayoutChangedError(f"Order items missing (order={order_id or '?'}).")
+    return purchased_at, item_ids
+
+
+def fetch_order_detail(
+    order_id: str,
+    cookies: list[dict[str, Any]] | None = None,
+    timeout: int = TIMEOUT,
+) -> tuple[str, list[str]]:
+    """Fetch one order detail page and return its date and product IDs."""
+    value = (order_id or "").strip()
+    if not ORDER_ID_RE.fullmatch(value):
+        raise ValueError("Invalid order ID")
+    if cookies is None:
+        cookies = load_cookies()
+    response = net.request(f"{ORDERS_URL}/{value}", cookies=cookies, timeout=timeout)
+    final = str(response.url)
+    if _looks_logged_out(final):
+        raise BoothAuthError("Session expired while reading purchase history.")
+    return parse_order_page(response.text, value)
+
+
+def enrich_purchase_dates(
+    conn: sqlite3.Connection,
+    cookies: list[dict[str, Any]] | None = None,
+    timeout: int = TIMEOUT,
+) -> dict[str, int]:
+    """Backfill ``purchases.purchase_date`` from the order history.
+
+    Order dates are only available on the order history pages. Each detail page
+    is cached in ``orders``/``order_items`` so later syncs only fetch new orders.
+    """
+    if cookies is None:
+        cookies = load_cookies()
+    order_ids = fetch_order_ids(cookies, timeout=timeout)
+    known = {str(row[0]) for row in conn.execute("SELECT order_id FROM orders")}
+    pending = [order_id for order_id in order_ids if order_id not in known]
+    stats = {
+        "orders": len(order_ids),
+        "fetched": 0,
+        "updated": 0,
+        "cached": len(order_ids) - len(pending),
+    }
+
+    for order_id in pending[:MAX_ORDER_DETAILS]:
+        try:
+            purchased_at, item_ids = fetch_order_detail(order_id, cookies, timeout=timeout)
+            with conn:
+                conn.execute(
+                    """INSERT INTO orders(order_id,purchased_at) VALUES(?,?)
+                       ON CONFLICT(order_id) DO UPDATE SET purchased_at=excluded.purchased_at""",
+                    (order_id, purchased_at),
+                )
+                conn.execute("DELETE FROM order_items WHERE order_id=?", (order_id,))
+                conn.executemany(
+                    "INSERT INTO order_items(order_id,item_id) VALUES(?,?)",
+                    [(order_id, item_id) for item_id in item_ids],
+                )
+        except BoothAuthError:
+            raise
+        except (BoothLayoutChangedError, BoothNetworkError) as e:
+            log.warning("order %s skipped: %s", order_id, type(e).__name__)
+            continue
+        except sqlite3.Error as e:
+            log.warning("order %s cache write failed: %s", order_id, type(e).__name__)
+            continue
+        stats["fetched"] += 1
+
+    cursor = conn.execute(
+        """UPDATE purchases
+           SET purchase_date=COALESCE((
+               SELECT MAX(o.purchased_at)
+               FROM order_items oi JOIN orders o ON o.order_id=oi.order_id
+               WHERE oi.item_id=purchases.item_id AND o.purchased_at<>''
+           ), purchase_date)
+           WHERE purchase_date=''"""
+    )
+    conn.commit()
+    stats["updated"] = max(cursor.rowcount, 0)
+    log.info(
+        "purchase dates orders=%d fetched=%d updated=%d cached=%d",
+        stats["orders"],
+        stats["fetched"],
+        stats["updated"],
+        stats["cached"],
+    )
+    return stats
+
+
 def upsert_purchases(conn: sqlite3.Connection, rows: list[dict[str, Any]]) -> int:
     """Insert or refresh items and purchases in one transaction.
 
@@ -374,7 +546,9 @@ def upsert_purchases(conn: sqlite3.Connection, rows: list[dict[str, Any]]) -> in
             conn.execute(
                 """INSERT INTO purchases(item_id,purchase_date,price,library_order) VALUES(?,?,?,?)
                    ON CONFLICT(item_id) DO UPDATE SET
-                      purchase_date=excluded.purchase_date, price=excluded.price,
+                      purchase_date=CASE WHEN excluded.purchase_date<>'' THEN excluded.purchase_date
+                                         ELSE purchases.purchase_date END,
+                      price=CASE WHEN excluded.price<>'' THEN excluded.price ELSE purchases.price END,
                       library_order=excluded.library_order""",
                 (
                     str(row.get("item_id", "")),
@@ -491,6 +665,13 @@ def update_from_network(db_path: str | Path, cookie_path: str | Path | None = No
     rows = list(rows_by_order.values())
     conn = get_connection(db_path)
     try:
-        return upsert_purchases(conn, rows)
+        n = upsert_purchases(conn, rows)
+        try:
+            enrich_purchase_dates(conn, cookies)
+        except BoothError as e:
+            # Dates are supplemental: a purchase sync must still succeed when
+            # the order history is temporarily unavailable.
+            log.warning("purchase date enrichment skipped: %s", type(e).__name__)
+        return n
     finally:
         conn.close()

@@ -29,7 +29,15 @@ BASE = Path(__file__).resolve().parent.parent
 def test_init_creates_all_tables(tmp_path):
     db = tmp_path / "app.db"
     init_db(db)
-    assert set(table_names(db)) == {"downloads", "items", "list_members", "lists", "purchases"}
+    assert set(table_names(db)) == {
+        "downloads",
+        "items",
+        "list_members",
+        "lists",
+        "order_items",
+        "orders",
+        "purchases",
+    }
     assert schema_version(db) == SCHEMA_VERSION
     report = check_integrity(db)
     assert report["ok"], report

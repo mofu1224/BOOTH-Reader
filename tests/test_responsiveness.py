@@ -89,6 +89,7 @@ def test_sync_does_not_hold_up_library_reads(seeded_db, tmp_path, monkeypatch):
 
 
 def test_sync_parses_each_html_page_only_once(mock_http, seeded_db, cookie_file, monkeypatch):
+    monkeypatch.setattr(purchases, "enrich_purchase_dates", lambda *args, **kwargs: {})
     parsed = []
     original = bs4.BeautifulSoup.__init__
 
