@@ -1,6 +1,6 @@
 # Mac・Windows対応
 
-`1.1.0`では、Apple Silicon MacとWindows x64で同じCLI・Web UI・ライブラリを使用します。初回準備と修復は同梱物だけで完結し、生成データの既定保存先はフォルダー内です。
+`1.2.0`では、Apple Silicon MacとWindows x64で同じCLI・Web UI・ライブラリを使用します。初回準備と修復は同梱物だけで完結し、生成データの既定保存先はフォルダー内です。
 
 ## 起動と環境
 
@@ -55,4 +55,4 @@ Macの認証ホストは`tools/webkit_host.swift`から保守者が`tools/build_
 
 検証はWindows 11 x64とApple Silicon Mac（macOS 27）で実施しています。Windows 10・macOS 14の実機、別PC、長時間運転、実BOOTHの対話的ログイン入力は検証範囲外です。実BOOTHの同期・購入ファイル取得・展開はWindowsの既存セッションで確認済みです。
 
-現行1.1.0の実機結果と確認範囲は[実装・検証記録](audit/21-portable-distribution-1.1.0.md)を参照してください。
+現行1.2.0の実機結果と確認範囲は[実装・検証記録](audit/22-portable-distribution-1.2.0.md)を参照してください。

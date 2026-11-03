@@ -2,6 +2,14 @@
 
 各時点の結果です。過去の合格を現行版・実BOOTH・未試験環境の保証とは扱いません。詳細は [audit/](audit/) と [license-audit/](license-audit/)。
 
+## 2026-11-03 1.2.0 無料ダウンロードURL追加・購入日自動補完
+
+- Windows: `pytest -q` は508 passed、1 skipped（macOS WebKit専用）。Ruff・format・mypy（25ソース）・pip check・portable 18/18・vendor整合・private path検査・原文照合（2,317参照／1,720原文）が合格。
+- 実BOOTHの既存セッションで、購入日0件の実DBを注文83件から補完し、購入71件すべてに購入日を設定。通常同期の再実行は3.8秒で、補完済み日付を保持した。URL追加した無料商品は一時ライブラリへダウンロード・展開・検証成功。
+- Windowsの独立Git候補検証は合格（508 passed、1 skipped、入力等価2,793ファイル、移動後CLI/UI、旧配置読み取り拒否）。前面GUI起動のみヘッドレスUI試験済みのため省略。
+- Mac実機はTailscale上でオフラインのため本次未接続。最終候補はGitHub Actions `macos-15` のテスト・`verify_clone_macos.py`・配布検査で確認する。成功していない場合はMac対応済みと扱わない。
+- `license-audit/release-gate.json` は1.2.0の全入力hashで再固定。公開・pushは本検証とは別操作。
+
 ## 2026-10-28 軽量化・運用前確認
 
 - 初回のオンライン依存監査は4パッケージ・7検出（同一ID重複を除くと6件）。ユーザー承認で両OSのcertifi 2026.10.19、filelock 4.2.1、opentelemetry-api 1.45.1、setuptools 84.1.0へ更新し、更新後Windowsの `pip-audit --local` は既知脆弱性0件。pip内包certifiも準備時に更新し、CA束とLICENSEを原本と照合。内包版の申告だけでは8検出・5独立IDがあるものの、対象のmsgpack C拡張・setuptools PackageIndex/FileList/Wheel実装は同梱されていないことを確認。範囲と根拠は`license-audit/security-update-2026-10-28.json`。

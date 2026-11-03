@@ -61,6 +61,6 @@ Microsoftコードの条件・データ通知は [THIRD_PARTY_TERMS.md](THIRD_PA
 
 `verify_clone` は生成環境なしの全Git候補を独立ツリーで検証し、元index・HEADを保持します。開発ツールなしPATH・無効Python/pip設定・到達不能proxy・空profile/tempで、初回Web/CLI、日本語・空白パスへの移動、DB/CSV/合成Cookie/UI、ブラウザー復旧、終了・再起動を確認します。
 
-検証ツールの既定出力は `audit/clone-verification.json` / `audit/junit-clone.xml`、ログは `.cache/clone-evidence/`。現行1.1.0の結果は [両OS検証記録](audit/21-portable-distribution-1.1.0.md)、配布条件は [両OS配布判定](license-audit/31-cross-platform-clone-distribution.md) を参照してください。CIも同梱環境を使います。実BOOTHはWindowsの既存本人セッションで同期・購入ZIP取得・展開を確認済みです。検証はWindows 11とmacOS 27で実施しており、Windows 10・macOS 14の実機・別PC・長時間運転・全面nativeアクセスは検証範囲外です。
+検証ツールの既定出力は `audit/clone-verification.json` / `audit/junit-clone.xml`、ログは `.cache/clone-evidence/`。現行1.2.0の結果は [両OS検証記録](audit/22-portable-distribution-1.2.0.md)、配布条件は [両OS配布判定](license-audit/31-cross-platform-clone-distribution.md) を参照してください。CIも同梱環境を使います。実BOOTHはWindowsの既存本人セッションで同期・購入ZIP取得・展開を確認済みです。検証はWindows 11とmacOS 27で実施しており、Windows 10・macOS 14の実機・別PC・長時間運転・全面nativeアクセスは検証範囲外です。
 
 対象はWindows x64とApple Silicon Mac・書込み可能なローカルディスクです。Intel Mac・Windows ARM64/x86・Linux・UNC/NASの直接実行は非対応です。SQLite WALはnetwork filesystem非対応のため、NASはバックアップ用に使います。

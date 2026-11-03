@@ -1,6 +1,6 @@
-# 両OSクローン配布のライセンス判定（2026-10-06）
+# 両OSクローン配布のライセンス判定（2026-10-06・1.2.0更新 2026-11-03）
 
-対象はBOOTH-Reader 1.1.0のWindows x64・Apple Silicon Mac構成です。配布方式は、Git候補のソース・vendor・原文通知・対応ソースを含むクローンです。利用中のDB・Cookie・購入物・プロフィール・検証用キャッシュは含めません。
+対象はBOOTH-Reader 1.2.0のWindows x64・Apple Silicon Mac構成です。配布方式は、Git候補のソース・vendor・原文通知・対応ソースを含むクローンです。利用中のDB・Cookie・購入物・プロフィール・検証用キャッシュは含めません。
 
 ## 阻害要因の解消
 
@@ -22,6 +22,10 @@ Appleの一次資料では、[WKWebsiteDataStore.nonPersistent](https://develope
 Mac CPythonの複合ライブラリは、full版metadataに記録された0BSD/Apache/BSD/MIT/OpenSSL/TCL/X11/Zlib/bzip2の原文条件を保持します。OSの`libSystem`等はApple提供物として使用するだけで再配布しません。pipのurllib3修正はMIT原文・変更記録を保持し、元のMPLファイルは実ソースを提供します。
 
 高度なUI試験のため保守者・CIが個人利用として取得するChromeは、無配布の`.cache/ui-test-driver`に限定します。配布payloadの検査は生成環境を対象に混ぜず、Git候補とvendorアーカイブから列挙します。
+
+## 2026-11-03の1.2.0更新
+
+1.2.0はアプリ本体のPythonコード・テスト・文書のみを変更し、CPython・SQLite・固定wheel・WebView2・Mac WebKitホスト・第三者原文／対応ソースの構成を変更していません。依存監査と原文照合は1.1.0の記録を継続し、候補全体の入力hashは`release-gate.json`で再固定します。新規の第三者コード・バイナリ・外部サービスは追加していません。
 
 ## 2026-10-28の依存更新
 
