@@ -63,7 +63,7 @@ CLIも `start.bat <command>` で実行できます（`start.bat cli <command>` �
 
 - **Cookie**：BOOTH/pixivのCookie JSON（配列、または `cookies` 配列を持つJSON・1MB以下）を登録すると全ページを同期します。CLIでのログインも検出します。置換時は確認があります。
 - **商品**：「すべての商品」「未分類」「マイリスト」を切替。商品名・ショップ名で検索し、48件ずつ表示します。画像がない商品も名前で確認できます。
-- **分類**：「マイリスト」の `+` で作成し、「商品を追加」から未分類を選びます。別リストへ移すには元のリストから外します。リスト削除で商品は未分類に戻ります。
+- **分類**：「マイリスト」の `+` で作成し、「商品を追加」から未分類を選びます。無料ダウンロード商品は、リスト表示中の「商品を追加」に商品URL（`https://booth.pm/ja/items/...`）を貼り付けても追加できます。別リストへ移すには元のリストから外します。リスト削除で商品は未分類に戻ります。
 - **順番**：購入順・名前順・ショップ順を自動保存。マイリストは横ドラッグまたはAlt＋左右で並べ替え、Escapeで取り消せます。端では自動スクロールし、保存失敗時は元に戻ります。
 - **同期・取得**：同期ボタンで再取得、商品カードからダウンロード。画面下部に英語ログと保存先を表示します。購入0件時はCookieを確認してください。
 - **未完了ファイル**：確認後に `.part` だけを削除します。完了原本・展開済みファイルは保持します。
@@ -89,6 +89,7 @@ CLIも `start.bat <command>` で実行できます（`start.bat cli <command>` �
 & .\start.bat lists create --name お気に入り
 & .\start.bat lists list
 & .\start.bat lists add --list お気に入り --item-id 1234567
+& .\start.bat lists add --list お気に入り --url https://booth.pm/ja/items/1234567
 & .\start.bat lists remove --list お気に入り --item-id 1234567
 & .\start.bat lists delete --name お気に入り
 & .\start.bat lists sort --list お気に入り --sort name
@@ -147,7 +148,7 @@ Web UIは `web/cli_bridge.py` から常駐CLIワーカー（`cli.py rpc`）を�
 | GET | `/` | 画面 |
 | GET | `/purchases`, `/unclassified?sort=`, `/downloads`, `/lists` | 一覧 |
 | GET | `/auth/status`, `/health` | 認証・プロセス・ジョブ状態 |
-| POST | `/lists` | 作成・追加・除外・削除 |
+| POST | `/lists` | 作成・追加・URL追加・除外・削除 |
 | POST | `/purchases/update`, `/download`, `/downloads/cleanup` | 同期・取得・未完了削除 |
 
 ### 終了コード
@@ -175,7 +176,7 @@ git pull --ff-only
 
 DB・購入ファイルは保持します。DB移行は前方向のみで、新版DBを旧アプリで開くと拒否します。Gitは取得・更新・開発検査に必要ですが、通常実行には不要です。更新時もローカル変更を自動破棄しません。
 
-この開発候補はDB v5を使用します。旧DBの分類・取得記録を保持し、新しい取得パスをライブラリ基準で記録します。旧版へ戻す場合は、更新前のバックアップを使ってください。
+この開発候補はDB v6を使用します。旧DBの分類・取得記録を保持し、新しい取得パスをライブラリ基準で記録します。無料ダウンロード商品は商品URLから追加でき、購入品と区別して保持します。旧版へ戻す場合は、更新前のバックアップを使ってください。
 
 ### バックアップと復旧
 

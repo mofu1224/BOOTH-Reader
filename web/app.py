@@ -42,10 +42,11 @@ class DownloadReq(BaseModel):
 class ListsReq(BaseModel):
     list_ids: builtins.list[int] = Field(default_factory=builtins.list[int], max_length=20000)
     item_ids: builtins.list[str] = Field(default_factory=builtins.list[str], max_length=20000)
-    action: str = Field(pattern="^(create|add|remove|delete|sort|reorder|reorder-lists)$")
+    action: str = Field(pattern="^(create|add|add-url|remove|delete|sort|reorder|reorder-lists)$")
     name: str | None = Field(default=None, max_length=128)
     list: str | None = Field(default=None, max_length=128)
     item_id: str | None = Field(default=None, max_length=128)
+    url: str | None = Field(default=None, max_length=2048)
     sort: str = Field(default="newest", pattern="^(newest|oldest|name|shop|manual)$")
 
 
@@ -283,7 +284,7 @@ def create_app(
             sync_lock.release()
 
     @app.post("/lists")
-    def post_lists(req: ListsReq) -> Any:
+    def post_lists(req: ListsReq) -> Any:  # noqa: PLR0911 - one branch per list action
         try:
             operations = {"create": bridge.lists_create, "delete": bridge.lists_delete}
             member_operations = {"add": bridge.lists_add, "remove": bridge.lists_remove}
@@ -296,6 +297,8 @@ def create_app(
                     timeout=30,
                     stdin_text=json.dumps(req.list_ids),
                 ).data
+            if req.action == "add-url" and req.list and req.url:
+                return bridge.lists_add_url(link, req.list, req.url)
             if req.action in operations and req.name:
                 return operations[req.action](link, req.name)
             if req.action in member_operations and req.list and req.item_id:

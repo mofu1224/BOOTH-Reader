@@ -355,12 +355,12 @@ def upsert_purchases(conn: sqlite3.Connection, rows: list[dict[str, Any]]) -> in
     try:
         for library_order, row in enumerate(rows):
             conn.execute(
-                """INSERT INTO items(item_id,title,url,shop,thumbnail,category,published_at)
-                   VALUES(?,?,?,?,?,?,?)
+                """INSERT INTO items(item_id,title,url,shop,thumbnail,category,published_at,source)
+                   VALUES(?,?,?,?,?,?,?,'purchase')
                    ON CONFLICT(item_id) DO UPDATE SET
                      title=excluded.title, url=excluded.url, shop=excluded.shop,
                      thumbnail=excluded.thumbnail, category=excluded.category,
-                     published_at=excluded.published_at""",
+                     published_at=excluded.published_at, source='purchase'""",
                 (
                     str(row.get("item_id", "")),
                     str(row.get("title", "")),
@@ -393,7 +393,7 @@ def upsert_purchases(conn: sqlite3.Connection, rows: list[dict[str, Any]]) -> in
 
 def list_purchases(conn: sqlite3.Connection, limit: int | None = None) -> list[dict[str, Any]]:
     query = """SELECT i.item_id,i.title,i.url,i.shop,i.thumbnail,i.category,i.published_at,
-                      p.purchase_date,p.price,p.library_order,i.created_at
+                      p.purchase_date,p.price,p.library_order,i.created_at,i.source
                FROM items i LEFT JOIN purchases p ON p.item_id=i.item_id
                ORDER BY p.purchase_date DESC,
                         p.library_order ASC, i.item_id ASC"""

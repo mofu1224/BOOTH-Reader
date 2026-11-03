@@ -204,6 +204,22 @@ def test_bridge_list_name_validation(seeded_db):
         link.close()
 
 
+def test_bridge_lists_add_url_builds_cli_call():
+    class Dummy:
+        def __init__(self):
+            self.argv = []
+
+        def run(self, argv, timeout=60):
+            self.argv = argv
+            return bridge.CliResult(0, "", "", {"ok": True, "item_id": "1"})
+
+    dummy = Dummy()
+    result = bridge.lists_add_url(dummy, "お気に入り", "https://booth.pm/ja/items/1")
+    assert result == {"ok": True, "item_id": "1"}
+    assert dummy.argv[:4] == ["lists", "add", "--list", "お気に入り"]
+    assert dummy.argv[4:7] == ["--url", "https://booth.pm/ja/items/1", "--json"]
+
+
 def test_web_app_never_imports_core():
     """Contract: the Web layer reaches core only through the CLI."""
     src = (Path(__file__).resolve().parent.parent / "web" / "app.py").read_text("utf-8")
@@ -246,6 +262,30 @@ def test_web_index_renders(tmp_path):
         assert "text/html" in r.headers["content-type"]
         assert "charset=utf-8" in r.headers["content-type"]
         assert "タイトル0" in r.text
+
+
+def test_web_lists_add_url_routes_to_bridge(tmp_path, monkeypatch):
+    db = tmp_path / "app.db"
+    init_db(db)
+    calls = {}
+
+    def fake_add_url(link, list_name, url):
+        calls.update(list=list_name, url=url)
+        return {"ok": True, "item_id": "1", "list": list_name}
+
+    monkeypatch.setattr(bridge, "lists_add_url", fake_add_url)
+    with TestClient(create_app(str(db), library_root=str(tmp_path / "lib"))) as client:
+        response = client.post(
+            "/lists",
+            json={
+                "action": "add-url",
+                "list": "お気に入り",
+                "url": "https://booth.pm/ja/items/1",
+            },
+        )
+    assert response.status_code == 200
+    assert response.json()["item_id"] == "1"
+    assert calls == {"list": "お気に入り", "url": "https://booth.pm/ja/items/1"}
 
 
 def test_web_escapes_malicious_title(tmp_path):

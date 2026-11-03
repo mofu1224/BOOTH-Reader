@@ -529,6 +529,15 @@ def lists_add(bridge: Bridge, list_name: str, item_id: str) -> dict[str, Any]:
     return {"ok": True, "message": res.stdout.strip()[-500:]}
 
 
+def lists_add_url(bridge: Bridge, list_name: str, url: str) -> dict[str, Any]:
+    safe_list = sanitize_list_name(list_name)
+    value = (url or "").strip()
+    if not value or len(value) > 2048:
+        raise CliBridgeError("Invalid BOOTH product URL", returncode=2)
+    res = bridge.run(["lists", "add", "--list", safe_list, "--url", value, "--json"], timeout=60)
+    return res.data or {"ok": True}
+
+
 def lists_remove(bridge: Bridge, list_name: str, item_id: str) -> dict[str, Any]:
     safe_list = sanitize_list_name(list_name)
     safe_item = sanitize_item_id(item_id)

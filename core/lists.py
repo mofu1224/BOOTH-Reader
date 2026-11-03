@@ -197,7 +197,7 @@ def get_unclassified(
     """
     order = _order(sort)
     q = f"""SELECT i.item_id,i.title,i.url,i.shop,i.thumbnail,i.category,i.published_at,
-                   p.purchase_date,p.price
+                   p.purchase_date,p.price,i.created_at,i.source
             FROM items i
             LEFT JOIN purchases p ON p.item_id=i.item_id
             LEFT JOIN list_members m ON m.item_id=i.item_id
@@ -216,7 +216,7 @@ def get_classified(
     """Return items that belong to at least one list."""
     order = _order(sort)
     q = f"""SELECT DISTINCT i.item_id,i.title,i.url,i.shop,i.thumbnail,i.category,i.published_at,
-                   p.purchase_date,p.price
+                   p.purchase_date,p.price,i.created_at,i.source
             FROM items i
             LEFT JOIN purchases p ON p.item_id=i.item_id
             INNER JOIN list_members m ON m.item_id=i.item_id
