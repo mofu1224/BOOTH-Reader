@@ -262,6 +262,8 @@ def test_web_index_renders(tmp_path):
         assert "text/html" in r.headers["content-type"]
         assert "charset=utf-8" in r.headers["content-type"]
         assert "タイトル0" in r.text
+        assert 'id="b-add-url"' in r.text
+        assert 'id="url-add-dialog"' in r.text
 
 
 def test_web_lists_add_url_routes_to_bridge(tmp_path, monkeypatch):
