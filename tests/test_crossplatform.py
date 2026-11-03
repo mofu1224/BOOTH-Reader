@@ -124,7 +124,13 @@ def test_download_names_preserve_both_unicode_equivalent_files(tmp_path):
 
 
 def test_v4_upgrade_preserves_legacy_downloads_and_supports_portable_records(tmp_path):
-    from core.db import ensure_current_schema, get_connection, init_db, schema_version
+    from core.db import (
+        SCHEMA_VERSION,
+        ensure_current_schema,
+        get_connection,
+        init_db,
+        schema_version,
+    )
     from core.download import _set_status
 
     database = init_db(tmp_path / "legacy.db")
@@ -141,7 +147,7 @@ def test_v4_upgrade_preserves_legacy_downloads_and_supports_portable_records(tmp
     finally:
         conn.close()
     ensure_current_schema(database)
-    assert schema_version(database) == 5
+    assert schema_version(database) == SCHEMA_VERSION
     conn = get_connection(database)
     try:
         old = conn.execute(

@@ -54,6 +54,7 @@ EPILOG = """\
 Examples:
   start.bat unclassified --sort newest
   start.bat purchases list --update-db
+  start.bat lists add --list favorites --url https://booth.pm/ja/items/12345
   start.bat download --item-id order_12345
   start.bat download --all --concurrent 3
   start.bat auth login
@@ -196,9 +197,13 @@ def build_parser() -> argparse.ArgumentParser:
     ll = lsub.add_parser("list", help="List lists")
     ll.add_argument("--json", action="store_true", help="JSON output")
     _add_common(ll)
-    a = lsub.add_parser("add", help="Add product to list")
+    a = lsub.add_parser("add", help="Add product to list by item ID or free-download URL")
     a.add_argument("--list", required=True, help="List name or ID")
-    a.add_argument("--item-id", required=True)
+    source = a.add_mutually_exclusive_group(required=True)
+    source.add_argument("--item-id", default=None)
+    source.add_argument("--url", default=None, help="Free BOOTH product URL")
+    a.add_argument("--cookie-path", default=None, help="Cookie file for age-gated pages")
+    a.add_argument("--json", action="store_true", help="JSON output")
     _add_common(a)
     r = lsub.add_parser("remove", help="Remove product from list")
     r.add_argument("--list", required=True)
@@ -611,8 +616,25 @@ def _cmd_lists(args: argparse.Namespace, db_path: str) -> int:
                 if not rows:
                     print("(0 rows)")
         elif args.lists_cmd == "add":
-            lists_mod.add_member(conn, args.list, args.item_id)
-            print(f"added {args.item_id} -> {args.list}")
+            if args.url:
+                from core.items import add_item_from_url
+
+                item = add_item_from_url(conn, args.url, cookie_path=args.cookie_path)
+                item_id = str(item["item_id"])
+            else:
+                item_id = str(args.item_id)
+            lists_mod.add_member(conn, args.list, item_id)
+            if getattr(args, "json", False):
+                payload: dict[str, Any] = {
+                    "ok": True,
+                    "item_id": item_id,
+                    "list": args.list,
+                }
+                if args.url:
+                    payload["item"] = item
+                _print_json(payload)
+            else:
+                print(f"added {item_id} -> {args.list}")
         elif args.lists_cmd == "remove":
             n = lists_mod.remove_member(conn, args.list, args.item_id)
             print(f"removed {n} memberships")

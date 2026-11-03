@@ -495,8 +495,11 @@ def resolve_download_links(
         href = str(a.get("href") or "")
         if not href:
             continue
-        label = a.get_text(" ", strip=True) or a.get("title", "") or ""
-        if DOWNLOAD_LINK_RE.search(href) or "ダウンロード" in label:
+        # Public free-download buttons carry the real file name in ``title``;
+        # their visible text is the button label plus size ("無料ダウンロード …").
+        visible = a.get_text(" ", strip=True)
+        label = str(a.get("title") or "").strip() or visible
+        if DOWNLOAD_LINK_RE.search(href) or "ダウンロード" in visible:
             absolute = urljoin(final, href)
             if not absolute.startswith(("http://", "https://")):
                 continue

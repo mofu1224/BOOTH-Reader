@@ -32,7 +32,7 @@ from typing import Any
 
 from .errors import BoothDatabaseError, BoothSchemaTooNewError
 
-SCHEMA_VERSION = 5
+SCHEMA_VERSION = 6
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS items (
@@ -43,6 +43,7 @@ CREATE TABLE IF NOT EXISTS items (
   thumbnail TEXT NOT NULL DEFAULT '',
   category TEXT NOT NULL DEFAULT '',
   published_at TEXT NOT NULL DEFAULT '',
+  source TEXT NOT NULL DEFAULT 'purchase' CHECK (source IN ('purchase','url')),
   created_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
 CREATE TABLE IF NOT EXISTS purchases (
@@ -240,6 +241,15 @@ def _add_download_path_encoding(conn: sqlite3.Connection) -> None:
         )
 
 
+def _add_item_source(conn: sqlite3.Connection) -> None:
+    """Distinguish purchases from products added by their public URL."""
+    columns = {str(row["name"]) for row in conn.execute("PRAGMA table_info(items)")}
+    if "source" not in columns:
+        conn.execute(
+            "ALTER TABLE items ADD COLUMN source TEXT NOT NULL DEFAULT 'purchase' CHECK (source IN ('purchase','url'))"
+        )
+
+
 _MIGRATIONS: list[_Migration] = [
     _Migration(1, _add_perf_indexes, "add list_members.item_id and downloads.status indexes"),
     _Migration(2, _add_download_url, "record the source url of each downloads row"),
@@ -248,6 +258,7 @@ _MIGRATIONS: list[_Migration] = [
     _Migration(
         5, _add_download_path_encoding, "support portable download paths; retain legacy records"
     ),
+    _Migration(6, _add_item_source, "record products added from a public URL"),
 ]
 
 
