@@ -220,6 +220,21 @@ def test_bridge_lists_add_url_builds_cli_call():
     assert dummy.argv[4:7] == ["--url", "https://booth.pm/ja/items/1", "--json"]
 
 
+def test_bridge_items_delete_builds_cli_call():
+    class Dummy:
+        def __init__(self):
+            self.argv = []
+
+        def run(self, argv, timeout=60):
+            self.argv = argv
+            return bridge.CliResult(0, "", "", {"ok": True, "item_id": "1"})
+
+    dummy = Dummy()
+    result = bridge.items_delete(dummy, "1234567")
+    assert result == {"ok": True, "item_id": "1"}
+    assert dummy.argv == ["items", "delete", "--item-id", "1234567", "--json"]
+
+
 def test_web_app_never_imports_core():
     """Contract: the Web layer reaches core only through the CLI."""
     src = (Path(__file__).resolve().parent.parent / "web" / "app.py").read_text("utf-8")

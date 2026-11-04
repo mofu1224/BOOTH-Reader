@@ -551,6 +551,12 @@ def lists_delete(bridge: Bridge, name: str) -> dict[str, Any]:
     return {"ok": True, "message": res.stdout.strip()[-500:]}
 
 
+def items_delete(bridge: Bridge, item_id: str) -> dict[str, Any]:
+    safe = sanitize_item_id(item_id)
+    res = bridge.run(["items", "delete", "--item-id", safe, "--json"], timeout=30)
+    return res.data or {"ok": True}
+
+
 def download_argv(
     item_id: str | None = None,
     all: bool = False,

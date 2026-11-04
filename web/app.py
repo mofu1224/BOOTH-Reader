@@ -42,7 +42,9 @@ class DownloadReq(BaseModel):
 class ListsReq(BaseModel):
     list_ids: builtins.list[int] = Field(default_factory=builtins.list[int], max_length=20000)
     item_ids: builtins.list[str] = Field(default_factory=builtins.list[str], max_length=20000)
-    action: str = Field(pattern="^(create|add|add-url|remove|delete|sort|reorder|reorder-lists)$")
+    action: str = Field(
+        pattern="^(create|add|add-url|remove|delete|delete-item|sort|reorder|reorder-lists)$"
+    )
     name: str | None = Field(default=None, max_length=128)
     list: str | None = Field(default=None, max_length=128)
     item_id: str | None = Field(default=None, max_length=128)
@@ -299,6 +301,8 @@ def create_app(
                 ).data
             if req.action == "add-url" and req.list and req.url:
                 return bridge.lists_add_url(link, req.list, req.url)
+            if req.action == "delete-item" and req.item_id:
+                return bridge.items_delete(link, req.item_id)
             if req.action in operations and req.name:
                 return operations[req.action](link, req.name)
             if req.action in member_operations and req.list and req.item_id:

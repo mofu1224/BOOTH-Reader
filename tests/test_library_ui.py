@@ -123,6 +123,27 @@ def test_list_order_api_rejects_stale_state_without_partial_save(tmp_path):
         assert [r["list_id"] for r in client.get("/lists").json()["lists"]] == expected
 
 
+def test_web_delete_url_item_api(tmp_path):
+    db = init_db(tmp_path / "app.db")
+    conn = get_connection(db)
+    try:
+        conn.execute("INSERT INTO items(item_id,title,source) VALUES('url1','URL商品','url')")
+        conn.execute("INSERT INTO items(item_id,title,source) VALUES('buy1','購入品','purchase')")
+        conn.execute("INSERT INTO purchases(item_id,purchase_date) VALUES('buy1','2026-01-01')")
+        conn.commit()
+    finally:
+        conn.close()
+    with TestClient(create_app(db, tmp_path / "lib")) as client:
+        response = client.post("/lists", json={"action": "delete-item", "item_id": "url1"})
+        assert response.status_code == 200
+        assert response.json() == {"ok": True, "item_id": "url1", "title": "URL商品"}
+        assert [item["item_id"] for item in client.get("/library").json()["items"]] == ["buy1"]
+        denied = client.post("/lists", json={"action": "delete-item", "item_id": "buy1"})
+        assert denied.status_code == 400
+        assert denied.json()["code"] == "BAD_REQUEST"
+        assert [item["item_id"] for item in client.get("/library").json()["items"]] == ["buy1"]
+
+
 def test_network_order_survives_missing_dates_and_sync(tmp_path):
     db = tmp_path / "app.db"
     init_db(db)
@@ -266,6 +287,38 @@ def test_url_import_dialog_targets_a_list(live_ui):
                     "url": "https://booth.pm/ja/items/1234567",
                 }
             ]
+        finally:
+            browser.close()
+
+
+def test_url_product_delete_button_removes_it_from_library(live_ui, seeded_db):
+    conn = get_connection(seeded_db)
+    try:
+        conn.execute(
+            """INSERT INTO items(item_id,title,url,shop,thumbnail,source)
+               VALUES('1234567','URL商品','https://booth.pm/ja/items/1234567','ショップ','','url')"""
+        )
+        conn.commit()
+    finally:
+        conn.close()
+    with sync_playwright() as pw:
+        browser = launch_browser(pw, headless=True)
+        try:
+            page = browser.new_page(viewport={"width": 1440, "height": 1000})
+            page.goto(live_ui)
+            card = page.locator('#grid .product[data-item="1234567"]')
+            delete = card.locator("[data-delete]")
+            expect(delete).to_have_text("削除")
+            expect(page.locator('#grid .product[data-item="id0"] [data-delete]')).to_have_count(0)
+            page.locator("#language").select_option("en")
+            expect(delete).to_have_text("Delete")
+            page.locator("#language").select_option("ja")
+            dialogs = []
+            page.on("dialog", lambda dialog: (dialogs.append(dialog.message), dialog.accept()))
+            delete.click()
+            expect(page.locator('#grid .product[data-item="1234567"]')).to_have_count(0)
+            expect(page.locator("#msg")).to_have_text("商品を削除しました。")
+            assert "「URL商品」をライブラリから削除しますか？" in dialogs[-1]
         finally:
             browser.close()
 

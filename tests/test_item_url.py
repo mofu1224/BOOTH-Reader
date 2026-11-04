@@ -8,7 +8,7 @@ import pytest
 
 from core import lists
 from core.db import get_connection, init_db
-from core.items import add_item_from_url, parse_item_page, parse_item_url
+from core.items import add_item_from_url, delete_url_item, parse_item_page, parse_item_url
 
 
 def _item_html(
@@ -158,6 +158,38 @@ def test_add_item_from_url_keeps_library_url_of_a_purchased_item(tmp_path, monke
         conn.close()
 
 
+def test_delete_url_item_removes_memberships_and_ledger(tmp_path):
+    db = init_db(tmp_path / "app.db")
+    conn = get_connection(db)
+    try:
+        conn.execute("INSERT INTO items(item_id,title,source) VALUES('1234567','無料素材','url')")
+        conn.execute(
+            "INSERT INTO items(item_id,title,source) VALUES('7654321','購入品','purchase')"
+        )
+        conn.execute("INSERT INTO purchases(item_id,purchase_date) VALUES('7654321','2026-01-01')")
+        conn.execute(
+            "INSERT INTO downloads(item_id,file_name,status) VALUES('1234567','素材.zip','done')"
+        )
+        conn.commit()
+        lists.add_member(conn, "お気に入り", "1234567")
+
+        assert delete_url_item(conn, "1234567") == {
+            "ok": True,
+            "item_id": "1234567",
+            "title": "無料素材",
+        }
+        assert conn.execute("SELECT COUNT(*) FROM items WHERE item_id='1234567'").fetchone()[0] == 0
+        assert conn.execute("SELECT COUNT(*) FROM list_members").fetchone()[0] == 0
+        assert conn.execute("SELECT COUNT(*) FROM downloads").fetchone()[0] == 0
+        with pytest.raises(ValueError, match="URL"):
+            delete_url_item(conn, "7654321")
+        with pytest.raises(ValueError, match="not found"):
+            delete_url_item(conn, "missing")
+        assert conn.execute("SELECT COUNT(*) FROM items").fetchone()[0] == 1
+    finally:
+        conn.close()
+
+
 def test_add_item_from_url_rejects_paid_product(tmp_path, monkeypatch):
     db = init_db(tmp_path / "app.db")
     monkeypatch.setattr(
@@ -299,3 +331,29 @@ def test_cli_lists_add_url_rejects_non_booth_url(tmp_path, capsys):
     )
     assert code == 2
     assert "BOOTH product URL" in capsys.readouterr().err
+
+
+def test_cli_items_delete_refuses_purchases(tmp_path, capsys):
+    import cli
+
+    db = init_db(tmp_path / "app.db")
+    conn = get_connection(db)
+    try:
+        conn.execute("INSERT INTO items(item_id,title,source) VALUES('url1','URL商品','url')")
+        conn.execute("INSERT INTO items(item_id,title,source) VALUES('buy1','購入品','purchase')")
+        conn.execute("INSERT INTO purchases(item_id,purchase_date) VALUES('buy1','2026-01-01')")
+        conn.commit()
+    finally:
+        conn.close()
+
+    assert cli.main(["--db", str(db), "items", "delete", "--item-id", "url1", "--json"]) == 0
+    payload = json.loads(capsys.readouterr().out)
+    assert payload == {"ok": True, "item_id": "url1", "title": "URL商品"}
+
+    assert cli.main(["--db", str(db), "items", "delete", "--item-id", "buy1"]) == 2
+    assert "Only products added from a URL" in capsys.readouterr().err
+    conn = get_connection(db)
+    try:
+        assert [row[0] for row in conn.execute("SELECT item_id FROM items")] == ["buy1"]
+    finally:
+        conn.close()

@@ -295,3 +295,30 @@ def add_item_from_url(
     conn.commit()
     log.info("item url add item=%s created=%s", metadata["item_id"], created)
     return {**metadata, "created": created}
+
+
+def delete_url_item(conn: sqlite3.Connection, item_id: str) -> dict[str, Any]:
+    """Delete a product that was added from a public BOOTH URL.
+
+    Purchased products are refused because the next library sync would recreate
+    them. List memberships and download ledger rows are removed through the
+    existing foreign-key cascades; files already downloaded stay on disk.
+    """
+    key = str(item_id or "").strip()
+    if not key or len(key) > 128:
+        raise ValueError("Product not found")
+    try:
+        conn.execute("BEGIN IMMEDIATE")
+        row = conn.execute("SELECT title,source FROM items WHERE item_id=?", (key,)).fetchone()
+        if row is None:
+            raise ValueError("Product not found")
+        purchased = conn.execute("SELECT 1 FROM purchases WHERE item_id=?", (key,)).fetchone()
+        if row["source"] != "url" or purchased is not None:
+            raise ValueError("Only products added from a URL can be deleted")
+        conn.execute("DELETE FROM items WHERE item_id=?", (key,))
+        conn.commit()
+    except (ValueError, sqlite3.Error):
+        conn.rollback()
+        raise
+    log.info("item deleted item=%s", key)
+    return {"ok": True, "item_id": key, "title": str(row["title"] or "")}

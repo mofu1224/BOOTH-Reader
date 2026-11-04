@@ -231,6 +231,14 @@ def build_parser() -> argparse.ArgumentParser:
     nav_order.add_argument("--json", action="store_true")
     _add_common(nav_order)
 
+    ip = sub.add_parser("items", help="Manage products")
+    _add_common(ip)
+    isub = ip.add_subparsers(dest="items_cmd", required=True)
+    item_delete = isub.add_parser("delete", help="Delete a product added from a URL")
+    item_delete.add_argument("--item-id", required=True)
+    item_delete.add_argument("--json", action="store_true", help="JSON output")
+    _add_common(item_delete)
+
     wp = sub.add_parser("web", help="Start local Web UI")
     wp.add_argument("--host", default="127.0.0.1", help="Listen address (default: 127.0.0.1)")
     wp.add_argument("--port", type=int, default=8000, help="Port (default: 8000)")
@@ -646,6 +654,22 @@ def _cmd_lists(args: argparse.Namespace, db_path: str) -> int:
     return 0
 
 
+def _cmd_items(args: argparse.Namespace, db_path: str) -> int:
+    from core.db import get_connection
+    from core.items import delete_url_item
+
+    conn = get_connection(db_path)
+    try:
+        result = delete_url_item(conn, args.item_id)
+    finally:
+        conn.close()
+    if getattr(args, "json", False):
+        _print_json(result)
+    else:
+        print(f"deleted {result['item_id']}")
+    return 0
+
+
 def _cmd_doctor(args: argparse.Namespace, db_path: str) -> int:
     """Report on install health: deps, database, cookies, library, disk."""
     import shutil
@@ -1039,6 +1063,8 @@ def _dispatch(  # noqa: PLR0911
         return _cmd_unclassified(args, db_path)
     if command == "lists":
         return _cmd_lists(args, db_path)
+    if command == "items":
+        return _cmd_items(args, db_path)
     if command == "doctor":
         return _cmd_doctor(args, db_path)
     if command == "web":
@@ -1114,6 +1140,8 @@ def _cmd_writes(args: argparse.Namespace) -> bool:
     command = args.cmd
     if command == "lists":
         return args.lists_cmd not in {"list", "library"}
+    if command == "items":
+        return True
     if command in ("init-db", "download"):
         return True
     if command == "purchases":
