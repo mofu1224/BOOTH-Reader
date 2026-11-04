@@ -7,6 +7,7 @@
 - Windows作成ZIPをMacへ移すと`start.command`・`start.sh`の実行権限が失われ、ダブルクリック起動が`permission denied`になる問題を修正。`bash ./start.sh`起動時に`tools/bootstrap.sh`が権限を復元する。
 - Mac実機（macOS 27.2 arm64）で`0644`から`0755`への復元、`./start.command --check`・`./start.sh --check`の終了0を確認。`tools/verify_clone_macos.py`はWindows ZIP相当の権限喪失を含む全7チェックPASS（初回準備6.558秒）。
 - Windowsは508 passed・1 skipped、Ruff・format・mypy 25ソース・compileall・pip check・portable 18/18・vendor整合・原文照合PASS。詳細は[Mac起動スクリプトの実行権限復旧](audit/23-macos-launcher-permissions.md)。
+- GitHub Actions run `41757361188`（`2b4590d`）は、Windows品質・Windowsクローン・Mac arm64品質・Macクローン・依存監査・秘密検査の全ジョブが成功。commit署名はGitHub上でverified。
 
 ## 2026-11-03 1.2.0 無料ダウンロードURL追加・購入日自動補完
 

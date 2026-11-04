@@ -21,6 +21,7 @@
 | Mac独立クローン | `tools/verify_clone_macos.py`が全7チェックPASS。Windows ZIP相当の権限喪失からの復元、オフライン初回準備6.558秒、CLI、実WebKit 1440/768/390px、移動後の再構築、修復拒否、署名破損復旧、再起動を確認。 |
 | Mac WebKit | `tests/test_native_webkit.py` 1 passed。 |
 | Windows | `pytest -q` 508 passed・1 skipped（macOS専用）、Ruff・format・mypy 25ソース・compileall・pip check・portable 18/18・vendor整合・原文照合PASS。 |
+| GitHub Actions | run `41757361188`（`2b4590d`）のWindows品質・Windowsクローン・Mac arm64品質・Macクローン・依存監査・秘密検査が全ジョブ成功。 |
 
 ## 確認範囲
 
