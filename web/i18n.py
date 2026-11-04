@@ -39,6 +39,7 @@ MESSAGES = {
     "items": "{count} products",
     "library_total": "{count} products in library",
     "remove_item": "Remove {title} from list",
+    "open_item": "Open {title} on BOOTH",
     "delete_list": 'Delete "{name}"? Products will become unclassified.',
     "synced": "Synced {count} products.",
     "該当する商品がありません": "No matching products",
@@ -112,6 +113,7 @@ JAPANESE_FORMATS = {
     "items": "{count} 商品",
     "library_total": "{count} 商品のライブラリ",
     "remove_item": "{title}をリストから外す",
+    "open_item": "BOOTHで{title}を開く",
     "delete_list": "「{name}」を削除しますか？商品は未分類に戻ります。",
     "synced": "{count} 商品を同期しました。",
 }

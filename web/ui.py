@@ -6,10 +6,34 @@ from __future__ import annotations
 
 import html
 import json
+import re
 from typing import Any
 from urllib.parse import urlsplit
 
 from .i18n import ERROR_DETAILS, ERRORS, JAPANESE_FORMATS, MESSAGES
+
+
+def item_page_url(item: dict[str, Any]) -> str:
+    """Return the page to open for an item.
+
+    URL imports link to the public product page. Cookie-synced purchases link
+    to the BOOTH purchase page that carries their download links.
+    """
+    if str(item.get("source", "purchase")) == "url":
+        item_id = str(item.get("item_id", ""))
+        if re.fullmatch(r"\d+", item_id):
+            return f"https://booth.pm/ja/items/{item_id}"
+        return ""
+    raw = str(item.get("url", "")).strip()
+    try:
+        parts = urlsplit(raw)
+    except ValueError:
+        return ""
+    host = (parts.hostname or "").lower()
+    if parts.scheme != "https" or (host != "booth.pm" and not host.endswith(".booth.pm")):
+        return ""
+    return raw
+
 
 STYLE = """
 :root{color-scheme:light;--bg:#fafafa;--surface:#fff;--ink:#1a1a1a;--muted:#666;--line:#e5e5e5;--accent:#1a1a1a;--on-accent:#fff;--accent-hover:#333;--soft:#ededed;--radius:2px;--danger:#a32929;--gutter:clamp(20px,4.2vw,64px)}
@@ -24,7 +48,7 @@ button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{ou
 .nav button{text-align:left;border:0;background:transparent;display:flex;align-items:center;justify-content:space-between;gap:12px}.nav-label{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.count{font-variant-numeric:tabular-nums;color:var(--muted)}.sidebar-heading{display:flex;justify-content:space-between;align-items:center;color:var(--muted)}.sidebar-heading button{border:0;min-height:32px;padding:2px 8px}
 .connection{grid-column:3;grid-row:1;display:flex;align-items:center;gap:16px;padding-bottom:24px}.connection button{font-size:12px;background:var(--soft);border-color:transparent}.auth-state{font-size:12px;color:var(--muted);font-weight:400}
 main{min-width:0;width:100%;margin:0 auto}h2{font-size:21px;margin:0 0 8px}p{margin:0}.muted{color:var(--muted)}.actions{display:flex;gap:8px;flex-wrap:wrap}.toolbar{display:flex;align-items:center;flex-wrap:wrap}.search{flex:1;min-width:180px;position:relative}.search input{width:100%}.toolbar label{font-size:12px;color:var(--muted)}.toolbar select{margin-left:8px}.summary{display:flex;align-items:center;justify-content:space-between;color:var(--muted)}
-.grid{display:grid}.product{min-width:0;display:flex;flex-direction:column}.cover{aspect-ratio:1;display:grid;place-items:center;position:relative;overflow:hidden}.cover img{width:100%;height:100%;object-fit:contain;position:absolute;inset:0}.no-image{font-size:12px;color:var(--muted)}.product-info{display:flex;flex-direction:column;flex:1}.shop{color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.product h2{margin-top:0;overflow-wrap:anywhere}.meta{display:flex;flex-wrap:wrap;margin-top:auto;color:var(--muted)}.badge{max-width:100%;overflow-wrap:anywhere}.product-actions{display:flex;gap:6px}.move{display:flex;gap:6px;margin-top:8px}.move button{flex:1;min-height:36px}.product[draggable=true]{cursor:grab}.product.dragging{opacity:.5}
+.grid{display:grid}.product{min-width:0;display:flex;flex-direction:column}.cover{aspect-ratio:1;display:grid;place-items:center;position:relative;overflow:hidden;color:inherit;text-decoration:none}.cover img{width:100%;height:100%;object-fit:contain;position:absolute;inset:0}.no-image{font-size:12px;color:var(--muted)}.product-info{display:flex;flex-direction:column;flex:1}.shop{color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.product h2{margin-top:0;overflow-wrap:anywhere}.meta{display:flex;flex-wrap:wrap;margin-top:auto;color:var(--muted)}.badge{max-width:100%;overflow-wrap:anywhere}.product-actions{display:flex;gap:6px}.move{display:flex;gap:6px;margin-top:8px}.move button{flex:1;min-height:36px}.product[draggable=true]{cursor:grab}.product.dragging{opacity:.5}
 .empty{text-align:center;border:1px solid var(--line)}.pager{display:flex;gap:16px;align-items:center;justify-content:center;margin:32px 0;font-size:12px}.notice{font-size:13px;padding:12px 16px;border:1px solid var(--line);margin-bottom:20px;overflow-wrap:anywhere}.notice:empty{display:none}
 .cover img{background:inherit}
 #list-nav{flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;scrollbar-width:thin;overscroll-behavior-x:contain}#list-nav button{flex:0 0 auto;position:relative;touch-action:none;user-select:none;cursor:grab}#list-nav button.dragging{z-index:2;cursor:grabbing;background:var(--soft);box-shadow:0 2px 8px #0002;will-change:transform}#list-nav.sorting{cursor:grabbing}
@@ -60,6 +84,11 @@ SCRIPT = r"""
 const $ = id => document.getElementById(id);
 const esc = v => String(v ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const imageURL = v => {try {const u=new URL(v);return u.protocol==='https:' ? u.href : '';}catch{return '';}};
+const itemURL = i => {
+  if(i.source==='url')return /^\d+$/.test(String(i.item_id??'')) ? `https://booth.pm/ja/items/${i.item_id}` : '';
+  try {const u=new URL(i.url);if(u.protocol==='https:'&&(u.hostname==='booth.pm'||u.hostname.endsWith('.booth.pm')))return u.href;}catch{}
+  return '';
+};
 const translations=JSON.parse($('translations').textContent);
 let language='ja';
 try {const saved=localStorage.getItem('booth-reader.language');if(['ja','en'].includes(saved))language=saved;}catch{}
@@ -172,7 +201,7 @@ function sortedRows(filter=true) {
   const q=$('search').value.trim().toLocaleLowerCase('ja');
   return filter&&q?rows.filter(i=>searchText.get(i.item_id).includes(q)):rows;
 }
-function card(i){const list=current();const owner=memberships(i.item_id).map(m=>listMap.get(String(m.list_id))?.name).filter(Boolean).join(' / ');const img=imageURL(i.thumbnail);return `<article class="product" data-item="${esc(i.item_id)}"><div class="cover"><span class="no-image">${esc(t('画像なし'))}</span>${img?`<img src="${esc(img)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">`:''}</div><div class="product-info"><p class="shop">${esc(i.shop||t('ショップ名未取得'))}</p><h2>${esc(i.title)}</h2><div class="meta"><span>${esc(i.source==='url'?t('URLから追加'):i.purchase_date||t('購入日未取得'))}</span><span class="badge">${esc(owner||t('未分類'))}</span></div><div class="product-actions"><button data-write data-dl="${esc(i.item_id)}">${esc(t('ダウンロード'))}</button>${list?`<button data-write data-remove="${esc(i.item_id)}" aria-label="${esc(t('remove_item',{title:i.title}))}">${esc(t('外す'))}</button>`:!owner?`<button data-write data-choose="${esc(i.item_id)}">${esc(t('リストへ'))}</button>`:''}</div></div></article>`;}
+function card(i){const list=current();const owner=memberships(i.item_id).map(m=>listMap.get(String(m.list_id))?.name).filter(Boolean).join(' / ');const img=imageURL(i.thumbnail),href=itemURL(i),cover=`<span class="no-image">${esc(t('画像なし'))}</span>${img?`<img src="${esc(img)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer">`:''}`;return `<article class="product" data-item="${esc(i.item_id)}">${href?`<a class="cover" href="${esc(href)}" target="_blank" rel="noopener noreferrer" aria-label="${esc(t('open_item',{title:i.title}))}">${cover}</a>`:`<div class="cover">${cover}</div>`}<div class="product-info"><p class="shop">${esc(i.shop||t('ショップ名未取得'))}</p><h2>${esc(i.title)}</h2><div class="meta"><span>${esc(i.source==='url'?t('URLから追加'):i.purchase_date||t('購入日未取得'))}</span><span class="badge">${esc(owner||t('未分類'))}</span></div><div class="product-actions"><button data-write data-dl="${esc(i.item_id)}">${esc(t('ダウンロード'))}</button>${list?`<button data-write data-remove="${esc(i.item_id)}" aria-label="${esc(t('remove_item',{title:i.title}))}">${esc(t('外す'))}</button>`:!owner?`<button data-write data-choose="${esc(i.item_id)}">${esc(t('リストへ'))}</button>`:''}</div></div></article>`;}
 function render(){
   const list=current(),query=$('search').value.trim();
   $('view-title').textContent=list?list.name:t(view==='all'?'すべての商品':'未分類');
@@ -410,8 +439,15 @@ def render_index(
             if safe_image
             else ""
         )
+        cover = f'<span class="no-image">画像なし</span>{image}'
+        page_url = item_page_url(item)
+        cover_markup = (
+            f'<a class="cover" href="{html.escape(page_url, quote=True)}" target="_blank" rel="noopener noreferrer" aria-label="BOOTHで{title}を開く">{cover}</a>'
+            if page_url
+            else f'<div class="cover">{cover}</div>'
+        )
         cards.append(
-            f'<article class="product"><div class="cover"><span class="no-image">画像なし</span>{image}</div><div class="product-info"><p class="shop">{shop}</p><h2>{title}</h2></div></article>'
+            f'<article class="product">{cover_markup}<div class="product-info"><p class="shop">{shop}</p><h2>{title}</h2></div></article>'
         )
     return f"""<!doctype html>
 <html lang="ja" data-theme="{theme}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BOOTH-Reader — ライブラリ</title><link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23FC4D50'/%3E%3C/svg%3E"><style>{STYLE}</style></head>
