@@ -2,6 +2,21 @@
 set -euo pipefail
 root="$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd -P)"
 fail() { printf '[ERROR] %s\n' "$*" >&2; exit 1; }
+# Windows ZIPs and file copies do not preserve Unix execute bits. Repair the
+# user-facing launchers so Finder can open start.command on the next attempt.
+repaired=0
+for launcher in start.command start.sh tools/bootstrap.sh; do
+    [ -f "$root/$launcher" ] || continue
+    if [ -x "$root/$launcher" ]; then continue; fi
+    if /bin/chmod +x "$root/$launcher" 2>/dev/null; then
+        repaired=1
+    else
+        printf '[portable] Could not restore executable permission: %s\n' "$launcher" >&2
+    fi
+done
+if [ "$repaired" -eq 1 ]; then
+    printf '[portable] Restored launcher permissions.\n'
+fi
 [ "$(/usr/bin/uname -s)" = Darwin ] && [ "$(/usr/bin/uname -m)" = arm64 ] || fail 'Mac Apple Silicon required.'
 manifest="$root/portable/macos-arm64.json"
 json() { /usr/bin/plutil -extract "$2" raw -o - "$1"; }
@@ -51,15 +66,18 @@ if [ "$ready" = false ]; then
     /usr/bin/tar -xzf "$archive" -C "$work"
     candidate="$work/python/bin/python3"
     "$candidate" -E -s -c 'import ssl,sqlite3,venv,ensurepip' || fail 'Python self-check failed.'
-    backup="$work/previous-python"
-    if [ -e "$root/.tools/python" ]; then /bin/mv "$root/.tools/python" "$backup"; fi
+    backup=""
+    if [ -e "$root/.tools/python" ]; then
+        backup="$work/previous-python"
+        /bin/mv "$root/.tools/python" "$backup"
+    fi
     /bin/mv "$work/python" "$root/.tools/python"
 fi
 cd "$root"
 if [ "$ready" = false ]; then
     result=0
     "$python" -E -s -X utf8 "$root/tools/manage_portable.py" auto "$@" || result=$?
-    if [ "$result" -ne 0 ] && [ -d "$backup" ]; then
+    if [ "$result" -ne 0 ] && [ -n "$backup" ] && [ -d "$backup" ]; then
         /bin/rm -rf "$root/.tools/python"
         /bin/mv "$backup" "$root/.tools/python"
     fi

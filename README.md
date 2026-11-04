@@ -4,7 +4,7 @@ BOOTH購入品の取得・ダウンロード・ZIP展開・分類を管理する
 
 ## インストール・起動
 
-**クローン後、Windowsは`start.bat`、Apple Silicon Macは`start.command`で起動します。** 初回準備・復旧・ブラウザー起動は自動です。Pythonの導入、Git LFS、追加ダウンロードは不要です。
+**クローン後、Windowsは`start.bat`、Apple Silicon Macは`start.command`（またはターミナルで`bash ./start.sh`）で起動します。** 初回準備・復旧・ブラウザー起動は自動です。Pythonの導入、Git LFS、追加ダウンロードは不要です。
 
 Mac・Windows対応版は`1.2.0`です。Macの認証には同梱の自作ホストとOS標準WebKitを使います。[構成・確認範囲](CROSS_PLATFORM.md)を参照してください。
 
@@ -23,6 +23,10 @@ bash ./start.sh
 bash ./start.sh --no-open
 bash ./start.sh doctor --json
 ```
+
+> **Macで「実行権限がありません」と表示された場合**
+>
+> Windowsで作成したZIPを移した場合や、GitHubの「Download ZIP」を使った場合、`start.command`と`start.sh`の実行権限が失われることがあります。ターミナルで一度 `bash ./start.sh` を実行してください。起動時に権限を自動修復し、次回から`start.command`をダブルクリックできます。
 
 以降の`start.bat`の例は、Macでは`bash ./start.sh`に置き換えます。CLI引数・終了コード・保存先は共通です。
 
@@ -195,6 +199,7 @@ DB・購入ファイルは保持します。DB移行は前方向のみで、新�
 | 症状 | 対処 |
 |---|---|
 | 引数エラー | `start.bat help`。Web UIは引数なし |
+| Macで`start.command`をダブルクリックしても「実行権限がありません」 | ターミナルで`bash ./start.sh`を一度実行（起動時に権限を自動修復）。必要なら`chmod +x start.command start.sh` |
 | 更新・修復時に「起動中」 | 起動ウィンドウでCtrl+C後に再実行 |
 | vendor欠損・破損 | 別フォルダーへ再クローン。`app.db`・`data/`・購入物は保持 |
 | `BOOTH_PREREQUISITE_MISSING` / Webが開かない | `start.bat --check` → `start.bat --repair` |
@@ -223,7 +228,7 @@ DB・購入ファイルは保持します。DB移行は前方向のみで、新�
 
 - [本体MIT](LICENSE)・[第三者通知](THIRD_PARTY_NOTICES.md)・[Microsoft利用条件](THIRD_PARTY_TERMS.md)
 - [対応ソース](SOURCE_OBLIGATIONS/README.md)・[両OS配布判定](license-audit/31-cross-platform-clone-distribution.md)
-- [製品の判定条件・検証範囲](audit/19-release-scope.md)・[実装・検証記録](audit/22-portable-distribution-1.2.0.md)
+- [製品の判定条件・検証範囲](audit/19-release-scope.md)・[実装・検証記録](audit/22-portable-distribution-1.2.0.md)・[Mac起動修正](audit/23-macos-launcher-permissions.md)
 - [変更履歴](CHANGELOG.md)・[検証ログ](VERIFY_LOG.md)
 
 ライセンスゲートの合格と製品全体の完成判定は別です。第三者原文は `THIRD_PARTY_LICENSES/` に保持します。
