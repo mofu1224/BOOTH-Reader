@@ -16,6 +16,7 @@ from tests.browser_helpers import launch_browser
 from tests.test_audit_web import live_ui as server_fixture
 from web import cli_bridge as bridge
 from web.app import create_app
+from web.ui import item_page_url, render_index
 
 live_ui = server_fixture
 
@@ -265,6 +266,117 @@ def test_url_import_dialog_targets_a_list(live_ui):
                     "url": "https://booth.pm/ja/items/1234567",
                 }
             ]
+        finally:
+            browser.close()
+
+
+def test_item_page_url_matches_the_item_source():
+    assert (
+        item_page_url({"item_id": "1234567", "source": "url"})
+        == "https://booth.pm/ja/items/1234567"
+    )
+    assert item_page_url({"item_id": "order_1234567", "source": "url"}) == ""
+    library = "https://accounts.booth.pm/library#item-7654321"
+    assert item_page_url({"item_id": "7654321", "source": "purchase", "url": library}) == library
+    order = "https://accounts.booth.pm/orders/123"
+    assert item_page_url({"item_id": "order_123", "source": "purchase", "url": order}) == order
+    assert (
+        item_page_url({"item_id": "1", "source": "purchase", "url": "https://example.invalid/1"})
+        == ""
+    )
+    assert item_page_url({"item_id": "1", "source": "purchase", "url": "javascript:alert(1)"}) == ""
+    assert item_page_url({"item_id": "1", "source": "purchase"}) == ""
+
+
+def test_render_index_links_thumbnails_to_the_matching_page():
+    product = {
+        "item_id": "1234567",
+        "title": "URL商品",
+        "shop": "ショップ",
+        "thumbnail": "",
+        "source": "url",
+    }
+    library = "https://accounts.booth.pm/library#item-7654321"
+    purchase = {
+        "item_id": "7654321",
+        "title": "購入商品",
+        "shop": "ショップ",
+        "thumbnail": "",
+        "source": "purchase",
+        "url": library,
+    }
+    invalid = {
+        "item_id": "order_1",
+        "title": "不明商品",
+        "shop": "ショップ",
+        "thumbnail": "",
+        "source": "purchase",
+        "url": "https://example.invalid/1",
+    }
+    page = render_index({"items": [product, purchase, invalid], "lists": [], "members": []})
+    assert '<a class="cover" href="https://booth.pm/ja/items/1234567"' in page
+    assert f'<a class="cover" href="{library}"' in page
+    assert 'href="https://example.invalid/1"' not in page
+
+
+def test_thumbnail_opens_product_page_or_purchase_library(live_ui, seeded_db):
+    conn = get_connection(seeded_db)
+    try:
+        conn.execute(
+            """INSERT INTO items(item_id,title,url,shop,thumbnail,source)
+               VALUES('1234567','URL商品','https://booth.pm/ja/items/1234567','ショップ','','url')"""
+        )
+        conn.execute(
+            "INSERT INTO purchases(item_id,purchase_date,price) VALUES('1234567','2024-02-01','¥0')"
+        )
+        conn.execute(
+            """INSERT INTO items(item_id,title,url,shop,thumbnail,source)
+               VALUES('7654321','購入商品','https://accounts.booth.pm/library#item-7654321','ショップ','','purchase')"""
+        )
+        conn.execute(
+            "INSERT INTO purchases(item_id,purchase_date,price) VALUES('7654321','2024-02-02','¥0')"
+        )
+        conn.commit()
+    finally:
+        conn.close()
+    with sync_playwright() as pw:
+        browser = launch_browser(pw, headless=True)
+        try:
+            page = browser.new_page()
+            page.goto(live_ui)
+            product_cover = page.locator('#grid .product[data-item="1234567"] a.cover')
+            purchase_cover = page.locator('#grid .product[data-item="7654321"] a.cover')
+            expect(product_cover).to_have_attribute("href", "https://booth.pm/ja/items/1234567")
+            expect(purchase_cover).to_have_attribute(
+                "href", "https://accounts.booth.pm/library#item-7654321"
+            )
+            for cover in (product_cover, purchase_cover):
+                expect(cover).to_have_attribute("target", "_blank")
+                expect(cover).to_have_attribute("rel", "noopener noreferrer")
+            # Seeded items have a non-BOOTH URL, so they stay as plain covers.
+            expect(page.locator('#grid .product[data-item="id0"] a.cover')).to_have_count(0)
+            page.context.route(
+                "https://booth.pm/**",
+                lambda route: route.fulfill(
+                    status=200, content_type="text/html", body="<title>BOOTH</title>"
+                ),
+            )
+            page.context.route(
+                "https://accounts.booth.pm/**",
+                lambda route: route.fulfill(
+                    status=200, content_type="text/html", body="<title>Library</title>"
+                ),
+            )
+            with page.expect_popup() as popup_info:
+                product_cover.click()
+            popup = popup_info.value
+            popup.wait_for_load_state()
+            assert popup.url.startswith("https://booth.pm/ja/items/1234567")
+            with page.expect_popup() as popup_info:
+                purchase_cover.click()
+            popup = popup_info.value
+            popup.wait_for_load_state()
+            assert popup.url.startswith("https://accounts.booth.pm/library#item-7654321")
         finally:
             browser.close()
 
