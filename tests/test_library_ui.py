@@ -270,25 +270,17 @@ def test_url_import_dialog_targets_a_list(live_ui):
             browser.close()
 
 
-def test_item_page_url_matches_the_item_source():
+def test_item_page_url_uses_the_canonical_product_page():
+    assert item_page_url({"item_id": "1234567"}) == "https://booth.pm/ja/items/1234567"
     assert (
-        item_page_url({"item_id": "1234567", "source": "url"})
-        == "https://booth.pm/ja/items/1234567"
+        item_page_url({"item_id": "7654321", "source": "purchase"})
+        == "https://booth.pm/ja/items/7654321"
     )
-    assert item_page_url({"item_id": "order_1234567", "source": "url"}) == ""
-    library = "https://accounts.booth.pm/library#item-7654321"
-    assert item_page_url({"item_id": "7654321", "source": "purchase", "url": library}) == library
-    order = "https://accounts.booth.pm/orders/123"
-    assert item_page_url({"item_id": "order_123", "source": "purchase", "url": order}) == order
-    assert (
-        item_page_url({"item_id": "1", "source": "purchase", "url": "https://example.invalid/1"})
-        == ""
-    )
-    assert item_page_url({"item_id": "1", "source": "purchase", "url": "javascript:alert(1)"}) == ""
-    assert item_page_url({"item_id": "1", "source": "purchase"}) == ""
+    assert item_page_url({"item_id": "order_1234567"}) == ""
+    assert item_page_url({"item_id": ""}) == ""
 
 
-def test_render_index_links_thumbnails_to_the_matching_page():
+def test_render_index_links_thumbnails_to_product_pages():
     product = {
         "item_id": "1234567",
         "title": "URL商品",
@@ -305,21 +297,22 @@ def test_render_index_links_thumbnails_to_the_matching_page():
         "source": "purchase",
         "url": library,
     }
-    invalid = {
+    provisional = {
         "item_id": "order_1",
         "title": "不明商品",
         "shop": "ショップ",
         "thumbnail": "",
         "source": "purchase",
-        "url": "https://example.invalid/1",
+        "url": "https://accounts.booth.pm/orders/1",
     }
-    page = render_index({"items": [product, purchase, invalid], "lists": [], "members": []})
+    page = render_index({"items": [product, purchase, provisional], "lists": [], "members": []})
     assert '<a class="cover" href="https://booth.pm/ja/items/1234567"' in page
-    assert f'<a class="cover" href="{library}"' in page
-    assert 'href="https://example.invalid/1"' not in page
+    assert '<a class="cover" href="https://booth.pm/ja/items/7654321"' in page
+    assert f'href="{library}"' not in page
+    assert 'href="https://accounts.booth.pm/orders/1"' not in page
 
 
-def test_thumbnail_opens_product_page_or_purchase_library(live_ui, seeded_db):
+def test_thumbnail_opens_product_page(live_ui, seeded_db):
     conn = get_connection(seeded_db)
     try:
         conn.execute(
@@ -347,24 +340,16 @@ def test_thumbnail_opens_product_page_or_purchase_library(live_ui, seeded_db):
             product_cover = page.locator('#grid .product[data-item="1234567"] a.cover')
             purchase_cover = page.locator('#grid .product[data-item="7654321"] a.cover')
             expect(product_cover).to_have_attribute("href", "https://booth.pm/ja/items/1234567")
-            expect(purchase_cover).to_have_attribute(
-                "href", "https://accounts.booth.pm/library#item-7654321"
-            )
+            expect(purchase_cover).to_have_attribute("href", "https://booth.pm/ja/items/7654321")
             for cover in (product_cover, purchase_cover):
                 expect(cover).to_have_attribute("target", "_blank")
                 expect(cover).to_have_attribute("rel", "noopener noreferrer")
-            # Seeded items have a non-BOOTH URL, so they stay as plain covers.
+            # Items without a numeric product ID stay as plain covers.
             expect(page.locator('#grid .product[data-item="id0"] a.cover')).to_have_count(0)
             page.context.route(
                 "https://booth.pm/**",
                 lambda route: route.fulfill(
                     status=200, content_type="text/html", body="<title>BOOTH</title>"
-                ),
-            )
-            page.context.route(
-                "https://accounts.booth.pm/**",
-                lambda route: route.fulfill(
-                    status=200, content_type="text/html", body="<title>Library</title>"
                 ),
             )
             with page.expect_popup() as popup_info:
@@ -376,7 +361,7 @@ def test_thumbnail_opens_product_page_or_purchase_library(live_ui, seeded_db):
                 purchase_cover.click()
             popup = popup_info.value
             popup.wait_for_load_state()
-            assert popup.url.startswith("https://accounts.booth.pm/library#item-7654321")
+            assert popup.url.startswith("https://booth.pm/ja/items/7654321")
         finally:
             browser.close()
 

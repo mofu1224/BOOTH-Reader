@@ -14,25 +14,11 @@ from .i18n import ERROR_DETAILS, ERRORS, JAPANESE_FORMATS, MESSAGES
 
 
 def item_page_url(item: dict[str, Any]) -> str:
-    """Return the page to open for an item.
-
-    URL imports link to the public product page. Cookie-synced purchases link
-    to the BOOTH purchase page that carries their download links.
-    """
-    if str(item.get("source", "purchase")) == "url":
-        item_id = str(item.get("item_id", ""))
-        if re.fullmatch(r"\d+", item_id):
-            return f"https://booth.pm/ja/items/{item_id}"
-        return ""
-    raw = str(item.get("url", "")).strip()
-    try:
-        parts = urlsplit(raw)
-    except ValueError:
-        return ""
-    host = (parts.hostname or "").lower()
-    if parts.scheme != "https" or (host != "booth.pm" and not host.endswith(".booth.pm")):
-        return ""
-    return raw
+    """Return the canonical BOOTH product page for an item, if one exists."""
+    item_id = str(item.get("item_id", ""))
+    if re.fullmatch(r"\d+", item_id):
+        return f"https://booth.pm/ja/items/{item_id}"
+    return ""
 
 
 STYLE = """
@@ -84,11 +70,7 @@ SCRIPT = r"""
 const $ = id => document.getElementById(id);
 const esc = v => String(v ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const imageURL = v => {try {const u=new URL(v);return u.protocol==='https:' ? u.href : '';}catch{return '';}};
-const itemURL = i => {
-  if(i.source==='url')return /^\d+$/.test(String(i.item_id??'')) ? `https://booth.pm/ja/items/${i.item_id}` : '';
-  try {const u=new URL(i.url);if(u.protocol==='https:'&&(u.hostname==='booth.pm'||u.hostname.endsWith('.booth.pm')))return u.href;}catch{}
-  return '';
-};
+const itemURL = i => /^\d+$/.test(String(i.item_id??'')) ? `https://booth.pm/ja/items/${i.item_id}` : '';
 const translations=JSON.parse($('translations').textContent);
 let language='ja';
 try {const saved=localStorage.getItem('booth-reader.language');if(['ja','en'].includes(saved))language=saved;}catch{}
