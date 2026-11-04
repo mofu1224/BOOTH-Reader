@@ -131,8 +131,12 @@ def main() -> int:
             destination.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(path, destination)
             if path.suffix in {".sh", ".command"}:
-                destination.chmod(0o755)
+                # Reproduce a Windows-created ZIP, which does not store Unix modes.
+                destination.chmod(0o644)
         assert run(checkout, ["--check"], ok=False).returncode == 1
+        for launcher in ("start.command", "start.sh"):
+            assert (checkout / launcher).stat().st_mode & 0o111, launcher
+        checks.append("restored execute bits lost by a Windows ZIP")
         started = time.monotonic()
         run(checkout, ["setup"])
         results["cold_setup_seconds"] = round(time.monotonic() - started, 3)

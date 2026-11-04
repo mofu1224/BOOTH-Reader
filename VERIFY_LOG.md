@@ -2,6 +2,12 @@
 
 各時点の結果です。過去の合格を現行版・実BOOTH・未試験環境の保証とは扱いません。詳細は [audit/](audit/) と [license-audit/](license-audit/)。
 
+## 2026-11-04 Mac起動スクリプトの実行権限復旧
+
+- Windows作成ZIPをMacへ移すと`start.command`・`start.sh`の実行権限が失われ、ダブルクリック起動が`permission denied`になる問題を修正。`bash ./start.sh`起動時に`tools/bootstrap.sh`が権限を復元する。
+- Mac実機（macOS 27.2 arm64）で`0644`から`0755`への復元、`./start.command --check`・`./start.sh --check`の終了0を確認。`tools/verify_clone_macos.py`はWindows ZIP相当の権限喪失を含む全7チェックPASS（初回準備6.558秒）。
+- Windowsは508 passed・1 skipped、Ruff・format・mypy 25ソース・compileall・pip check・portable 18/18・vendor整合・原文照合PASS。詳細は[Mac起動スクリプトの実行権限復旧](audit/23-macos-launcher-permissions.md)。
+
 ## 2026-11-03 1.2.0 無料ダウンロードURL追加・購入日自動補完
 
 - Windows: `pytest -q` は508 passed、1 skipped（macOS WebKit専用）。Ruff・format・mypy（25ソース）・pip check・portable 18/18・vendor整合・private path検査・原文照合（2,317参照／1,720原文）が合格。
