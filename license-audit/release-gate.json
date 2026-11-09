@@ -44,7 +44,7 @@
     ".github/workflows/ci.yml": "2ba4a464590c2c18b5a321a496fd89592f924fdb5c6938e394bc75f06b107b5a",
     ".gitignore": "cefdb15d47fc2f4bf83f5f57a2a93fde96c38ae4af908913fee79b1b066962c3",
     ".gitleaks.toml": "e7af6bf96c2d88f9b963806d4a85e56e03b4a0bf13e84a56647c921401b97890",
-    "CHANGELOG.md": "307aafb4159a27b4c0b673cb579cea3a1616c940987b46c59f40d966ba239315",
+    "CHANGELOG.md": "9cb255d07136d02a3055bc77bf25091a524c26e1b98b7753fa21785f4362650e",
     "CROSS_PLATFORM.md": "02d25cdc92049c81d46aac8b7491890c94b1f7290678a9ff4c61dc7f054472f3",
     "LICENSE": "c1aef8b9d4934262e38b7652688ee0adfaf2177f6f8aec6e91700707b16cd9c6",
     "MANIFEST.in": "60246b5f12ff7ccf02250160db68423b1845dd8e732a8d36303237c0fc655c25",
@@ -2738,7 +2738,7 @@
     "tests/test_i18n.py": "05f7740c3b464dab4f2dec2fba0e55b6a3b3fb64e21a991c606859d4cf7280e2",
     "tests/test_item_url.py": "8a5e73ecba4f1850f2d05afbd225e75dc012e0a3eb3d64bd0e35c8a8bf73b6b8",
     "tests/test_launcher_forwarding.py": "6c180e431691c795a05be549cd8207b0829606797bf72aa27613bb49decfa79d",
-    "tests/test_library_ui.py": "1ec3b1f2bd1f8b3ea65dda11058937c515bc9de6ad8ff35f9aa53caac763e6d9",
+    "tests/test_library_ui.py": "8b67bc2cb9da5f782b9f203d7331663f0145d121ac57e270d4a0031f4971fbd1",
     "tests/test_license_evidence_integrity.py": "4c24fedc6fb1cd4162de28c8532882714981eb3101bbddfc4d68ae2bec2a583e",
     "tests/test_license_release_gate.py": "0a7b98856ffb761ad9c3f22b41f74cd2ddfb50fdf4aec05d6bbdee487f981668",
     "tests/test_native_webkit.py": "fe9d31baa35c25e5f71d387b425c08a7a611991f355b159ed8bbaa1ee2466d0d",
@@ -2832,8 +2832,8 @@
     "web/__init__.py": "203c71557c78dd0623fd614ee089e601f4ec776c31b464e82fbfb46791b24fdb",
     "web/app.py": "8d738e8d3a8316290af29bbc5485d4d1278f0b48e420c2459fcae5d019269dc1",
     "web/cli_bridge.py": "90b1215e03cbca5472b56d2741f35de00f24de0c3653830f6289aa5b5f74a2ab",
-    "web/i18n.py": "a61f263a45d46d19864f925bbbfd5c75b19ed29908bdcdf37a28ef51a47cba6b",
-    "web/ui.py": "3eb4e78b82f90a027afd3fa1cca53118bfd7bf40003d63dc1232dad430243938"
+    "web/i18n.py": "b325c0477077daa89f5f92213d2060b49bf623993dc367c624786eaeee858ef1",
+    "web/ui.py": "14472c0c2689e708d2f8fd091231b5fafcbc0e21d17a366f624797698b9b3c94"
   },
   "date": "2026-11-04",
   "input_hash_scheme": "SHA-256; Git text/eol normalized, -text originals byte-preserved",
