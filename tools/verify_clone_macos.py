@@ -11,6 +11,7 @@ import subprocess
 import sys
 import time
 import urllib.request
+from collections.abc import Callable
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -112,6 +113,21 @@ def web_probe(checkout: Path) -> None:
                     process.wait(timeout=15)
 
 
+def remove_owned(work: Path) -> None:
+    """Remove the probe tree; entries that vanish concurrently are already gone."""
+
+    def ignore_missing(function: Callable[..., object], path: str, error: BaseException) -> None:
+        if not isinstance(error, FileNotFoundError):
+            raise error
+
+    for attempt in range(3):
+        shutil.rmtree(work, onexc=ignore_missing)
+        if not work.exists():
+            return
+        time.sleep(1 + attempt)
+    shutil.rmtree(work)
+
+
 def main() -> int:
     if target_id() != "macos-arm64":
         raise RuntimeError("This probe requires Mac Apple Silicon")
@@ -170,7 +186,7 @@ def main() -> int:
     finally:
         results["checks"] = checks
         if marker.is_file() and work.resolve().is_relative_to((ROOT / ".cache").resolve()):
-            shutil.rmtree(work)
+            remove_owned(work)
         results["owned_probe_removed"] = not work.exists()
         (ROOT / ".cache/macos-clone-result.json").write_text(
             json.dumps(results, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
