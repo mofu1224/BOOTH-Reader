@@ -2801,7 +2801,7 @@
     "tools/retain_native_sources.py": "39f2ffd61fa5082fb5a41254885d07ca7e7e59fab5f5b9a7c9d9f1602e9f7fc0",
     "tools/vendor_payload.py": "2a6824ecf57a4c8147f3895d4d848c9f83be0fe604468f4c5cdbb87ed20500c7",
     "tools/verify_clone.py": "2663478241777c9976302ac144326eb44473161463ab4418f8c6aa46038c03d6",
-    "tools/verify_clone_macos.py": "02ae4527d26999bda6c7870c9288c4d7db452b1a702e8665fa50297b324e6123",
+    "tools/verify_clone_macos.py": "bb5f0ccf32375846a93bef53cb5c70d7dad54143bc08a90cb2050a9ef55e7690",
     "tools/verify_pathspec_source.py": "5e7f4b6da9fa807945b8feac2be29d77f322726930ed4c512629062a898dc593",
     "tools/verify_portable.py": "ff8f90427c11678e822c7b40c414a7948ec69e85dd1b0a450adf1dd8bc6a32d0",
     "tools/webkit_host.swift": "b5b7e20942eccca1aef04863b8686ec3b1e16716e34474dfb8c41afb7683d2a2",
