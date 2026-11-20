@@ -2768,14 +2768,6 @@
     "status": "NOT VERIFIED"
   },
   {
-    "path": "license-audit/evidence/legal/google-terms-20260730.html",
-    "sha256": "bf11c11a876209e7f0bb8b7c942317a49c6a16384660a61619462bbbf096ef1e",
-    "size": 597270,
-    "classification": "GENERATED",
-    "first_commit": [],
-    "status": "NOT VERIFIED"
-  },
-  {
     "path": "license-audit/evidence/legal/google-terms-20260730.txt",
     "sha256": "f4069bdf733c81db1c6a29d97e0c7efd622c75bf7f64f3b7fe3a1d03e3bc8f89",
     "size": 31098,
@@ -3531,14 +3523,6 @@
     "path": "license-audit/evidence/upstream/chrome-for-testing-official.readable.txt",
     "sha256": "e28c9d7103d0d30076d93e16ea69f60f57cf1fc60eef99e622972a7d6c9d38ec",
     "size": 8337,
-    "classification": "GENERATED",
-    "first_commit": [],
-    "status": "NOT VERIFIED"
-  },
-  {
-    "path": "license-audit/evidence/upstream/chrome-for-testing-official.txt",
-    "sha256": "e732563b902ea74a9c174ba1c3bdace64b2a4b882f46c00041a56e94122c7edb",
-    "size": 107902,
     "classification": "GENERATED",
     "first_commit": [],
     "status": "NOT VERIFIED"

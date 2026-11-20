@@ -212,6 +212,20 @@ def test_url_logging_drops_query_string():
         ("client_secret=abc", "abc"),
         ("eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIn0.sigvalue", "eyJhbGciOiJIUzI1NiJ9"),
     ],
+    # Pytest otherwise copies the credential-shaped inputs into published JUnit reports.
+    ids=[
+        "cookie",
+        "session-cookie",
+        "cookie-pair",
+        "bearer-header",
+        "basic-header",
+        "api-key",
+        "access-token",
+        "alternate-key",
+        "password",
+        "secret-field",
+        "other-sensitive-value",
+    ],
 )
 def test_redaction_removes_secret_values(text, secret):
     out = redact(text)

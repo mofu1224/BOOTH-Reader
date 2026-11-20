@@ -15,12 +15,12 @@
   },
   {
     "url": "https://developer.chrome.com/blog/chrome-for-testing/",
-    "path": "license-audit/evidence/upstream/chrome-for-testing-official.txt",
-    "sha256": "e732563b902ea74a9c174ba1c3bdace64b2a4b882f46c00041a56e94122c7edb",
+    "path": "license-audit/evidence/upstream/chrome-for-testing-official.readable.txt",
+    "sha256": "e28c9d7103d0d30076d93e16ea69f60f57cf1fc60eef99e622972a7d6c9d38ec",
     "status": "retrieved",
     "scope": "current official document, not proof of individual contractual permission",
     "original_sha256": "96f9be0b3da69572f507f4ecfe0970def692dac288bc219f241cb06df9944040",
-    "retention": "archived page with site identifiers redacted"
+    "retention": "visible text only; site keys redacted"
   },
   {
     "url": "https://raw.githubusercontent.com/astral-sh/python-build-standalone/20260325/cpython-windows/build.py",

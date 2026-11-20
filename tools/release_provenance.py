@@ -187,7 +187,7 @@ def inspect(database: Path, output: Path | None) -> None:
 
 def terms() -> None:
     from tools.license_compliance import dump, fetch
-    from tools.license_reaudit import PageText
+    from tools.license_reaudit import PageText, retain_web_text
 
     sources = {
         "opencode-terms-20260815": "https://opencode.ai/legal/terms-of-service",
@@ -202,16 +202,21 @@ def terms() -> None:
             data = fetch(url)
             target = ROOT / "license-audit/evidence/legal" / (name + ".html")
             target.parent.mkdir(parents=True, exist_ok=True)
-            target.write_bytes(data)
-            text = PageText()
-            text.feed(data.decode("utf-8", errors="replace"))
-            target.with_suffix(".txt").write_text("\n".join(text.parts), encoding="utf-8")
+            if name == "google-terms-20260730":
+                target = target.with_suffix(".txt")
+                hashes = retain_web_text(data, target)
+            else:
+                target.write_bytes(data)
+                text = PageText()
+                text.feed(data.decode("utf-8", errors="replace"))
+                target.with_suffix(".txt").write_text("\n".join(text.parts), encoding="utf-8")
+                hashes = {"sha256": hashlib.sha256(data).hexdigest()}
             rows.append(
                 {
                     "name": name,
                     "url": url,
                     "path": target.relative_to(ROOT).as_posix(),
-                    "sha256": hashlib.sha256(data).hexdigest(),
+                    **hashes,
                     "status": "retrieved",
                 }
             )

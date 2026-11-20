@@ -16,11 +16,11 @@
   {
     "name": "google-terms-20260730",
     "url": "https://policies.google.com/terms",
-    "path": "license-audit/evidence/legal/google-terms-20260730.html",
-    "sha256": "bf11c11a876209e7f0bb8b7c942317a49c6a16384660a61619462bbbf096ef1e",
+    "path": "license-audit/evidence/legal/google-terms-20260730.txt",
+    "sha256": "f4069bdf733c81db1c6a29d97e0c7efd622c75bf7f64f3b7fe3a1d03e3bc8f89",
     "status": "retrieved",
     "original_sha256": "1741ede3f4dd5ff96a223f250bcededef1162fb6dfb0e5048647a52e3ff25831",
-    "retention": "archived page with site identifiers redacted"
+    "retention": "visible text only; site keys redacted"
   },
   {
     "name": "meta-api-models",

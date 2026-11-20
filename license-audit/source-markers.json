@@ -40990,43 +40990,6 @@
     ]
   },
   {
-    "path": "license-audit/evidence/legal/google-terms-20260730.html",
-    "line": 7,
-    "markers": [
-      "Copyright"
-    ]
-  },
-  {
-    "path": "license-audit/evidence/legal/google-terms-20260730.html",
-    "line": 12,
-    "markers": [
-      "Copyright"
-    ]
-  },
-  {
-    "path": "license-audit/evidence/legal/google-terms-20260730.html",
-    "line": 26,
-    "markers": [
-      "Copyright"
-    ]
-  },
-  {
-    "path": "license-audit/evidence/legal/google-terms-20260730.html",
-    "line": 121,
-    "markers": [
-      "Copyright"
-    ]
-  },
-  {
-    "path": "license-audit/evidence/legal/google-terms-20260730.html",
-    "line": 300,
-    "markers": [
-      "Copyright",
-      "based on",
-      "copyright"
-    ]
-  },
-  {
     "path": "license-audit/evidence/legal/google-terms-20260730.txt",
     "line": 136,
     "markers": [
@@ -42965,27 +42928,6 @@
   {
     "path": "license-audit/evidence/upstream/chrome-for-testing-official.readable.txt",
     "line": 176,
-    "markers": [
-      "licensed under"
-    ]
-  },
-  {
-    "path": "license-audit/evidence/upstream/chrome-for-testing-official.txt",
-    "line": 2897,
-    "markers": [
-      "based on"
-    ]
-  },
-  {
-    "path": "license-audit/evidence/upstream/chrome-for-testing-official.txt",
-    "line": 3017,
-    "markers": [
-      "github.com"
-    ]
-  },
-  {
-    "path": "license-audit/evidence/upstream/chrome-for-testing-official.txt",
-    "line": 3103,
     "markers": [
       "licensed under"
     ]

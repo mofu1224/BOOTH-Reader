@@ -38,9 +38,27 @@ class PageText(HTMLParser):
             self.parts.append(data.strip())
 
 
+def retain_web_text(data: bytes, target: Path) -> dict[str, str]:
+    """Keep the visible evidence and fingerprint the source without publishing site keys."""
+    text = PageText()
+    text.feed(data.decode("utf-8", errors="replace"))
+    text.close()
+    visible = re.sub(r"AIza[A-Za-z0-9_-]{35}", "[redacted]", "\n".join(text.parts))
+    if not visible.strip():
+        raise ValueError("No visible evidence text found")
+    # Both retained evidence fixtures use CRLF and are marked -text in Git.
+    retained = visible.replace("\r\n", "\n").replace("\n", "\r\n").encode("utf-8")
+    target.write_bytes(retained)
+    return {
+        "sha256": digest(retained),
+        "original_sha256": digest(data),
+        "retention": "visible text only; site keys redacted",
+    }
+
+
 def python_correspondence() -> None:
     for page in (AUDIT / "evidence/upstream").glob("chrome-*.txt"):
-        if page.name.endswith(".readable.txt"):
+        if page.name.endswith(".readable.txt") or page.name == "chrome-for-testing-official.txt":
             continue
         text = PageText()
         text.feed(page.read_text(encoding="utf-8", errors="replace"))
@@ -373,18 +391,23 @@ def acquire() -> None:
         try:
             data = fetch(url)
             path = AUDIT / "evidence/upstream" / (name + ".txt")
-            path.write_bytes(data)
-            if name.startswith("chrome-"):
-                text = PageText()
-                text.feed(data.decode("utf-8", errors="replace"))
-                path.with_suffix(".readable.txt").write_text(
-                    "\n".join(text.parts), encoding="utf-8"
-                )
+            if name == "chrome-for-testing-official":
+                path = path.with_suffix(".readable.txt")
+                hashes = retain_web_text(data, path)
+            else:
+                path.write_bytes(data)
+                hashes = {"sha256": digest(data)}
+                if name.startswith("chrome-"):
+                    text = PageText()
+                    text.feed(data.decode("utf-8", errors="replace"))
+                    path.with_suffix(".readable.txt").write_text(
+                        "\n".join(text.parts), encoding="utf-8"
+                    )
             results.append(
                 {
                     "url": url,
                     "path": path.relative_to(ROOT).as_posix(),
-                    "sha256": digest(data),
+                    **hashes,
                     "status": "retrieved",
                     "scope": "current official document, not proof of individual contractual permission",
                 }

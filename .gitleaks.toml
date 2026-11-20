@@ -37,13 +37,3 @@ paths = [
 ]
 regexTarget = "match"
 regexes = ['''(?:spdx_)?license_key":\s*"[A-Za-z0-9.+_-]+"''']
-
-[[allowlists]]
-description = "Public Google website frontend identifiers in original hash-verified evidence (10 findings reviewed)"
-targetRules = ["gcp-api-key", "generic-api-key"]
-condition = "AND"
-regexes = ['''^AIza[0-9A-Za-z_-]{35}$''']
-paths = [
-    '''(^|/)license-audit/evidence/legal/google-terms-20260730\.html$''',
-    '''(^|/)license-audit/evidence/upstream/chrome-for-testing-official\.txt$''',
-]

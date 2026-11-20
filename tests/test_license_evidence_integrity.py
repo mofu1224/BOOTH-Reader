@@ -7,6 +7,17 @@ from pathlib import Path
 import pytest
 
 from tools import check_license_evidence, license_compliance
+from tools.license_reaudit import retain_web_text
+
+
+def test_retained_web_evidence_discards_site_configuration_and_keys(tmp_path):
+    key = "AIza" + "x" * 35
+    raw = f'<script>secret</script><p data-key="{key}">Terms: {key}</p>'.encode()
+    target = tmp_path / "terms.txt"
+    hashes = retain_web_text(raw, target)
+    assert target.read_bytes() == b"Terms: [redacted]"
+    assert hashes["original_sha256"] == hashlib.sha256(raw).hexdigest()
+    assert hashes["sha256"] == hashlib.sha256(target.read_bytes()).hexdigest()
 
 
 @pytest.mark.parametrize("leaf", ["LICENSE-APACHE", "LICENSE-MIT", "jemalloc/COPYING"])

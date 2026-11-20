@@ -21,6 +21,7 @@ EVIDENCE = (
     "pathspec-source.json",
     "vendored-certifi-source.json",
     "upstream-evidence.json",
+    "reaudit-upstream.json",
     "public-profile-legal-evidence.json",
     "macos-distribution-evidence.json",
     "macos-notice-inventory.json",

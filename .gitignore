@@ -80,3 +80,7 @@ id_ed25519
 credentials.json
 cookies.txt
 *.cookies.txt
+
+# 原本の代わりに読み取り用本文と原本ハッシュを追跡する。
+/license-audit/evidence/legal/google-terms-20260730.html
+/license-audit/evidence/upstream/chrome-for-testing-official.txt
