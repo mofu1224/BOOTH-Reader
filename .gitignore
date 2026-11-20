@@ -71,3 +71,12 @@ license-audit/clean-candidate-result.json
 license-audit/public-clean-test.json
 license-audit/creation-session-evidence.json
 license-audit/project-generation-models.json
+
+# 認証ストア、秘密鍵、Cookie のテキスト出力
+.git-credentials
+.netrc
+id_rsa
+id_ed25519
+credentials.json
+cookies.txt
+*.cookies.txt
