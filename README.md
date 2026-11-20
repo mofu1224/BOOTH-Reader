@@ -1,3 +1,7 @@
+---
+type: 利用ガイド
+---
+
 # BOOTH-Reader
 
 BOOTH購入品の取得・ダウンロード・ZIP展開・分類を管理する個人向けツールです。未分類の商品をリストへ追加し、全商品はライブラリで確認できます。
@@ -12,11 +16,11 @@ Mac・Windows対応版は`1.2.0`です。Macの認証には同梱の自作ホス
 
 ```powershell
 git clone https://github.com/mofu1224/BOOTH-Reader.git
-# クローン先で実行
+cd BOOTH-Reader
 & .\start.bat
 ```
 
-Macではターミナルからも起動できます。
+Macではクローン先の `BOOTH-Reader` フォルダーで、目的に応じて次のいずれかを実行します。
 
 ```bash
 bash ./start.sh

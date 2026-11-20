@@ -44,7 +44,10 @@ backups/
 *.[sS][qQ][lL][iI][tT][eE]*.[bB][aA][kK]
 *.[sS][qQ][lL][iI][tT][eE]*.[bB][aA][cC][kK][uU][pP]
 *.[cC][sS][vV]
-.playwright/
+# Local test coverage databases and HTML reports.
+.coverage
+.coverage.*
+htmlcov/
 dist/
 build/
 *.egg-info/

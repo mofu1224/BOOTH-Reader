@@ -22,7 +22,7 @@ from .logging_setup import get_logger
 
 log = get_logger(__name__)
 
-ITEM_PATH_RE = re.compile(r"^/(?:[a-z]{2}(?:-[a-z]{2})?/)?items/(\d+)/?$", re.I)
+ITEM_PATH_RE = re.compile(r"^/(?:[a-z]{2}(?:-[a-z]{2})?/)?items/(\d+)/?$", re.I | re.ASCII)
 MAX_URL_LENGTH = 2048
 
 

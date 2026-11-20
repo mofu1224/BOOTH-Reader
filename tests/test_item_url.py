@@ -57,6 +57,7 @@ def test_parse_item_url(value, expected):
         "http://booth.pm/ja/items/1",
         "https://example.com/ja/items/1",
         "https://booth.pm/ja/items/abc",
+        "https://booth.pm/ja/items/１２３",
         "https://booth.pm/ja/library",
     ],
 )
