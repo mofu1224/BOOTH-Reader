@@ -162,7 +162,7 @@ def _retry_after(response: Any) -> float | None:
     import datetime as _dt
 
     if when.tzinfo is None:
-        when = when.replace(tzinfo=_dt.timezone.utc)
+        when = when.replace(tzinfo=_dt.UTC)
     return max(0.0, when.timestamp() - time.time())
 
 

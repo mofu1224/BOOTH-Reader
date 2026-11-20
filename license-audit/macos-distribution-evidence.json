@@ -3596,12 +3596,12 @@
     },
     {
       "name": "opentelemetry-api",
-      "version": "1.45.1",
-      "wheel": "opentelemetry_api-1.45.1-py3-none-any.whl",
-      "sha256": "b31553efa588ae44bc306f863c785c5333a9ecc091248c6ee68b4b6c87fdedfb",
+      "version": "1.45.2",
+      "wheel": "opentelemetry_api-1.45.2-py3-none-any.whl",
+      "sha256": "2cbd737377e710ee740d261c94e93fa0f08e6d037c18f17513cc0a2d94479a34",
       "upstream_license": "Apache-2.0",
       "notices": [
-        "opentelemetry_api-1.45.1.dist-info/licenses/LICENSE"
+        "opentelemetry_api-1.45.2.dist-info/licenses/LICENSE"
       ],
       "native_files": [],
       "source_path": null,
@@ -3978,12 +3978,12 @@
     },
     {
       "name": "soupsieve",
-      "version": "2.10",
-      "wheel": "soupsieve-2.10-py3-none-any.whl",
-      "sha256": "8596eb8967d744174820280fa62b4542a2e955bfaccca73ed8a13c6eb8e9b502",
+      "version": "4.1.2",
+      "wheel": "soupsieve-4.1.2-py3-none-any.whl",
+      "sha256": "96b4115212a3abee1f572d62da706cca090b088cb5effa278db5702122e63a2c",
       "upstream_license": "MIT",
       "notices": [
-        "soupsieve-2.10.dist-info/licenses/LICENSE.md"
+        "soupsieve-4.1.2.dist-info/licenses/LICENSE.md"
       ],
       "native_files": [],
       "source_path": null,

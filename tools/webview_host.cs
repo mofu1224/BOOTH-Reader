@@ -55,7 +55,8 @@ public static class BoothWebViewHost {
                             }
                             view.CoreWebView2.Settings.IsPasswordAutosaveEnabled = false;
                             view.CoreWebView2.Settings.IsGeneralAutofillEnabled = false;
-                            view.CoreWebView2.Navigate("about:blank");
+                            // The new WebView already has a blank page. A second navigation
+                            // here can cancel the first URL opened by the CDP client.
                             if (hidden) window.Hide();
                         }, TaskScheduler.FromCurrentSynchronizationContext())
                         .ContinueWith(fault => {

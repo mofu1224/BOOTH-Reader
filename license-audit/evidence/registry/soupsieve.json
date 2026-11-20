@@ -1,6 +1,6 @@
 {
-  "url": "https://pypi.org/pypi/soupsieve/2.10/json",
-  "response_sha256": "10b5dce1388fcef4f8ed84312be9f4139e658fbfdaed225bfddd2b06e0e9119a",
+  "url": "https://pypi.org/pypi/soupsieve/4.1.2/json",
+  "response_sha256": "8579731456ea11a935b25b0636afbe9cd2a2bc23e7f67239a6a82a6180a91038",
   "info": {
     "author": null,
     "author_email": "Isaac Muse <Isaac.Muse@gmail.com>",
@@ -12,7 +12,6 @@
       "License :: OSI Approved :: MIT License",
       "Operating System :: OS Independent",
       "Programming Language :: Python :: 3",
-      "Programming Language :: Python :: 3.10",
       "Programming Language :: Python :: 3.11",
       "Programming Language :: Python :: 3.12",
       "Programming Language :: Python :: 3.13",
@@ -49,11 +48,11 @@
       "Homepage": "https://github.com/facelessuser/soupsieve"
     },
     "provides_extra": null,
-    "release_url": "https://pypi.org/project/soupsieve/2.10/",
+    "release_url": "https://pypi.org/project/soupsieve/4.1.2/",
     "requires_dist": null,
-    "requires_python": ">=3.10",
+    "requires_python": ">=3.11.5",
     "summary": "A modern CSS selector implementation for Beautiful Soup.",
-    "version": "2.10",
+    "version": "4.1.2",
     "yanked": false,
     "yanked_reason": null
   },
@@ -61,24 +60,24 @@
     {
       "comment_text": null,
       "core-metadata": {
-        "sha256": "02ecd6c72d2fa0911bedfd99d53b2198e1bbf556f4606108819e8c19fdf32880"
+        "sha256": "9a0ec3e33ef6667b0af90f7b6e962daef3c74bab9eecfd89cffb4793dc2a7d26"
       },
       "digests": {
-        "blake2b_256": "66875ed59e1d0290564e2027ed066c52b059892c4637741337fc0967183c8d4d",
-        "md5": "85ad62a5c84218793259c4af4f49deb0",
-        "sha256": "8596eb8967d744174820280fa62b4542a2e955bfaccca73ed8a13c6eb8e9b502"
+        "blake2b_256": "1e33f5082b3c480db024453077592057200955aed2a376327b8921d553404ca7",
+        "md5": "86803e890b2bbfa85f24a406ee3f3442",
+        "sha256": "96b4115212a3abee1f572d62da706cca090b088cb5effa278db5702122e63a2c"
       },
       "downloads": -1,
-      "filename": "soupsieve-2.10-py3-none-any.whl",
+      "filename": "soupsieve-4.1.2-py3-none-any.whl",
       "has_sig": false,
-      "md5_digest": "85ad62a5c84218793259c4af4f49deb0",
+      "md5_digest": "86803e890b2bbfa85f24a406ee3f3442",
       "packagetype": "bdist_wheel",
       "python_version": "py3",
-      "requires_python": ">=3.10",
-      "size": 38019,
-      "upload_time": "2026-09-24T02:36:33",
-      "upload_time_iso_8601": "2026-09-24T02:36:33.709594Z",
-      "url": "https://files.pythonhosted.org/packages/66/87/5ed59e1d0290564e2027ed066c52b059892c4637741337fc0967183c8d4d/soupsieve-2.10-py3-none-any.whl",
+      "requires_python": ">=3.11.5",
+      "size": 59295,
+      "upload_time": "2026-11-18T17:21:02",
+      "upload_time_iso_8601": "2026-11-18T17:21:02.593359Z",
+      "url": "https://files.pythonhosted.org/packages/1e/33/f5082b3c480db024453077592057200955aed2a376327b8921d553404ca7/soupsieve-4.1.2-py3-none-any.whl",
       "yanked": false,
       "yanked_reason": null
     },
@@ -86,21 +85,21 @@
       "comment_text": null,
       "core-metadata": false,
       "digests": {
-        "blake2b_256": "71c31b817965ac12dc002d7c9cd7dfffdd7d4fbf9b45763ef2ffe7b86ee94670",
-        "md5": "411ed4ba0a31ea6cd7025bda680b0834",
-        "sha256": "49e9380d7d2905463583bafe285e818c7366a9ed7b3aee221c1ac79c905d8bc0"
+        "blake2b_256": "1735bf779c1cc376bc216a2d94e3b3d9ee48347296af29bedfc6caaf96bc132f",
+        "md5": "c3772eb2166dc5cdca1f41ba98024563",
+        "sha256": "c6539a2638f26991463527337e39d630e3cbb86d024f52282a510535b8a7e09f"
       },
       "downloads": -1,
-      "filename": "soupsieve-2.10.tar.gz",
+      "filename": "soupsieve-4.1.2.tar.gz",
       "has_sig": false,
-      "md5_digest": "411ed4ba0a31ea6cd7025bda680b0834",
+      "md5_digest": "c3772eb2166dc5cdca1f41ba98024563",
       "packagetype": "sdist",
       "python_version": "source",
-      "requires_python": ">=3.10",
-      "size": 124337,
-      "upload_time": "2026-09-24T02:36:35",
-      "upload_time_iso_8601": "2026-09-24T02:36:35.048514Z",
-      "url": "https://files.pythonhosted.org/packages/71/c3/1b817965ac12dc002d7c9cd7dfffdd7d4fbf9b45763ef2ffe7b86ee94670/soupsieve-2.10.tar.gz",
+      "requires_python": ">=3.11.5",
+      "size": 178884,
+      "upload_time": "2026-11-18T17:21:03",
+      "upload_time_iso_8601": "2026-11-18T17:21:03.858004Z",
+      "url": "https://files.pythonhosted.org/packages/17/35/bf779c1cc376bc216a2d94e3b3d9ee48347296af29bedfc6caaf96bc132f/soupsieve-4.1.2.tar.gz",
       "yanked": false,
       "yanked_reason": null
     }

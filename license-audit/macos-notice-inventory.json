@@ -502,9 +502,9 @@
       "sha256": "a50450da1d53cd777b80ced77c58ff96abe0ccd879706bd142c3ec20e245f0b4"
     },
     {
-      "component": "opentelemetry_api-1.45.1",
-      "source_path": "opentelemetry_api-1.45.1.dist-info/licenses/LICENSE",
-      "retained_path": "THIRD_PARTY_LICENSES/macos/opentelemetry_api-1.45.1/c71d239df917-LICENSE",
+      "component": "opentelemetry_api-1.45.2",
+      "source_path": "opentelemetry_api-1.45.2.dist-info/licenses/LICENSE",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/opentelemetry_api-1.45.2/c71d239df917-LICENSE",
       "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
     },
     {
@@ -1036,9 +1036,9 @@
       "sha256": "1db7cae7fce6452e2e608e401a0f953e0133e4c2d75db69fb8ae851d2086f5b6"
     },
     {
-      "component": "soupsieve-2.10",
-      "source_path": "soupsieve-2.10.dist-info/licenses/LICENSE.md",
-      "retained_path": "THIRD_PARTY_LICENSES/macos/soupsieve-2.10/76a0acdb98c3-LICENSE.md",
+      "component": "soupsieve-4.1.2",
+      "source_path": "soupsieve-4.1.2.dist-info/licenses/LICENSE.md",
+      "retained_path": "THIRD_PARTY_LICENSES/macos/soupsieve-4.1.2/76a0acdb98c3-LICENSE.md",
       "sha256": "76a0acdb98c3a63681e20b6f096699ef8cad5fb35d56eef8387e0fa71d797a9a"
     },
     {

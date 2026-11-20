@@ -7,10 +7,9 @@ import io
 import json
 import sys
 import tarfile
+import tomllib
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
-
-import tomllib
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))

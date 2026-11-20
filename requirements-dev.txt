@@ -6,4 +6,4 @@ ruff>=0.6
 mypy>=1.11
 pip-audit>=2.7
 build>=1.0
-tomli>=2.0; python_version < '3.11'
+opentelemetry-api>=1.45.2

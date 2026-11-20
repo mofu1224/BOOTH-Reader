@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "target": "windows-x64",
-  "lock_sha256": "6ebd25ac610cb79c746aaae02e8d9364de0d90d36e1d2ec84f8666e09775bd71",
+  "lock_sha256": "487145c81b74aedec10296549979138007daadad3487a090c9b5eed7cce2bf5f",
   "assets": {
     "python": {
       "destination": ".cache/downloads/cpython-3.12.13-booth-runtime.tar.gz",
@@ -17,18 +17,18 @@
     },
     "wheels": {
       "destination": ".cache/vendor/wheels.zip",
-      "sha256": "d74f79dd934db21d8a7306ab9a4a2e7766020850560762069fb57d0e3af0ee35",
-      "size": 72796817,
+      "sha256": "6b06b0dcca470c6e2cdf05c38d8300bb9cdf0541b63063c29c656737e9b1e520",
+      "size": 72818174,
       "parts": [
         {
-          "file": "wheels-d74f79dd934db21d-000.chunk",
-          "sha256": "5edbcc081d5eb86ab71663da4e729ab22cfe0883b4addfe0c4dd440ab562ea79",
+          "file": "wheels-6b06b0dcca470c6e-000.chunk",
+          "sha256": "d2c32f87a873855abf786556668f32f95f5f760b3cf6c9d239d48ac3812efaaf",
           "size": 41943040
         },
         {
-          "file": "wheels-d74f79dd934db21d-001.chunk",
-          "sha256": "ad333e53d6bb93df5af732012cae5211f2feb8cdedbff1cbedb2de0ad6f03daa",
-          "size": 30853777
+          "file": "wheels-6b06b0dcca470c6e-001.chunk",
+          "sha256": "c11ff52e4a49d20fe4889f1284ee53265fa8c4015f55e8231e99bb22900836d2",
+          "size": 30875134
         }
       ]
     },

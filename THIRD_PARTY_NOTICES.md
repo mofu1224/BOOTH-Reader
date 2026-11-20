@@ -41,7 +41,7 @@ Statusは原文通知の保持状態（NOTICE RETAINED）を示し、ライセ�
 | msgpack | 1.2.3 | development/build | Apache-2.0 | 1 | NOTICE RETAINED |
 | mypy | 2.3.1 | development/build | MIT | 3 | NOTICE RETAINED |
 | mypy-extensions | 1.1.0 | development/build | MIT | 1 | NOTICE RETAINED |
-| opentelemetry-api | 1.45.1 | development/build | Apache-2.0 | 1 | NOTICE RETAINED |
+| opentelemetry-api | 1.45.2 | development/build | Apache-2.0 | 1 | NOTICE RETAINED |
 | packageurl-python | 0.17.6 | development/build | MIT | 1 | NOTICE RETAINED |
 | packaging | 26.3 | development/build | Apache-2.0 OR BSD-2-Clause | 3 | NOTICE RETAINED |
 | pathspec | 1.1.1 | development/build | MPL-2.0 | 1 | NOTICE RETAINED |
@@ -65,7 +65,7 @@ Statusは原文通知の保持状態（NOTICE RETAINED）を示し、ライセ�
 | ruff | 0.16.9 | development/build | MIT | 1 | NOTICE RETAINED |
 | setuptools | 84.1.0 | development/build | MIT | 17 | NOTICE RETAINED |
 | sortedcontainers | 2.4.0 | development/build | Apache 2.0 | 1 | NOTICE RETAINED |
-| soupsieve | 2.10 | runtime | MIT | 1 | NOTICE RETAINED |
+| soupsieve | 4.1.2 | runtime | MIT | 1 | NOTICE RETAINED |
 | starlette | 1.7.0 | runtime | BSD-3-Clause | 1 | NOTICE RETAINED |
 | tomli | 2.4.1 | development/build | MIT | 1 | NOTICE RETAINED |
 | tomli-w | 1.2.0 | development/build | MIT | 1 | NOTICE RETAINED |

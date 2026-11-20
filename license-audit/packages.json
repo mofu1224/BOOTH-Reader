@@ -3606,11 +3606,11 @@
     }
   },
   {
-    "id": "pkg:pypi/opentelemetry-api@1.45.1",
+    "id": "pkg:pypi/opentelemetry-api@1.45.2",
     "name": "opentelemetry-api",
-    "version": "1.45.1",
-    "wheel": "opentelemetry_api-1.45.1-py3-none-any.whl",
-    "sha256": "b31553efa588ae44bc306f863c785c5333a9ecc091248c6ee68b4b6c87fdedfb",
+    "version": "1.45.2",
+    "wheel": "opentelemetry_api-1.45.2-py3-none-any.whl",
+    "sha256": "2cbd737377e710ee740d261c94e93fa0f08e6d037c18f17513cc0a2d94479a34",
     "role": "development/build",
     "reported_license": "Apache-2.0",
     "authors": "OpenTelemetry Authors <cncf-opentelemetry-contributors@lists.cncf.io>",
@@ -3625,11 +3625,11 @@
     "unsatisfied": [],
     "notices": [
       {
-        "path": "THIRD_PARTY_LICENSES/opentelemetry-api-1.45.1/c71d239df917-opentelemetry_api-1.45.1.dist-info_licenses_LICENSE",
-        "original_path": "opentelemetry_api-1.45.1.dist-info/licenses/LICENSE",
+        "path": "THIRD_PARTY_LICENSES/opentelemetry-api-1.45.2/c71d239df917-opentelemetry_api-1.45.2.dist-info_licenses_LICENSE",
+        "original_path": "opentelemetry_api-1.45.2.dist-info/licenses/LICENSE",
         "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
         "size": 11357,
-        "source": "opentelemetry_api-1.45.1-py3-none-any.whl"
+        "source": "opentelemetry_api-1.45.2-py3-none-any.whl"
       }
     ],
     "nested_metadata": [],
@@ -3828,7 +3828,7 @@
     "status": "NOT VERIFIED",
     "classification": "THIRD-PARTY",
     "registry": {
-      "url": "https://pypi.org/pypi/opentelemetry-api/1.45.1/json",
+      "url": "https://pypi.org/pypi/opentelemetry-api/1.45.2/json",
       "wheel_digest_verified": true
     }
   },
@@ -11406,11 +11406,11 @@
     }
   },
   {
-    "id": "pkg:pypi/soupsieve@2.10",
+    "id": "pkg:pypi/soupsieve@4.1.2",
     "name": "soupsieve",
-    "version": "2.10",
-    "wheel": "soupsieve-2.10-py3-none-any.whl",
-    "sha256": "8596eb8967d744174820280fa62b4542a2e955bfaccca73ed8a13c6eb8e9b502",
+    "version": "4.1.2",
+    "wheel": "soupsieve-4.1.2-py3-none-any.whl",
+    "sha256": "96b4115212a3abee1f572d62da706cca090b088cb5effa278db5702122e63a2c",
     "role": "runtime",
     "reported_license": "MIT",
     "authors": "Isaac Muse <Isaac.Muse@gmail.com>",
@@ -11422,11 +11422,11 @@
     "unsatisfied": [],
     "notices": [
       {
-        "path": "THIRD_PARTY_LICENSES/soupsieve-2.10/76a0acdb98c3-soupsieve-2.10.dist-info_licenses_LICENSE.md",
-        "original_path": "soupsieve-2.10.dist-info/licenses/LICENSE.md",
+        "path": "THIRD_PARTY_LICENSES/soupsieve-4.1.2/76a0acdb98c3-soupsieve-4.1.2.dist-info_licenses_LICENSE.md",
+        "original_path": "soupsieve-4.1.2.dist-info/licenses/LICENSE.md",
         "sha256": "76a0acdb98c3a63681e20b6f096699ef8cad5fb35d56eef8387e0fa71d797a9a",
         "size": 1096,
-        "source": "soupsieve-2.10-py3-none-any.whl"
+        "source": "soupsieve-4.1.2-py3-none-any.whl"
       }
     ],
     "nested_metadata": [],
@@ -11439,12 +11439,18 @@
           "Copyright",
           "copyright"
         ]
+      },
+      {
+        "path": "soupsieve/css_types.py",
+        "markers": [
+          "derived from"
+        ]
       }
     ],
     "status": "NOT VERIFIED",
     "classification": "THIRD-PARTY",
     "registry": {
-      "url": "https://pypi.org/pypi/soupsieve/2.10/json",
+      "url": "https://pypi.org/pypi/soupsieve/4.1.2/json",
       "wheel_digest_verified": true
     }
   },

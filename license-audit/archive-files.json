@@ -52976,102 +52976,6 @@
     "asset": false
   },
   {
-    "path": "soupsieve/__init__.py",
-    "container": "soupsieve@2.10",
-    "size": 5145,
-    "sha256": "d4bfab82b5f7750296c6f825695ba801c664e0899a63f8eb500f15904a88876a",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "soupsieve/__meta__.py",
-    "container": "soupsieve@2.10",
-    "size": 6767,
-    "sha256": "ba277c780eae4f98fd455dd9924a6be09173279f62bb7f2c2a3cc97707031248",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "soupsieve/css_match.py",
-    "container": "soupsieve@2.10",
-    "size": 63105,
-    "sha256": "de5ee29dfe2d644524e862ad91e57077c8c3bbcfa43769f8465a3e397d338f68",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "soupsieve/css_parser.py",
-    "container": "soupsieve@2.10",
-    "size": 48962,
-    "sha256": "fe9ee9f9409666db8040315b4a9ca02d049e922a4a409363ab4dd121100b2a1f",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "soupsieve/css_types.py",
-    "container": "soupsieve@2.10",
-    "size": 9226,
-    "sha256": "c9ba136f6ce5d020f0548da4db6d452214fc043b020ce5bd04c61e669f43c6ef",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "soupsieve/pretty.py",
-    "container": "soupsieve@2.10",
-    "size": 4362,
-    "sha256": "89233e34a0b3aee2500b012b8904fbd8bac5e2c971b226fb4c1e79d87d9bb2a0",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "soupsieve/py.typed",
-    "container": "soupsieve@2.10",
-    "size": 0,
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "soupsieve/util.py",
-    "container": "soupsieve@2.10",
-    "size": 3370,
-    "sha256": "33a6c4dd04817dbccf8540c9f54ab03b895dcd8542e381a6571a6a82aa66fdfb",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "soupsieve-2.10.dist-info/METADATA",
-    "container": "soupsieve@2.10",
-    "size": 4437,
-    "sha256": "02ecd6c72d2fa0911bedfd99d53b2198e1bbf556f4606108819e8c19fdf32880",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "soupsieve-2.10.dist-info/WHEEL",
-    "container": "soupsieve@2.10",
-    "size": 87,
-    "sha256": "5b77e4a649bbfb07fdbc123967eeecd1e5a478cfaca6eefc23c35e6fdf037848",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "soupsieve-2.10.dist-info/licenses/LICENSE.md",
-    "container": "soupsieve@2.10",
-    "size": 1096,
-    "sha256": "76a0acdb98c3a63681e20b6f096699ef8cad5fb35d56eef8387e0fa71d797a9a",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "soupsieve-2.10.dist-info/RECORD",
-    "container": "soupsieve@2.10",
-    "size": 928,
-    "sha256": "f81bc22fe344815defd13128198639cd73bfbc3240a4341e0f6e0c000cff9a11",
-    "native": false,
-    "asset": false
-  },
-  {
     "path": "starlette/__init__.py",
     "container": "starlette@1.7.0",
     "size": 22,
@@ -57008,382 +56912,6 @@
     "asset": false
   },
   {
-    "path": "opentelemetry/py.typed",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 0,
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry/_logs/__init__.py",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 1366,
-    "sha256": "ca88fc404db00814569f310bde3dc4a1d4bee8d362defd37272938b4d81fe8f2",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry/_logs/py.typed",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 0,
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry/_logs/_internal/__init__.py",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 15469,
-    "sha256": "8edbf0bf6cc20f78124d5847e19f9fa73b87b1a2ad3b21f6646324607758dce7",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry/_logs/severity/__init__.py",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 1007,
-    "sha256": "19b1b0ae360372e249cf15c3000e265420cbeaad6101d1843e4ce28be4292f9b",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry/attributes/__init__.py",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 9503,
-    "sha256": "40e46fdd33828a889da31e539add39b3b5528a569834f6a5aa85d6c1c4d48f57",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry/attributes/py.typed",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 0,
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry/baggage/__init__.py",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 3564,
-    "sha256": "4cea8c0bdf6848885e2b17e357c75ce9cf9279a3e710169ad5886210b8838f5b",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry/baggage/py.typed",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 0,
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry/baggage/propagation/__init__.py",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 5607,
-    "sha256": "bedd2aa3f83fb41eea84f66b1a11067f4162c94d1236b643ef4d620c75eb524b",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry/context/__init__.py",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 4710,
-    "sha256": "a979c3f42ea14c0e8309f29e9cf9b2f94af7ff63e963e8d3211e7ad1cc8b0ec6",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry/context/context.py",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 1722,
-    "sha256": "f946dab972b3e22fffeb48faeeb047a9331b2b0c69df4b75acbd49b7eddb93bb",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry/context/contextvars_context.py",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 1299,
-    "sha256": "58e4df8b71ce6ff35c8312eb1788e244cd5366419ad80eae4aa230a070bf769b",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry/context/py.typed",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 0,
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry/environment_variables/__init__.py",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 1859,
-    "sha256": "c230482b03d87e723c5cd090dc9f34e08e81095ead4f132f972ea02c5fc232df",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry/environment_variables/py.typed",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 0,
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry/metrics/__init__.py",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 3068,
-    "sha256": "8aa01f0db8c21cf7b25f084c81f0f592861f4f87fb311d94464b0127e0023317",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry/metrics/py.typed",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 0,
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry/metrics/_internal/__init__.py",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 30867,
-    "sha256": "3c9fff182aeb63d9f3cbcd391388a610be6c17b232dbe63cf081bd15e179fc17",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry/metrics/_internal/instrument.py",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 15981,
-    "sha256": "6ecfac691b9727bc80f9f60184e4bb70c39547dea6336ce095bab2c7c8f6fb23",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry/metrics/_internal/observation.py",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 1378,
-    "sha256": "f3c25f875fae07faef0ed96c9d97f163485a96f1709dcc6c5b79f085c97b6f56",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry/propagate/__init__.py",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 6303,
-    "sha256": "0deefc2095253a3513bd00702a746d3b74bc1efc89c973b1f5efec75e8a0c3eb",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry/propagate/py.typed",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 0,
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry/propagators/_envcarrier.py",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 3117,
-    "sha256": "49632cef601c16bff022b4722ffb595fbb8bb774c56a265bbf8ca7e935976ca6",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry/propagators/composite.py",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 2724,
-    "sha256": "6b460146d4aea10f4411e28f8cb307b07875c179acc04554ea51954effa58bcd",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry/propagators/py.typed",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 0,
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry/propagators/textmap.py",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 6017,
-    "sha256": "d9cd853b30d309fdb7d80d88d9ac729e3927bfa011b384713be5bb627cdc6e33",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry/trace/__init__.py",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 23188,
-    "sha256": "395e280f8dc25cb5ffa8fdea946b00d3c76423c76ee239bdccaecad151317f78",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry/trace/py.typed",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 0,
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry/trace/span.py",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 20543,
-    "sha256": "67886d3802f7d87adcc6bc26d790ecef0b1fb89b1aed3e28f7c6d73b0b739e38",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry/trace/status.py",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 1959,
-    "sha256": "a7e825e751ecb11fb09e7004d325bfc02d3cc327eb3edb04599108699a00e014",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry/trace/propagation/__init__.py",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 1136,
-    "sha256": "7f064ececa407f1a421113a4a7f82b73bec72a95ca6f1a7013940db0bbb2495d",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry/trace/propagation/tracecontext.py",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 4128,
-    "sha256": "ac6fbcf1610a51ebf9d9161e42e9e98d4e22a50552c57bb37596a62963e00776",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry/util/_decorator.py",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 2991,
-    "sha256": "b6816ab8de35b9e58199d965b728e1d119e8da06e11967f36d0e5b351cccf7c4",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry/util/_importlib_metadata.py",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 1833,
-    "sha256": "ee33ffb4ff606bfd50f69fc0546450b6c9f12545569f75c92f34e260e478bfc2",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry/util/_once.py",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 941,
-    "sha256": "11211cea9c3c780219d84315d99284a5bc9fcc5e385261a1916e36aa78ae6ba8",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry/util/_providers.py",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 1317,
-    "sha256": "96102aede9bf1699efd22e2663d22c82633e15c93feaf586aee6637aaececab8",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry/util/py.typed",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 0,
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry/util/re.py",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 4068,
-    "sha256": "5b3d01e8241ee9a693ef0eafd88a008ae567acabcb157835bbf66f6ef2a0d83d",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry/util/types.py",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 926,
-    "sha256": "ab652ee21c742044ce0d8f62e0ebc0f23d1be0ccfbb119ef94324c688a0aa2e6",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry/version/__init__.py",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 100,
-    "sha256": "5b0fe18ed3a8b5e373d3b94fa2738797d281f95f9d1af58ea3a768e1732c162c",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry/version/py.typed",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 0,
-    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry_api-1.45.1.dist-info/METADATA",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 1411,
-    "sha256": "5bc71e90cb421be92a43bf5ad5b0f25dccfa2a24ddceaa2877779879962a4c9e",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry_api-1.45.1.dist-info/WHEEL",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 87,
-    "sha256": "5b77e4a649bbfb07fdbc123967eeecd1e5a478cfaca6eefc23c35e6fdf037848",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry_api-1.45.1.dist-info/entry_points.txt",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 573,
-    "sha256": "7713ead1845b4034b097c42447e23d037f2b6db7ca406e61dae3458e9bd4e95e",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry_api-1.45.1.dist-info/licenses/LICENSE",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 11357,
-    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
-    "native": false,
-    "asset": false
-  },
-  {
-    "path": "opentelemetry_api-1.45.1.dist-info/RECORD",
-    "container": "opentelemetry-api@1.45.1",
-    "size": 4274,
-    "sha256": "d9c5826874e25e35714a30f21b8283ac7b336c902b17d2d65aec180a61223d8b",
-    "native": false,
-    "asset": false
-  },
-  {
     "path": "distutils-precedence.pth",
     "container": "setuptools@84.1.0",
     "size": 151,
@@ -60124,6 +59652,486 @@
     "container": "setuptools@84.1.0",
     "size": 33508,
     "sha256": "34a3e6e355670187c3450b80279e7c6b03aa0142212e6a089445312cc67b16c0",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "soupsieve/__init__.py",
+    "container": "soupsieve@4.1.2",
+    "size": 6397,
+    "sha256": "62769d4e6151f5c6ffcbc5a3f9890eb86f3ac5c2c894527c1106af427d5e56ef",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "soupsieve/__meta__.py",
+    "container": "soupsieve@4.1.2",
+    "size": 6766,
+    "sha256": "7d6984b686a9db8788f249995d03330a2fb7a550d64a13f67f419d07a26c6ca4",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "soupsieve/bidi.py",
+    "container": "soupsieve@4.1.2",
+    "size": 11398,
+    "sha256": "09da6b778c57b24d8dd3ff76e3d296193610aaed34d9ce2bc8865bf4a7d98ecb",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "soupsieve/css_match.py",
+    "container": "soupsieve@4.1.2",
+    "size": 105104,
+    "sha256": "f28567ae7a3a5951dd91be73fbae610ee317b2891b40dee250f93b8e8265f66c",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "soupsieve/css_parser.py",
+    "container": "soupsieve@4.1.2",
+    "size": 57035,
+    "sha256": "3d85667b35a7ec8666659e1ebf903e7070e9e152d3d599411e75a624a3158a3e",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "soupsieve/css_types.py",
+    "container": "soupsieve@4.1.2",
+    "size": 16623,
+    "sha256": "d55dcd265d7822b69ed68970a20bc1a3d93bd8e9b72acc5e7daaa26bb3936764",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "soupsieve/pretty.py",
+    "container": "soupsieve@4.1.2",
+    "size": 4362,
+    "sha256": "89233e34a0b3aee2500b012b8904fbd8bac5e2c971b226fb4c1e79d87d9bb2a0",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "soupsieve/py.typed",
+    "container": "soupsieve@4.1.2",
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "soupsieve/util.py",
+    "container": "soupsieve@4.1.2",
+    "size": 3618,
+    "sha256": "44cf2dc35de17be66ae9d560601a93c5f2e9522fd7ec0f4a2c89043735b0df28",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "soupsieve-4.1.2.dist-info/METADATA",
+    "container": "soupsieve@4.1.2",
+    "size": 4389,
+    "sha256": "9a0ec3e33ef6667b0af90f7b6e962daef3c74bab9eecfd89cffb4793dc2a7d26",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "soupsieve-4.1.2.dist-info/WHEEL",
+    "container": "soupsieve@4.1.2",
+    "size": 87,
+    "sha256": "da266b2640c891e0e1d24f528a428ca85b913feb9aea66f822bd40b04478044c",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "soupsieve-4.1.2.dist-info/licenses/LICENSE.md",
+    "container": "soupsieve@4.1.2",
+    "size": 1096,
+    "sha256": "76a0acdb98c3a63681e20b6f096699ef8cad5fb35d56eef8387e0fa71d797a9a",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "soupsieve-4.1.2.dist-info/RECORD",
+    "container": "soupsieve@4.1.2",
+    "size": 1009,
+    "sha256": "02da679d8959fa5e79ee20ced27126a1b67205faddac81107119d741f6a609c2",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry/py.typed",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry/_logs/__init__.py",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 1366,
+    "sha256": "ca88fc404db00814569f310bde3dc4a1d4bee8d362defd37272938b4d81fe8f2",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry/_logs/py.typed",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry/_logs/_internal/__init__.py",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 15469,
+    "sha256": "8edbf0bf6cc20f78124d5847e19f9fa73b87b1a2ad3b21f6646324607758dce7",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry/_logs/severity/__init__.py",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 1007,
+    "sha256": "19b1b0ae360372e249cf15c3000e265420cbeaad6101d1843e4ce28be4292f9b",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry/attributes/__init__.py",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 9503,
+    "sha256": "40e46fdd33828a889da31e539add39b3b5528a569834f6a5aa85d6c1c4d48f57",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry/attributes/py.typed",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry/baggage/__init__.py",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 3564,
+    "sha256": "4cea8c0bdf6848885e2b17e357c75ce9cf9279a3e710169ad5886210b8838f5b",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry/baggage/py.typed",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry/baggage/propagation/__init__.py",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 5607,
+    "sha256": "bedd2aa3f83fb41eea84f66b1a11067f4162c94d1236b643ef4d620c75eb524b",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry/context/__init__.py",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 4710,
+    "sha256": "a979c3f42ea14c0e8309f29e9cf9b2f94af7ff63e963e8d3211e7ad1cc8b0ec6",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry/context/context.py",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 1722,
+    "sha256": "f946dab972b3e22fffeb48faeeb047a9331b2b0c69df4b75acbd49b7eddb93bb",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry/context/contextvars_context.py",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 1299,
+    "sha256": "58e4df8b71ce6ff35c8312eb1788e244cd5366419ad80eae4aa230a070bf769b",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry/context/py.typed",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry/environment_variables/__init__.py",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 1859,
+    "sha256": "c230482b03d87e723c5cd090dc9f34e08e81095ead4f132f972ea02c5fc232df",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry/environment_variables/py.typed",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry/metrics/__init__.py",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 3068,
+    "sha256": "8aa01f0db8c21cf7b25f084c81f0f592861f4f87fb311d94464b0127e0023317",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry/metrics/py.typed",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry/metrics/_internal/__init__.py",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 30867,
+    "sha256": "3c9fff182aeb63d9f3cbcd391388a610be6c17b232dbe63cf081bd15e179fc17",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry/metrics/_internal/instrument.py",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 15981,
+    "sha256": "6ecfac691b9727bc80f9f60184e4bb70c39547dea6336ce095bab2c7c8f6fb23",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry/metrics/_internal/observation.py",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 1378,
+    "sha256": "f3c25f875fae07faef0ed96c9d97f163485a96f1709dcc6c5b79f085c97b6f56",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry/propagate/__init__.py",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 6303,
+    "sha256": "0deefc2095253a3513bd00702a746d3b74bc1efc89c973b1f5efec75e8a0c3eb",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry/propagate/py.typed",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry/propagators/_envcarrier.py",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 3117,
+    "sha256": "49632cef601c16bff022b4722ffb595fbb8bb774c56a265bbf8ca7e935976ca6",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry/propagators/composite.py",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 2724,
+    "sha256": "6b460146d4aea10f4411e28f8cb307b07875c179acc04554ea51954effa58bcd",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry/propagators/py.typed",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry/propagators/textmap.py",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 6017,
+    "sha256": "d9cd853b30d309fdb7d80d88d9ac729e3927bfa011b384713be5bb627cdc6e33",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry/trace/__init__.py",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 23188,
+    "sha256": "395e280f8dc25cb5ffa8fdea946b00d3c76423c76ee239bdccaecad151317f78",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry/trace/py.typed",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry/trace/span.py",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 20543,
+    "sha256": "67886d3802f7d87adcc6bc26d790ecef0b1fb89b1aed3e28f7c6d73b0b739e38",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry/trace/status.py",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 1959,
+    "sha256": "a7e825e751ecb11fb09e7004d325bfc02d3cc327eb3edb04599108699a00e014",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry/trace/propagation/__init__.py",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 1136,
+    "sha256": "7f064ececa407f1a421113a4a7f82b73bec72a95ca6f1a7013940db0bbb2495d",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry/trace/propagation/tracecontext.py",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 4506,
+    "sha256": "473a216560d73fb5e3008991e2b6a744eb3ffba133db6d8bffdb4818fcae4d12",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry/util/_decorator.py",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 2991,
+    "sha256": "b6816ab8de35b9e58199d965b728e1d119e8da06e11967f36d0e5b351cccf7c4",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry/util/_importlib_metadata.py",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 1833,
+    "sha256": "ee33ffb4ff606bfd50f69fc0546450b6c9f12545569f75c92f34e260e478bfc2",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry/util/_once.py",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 941,
+    "sha256": "11211cea9c3c780219d84315d99284a5bc9fcc5e385261a1916e36aa78ae6ba8",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry/util/_providers.py",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 1317,
+    "sha256": "96102aede9bf1699efd22e2663d22c82633e15c93feaf586aee6637aaececab8",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry/util/py.typed",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry/util/re.py",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 4068,
+    "sha256": "5b3d01e8241ee9a693ef0eafd88a008ae567acabcb157835bbf66f6ef2a0d83d",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry/util/types.py",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 926,
+    "sha256": "ab652ee21c742044ce0d8f62e0ebc0f23d1be0ccfbb119ef94324c688a0aa2e6",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry/version/__init__.py",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 100,
+    "sha256": "6ad44b6f37536e3c42c3248d7ae1b660bdc3a72e4c24dd59eec47a53aeedf1c4",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry/version/py.typed",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry_api-1.45.2.dist-info/METADATA",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 1411,
+    "sha256": "aa93f63be0d6d1f662966e67b22a77c0d9966752e3a32ad87c1347f595cea7cb",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry_api-1.45.2.dist-info/WHEEL",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 87,
+    "sha256": "da266b2640c891e0e1d24f528a428ca85b913feb9aea66f822bd40b04478044c",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry_api-1.45.2.dist-info/entry_points.txt",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 573,
+    "sha256": "7713ead1845b4034b097c42447e23d037f2b6db7ca406e61dae3458e9bd4e95e",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry_api-1.45.2.dist-info/licenses/LICENSE",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 11357,
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "native": false,
+    "asset": false
+  },
+  {
+    "path": "opentelemetry_api-1.45.2.dist-info/RECORD",
+    "container": "opentelemetry-api@1.45.2",
+    "size": 4274,
+    "sha256": "4a028c0bf15491f1c93f57acd4eb27580568ee078e9371a14d362bdd304f7089",
     "native": false,
     "asset": false
   }

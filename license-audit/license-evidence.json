@@ -1853,5 +1853,19 @@
     "sha256": "09c9bcea95ca086f8bc5bed174e40bc835b297d40fb5f86bbbb570fe0a5581a7",
     "size": 18737,
     "source": "https://files.pythonhosted.org/packages/73/eb/7e5f628ee2eb168fecbf8026de7856b2543d6d609cc85f086b9a91ac93d6/setuptools-84.1.0.tar.gz"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/soupsieve-4.1.2/76a0acdb98c3-soupsieve-4.1.2.dist-info_licenses_LICENSE.md",
+    "original_path": "soupsieve-4.1.2.dist-info/licenses/LICENSE.md",
+    "sha256": "76a0acdb98c3a63681e20b6f096699ef8cad5fb35d56eef8387e0fa71d797a9a",
+    "size": 1096,
+    "source": "soupsieve-4.1.2-py3-none-any.whl"
+  },
+  {
+    "path": "THIRD_PARTY_LICENSES/opentelemetry-api-1.45.2/c71d239df917-opentelemetry_api-1.45.2.dist-info_licenses_LICENSE",
+    "original_path": "opentelemetry_api-1.45.2.dist-info/licenses/LICENSE",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "size": 11357,
+    "source": "opentelemetry_api-1.45.2-py3-none-any.whl"
   }
 ]

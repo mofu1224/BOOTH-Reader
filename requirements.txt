@@ -19,6 +19,7 @@
 # For a byte-reproducible install use requirements-lock.txt instead.
 httpx>=0.28
 beautifulsoup4>=4.12
+soupsieve>=4.0.0
 fastapi>=0.141
 uvicorn>=0.30
 pydantic>=2.0

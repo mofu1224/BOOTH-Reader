@@ -4837,12 +4837,12 @@
     }
   },
   {
-    "Component ID": "pkg:pypi/opentelemetry-api@1.45.1",
+    "Component ID": "pkg:pypi/opentelemetry-api@1.45.2",
     "Component Name": "opentelemetry-api",
     "Component Type": "Python wheel",
-    "Version": "1.45.1",
-    "Local Path": "vendor/windows-x64/ (wheels archive) / opentelemetry_api-1.45.1-py3-none-any.whl",
-    "Original Source": "https://pypi.org/pypi/opentelemetry-api/1.45.1/json",
+    "Version": "1.45.2",
+    "Local Path": "vendor/windows-x64/ (wheels archive) / opentelemetry_api-1.45.2-py3-none-any.whl",
+    "Original Source": "https://pypi.org/pypi/opentelemetry-api/1.45.2/json",
     "Original Repository": [
       "Homepage, https://github.com/open-telemetry/opentelemetry-python/tree/main/opentelemetry-api",
       "Repository, https://github.com/open-telemetry/opentelemetry-python"
@@ -4872,11 +4872,11 @@
     "License Version": "see verbatim evidence",
     "License Evidence": [
       {
-        "path": "THIRD_PARTY_LICENSES/opentelemetry-api-1.45.1/c71d239df917-opentelemetry_api-1.45.1.dist-info_licenses_LICENSE",
-        "original_path": "opentelemetry_api-1.45.1.dist-info/licenses/LICENSE",
+        "path": "THIRD_PARTY_LICENSES/opentelemetry-api-1.45.2/c71d239df917-opentelemetry_api-1.45.2.dist-info_licenses_LICENSE",
+        "original_path": "opentelemetry_api-1.45.2.dist-info/licenses/LICENSE",
         "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
         "size": 11357,
-        "source": "opentelemetry_api-1.45.1-py3-none-any.whl"
+        "source": "opentelemetry_api-1.45.2-py3-none-any.whl"
       }
     ],
     "Usage": "development/build",
@@ -4893,11 +4893,11 @@
     "Required Attribution": "retain all evidence copyright/notice texts",
     "Required License Copy": [
       {
-        "path": "THIRD_PARTY_LICENSES/opentelemetry-api-1.45.1/c71d239df917-opentelemetry_api-1.45.1.dist-info_licenses_LICENSE",
-        "original_path": "opentelemetry_api-1.45.1.dist-info/licenses/LICENSE",
+        "path": "THIRD_PARTY_LICENSES/opentelemetry-api-1.45.2/c71d239df917-opentelemetry_api-1.45.2.dist-info_licenses_LICENSE",
+        "original_path": "opentelemetry_api-1.45.2.dist-info/licenses/LICENSE",
         "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
         "size": 11357,
-        "source": "opentelemetry_api-1.45.1-py3-none-any.whl"
+        "source": "opentelemetry_api-1.45.2-py3-none-any.whl"
       }
     ],
     "Required NOTICE": "retain shipped NOTICE/sidecars without modification",
@@ -4908,7 +4908,7 @@
     "Trademark Restrictions": "no endorsement permission inferred; actual texts apply",
     "Additional Restrictions": "NOT VERIFIED for complete closure",
     "Verification Evidence": {
-      "url": "https://pypi.org/pypi/opentelemetry-api/1.45.1/json",
+      "url": "https://pypi.org/pypi/opentelemetry-api/1.45.2/json",
       "wheel_digest_verified": true
     },
     "Compliance Actions": "all discovered original notices now copied into distribution; certifi/packageurl sdist supplied",
@@ -14315,12 +14315,12 @@
     }
   },
   {
-    "Component ID": "pkg:pypi/soupsieve@2.10",
+    "Component ID": "pkg:pypi/soupsieve@4.1.2",
     "Component Name": "soupsieve",
     "Component Type": "Python wheel",
-    "Version": "2.10",
-    "Local Path": "vendor/windows-x64/ (wheels archive) / soupsieve-2.10-py3-none-any.whl",
-    "Original Source": "https://pypi.org/pypi/soupsieve/2.10/json",
+    "Version": "4.1.2",
+    "Local Path": "vendor/windows-x64/ (wheels archive) / soupsieve-4.1.2-py3-none-any.whl",
+    "Original Source": "https://pypi.org/pypi/soupsieve/4.1.2/json",
     "Original Repository": [
       "Homepage, https://github.com/facelessuser/soupsieve"
     ],
@@ -14338,11 +14338,11 @@
     "License Version": "see verbatim evidence",
     "License Evidence": [
       {
-        "path": "THIRD_PARTY_LICENSES/soupsieve-2.10/76a0acdb98c3-soupsieve-2.10.dist-info_licenses_LICENSE.md",
-        "original_path": "soupsieve-2.10.dist-info/licenses/LICENSE.md",
+        "path": "THIRD_PARTY_LICENSES/soupsieve-4.1.2/76a0acdb98c3-soupsieve-4.1.2.dist-info_licenses_LICENSE.md",
+        "original_path": "soupsieve-4.1.2.dist-info/licenses/LICENSE.md",
         "sha256": "76a0acdb98c3a63681e20b6f096699ef8cad5fb35d56eef8387e0fa71d797a9a",
         "size": 1096,
-        "source": "soupsieve-2.10-py3-none-any.whl"
+        "source": "soupsieve-4.1.2-py3-none-any.whl"
       }
     ],
     "Usage": "runtime",
@@ -14359,11 +14359,11 @@
     "Required Attribution": "retain all evidence copyright/notice texts",
     "Required License Copy": [
       {
-        "path": "THIRD_PARTY_LICENSES/soupsieve-2.10/76a0acdb98c3-soupsieve-2.10.dist-info_licenses_LICENSE.md",
-        "original_path": "soupsieve-2.10.dist-info/licenses/LICENSE.md",
+        "path": "THIRD_PARTY_LICENSES/soupsieve-4.1.2/76a0acdb98c3-soupsieve-4.1.2.dist-info_licenses_LICENSE.md",
+        "original_path": "soupsieve-4.1.2.dist-info/licenses/LICENSE.md",
         "sha256": "76a0acdb98c3a63681e20b6f096699ef8cad5fb35d56eef8387e0fa71d797a9a",
         "size": 1096,
-        "source": "soupsieve-2.10-py3-none-any.whl"
+        "source": "soupsieve-4.1.2-py3-none-any.whl"
       }
     ],
     "Required NOTICE": "retain shipped NOTICE/sidecars without modification",
@@ -14374,7 +14374,7 @@
     "Trademark Restrictions": "no endorsement permission inferred; actual texts apply",
     "Additional Restrictions": "NOT VERIFIED for complete closure",
     "Verification Evidence": {
-      "url": "https://pypi.org/pypi/soupsieve/2.10/json",
+      "url": "https://pypi.org/pypi/soupsieve/4.1.2/json",
       "wheel_digest_verified": true
     },
     "Compliance Actions": "all discovered original notices now copied into distribution; certifi/packageurl sdist supplied",
@@ -14390,6 +14390,12 @@
             "COPYRIGHT",
             "Copyright",
             "copyright"
+          ]
+        },
+        {
+          "path": "soupsieve/css_types.py",
+          "markers": [
+            "derived from"
           ]
         }
       ]

@@ -7,7 +7,7 @@ name = "booth-reader"
 dynamic = ["version"]
 description = "BOOTH購入品の取得・ダウンロード・解凍・分類を一元管理する個人向けデスクトップツール"
 readme = { file = "README.md", content-type = "text/markdown" }
-requires-python = ">=3.10"
+requires-python = ">=3.11.5"
 license = "MIT"
 license-files = ["LICENSE", "NOTICE", "THIRD_PARTY_NOTICES.md", "THIRD_PARTY_TERMS.md", "THIRD_PARTY_TERMS_EN.md", "THIRD_PARTY_LICENSES/**/*", "SOURCE_OBLIGATIONS/README.md"]
 authors = [{ name = "mofu1224" }]
@@ -22,7 +22,6 @@ classifiers = [
     "Operating System :: Microsoft :: Windows",
     "Operating System :: MacOS :: MacOS X",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
@@ -35,6 +34,7 @@ classifiers = [
 dependencies = [
     "httpx>=0.28",
     "beautifulsoup4>=4.12",
+    "soupsieve>=4.0.0",
     "fastapi>=0.141",
     "uvicorn>=0.30",
     "pydantic>=2.0",
@@ -49,7 +49,7 @@ dev = [
     "mypy>=1.11",
     "pip-audit>=2.7",
     "build>=1.0",
-    "tomli>=2.0; python_version < '3.11'",
+    "opentelemetry-api>=1.45.2",
 ]
 
 [project.urls]
@@ -88,7 +88,7 @@ markers = [
 
 [tool.ruff]
 line-length = 100
-target-version = "py310"
+target-version = "py311"
 src = ["."]
 extend-exclude = [".venv", "build", "dist", "release", "__pycache__",
     # Verbatim third-party sources retained for license compliance. They are
@@ -142,7 +142,7 @@ ignore = [
 known-first-party = ["core", "web", "cli", "conftest"]
 
 [tool.mypy]
-python_version = "3.10"
+python_version = "3.11"
 # Portable layout: mypy cache inside the repo (env MYPY_CACHE_DIR agrees).
 cache_dir = ".cache/mypy"
 # Production code is fully annotated; tests are not held to that bar.

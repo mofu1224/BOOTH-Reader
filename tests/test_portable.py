@@ -180,10 +180,7 @@ def test_bat_blocks_contain_no_stray_parens():
 
 
 def test_tool_caches_configured_inside_repo():
-    try:
-        import tomllib
-    except ImportError:
-        import tomli as tomllib
+    import tomllib
 
     config = tomllib.loads((BASE / "pyproject.toml").read_text(encoding="utf-8"))
     pytest_cache = config["tool"]["pytest"]["ini_options"]["cache_dir"]

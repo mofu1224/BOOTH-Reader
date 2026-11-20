@@ -52,6 +52,8 @@ CLIも `start.bat <command>` で実行できます（`start.bat cli <command>` �
 
 ## 動作環境
 
+通常の起動には同梱のPython 3.12を使います。別のPython環境にソースからインストールする場合は、Python 3.11.5以上が必要です。
+
 - Windows x64またはApple Silicon Mac（arm64）・書込み可能なローカルディスク。Windows 10 build 17763以降、macOS 14以降を対応範囲とします。実際の検証範囲は[対応状況](CROSS_PLATFORM.md)に記録します。
 - 起動・環境準備はオフライン可。BOOTH/pixiv認証、同期、購入ファイル・商品画像の取得は通信が必要です。
 - Intel Mac、Windows ARM64/x86、Linux、UNC/NASからの直接実行、公開サーバー・複数ユーザー運用は対象外です。NASはバックアップ用に使います。
