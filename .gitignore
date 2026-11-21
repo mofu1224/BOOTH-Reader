@@ -84,3 +84,43 @@ cookies.txt
 # 原本の代わりに読み取り用本文と原本ハッシュを追跡する。
 /license-audit/evidence/legal/google-terms-20260730.html
 /license-audit/evidence/upstream/chrome-for-testing-official.txt
+
+# --- 個人データ・秘密情報・作業記録の除外（共通） ---
+# 環境変数・認証情報
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
+id_rsa*
+id_ed25519*
+.npmrc
+.pypirc
+secrets.json
+credentials*.json
+token.json
+# ブラウザのセッション・ローカルDB
+*cookies*.txt
+*cookies*.json
+*cookies*.sqlite
+*.sqlite
+*.sqlite3
+# ログ
+*.log
+logs/
+# エージェント・エディターのローカル設定
+.codex/
+.claude/
+.agent/
+.vscode/
+.idea/
+# 作業記録・引き継ぎ（Obsidianで管理）
+HANDOFF*.md
+findings.md
+progress.md
+task_plan.md
+docs/superpowers/
+# OSの生成ファイル
+desktop.ini
