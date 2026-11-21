@@ -42,7 +42,7 @@
   "input_hashes": {
     ".gitattributes": "a3d31f01633299ca9279de8092588b56675fc43bdd0bc372fb13b2a395a19812",
     ".github/workflows/ci.yml": "2ba4a464590c2c18b5a321a496fd89592f924fdb5c6938e394bc75f06b107b5a",
-    ".gitignore": "c37c835106c17c1184d9eaa3a3357ade284ea151f6917e96535dee76462c83c8",
+    ".gitignore": "251f811e24d9e566c7cb99e48b22b358f4146fd1e806746b1ee7d722596835c5",
     ".gitleaks.toml": "398b6048ff2e3a8acb438ff2ad1053d08015268e54e9055144c6dfd124d9e553",
     "CHANGELOG.md": "a3e9b29c2f02eeab88190aabb01bb528f9b9f22fb83471da9803bbde045fe601",
     "CROSS_PLATFORM.md": "02d25cdc92049c81d46aac8b7491890c94b1f7290678a9ff4c61dc7f054472f3",
@@ -2837,7 +2837,7 @@
     "web/i18n.py": "96773d70da505eb94e4a7c71793c848959721fb469cc8b923b5c75c0625b7f79",
     "web/ui.py": "aaf19f25bed3dea8b864e6a7ee13af5ef6c2cfabc125e1f76b40db2902a78573"
   },
-  "date": "2026-11-20",
+  "date": "2026-11-21",
   "input_hash_scheme": "SHA-256; Git text/eol normalized, -text originals byte-preserved",
   "supported_targets": [
     "windows-x64",
