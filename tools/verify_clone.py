@@ -53,8 +53,12 @@ def main() -> int:
     parser.add_argument(
         "--cleanup-work", type=Path, help="retry cleanup of this tool's owned checkout"
     )
-    parser.add_argument("--out", type=Path, default=ROOT / "audit/clone-verification.json")
-    parser.add_argument("--junit-out", type=Path, default=ROOT / "audit/junit-clone.xml")
+    parser.add_argument(
+        "--out", type=Path, default=ROOT / ".cache/verification/clone-verification.json"
+    )
+    parser.add_argument(
+        "--junit-out", type=Path, default=ROOT / ".cache/verification/junit-clone.xml"
+    )
     parser.add_argument(
         "--candidate-out",
         type=Path,
@@ -112,6 +116,8 @@ def main() -> int:
         "checks": [],
     }
     out = args.out
+    out.parent.mkdir(parents=True, exist_ok=True)
+    args.junit_out.parent.mkdir(parents=True, exist_ok=True)
 
     def run(name: str, cmd: list[str] | str, cwd: Path, child_env: dict[str, str]) -> str:
         started = time.perf_counter()
@@ -320,7 +326,7 @@ def main() -> int:
                     "name": "cold-web-launch",
                     "returncode": 0,
                     "seconds": 0,
-                    "skipped": "headed GUI launch verified manually (see audit/16)",
+                    "skipped": "headed GUI launch verified manually",
                 }
             )
             print("[SKIP] cold-web-launch (headed GUI verified manually)", flush=True)

@@ -153,7 +153,8 @@ def main() -> int:
         "runtime_assets": assets,
         "license_scope": "実ファイルと出所を確認。第三者バイナリの公衆再配布条件は別途確認が必要。",
     }
-    (ROOT / "audit/portable-dependencies.json").write_text(
+    (ROOT / ".cache/verification").mkdir(parents=True, exist_ok=True)
+    (ROOT / ".cache/verification/portable-dependencies.json").write_text(
         json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8"
     )
     lines = [
@@ -191,7 +192,9 @@ def main() -> int:
         "- CPythonのPDB/未使用Tcl開発設定にあるビルド元パスはデバッグ情報であり、アプリの実行参照ではない。",
         "",
     ]
-    (ROOT / "audit/portable-dependencies-current.md").write_text("\n".join(lines), encoding="utf-8")
+    (ROOT / ".cache/verification/portable-dependencies-current.md").write_text(
+        "\n".join(lines), encoding="utf-8"
+    )
     print(f"verified {len(packages)} packages and {len(assets)} native/license assets")
     return 0
 

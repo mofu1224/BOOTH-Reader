@@ -1,4 +1,4 @@
-include LICENSE README.md PORTABLE.md CHANGELOG.md THIRD_PARTY_NOTICES.md VERIFY_LOG.md
+include LICENSE README.md PORTABLE.md CHANGELOG.md THIRD_PARTY_NOTICES.md
 include THIRD_PARTY_TERMS_EN.md
 include requirements*.txt *.bat *.cmd *.ps1 *.sh .gitignore .gitattributes
 include portable-manifest.json
@@ -7,7 +7,6 @@ recursive-include web *.py
 recursive-include tools *.py *.ps1 *.bat *.ico
 recursive-include tests *.py
 recursive-include .github *.yml
-recursive-include audit *.md
 recursive-include third_party *.txt *.md
 recursive-include vendor *.md *.json *.chunk
 exclude vendor/windows-x64/browser-47af6dbb37cab8a2-*.chunk

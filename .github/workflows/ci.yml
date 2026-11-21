@@ -107,8 +107,8 @@ jobs:
         with:
           name: portable-evidence
           path: |
-            audit/clone-verification.json
-            audit/junit-clone.xml
+            .cache/verification/clone-verification.json
+            .cache/verification/junit-clone.xml
           retention-days: 14
 
   macos:

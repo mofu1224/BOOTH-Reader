@@ -57,4 +57,4 @@ Macの認証ホストは`tools/webkit_host.swift`から保守者が`tools/build_
 
 検証はWindows 11 x64とApple Silicon Mac（macOS 27）で実施しています。Windows 10・macOS 14の実機、別PC、長時間運転、実BOOTHの対話的ログイン入力は検証範囲外です。実BOOTHの同期・購入ファイル取得・展開はWindowsの既存セッションで確認済みです。
 
-現行1.2.0の実機結果と確認範囲は[実装・検証記録](audit/22-portable-distribution-1.2.0.md)を参照してください。
+現行1.2.0の実機結果と確認範囲は開発記録（リポジトリ外で管理）です。

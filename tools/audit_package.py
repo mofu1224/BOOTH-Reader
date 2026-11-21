@@ -64,7 +64,6 @@ def main(argv: list[str] | None = None) -> int:
                 )
                 assert final.read(name) == expected, f"source changed: {name}"
                 compared.append(name)
-        assert "audit/11-final-quality-report.md" in names
     wheel = next(args.directory.glob("*.whl"))
     with zipfile.ZipFile(wheel) as archive:
         assert archive.testzip() is None

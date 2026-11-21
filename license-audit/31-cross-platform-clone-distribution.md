@@ -33,7 +33,7 @@ Mac CPythonの複合ライブラリは、full版metadataに記録された0BSD/A
 
 通常準備で生成するpip派生wheelではcertifiも更新します。CA束とLICENSEは公開wheelの原本を保ち、リソース参照先だけを内包名前空間へ変更します。変更後8ソースを`SOURCE_OBLIGATIONS/patched-pip-certifi-source.tar.gz`へ収録し、元sdist・変更ツール・変更記録を同じクローンから取得できる状態にします。旧版の原通知・対応ソースは旧入力に対応する資料として保持します。
 
-更新の由来・ソースhash・検証範囲は`security-update-2026-10-28.json`、製品検証は`../VERIFY_LOG.md`を参照してください。依存監査はライセンス条件の判定と区別します。
+更新の由来・ソースhash・検証範囲は`security-update-2026-10-28.json`、製品検証は開発記録（リポジトリ外で管理）です。依存監査はライセンス条件の判定と区別します。
 
 ## 判定と制限
 

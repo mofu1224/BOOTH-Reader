@@ -12,7 +12,9 @@ ROOT = Path(__file__).resolve().parent.parent
 
 
 def main() -> int:
-    receipt = json.loads((ROOT / "audit/portable-verification.json").read_text(encoding="utf-8"))
+    receipt = json.loads(
+        (ROOT / ".cache/verification/portable-verification.json").read_text(encoding="utf-8")
+    )
     observed_root = Path(receipt["runtime_probe"]["root"])
     system = Path(os.environ["SYSTEMROOT"])
     module_paths = {path for process in receipt["process_modules"] for path in process["modules"]}
@@ -29,7 +31,8 @@ def main() -> int:
             "errors": len(tree.findall(".//error")),
             "skipped": len(tree.findall(".//skipped")),
         }
-        (ROOT / "audit/junit-portable.xml").write_bytes(archive.read(junit))
+        (ROOT / ".cache/verification").mkdir(parents=True, exist_ok=True)
+        (ROOT / ".cache/verification/junit-portable.xml").write_bytes(archive.read(junit))
     summary = {
         "target": "Windows 11 x64 / CPython 3.12.13 / Playwright 1.63.0",
         "verification_status": receipt["status"],
@@ -51,7 +54,7 @@ def main() -> int:
             "public binary redistribution license closure",
         ],
     }
-    (ROOT / "audit/portable-summary.json").write_text(
+    (ROOT / ".cache/verification/portable-summary.json").write_text(
         json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8"
     )
     print(

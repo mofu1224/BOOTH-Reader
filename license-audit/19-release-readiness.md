@@ -2,9 +2,9 @@
 
 ## 最新判定: READY FOR CLONE DISTRIBUTION（2026-11-03、1.2.0／2026-11-04 Mac起動修正）
 
-- 2026-11-03: 1.2.0（購入日の自動補完・無料ダウンロード商品のURL追加）の判定は [31-cross-platform-clone-distribution.md](31-cross-platform-clone-distribution.md)。品質記録は [../audit/22-portable-distribution-1.2.0.md](../audit/22-portable-distribution-1.2.0.md)。
-- 2026-11-04: Mac起動スクリプトの実行権限復旧は起動スクリプト・検証ツール・文書のみを変更し、第三者コード・バイナリ・依存・同梱物を変更していない。品質記録は [../audit/23-macos-launcher-permissions.md](../audit/23-macos-launcher-permissions.md)。
-- 2026-10-06補足: 1.1.0（Mac対応・Mac用Chrome除外と自作WebKitホスト）の最終判定は [31-cross-platform-clone-distribution.md](31-cross-platform-clone-distribution.md)。本節のWindows向け条件と27/28の記録は継続します。品質記録は [../audit/21-portable-distribution-1.1.0.md](../audit/21-portable-distribution-1.1.0.md)。
+- 2026-11-03: 1.2.0（購入日の自動補完・無料ダウンロード商品のURL追加）の判定は [31-cross-platform-clone-distribution.md](31-cross-platform-clone-distribution.md)。品質記録は開発記録（リポジトリ外で管理）。
+- 2026-11-04: Mac起動スクリプトの実行権限復旧は起動スクリプト・検証ツール・文書のみを変更し、第三者コード・バイナリ・依存・同梱物を変更していない。品質記録は開発記録（リポジトリ外で管理）。
+- 2026-10-06補足: 1.1.0（Mac対応・Mac用Chrome除外と自作WebKitホスト）の最終判定は [31-cross-platform-clone-distribution.md](31-cross-platform-clone-distribution.md)。本節のWindows向け条件と27/28の記録は継続します。品質記録は開発記録（リポジトリ外で管理）。
 - 配布対象: GitHubリポジトリのクローン（Git追跡内容のみ）。Cookie・購入履歴DB・購入物・profileはGit外で含まれない。
 - 判定根拠: [27-github-clone-distribution.md](27-github-clone-distribution.md)。WebView2 Fixed Versionの配布条件、CPython/VCランタイム、
   wheel通知、Playwright/Node、pip patch、初期生成の由来を証拠付きで整理。`release-gate.json` は現行ツリーのハッシュで再生成する。
@@ -13,7 +13,7 @@
 
 ## 前回判定（履歴）: BLOCKED — フォルダー全体・旧Chrome構成
 
-最新の追補は [個人データ・ライセンス追補](../audit/16-release-privacy-and-license-followup.md)。今回396件の試験、固定環境のoffline修復、Git私用パス検査、pathspecの対応ソース追加を完了しました。
+最新の追補（個人データ・ライセンス）は開発記録（リポジトリ外で管理）。今回396件の試験、固定環境のoffline修復、Git私用パス検査、pathspecの対応ソース追加を完了しました。
 **PRIV-01**: 利用中のCookie・購入履歴DB・購入物・ローカルprofileは保存したままGit対象外です。`.gitignore` はフォルダーをコピーする際の除外機能ではなく、現物を丸ごと配布できる判定ではありません。
 
 ユーザー指定の配布対象はこのフォルダー全体です。同梱バイナリ・生成環境・キャッシュ・Git履歴も監査範囲へ含めます。

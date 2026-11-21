@@ -21,8 +21,8 @@ def main() -> None:
     parser.add_argument("--reviewed", action="store_true", required=True)
     parser.add_argument(
         "--report",
-        default="audit/22-portable-distribution-1.2.0.md",
-        help="release verification report bound to this candidate",
+        default=None,
+        help="optional in-repository release verification report bound to this candidate",
     )
     args = parser.parse_args()
     if not args.reviewed:
@@ -39,8 +39,7 @@ def main() -> None:
     report_path = ROOT / "license-audit/31-cross-platform-clone-distribution.md"
     if not report_path.is_file():
         raise RuntimeError("Cross-platform redistribution review missing")
-    release_report = ROOT / args.report
-    if not release_report.is_file():
+    if args.report is not None and not (ROOT / args.report).is_file():
         raise RuntimeError(f"Release verification report missing: {args.report}")
     files = collect(ROOT)
     require_clone_script_modes(files, ROOT)
@@ -51,7 +50,6 @@ def main() -> None:
         {
             "release_status": "READY FOR RELEASE",
             "scope": "github-repository-clone",
-            "latest_report": args.report,
             "license_report": "license-audit/31-cross-platform-clone-distribution.md",
             "blockers": [],
             "input_count": len(hashes),
@@ -61,6 +59,10 @@ def main() -> None:
             "product_readiness": "Repository-clone distribution; validation coverage is documented separately; uncommitted changes are not in HEAD",
         }
     )
+    if args.report is None:
+        gate.pop("latest_report", None)
+    else:
+        gate["latest_report"] = args.report
     gate_path.write_text(json.dumps(gate, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(f"Redistribution review bound to {len(files)} candidate files")
 

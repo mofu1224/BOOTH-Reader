@@ -235,8 +235,7 @@ DB・購入ファイルは保持します。DB移行は前方向のみで、新�
 
 - [本体MIT](LICENSE)・[第三者通知](THIRD_PARTY_NOTICES.md)・[Microsoft利用条件](THIRD_PARTY_TERMS.md)
 - [対応ソース](SOURCE_OBLIGATIONS/README.md)・[両OS配布判定](license-audit/31-cross-platform-clone-distribution.md)
-- [製品の判定条件・検証範囲](audit/19-release-scope.md)・[実装・検証記録](audit/22-portable-distribution-1.2.0.md)・[Mac起動修正](audit/23-macos-launcher-permissions.md)
-- [変更履歴](CHANGELOG.md)・[検証ログ](VERIFY_LOG.md)
+- [変更履歴](CHANGELOG.md)（製品の判定条件・検証の記録は開発記録としてリポジトリ外で管理）
 
 ライセンスゲートの合格と製品全体の完成判定は別です。第三者原文は `THIRD_PARTY_LICENSES/` に保持します。
 

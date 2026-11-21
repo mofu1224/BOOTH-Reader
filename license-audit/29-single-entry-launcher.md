@@ -10,4 +10,4 @@
 
 ## 検証
 
-`start.bat` のWeb起動・CLI転送・`--check`・`--repair` 経路と、cold clone/再配置を含む `tools/verify_clone.py` の結果を [../VERIFY_LOG.md](../VERIFY_LOG.md) に記録した。引数なし起動のブラウザー自動オープン・二重起動検出・使用中ポートの自動回避・失敗時のウィンドウ維持は単体試験と実BATで確認した。ルーティングと単一エントリの不変条件は `tests/test_portable.py`、`tests/test_portable_bootstrap.py`、`tests/test_launcher_forwarding.py`、`tests/test_web_cli.py` が固定する。
+`start.bat` のWeb起動・CLI転送・`--check`・`--repair` 経路と、cold clone/再配置を含む `tools/verify_clone.py` の結果を開発記録（リポジトリ外で管理）に記録した。引数なし起動のブラウザー自動オープン・二重起動検出・使用中ポートの自動回避・失敗時のウィンドウ維持は単体試験と実BATで確認した。ルーティングと単一エントリの不変条件は `tests/test_portable.py`、`tests/test_portable_bootstrap.py`、`tests/test_launcher_forwarding.py`、`tests/test_web_cli.py` が固定する。
